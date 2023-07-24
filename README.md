@@ -5,6 +5,10 @@
 
 #### Tutorial： How to install Github and use it
 
+[How to use GitHub with Unity - YouTube](https://www.youtube.com/watch?v=qpXxcvS-g3g)
+
+
+
 Step 1: 
 
 Register a new account on [GitHub](https://github.com/) and download [GitHub Desktop](https://desktop.github.com/) .
@@ -13,13 +17,7 @@ Register a new account on [GitHub](https://github.com/) and download [GitHub Des
 
 Step 2:
 
-Tell me your email so I can add you to the collaborator list.
-
-
-
-![image-20230724170512368](C:\Users\雨后碎风\AppData\Roaming\Typora\typora-user-images\image-20230724170512368.png)
-
-There will be an email sent to your mailbox. Accept it. 
+Tell me your email so I can add you to the collaborator list and there will be an invitation email sent to your mailbox. 
 
 
 
@@ -27,25 +25,7 @@ Step 3:
 
 Now you are in collaborator list. 
 
-![image-20230724171424355](C:\Users\雨后碎风\AppData\Roaming\Typora\typora-user-images\image-20230724171424355.png)
+Sign in to your Github Desktop and Clone the repository. Choose a location where you have enough memory space.
 
-
-
-Step 4：
-
-Download the repository to your local computer.
-
-
-
-Sign in to your Github Desktop
-
-
-
-File-Options-Github Account
-
-
-
-Clone Repository
-
-https://github.com/LittleHedgehogM/IndieGameProject-Rubiks-Cube.git
+clone link : https://github.com/LittleHedgehogM/IndieGameProject-Rubiks-Cube.git
 
