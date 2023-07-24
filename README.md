@@ -37,3 +37,15 @@ Download the repository to your local computer.
 
 
 
+Sign in to your Github Desktop
+
+
+
+File-Options-Github Account
+
+
+
+Clone Repository
+
+https://github.com/LittleHedgehogM/IndieGameProject-Rubiks-Cube.git
+
