@@ -29,3 +29,11 @@ Sign in to your Github Desktop and Clone the repository. Choose a location where
 
 clone link : https://github.com/LittleHedgehogM/IndieGameProject-Rubiks-Cube.git
 
+
+----
+Our MIRO Link: 
+https://miro.com/app/board/uXjVMyxJJ8A=/
+
+
+Our Notion Link:
+https://www.notion.so/aab8a2efc71b4675b2876dd7c72c735a?v=562447a6a69244aeb1e754db027d43ae
