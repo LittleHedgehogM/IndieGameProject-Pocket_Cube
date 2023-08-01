@@ -32,8 +32,15 @@ clone link : https://github.com/LittleHedgehogM/IndieGameProject-Rubiks-Cube.git
 
 ----
 Our MIRO Link: 
+
 https://miro.com/app/board/uXjVMyxJJ8A=/
 
 
 Our Notion Link:
+
 https://www.notion.so/aab8a2efc71b4675b2876dd7c72c735a?v=562447a6a69244aeb1e754db027d43ae
+
+Our Trello Link:
+
+https://trello.com/invite/b/P66vu1Kh/ATTI719e04ed045d2c6bb2d0da4b1eea23092EBEAD7E/human-archeaology
+
