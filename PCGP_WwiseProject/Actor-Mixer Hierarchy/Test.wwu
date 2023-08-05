@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{80A39DAF-694C-477E-AD6D-E5AE50EBEE6B}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Test" ID="{80A39DAF-694C-477E-AD6D-E5AE50EBEE6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Ella Fitzgerald - Cry Me a River" ID="{BDE1779F-E629-4B88-9534-CBB70D224EC1}" ShortID="377884512">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ella Fitzgerald - Cry Me a River" ID="{C3972A66-19BE-4F22-BDE9-20CE951AE110}">
+							<Language>SFX</Language>
+							<AudioFile>Ella Fitzgerald - Cry Me a River.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="910051214"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ella Fitzgerald - Cry Me a River" ID="{C3972A66-19BE-4F22-BDE9-20CE951AE110}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

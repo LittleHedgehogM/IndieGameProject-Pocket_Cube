@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{60859D22-C317-4AF8-9928-74C52206F964}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{60859D22-C317-4AF8-9928-74C52206F964}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Test" ID="{E04CBBCC-9D23-47D1-B16A-781A268E6F74}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_Ella_Fitzgerald___Cry_Me_a_River" ID="{0480EE83-CBCC-41A4-88B6-9B4519ECD8EB}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ella_Fitzgerald___Cry_Me_a_River" ID="{1D3AF7D2-3876-4F3B-A18C-853B8E512E77}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
