@@ -191,7 +191,7 @@ public class SwipeFace : MonoBehaviour
             }
             else
             {
-                const int deltaDegree = 5;
+                const int deltaDegree = 3;
                 foreach (GameObject cube in CurrentSwipeFace)
                 {
                    cube.transform.RotateAround(Vector3.zero, CurrentSwipeAxis, isCurrentSwipeClockWise? deltaDegree  : -deltaDegree);
@@ -222,12 +222,16 @@ public class SwipeFace : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                initalMousePressPos = Input.mousePosition; 
+                initalMousePressPos = Input.mousePosition;
             }
             else if (Input.GetMouseButtonUp(0))
             {
-                endMousePressPos = Input.mousePosition; 
+                endMousePressPos = Input.mousePosition;
                 currentMouseSwipe = (endMousePressPos - initalMousePressPos);
+                if (currentMouseSwipe.sqrMagnitude < 5)
+                {
+                    return;
+                }
                 currentMouseSwipe.Normalize();
                 GameObject FaceHit = selectFace.GetMouseRayHitFace(initalMousePressPos);
                 List<List<GameObject>> cubeSides = cubeState.GetAllCubeSides();
