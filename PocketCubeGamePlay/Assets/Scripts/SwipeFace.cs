@@ -34,7 +34,6 @@ public class SwipeFace : MonoBehaviour
     Vector3 endMousePressPos;
     Vector3 currentMouseSwipe;
 
-    public GameObject SwipeTarget;
     List<GameObject> CurrentSwipeFace;
     Vector3 CurrentSwipeAxis;
     int CurrentSwipeDegree = 0;
