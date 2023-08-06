@@ -49,7 +49,7 @@ public class CubeMap : MonoBehaviour
             else if (face[i].name[0] == 'B')
             {
                 map.GetComponent<Image>().color = new Color(1f, 0.67f, 0.44f, 1); // back color : orange
-            }
+            }                                                                                                                     
             else if (face[i].name[0] == 'L')
             {
                 map.GetComponent<Image>().color = new Color(0.94f, 0.39f, 0.51f, 1);// left color : red
