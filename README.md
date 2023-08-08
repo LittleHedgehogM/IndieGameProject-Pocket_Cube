@@ -44,3 +44,9 @@ Our Trello Link:
 
 https://trello.com/invite/b/P66vu1Kh/ATTI719e04ed045d2c6bb2d0da4b1eea23092EBEAD7E/human-archeaology
 
+Our Xmind Link:
+https://xmind.works/Sn10ONh6
+
+Our DrawIO Link:
+https://app.diagrams.net/?src=about#HLittleHedgehogM%2FIndieGameProject-Pocket_Cube%2Fmain%2FGameFlowChart.drawio
+
