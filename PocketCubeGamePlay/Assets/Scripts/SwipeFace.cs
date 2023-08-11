@@ -16,20 +16,6 @@ public class SwipeFace : MonoBehaviour
     public GameObject BackLeftDown;
     public GameObject BackRightDown;
 
-    //List<GameObject> CubeList;
-
-    //SwipeDirection currentSwipeDirection;
-    //public enum SwipeDirection
-    //{
-    //    NoSwipe,
-    //    LeftSwipe, 
-    //    RightSwipe,
-    //    UpLeftSwipe,
-    //    DownLeftSwipe,
-    //    UpRightSwipe,
-    //    DownRightSwipe
-    //};
-
     Vector3 initalMousePressPos;
     Vector3 endMousePressPos;
     Vector3 currentMouseSwipe;
@@ -49,7 +35,7 @@ public class SwipeFace : MonoBehaviour
     };
 
     SwipeState currentSwipeState;
-
+    int swipeCount;
     class SwipeCommand
     {
         public List<GameObject> CubesToSwipe;
@@ -86,6 +72,7 @@ public class SwipeFace : MonoBehaviour
         cubeState       = FindObjectOfType<CubeState>();
         readCube        = FindObjectOfType<ReadCube>();
         currentSwipeState = SwipeState.WaitForSwipe;
+        swipeCount = 0;
     }
 
     public List<GameObject> SelectFaceToSwipe(List<GameObject> cubeSides)
@@ -151,7 +138,7 @@ public class SwipeFace : MonoBehaviour
     {
         List<GameObject> CubesToSwipe = new List<GameObject>();
         //List<GameObject> FaceToSwipe;
-        List<GameObject> faceToSelect = new List<GameObject>();
+        //List<GameObject> faceToSelect = new List<GameObject>();
         bool findFace = false;
 
         foreach ( List<GameObject> face in possibleFaces)
@@ -188,6 +175,13 @@ public class SwipeFace : MonoBehaviour
             if (CurrentSwipeDegree >= 90)
             {
                 currentSwipeState = SwipeState.FinishSwipe;
+                readCube.ReadState();
+                swipeCount++;
+                if (cubeState.isCubeSolved())
+                {
+                    print("Cube Solved , swipeCount = " + swipeCount);
+                }
+                
             }
             else
             {
@@ -212,90 +206,89 @@ public class SwipeFace : MonoBehaviour
         {
             bool isMouseScrollWheelForward  = Input.GetAxis("Mouse ScrollWheel") > 0f;
             bool isMouseScrollWheelBackward = Input.GetAxis("Mouse ScrollWheel") < 0f;
-            bool isRotatingWholeCube = Input.GetMouseButton(1);
-            if (isRotatingWholeCube)
+            bool isRotatingWholeCube        = Input.GetMouseButton(1);
+            bool isLeftMouseClickDown       = Input.GetMouseButtonDown(0);
+            bool isLeftMouseClickUp         = Input.GetMouseButtonUp(0);
+
+            if (isRotatingWholeCube) // do nothing if player is dragging the whole cube
             {
                 return;
             }
 
             readCube.ReadState();
 
-            if (Input.GetMouseButtonDown(0))
+            if (isLeftMouseClickDown)
             {
                 initalMousePressPos = Input.mousePosition;
             }
-            else if (Input.GetMouseButtonUp(0))
+            else if (isLeftMouseClickUp)
             {
                 endMousePressPos = Input.mousePosition;
                 currentMouseSwipe = (endMousePressPos - initalMousePressPos);
-                if (currentMouseSwipe.sqrMagnitude < 5)
+                if (!isValidSwipe(currentMouseSwipe))
                 {
-                    return;
+                    print("Swipe Not Valid");
                 }
-                currentMouseSwipe.Normalize();
-                GameObject FaceHit = selectFace.GetMouseRayHitFace(initalMousePressPos);
-                List<List<GameObject>> cubeSides = cubeState.GetAllCubeSides();
-                GameObject CubeHit = FaceHit.transform.parent.gameObject.transform.parent.gameObject;
-
-                Vector3 faceNormalAxis = Vector3.zero ;
-
-                List<Vector3> directionWorldAxes = new List<Vector3>();
-                foreach (List<GameObject> cubeSide in cubeSides)
+                else
                 {
-                    if (cubeSide.Contains(FaceHit))
+                    currentMouseSwipe.Normalize();
+                    GameObject FaceHit = selectFace.GetMouseRayHitFace(initalMousePressPos);
+                    GameObject CubeHit = FaceHit.transform.parent.gameObject.transform.parent.gameObject;
+                    List<List<GameObject>> cubeSides = cubeState.GetAllCubeSides();
+                    Vector3 faceNormalAxis = Vector3.zero ;
+
+                    List<Vector3> directionWorldAxes = new List<Vector3>();
+                    foreach (List<GameObject> cubeSide in cubeSides)
                     {
-                        if (cubeSide == cubeState.up || cubeSide == cubeState.down)
+                        if (cubeSide.Contains(FaceHit))
                         {
-                            directionWorldAxes.Add(transform.right); directionWorldAxes.Add(-transform.right);
-                            directionWorldAxes.Add(transform.forward); directionWorldAxes.Add(-transform.forward);
-                            faceNormalAxis = (cubeState.up == cubeSide) ? transform.up : -transform.up;
+                            if (cubeSide == cubeState.up || cubeSide == cubeState.down)
+                            {
+                                directionWorldAxes.Add(transform.right); directionWorldAxes.Add(-transform.right);
+                                directionWorldAxes.Add(transform.forward); directionWorldAxes.Add(-transform.forward);
+                                faceNormalAxis = (cubeState.up == cubeSide) ? transform.up : -transform.up;
                             
+                            }
+                            else if (cubeSide == cubeState.left || cubeSide == cubeState.right)
+                            {
+                                directionWorldAxes.Add(transform.up); directionWorldAxes.Add(-transform.up);
+                                directionWorldAxes.Add(transform.forward); directionWorldAxes.Add(-transform.forward);
+                                faceNormalAxis = (cubeState.right == cubeSide) ? transform.right : -transform.right;
+                            }
+                            else if (cubeSide == cubeState.front || cubeSide == cubeState.back)
+                            {
+                                directionWorldAxes.Add(transform.right); directionWorldAxes.Add(-transform.right);
+                                directionWorldAxes.Add(transform.up); directionWorldAxes.Add(-transform.up);
+                                faceNormalAxis = (cubeState.front == cubeSide) ? -transform.forward : transform.forward;
+                            }                                               
                         }
-                        else if (cubeSide == cubeState.left || cubeSide == cubeState.right)
-                        {
-                            directionWorldAxes.Add(transform.up); directionWorldAxes.Add(-transform.up);
-                            directionWorldAxes.Add(transform.forward); directionWorldAxes.Add(-transform.forward);
-                            faceNormalAxis = (cubeState.right == cubeSide) ? transform.right : -transform.right;
-                        }
-                        else if (cubeSide == cubeState.front || cubeSide == cubeState.back)
-                        {
-                            directionWorldAxes.Add(transform.right); directionWorldAxes.Add(-transform.right);
-                            directionWorldAxes.Add(transform.up); directionWorldAxes.Add(-transform.up);
-                            faceNormalAxis = (cubeState.front == cubeSide) ? -transform.forward : transform.forward;
-                        }                                               
                     }
-                }
 
-                Vector3 SwipeAlongAxis = getClosestSwipeAxis(currentMouseSwipe, directionWorldAxes);
-                //print("face normal Axis :" + faceNormalAxis + ", SwipeAlongAxis : " + SwipeAlongAxis);
+                    Vector3 SwipeAlongAxis = getClosestSwipeAxis(currentMouseSwipe, directionWorldAxes);
+                    CurrentSwipeAxis = Vector3.Cross(faceNormalAxis, SwipeAlongAxis).normalized;
 
-                CurrentSwipeAxis = Vector3.Cross(faceNormalAxis, SwipeAlongAxis).normalized;
+                    if (CurrentSwipeAxis == transform.right || CurrentSwipeAxis == -transform.right)
+                    {
+                        CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.right, cubeState.left},CubeHit);
+                    }
+                    else if (CurrentSwipeAxis == transform.up || CurrentSwipeAxis == -transform.up)
+                    {
+                        CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.up, cubeState.down }, CubeHit);
+                    }               
+                    else if (CurrentSwipeAxis == transform.forward || CurrentSwipeAxis == -transform.forward)
+                    {
+                        CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.front, cubeState.back }, CubeHit);
+                    }
+                
+                    isCurrentSwipeClockWise = true;
+                    currentSwipeState = SwipeState.Swiping;
 
-                if (CurrentSwipeAxis == transform.right || CurrentSwipeAxis == -transform.right)
-                {
-                    CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.right, cubeState.left},CubeHit);
-                    //print("Swipe Axis = right");
-                }
-                else if (CurrentSwipeAxis == transform.up || CurrentSwipeAxis == -transform.up)
-                {
-                    CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.up, cubeState.down }, CubeHit);
-                    //print("Swipe Axis = up");
-                }               
-                else if (CurrentSwipeAxis == transform.forward || CurrentSwipeAxis == -transform.forward)
-                {
-                    CurrentSwipeFace = SelectFaceToSwipe(new List<List<GameObject>> { cubeState.front, cubeState.back }, CubeHit);
-                    //print("Swipe Axis = forward");
                 }
                 
-                isCurrentSwipeClockWise = true;
-                //// get cubes to swipe
-                currentSwipeState = SwipeState.Swiping;
-
-
+                
             }
             else if ( isMouseScrollWheelForward || isMouseScrollWheelBackward )
             {
-                // get current mouse hit face, swipe around it;
                 GameObject FaceHit = selectFace.GetMouseRayHitFace();              
                 if ( FaceHit!=null )
                 {
@@ -319,7 +312,8 @@ public class SwipeFace : MonoBehaviour
                             }
                             CurrentSwipeFace = SelectFaceToSwipe(cubeSide);
                         }
-                    }                 
+                    }        
+                    
                     isCurrentSwipeClockWise = isMouseScrollWheelForward;
                     currentSwipeState = SwipeState.Swiping;
                 }            
@@ -328,7 +322,13 @@ public class SwipeFace : MonoBehaviour
         }
  
     }
-        
+    
+    bool isValidSwipe(Vector3 currentMouseSwipe)
+    {
+        return currentMouseSwipe.sqrMagnitude > 1;
+    }
+
+
     Vector3 getClosestSwipeAxis(Vector3 mouseSwipe, List<Vector3> directionWorldAxes)
     {
         float maxVal = -Mathf.Infinity;

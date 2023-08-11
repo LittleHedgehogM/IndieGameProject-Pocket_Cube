@@ -74,7 +74,7 @@ public class ReadCube : MonoBehaviour
 
         List<GameObject> rays = new List<GameObject>();
         
-        // ray 0 at the top left and ray 4 at the bottom right;
+        // ray 0 at the top left and ray 3 at the bottom right;
 
         // 0 | 1
         // 2 | 3

@@ -34,4 +34,53 @@ public class CubeState : MonoBehaviour
 
         return cubeSides;
     }
+
+
+    string GetSideString(List<GameObject> side)
+    {
+        string sideString = "";
+        foreach (GameObject cubeSide in side)
+        {
+            sideString += cubeSide.name[0];
+        }
+        return sideString;
+
+    }
+        
+    public string GetStateString()
+    {
+        string stateString = "";
+        stateString += GetSideString(up);
+        stateString += GetSideString(right);
+        stateString += GetSideString(front);
+        stateString += GetSideString(down);
+        stateString += GetSideString(left);
+        stateString += GetSideString(back);
+        return stateString;
+    }
+
+    bool isSideRestored(List<GameObject> side)
+    {
+        char firstChar = side[0].name[0];
+        foreach (GameObject cubeSide in side)
+        {
+            if (cubeSide.name[0] != firstChar)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public bool isCubeSolved()
+    {
+        // check 6 sides and see if their color are the same
+        //GetSideString(up);
+        //stateString == "UUUURRRRFFFFDDDDLLLLBBBB"
+        return    isSideRestored(up) && isSideRestored(down) 
+               && isSideRestored(left) && isSideRestored(right) 
+               && isSideRestored(front) && isSideRestored(back);
+    }
+
 }
