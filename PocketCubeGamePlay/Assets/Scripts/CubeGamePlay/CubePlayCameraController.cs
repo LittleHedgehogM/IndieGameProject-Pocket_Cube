@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
-using static UnityEngine.GraphicsBuffer;
 
 public class CubePlayCameraController : MonoBehaviour
 {
@@ -12,7 +8,12 @@ public class CubePlayCameraController : MonoBehaviour
     [SerializeField] private Vector3 initialCameraPosition = new Vector3(0, 0, -10);
     [SerializeField][Range(0, 1)] private float initialCameraX = 0.1f;
     [SerializeField][Range(0, 1)] private float initialCameraY = 0.1f;
-    [SerializeField] AnimationCurve translationCurve;
+
+    [SerializeField] private AnimationCurve translationCurve;
+    [SerializeField][Range(0, 1)] private float translationTime;
+
+    [SerializeField] private AnimationCurve resetCameraCurve;
+    [SerializeField][Range(0, 1)] private float resetCameraTime;
 
     [SerializeField] private Camera rightCam;
     [SerializeField] private Camera leftCam;
@@ -20,7 +21,7 @@ public class CubePlayCameraController : MonoBehaviour
     [SerializeField] private Camera downCam;
     [SerializeField] private Camera frontCam;
     [SerializeField] private Camera backCam;
-
+    [SerializeField] private Camera initialCam;
     Vector3 startPosition;
     Quaternion startRotation;
 
@@ -28,7 +29,7 @@ public class CubePlayCameraController : MonoBehaviour
     Quaternion backStartRotation;
 
     float currentUsedTime;
-    [SerializeField][Range(0, 1)]  float totalTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +39,23 @@ public class CubePlayCameraController : MonoBehaviour
         currentUsedTime = 0;
     }
 
+    private void OnEnable()
+    {
+        CubePlayManager.onCubeSolved += CubeSolved;
+    }
+
+    private void OnDisable()
+    {
+        CubePlayManager.onCubeSolved -= CubeSolved;
+    }
+
+
 
     void InitCameraPosition()
     {
         mainCam.transform.position = Vector3.zero;
         RotateCamera(mainCam,   new Vector2(initialCameraX, initialCameraY));
+        RotateCamera(initialCam, new Vector2(initialCameraX, initialCameraY));
         RotateCamera(rightCam,  new Vector2(0.5f, 0));
         RotateCamera(leftCam,   new Vector2(-0.5f, 0));
         RotateCamera(upCam,     new Vector2(0, 0.5f));
@@ -79,6 +92,12 @@ public class CubePlayCameraController : MonoBehaviour
         backStartRotation = mainCam.transform.rotation;
     }
 
+
+    public bool ResetCamera()
+    {
+        return ResetCameraTo(initialCam);
+    }
+
     public bool TranslateCameraToRight()
     {
         return TranslateCameraTo(rightCam);
@@ -110,13 +129,34 @@ public class CubePlayCameraController : MonoBehaviour
         return TranslateCameraTo(downCam);
     }
 
+    private void CubeSolved()
+    {
+
+        // deactivate other bottons
+
+        // display finish button 
+        
+
+    }
+
+    private bool ResetCameraTo(Camera targetCamera)
+    {
+        currentUsedTime += Time.deltaTime;
+        float t = currentUsedTime / resetCameraTime;
+
+        mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, resetCameraCurve.Evaluate(t));
+        mainCam.transform.LookAt(this.transform, Vector3.up);
+        return t >= 1;
+    }
+
+
     private bool TranslateCameraTo(Camera targetCamera)
     {
         currentUsedTime += Time.deltaTime;
-        float t = currentUsedTime / totalTime;
+        float t = currentUsedTime / translationTime;
 
-        mainCam.transform.position = Vector3.Slerp(startPosition, targetCamera.transform.position, translationCurve.Evaluate(t));
-        mainCam.transform.rotation = Quaternion.Slerp(startRotation, targetCamera.transform.rotation, translationCurve.Evaluate(t));                   
+        mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, translationCurve.Evaluate(t));
+        mainCam.transform.rotation = Quaternion.Lerp(startRotation, targetCamera.transform.rotation, translationCurve.Evaluate(t));
         return t >= 1;
 
     }
@@ -124,10 +164,10 @@ public class CubePlayCameraController : MonoBehaviour
     public bool TranslateCameraBack()
     {
         currentUsedTime += Time.deltaTime;
-        float t = currentUsedTime / totalTime;
+        float t = currentUsedTime / translationTime;
 
-        mainCam.transform.position = Vector3.Slerp(backStartPosition, startPosition, t);
-        mainCam.transform.rotation = Quaternion.Slerp(backStartRotation, startRotation, t);
+        mainCam.transform.position = Vector3.Lerp(backStartPosition, startPosition, translationCurve.Evaluate(t));
+        mainCam.transform.rotation = Quaternion.Lerp(backStartRotation, startRotation, translationCurve.Evaluate(t));
         return t >= 1;
     }
 

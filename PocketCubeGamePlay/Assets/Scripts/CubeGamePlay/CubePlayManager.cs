@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class CubePlayManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public enum CubePlayStatus
     {
         WaitForInput,
+        InResetCamera,
         InRotation,
         InSwipe,
         InCommutation,
@@ -19,39 +18,34 @@ public class CubePlayManager : MonoBehaviour
         InRetart,
     };
 
+    [SerializeField] private bool enableFinish;
+
     private CubePlayStatus currentPlayStatus;
 
-    public bool isCommutationUnlocked;
-    public bool isDiagonalUnlocked;
-    public int maxCommutation;
-    public int maxDiagonal;
-    public int suggestedStepCount;
-
     SwipeFaceManager mySwipeFaceManager;
-    //CommutationManager myCommutationManager;
-
     CommutationSkill myCommutationSkill;
     DiagonalSkill myDiagonalSkill;
-
-    //DiagonalManager myDiagonalManager;
     RotateWholeCubeManager myRotateWholeCubeManager;
     CubePlayUIController myUIController;
+    CubePlayCameraController myCubePlayCameraController;
     CubeState cubeState;
     ReadCube readCube;
 
     Vector3 initalMousePressPos;
     Vector3 endMousePressPos;
+
+    public static event Action onCubeSolved;
+
     void Start()
     {
+
+
     }
 
     private void Awake()
     {
         
         mySwipeFaceManager          = FindObjectOfType<SwipeFaceManager>();
-        //myCommutationManager        = FindObjectOfType<CommutationManager>();
-        //myDiagonalManager           = FindObjectOfType<DiagonalManager>();
-
         myCommutationSkill          = FindObjectOfType<CommutationSkill>();
         myDiagonalSkill             = FindObjectOfType<DiagonalSkill>();
 
@@ -59,58 +53,57 @@ public class CubePlayManager : MonoBehaviour
         cubeState                   = FindObjectOfType<CubeState>();
         readCube                    = FindObjectOfType<ReadCube>();
         myUIController              = FindObjectOfType<CubePlayUIController>();
+        myCubePlayCameraController  = FindObjectOfType<CubePlayCameraController>();
+
+
         Initialize();
     }
 
     private void Initialize()
     {
         currentPlayStatus = CubePlayStatus.WaitForInput;
-        myUIController.SwipeCount = 0;
-        myUIController.DiagonalCount = 0;
-        myUIController.CommutationCount = 0;
-        myUIController.SolveResult = false;
+        myUIController.InitCubePlayUIElements();
         
     }
 
     private void OnEnable()
     {
-        SwipeFaceManager.onSwipeFinished += onSwipeEnd;
-        //DiagonalManager.onDiagonalFinished += onDiagonalFinished;
-        //CommutationManager.onCommutationFinished += onCommutationFinished;
+        SwipeFaceManager.onSwipeFinished += onAnyCubeStateChanged;
         RotateWholeCubeManager.onRotateWholeCubeFinished += onRotationFinished;
-        DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
-        CommutationSkill.onCommutataionFinished += onCommutationFinished;
+        DiagonalSkill.onDiagonalFinished += onAnyCubeStateChanged;
+        CommutationSkill.onCommutataionFinished += onAnyCubeStateChanged;
     }
 
     private void OnDisable()
     {
-        SwipeFaceManager.onSwipeFinished -= onSwipeEnd;
-        //DiagonalManager.onDiagonalFinished -= onDiagonalFinished;
-        //CommutationManager.onCommutationFinished -= onCommutationFinished;
+        SwipeFaceManager.onSwipeFinished -= onAnyCubeStateChanged;
         RotateWholeCubeManager.onRotateWholeCubeFinished -= onRotationFinished;
-        DiagonalSkill.onDiagonalFinished -= onDiagonalFinished;
-        CommutationSkill.onCommutataionFinished -= onCommutationFinished;
+        DiagonalSkill.onDiagonalFinished -= onAnyCubeStateChanged;
+        CommutationSkill.onCommutataionFinished -= onAnyCubeStateChanged;
+    }
+
+    private void onAnyCubeStateChanged()
+    {
+        readCube.ReadState();
+        bool isCubeSolved = CheckCubeSolved();
+        if (isCubeSolved && enableFinish)
+        {
+            if (enableFinish)
+            {
+                onCubeSolved?.Invoke();
+                SetCubePlayStatus(CubePlayStatus.CubeSolved);
+            }            
+        }
+        else
+        {
+            SetCubePlayStatus(CubePlayStatus.WaitForInput);
+        }
+
     }
 
     void onRotationFinished()
     {
         SetCubePlayStatus(CubePlayStatus.WaitForInput);
-    }
-    void onCommutationFinished()
-    {
-        myUIController.CommutationCount++;
-        SetCubePlayStatus(CubePlayStatus.WaitForInput);
-    }
-
-    void onDiagonalFinished()
-    {
-        myUIController.DiagonalCount++;
-        SetCubePlayStatus(CubePlayStatus.WaitForInput);
-    }
-    void onSwipeEnd()
-    {
-        SetCubePlayStatus(CubePlayStatus.WaitForInput);
-        myUIController.SwipeCount++;
     }
 
     public CubePlayStatus GetCubePlayStatus() 
@@ -118,7 +111,7 @@ public class CubePlayManager : MonoBehaviour
         return currentPlayStatus;
     }
 
-    void SetCubePlayStatus(CubePlayStatus newStatus) 
+    private void SetCubePlayStatus(CubePlayStatus newStatus) 
     {
         currentPlayStatus = newStatus;
     }
@@ -127,11 +120,9 @@ public class CubePlayManager : MonoBehaviour
     // check if cube is solved
     bool CheckCubeSolved()
     {        
-        //readCube.ReadState();
-        bool cubeSolved = cubeState.isCubeSolved();
-
-        myUIController.SolveResult = cubeSolved;
-        return cubeSolved;
+        bool isCubeSolved = cubeState.isCubeSolved();
+        myUIController.SolveResult = isCubeSolved;
+        return isCubeSolved; 
 
     }
 
@@ -142,9 +133,25 @@ public class CubePlayManager : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
     
+    public void EndPlay()
+    {
+        
+        // back to room
+        
+    }
+
+    public void SetStateToResetCamera()
+    {
+        if (currentPlayStatus == CubePlayStatus.WaitForInput)
+        {
+            myCubePlayCameraController.initTranslation();
+            currentPlayStatus = CubePlayStatus.InResetCamera;
+        }
+    }
+
     public void SetStateToCommutation()
     {
-        if (currentPlayStatus == CubePlayStatus.WaitForInput && isCommutationUnlocked)
+        if (currentPlayStatus == CubePlayStatus.WaitForInput )
         {
             if (/*myCommutationManager.InitCommutation()*/ myCommutationSkill.InitSkill())
             {              
@@ -155,7 +162,7 @@ public class CubePlayManager : MonoBehaviour
 
     public void SetStateToDiagonal()
     {
-        if (currentPlayStatus == CubePlayStatus.WaitForInput && isDiagonalUnlocked)
+        if (currentPlayStatus == CubePlayStatus.WaitForInput)
         {
             if (/*myDiagonalManager.InitDiagonal()*/ myDiagonalSkill.InitSkill())
             {
@@ -180,13 +187,18 @@ public class CubePlayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Temp disable
-        CheckCubeSolved();
         if (currentPlayStatus == CubePlayStatus.CubeSolved)
         {
             // Temp Design : Restart the game
             // ReloadScene();
-
+        }
+        else if (currentPlayStatus == CubePlayStatus.InResetCamera)
+        {
+            bool resetFinish = myCubePlayCameraController.ResetCamera();
+            if (resetFinish)
+            {
+                currentPlayStatus = CubePlayStatus.WaitForInput;
+            }
         }
         else if (currentPlayStatus == CubePlayStatus.WaitForInput)
         {
@@ -239,17 +251,17 @@ public class CubePlayManager : MonoBehaviour
         }
         else if (currentPlayStatus == CubePlayStatus.InCommutation)
         {
-            //myCommutationManager.UpdateCommutation();
             myCommutationSkill.UpdateSkill();
             
         }
         else if (currentPlayStatus == CubePlayStatus.InDiagonal)
         {
-            //myDiagonalManager.UpdateDiagonal();
             myDiagonalSkill.UpdateSkill();
         }
         else if (currentPlayStatus == CubePlayStatus.InRetart)
         {
+
+            //Play Reload animation
             ReloadScene();
         }
     }

@@ -100,12 +100,6 @@ public class ReadCube : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public List<GameObject> ReadFace(List<GameObject> rayStarts, Transform rayTransform)
     {
         List<GameObject> facesHit = new List<GameObject>();

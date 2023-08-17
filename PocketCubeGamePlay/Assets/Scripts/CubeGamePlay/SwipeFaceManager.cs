@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 public class SwipeFaceManager : MonoBehaviour
@@ -18,7 +16,6 @@ public class SwipeFaceManager : MonoBehaviour
 
     [SerializeField] AnimationCurve swipeAnimationCurve;
     [SerializeField][Range(0, 1)] float totalTime;
-    public GameObject emptyGO;
     float currentUsedTime;
 
     Vector3 initalMousePressPos;
@@ -37,10 +34,6 @@ public class SwipeFaceManager : MonoBehaviour
         FinishSwipe
     };
     SwipeState currentSwipeState;
-
-    List<Vector3> cubeStartPosition;
-    List<Quaternion> cubeStartRotation;
-    List<GameObject> cubeTargetGameObjects;
 
     public static event Action onSwipeFinished;
 
@@ -149,30 +142,12 @@ public class SwipeFaceManager : MonoBehaviour
         isCurrentSwipeClockWise = false;
         CurrentSwipeFace.Clear();
         currentSwipeState = SwipeState.WaitForSwipe;
-        //cubeTargetGameObjects.Clear();
-        //cubeStartPosition.Clear();
-        //cubeStartRotation.Clear();
     }
 
 
     public void InitSwipe()
     {
         currentUsedTime = 0;
-        //cubeStartPosition = new List<Vector3>();
-        //cubeStartRotation = new List<Quaternion>();
-        //cubeTargetGameObjects = new List<GameObject>();
-
-        //for (int i = 0; i < CurrentSwipeFace.Count; i++)
-        //{
-        //    GameObject cube = CurrentSwipeFace[i];
-        //    //Transform transform = cube.transform;           
-        //    GameObject newObj = Instantiate(emptyGO, cube.transform.position, cube.transform.rotation);
-        //    newObj.transform.RotateAround(Vector3.zero, CurrentSwipeAxis, isCurrentSwipeClockWise ? 90 : -90);
-
-        //    cubeTargetGameObjects.Add(newObj);
-        //    cubeStartPosition.Add(cube.transform.position);
-        //    cubeStartRotation.Add(cube.transform.rotation);
-        //}
         CurrentSwipeDegree = 0;
 
     }
@@ -190,26 +165,16 @@ public class SwipeFaceManager : MonoBehaviour
             currentUsedTime += Time.deltaTime;
             float t = currentUsedTime / totalTime;
 
-            //for (int i = 0; i < CurrentSwipeFace.Count; i++)
-            //{
-            //    GameObject cube = CurrentSwipeFace[i];
-            //    Transform cubeTarget = cubeTargetGameObjects[i].transform;
-            //    cube.transform.position = Vector3.Slerp(cubeStartPosition[i], cubeTarget.position, t);
-            //    should move along the curve
-            //    cube.transform.rotation = Quaternion.Lerp(cubeStartRotation[i], cubeTarget.rotation, t);
-
-            //}
             float degree = Mathf.Lerp(0, 90, swipeAnimationCurve.Evaluate(t));
             float deltaDegree = degree - CurrentSwipeDegree;
             CurrentSwipeDegree = degree;
 
-            //float deltaDegree = 3;
             foreach (GameObject cube in CurrentSwipeFace)
             {
                 cube.transform.RotateAround(Vector3.zero, CurrentSwipeAxis, isCurrentSwipeClockWise ? deltaDegree : -deltaDegree);
             }
             // CurrentSwipeDegree += deltaDegree;
-            if (t >=1 /*CurrentSwipeDegree >= 90*/ )
+            if (t >=1 )
             {
                 currentSwipeState = SwipeState.FinishSwipe;
             }

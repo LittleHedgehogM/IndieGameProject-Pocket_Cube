@@ -1,28 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static CubePlayManager;
+
 public class CubePlayUIController : MonoBehaviour
 {
 
-    [SerializeField]  TextMeshProUGUI mySwipeCountText;
-    [SerializeField]  TextMeshProUGUI myDiagonalCountText;
-    [SerializeField]  TextMeshProUGUI myCommutationCountText;
-    [SerializeField]  TextMeshProUGUI myIsCubeSolvedText;
+    [SerializeField] private TextMeshProUGUI mySwipeCountText;
+    [SerializeField] private TextMeshProUGUI myDiagonalCountText;
+    [SerializeField] private TextMeshProUGUI myCommutationCountText;
+    [SerializeField] private TextMeshProUGUI myIsCubeSolvedText;
 
     public Button DiagonalButton;
     public Button CommutationButton;
     public Button RestartButton;
+    public Button FinishButton;
+    public Button ResetCameraButton;
+    private int totalSteps;
 
-    private int _swipeCnt;
+    [SerializeField] private bool isCommutationUnlocked;
+    [SerializeField] private bool isDiagonalUnlocked;
+    [SerializeField] private int maxCommutation;
+    [SerializeField] private int maxDiagonal;
+    [SerializeField] private int suggestedStepCount;
+
+    private int _swipeCount;
     public int SwipeCount
     {
-        get { return _swipeCnt; }
+        get { return _swipeCount; }
         set 
         { 
-            _swipeCnt = value;
-            UpdateSwipeCountText(_swipeCnt);
+            _swipeCount = value;
+            UpdateSwipeCountText(_swipeCount);
+            UpdateTotalStepCount();
         }
     }
 
@@ -35,6 +46,7 @@ public class CubePlayUIController : MonoBehaviour
         {
             _diagonalCount = value;
             UpdateDiagonalCountText(_diagonalCount);
+            UpdateTotalStepCount();
         }
     }
     private int _commutationCount;
@@ -45,6 +57,7 @@ public class CubePlayUIController : MonoBehaviour
         {
             _commutationCount = value;
             UpdateCommutationCountText(_commutationCount);
+            UpdateTotalStepCount();
         }
     }
 
@@ -59,16 +72,79 @@ public class CubePlayUIController : MonoBehaviour
         }
     }
 
-    //// Start is called before the first frame update
-    
-    void Start()
+
+    public void InitCubePlayUIElements()
     {
+        // disable Skill if they are locked
+        // hide restart and finish button
+        DiagonalButton.gameObject.SetActive(isDiagonalUnlocked);
+        CommutationButton.gameObject.SetActive(isCommutationUnlocked);
+        FinishButton.gameObject.SetActive(false);
+        RestartButton.gameObject.SetActive(true);
+
         SwipeCount = 0;
         CommutationCount = 0;
         DiagonalCount = 0;
         SolveResult = false;
+        totalSteps = 0;
+
     }
 
+    private void OnEnable()
+    {
+        CubePlayManager.onCubeSolved += CubeSolved;
+        SwipeFaceManager.onSwipeFinished += onSwipeFinished;
+        DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
+        CommutationSkill.onCommutataionFinished += onCommutationFinished;
+    }
+
+    private void OnDisable()
+    {
+        CubePlayManager.onCubeSolved -= CubeSolved;
+        SwipeFaceManager.onSwipeFinished += onSwipeFinished;
+        DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
+        CommutationSkill.onCommutataionFinished += onCommutationFinished;
+    }
+
+    void onCommutationFinished()
+    {
+        CommutationCount++;
+        if (CommutationCount >= maxCommutation )
+        {
+            CommutationButton.interactable = false;
+        }
+    }
+
+    void onDiagonalFinished()
+    {
+        DiagonalCount++;
+        if (DiagonalCount >= maxDiagonal)
+        {
+            DiagonalButton.interactable = false;
+        }
+    }
+
+    void onSwipeFinished()
+    {
+        SwipeCount++;
+    }
+
+    private void CubeSolved()
+    {
+        if (totalSteps > 0)
+        {
+            FinishButton.gameObject.SetActive(true);
+        }   
+    }
+
+    private void UpdateTotalStepCount()
+    {
+        totalSteps = SwipeCount + DiagonalCount + CommutationCount;
+        if (totalSteps > suggestedStepCount)
+        {
+            //RestartButton.gameObject.SetActive(true);
+        }
+    }
 
     void UpdateSwipeCountText(int swipeCount)
     {
@@ -90,6 +166,6 @@ public class CubePlayUIController : MonoBehaviour
         myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"False");
     }
 
-
+    // 
 
 }
