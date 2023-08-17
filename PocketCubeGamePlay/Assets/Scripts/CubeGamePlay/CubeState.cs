@@ -6,26 +6,26 @@ using UnityEngine;
 public class CubeState : MonoBehaviour
 {
 
-    public List<GameObject> front   = new List<GameObject>();
-    public List<GameObject> back    = new List<GameObject>();
-    public List<GameObject> up      = new List<GameObject>();
-    public List<GameObject> down    = new List<GameObject>();
-    public List<GameObject> left    = new List<GameObject>();
-    public List<GameObject> right   = new List<GameObject>();
+    public List<GameObject> front = new List<GameObject>();
+    public List<GameObject> back = new List<GameObject>();
+    public List<GameObject> up = new List<GameObject>();
+    public List<GameObject> down = new List<GameObject>();
+    public List<GameObject> left = new List<GameObject>();
+    public List<GameObject> right = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public List<List<GameObject>>  GetAllCubeSides()
+    public List<List<GameObject>> GetAllCubeSidesFaces()
     {
         List<List<GameObject>> cubeSides = new List<List<GameObject>>()
         {up,down,
@@ -35,6 +35,27 @@ public class CubeState : MonoBehaviour
         return cubeSides;
     }
 
+    public List<GameObject> FacesToCubes(List<GameObject> Faces)
+    {
+        List<GameObject> cubes = new List<GameObject>();
+        
+        foreach (GameObject aFace in Faces)
+        {
+            cubes.Add(aFace.transform.parent.gameObject.transform.parent.gameObject);
+        }
+
+        return cubes;
+    }
+
+    public List<List<GameObject>> GetAllCubesSidesCubes()
+    {
+        List<List<GameObject>> cubeSides = new List<List<GameObject>>()
+        {FacesToCubes(up),FacesToCubes(down),
+         FacesToCubes(left),FacesToCubes(right),
+         FacesToCubes(front),FacesToCubes(back)};
+
+        return cubeSides;
+    }
 
     string GetSideString(List<GameObject> side)
     {
@@ -76,8 +97,6 @@ public class CubeState : MonoBehaviour
     public bool isCubeSolved()
     {
         // check 6 sides and see if their color are the same
-        //GetSideString(up);
-        //stateString == "UUUURRRRFFFFDDDDLLLLBBBB"
         return    isSideRestored(up) && isSideRestored(down) 
                && isSideRestored(left) && isSideRestored(right) 
                && isSideRestored(front) && isSideRestored(back);
