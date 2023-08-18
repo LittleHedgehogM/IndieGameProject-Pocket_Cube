@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CubeAutoRotate : MonoBehaviour
 {
-    public float speed = 25;
 
+    public float speed = 25;
+    
+    
     // Update is called once per frame
-    void Update()
+
+    public void StartMenuCubeAutoRotate()
     {
         transform.Rotate(speed * Time.deltaTime, speed * Time.deltaTime, speed * Time.deltaTime, Space.Self);
     }
