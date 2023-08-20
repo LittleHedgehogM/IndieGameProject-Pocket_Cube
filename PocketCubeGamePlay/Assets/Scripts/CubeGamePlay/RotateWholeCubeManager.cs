@@ -36,6 +36,30 @@ public class RotateWholeCubeManager : MonoBehaviour
         return SelectFace.GetMouseRayHitFace(Input.mousePosition) !=null;
     }
 
+
+    public void RotateWholeCubeForSkill()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            Vector3 direction = previousMousePosition - cameraColler.ScreenToViewportPoint(Input.mousePosition);
+            direction *= mouseSenstivity;
+            cameraColler.RotateMainCamera(direction);
+
+            //cam.transform.position = Vector3.zero;
+            //cam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 180);
+            //cam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 180, Space.World);
+            //cam.transform.Translate(new Vector3(0, 0, -10));
+
+            //mouseDelta = Input.mousePosition - previousMousePosition;
+            //mouseDelta *= mouseSenstivity;
+            //transform.rotation = Quaternion.Euler(mouseDelta.y, -mouseDelta.x, 0) * transform.rotation;
+        }
+
+        //previousMousePosition = Input.mousePosition;
+        previousMousePosition = cameraColler.ScreenToViewportPoint(Input.mousePosition); ;
+    }
+
+
     public void UpdateRotateWholeCube()
     {
         if (Input.GetMouseButtonUp(1))

@@ -171,7 +171,7 @@ public class SwipeFaceManager : MonoBehaviour
 
             foreach (GameObject cube in CurrentSwipeFace)
             {
-                cube.transform.RotateAround(Vector3.zero, CurrentSwipeAxis, isCurrentSwipeClockWise ? deltaDegree : -deltaDegree);
+                cube.transform.RotateAround(this.transform.position, CurrentSwipeAxis, isCurrentSwipeClockWise ? deltaDegree : -deltaDegree);
             }
             // CurrentSwipeDegree += deltaDegree;
             if (t >=1 )

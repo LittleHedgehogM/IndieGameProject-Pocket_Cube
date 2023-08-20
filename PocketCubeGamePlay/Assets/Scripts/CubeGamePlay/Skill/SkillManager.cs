@@ -27,12 +27,14 @@ public abstract class SkillManager : MonoBehaviour
     protected Vector3 commomFaceNormalAxis;
     protected CubeState cubeState;
     protected CubePlayCameraController myCameraController;
+    RotateWholeCubeManager myRotateWholeCubeManager;
 
     // Start is called before the first frame update
     void Start()
     {
         cubeState = FindObjectOfType<CubeState>();
         myCameraController = FindObjectOfType<CubePlayCameraController>();
+        myRotateWholeCubeManager = FindObjectOfType<RotateWholeCubeManager>();
         ResetValues();
     }
 
@@ -57,8 +59,18 @@ public abstract class SkillManager : MonoBehaviour
     {
         if (currentState == SkillState.WaitForSelectFirstCube)
         {
+            if (Input.GetMouseButtonDown(1))
+            {
+                myRotateWholeCubeManager.InitPosition();
+            }
+            if (Input.GetMouseButton(1)&& !Input.GetMouseButton(0))
+            {
+                // enable camera rotation
+                myRotateWholeCubeManager.RotateWholeCubeForSkill();
 
-            if (Input.GetMouseButtonUp(0))
+            }
+
+            if (!Input.GetMouseButton(1)&&Input.GetMouseButtonUp(0))
             {
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
 

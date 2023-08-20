@@ -37,9 +37,6 @@ public class CubePlayCameraController : MonoBehaviour
     Vector3 startPosition;
     Quaternion startRotation;
     //Quaternion targetQuaternion;
-
-    float selfRotationDegree = 0;
-
     float currentUsedTime;
     float currentRotationDegree = 0;
     Vector3 translationRotateAxis;
