@@ -176,7 +176,12 @@ public class SwipeFaceManager : MonoBehaviour
             // CurrentSwipeDegree += deltaDegree;
             if (t >=1 )
             {
+
+                RoundUpPositions();
                 currentSwipeState = SwipeState.FinishSwipe;
+                
+
+
             }
         }
         else if (currentSwipeState == SwipeState.FinishSwipe)
@@ -187,6 +192,20 @@ public class SwipeFaceManager : MonoBehaviour
 
     }
 
+    private void RoundUpPositions()
+    {
+        // round up 
+        foreach (GameObject cube in CurrentSwipeFace)
+        {
+            Vector3 finalPosition = cube.transform.position;
+            float x = (float)Convert.ToDouble(String.Format("{0:0.0}", finalPosition.x));
+            float y = (float)Convert.ToDouble(String.Format("{0:0.0}", finalPosition.y));
+            float z = (float)Convert.ToDouble(String.Format("{0:0.0}", finalPosition.z));
+            cube.transform.position = new Vector3(x, y, z);
+
+        }
+
+    }
 
     public bool InitSwipeMouseDrag(Vector3 initialMousePos, Vector3 endMousePos)
     {
@@ -297,7 +316,6 @@ public class SwipeFaceManager : MonoBehaviour
     {
         float maxVal = -Mathf.Infinity;
         Vector3 closestSwipeAxis = Vector3.zero;
-        print(mouseSwipe);
         foreach (Vector3 direction in directionWorldAxes)
         {
             Vector3 screenOrigin = Camera.main.WorldToScreenPoint(Vector3.zero);

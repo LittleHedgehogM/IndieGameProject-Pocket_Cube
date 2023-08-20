@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static CubePlayManager;
+//using static CubePlayManager;
 
 public class CubePlayUIController : MonoBehaviour
 {
@@ -72,6 +72,10 @@ public class CubePlayUIController : MonoBehaviour
         }
     }
 
+    public void onRestart()
+    {
+        InitCubePlayUIElements();
+    }
 
     public void InitCubePlayUIElements()
     {
@@ -92,7 +96,7 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnEnable()
     {
-        CubePlayManager.onCubeSolved += CubeSolved;
+        //CubePlayManager.onCubeSolved += CubeSolved;
         SwipeFaceManager.onSwipeFinished += onSwipeFinished;
         DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
         CommutationSkill.onCommutataionFinished += onCommutationFinished;
@@ -100,11 +104,13 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnDisable()
     {
-        CubePlayManager.onCubeSolved -= CubeSolved;
+        //CubePlayManager.onCubeSolved -= CubeSolved;
         SwipeFaceManager.onSwipeFinished += onSwipeFinished;
         DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
         CommutationSkill.onCommutataionFinished += onCommutationFinished;
     }
+
+    
 
     void onCommutationFinished()
     {
@@ -166,6 +172,5 @@ public class CubePlayUIController : MonoBehaviour
         myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"False");
     }
 
-    // 
 
 }

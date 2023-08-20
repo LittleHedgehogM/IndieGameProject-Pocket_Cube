@@ -36,9 +36,9 @@ public abstract class SkillManager : MonoBehaviour
         ResetValues();
     }
 
-    void ResetValues()
+    public void ResetValues()
     {
-        currentState = SkillState.WaitForInput;
+        currentState = SkillState.WaitForSelectFirstCube;
         commomFaceNormalAxis = Vector3.zero;
         FirstFaceHit = null;
         SecondFaceHit = null;
@@ -46,14 +46,14 @@ public abstract class SkillManager : MonoBehaviour
         SecondCubeHit = null;
     }
 
-    public bool InitSkill()
+    public bool onStart()
     {
-        currentState = SkillState.WaitForSelectFirstCube;
+        ResetValues();
         return true;
     }
 
     // Update is called once per frame
-    public void UpdateSkill()
+    public void onUpdate()
     {
         if (currentState == SkillState.WaitForSelectFirstCube)
         {
@@ -68,7 +68,31 @@ public abstract class SkillManager : MonoBehaviour
                     FirstCubeHit = SelectFace.getFaceRelatedCube(faceHit);
                     commomFaceNormalAxis = FindFaceNormal(FirstFaceHit);
                     
-                    myCameraController.initTranslation();
+                    //myCameraController.initTranslation();
+                    if (commomFaceNormalAxis == transform.right)
+                    {
+                        myCameraController.SetTargetCameraToRight();
+                    }
+                    else if (commomFaceNormalAxis == -transform.right)
+                    {
+                        myCameraController.SetTargetCameraToLeft();
+                    }
+                    else if (commomFaceNormalAxis == transform.up)
+                    {
+                        myCameraController.SetTargetCameraToUp();
+                    }
+                    else if (commomFaceNormalAxis == -transform.up)
+                    {
+                        myCameraController.SetTargetCameraToDown();
+                    }
+                    else if (commomFaceNormalAxis == transform.forward)
+                    {
+                        myCameraController.SetTargetCameraToBack();
+                    }
+                    else if (commomFaceNormalAxis == -transform.forward)
+                    {
+                        myCameraController.SetTargetCameraToFront();
+                    }
                     currentState = SkillState.TranslateCamera;
                 }
 
@@ -76,41 +100,46 @@ public abstract class SkillManager : MonoBehaviour
         }
         else if (currentState == SkillState.TranslateCamera)
         {
-            bool translateFinish = false;
-            if (commomFaceNormalAxis == transform.right)
-            {
-                translateFinish = myCameraController.TranslateCameraToRight();
-            }
-            else if (commomFaceNormalAxis == -transform.right)
-            {
-                translateFinish = myCameraController.TranslateCameraToLeft();
 
-            }
-            else if (commomFaceNormalAxis == transform.up)
-            {
-                translateFinish = myCameraController.TranslateCameraToUp();
+            StartCoroutine(myCameraController.CameraTranslate());
+            currentState = SkillState.WaitForSelectSecondCube;
+            //bool translateFinish = myCameraController.UpdateCameraTranslation();
 
-            }
-            else if (commomFaceNormalAxis == -transform.up)
-            {
-                translateFinish = myCameraController.TranslateCameraToDown();
+            //if (commomFaceNormalAxis == transform.right)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToRight();
+            //}
+            //else if (commomFaceNormalAxis == -transform.right)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToLeft();
 
-            }
-            else if (commomFaceNormalAxis == transform.forward)
-            {
-                translateFinish = myCameraController.TranslateCameraToBack();
+            //}
+            //else if (commomFaceNormalAxis == transform.up)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToUp();
 
-            }
-            else if (commomFaceNormalAxis == -transform.forward)
-            {
-                translateFinish = myCameraController.TranslateCameraToFront();
+            //}
+            //else if (commomFaceNormalAxis == -transform.up)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToDown();
 
-            }
+            //}
+            //else if (commomFaceNormalAxis == transform.forward)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToBack();
 
-            if (translateFinish)
-            {
-                currentState = SkillState.WaitForSelectSecondCube;
-            }
+            //}
+            //else if (commomFaceNormalAxis == -transform.forward)
+            //{
+            //    translateFinish = myCameraController.TranslateCameraToFront();
+
+            //}
+
+            //if (translateFinish)
+            //{
+            //    currentState = SkillState.WaitForSelectSecondCube;
+            //}
+            
         }
         else if (currentState == SkillState.WaitForSelectSecondCube)
         {
@@ -138,25 +167,33 @@ public abstract class SkillManager : MonoBehaviour
             bool ApplySkillFinih = ApplySkill();
             if (ApplySkillFinih)
             {
-                myCameraController.initTranslationBack();
+                // myCameraController.initTranslationBack();
+                myCameraController.InitTargetRotationBack();
                 currentState = SkillState.TranslateCameraBack;
             }
             
         }
         else if (currentState == SkillState.TranslateCameraBack)
         {
-            bool translationBackFinish = myCameraController.TranslateCameraBack();
-            if (translationBackFinish)
-            {
-                currentState = SkillState.SkillFinish;
-            }
+            StartCoroutine(myCameraController.CameraTranslateBack());
+            currentState = SkillState.SkillFinish;
+            //bool translationBackFinish = myCameraController.UpdateCameraTranslationBack(); /*myCameraController.TranslateCameraBack()*/;
+            //if (translationBackFinish)
+            //{
+            //    currentState = SkillState.SkillFinish;
+            //}
         }
         else if (currentState == SkillState.SkillFinish)
         {
-            ResetValues();
+            currentState = SkillState.WaitForInput;
             InvokeFinish();
 
         }
+    }
+
+    protected virtual void onRestart()
+    {
+        ResetValues();
     }
 
     protected virtual void InvokeFinish()

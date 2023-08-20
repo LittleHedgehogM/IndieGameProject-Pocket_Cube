@@ -1,5 +1,12 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+//using System.Numerics;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+//using Vector2 = System.Numerics.Vector2;
+//using Quaternion = UnityEngine.Quaternion;
+//using Vector3 = UnityEngine.Vector3;
 
 public class CubePlayCameraController : MonoBehaviour
 {
@@ -10,10 +17,12 @@ public class CubePlayCameraController : MonoBehaviour
     [SerializeField][Range(0, 1)] private float initialCameraY = 0.1f;
 
     [SerializeField] private AnimationCurve translationCurve;
-    [SerializeField][Range(0, 1)] private float translationTime;
+    [SerializeField][Range(0, 3)] private float translationTimePhase1;
+    [SerializeField][Range(0, 1)] private float translationTimePhase2;
+
 
     [SerializeField] private AnimationCurve resetCameraCurve;
-    [SerializeField][Range(0, 1)] private float resetCameraTime;
+    [SerializeField][Range(0, 3)] private float resetCameraTime;
 
     [SerializeField] private Camera rightCam;
     [SerializeField] private Camera leftCam;
@@ -22,48 +31,88 @@ public class CubePlayCameraController : MonoBehaviour
     [SerializeField] private Camera frontCam;
     [SerializeField] private Camera backCam;
     [SerializeField] private Camera initialCam;
+
+
+    [SerializeField] private Transform translateHelper;
+    [SerializeField] private Transform translateBackHelper;
+
+    [SerializeField] private GameObject PocketCube;
+
     Vector3 startPosition;
     Quaternion startRotation;
+    Vector3 startMainCameraUp;
+    //Quaternion targetQuaternion;
 
-    Vector3 backStartPosition;
-    Quaternion backStartRotation;
 
     float currentUsedTime;
+    float currentRotationDegree = 0;
+    Vector3 translationRotateAxis;
+    float translationRotateDegree = 0;
+
+
+    //List<Vector3> candidateUpAxis;
 
     // Start is called before the first frame update
     void Start()
     {
         InitCameraPosition();
-        mainCam.transform.LookAt(this.transform.position);
-        mainCam.orthographic = true;
-        currentUsedTime = 0;
+
     }
 
     private void OnEnable()
     {
-        CubePlayManager.onCubeSolved += CubeSolved;
+        CubeInPlayPhase.onCubeSolved += CubeSolved;
     }
 
     private void OnDisable()
     {
-        CubePlayManager.onCubeSolved -= CubeSolved;
+        CubeInPlayPhase.onCubeSolved -= CubeSolved;
     }
 
 
+    public void onRestart()
+    {
+        InitCameraPosition();
+    }
 
     void InitCameraPosition()
     {
-        mainCam.transform.position = Vector3.zero;
-        RotateCamera(mainCam,   new Vector2(initialCameraX, initialCameraY));
+        //mainCam.transform.position = Vector3.zero;
+        RotateCamera(mainCam,    new Vector2(initialCameraX, initialCameraY));
         RotateCamera(initialCam, new Vector2(initialCameraX, initialCameraY));
-        RotateCamera(rightCam,  new Vector2(0.5f, 0));
+        RotateCamera(rightCam,   new Vector2(0.5f, 0));
         RotateCamera(leftCam,   new Vector2(-0.5f, 0));
         RotateCamera(upCam,     new Vector2(0, 0.5f));
         RotateCamera(downCam,   new Vector2(0, -0.5f));
         RotateCamera(frontCam,  new Vector2(0, 0));
         RotateCamera(backCam,   new Vector2(1, 0));
+        mainCam.transform.LookAt(PocketCube.transform.position);
+        mainCam.orthographic = true;
+        currentUsedTime = 0;
+
+
     }
 
+    private Vector3 getClosestUpAxis(List<Vector3> candidateUpAxis)
+    {
+        Vector3 cameraUp = mainCam.transform.up;
+
+        float minAngle = Mathf.Infinity;
+        Vector3 targetUpAxis = Vector3.zero;
+        foreach (Vector3 axis in candidateUpAxis)
+        {
+            float angle = Vector3.Angle(cameraUp, axis);
+            if (angle < minAngle)
+            {
+                targetUpAxis = axis;
+            }
+        }
+
+        // also find the minAngle
+
+        return targetUpAxis;
+
+    }
 
     public void RotateMainCamera(Vector2 direction)
     {
@@ -79,18 +128,19 @@ public class CubePlayCameraController : MonoBehaviour
 
     }
 
-    public void initTranslation()
+    public void InitCameraResetTranslation()
     {
         currentUsedTime = 0;
         startPosition = mainCam.transform.position;
         startRotation = mainCam.transform.rotation;
     }
-    public void initTranslationBack()
-    {
-        currentUsedTime = 0;
-        backStartPosition = mainCam.transform.position;
-        backStartRotation = mainCam.transform.rotation;
-    }
+
+    //public void initTranslationBack()
+    //{
+    //    currentUsedTime = 0;
+    //    backStartPosition = mainCam.transform.position;
+    //    backStartRotation = mainCam.transform.rotation;
+    //}
 
 
     public bool ResetCamera()
@@ -98,45 +148,45 @@ public class CubePlayCameraController : MonoBehaviour
         return ResetCameraTo(initialCam);
     }
 
-    public bool TranslateCameraToRight()
+
+    public void SetTargetCameraToRight()
     {
-        return TranslateCameraTo(rightCam);
+        InitTargetRotation(rightCam);
+
+
     }
 
-    public bool TranslateCameraToLeft()
+    public void SetTargetCameraToLeft()
     {
-        return TranslateCameraTo(leftCam);
-    }
-
-    public bool TranslateCameraToFront()
-    {
-        return TranslateCameraTo(frontCam);
-    }
-
-    public bool TranslateCameraToBack()
-    {
-        return TranslateCameraTo(backCam);
+        InitTargetRotation(leftCam);
     }
 
 
-    public bool TranslateCameraToUp()
+    public void SetTargetCameraToFront()
     {
-        return TranslateCameraTo(upCam);
+        InitTargetRotation(frontCam);
     }
 
-    public bool TranslateCameraToDown()
+    public void SetTargetCameraToBack()
     {
-        return TranslateCameraTo(downCam);
+        InitTargetRotation(backCam);
     }
+
+    public void SetTargetCameraToUp()
+    {
+        InitTargetRotation(upCam);
+    }
+
+    public void SetTargetCameraToDown()
+    {
+        InitTargetRotation(downCam);
+    }
+
 
     private void CubeSolved()
     {
-
         // deactivate other bottons
-
         // display finish button 
-        
-
     }
 
     private bool ResetCameraTo(Camera targetCamera)
@@ -145,31 +195,173 @@ public class CubePlayCameraController : MonoBehaviour
         float t = currentUsedTime / resetCameraTime;
 
         mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, resetCameraCurve.Evaluate(t));
-        mainCam.transform.LookAt(this.transform, Vector3.up);
+        mainCam.transform.LookAt(PocketCube.transform, Vector3.up);
         return t >= 1;
     }
 
-
-    private bool TranslateCameraTo(Camera targetCamera)
+    public void InitTargetRotation(Camera targetCamera)
     {
-        currentUsedTime += Time.deltaTime;
-        float t = currentUsedTime / translationTime;
+        currentUsedTime = 0;
+        currentRotationDegree = 0;
 
-        mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, translationCurve.Evaluate(t));
-        mainCam.transform.rotation = Quaternion.Lerp(startRotation, targetCamera.transform.rotation, translationCurve.Evaluate(t));
-        return t >= 1;
+        startPosition = mainCam.transform.position;
+        startMainCameraUp = mainCam.transform.up;
+
+        Vector3 cubeToMainCameraVec   = (PocketCube.transform.position - mainCam.transform.position).normalized;
+        Vector3 cubeToTargetCameraVec = (PocketCube.transform.position - targetCamera.transform.position).normalized;
+
+        translationRotateAxis   = Vector3.Cross(cubeToMainCameraVec, cubeToTargetCameraVec).normalized;
+        translationRotateDegree = Vector3.Angle(cubeToMainCameraVec, cubeToTargetCameraVec);
+
+        translateHelper.transform.position = mainCam.transform.position;
+        translateHelper.transform.rotation = mainCam.transform.rotation;
+        //translateHelper.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, translationRotateDegree);
+
+        //float selfRotationDegree = 0;
+        //List<Vector3> candidateAxes = new List<Vector3>();
+        //candidateAxes.Add(PocketCube.transform.up);
+        //candidateAxes.Add(-PocketCube.transform.up);
+        //candidateAxes.Add(PocketCube.transform.right);
+        //candidateAxes.Add(-PocketCube.transform.right);
+        //candidateAxes.Add(PocketCube.transform.forward);
+        //candidateAxes.Add(-PocketCube.transform.forward);
+
+        //float minAngle = Mathf.Infinity;
+        //foreach (Vector3 axis in candidateAxes)
+        //{
+        //    float angleDiff = Vector3.Angle(mainCam.transform.up, axis);
+        //    //print("angle Diff " + angleDiff);
+        //    if (angleDiff < minAngle)
+        //    {
+        //        minAngle = angleDiff;
+        //    }
+        //}
+        //selfRotationDegree = minAngle;
+
+        //Vector3 selfRotationAxis = translateHelper.transform.position - PocketCube.transform.position;
+        //translateHelper.transform.RotateAround(translateHelper.transform.position, selfRotationAxis, selfRotationDegree);
 
     }
 
-    public bool TranslateCameraBack()
+    public IEnumerator CameraTranslate()
     {
-        currentUsedTime += Time.deltaTime;
-        float t = currentUsedTime / translationTime;
 
-        mainCam.transform.position = Vector3.Lerp(backStartPosition, startPosition, translationCurve.Evaluate(t));
-        mainCam.transform.rotation = Quaternion.Lerp(backStartRotation, startRotation, translationCurve.Evaluate(t));
-        return t >= 1;
+        float t = 0;
+        currentUsedTime = 0;
+        currentRotationDegree = 0;
+
+        // first phase
+        while (t < 1)
+        {
+            currentUsedTime += Time.deltaTime;
+            t = currentUsedTime / translationTimePhase1;
+
+            float angle = Mathf.Lerp(0, translationRotateDegree, translationCurve.Evaluate(t));
+            float deltaAngle = angle - currentRotationDegree;
+            mainCam.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, deltaAngle);
+            currentRotationDegree = angle;
+            yield return null;
+        }
+
+        // second phase
+
+        // get current main camera up
+        // find closest axis and align to it
+        //t = 0;
+        //currentUsedTime = 0;
+
+        //currentRotationDegree = 0;
+        //float selfRotationDegree = 0;
+
+        //List<Vector3> candidateAxes = new List<Vector3>();
+        //candidateAxes.Add(PocketCube.transform.up);
+        //candidateAxes.Add(-PocketCube.transform.up);
+        //candidateAxes.Add(PocketCube.transform.right);
+        //candidateAxes.Add(-PocketCube.transform.right);
+        //candidateAxes.Add(PocketCube.transform.forward);
+        //candidateAxes.Add(-PocketCube.transform.forward);
+
+        //float minAngle = Mathf.Infinity;
+        //foreach (Vector3 axis in candidateAxes)
+        //{
+        //    float angleDiff = Vector3.Angle(mainCam.transform.up, axis);
+        //    print("angle Diff " + angleDiff);
+        //    if (angleDiff < minAngle)
+        //    {
+        //        minAngle = angleDiff;
+        //    }
+        //}
+        //selfRotationDegree = minAngle;
+
+        //Vector3 selfRotationAxis = mainCam.transform.position - PocketCube.transform.position;
+
+        //while (t < 1)
+        //{
+        //    currentUsedTime += Time.deltaTime;
+        //    t = currentUsedTime / translationTimePhase2;
+
+        //    float angle = Mathf.Lerp(0, selfRotationDegree, translationCurve.Evaluate(t));
+        //    float deltaAngle = angle - currentRotationDegree;
+        //    mainCam.transform.RotateAround(mainCam.transform.position, selfRotationAxis, deltaAngle);
+
+        //    currentRotationDegree = angle;
+
+        //    yield return null;
+        //}
+
     }
+
+    //public bool UpdateCameraTranslation()
+    //{
+    //    currentUsedTime += Time.deltaTime;
+    //    float t = currentUsedTime / translationTime;
+
+    //    float angle = Mathf.Lerp(0, translationRotateDegree, translationCurve.Evaluate(t));
+    //    float deltaAngle = angle - currentRotationDegree;
+    //    mainCam.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, deltaAngle);
+
+    //    currentRotationDegree = angle;
+    //    return t >= 1;
+    //}
+
+
+    public void InitTargetRotationBack()
+    {
+        currentUsedTime = 0;
+        currentRotationDegree = 0;
+
+        Vector3 cubeToMainCameraVec = (PocketCube.transform.position - mainCam.transform.position).normalized;
+        Vector3 cubeToTargetCameraVec = (PocketCube.transform.position - startPosition).normalized;
+
+        translationRotateAxis = Vector3.Cross(cubeToMainCameraVec, cubeToTargetCameraVec).normalized;
+        translationRotateDegree = Vector3.Angle(cubeToMainCameraVec, cubeToTargetCameraVec);
+    }
+
+    public IEnumerator CameraTranslateBack()
+    {
+        float t = 0;
+
+        translateBackHelper.transform.position = mainCam.transform.position;
+        translateBackHelper.transform.rotation = mainCam.transform.rotation;
+
+        while (t < 1)
+        {
+            currentUsedTime += Time.deltaTime;
+            t = currentUsedTime / translationTimePhase1;
+
+            float angle = Mathf.Lerp(0, translationRotateDegree, translationCurve.Evaluate(t));
+
+            float deltaAngle = angle - currentRotationDegree;
+            mainCam.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, deltaAngle);
+            currentRotationDegree = angle;
+
+            //mainCam.transform.position = Vector3.Slerp(translateBackHelper.transform.position, translateHelper.transform.position, translationCurve.Evaluate(t));
+            //mainCam.transform.rotation = Quaternion.Slerp(translateBackHelper.transform.rotation, translateHelper.transform.rotation, translationCurve.Evaluate(t));
+
+            yield return null;
+        }
+    }
+
 
     public Vector3 ScreenToViewportPoint(Vector3 position)
     {
