@@ -68,7 +68,6 @@ public abstract class SkillManager : MonoBehaviour
                     FirstCubeHit = SelectFace.getFaceRelatedCube(faceHit);
                     commomFaceNormalAxis = FindFaceNormal(FirstFaceHit);
                     
-                    //myCameraController.initTranslation();
                     if (commomFaceNormalAxis == transform.right)
                     {
                         myCameraController.SetTargetCameraToRight();
@@ -103,42 +102,6 @@ public abstract class SkillManager : MonoBehaviour
 
             StartCoroutine(myCameraController.CameraTranslate());
             currentState = SkillState.WaitForSelectSecondCube;
-            //bool translateFinish = myCameraController.UpdateCameraTranslation();
-
-            //if (commomFaceNormalAxis == transform.right)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToRight();
-            //}
-            //else if (commomFaceNormalAxis == -transform.right)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToLeft();
-
-            //}
-            //else if (commomFaceNormalAxis == transform.up)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToUp();
-
-            //}
-            //else if (commomFaceNormalAxis == -transform.up)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToDown();
-
-            //}
-            //else if (commomFaceNormalAxis == transform.forward)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToBack();
-
-            //}
-            //else if (commomFaceNormalAxis == -transform.forward)
-            //{
-            //    translateFinish = myCameraController.TranslateCameraToFront();
-
-            //}
-
-            //if (translateFinish)
-            //{
-            //    currentState = SkillState.WaitForSelectSecondCube;
-            //}
             
         }
         else if (currentState == SkillState.WaitForSelectSecondCube)
@@ -177,11 +140,6 @@ public abstract class SkillManager : MonoBehaviour
         {
             StartCoroutine(myCameraController.CameraTranslateBack());
             currentState = SkillState.SkillFinish;
-            //bool translationBackFinish = myCameraController.UpdateCameraTranslationBack(); /*myCameraController.TranslateCameraBack()*/;
-            //if (translationBackFinish)
-            //{
-            //    currentState = SkillState.SkillFinish;
-            //}
         }
         else if (currentState == SkillState.SkillFinish)
         {

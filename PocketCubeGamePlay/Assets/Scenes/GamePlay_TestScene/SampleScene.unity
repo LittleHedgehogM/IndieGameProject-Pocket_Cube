@@ -4029,6 +4029,51 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
+      time: 0.14960442
+      value: 0.018753607
+      inSlope: 0.096464485
+      outSlope: 0.096464485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.24344873
+    - serializedVersion: 3
+      time: 0.15504964
+      value: 0.019415306
+      inSlope: 0.14645341
+      outSlope: 0.14645341
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8961037
+      value: 0.9759949
+      inSlope: 0.20264441
+      outSlope: 0.20264441
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.89660937
+      value: 0.97609633
+      inSlope: 0.19810905
+      outSlope: 0.19810905
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.26877472
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.903353
+      value: 0.9775555
+      inSlope: 0.2335281
+      outSlope: 0.2335281
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
@@ -8320,7 +8365,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   translationTimePhase1: 0.5
-  translationTimePhase2: 0.2
   resetCameraCurve:
     serializedVersion: 2
     m_Curve:
