@@ -13,8 +13,8 @@ public class BackGroundMusic : MonoBehaviour
         else if(S != this)
             Destroy(gameObject);
 
-    DontDestroyOnLoad(gameObject);
-}
+        DontDestroyOnLoad(gameObject);
+    }
     
     
     

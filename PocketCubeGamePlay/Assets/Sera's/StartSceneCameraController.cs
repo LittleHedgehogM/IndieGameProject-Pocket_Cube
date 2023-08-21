@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,20 +25,24 @@ public class StartSceneCameraController : MonoBehaviour
         //MapCube Auto Rotate
         mapCube = GameObject.Find("MapCube");
         cubeAutoRotate = mapCube.GetComponent<CubeAutoRotate>();
+
+        
     }
     private void Update()
     {
-        if (!gameStart)
-        {
-            //MapCube Auto Rotate
-            cubeAutoRotate.StartMenuCubeAutoRotate();
-        }
-        else if(gameStart)
-        {
+        
+        //cubeAutoRotate.StartMenuCubeAutoRotate();
+        
+
+
+        if (gameStart) //点击开始游戏
+        {           
             //Camera Zoom In
             mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, EndCam.position, lerpFloat);
-        }
+
             
+
+        }
     }
 
     public void MoveToLevelScene()
