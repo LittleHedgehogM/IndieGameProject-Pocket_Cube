@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="iOS" BasePlatform="iOS">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Flanger" LibId="8192003" Type="Effect" DLL="AkFlanger" StaticLib="AkFlangerFX"/>
+		<PluginLib LibName="Wwise Pitch Shifter" LibId="8912899" Type="Effect" DLL="AkPitchShifter" StaticLib="AkPitchShifterFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{8CB3618D-DD81-7D30-5186-C091F2DCF93D}</FileHash>
+	<FileHash>{6B5BB2A0-0A02-BF01-0FF1-04DE60E897F3}</FileHash>
 </PluginInfo>

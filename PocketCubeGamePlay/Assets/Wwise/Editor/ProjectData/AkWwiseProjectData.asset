@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585103881407324541
+    m_lastTime: -8585089350664584842
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 853d7646a1730a4ea2c7dadd2c92891f
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 853d7646a1730a4ea2c7dadd2c92891f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585103873353877144
+    m_lastTime: -8585089342640801604
     List:
     - name: Test
       guid: ccbb4ce0239dd147b16a781a268e6f74
@@ -107,8 +124,110 @@ MonoBehaviour:
     ParentPath: Events\Test
     guid: 860ab761897a164ca12423723de18fda
     GuidInternal: 
-    m_lastTime: -8585103873478595690
+    m_lastTime: -8585089342640871686
     List:
+    - name: OffEffect0
+      guid: c52aeeb9688de9488837966c1e36bcf5
+      id: 1756624261
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OffEffect0
+        ObjectType: 3
+        guid: c52aeeb9688de9488837966c1e36bcf5
+      Path: Events\Test\OffEffect0
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OffEffect1
+      guid: 09af7ecfbcb62945a64ae21ef59b7ced
+      id: 1756624260
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OffEffect1
+        ObjectType: 3
+        guid: 09af7ecfbcb62945a64ae21ef59b7ced
+      Path: Events\Test\OffEffect1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OffEffect2
+      guid: 7c8940df06c52640b86e4253d257de97
+      id: 1756624263
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OffEffect2
+        ObjectType: 3
+        guid: 7c8940df06c52640b86e4253d257de97
+      Path: Events\Test\OffEffect2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OnEffect0
+      guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
+      id: 97571255
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OnEffect0
+        ObjectType: 3
+        guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
+      Path: Events\Test\OnEffect0
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OnEffect1
+      guid: d33882a60dfc7742acd023598a6445dc
+      id: 97571254
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OnEffect1
+        ObjectType: 3
+        guid: d33882a60dfc7742acd023598a6445dc
+      Path: Events\Test\OnEffect1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OnEffect2
+      guid: c03392cc135c3c4888913688acde0b4a
+      id: 97571253
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Test
+        ObjectType: 12
+        guid: 860ab761897a164ca12423723de18fda
+      - ElementName: OnEffect2
+        ObjectType: 3
+        guid: c03392cc135c3c4888913688acde0b4a
+      Path: Events\Test\OnEffect2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Ella_Fitzgerald___Cry_Me_a_River
       guid: d2f73a1d76383b4fa18c853b8e512e77
       id: 1058947180
@@ -123,7 +242,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: d2f73a1d76383b4fa18c853b8e512e77
       Path: Events\Test\Play_Ella_Fitzgerald___Cry_Me_a_River
-      maxAttenuation: 0
+      maxAttenuation: 15
       maxDuration: 257
       minDuration: 257
     - name: Stop_Ella_Fitzgerald___Cry_Me_a_River
@@ -155,8 +274,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585103881407304592
-    List: []
+    m_lastTime: -8585089350664344296
+    List:
+    - name: New_Game_Parameter
+      guid: 55362c88a4b4f7408a04ed774d899757
+      id: 3671138082
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: New_Game_Parameter
+        ObjectType: 13
+        guid: 55362c88a4b4f7408a04ed774d899757
+      Path: Game Parameters\Default Work Unit\New_Game_Parameter
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -197,10 +330,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585103881407120428
+    m_lastTime: -8585089350664274286
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

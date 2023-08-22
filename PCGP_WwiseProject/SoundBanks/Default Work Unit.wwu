@@ -5,7 +5,13 @@
 			<ChildrenList>
 				<SoundBank Name="Test" ID="{E04CBBCC-9D23-47D1-B16A-781A268E6F74}">
 					<ObjectInclusionList>
+						<ObjectRef Name="OffEffect2" ID="{DF40897C-C506-4026-B86E-4253D257DE97}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Ella_Fitzgerald___Cry_Me_a_River" ID="{0480EE83-CBCC-41A4-88B6-9B4519ECD8EB}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OnEffect1" ID="{A68238D3-FC0D-4277-ACD0-23598A6445DC}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OffEffect1" ID="{CF7EAF09-B6BC-4529-A64A-E21EF59B7CED}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OnEffect2" ID="{CC9233C0-5C13-483C-8891-3688ACDE0B4A}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OffEffect0" ID="{B9EE2AC5-8D68-48E9-8837-966C1E36BCF5}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OnEffect0" ID="{CB0D6DE0-5AB7-4DDC-8AC0-7D2014D3E6ED}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ella_Fitzgerald___Cry_Me_a_River" ID="{1D3AF7D2-3876-4F3B-A18C-853B8E512E77}" WorkUnitID="{61B70A86-7A89-4C16-A124-23723DE18FDA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

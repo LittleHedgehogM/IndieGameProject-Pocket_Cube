@@ -1,7 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
+	97571253	OnEffect2			\Test\OnEffect2	
+	97571254	OnEffect1			\Test\OnEffect1	
+	97571255	OnEffect0			\Test\OnEffect0	
 	1058947180	Play_Ella_Fitzgerald___Cry_Me_a_River			\Test\Play_Ella_Fitzgerald___Cry_Me_a_River	
 	1644353714	Stop_Ella_Fitzgerald___Cry_Me_a_River			\Test\Stop_Ella_Fitzgerald___Cry_Me_a_River	
+	1756624260	OffEffect1			\Test\OffEffect1	
+	1756624261	OffEffect0			\Test\OffEffect0	
+	1756624263	OffEffect2			\Test\OffEffect2	
+
+Effect plug-ins	ID	Name	Type				Notes
+	575509397	Parametric EQ (Custom)	Wwise Parametric EQ			
+	585302132	Pitch Shifter (Custom)	Wwise Pitch Shifter			
+	1039058572	Flanger (Custom)	Wwise Flanger			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	910051214	Ella Fitzgerald - Cry Me a River	G:\Unity Project\IndieGameProject-Rubiks-Cube\PCGP_WwiseProject\PCGP_WwiseProject\.cache\iOS\SFX\Ella Fitzgerald - Cry Me a River_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Ella Fitzgerald - Cry Me a River		45334896
+	910051214	Ella Fitzgerald - Cry Me a River	G:\Unity Project\IndieGameProject-Rubiks-Cube\PCGP_WwiseProject\.cache\iOS\SFX\Ella Fitzgerald - Cry Me a River_10C4C929.wem		\Actor-Mixer Hierarchy\Test\Music\MixPrototype\Ella Fitzgerald - Cry Me a River		45334896
 
