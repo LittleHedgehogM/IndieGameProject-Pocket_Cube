@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shadertest001 9
-  m_Shader: {fileID: 4800000, guid: 529cdb04cb448a8468999a14920cbcb8, type: 3}
-  m_Parent: {fileID: 2100000, guid: 23c54fe4e1a42e2488f5d3a9e3c9b178, type: 2}
+  m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
+  m_Parent: {fileID: 2100000, guid: 32970c5e859affe4da0db1950cfe2b1e, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,8 +42,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _HeighRatioInPut: 0.5561711
-    - _OutlineWidth: 0.033290315
+    - _OutlineWidth: 0.015
     - _ReflectOffset002: 2.6389735
+    - __dirty: 0
     m_Colors:
     - _Reflect02: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectOff01: {r: 1, g: 0.31760997, b: 1, a: 1}
