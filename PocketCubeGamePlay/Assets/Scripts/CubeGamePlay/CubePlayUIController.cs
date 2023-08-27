@@ -2,6 +2,8 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 //using static CubePlayManager;
 
 public class CubePlayUIController : MonoBehaviour
@@ -24,6 +26,19 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private int maxCommutation;
     [SerializeField] private int maxDiagonal;
     [SerializeField] private int suggestedStepCount;
+
+
+    private bool isCommutationApplied;
+    private bool isDiagonalApplied;
+
+    public static event Action onEnterDiagonalState;
+    public static event Action onRestoreDiagonalCheckPoint;
+
+
+    public static event Action onEnterCommutationState;
+    public static event Action onRestoreCommutationCheckPoint;
+
+
 
     private int _swipeCount;
     public int SwipeCount
@@ -86,11 +101,18 @@ public class CubePlayUIController : MonoBehaviour
         FinishButton.gameObject.SetActive(false);
         RestartButton.gameObject.SetActive(true);
 
+        isCommutationApplied = false;
+        isDiagonalApplied = false;
+
+        CommutationButton.image.color = Color.white;
+        DiagonalButton.image.color = Color.white;
+
         SwipeCount = 0;
         CommutationCount = 0;
         DiagonalCount = 0;
         SolveResult = false;
         totalSteps = 0;
+
 
     }
 
@@ -111,23 +133,62 @@ public class CubePlayUIController : MonoBehaviour
     }
 
     
+    public void clickDiagonalButton()
+    {
+       isDiagonalApplied = !isDiagonalApplied;
+       if (isDiagonalApplied)
+       {
+            onEnterDiagonalState?.Invoke();
+            DiagonalButton.image.color = Color.grey;
+        }
+       else
+       {
+            onRestoreDiagonalCheckPoint?.Invoke();
+            DiagonalButton.image.color = Color.white;
+
+        }
+    }
+
+    public void clickCommutationButton()
+    {
+        isCommutationApplied = !isCommutationApplied;
+        if (isCommutationApplied)
+        {
+            onEnterCommutationState?.Invoke();
+            CommutationButton.image.color = Color.grey;
+
+        }
+        else
+        {
+            onRestoreCommutationCheckPoint?.Invoke();
+            CommutationButton.image.color = Color.white;
+
+        }
+    }
+
+    public void onSelectDiagonal()
+    {
+        ColorBlock buttonColorBlocks = DiagonalButton.colors;
+        buttonColorBlocks.normalColor = Color.red;
+
+    }
 
     void onCommutationFinished()
     {
-        CommutationCount++;
-        if (CommutationCount >= maxCommutation )
-        {
-            CommutationButton.interactable = false;
-        }
+        //CommutationCount++;
+        //if (CommutationCount >= maxCommutation)
+        //{
+        //    isCommutationApplied = true;
+        //}
     }
 
     void onDiagonalFinished()
     {
-        DiagonalCount++;
-        if (DiagonalCount >= maxDiagonal)
-        {
-            DiagonalButton.interactable = false;
-        }
+        //DiagonalCount++;
+        //if (DiagonalCount >= maxDiagonal)
+        //{
+        //    isDiagonalApplied = true;
+        //}
     }
 
     void onSwipeFinished()

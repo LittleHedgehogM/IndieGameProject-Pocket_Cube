@@ -16,7 +16,9 @@ public class CubeInPlayPhase : GameplayPhase
         InCommutation,
         InDiagonal,
         CubeSolved,
-        //InRetart,
+        InRetart,
+        InRestoreDiagonal,
+        InRestoreCommutation
     };
 
     [SerializeField] private bool enableFinish;
@@ -34,6 +36,12 @@ public class CubeInPlayPhase : GameplayPhase
 
     Vector3 initalMousePressPos;
     Vector3 endMousePressPos;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float restoreAnimationTime;
+    [SerializeField] private AnimationCurve animationCurve;
+    bool restoreFinish;
 
     public static event Action onCubeSolved;
 
@@ -61,6 +69,7 @@ public class CubeInPlayPhase : GameplayPhase
         RotateWholeCubeManager.onRotateWholeCubeFinished += onRotationFinished;
         DiagonalSkill.onDiagonalFinished += onAnyCubeStateChanged;
         CommutationSkill.onCommutataionFinished += onAnyCubeStateChanged;
+
     }
 
     private void OnDisable()
@@ -125,12 +134,46 @@ public class CubeInPlayPhase : GameplayPhase
         }
     }
 
+
+
+    public void RestoreCommutationCheckPoint()
+    {
+        if (currentPlayStatus == CubePlayStatus.WaitForInput)
+        {
+
+            CubePlayCheckPoint.instance.loadCurrentStateCommutation();
+            myCubePlayCameraController.ResetCamera();
+
+            restoreFinish = false;
+            StartCoroutine(startRestoreAnimation());
+            currentPlayStatus = CubePlayStatus.InRestoreDiagonal;
+
+        }
+
+    }
+
+    public void RestoreDiagonalCheckPoint()
+    {
+        if (currentPlayStatus == CubePlayStatus.WaitForInput)
+        {
+            CubePlayCheckPoint.instance.loadCurrentStateDiagonal();
+            myCubePlayCameraController.ResetCamera();
+
+            restoreFinish = false;
+            StartCoroutine(startRestoreAnimation());
+            currentPlayStatus = CubePlayStatus.InRestoreDiagonal;
+        }
+    }
+
+
     public void SetStateToCommutation()
     {
         if (currentPlayStatus == CubePlayStatus.WaitForInput)
         {
+            // play animation
             if (myCommutationSkill.onStart())
             {
+                CubePlayCheckPoint.instance.saveCurrentStateCommutation();
                 currentPlayStatus = CubePlayStatus.InCommutation;
             }
         }
@@ -142,15 +185,18 @@ public class CubeInPlayPhase : GameplayPhase
         {
             if (myDiagonalSkill.onStart())
             {
+                CubePlayCheckPoint.instance.saveCurrentStateDiagonal();
                 currentPlayStatus = CubePlayStatus.InDiagonal;
             }
         }
     }
 
+
     public override void onRestart()
     {
         base.onRestart();
         currentPlayStatus = CubePlayStatus.WaitForInput;
+        restoreFinish = false;
         myUIController.onRestart();
         myDiagonalSkill.ResetValues();
         myCommutationSkill.ResetValues();
@@ -241,6 +287,23 @@ public class CubeInPlayPhase : GameplayPhase
             myDiagonalSkill.onUpdate();
         }
 
+        else if (currentPlayStatus == CubePlayStatus.InRestoreCommutation)
+        {
+
+            //t = 0;
+            currentPlayStatus = CubePlayStatus.WaitForInput;
+        }
+        else if (currentPlayStatus == CubePlayStatus.InRestoreDiagonal)
+        {
+            if (restoreFinish)
+            {
+                currentPlayStatus = CubePlayStatus.WaitForInput;
+                
+            }
+           
+
+        }
+
         return false;
     }
 
@@ -251,5 +314,34 @@ public class CubeInPlayPhase : GameplayPhase
 
     }
 
+
+    private IEnumerator startRestoreAnimation()
+    {
+        
+        GameObject pocketCube = CubePlayManager.instance.pocketCube;
+
+        float currentUsedTime = 0;
+        float currentRotationDegree = 0;
+        float t = 0;
+
+        Vector3 startScale = Vector3.zero; 
+        Vector3 endScale = pocketCube.transform.localScale;
+        while (t < 1)
+        {
+            currentUsedTime += Time.deltaTime;
+            t = currentUsedTime / restoreAnimationTime;
+
+            float angle = Mathf.Lerp(0, 360, animationCurve.Evaluate(t));
+            float deltaAngle = angle - currentRotationDegree;
+            currentRotationDegree = angle;
+            pocketCube.transform.RotateAround(pocketCube.transform.position, Vector3.up, deltaAngle);
+            pocketCube.transform.localScale = Vector3.Lerp(startScale, endScale, animationCurve.Evaluate(t));
+
+            yield return null;
+
+        }
+        restoreFinish = true;
+
+    }
 
 }

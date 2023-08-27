@@ -29,6 +29,11 @@ public abstract class SkillManager : MonoBehaviour
     protected CubePlayCameraController myCameraController;
     RotateWholeCubeManager myRotateWholeCubeManager;
 
+
+    protected Vector3 startPos;
+    protected Vector3 endPos;
+    protected Vector3 startScale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -131,6 +136,11 @@ public abstract class SkillManager : MonoBehaviour
                         SecondFaceHit = faceHit;
                         SecondCubeHit = secondCandidateCube;
                         currentState = SkillState.ApplySkillInProgress;
+
+                        startPos     = FirstCubeHit.transform.position;
+                        endPos       = SecondCubeHit.transform.position;
+                        startScale   = FirstCubeHit.transform.localScale;
+                        StartCoroutine(startAnimation());
                     }
 
                 }
@@ -139,14 +149,13 @@ public abstract class SkillManager : MonoBehaviour
         }
         else if (currentState == SkillState.ApplySkillInProgress)
         {
-            bool ApplySkillFinih = ApplySkill();
-            if (ApplySkillFinih)
+
+            if (checkSkillApplyFinish())
             {
-                // myCameraController.initTranslationBack();
                 myCameraController.InitTargetRotationBack();
                 currentState = SkillState.TranslateCameraBack;
             }
-            
+
         }
         else if (currentState == SkillState.TranslateCameraBack)
         {
@@ -159,6 +168,14 @@ public abstract class SkillManager : MonoBehaviour
             InvokeFinish();
 
         }
+    }
+
+    protected virtual bool checkSkillApplyFinish()
+    {
+        return startPos == SecondCubeHit.transform.position
+               && endPos == FirstCubeHit.transform.position
+               && FirstCubeHit.transform.localScale == startScale 
+               && SecondCubeHit.transform.localScale == startScale;
     }
 
     protected virtual void onRestart()
@@ -175,9 +192,17 @@ public abstract class SkillManager : MonoBehaviour
         return false;
     }
 
-    protected virtual bool ApplySkill()
+    protected virtual IEnumerator ApplySkill()
     {
-        return true;
+        //return true;
+        yield return null;
+    }
+
+
+    protected virtual IEnumerator startAnimation()
+    {
+        //return true;
+        yield return null;
     }
 
 

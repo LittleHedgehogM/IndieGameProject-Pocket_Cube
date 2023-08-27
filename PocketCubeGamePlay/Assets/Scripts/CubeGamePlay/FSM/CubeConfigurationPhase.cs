@@ -11,6 +11,21 @@ public class CubeConfigurationPhase : GameplayPhase
     ReadCube readCube;
     CubeState myCubeState;
 
+    [SerializeField] [Range(0, 1)] 
+    float startAnimationTime;
+    [SerializeField] private AnimationCurve translationCurve;
+    float t;
+
+
+    enum ConfigurationState
+    {
+        Animation,
+        Check
+    }
+
+    ConfigurationState currentState;
+
+
     public override void onStart()
     {
         myCubeConfigure = FindObjectOfType<CubeConfigure>();
@@ -18,6 +33,7 @@ public class CubeConfigurationPhase : GameplayPhase
         readCube        = FindObjectOfType<ReadCube>();
 
         ConfuigurePocketCube();
+        currentState = ConfigurationState.Animation;
     }
 
     private void ConfigureOneCubePiece(CubeConfigure.PieceTransform pieceTransform)
@@ -43,23 +59,57 @@ public class CubeConfigurationPhase : GameplayPhase
         ConfigureOneCubePiece(myCubeConfigure.BackRightDown);
     }
 
+
+
+    public IEnumerator playStartAnimation()
+    {
+        GameObject pocketCube = CubePlayManager.instance.pocketCube;
+
+        float currentUsedTime = 0;
+        float currentRotationDegree = 0;
+        t = 0;
+
+        Vector3 startScale = Vector3.zero;
+        Vector3 endScale = pocketCube.transform.localScale;
+        while (t < 1)
+        {
+            currentUsedTime += Time.deltaTime;
+            t = currentUsedTime / startAnimationTime;
+
+            float angle = Mathf.Lerp(0, 360, translationCurve.Evaluate(t));
+            float deltaAngle = angle - currentRotationDegree;
+            currentRotationDegree = angle;
+            pocketCube.transform.RotateAround(pocketCube.transform.position, Vector3.up, deltaAngle);
+            pocketCube.transform.localScale = Vector3.Lerp(startScale, endScale, translationCurve.Evaluate(t));
+
+            yield return null;
+
+        }
+
+    }
+
+
     // return true if is the cube is loaded
     public override bool onUpdate()
     {
 
-        //ConfuigurePocketCube();
-
-        readCube.ReadState();
-
-        if (myCubeState.GetStateString() == myCubeConfigure.cubeStateString)
+        if (currentState == ConfigurationState.Animation)
         {
-            return true;
-
+            StartCoroutine(playStartAnimation());
+            currentState = ConfigurationState.Check;
         }
-        else
+        else if (currentState == ConfigurationState.Check)
         {
-            // play as default settings
+            if (  t >= 1)
+            {
+                readCube.ReadState();
+                if (myCubeState.GetStateString() == myCubeConfigure.cubeStateString)
+                {
+                    return true;
+                }
+            }
         }
+        
         return false;
     }
 
@@ -73,7 +123,9 @@ public class CubeConfigurationPhase : GameplayPhase
         base.onRestart();
         ConfuigurePocketCube();
         readCube.ReadState();
-
+        t = 0;
+        currentState = ConfigurationState.Animation;
     }
+
 
 }

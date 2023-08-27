@@ -70,7 +70,16 @@ public class CubePlayCameraController : MonoBehaviour
 
     void InitCameraPosition()
     {
-        //mainCam.transform.position = Vector3.zero;
+
+        mainCam.transform.rotation  = Quaternion.identity;
+        leftCam.transform.rotation  = Quaternion.identity;
+        rightCam.transform.rotation = Quaternion.identity;
+        upCam.transform.rotation    = Quaternion.identity;
+        downCam.transform.rotation  = Quaternion.identity;
+        frontCam.transform.rotation = Quaternion.identity;
+        backCam.transform.rotation  = Quaternion.identity;
+        initialCam.transform.rotation = Quaternion.identity;
+
         RotateCamera(mainCam,    new Vector2(initialCameraX, initialCameraY));
         RotateCamera(initialCam, new Vector2(initialCameraX, initialCameraY));
         RotateCamera(rightCam,   new Vector2(0.5f, 0));
@@ -82,7 +91,6 @@ public class CubePlayCameraController : MonoBehaviour
         mainCam.transform.LookAt(PocketCube.transform.position);
         mainCam.orthographic = true;
         currentUsedTime = 0;
-
 
     }
 
@@ -196,6 +204,7 @@ public class CubePlayCameraController : MonoBehaviour
 
         translateHelper.transform.position = mainCam.transform.position;
         translateHelper.transform.rotation = mainCam.transform.rotation;
+
         //translateHelper.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, translationRotateDegree);
         //float selfRotationDegree = 0;
         //List<Vector3> candidateAxes = new List<Vector3>();
@@ -229,6 +238,7 @@ public class CubePlayCameraController : MonoBehaviour
         float t = 0;
         currentUsedTime = 0;
         currentRotationDegree = 0;
+       // translationTimePhase1 *= translationRotateDegree / 90;
 
         while (t < 1)
         {

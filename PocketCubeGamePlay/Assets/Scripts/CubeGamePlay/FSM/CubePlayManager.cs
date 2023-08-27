@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class CubePlayManager : MonoBehaviour
 {
 
-
+    public static CubePlayManager instance;
 
     [SerializeField] private int frameRate = 30;
+    [SerializeField]
+    public GameObject pocketCube;
 
     enum CubePlay
     {
@@ -23,8 +25,15 @@ public class CubePlayManager : MonoBehaviour
     CubeInPlayPhase myCubeInPlayPhase;
     CubeSolvedPhase myCubeSolvedPhase;
 
+
+
     private void Awake()
-    {        
+    {   
+        if (instance == null)
+        {
+            instance = this;
+        }
+
         myCubeConfigurationPhase = FindObjectOfType<CubeConfigurationPhase>();
         myCubeInPlayPhase        = FindObjectOfType<CubeInPlayPhase>();
         myCubeSolvedPhase        = FindObjectOfType<CubeSolvedPhase>();
@@ -34,6 +43,46 @@ public class CubePlayManager : MonoBehaviour
 
         Application.targetFrameRate = frameRate;
 
+    }
+
+
+
+    private void OnEnable()
+    {
+        CubePlayUIController.onEnterDiagonalState           += SetStateToDiagonal;
+        CubePlayUIController.onEnterCommutationState        += SetStateToCommutation;
+        CubePlayUIController.onRestoreCommutationCheckPoint += RestoreCommutationCheckPoint;
+        CubePlayUIController.onRestoreDiagonalCheckPoint    += RestoreDiagonalCheckPoint;
+        
+    }
+
+
+    private void OnDisable()
+    {
+        CubePlayUIController.onEnterDiagonalState           -= SetStateToDiagonal;
+        CubePlayUIController.onEnterCommutationState        -= SetStateToCommutation;
+        CubePlayUIController.onRestoreCommutationCheckPoint -= RestoreCommutationCheckPoint;
+        CubePlayUIController.onRestoreDiagonalCheckPoint    -= RestoreDiagonalCheckPoint;
+
+    }
+
+
+    private void RestoreCommutationCheckPoint()
+    {
+        if (currentCubePlayPhase == CubePlay.Play)
+        {
+            myCubeInPlayPhase.RestoreCommutationCheckPoint();
+
+        }
+
+    }
+
+    private void RestoreDiagonalCheckPoint()
+    {
+        if (currentCubePlayPhase == CubePlay.Play)
+        {
+            myCubeInPlayPhase.RestoreDiagonalCheckPoint();
+        }
     }
 
     public void SetStateToResetCamera()
@@ -46,8 +95,9 @@ public class CubePlayManager : MonoBehaviour
 
     public void SetStateToCommutation()
     {
-        if (currentCubePlayPhase == CubePlay.Play)
+        if (currentCubePlayPhase == CubePlay.Play) 
         {
+            //store current state
             myCubeInPlayPhase.SetStateToCommutation(); 
         }
     }
@@ -56,6 +106,7 @@ public class CubePlayManager : MonoBehaviour
     {
         if (currentCubePlayPhase == CubePlay.Play)
         {
+            //store current state
             myCubeInPlayPhase.SetStateToDiagonal();
         }
     }
@@ -70,11 +121,12 @@ public class CubePlayManager : MonoBehaviour
             myCubeSolvedPhase.onRestart();
            
             //load scene
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            //Scene scene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(scene.name);
         }
 
     }
+
 
     void Update()
     {
@@ -105,7 +157,6 @@ public class CubePlayManager : MonoBehaviour
             if  (isFinished)
             {
                 myCubeSolvedPhase.onEnd();
-                // and reload the scene
             }
 
         }
