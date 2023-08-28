@@ -3405,6 +3405,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4214d15df7bdb4544a9f8f25153e08d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeTranslationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cubeTranslationTime: 0.5
+  rotateSpeed: 90
 --- !u!114 &771636596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3418,7 +3444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableFinish: 0
-  restoreAnimationTime: 0.5
+  restoreAnimationTime: 1
   animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -3431,6 +3457,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.8482829
+      value: 0.9924109
+      inSlope: 0.14505012
+      outSlope: 0.14505012
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.31813914
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1

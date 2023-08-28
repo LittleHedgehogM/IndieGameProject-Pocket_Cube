@@ -148,7 +148,7 @@ public class CubePlayManager : MonoBehaviour
             {
                 currentCubePlayPhase = CubePlay.Solved;
                 myCubeInPlayPhase.onEnd();
-                myCubeInPlayPhase.onStart();
+                myCubeSolvedPhase.onStart();
             }
         }
         else if (currentCubePlayPhase == CubePlay.Solved)

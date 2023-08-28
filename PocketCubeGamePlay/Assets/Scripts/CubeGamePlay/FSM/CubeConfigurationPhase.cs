@@ -15,7 +15,7 @@ public class CubeConfigurationPhase : GameplayPhase
     float startAnimationTime;
     [SerializeField] private AnimationCurve translationCurve;
     float t;
-
+    bool animationFinished = true;
 
     enum ConfigurationState
     {
@@ -33,7 +33,8 @@ public class CubeConfigurationPhase : GameplayPhase
         readCube        = FindObjectOfType<ReadCube>();
 
         ConfuigurePocketCube();
-        currentState = ConfigurationState.Animation;
+        currentState = ConfigurationState.Check;
+        animationFinished = true;
     }
 
     private void ConfigureOneCubePiece(CubeConfigure.PieceTransform pieceTransform)
@@ -85,7 +86,7 @@ public class CubeConfigurationPhase : GameplayPhase
             yield return null;
 
         }
-
+        animationFinished = true;
     }
 
 
@@ -100,7 +101,7 @@ public class CubeConfigurationPhase : GameplayPhase
         }
         else if (currentState == ConfigurationState.Check)
         {
-            if (  t >= 1)
+            if (animationFinished)
             {
                 readCube.ReadState();
                 if (myCubeState.GetStateString() == myCubeConfigure.cubeStateString)
@@ -125,6 +126,7 @@ public class CubeConfigurationPhase : GameplayPhase
         readCube.ReadState();
         t = 0;
         currentState = ConfigurationState.Animation;
+        animationFinished = false;
     }
 
 

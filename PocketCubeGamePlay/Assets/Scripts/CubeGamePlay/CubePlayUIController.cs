@@ -118,7 +118,7 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnEnable()
     {
-        //CubePlayManager.onCubeSolved += CubeSolved;
+        CubeInPlayPhase.onCubeSolved += CubeSolved;
         SwipeFaceManager.onSwipeFinished += onSwipeFinished;
         DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
         CommutationSkill.onCommutataionFinished += onCommutationFinished;
@@ -126,7 +126,7 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnDisable()
     {
-        //CubePlayManager.onCubeSolved -= CubeSolved;
+        CubeInPlayPhase.onCubeSolved -= CubeSolved;
         SwipeFaceManager.onSwipeFinished += onSwipeFinished;
         DiagonalSkill.onDiagonalFinished += onDiagonalFinished;
         CommutationSkill.onCommutataionFinished += onCommutationFinished;
@@ -147,6 +147,11 @@ public class CubePlayUIController : MonoBehaviour
             DiagonalButton.image.color = Color.white;
 
         }
+    }
+
+    public void clickFinishButton()
+    {
+        // load another scene....
     }
 
     public void clickCommutationButton()
@@ -198,10 +203,8 @@ public class CubePlayUIController : MonoBehaviour
 
     private void CubeSolved()
     {
-        if (totalSteps > 0)
-        {
-            FinishButton.gameObject.SetActive(true);
-        }   
+       FinishButton.gameObject.SetActive(true);
+  
     }
 
     private void UpdateTotalStepCount()

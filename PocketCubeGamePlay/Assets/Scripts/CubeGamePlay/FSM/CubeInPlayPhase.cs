@@ -16,9 +16,7 @@ public class CubeInPlayPhase : GameplayPhase
         InCommutation,
         InDiagonal,
         CubeSolved,
-        InRetart,
-        InRestoreDiagonal,
-        InRestoreCommutation
+        InRestoreCheckPoint,
     };
 
     [SerializeField] private bool enableFinish;
@@ -146,7 +144,7 @@ public class CubeInPlayPhase : GameplayPhase
 
             restoreFinish = false;
             StartCoroutine(startRestoreAnimation());
-            currentPlayStatus = CubePlayStatus.InRestoreDiagonal;
+            currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
 
         }
 
@@ -161,7 +159,7 @@ public class CubeInPlayPhase : GameplayPhase
 
             restoreFinish = false;
             StartCoroutine(startRestoreAnimation());
-            currentPlayStatus = CubePlayStatus.InRestoreDiagonal;
+            currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
         }
     }
 
@@ -215,8 +213,6 @@ public class CubeInPlayPhase : GameplayPhase
     {
         if (currentPlayStatus == CubePlayStatus.CubeSolved)
         {
-            // Temp Design : Restart the game
-            // ReloadScene();
 
             return true;
         }
@@ -287,21 +283,13 @@ public class CubeInPlayPhase : GameplayPhase
             myDiagonalSkill.onUpdate();
         }
 
-        else if (currentPlayStatus == CubePlayStatus.InRestoreCommutation)
-        {
-
-            //t = 0;
-            currentPlayStatus = CubePlayStatus.WaitForInput;
-        }
-        else if (currentPlayStatus == CubePlayStatus.InRestoreDiagonal)
+        else if (currentPlayStatus == CubePlayStatus.InRestoreCheckPoint)
         {
             if (restoreFinish)
             {
                 currentPlayStatus = CubePlayStatus.WaitForInput;
-                
-            }
-           
 
+            }
         }
 
         return false;

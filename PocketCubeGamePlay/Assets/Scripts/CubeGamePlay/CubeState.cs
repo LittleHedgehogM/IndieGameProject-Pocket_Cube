@@ -34,15 +34,15 @@ public class CubeState : MonoBehaviour
         return cubes;
     }
 
-    public List<List<GameObject>> GetAllCubesSidesCubes()
-    {
-        List<List<GameObject>> cubeSides = new List<List<GameObject>>()
-        {FacesToCubes(up),FacesToCubes(down),
-         FacesToCubes(left),FacesToCubes(right),
-         FacesToCubes(front),FacesToCubes(back)};
+    //public List<List<GameObject>> GetAllCubesSidesCubes()
+    //{
+    //    List<List<GameObject>> cubeSides = new List<List<GameObject>>()
+    //    {FacesToCubes(up),FacesToCubes(down),
+    //     FacesToCubes(left),FacesToCubes(right),
+    //     FacesToCubes(front),FacesToCubes(back)};
 
-        return cubeSides;
-    }
+    //    return cubeSides;
+    //}
 
     string GetSideString(List<GameObject> side)
     {
@@ -88,5 +88,54 @@ public class CubeState : MonoBehaviour
                && isSideRestored(left) && isSideRestored(right) 
                && isSideRestored(front) && isSideRestored(back);
     }
+
+    public Vector3 getFrontFaceDirection()
+    {
+        Vector3 frontVec = Vector3.zero;
+        
+        if (isCubeSolved()) 
+        {
+            string upString     = GetSideString(up);
+            string downString   = GetSideString(down);
+            string rightString  = GetSideString(right);
+            string leftString   = GetSideString(left);
+            string frontString  = GetSideString(front);
+            string backString   = GetSideString(back);
+
+            if (upString.Equals("FFFF"))
+            {
+                frontVec = transform.up;
+            }
+            else if (downString.Equals("FFFF"))
+            {
+                frontVec = -transform.up;
+
+            }
+            else if (rightString.Equals("FFFF"))
+            {
+                frontVec = transform.right;
+
+            }
+            else if (leftString.Equals("FFFF"))
+            {
+                frontVec = -transform.right;
+
+            }
+            else if (frontString.Equals("FFFF"))
+            {
+                frontVec = -transform.forward;
+
+            }
+            else if (backString.Equals("FFFF"))
+            {
+                frontVec = transform.forward;
+
+            }
+
+        }
+
+        return frontVec;
+    }
+
 
 }
