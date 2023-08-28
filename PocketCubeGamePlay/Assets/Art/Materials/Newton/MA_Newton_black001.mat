@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shadertest001 8
+  m_Name: MA_Newton_black001
   m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -73,15 +73,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample4:
         m_Texture: {fileID: 2800000, guid: 097c312032aaba1478210efd3dcf6910, type: 3}
@@ -138,7 +138,7 @@ Material:
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.039
+    - _OutlineWidth: 0.152
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
@@ -159,7 +159,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     - _et001: 2
     - _t001: 1
     m_Colors:
@@ -169,10 +169,10 @@ Material:
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.8619147, g: 0.76100624, b: 1, a: 1}
-    - _ReflectOff01: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
-    - _diffusegradient01: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
-    - _diffusegradient02: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
+    - _ReflectOff01: {r: 0.0064673224, g: 0.007880019, b: 0.009433985, a: 1}
+    - _diffusegradient01: {r: 0, g: 0.3819574, b: 0.745283, a: 1}
+    - _diffusegradient02: {r: 0, g: 0, b: 0, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
-    - _outlinecolor: {r: 1, g: 1, b: 1, a: 1}
+    - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []

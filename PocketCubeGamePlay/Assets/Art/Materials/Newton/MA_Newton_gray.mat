@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shadertest001 1
-  m_Shader: {fileID: 4800000, guid: 529cdb04cb448a8468999a14920cbcb8, type: 3}
+  m_Name: MA_Newton_gray
+  m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -169,9 +169,10 @@ Material:
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
-    - _ReflectOff01: {r: 1, g: 0.3452193, b: 0.29019606, a: 1}
-    - _diffusegradient01: {r: 1, g: 1, b: 1, a: 1}
-    - _diffusegradient02: {r: 0.95686275, g: 0.29803923, b: 0.16862746, a: 1}
+    - _Reflect02: {r: 0.8619147, g: 0.76100624, b: 1, a: 1}
+    - _ReflectOff01: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _diffusegradient01: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    - _diffusegradient02: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
+    - _outlinecolor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
