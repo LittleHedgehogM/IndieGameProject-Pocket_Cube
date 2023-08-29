@@ -73,7 +73,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
@@ -81,7 +81,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _TextureSample4:
         m_Texture: {fileID: 2800000, guid: 097c312032aaba1478210efd3dcf6910, type: 3}
@@ -108,10 +108,10 @@ Material:
     - _ASEOutlineWidth: 0
     - _B_BaseCellOffset: -0.61912626
     - _BaseCellOffset: -0.073514424
-    - _BaseCellOffset001: -0.09803539
-    - _BaseCellOffset002: 0.52056116
-    - _BaseCellOffset003: 0.4836274
-    - _BaseCellOffset004: 0.6377987
+    - _BaseCellOffset001: -0.07
+    - _BaseCellOffset002: 0.544
+    - _BaseCellOffset003: 0.502
+    - _BaseCellOffset004: 0.95
     - _BaseCellOffset1: -0.09570599
     - _BaseCellSharpness: 0.5383997
     - _BumpScale: 1
@@ -138,11 +138,11 @@ Material:
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.087
+    - _OutlineWidth: 0
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
-    - _R_BaseCellOffset001: 2
+    - _R_BaseCellOffset001: 2.18
     - _R_BaseCellOffset002: 1
     - _R_BaseCellOffset1: 1.3479434
     - _R_BaseCellOffset2: 1.6729951
@@ -169,10 +169,10 @@ Material:
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.6509434, g: 0.6076939, b: 0.4339622, a: 1}
-    - _ReflectOff01: {r: 0.04705883, g: 0.19302163, b: 0.5568628, a: 1}
-    - _diffusegradient01: {r: 1, g: 1, b: 1, a: 1}
-    - _diffusegradient02: {r: 0.754717, g: 0.7020292, b: 0.14002606, a: 1}
+    - _Reflect02: {r: 1, g: 0.9081761, b: 0.08176094, a: 1}
+    - _ReflectOff01: {r: 0.25447577, g: 0.2208971, b: 0.4811321, a: 1}
+    - _diffusegradient01: {r: 1, g: 0.940601, b: 0.7327044, a: 1}
+    - _diffusegradient02: {r: 0.9150943, g: 0.75885874, b: 0, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
     - _outlinecolor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

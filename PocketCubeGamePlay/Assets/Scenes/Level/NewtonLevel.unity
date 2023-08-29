@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 79.4
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -471,6 +471,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 6f4f54285c248e34aa49adc1ea0528e9, type: 2}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 31.31899
+      objectReference: {fileID: 0}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 31.31899
+      objectReference: {fileID: 0}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.370523
+      objectReference: {fileID: 0}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.21
+      objectReference: {fileID: 0}
+    - target: {fileID: -6859129910992379855, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.82
+      objectReference: {fileID: 0}
     - target: {fileID: -6400355386219781336, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.96
@@ -479,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: da245837c6aaf0543b24331c2d8ea9f5, type: 2}
+    - target: {fileID: -5867621867836553369, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6857f654848cd244ca45695514a47b84, type: 2}
     - target: {fileID: -5755327981686803648, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -567,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: da245837c6aaf0543b24331c2d8ea9f5, type: 2}
+    - target: {fileID: -1446090706835300922, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 816d5977210d4d94b8b2b53ed72faba1, type: 2}
     - target: {fileID: -905717674022267086, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1450,7 +1482,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.6563755, y: -0.26300424, z: -0.26300424, w: 0.6563755}
   m_LocalPosition: {x: -3.5081997, y: 3.9748, z: 6.6478}
-  m_LocalScale: {x: 0.8262024, y: 0.16603737, z: 0.77913034}
+  m_LocalScale: {x: 0.9139451, y: 0.18367054, z: 0.861874}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1477,15 +1509,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80a839147b03314a854f918c5325db5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.66
+      value: -8.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80a839147b03314a854f918c5325db5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -1.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80a839147b03314a854f918c5325db5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.23
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80a839147b03314a854f918c5325db5, type: 3}
       propertyPath: m_LocalRotation.w

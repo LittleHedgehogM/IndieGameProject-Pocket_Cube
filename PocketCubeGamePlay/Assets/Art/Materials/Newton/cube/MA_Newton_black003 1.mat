@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Newton_Apple001 1
+  m_Name: MA_Newton_black003 1
   m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -73,15 +73,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _TextureSample4:
         m_Texture: {fileID: 2800000, guid: 097c312032aaba1478210efd3dcf6910, type: 3}
@@ -165,13 +165,14 @@ Material:
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.098039225, b: 0.21568629, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.99931145, g: 0, b: 1, a: 1}
-    - _ReflectOff01: {r: 0.044025064, g: 0.68881285, b: 1, a: 1}
-    - _diffusegradient01: {r: 1, g: 0.8416667, b: 0, a: 1}
-    - _diffusegradient02: {r: 1, g: 0.8416667, b: 0, a: 1}
+    - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
+    - _ReflectOff01: {r: 0.0064673224, g: 0.007880019, b: 0.009433985, a: 1}
+    - _diffusegradient01: {r: 0, g: 0.18783528, b: 0.3679245, a: 1}
+    - _diffusegradient02: {r: 0, g: 0, b: 0, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
+    - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []
