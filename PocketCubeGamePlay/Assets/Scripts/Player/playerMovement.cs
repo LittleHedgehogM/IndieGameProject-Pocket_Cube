@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
        //gravity = Physics.gravity;
     }
 
+
+    public Vector3 getPlayerCurrentPosition()
+    {
+        return transform.position;
+    }
+
     // Update is called once per frame
     void Update() 
     {
