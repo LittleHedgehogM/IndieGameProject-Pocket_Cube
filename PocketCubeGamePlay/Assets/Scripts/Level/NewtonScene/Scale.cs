@@ -31,6 +31,11 @@ public class Scale : MonoBehaviour
         return coinsOnScale.Count == maxNumOfCoins;
     }
    
+    public List<GameObject> getCoinsOnScales()
+    {
+        return coinsOnScale;
+    }
+
     public int getTotalWeight()
     {
         return totalWeight;

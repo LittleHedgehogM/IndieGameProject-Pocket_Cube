@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 50976148}
   - component: {fileID: 50976147}
   - component: {fileID: 50976145}
+  - component: {fileID: 50976152}
   m_Layer: 0
   m_Name: coin_B
   m_TagString: Untagged
@@ -354,6 +355,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &50976152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50976144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0
+  highlightOutlineWidth: 0.0567
+  normalOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &132345805
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +385,7 @@ GameObject:
   - component: {fileID: 132345809}
   - component: {fileID: 132345808}
   - component: {fileID: 132345806}
+  - component: {fileID: 132345813}
   m_Layer: 0
   m_Name: coin_A
   m_TagString: Untagged
@@ -502,6 +520,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &132345813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132345805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0
+  highlightOutlineWidth: 0.0567
+  normalOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &229470292
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,12 +621,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229470292}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20743595, y: 0.07903848, z: -0.01681745, w: 0.9749054}
-  m_LocalPosition: {x: 6.43, y: 3.2800007, z: -1.3600006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0949196, y: -0.8704484, z: 0.18521008, w: 0.44610217}
+  m_LocalPosition: {x: 1.4955457, y: 0.82258415, z: 1.079901}
+  m_LocalScale: {x: 0.09999997, y: 0.099999994, z: 0.09999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 566104479}
+  m_Father: {fileID: 8462618663764177721}
   m_LocalEulerAnglesHint: {x: 24.024, y: 9.27, z: 0}
 --- !u!1 &245584973
 GameObject:
@@ -823,6 +857,7 @@ GameObject:
   - component: {fileID: 357536614}
   - component: {fileID: 357536613}
   - component: {fileID: 357536611}
+  - component: {fileID: 357536618}
   m_Layer: 0
   m_Name: coin_A
   m_TagString: Untagged
@@ -957,6 +992,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &357536618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357536610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0
+  highlightOutlineWidth: 0.0567
+  normalOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &370701229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1209,6 +1260,7 @@ GameObject:
   - component: {fileID: 499956484}
   - component: {fileID: 499956483}
   - component: {fileID: 499956481}
+  - component: {fileID: 499956488}
   m_Layer: 0
   m_Name: coin_C
   m_TagString: Untagged
@@ -1343,6 +1395,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499956488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499956480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0
+  highlightOutlineWidth: 0.0567
+  normalOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &560004853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,9 +1534,7 @@ Transform:
   m_Children:
   - {fileID: 269800692}
   - {fileID: 284203132}
-  - {fileID: 1617204675}
   - {fileID: 560004856}
-  - {fileID: 229470295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &722108104
@@ -2105,6 +2171,7 @@ GameObject:
   - component: {fileID: 1060255835}
   - component: {fileID: 1060255834}
   - component: {fileID: 1060255832}
+  - component: {fileID: 1060255839}
   m_Layer: 0
   m_Name: coin_B
   m_TagString: Untagged
@@ -2239,6 +2306,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060255839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060255831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0
+  highlightOutlineWidth: 0.0567
+  normalOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1065108291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2674,12 +2757,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617204672}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20743595, y: 0.07903848, z: -0.01681745, w: 0.9749054}
-  m_LocalPosition: {x: -1.6800003, y: 3.2800007, z: -1.1600008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0949196, y: -0.8704484, z: 0.18521008, w: 0.44610217}
+  m_LocalPosition: {x: 1.5178673, y: 0.837, z: 1.1042951}
+  m_LocalScale: {x: 0.09999997, y: 0.099999994, z: 0.09999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 566104479}
+  m_Father: {fileID: 376056986915032666}
   m_LocalEulerAnglesHint: {x: 24.024, y: 9.27, z: 0}
 --- !u!1 &1655007315
 GameObject:
@@ -2964,6 +3047,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 374201825}
+  - {fileID: 1617204675}
   m_Father: {fileID: 543450653021343637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &399570650467307908
@@ -4012,6 +4096,7 @@ GameObject:
   - component: {fileID: 4051232814709055670}
   - component: {fileID: 4051232814709055672}
   - component: {fileID: 4051232814709055671}
+  - component: {fileID: 4051232814709055673}
   m_Layer: 0
   m_Name: scale_L
   m_TagString: Untagged
@@ -4068,6 +4153,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightGap: 0.4
   translationTime: 0.5
+--- !u!114 &4051232814709055673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051232814709055669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0.0343
+  highlightOutlineWidth: 0.0356
+  normalOutlineColor: {r: 1, g: 1, b: 1, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &4099148612478990947
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4841,6 +4942,7 @@ GameObject:
   - component: {fileID: 8462618663764177722}
   - component: {fileID: 8462618663764177724}
   - component: {fileID: 8462618663764177723}
+  - component: {fileID: 8462618663764177725}
   m_Layer: 0
   m_Name: scale_R
   m_TagString: Untagged
@@ -5439,6 +5541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1564335987}
+  - {fileID: 229470295}
   m_Father: {fileID: 543450653021343637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &8462618663764177722
@@ -5490,6 +5593,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightGap: 0.4
   translationTime: 0.5
+--- !u!114 &8462618663764177725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505184075860397087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6868d568851574f8e45cdcbd1ca5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalOutlineWidth: 0.0343
+  highlightOutlineWidth: 0.0356
+  normalOutlineColor: {r: 1, g: 1, b: 1, a: 0}
+  highlightOutlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8521033568302945426
 MeshFilter:
   m_ObjectHideFlags: 0
