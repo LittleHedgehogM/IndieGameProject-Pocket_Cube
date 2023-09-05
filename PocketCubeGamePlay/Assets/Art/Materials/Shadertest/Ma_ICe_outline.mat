@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ma_ICe
-  m_Shader: {fileID: 4800000, guid: 1915ed461a351fe448aebe7c41653c3f, type: 3}
+  m_Name: Ma_ICe_outline
+  m_Shader: {fileID: 4800000, guid: ed4d698fdceb8b047814b29f19f4c7a4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -79,6 +79,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _Distortion: 0.033
     - _DstBlend: 0
+    - _Float1: 1.5293976
+    - _Float3: 0.8235294
+    - _Fresnel: 10
+    - _Fresnel1: 2.705882
+    - _Fresnel2: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
