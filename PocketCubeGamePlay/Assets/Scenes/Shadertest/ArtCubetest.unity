@@ -4093,25 +4093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45eaab64fe60bb549b96efd221949a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightingRenderer: {fileID: 0}
-  interval: 1
-  customPresets:
-  - _name: Wide
-    _fillAlpha: 0
-    _downsampleFactor: 4
-    _iterations: 4
-    _blurMinSpread: 0.65
-    _blurSpread: 0.25
-    _blurIntensity: 0.3
-    _blurDirections: 0
-  - _name: Solid 2px
-    _fillAlpha: 0
-    _downsampleFactor: 1
-    _iterations: 2
-    _blurMinSpread: 1
-    _blurSpread: 0
-    _blurIntensity: 1
-    _blurDirections: 2
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,72 +4105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b765e0b5af3bcf4a9deb5895e477da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillAlpha: 0
-  _downsampleFactor: 4
-  _iterations: 4
-  _blurMinSpread: 0.65
-  _blurSpread: 0.25
-  _blurIntensity: 0.3
-  _blurDirections: 0
-  _blitter: {fileID: 0}
-  _antiAliasing: 0
-  _presets:
-  - _name: Default
-    _fillAlpha: 0
-    _downsampleFactor: 4
-    _iterations: 2
-    _blurMinSpread: 0.65
-    _blurSpread: 0.25
-    _blurIntensity: 0.3
-    _blurDirections: 0
-  - _name: Wide
-    _fillAlpha: 0
-    _downsampleFactor: 4
-    _iterations: 4
-    _blurMinSpread: 0.65
-    _blurSpread: 0.25
-    _blurIntensity: 0.3
-    _blurDirections: 0
-  - _name: Strong
-    _fillAlpha: 0
-    _downsampleFactor: 4
-    _iterations: 2
-    _blurMinSpread: 0.5
-    _blurSpread: 0.15
-    _blurIntensity: 0.325
-    _blurDirections: 0
-  - _name: Speed
-    _fillAlpha: 0
-    _downsampleFactor: 4
-    _iterations: 1
-    _blurMinSpread: 0.75
-    _blurSpread: 0
-    _blurIntensity: 0.35
-    _blurDirections: 0
-  - _name: Quality
-    _fillAlpha: 0
-    _downsampleFactor: 2
-    _iterations: 3
-    _blurMinSpread: 0.5
-    _blurSpread: 0.5
-    _blurIntensity: 0.28
-    _blurDirections: 0
-  - _name: Solid 1px
-    _fillAlpha: 0
-    _downsampleFactor: 1
-    _iterations: 1
-    _blurMinSpread: 1
-    _blurSpread: 0
-    _blurIntensity: 1
-    _blurDirections: 2
-  - _name: Solid 2px
-    _fillAlpha: 0
-    _downsampleFactor: 1
-    _iterations: 2
-    _blurMinSpread: 1
-    _blurSpread: 0
-    _blurIntensity: 1
-    _blurDirections: 2
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4202,7 +4117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3abd6366bed4634d8ad951c4eda5116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &963194232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4215,26 +4129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef461167744658345a46344ed5a0c0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateEvent: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rayLength: -1
-  onHover:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 100000, guid: 9bd2d6875d41948ee9925beab4dbc885, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &963194233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5953,7 +5847,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: b346410732d5e6e4ca0146045027a9b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1741960349}
   m_SourcePrefab: {fileID: 100100000, guid: b346410732d5e6e4ca0146045027a9b6, type: 3}
 --- !u!1 &1337247419 stripped
 GameObject:
@@ -7769,6 +7666,29 @@ PrefabInstance:
       addedObject: {fileID: 1208747929}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0a551b084b6c64eae1683aeaf2b83f, type: 3}
+--- !u!1 &1741960347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: b346410732d5e6e4ca0146045027a9b6, type: 3}
+  m_PrefabInstance: {fileID: 1335435660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741960349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741960347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1742983196
 GameObject:
   m_ObjectHideFlags: 0
