@@ -52,6 +52,8 @@ public class NewtonScenePlayController : MonoBehaviour
     [SerializeField]
     GameObject Cube;
 
+    [SerializeField]
+
     void Start()
     {
         myDetectDistance = FindObjectOfType<DetectDistance>();
@@ -115,7 +117,19 @@ public class NewtonScenePlayController : MonoBehaviour
     {
         if (myPlayStatus == PlayStatus.InScaleDraw)
         {
-            //.....
+            //Cube.GetComponent<CubeController>().onUpdate();
+           
+            // if cube stops, then player can move
+            if (Cube.GetComponent<CubeController>().getIsFalling() == false)
+            {
+                myPlayerMovement.OnUpdate();
+
+                // check distance between player and cube
+                // load scene
+                
+            }
+            
+
         }
         else if (myPlayStatus == PlayStatus.Configuration)
         {
@@ -130,8 +144,9 @@ public class NewtonScenePlayController : MonoBehaviour
 
             if (leftWeight == 5 && rightWeight == 5)
             {
-                Cube.GetComponent<Rigidbody>().isKinematic = false;
+                Cube.GetComponent<CubeController>().startsFalling();
                 myPlayStatus = PlayStatus.InScaleDraw;
+
                 return;
             }
 
@@ -151,8 +166,8 @@ public class NewtonScenePlayController : MonoBehaviour
                     myPlayerMovement.TranslateToLeftEye();
                     myPlayStatus = PlayStatus.InCameraTranslation;
                     currentScale = Scale_Left;
-                    Scale_Left.GetComponent<MaterialChangeOutline>().HighlightMaterial();
-                    Scale_Right.GetComponent<MaterialChangeOutline>().ResetMaterial();
+                    Scale_Left.GetComponent<ScaleHighlighter>().HighlightScale();
+                    Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
                 //}
 
             }
@@ -165,16 +180,16 @@ public class NewtonScenePlayController : MonoBehaviour
                     myPlayerMovement.TranslateToRightEye();
                     myPlayStatus = PlayStatus.InCameraTranslation;
                     currentScale = Scale_Right;
-                    Scale_Right.GetComponent<MaterialChangeOutline>().HighlightMaterial();
-                    Scale_Left.GetComponent<MaterialChangeOutline>().ResetMaterial();
+                    Scale_Right.GetComponent<ScaleHighlighter>().HighlightScale();
+                    Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
                 //}
 
             }
             else
             {
                 currentScale = null;
-                Scale_Right.GetComponent<MaterialChangeOutline>().ResetMaterial();
-                Scale_Left.GetComponent<MaterialChangeOutline>().ResetMaterial();
+                Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
+                Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
             }
             
         }
@@ -182,14 +197,14 @@ public class NewtonScenePlayController : MonoBehaviour
         {
             if (currentScale != null)
             {
-                currentScale.GetComponent<MaterialChangeOutline>().HighlightMaterial();
+                currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
             }
             
 
         }
         else if (myPlayStatus == PlayStatus.InDisplayEyeAndScale)
         {
-            currentScale.GetComponent<MaterialChangeOutline>().HighlightMaterial();
+            currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
 
             myPlayerMovement.OnUpdate();
             float Dist_L = myDetectDistance.getDistanceBetweenPlayerAndLeftEye();
@@ -243,36 +258,10 @@ public class NewtonScenePlayController : MonoBehaviour
                     
             }
 
-
-            //if (Input.GetKeyDown(KeyCode.P))
-            //{
-            //    EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
-            //    if (playerEquipCoin.getEquipped() != null) // if player has a coin
-            //    {
-            //        myPlayStatus = PlayStatus.InPutCoin;
-            //        // play Animation to drop coin                    
-
-            //    }
-            //    else // if player doesn't have a coin
-            //    {
-            //        myPlayStatus = PlayStatus.InTakeCoin;
-            //        if (currentScale == Scale_Left)
-            //        {
-            //            myCameraController.showLeftcale();
-
-            //        }
-            //        else if (currentScale == Scale_Right)
-            //        {
-            //            myCameraController.showRightScale();
-            //        }
-
-            //    }
-            //}
-
         }
         else if (myPlayStatus == PlayStatus.InPutCoin)
         {
-            currentScale.GetComponent<MaterialChangeOutline>().HighlightMaterial();
+            currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
 
             // if can put coin
             EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
@@ -288,7 +277,7 @@ public class NewtonScenePlayController : MonoBehaviour
         }
         else if (myPlayStatus == PlayStatus.InTakeCoin)
         {
-            currentScale.GetComponent<MaterialChangeOutline>().HighlightMaterial();
+            currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
 
             List<GameObject> coins = currentScale.GetComponent<Scale>().getCoinsOnScales();
             foreach (GameObject coin in coins)
@@ -337,11 +326,6 @@ public class NewtonScenePlayController : MonoBehaviour
                 }
             }
         }
-        //else if (myPlayStatus == PlayStatus.InScalePositionAdjustment)
-        //{
-            
-
-        //}
     }
 
 }

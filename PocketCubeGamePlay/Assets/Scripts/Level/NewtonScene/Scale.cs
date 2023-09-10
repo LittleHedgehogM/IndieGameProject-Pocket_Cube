@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -16,6 +17,8 @@ public class Scale : MonoBehaviour
 
     List<GameObject> coinsOnScale = new List<GameObject>();
     [SerializeField] float translationTime;
+
+    [SerializeField] private TextMeshProUGUI WeightText;
 
     float initY;
 
@@ -79,6 +82,7 @@ public class Scale : MonoBehaviour
             int coin_weight = coin.GetComponent<CoinWeight>().getWeight();
             totalWeight += coin_weight;
         }
+        WeightText.text = totalWeight.ToString();
         
     }
 
