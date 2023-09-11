@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Newton_002
+  m_Name: MA_Newton_003 3
   m_Shader: {fileID: 4800000, guid: 229a5923b6714444387fdd2bbe031178, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -138,7 +138,7 @@ Material:
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.009
+    - _OutlineWidth: 0
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
@@ -171,8 +171,8 @@ Material:
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
     - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
     - _ReflectOff01: {r: 0.35570186, g: 0.4334, b: 0.5188679, a: 1}
-    - _diffusegradient01: {r: 0.07450981, g: 0.6156863, b: 0.9254902, a: 1}
-    - _diffusegradient02: {r: 0, g: 0.38386828, b: 0.6698113, a: 1}
+    - _diffusegradient01: {r: 1, g: 0.96634954, b: 0.7421383, a: 1}
+    - _diffusegradient02: {r: 1, g: 0.4101417, b: 0, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
     - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []
