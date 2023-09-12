@@ -21,7 +21,8 @@ public class FourierColorChanger : MonoBehaviour
     public class Level1 
     {
         public GameObject prefab;
-        public Color[] myColors;
+        public Color[] myColors01;
+        public Color[] myColors02;
         public int currentColorIndex = 0;
         public int targetColorIndex = 1;
         public float targetPoint;
@@ -40,7 +41,8 @@ public class FourierColorChanger : MonoBehaviour
     public class Level2
     {
         public GameObject prefab;
-        public Color[] myColors;
+        public Color[] myColors01;
+        public Color[] myColors02;
         public int currentColorIndex = 0;
         public int targetColorIndex = 1;
         public float targetPoint;
@@ -81,14 +83,14 @@ public class FourierColorChanger : MonoBehaviour
 
 
         //颜色检测 level1
-        if (!transitionLevel1 & level1.material.color == level1.goalColor)
+        if (!transitionLevel1 & level1.material.GetColor("_diffusegradient01") == level1.goalColor)
         {
             isLevel1Pass = true;         
             level1.bridge.SetActive(true);
         }
 
 
-        if (!transitionLevel2 & level2.material.color == level2.goalColor)
+        if (!transitionLevel2 & level2.material.GetColor("_diffusegradient01") == level2.goalColor)
         {
             isLevel2Pass = true;
             level2.bridge.SetActive(true);
@@ -99,14 +101,16 @@ public class FourierColorChanger : MonoBehaviour
     void ColorTransitionLevel1()
     {    
             level1.targetPoint += Time.deltaTime / level1.lerpTime;
-            level1.material.color = Color.Lerp(level1.myColors[level1.currentColorIndex], level1.myColors[level1.targetColorIndex], level1.targetPoint);
+            //level1.material.color = Color.Lerp(level1.myColors[level1.currentColorIndex], level1.myColors[level1.targetColorIndex], level1.targetPoint);
+            level1.material.SetColor("_diffusegradient01", Color.Lerp(level1.myColors01[level1.currentColorIndex], level1.myColors01[level1.targetColorIndex], level1.targetPoint));
+            level1.material.SetColor("_diffusegradient02", Color.Lerp(level1.myColors02[level1.currentColorIndex], level1.myColors02[level1.targetColorIndex], level1.targetPoint));
 
-            if (level1.targetPoint >= 1f)
+        if (level1.targetPoint >= 1f)
             {
                 level1.targetPoint = 0f;
                 level1.currentColorIndex = level1.targetColorIndex;
                 level1.targetColorIndex++;
-                if (level1.targetColorIndex == level1.myColors.Length)
+                if (level1.targetColorIndex == level1.myColors01.Length)
                 {
                     level1.targetColorIndex = 0;
                 }
@@ -118,14 +122,15 @@ public class FourierColorChanger : MonoBehaviour
     void ColorTransitionLevel2()
     {             
             level2.targetPoint += Time.deltaTime / level2.lerpTime;
-            level2.material.color = Color.Lerp(level2.myColors[level2.currentColorIndex], level2.myColors[level2.targetColorIndex], level2.targetPoint);
+            level2.material.SetColor("_diffusegradient01", Color.Lerp(level2.myColors01[level2.currentColorIndex], level2.myColors01[level2.targetColorIndex], level2.targetPoint));
+            level2.material.SetColor("_diffusegradient02", Color.Lerp(level2.myColors02[level2.currentColorIndex], level2.myColors02[level2.targetColorIndex], level2.targetPoint));
 
-            if (level2.targetPoint >= 1f)
+        if (level2.targetPoint >= 1f)
             {
                 level2.targetPoint = 0f;
                 level2.currentColorIndex = level2.targetColorIndex;
                 level2.targetColorIndex++;
-                if (level2.targetColorIndex == level2.myColors.Length)
+                if (level2.targetColorIndex == level2.myColors01.Length)
                 {
                     level2.targetColorIndex = 0;
                 }
