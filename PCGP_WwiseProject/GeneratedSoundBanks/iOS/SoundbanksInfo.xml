@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EDDCCB5F-FCB7-64E3-C9C7-9FAA07CF0C14}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4193ACD0-5720-707B-79F9-1AB372BD1703}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -26,22 +26,54 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{CB9FA284-7290-4AB5-B4B3-8842040359B5}">
-			<ShortName>Test</ShortName>
-			<Path>Test.bnk</Path>
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{0BF14369-01C7-1862-01E1-67E5E0963547}">
+			<ShortName>Level3</ShortName>
+			<Path>Level3.bnk</Path>
 			<Media>
-				<File Id="910051214" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Ella Fitzgerald - Cry Me a River.wav</ShortName>
-					<CachePath>SFX/Ella Fitzgerald - Cry Me a River_10C4C929.wem</CachePath>
+				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 3 Demo.wav</ShortName>
+					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="394430027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_perfect.wav</ShortName>
+					<CachePath>SFX/L3_Hit_perfect_242A5AC6.wem</CachePath>
+				</File>
+				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_bad.wav</ShortName>
+					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
+				</File>
+				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_destroy.wav</ShortName>
+					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="575509397" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="585302132" Name="Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
-					<Plugin Id="1039058572" Name="Flanger (Custom)" LibName="Wwise Flanger" LibId="8192003"/>
-				</Custom>
-			</Plugins>
+			<Events>
+				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
+					<MediaRefs>
+						<MediaRef Id="743988009"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4190464387" Name="Play_L3_Hit_bad" DurationType="OneShot" DurationMin="0.25094482" DurationMax="0.25094482">
+					<MediaRefs>
+						<MediaRef Id="656407472"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.7270537" DurationMax="0.7270537">
+					<MediaRefs>
+						<MediaRef Id="394430027"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2857213584" Name="Play_Level_3_Demo" DurationType="OneShot" DurationMin="43.308277" DurationMax="43.308277">
+					<MediaRefs>
+						<MediaRef Id="217342985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3146280458" Name="Stop_Level_3_Demo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{0DA55D56-BE20-6261-E23E-EEF913D76AB1}">
+			<ShortName>Test</ShortName>
+			<Path>Test.bnk</Path>
 			<Events>
 				<Event Id="1756624261" Name="OffEffect0" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1756624260" Name="OffEffect1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -49,21 +81,8 @@
 				<Event Id="97571255" Name="OnEffect0" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="97571254" Name="OnEffect1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="97571253" Name="OnEffect2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1058947180" Name="Play_Ella_Fitzgerald___Cry_Me_a_River" MaxAttenuation="15" DurationType="OneShot" DurationMin="257" DurationMax="257">
-					<MediaRefs>
-						<MediaRef Id="910051214"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="575509397"/>
-							<PluginRef Id="585302132"/>
-							<PluginRef Id="1039058572"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="1644353714" Name="Stop_Ella_Fitzgerald___Cry_Me_a_River" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5DB21A5F-8ED4-CADD-0E80-F4237CD43191}</FileHash>
+	<FileHash>{80D375F8-92A6-BC1F-3778-9B28D52BA264}</FileHash>
 </SoundBanksInfo>

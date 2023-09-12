@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Level 3" ID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Music" ID="{B79E4E4F-4703-45F1-9546-8E0A92EEE5FD}" ShortID="153628740">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="SFX" ID="{A28FF819-3E42-4B87-A9E2-FC33A7029C5D}" ShortID="667989385">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="L3_destroy" ID="{64FF9F41-F4AC-4DA4-A598-0C2C68ACAE15}" ShortID="294112879">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="L3_destroy" ID="{4A6E2C7A-1BE1-43E5-87F6-E43DD72E2F8F}">
+									<Language>SFX</Language>
+									<AudioFile>L3_destroy.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="743988009"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="L3_destroy" ID="{4A6E2C7A-1BE1-43E5-87F6-E43DD72E2F8F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="L3_Hit_bad" ID="{6572ECD6-104A-480C-9F5C-C76787C37675}" ShortID="99268156">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{663FFCAD-2B0C-4A76-837C-72FC457FF62B}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="2451"/>
+													<Property Name="Min" Type="Real64" Value="-2375"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="L3_Hit_bad" ID="{235BE7C2-D609-4C86-819C-D489FB6E2C5A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.250944809356901"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>L3_Hit_bad.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="656407472"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="L3_Hit_bad" ID="{235BE7C2-D609-4C86-819C-D489FB6E2C5A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" ShortID="842069788">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1BDA1B7E-6FA3-4169-B0C4-483F8E8485D0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-21"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{603ACB9B-8360-4AA6-88D3-04B54C44A276}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2A2F4B77-49CE-47D2-B54C-F6AB7189DBAD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="RoomVerb (Custom)" ID="{D8868C73-1D5C-4768-8FB1-6CADC2B39B20}" ShortID="945801009" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<PropertyList>
+												<Property Name="ERPattern" Type="int32" Value="8"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="L3_Jump" ID="{240F7E0A-07B2-4888-B6D6-C39490DD1478}" ShortID="438937205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Jump" ID="{FE431758-2FEC-4D3B-8AF3-4F189CFD963C}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.481439059689339"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>L3_Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="228576140"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Jump" ID="{FE431758-2FEC-4D3B-8AF3-4F189CFD963C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Jump_01" ID="{6E10F8DA-8444-45DD-B3B7-3767E7FA895B}" ShortID="398576349">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Jump" ID="{D17A8A25-D231-4CF8-8746-9DA28A685BE4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.889438262815893"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.46471713922434"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>L3_Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="371716904"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Jump" ID="{D17A8A25-D231-4CF8-8746-9DA28A685BE4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Jump_02" ID="{A2B7BF70-CA23-4312-BFC6-248B7B0B3A36}" ShortID="627911076">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Jump" ID="{76EF19B6-0256-4C1F-BEA2-4FEE926A875F}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.79519649375685"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.32559545782137"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>L3_Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="644617565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Jump" ID="{76EF19B6-0256-4C1F-BEA2-4FEE926A875F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Jump_03" ID="{0DBF3C66-FB4D-4971-84B5-F5F5910CB0CE}" ShortID="99071178">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Jump" ID="{A4C7CB31-017B-41D6-8539-E835071BF64D}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.69279474063527"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>L3_Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="531891813"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Jump" ID="{A4C7CB31-017B-41D6-8539-E835071BF64D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

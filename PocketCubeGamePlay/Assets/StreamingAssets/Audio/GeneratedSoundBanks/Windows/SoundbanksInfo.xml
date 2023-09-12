@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../../../../../../PCGP_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../../PCGP_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../../PCGP_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{640930EC-909A-B6B9-ABAD-B4ECB4994D04}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{64953936-480E-8524-651A-4B50E908D72E}">
+			<ShortName>Level3</ShortName>
+			<Path>Level3.bnk</Path>
+			<Media>
+				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 3 Demo.wav</ShortName>
+					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
+				</File>
+				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_88ECCD51.wem</CachePath>
+				</File>
+				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_C7FB753E.wem</CachePath>
+				</File>
+				<File Id="644617565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_D407F890.wem</CachePath>
+				</File>
+				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_bad.wav</ShortName>
+					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
+				</File>
+				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_destroy.wav</ShortName>
+					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="945801009" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
+					<MediaRefs>
+						<MediaRef Id="743988009"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4190464387" Name="Play_L3_Hit_bad" DurationType="OneShot" DurationMin="0.25094482" DurationMax="0.25094482">
+					<MediaRefs>
+						<MediaRef Id="656407472"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.4651191" DurationMax="0.5752789">
+					<MediaRefs>
+						<MediaRef Id="228576140"/>
+						<MediaRef Id="371716904"/>
+						<MediaRef Id="531891813"/>
+						<MediaRef Id="644617565"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="945801009"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2158818887" Name="Play_Level3_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="217342985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{171F8BAA-9D77-8F8A-7EC9-95B1FD78FCA2}</FileHash>
+</SoundBanksInfo>

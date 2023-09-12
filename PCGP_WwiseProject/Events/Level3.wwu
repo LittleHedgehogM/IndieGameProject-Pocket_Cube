@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BF1C512C-8FFC-4CD9-B802-F2451468E7F2}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Level3" ID="{BF1C512C-8FFC-4CD9-B802-F2451468E7F2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_L3_Jump" ID="{9C8CC137-F085-4BCA-9B91-B12BDC141FA3}">
+					<ChildrenList>
+						<Action Name="" ID="{F10CFE97-299C-412F-A6A5-0BA1C8A5678E}" ShortID="225268645">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_L3_Hit_bad" ID="{634A4B9F-6996-4E72-8512-89D9DDCF1852}">
+					<ChildrenList>
+						<Action Name="" ID="{6894490F-8F8C-45D5-8AE9-765D8A923BA4}" ShortID="134233398">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="L3_Hit_bad" ID="{6572ECD6-104A-480C-9F5C-C76787C37675}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_L3_destroy" ID="{59225D08-45B8-4638-9661-C08E62168CBC}">
+					<ChildrenList>
+						<Action Name="" ID="{77E67239-1645-4C78-9B96-6FD36D92CFDB}" ShortID="800100293">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="L3_destroy" ID="{64FF9F41-F4AC-4DA4-A598-0C2C68ACAE15}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Level3_Music" ID="{356B5101-BF16-4BC0-918E-6831E702C30B}">
+					<ChildrenList>
+						<Action Name="" ID="{A3E4DDB2-BA42-4CD5-9437-D4714DE63315}" ShortID="600909075">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level3" ID="{307FE6DB-1DDF-4034-B9FA-2D5BAC2C6B63}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Level3_Music" ID="{780A5F3D-C2CD-42AA-BBE6-432443C63145}">
+					<ChildrenList>
+						<Action Name="" ID="{1724E6B3-506A-4F89-9F89-0368D6315872}" ShortID="692200025">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level3" ID="{307FE6DB-1DDF-4034-B9FA-2D5BAC2C6B63}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
