@@ -80,39 +80,7 @@ public class FourierPlayer : MonoBehaviour
     }
 
 
-    public static bool transitionLevel1 = true;
-    public static bool transitionLevel2 = true;
-    public static bool transitionLevel3 = true;
-
-    
     // Start is called before the first frame update
 
-    public void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name == "立方体.024")
-        {
-            
-            transitionLevel1 = false;
-        }
-        else if (col.gameObject.name == "立方体.025")
-        {
-            transitionLevel2 = false;
-        }
-    }
 
-    public void OnCollisionExit(Collision col)
-    {
-        if (col.gameObject.name == "立方体.024")
-        {
-            //print("out");
-
-            transitionLevel1 = true;
-        }
-        else if(col.gameObject.name == "立方体.025")
-        {
-            transitionLevel2 = true;
-        }
-
-
-    }
 }
