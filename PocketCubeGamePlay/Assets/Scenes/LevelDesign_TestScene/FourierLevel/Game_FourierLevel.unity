@@ -3161,6 +3161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87145424eb400bc40be91e26cc697acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpFX: {fileID: 0}
 --- !u!1 &1548715134
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,7 +3890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87699b966979bd14680df5b7f4b010e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 0
+  isDefaultListener: 1
   listenerId: 0
 --- !u!114 &2046539461
 MonoBehaviour:

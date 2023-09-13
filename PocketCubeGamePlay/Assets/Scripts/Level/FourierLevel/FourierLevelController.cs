@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FourierLevelController : MonoBehaviour
 {
-    
+    public GameObject jumpFX;
     
 
     private void Start()

@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class FourierColorChanger : MonoBehaviour
 {
+    FourierLevelController _FLC;
+
     private bool pushTransitions = false;
-    
     
     [SerializeField] private Color[] diffuseGradient01;
     [SerializeField] private Color[] diffuseGradient02;
@@ -114,8 +115,9 @@ public class FourierColorChanger : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            
             levelEnter = true;
-            print("Player Enter");
+            //print("Player Enter");
             if ( levelFirstEnter == 0)
             {
                 levelFirstEnter++;
@@ -127,7 +129,7 @@ public class FourierColorChanger : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             levelEnter = false;
-            print("Player Exit");
+            //print("Player Exit");
             if (levelFirstEnter == 0)
             {
                 levelFirstEnter++;
