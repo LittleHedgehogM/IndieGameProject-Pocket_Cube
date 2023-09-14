@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class FourierLevelController : MonoBehaviour
 {
-    public GameObject jumpFX;
-    
+    public float lerpTime = 0.8f;
+    //[HideInInspector]public bool pushTransitions = false;
+    //FourierColorChanger _FCC;
 
     private void Start()
     {
-        
+        //FourierColorChanger[] _FCC = GetComponentsInChildren<FourierColorChanger>();
     }
     public void ModeOne()
     {
         
-        FourierColorChanger.transitionOnStart = true;
+        FourierColorChanger.transitionOnStart = 0;
 
     }
 
     public void ModeTwo()
     {
-        FourierColorChanger.transitionOnStart = false;
+        FourierColorChanger.transitionOnStart = 1;
     }
+
+    public void ModeThree()
+    {
+        FourierColorChanger.transitionOnStart = 2;
+    }
+
+    /*public void PushTransitions()
+    {
+        pushTransitions = true;
+        
+        //print("transition On");
+    }*/
 }

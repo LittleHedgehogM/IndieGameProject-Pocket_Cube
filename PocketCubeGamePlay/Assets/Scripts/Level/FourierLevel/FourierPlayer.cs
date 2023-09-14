@@ -19,13 +19,14 @@ public class FourierPlayer : MonoBehaviour
 
     //audio
     public AK.Wwise.Event jumpSFX;
+    [SerializeField] private ParticleSystem jumpPS;
 
 
 
     void Start()
     {
         gravity = Physics.gravity;
-        
+        jumpPS.Stop();
     }
 
 
@@ -37,18 +38,12 @@ public class FourierPlayer : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        // jump
-        if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y.ToString("f2") == "0.00")
-        {
-            jumpSFX.Post(gameObject);
-            myRigidbody.velocity = Vector3.up * jumpStrength;
-        }
+        // fall
+        
         if (myRigidbody.velocity.y < 0)
         {
-            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;
+            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;    
         }
-
-
 
         // move
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -79,8 +74,25 @@ public class FourierPlayer : MonoBehaviour
         //Physics.gravity = gravity;
     }
 
+    
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.gameObject.CompareTag("Area"))
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y.ToString("f2") == "0.00")
+            {
+                jumpPS.Play();
+                jumpSFX.Post(gameObject);
 
-    // Start is called before the first frame update
+                //jump
+                myRigidbody.velocity = Vector3.up * jumpStrength;
+            }
+        }
+    }
+
+
+
+
 
 
 }

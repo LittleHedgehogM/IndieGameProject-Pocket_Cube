@@ -124,7 +124,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585070900159374510
+    m_lastTime: -8585069422907840906
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -192,8 +192,8 @@ MonoBehaviour:
         guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
       Path: Events\Level3\Play_L3_Jump
       maxAttenuation: 0
-      maxDuration: 0.5752789
-      minDuration: 0.4651191
+      maxDuration: 1.0252788
+      minDuration: 0.91511905
     - name: Play_Level3_Music
       guid: 01516b3516bfc04b918e6831e702c30b
       id: 2158818887
@@ -228,121 +228,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\Test.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Test
-      ObjectType: 12
-      guid: 860ab761897a164ca12423723de18fda
-    ParentPath: Events\Test
-    guid: 860ab761897a164ca12423723de18fda
-    GuidInternal: 
-    m_lastTime: -8585070900159374510
-    List:
-    - name: OffEffect0
-      guid: c52aeeb9688de9488837966c1e36bcf5
-      id: 1756624261
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect0
-        ObjectType: 3
-        guid: c52aeeb9688de9488837966c1e36bcf5
-      Path: Events\Test\OffEffect0
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: OffEffect1
-      guid: 09af7ecfbcb62945a64ae21ef59b7ced
-      id: 1756624260
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect1
-        ObjectType: 3
-        guid: 09af7ecfbcb62945a64ae21ef59b7ced
-      Path: Events\Test\OffEffect1
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: OffEffect2
-      guid: 7c8940df06c52640b86e4253d257de97
-      id: 1756624263
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect2
-        ObjectType: 3
-        guid: 7c8940df06c52640b86e4253d257de97
-      Path: Events\Test\OffEffect2
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: OnEffect0
-      guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
-      id: 97571255
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect0
-        ObjectType: 3
-        guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
-      Path: Events\Test\OnEffect0
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: OnEffect1
-      guid: d33882a60dfc7742acd023598a6445dc
-      id: 97571254
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect1
-        ObjectType: 3
-        guid: d33882a60dfc7742acd023598a6445dc
-      Path: Events\Test\OnEffect1
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: OnEffect2
-      guid: c03392cc135c3c4888913688acde0b4a
-      id: 97571253
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect2
-        ObjectType: 3
-        guid: c03392cc135c3c4888913688acde0b4a
-      Path: Events\Test\OnEffect2
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

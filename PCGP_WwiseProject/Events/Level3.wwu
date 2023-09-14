@@ -6,6 +6,9 @@
 				<Event Name="Play_L3_Jump" ID="{9C8CC137-F085-4BCA-9B91-B12BDC141FA3}">
 					<ChildrenList>
 						<Action Name="" ID="{F10CFE97-299C-412F-A6A5-0BA1C8A5678E}" ShortID="225268645">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.45"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
