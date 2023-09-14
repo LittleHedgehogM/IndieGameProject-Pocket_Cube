@@ -69,7 +69,7 @@ public class FourierColorChanger : MonoBehaviour
 
             case 1:
                 //进入平台颜色才变化
-                if (pushTransitions & levelEnter & !isLevelPass)
+                if (pushTransitions & levelFirstEnter == 1 & !isLevelPass)
                 {
                     //print("transition On");
                     ColorTransitionLevel();
@@ -85,7 +85,7 @@ public class FourierColorChanger : MonoBehaviour
                 }
                 break;
             case 2:
-                if(pushTransitions & !levelEnter)
+                if(pushTransitions & !levelEnter & !isLevelPass)
                 {
                     OffColorTransition();
                 }

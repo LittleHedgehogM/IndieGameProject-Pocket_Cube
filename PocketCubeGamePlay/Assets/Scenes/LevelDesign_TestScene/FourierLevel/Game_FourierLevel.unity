@@ -246,8 +246,8 @@ MonoBehaviour:
   rotationSpeed: 720
   myRigidbody: {fileID: 27958644}
   playerMoveSpeed: 2.5
-  jumpStrength: 4.5
-  fallStrength: 5
+  jumpStrength: 6
+  fallStrength: 6
   useGravity: 1
   gravity: {x: 0, y: 0, z: 0}
   jumpSFX:
@@ -5469,6 +5469,8 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0, b: 0.0627451, a: 1}
   - {r: 0.8679245, g: 0.35617658, b: 0.39443803, a: 1}
   - {r: 0.8773585, g: 0.6000801, b: 0.6185653, a: 1}
+  offDiffuseGradient01: []
+  offDiffuseGradient02: []
   lerpTime: 0
   goalColor: {r: 0, g: 0, b: 0, a: 0}
   isBridgeActive: 0
@@ -5746,6 +5748,8 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0, b: 0.0627451, a: 1}
   - {r: 0.8679245, g: 0.35617658, b: 0.39443803, a: 1}
   - {r: 0.8773585, g: 0.6000801, b: 0.6185653, a: 1}
+  offDiffuseGradient01: []
+  offDiffuseGradient02: []
   lerpTime: 0
   goalColor: {r: 1, g: 0.69803923, b: 0.38431376, a: 1}
   isBridgeActive: 0
@@ -5915,6 +5919,8 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0, b: 0.0627451, a: 1}
   - {r: 0.8679245, g: 0.35617658, b: 0.39443803, a: 1}
   - {r: 0.8773585, g: 0.6000801, b: 0.6185653, a: 1}
+  offDiffuseGradient01: []
+  offDiffuseGradient02: []
   lerpTime: 0
   goalColor: {r: 0, g: 0, b: 0, a: 0}
   isBridgeActive: 0
@@ -6344,6 +6350,8 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0, b: 0.0627451, a: 1}
   - {r: 0.8679245, g: 0.35617658, b: 0.39443803, a: 1}
   - {r: 0.8773585, g: 0.6000801, b: 0.6185653, a: 1}
+  offDiffuseGradient01: []
+  offDiffuseGradient02: []
   lerpTime: 0
   goalColor: {r: 0, g: 0, b: 0, a: 0}
   isBridgeActive: 0
@@ -6377,6 +6385,8 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0, b: 0.0627451, a: 1}
   - {r: 0.8679245, g: 0.35617658, b: 0.39443803, a: 1}
   - {r: 0.8773585, g: 0.6000801, b: 0.6185653, a: 1}
+  offDiffuseGradient01: []
+  offDiffuseGradient02: []
   lerpTime: 0
   goalColor: {r: 0, g: 0, b: 0, a: 0}
   isBridgeActive: 0
