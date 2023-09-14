@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Newton_Apple001 2
-  m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
+  m_Name: MA_Newton_003 2
+  m_Shader: {fileID: 4800000, guid: 229a5923b6714444387fdd2bbe031178, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -111,7 +111,7 @@ Material:
     - _BaseCellOffset001: -0.09803539
     - _BaseCellOffset002: 0.52056116
     - _BaseCellOffset003: 0.4836274
-    - _BaseCellOffset004: 0.6377987
+    - _BaseCellOffset004: 0.909
     - _BaseCellOffset1: -0.09570599
     - _BaseCellSharpness: 0.5383997
     - _BumpScale: 1
@@ -165,13 +165,14 @@ Material:
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.098039225, b: 0.21568629, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.745283, g: 0.56428295, b: 0.4476385, a: 1}
-    - _ReflectOff01: {r: 1, g: 0.9868641, b: 0.9308176, a: 1}
-    - _diffusegradient01: {r: 1, g: 0.9282751, b: 0.78930813, a: 1}
-    - _diffusegradient02: {r: 0.8584906, g: 0.7145089, b: 0.42654556, a: 1}
+    - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
+    - _ReflectOff01: {r: 0.35570186, g: 0.4334, b: 0.5188679, a: 1}
+    - _diffusegradient01: {r: 0.575531, g: 0.70080674, b: 0.9150943, a: 1}
+    - _diffusegradient02: {r: 0.27058825, g: 0.34901962, b: 0.60784316, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
+    - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []

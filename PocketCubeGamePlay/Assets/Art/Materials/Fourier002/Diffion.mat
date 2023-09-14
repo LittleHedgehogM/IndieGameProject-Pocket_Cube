@@ -93,20 +93,20 @@ Material:
     - _Width: 0.1
     - _ZWrite: 1
     - __dirty: 0
-    - _interval01: 0.033
-    - _interval02: 0.157
-    - _interval03: 0.291
-    - _interval04: 0.426
+    - _interval01: 0
+    - _interval02: 0.058
+    - _interval03: 0.112
+    - _interval04: 0.173
     - _interval05: 1
     - _interval3: 0.99
     - _intervalsub: 0
-    - _softe: 3.4
+    - _softe: 1.5
     - _softe1: 3.4
     - _softetrans: 2
-    - _widthvalue: 0.06
+    - _widthvalue: 0.025
     m_Colors:
-    - _Color: {r: 0.76862746, g: 0.11925069, b: 0.027450968, a: 1}
+    - _Color: {r: 0.15896086, g: 0.2015563, b: 0.49693304, a: 1}
     - _Color1: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.87058824}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _transport: {r: 1, g: 1, b: 1, a: 1}
+    - _transport: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_BuildTextureStacks: []
