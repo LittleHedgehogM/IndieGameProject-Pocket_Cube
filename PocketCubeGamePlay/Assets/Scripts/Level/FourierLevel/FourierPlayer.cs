@@ -19,13 +19,14 @@ public class FourierPlayer : MonoBehaviour
 
     //audio
     public AK.Wwise.Event jumpSFX;
+    [SerializeField] private ParticleSystem jumpPS;
 
 
 
     void Start()
     {
         gravity = Physics.gravity;
-        
+        jumpPS.Stop();
     }
 
 
@@ -37,18 +38,12 @@ public class FourierPlayer : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        // jump
-        if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y.ToString("f2") == "0.00")
-        {
-            jumpSFX.Post(gameObject);
-            myRigidbody.velocity = Vector3.up * jumpStrength;
-        }
+        // fall
+        
         if (myRigidbody.velocity.y < 0)
         {
-            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;
+            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;    
         }
-
-
 
         // move
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -79,40 +74,25 @@ public class FourierPlayer : MonoBehaviour
         //Physics.gravity = gravity;
     }
 
-
-    public static bool transitionLevel1 = true;
-    public static bool transitionLevel2 = true;
-    public static bool transitionLevel3 = true;
-
     
-    // Start is called before the first frame update
-
-    public void OnCollisionEnter(Collision col)
+    private void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.name == "立方体.024")
+        if (col.gameObject.CompareTag("Area"))
         {
-            
-            transitionLevel1 = false;
-        }
-        else if (col.gameObject.name == "立方体.025")
-        {
-            transitionLevel2 = false;
+            if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y.ToString("f1") == "0.0")
+            {
+                jumpPS.Play();
+                jumpSFX.Post(gameObject);
+
+                //jump
+                myRigidbody.velocity = Vector3.up * jumpStrength;
+            }
         }
     }
 
-    public void OnCollisionExit(Collision col)
-    {
-        if (col.gameObject.name == "立方体.024")
-        {
-            //print("out");
-
-            transitionLevel1 = true;
-        }
-        else if(col.gameObject.name == "立方体.025")
-        {
-            transitionLevel2 = true;
-        }
 
 
-    }
+
+
+
 }

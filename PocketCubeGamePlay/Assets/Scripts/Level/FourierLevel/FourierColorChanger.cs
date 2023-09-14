@@ -1,149 +1,206 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class FourierColorChanger : MonoBehaviour
 {
-    FourierPlayer player;
-    /*[SerializeField]
-    [Header("Level 1")]
-    public GameObject prefab1;
-    public Color[] myColors1;
-    private int currentColorIndex1 = 0;
-    private int targetColorIndex1 = 1;
-    private float targetPoint1;
-    public float lerpTime1 = 0.9f;
-    Material material1;*/
+    FourierLevelController _FLC;
 
-    //Level 1 defination
-    [System.Serializable]
-    public class Level1 
-    {
-        public GameObject prefab;
-        public Color[] myColors01;
-        public Color[] myColors02;
-        public int currentColorIndex = 0;
-        public int targetColorIndex = 1;
-        public float targetPoint;
-        public float lerpTime = 0.9f;
-        public Material material;
-        public Color goalColor;
-        public GameObject bridge;
-    }
-    public Level1 level1;
-    bool transitionLevel1;
-    bool isLevel1Pass = false;
+    public bool pushTransitions = false;
     
+    [SerializeField] private Color[] diffuseGradient01;
+    [SerializeField] private Color[] diffuseGradient02;
+    private int currentColorIndex = 0;
+    private int targetColorIndex = 1;
 
-    //Level 2 defination
-    [System.Serializable]
-    public class Level2
-    {
-        public GameObject prefab;
-        public Color[] myColors01;
-        public Color[] myColors02;
-        public int currentColorIndex = 0;
-        public int targetColorIndex = 1;
-        public float targetPoint;
-        public float lerpTime = 0.9f;
-        public Material material;
-        public Color goalColor;
-        public GameObject bridge;
-    }
-    public Level2 level2;
-    bool transitionLevel2;
-    bool isLevel2Pass = false;
-    bool pushTransitions = false;
+    [SerializeField] private Color[] offDiffuseGradient01;
+    [SerializeField] private Color[] offDiffuseGradient02;
+    private int currentColorIndexOff = 0;
+    private int targetColorIndexOff = 1;
+
+    public float lerpTime;
+    [SerializeField] private Color goalColor;
+    [SerializeField] bool isBridgeActive;
+
     
+    private float targetPoint;
+    private Material material;
+    public GameObject bridge;
 
+    private bool levelEnter = false;
+    private bool isLevelPass = false;
+    private int levelFirstEnter = 0;
+
+    /*[Header("Off: Color change on playerEnter | On: Color change on GameStart")]
+    [SerializeField]*/
+    public static int transitionOnStart;
+   
     void Awake()
     {
-        level1.material = level1.prefab.GetComponent<Renderer>().material;
-        level1.bridge.SetActive(false);
+        material = GetComponent<Renderer>().material;
+        
+        bridge.SetActive(false);   
+        
+        _FLC = GetComponentInParent<FourierLevelController>();
 
-        level2.material = level2.prefab.GetComponent<Renderer>().material;    
-        level2.bridge.SetActive(false);
+        lerpTime = _FLC.lerpTime;
+        
     }
 
     void Update()
     {
-        transitionLevel1 = FourierPlayer.transitionLevel1;
-        transitionLevel2 = FourierPlayer.transitionLevel2;
-
-        if (pushTransitions & transitionLevel1 & !isLevel1Pass)
+        switch (transitionOnStart)
         {
-            ColorTransitionLevel1();      
-        }     
+            case 0:
+                //不在平台内颜色才变化
+                if (pushTransitions & !levelEnter & !isLevelPass)
+                {
+                    //print("transition On");
+                    ColorTransitionLevel();
+                    //print(material.GetColor("_diffusegradient01"));
+                }
 
-        if (pushTransitions & transitionLevel2 & !isLevel2Pass)
-        {
-            ColorTransitionLevel2();
+                //颜色检测
+                if (levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
+                {
+                    isLevelPass = true;
+                    bridge.SetActive(true);
+                    print(this.gameObject.name + "pass");
+                }
+                break;
+
+            case 1:
+                //进入平台颜色才变化
+                if (pushTransitions & levelFirstEnter == 1 & !isLevelPass)
+                {
+                    //print("transition On");
+                    ColorTransitionLevel();
+                    //print(material.GetColor("_diffusegradient01"));
+                }
+
+                //颜色检测
+                if (!levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
+                {
+                    isLevelPass = true;
+                    bridge.SetActive(true);
+                    print(this.gameObject.name + "pass");
+                }
+                break;
+            case 2:
+                if(pushTransitions & !levelEnter & !isLevelPass)
+                {
+                    OffColorTransition();
+                }
+                else if (pushTransitions & levelEnter & !isLevelPass)
+                {
+                    //print("transition On");
+                    ColorTransitionLevel();
+                    //print(material.GetColor("_diffusegradient01"));
+                }
+
+                //颜色检测
+                if (!levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
+                {
+                    isLevelPass = true;
+                    bridge.SetActive(true);
+                    print(this.gameObject.name + "pass");
+                }
+                break;
         }
 
-
-        //颜色检测 level1
-        if (!transitionLevel1 & level1.material.GetColor("_diffusegradient01") == level1.goalColor)
-        {
-            isLevel1Pass = true;         
-            level1.bridge.SetActive(true);
-        }
+        
 
 
-        if (!transitionLevel2 & level2.material.GetColor("_diffusegradient01") == level2.goalColor)
-        {
-            isLevel2Pass = true;
-            level2.bridge.SetActive(true);
-        }
+
+        //Bridge controller
+        
     }
 
     //for wwise callback
-    void ColorTransitionLevel1()
-    {    
-            level1.targetPoint += Time.deltaTime / level1.lerpTime;
-            //level1.material.color = Color.Lerp(level1.myColors[level1.currentColorIndex], level1.myColors[level1.targetColorIndex], level1.targetPoint);
-            level1.material.SetColor("_diffusegradient01", Color.Lerp(level1.myColors01[level1.currentColorIndex], level1.myColors01[level1.targetColorIndex], level1.targetPoint));
-            level1.material.SetColor("_diffusegradient02", Color.Lerp(level1.myColors02[level1.currentColorIndex], level1.myColors02[level1.targetColorIndex], level1.targetPoint));
+    
 
-        if (level1.targetPoint >= 1f)
+    //Color Transitions
+    void ColorTransitionLevel()
+    {
+            
+        //print("Level Transition Start");
+            targetPoint += Time.deltaTime / lerpTime;
+            material.SetColor("_diffusegradient01", Color.Lerp(diffuseGradient01[currentColorIndex], diffuseGradient01[targetColorIndex], targetPoint));
+            material.SetColor("_diffusegradient02", Color.Lerp(diffuseGradient02[currentColorIndex], diffuseGradient02[targetColorIndex], targetPoint));
+
+        if (targetPoint >= 1f)
             {
-                level1.targetPoint = 0f;
-                level1.currentColorIndex = level1.targetColorIndex;
-                level1.targetColorIndex++;
-                if (level1.targetColorIndex == level1.myColors01.Length)
+            targetPoint = 0f;
+            currentColorIndex = targetColorIndex;
+            targetColorIndex++;
+            if (targetColorIndex == diffuseGradient01.Length)
                 {
-                    level1.targetColorIndex = 0;
+                    targetColorIndex = 0;                
                 }
                 pushTransitions = false;
-                //print(level1.currentColorIndex);
-            }                    
+                //print(currentColorIndex);
+            }
+        //print("Level1 Transition Stop" + currentColorIndex);
     }
 
-    void ColorTransitionLevel2()
-    {             
-            level2.targetPoint += Time.deltaTime / level2.lerpTime;
-            level2.material.SetColor("_diffusegradient01", Color.Lerp(level2.myColors01[level2.currentColorIndex], level2.myColors01[level2.targetColorIndex], level2.targetPoint));
-            level2.material.SetColor("_diffusegradient02", Color.Lerp(level2.myColors02[level2.currentColorIndex], level2.myColors02[level2.targetColorIndex], level2.targetPoint));
+    void OffColorTransition()//未激活时颜色变化
+    {
+        targetPoint += Time.deltaTime / lerpTime;
+        material.SetColor("_diffusegradient01", Color.Lerp(offDiffuseGradient01[currentColorIndexOff], offDiffuseGradient01[targetColorIndexOff], targetPoint));
+        material.SetColor("_diffusegradient02", Color.Lerp(offDiffuseGradient02[currentColorIndexOff], offDiffuseGradient02[targetColorIndexOff], targetPoint));
 
-        if (level2.targetPoint >= 1f)
+        if (targetPoint >= 1f)
+        {
+            targetPoint = 0f;
+            if(targetColorIndexOff == 1)
             {
-                level2.targetPoint = 0f;
-                level2.currentColorIndex = level2.targetColorIndex;
-                level2.targetColorIndex++;
-                if (level2.targetColorIndex == level2.myColors01.Length)
-                {
-                    level2.targetColorIndex = 0;
-                }
-                pushTransitions = false;
-                //print(level2.currentColorIndex);
-            }       
+                currentColorIndexOff = 1;
+                targetColorIndexOff = 0;
+            }
+            else if (targetColorIndexOff == 0)
+            {
+                currentColorIndexOff = 0;
+                targetColorIndexOff = 1;
+            }
+            pushTransitions = false;
+            //print(currentColorIndex);
+        }
     }
 
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            
+            levelEnter = true;
+            //print("Player Enter");
+            if ( levelFirstEnter == 0)
+            {
+                levelFirstEnter++;
+            }                 
+        }
+    }
+    private void OnCollisionExit(Collision col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            levelEnter = false;
+            //print("Player Exit");
+            if (levelFirstEnter == 0)
+            {
+                levelFirstEnter++;
+            }
+        }
+    }
 
     public void PushTransitions()
     {
         pushTransitions = true;
+
+        //print("transition On");
     }
 
-    
+
+
+
+
+
 }

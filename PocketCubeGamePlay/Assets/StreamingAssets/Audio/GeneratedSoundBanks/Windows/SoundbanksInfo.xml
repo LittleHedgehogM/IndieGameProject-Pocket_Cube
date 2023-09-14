@@ -26,7 +26,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{64953936-480E-8524-651A-4B50E908D72E}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{93655382-9E5B-4996-40E5-F7B168B28CE2}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -75,7 +75,7 @@
 						<MediaRef Id="656407472"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.4651191" DurationMax="0.5752789">
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.91511905" DurationMax="1.0252788">
 					<MediaRefs>
 						<MediaRef Id="228576140"/>
 						<MediaRef Id="371716904"/>
@@ -97,5 +97,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{171F8BAA-9D77-8F8A-7EC9-95B1FD78FCA2}</FileHash>
+	<FileHash>{E7C0B946-1318-07B3-A0FA-6AEFB2D16704}</FileHash>
 </SoundBanksInfo>
