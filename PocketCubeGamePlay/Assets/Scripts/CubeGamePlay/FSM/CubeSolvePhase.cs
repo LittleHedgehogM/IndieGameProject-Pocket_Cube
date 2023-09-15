@@ -16,18 +16,21 @@ public class CubeSolvedPhase : GameplayPhase
 
     CubeSolveState currentState;
     CubePlayCameraController myCameraController;
-
+    CubeVFXManager myVFXManager;
 
     [SerializeField] private AnimationCurve cubeTranslationCurve;
     [SerializeField][Range(0, 1)] private float cubeTranslationTime;
 
     [SerializeField][Range(0, 100)] private float rotateSpeed;
 
+
+
     bool translateBackFinish;
     public override void onStart()
     {
         cubeState = FindObjectOfType<CubeState>();
         myCameraController = FindObjectOfType<CubePlayCameraController>();
+        myVFXManager = FindObjectOfType<CubeVFXManager>();
         translateBackFinish = false;
     }
 
@@ -114,6 +117,7 @@ public class CubeSolvedPhase : GameplayPhase
     {
         if (currentState == CubeSolveState.PlayAnimation)
         {
+            
             translateBackFinish = false;
             StartCoroutine(playFinishAnimation());
             currentState = CubeSolveState.WaitForQuit;
@@ -125,6 +129,7 @@ public class CubeSolvedPhase : GameplayPhase
             {
                 GameObject pocketCube = CubePlayManager.instance.pocketCube;
                 pocketCube.transform.RotateAround(pocketCube.transform.position, Vector3.up, Time.deltaTime*rotateSpeed);
+                myVFXManager.PlayFinishVFX();
             }
             // wait for user input
 

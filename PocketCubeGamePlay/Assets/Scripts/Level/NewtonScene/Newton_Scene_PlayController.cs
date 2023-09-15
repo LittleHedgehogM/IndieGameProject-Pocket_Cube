@@ -8,6 +8,8 @@ public class NewtonScenePlayController : MonoBehaviour
     DetectDistance myDetectDistance;
     Scene_Newton_Camera_Controller myCameraController;
     Newton_Scene_PlayerMovement myPlayerMovement;
+    Newton_Scene_VFX_Controller myVFXController;
+
     [SerializeField] [Range(0, 3)] private float dist_threshold;
     [SerializeField] [Range(0, 3)] private float  leave_dist_threshold;
 
@@ -20,7 +22,7 @@ public class NewtonScenePlayController : MonoBehaviour
         InPutCoin,
         InTakeCoin,
         InScaleDraw,
-        InScalePositionAdjustment,
+        /*InScalePositionAdjustment,*/
         InCameraTranslation,
     }
     PlayStatus myPlayStatus;
@@ -51,15 +53,14 @@ public class NewtonScenePlayController : MonoBehaviour
     
     [SerializeField]
     GameObject Cube;
-
-    [SerializeField]
+    GameObject currentScale;
 
     void Start()
     {
-        myDetectDistance = FindObjectOfType<DetectDistance>();
-        myPlayerMovement = FindObjectOfType<Newton_Scene_PlayerMovement>();
-        myCameraController = FindAnyObjectByType<Scene_Newton_Camera_Controller>();
-
+        myDetectDistance    = FindObjectOfType<DetectDistance>();
+        myPlayerMovement    = FindObjectOfType<Newton_Scene_PlayerMovement>();
+        myCameraController  = FindObjectOfType<Scene_Newton_Camera_Controller>();
+        myVFXController     = FindObjectOfType<Newton_Scene_VFX_Controller>();
 
         Scale_Left.GetComponent<Scale>().insertCoin(coin1);
         Scale_Left.GetComponent<Scale>().insertCoin(coin2);
@@ -98,10 +99,6 @@ public class NewtonScenePlayController : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
 
         }
-        //else if (myPlayStatus == PlayStatus.InScalePositionAdjustment)
-        //{
-        //    myPlayStatus = PlayStatus.InDisplayEyeAndScale;
-        //}
     }
 
     public void onCameraResetFinish()
@@ -110,26 +107,17 @@ public class NewtonScenePlayController : MonoBehaviour
     }
 
 
-    GameObject currentScale;
 
     // Update is called once per frame
     void Update()
     {
         if (myPlayStatus == PlayStatus.InScaleDraw)
         {
-            //Cube.GetComponent<CubeController>().onUpdate();
-           
-            // if cube stops, then player can move
+            myVFXController.PlayCubeVFX();
             if (Cube.GetComponent<CubeController>().getIsFalling() == false)
             {
-                myPlayerMovement.OnUpdate();
-
-                // check distance between player and cube
-                // load scene
-                
-            }
-            
-
+                myPlayerMovement.OnUpdate();              
+            }   
         }
         else if (myPlayStatus == PlayStatus.Configuration)
         {
@@ -159,30 +147,26 @@ public class NewtonScenePlayController : MonoBehaviour
 
             if (Dist_L < dist_threshold)
             {
-                //if (Input.GetKeyDown(KeyCode.K))
-                //{
-                    myCameraController.showLeftEye();
-                    myPlayerMovement.setEnableMovement(false);
-                    myPlayerMovement.TranslateToLeftEye();
-                    myPlayStatus = PlayStatus.InCameraTranslation;
-                    currentScale = Scale_Left;
-                    Scale_Left.GetComponent<ScaleHighlighter>().HighlightScale();
-                    Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
-                //}
+               myCameraController.showLeftEye();
+               myPlayerMovement.setEnableMovement(false);
+               myPlayerMovement.TranslateToLeftEye();
+               myPlayStatus = PlayStatus.InCameraTranslation;
+               currentScale = Scale_Left;
+               Scale_Left.GetComponent<ScaleHighlighter>().HighlightScale();
+               Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
+               myVFXController.PlayDisplayEyeAndScaleVFX(currentScale.transform);
 
             }
             else if (Dist_R < dist_threshold)
             {
-                //if (Input.GetKeyDown(KeyCode.K))
-                //{
-                    myCameraController.showRightEye();
-                    myPlayerMovement.setEnableMovement(false);
-                    myPlayerMovement.TranslateToRightEye();
-                    myPlayStatus = PlayStatus.InCameraTranslation;
-                    currentScale = Scale_Right;
-                    Scale_Right.GetComponent<ScaleHighlighter>().HighlightScale();
-                    Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
-                //}
+                myCameraController.showRightEye();
+                myPlayerMovement.setEnableMovement(false);
+                myPlayerMovement.TranslateToRightEye();
+                myPlayStatus = PlayStatus.InCameraTranslation;
+                currentScale = Scale_Right;
+                Scale_Right.GetComponent<ScaleHighlighter>().HighlightScale();
+                Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
+                myVFXController.PlayDisplayEyeAndScaleVFX(currentScale.transform);
 
             }
             else
@@ -190,6 +174,7 @@ public class NewtonScenePlayController : MonoBehaviour
                 currentScale = null;
                 Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
                 Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
+                myVFXController.StopDisplayEyeAndScaleVFX();
             }
             
         }
@@ -215,15 +200,6 @@ public class NewtonScenePlayController : MonoBehaviour
                 myPlayerMovement.setEnableMovement(true);
                 myPlayStatus = PlayStatus.PlayerMovement;
             }
-
-            //    if (Input.GetKeyDown(KeyCode.K))
-            //{
-            //    myCameraController.resetCam();
-            //    myPlayerMovement.setEnableMovement(true);
-            //    myPlayStatus = PlayStatus.PlayerMovement;
-            //}
-            //else
-
 
             RaycastHit hit;
             Ray ray;
@@ -271,6 +247,7 @@ public class NewtonScenePlayController : MonoBehaviour
                 playerEquipCoin.Drop();
                 currentScale.GetComponent<AddNewCoin>().AddCoin(coin);
                 myPlayStatus = PlayStatus.InDisplayEyeAndScale;
+                myVFXController.PlayScalePutVFX(currentScale.transform);
                 StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
             }
 

@@ -10,12 +10,14 @@ public class CubeConfigurationPhase : GameplayPhase
     CubeConfigure myCubeConfigure;
     ReadCube readCube;
     CubeState myCubeState;
+    //CubeVFXManager myCubeVFXManager;
 
     [SerializeField] [Range(0, 1)] 
     float startAnimationTime;
     [SerializeField] private AnimationCurve translationCurve;
     float t;
     bool animationFinished = true;
+
 
     enum ConfigurationState
     {
@@ -31,10 +33,11 @@ public class CubeConfigurationPhase : GameplayPhase
         myCubeConfigure = FindObjectOfType<CubeConfigure>();
         myCubeState     = FindObjectOfType<CubeState>();
         readCube        = FindObjectOfType<ReadCube>();
-
+        //myCubeVFXManager = FindObjectOfType<CubeVFXManager>();
         ConfuigurePocketCube();
         currentState = ConfigurationState.Check;
         animationFinished = true;
+        
     }
 
     private void ConfigureOneCubePiece(CubeConfigure.PieceTransform pieceTransform)
