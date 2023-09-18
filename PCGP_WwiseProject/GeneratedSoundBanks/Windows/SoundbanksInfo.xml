@@ -26,6 +26,51 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{C0557C6A-EC4B-9B79-39BF-D64C78102887}">
+			<ShortName>Level3</ShortName>
+			<Path>Level3.bnk</Path>
+			<Media>
+				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 3 Demo.wav</ShortName>
+					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="394430027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_perfect.wav</ShortName>
+					<CachePath>SFX/L3_Hit_perfect_36790093.wem</CachePath>
+				</File>
+				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_bad.wav</ShortName>
+					<CachePath>SFX/L3_Hit_bad_91EB4F52.wem</CachePath>
+				</File>
+				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_destroy.wav</ShortName>
+					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
+					<MediaRefs>
+						<MediaRef Id="743988009"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4190464387" Name="Play_L3_Hit_bad" DurationType="OneShot" DurationMin="0.25094482" DurationMax="0.25094482">
+					<MediaRefs>
+						<MediaRef Id="656407472"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.7270537" DurationMax="0.7270537">
+					<MediaRefs>
+						<MediaRef Id="394430027"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2857213584" Name="Play_Level_3_Demo" DurationType="OneShot" DurationMin="43.308277" DurationMax="43.308277">
+					<MediaRefs>
+						<MediaRef Id="217342985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3146280458" Name="Stop_Level_3_Demo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{CB9FA284-7290-4AB5-B4B3-8842040359B5}">
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
@@ -65,5 +110,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AB2BFB5C-B0F1-EEFD-B732-2E812D20DFC3}</FileHash>
+	<FileHash>{9DB75626-E237-4DE6-BDB0-05127D790B8B}</FileHash>
 </SoundBanksInfo>

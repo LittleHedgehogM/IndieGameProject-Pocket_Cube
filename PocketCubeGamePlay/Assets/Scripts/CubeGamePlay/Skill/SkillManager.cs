@@ -28,7 +28,7 @@ public abstract class SkillManager : MonoBehaviour
     protected CubeState cubeState;
     protected CubePlayCameraController myCameraController;
     RotateWholeCubeManager myRotateWholeCubeManager;
-
+    CubeVFXManager myCubeVFXManager;
 
     protected Vector3 startPos;
     protected Vector3 endPos;
@@ -40,6 +40,7 @@ public abstract class SkillManager : MonoBehaviour
         cubeState = FindObjectOfType<CubeState>();
         myCameraController = FindObjectOfType<CubePlayCameraController>();
         myRotateWholeCubeManager = FindObjectOfType<RotateWholeCubeManager>();
+        myCubeVFXManager = FindObjectOfType<CubeVFXManager>();
         ResetValues();
     }
 
@@ -83,6 +84,8 @@ public abstract class SkillManager : MonoBehaviour
                 {
                     FirstFaceHit = faceHit;               
                     FirstCubeHit = SelectFace.getFaceRelatedCube(faceHit);
+
+                    CubePieceOutlineController.enableOutline(FirstCubeHit);
                     commomFaceNormalAxis = FindFaceNormal(FirstFaceHit);
                     
                     if (commomFaceNormalAxis == transform.right)
@@ -109,6 +112,8 @@ public abstract class SkillManager : MonoBehaviour
                     {
                         myCameraController.SetTargetCameraToFront();
                     }
+
+                    // highlight
                     currentState = SkillState.TranslateCamera;
                 }
 
@@ -140,7 +145,10 @@ public abstract class SkillManager : MonoBehaviour
                         startPos     = FirstCubeHit.transform.position;
                         endPos       = SecondCubeHit.transform.position;
                         startScale   = FirstCubeHit.transform.localScale;
+                        CubePieceOutlineController.enableOutline(SecondCubeHit);
+
                         StartCoroutine(startAnimation());
+
                     }
 
                 }
@@ -155,17 +163,27 @@ public abstract class SkillManager : MonoBehaviour
                 myCameraController.InitTargetRotationBack();
                 currentState = SkillState.TranslateCameraBack;
             }
+            
 
         }
         else if (currentState == SkillState.TranslateCameraBack)
         {
+            myCubeVFXManager.PlaySkillVFX();
             StartCoroutine(myCameraController.CameraTranslateBack());
             currentState = SkillState.SkillFinish;
+           
+
         }
         else if (currentState == SkillState.SkillFinish)
         {
+            
+
             currentState = SkillState.WaitForInput;
+            CubePieceOutlineController.disableOutline(FirstCubeHit);
+            CubePieceOutlineController.disableOutline(SecondCubeHit);
+
             InvokeFinish();
+            myCubeVFXManager.StopSkillVFX();
 
         }
     }

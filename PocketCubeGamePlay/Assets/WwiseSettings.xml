@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
+  <CopySoundBanksAsPreBuildStep>false</CopySoundBanksAsPreBuildStep>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>false</CreateWwiseGlobal>
   <CreateWwiseListener>false</CreateWwiseListener>
-  <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
+  <ObjectReferenceAutoCleanup>false</ObjectReferenceAutoCleanup>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
+  <ShowSpatialAudioWarningMsg>false</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>G:\Wwise2022.1.6.8263</WwiseInstallationPathWindows>
   <WwiseProjectPath>../../PCGP_WwiseProject/PCGP_WwiseProject.wproj</WwiseProjectPath>

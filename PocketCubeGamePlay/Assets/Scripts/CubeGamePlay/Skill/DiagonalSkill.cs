@@ -18,7 +18,6 @@ public class DiagonalSkill : SkillManager
 
     public static event Action onDiagonalFinished;
 
-
     private bool isDiagonalCube(GameObject firstCube, GameObject secondCube)
     {
         return Mathf.Abs(Vector3.Distance(firstCube.transform.position, secondCube.transform.position) - Mathf.Sqrt(2)) < 0.1f;
@@ -35,6 +34,8 @@ public class DiagonalSkill : SkillManager
     {
 
         StartCoroutine(startAnimation());
+        
+
         yield return null;
         //return true;
     }

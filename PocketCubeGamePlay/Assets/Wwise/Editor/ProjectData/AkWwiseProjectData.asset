@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585099294316879047
+    m_lastTime: -8585098701835751064
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585088871709854884
+    m_lastTime: -8585070859272955756
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -83,11 +83,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585088871708691483
+    m_lastTime: -8585070859270903112
     List:
-    - name: Test
-      guid: ccbb4ce0239dd147b16a781a268e6f74
-      id: 3157003241
+    - name: Level3
+      guid: ecd24e984ef002488a40cb438e0fc655
+      id: 2678230380
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -95,10 +95,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 229d856017c3f84a992874c52206f964
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 7
-        guid: ccbb4ce0239dd147b16a781a268e6f74
-      Path: SoundBanks\Default Work Unit\Test
+        guid: ecd24e984ef002488a40cb438e0fc655
+      Path: SoundBanks\Default Work Unit\Level3
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -111,154 +111,120 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585099294326810765
+    m_lastTime: -8585098701846753394
     List: []
-  - PhysicalPath: Events\Test.wwu
+  - PhysicalPath: Events\Level3.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Test
+    - ElementName: Level3
       ObjectType: 12
-      guid: 860ab761897a164ca12423723de18fda
-    ParentPath: Events\Test
-    guid: 860ab761897a164ca12423723de18fda
+      guid: 2c511cbffc8fd94cb802f2451468e7f2
+    ParentPath: Events\Level3
+    guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585088871716824138
+    m_lastTime: -8585069072107130204
     List:
-    - name: OffEffect0
-      guid: c52aeeb9688de9488837966c1e36bcf5
-      id: 1756624261
+    - name: Hit_Record
+      guid: f8630d3a8f475143a5f76be40e846b59
+      id: 1152672460
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect0
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Hit_Record
         ObjectType: 3
-        guid: c52aeeb9688de9488837966c1e36bcf5
-      Path: Events\Test\OffEffect0
+        guid: f8630d3a8f475143a5f76be40e846b59
+      Path: Events\Level3\Hit_Record
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: OffEffect1
-      guid: 09af7ecfbcb62945a64ae21ef59b7ced
-      id: 1756624260
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_L3_destroy
+      guid: 085d2259b84538469661c08e62168cbc
+      id: 507378310
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect1
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_L3_destroy
         ObjectType: 3
-        guid: 09af7ecfbcb62945a64ae21ef59b7ced
-      Path: Events\Test\OffEffect1
+        guid: 085d2259b84538469661c08e62168cbc
+      Path: Events\Level3\Play_L3_destroy
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: OffEffect2
-      guid: 7c8940df06c52640b86e4253d257de97
-      id: 1756624263
+      maxDuration: 0.4511338
+      minDuration: 0.4511338
+    - name: Play_L3_Hit_bad
+      guid: 9f4b4a639669724e851289d9ddcf1852
+      id: 4190464387
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OffEffect2
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_L3_Hit_bad
         ObjectType: 3
-        guid: 7c8940df06c52640b86e4253d257de97
-      Path: Events\Test\OffEffect2
+        guid: 9f4b4a639669724e851289d9ddcf1852
+      Path: Events\Level3\Play_L3_Hit_bad
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: OnEffect0
-      guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
-      id: 97571255
+      maxDuration: 0.25094482
+      minDuration: 0.25094482
+    - name: Play_L3_Jump
+      guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
+      id: 1593461692
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect0
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_L3_Jump
         ObjectType: 3
-        guid: e06d0dcbb75adc4d8ac07d2014d3e6ed
-      Path: Events\Test\OnEffect0
+        guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
+      Path: Events\Level3\Play_L3_Jump
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: OnEffect1
-      guid: d33882a60dfc7742acd023598a6445dc
-      id: 97571254
+      maxDuration: 1.0252788
+      minDuration: 0.91511905
+    - name: Play_Level3_Music
+      guid: 01516b3516bfc04b918e6831e702c30b
+      id: 2158818887
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect1
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_Level3_Music
         ObjectType: 3
-        guid: d33882a60dfc7742acd023598a6445dc
-      Path: Events\Test\OnEffect1
+        guid: 01516b3516bfc04b918e6831e702c30b
+      Path: Events\Level3\Play_Level3_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: OnEffect2
-      guid: c03392cc135c3c4888913688acde0b4a
-      id: 97571253
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Level3_Music
+      guid: 3d5f0a78cdc2aa42bbe6432443c63145
+      id: 3042334185
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Test
+      - ElementName: Level3
         ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: OnEffect2
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Stop_Level3_Music
         ObjectType: 3
-        guid: c03392cc135c3c4888913688acde0b4a
-      Path: Events\Test\OnEffect2
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Ella_Fitzgerald___Cry_Me_a_River
-      guid: d2f73a1d76383b4fa18c853b8e512e77
-      id: 1058947180
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: Play_Ella_Fitzgerald___Cry_Me_a_River
-        ObjectType: 3
-        guid: d2f73a1d76383b4fa18c853b8e512e77
-      Path: Events\Test\Play_Ella_Fitzgerald___Cry_Me_a_River
-      maxAttenuation: 15
-      maxDuration: 257
-      minDuration: 257
-    - name: Stop_Ella_Fitzgerald___Cry_Me_a_River
-      guid: 83ee8004cccba44188b69b4519ecd8eb
-      id: 1644353714
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Test
-        ObjectType: 12
-        guid: 860ab761897a164ca12423723de18fda
-      - ElementName: Stop_Ella_Fitzgerald___Cry_Me_a_River
-        ObjectType: 3
-        guid: 83ee8004cccba44188b69b4519ecd8eb
-      Path: Events\Test\Stop_Ella_Fitzgerald___Cry_Me_a_River
+        guid: 3d5f0a78cdc2aa42bbe6432443c63145
+      Path: Events\Level3\Stop_Level3_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -274,7 +240,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585088871716804204
+    m_lastTime: -8585083974441736552
     List:
     - name: New_Game_Parameter
       guid: 55362c88a4b4f7408a04ed774d899757
@@ -302,7 +268,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585098701835761063
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -316,7 +282,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585098701835761063
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -330,7 +296,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585098701835751064
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
