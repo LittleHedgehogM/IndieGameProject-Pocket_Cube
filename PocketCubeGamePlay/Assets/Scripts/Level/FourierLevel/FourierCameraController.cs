@@ -7,6 +7,11 @@ public class FourierCameraController : MonoBehaviour
     [SerializeField] private Camera mainCam;
     [SerializeField][Range(4, 6)] private float cameraMoveRange;
     [SerializeField] private float Camera_Sensitivity;
+    [SerializeField] private float Axis_X_Scaler;
+    [SerializeField] private float Axis_Y_Scaler;
+
+
+
     [SerializeField] Vector3 CameraLookAtTarget;
 
     Vector3 MainCamInitPosition;
@@ -24,6 +29,8 @@ public class FourierCameraController : MonoBehaviour
         float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
         if (dist < cameraMoveRange)
         {
+            playerMovementVector.y *= Axis_Y_Scaler;
+            playerMovementVector.x *= Axis_X_Scaler;
             mainCam.transform.position += Camera_Sensitivity * playerMovementVector;
             mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         }

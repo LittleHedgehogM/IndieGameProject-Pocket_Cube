@@ -16,6 +16,7 @@ public class FourierPlayer : MonoBehaviour
     public bool useGravity;
     public Vector3 gravity;
     Vector3 currentmoveDirection = Vector3.zero;
+    Vector3 playerPrevPosition = Vector3.zero;
 
     //audio
     public AK.Wwise.Event jumpSFX;
@@ -27,7 +28,7 @@ public class FourierPlayer : MonoBehaviour
     {
         gravity = Physics.gravity;
         jumpPS.Stop();
-
+        playerPrevPosition = transform.position;
 
     }
 
@@ -50,6 +51,8 @@ public class FourierPlayer : MonoBehaviour
         if (myRigidbody.velocity.y < 0)
         {
             myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;    
+
+
         }
 
         // move
@@ -58,11 +61,14 @@ public class FourierPlayer : MonoBehaviour
 
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
-
-        currentmoveDirection = movementDirection;
+        movementDirection.Normalize(); 
 
         transform.Translate(movementDirection * playerMoveSpeed * Time.deltaTime, Space.World);
+        
+        
+        currentmoveDirection = (transform.position - playerPrevPosition).normalized;
+        playerPrevPosition = transform.position;
+
 
         if (movementDirection != Vector3.zero)
         {

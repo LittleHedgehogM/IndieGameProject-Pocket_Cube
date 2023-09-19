@@ -2294,6 +2294,8 @@ MonoBehaviour:
   mainCam: {fileID: 269800691}
   cameraMoveRange: 6
   Camera_Sensitivity: 0.005
+  Axis_X_Scaler: 0.5
+  Axis_Y_Scaler: 10
   CameraLookAtTarget: {x: 0, y: 4.5, z: 0}
 --- !u!4 &1134946623
 Transform:
