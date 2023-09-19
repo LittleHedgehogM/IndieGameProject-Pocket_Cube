@@ -65,6 +65,31 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
+				<Event Name="Stop_MerryGoRoundMusic" ID="{AE443683-34B9-4B23-87A4-25513F4490B4}">
+					<ChildrenList>
+						<Action Name="" ID="{58474DEA-1504-44CF-BE16-484EE4744613}" ShortID="564073846">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MerryGoRoundMusic" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MerryGoRoundMusic" ID="{161700F5-9C6D-4DAD-B2DA-B04087257F9F}">
+					<ChildrenList>
+						<Action Name="" ID="{64B74B5A-49A9-43B3-8717-D55F6D185161}" ShortID="736879683">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MerryGoRound" ID="{EF353701-B6E7-4C2B-BA95-87F4B764B1EC}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

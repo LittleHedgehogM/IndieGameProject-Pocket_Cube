@@ -17,7 +17,9 @@ namespace AK
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
         static const AkUniqueID PLAY_LEVEL3_MUSIC = 2158818887U;
+        static const AkUniqueID PLAY_MERRYGOROUNDMUSIC = 3155709310U;
         static const AkUniqueID STOP_LEVEL3_MUSIC = 3042334185U;
+        static const AkUniqueID STOP_MERRYGOROUNDMUSIC = 3379697116U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

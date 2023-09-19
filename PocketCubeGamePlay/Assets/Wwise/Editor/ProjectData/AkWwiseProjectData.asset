@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585099294316879047
+    m_lastTime: -8585072558642730171
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585065913122338853
+    m_lastTime: -8585065205533205278
     List:
     - name: Level3
       guid: ecd24e984ef002488a40cb438e0fc655
@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585099294326810765
+    m_lastTime: -8585065238305381149
     List: []
   - PhysicalPath: Events\Level3.wwu
     PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585065913128633700
+    m_lastTime: -8585065195375029316
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -192,8 +192,8 @@ MonoBehaviour:
         guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
       Path: Events\Level3\Play_L3_Jump
       maxAttenuation: 0
-      maxDuration: 1.0252788
-      minDuration: 0.91511905
+      maxDuration: 1.3252789
+      minDuration: 1.2151191
     - name: Play_Level3_Music
       guid: 01516b3516bfc04b918e6831e702c30b
       id: 2158818887
@@ -208,6 +208,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 01516b3516bfc04b918e6831e702c30b
       Path: Events\Level3\Play_Level3_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_MerryGoRoundMusic
+      guid: f50017166d9cad4db2dab04087257f9f
+      id: 3155709310
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_MerryGoRoundMusic
+        ObjectType: 3
+        guid: f50017166d9cad4db2dab04087257f9f
+      Path: Events\Level3\Play_MerryGoRoundMusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -228,6 +245,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_MerryGoRoundMusic
+      guid: 833644aeb934234b87a425513f4490b4
+      id: 3379697116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Stop_MerryGoRoundMusic
+        ObjectType: 3
+        guid: 833644aeb934234b87a425513f4490b4
+      Path: Events\Level3\Stop_MerryGoRoundMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -240,7 +274,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585088871716804204
+    m_lastTime: -8585072558642630299
     List:
     - name: New_Game_Parameter
       guid: 55362c88a4b4f7408a04ed774d899757
@@ -268,7 +302,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585072558642899857
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -282,7 +316,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585072558643058409
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -296,10 +330,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585099294316889106
+    m_lastTime: -8585072558642650188
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

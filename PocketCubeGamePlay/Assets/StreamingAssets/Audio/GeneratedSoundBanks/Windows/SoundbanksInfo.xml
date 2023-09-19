@@ -26,7 +26,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{93655382-9E5B-4996-40E5-F7B168B28CE2}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B6692334-1DD5-15AA-D21F-F042F093B060}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -54,6 +54,10 @@
 					<ShortName>L3_Hit_bad.wav</ShortName>
 					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
 				</File>
+				<File Id="701432904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>How to make an Amazing Merry Go Round from Cardboard - Just5mins-1.wav</ShortName>
+					<CachePath>SFX/How to make an Amazing Merry Go Round from Cardboard - Just5mins-1_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
@@ -75,7 +79,7 @@
 						<MediaRef Id="656407472"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.91511905" DurationMax="1.0252788">
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="1.2151191" DurationMax="1.3252789">
 					<MediaRefs>
 						<MediaRef Id="228576140"/>
 						<MediaRef Id="371716904"/>
@@ -93,9 +97,15 @@
 						<MediaRef Id="217342985"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3155709310" Name="Play_MerryGoRoundMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="701432904"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E7C0B946-1318-07B3-A0FA-6AEFB2D16704}</FileHash>
+	<FileHash>{A3003F23-F7AC-6C07-7E19-9B55CBD5B12C}</FileHash>
 </SoundBanksInfo>

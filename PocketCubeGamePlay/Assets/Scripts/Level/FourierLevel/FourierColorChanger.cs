@@ -1,20 +1,16 @@
 using UnityEngine;
 
 public class FourierColorChanger : MonoBehaviour
-{
-    FourierLevelController _FLC;
-
-    public bool pushTransitions = false;
-    
+{ 
     [SerializeField] private Color[] diffuseGradient01;
     [SerializeField] private Color[] diffuseGradient02;
     private int currentColorIndex = 0;
     private int targetColorIndex = 1;
 
-    [SerializeField] private Color[] offDiffuseGradient01;
+    /*[SerializeField] private Color[] offDiffuseGradient01;
     [SerializeField] private Color[] offDiffuseGradient02;
     private int currentColorIndexOff = 0;
-    private int targetColorIndexOff = 1;
+    private int targetColorIndexOff = 1;*/
 
     public float lerpTime;
     [SerializeField] private Color goalColor;
@@ -28,30 +24,35 @@ public class FourierColorChanger : MonoBehaviour
     private bool levelEnter = false;
     private bool isLevelPass = false;
     private int levelFirstEnter = 0;
+    private bool pushTransitions = false;
 
     /*[Header("Off: Color change on playerEnter | On: Color change on GameStart")]
     [SerializeField]*/
-    public static int transitionOnStart;
-   
+    //public int transitionOnStart;
+
     void Awake()
     {
         material = GetComponent<Renderer>().material;
         
         bridge.SetActive(false);   
         
-        _FLC = GetComponentInParent<FourierLevelController>();
-
-        lerpTime = _FLC.lerpTime;
+        
+        
+        
+    }
+    private void Start()
+    {
         
     }
 
     void Update()
     {
-        switch (transitionOnStart)
+
+        /*switch (transitionOnStart)
         {
             case 0:
                 //不在平台内颜色才变化
-                if (pushTransitions & !levelEnter & !isLevelPass)
+                if (GetBeats.pushTransitions & !levelEnter & !isLevelPass)
                 {
                     //print("transition On");
                     ColorTransitionLevel();
@@ -69,7 +70,7 @@ public class FourierColorChanger : MonoBehaviour
 
             case 1:
                 //进入平台颜色才变化
-                if (pushTransitions & levelFirstEnter == 1 & !isLevelPass)
+                if (GetBeats.pushTransitions & levelFirstEnter == 1 & !isLevelPass)
                 {
                     //print("transition On");
                     ColorTransitionLevel();
@@ -85,11 +86,11 @@ public class FourierColorChanger : MonoBehaviour
                 }
                 break;
             case 2:
-                if(pushTransitions & !levelEnter & !isLevelPass)
+                if(GetBeats.pushTransitions & !levelEnter & !isLevelPass)
                 {
                     OffColorTransition();
                 }
-                else if (pushTransitions & levelEnter & !isLevelPass)
+                else if (GetBeats.pushTransitions & levelEnter & !isLevelPass)
                 {
                     //print("transition On");
                     ColorTransitionLevel();
@@ -104,44 +105,63 @@ public class FourierColorChanger : MonoBehaviour
                     print(this.gameObject.name + "pass");
                 }
                 break;
+        }*/
+
+        if (pushTransitions & !levelEnter & !isLevelPass)
+        {
+            //print("transition On");
+            ColorTransitionLevel();
+            //print(material.GetColor("_diffusegradient01"));
         }
 
-        
+        //颜色检测
+        if (levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
+        {
+            isLevelPass = true;
+            bridge.SetActive(true);
+            //print(this.gameObject.name + "pass");
+        }
 
 
 
         //Bridge controller
-        
+
     }
 
     //for wwise callback
     
 
     //Color Transitions
-    void ColorTransitionLevel()
-    {
-            
-        //print("Level Transition Start");
-            targetPoint += Time.deltaTime / lerpTime;
-            material.SetColor("_diffusegradient01", Color.Lerp(diffuseGradient01[currentColorIndex], diffuseGradient01[targetColorIndex], targetPoint));
-            material.SetColor("_diffusegradient02", Color.Lerp(diffuseGradient02[currentColorIndex], diffuseGradient02[targetColorIndex], targetPoint));
-
+    public void ColorTransitionLevel()
+    {          
+        //
+        targetPoint += Time.deltaTime / lerpTime;
+        material.SetColor("_diffusegradient01", Color.Lerp(diffuseGradient01[currentColorIndex], diffuseGradient01[targetColorIndex], targetPoint));
+        material.SetColor("_diffusegradient02", Color.Lerp(diffuseGradient02[currentColorIndex], diffuseGradient02[targetColorIndex], targetPoint));
         if (targetPoint >= 1f)
-            {
+        {
+            //print(targetPoint);
             targetPoint = 0f;
             currentColorIndex = targetColorIndex;
-            targetColorIndex++;
+            //print(currentColorIndex);
+
+            targetColorIndex ++;
+            //(targetColorIndex);
+
             if (targetColorIndex == diffuseGradient01.Length)
-                {
-                    targetColorIndex = 0;                
-                }
-                pushTransitions = false;
-                //print(currentColorIndex);
+            {
+                targetColorIndex = 0;
+                //print("re");
             }
+
+            pushTransitions = false;
+            //print("Transition over");
+        }
+            
         //print("Level1 Transition Stop" + currentColorIndex);
     }
 
-    void OffColorTransition()//未激活时颜色变化
+    /*void OffColorTransition()//未激活时颜色变化
     {
         targetPoint += Time.deltaTime / lerpTime;
         material.SetColor("_diffusegradient01", Color.Lerp(offDiffuseGradient01[currentColorIndexOff], offDiffuseGradient01[targetColorIndexOff], targetPoint));
@@ -160,10 +180,10 @@ public class FourierColorChanger : MonoBehaviour
                 currentColorIndexOff = 0;
                 targetColorIndexOff = 1;
             }
-            pushTransitions = false;
+            GetBeats.pushTransitions = false;
             //print(currentColorIndex);
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision col)
     {
@@ -183,7 +203,7 @@ public class FourierColorChanger : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             levelEnter = false;
-            //print("Player Exit");
+            print("Player Exit");
             if (levelFirstEnter == 0)
             {
                 levelFirstEnter++;
