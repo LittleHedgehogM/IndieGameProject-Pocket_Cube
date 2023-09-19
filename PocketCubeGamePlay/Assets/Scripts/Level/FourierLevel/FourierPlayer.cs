@@ -15,7 +15,7 @@ public class FourierPlayer : MonoBehaviour
 
     public bool useGravity;
     public Vector3 gravity;
-    //Vector3 currentmoveDirection = Vector3.zero;
+    Vector3 currentmoveDirection = Vector3.zero;
 
     //audio
     public AK.Wwise.Event jumpSFX;
@@ -27,6 +27,13 @@ public class FourierPlayer : MonoBehaviour
     {
         gravity = Physics.gravity;
         jumpPS.Stop();
+
+
+    }
+
+    public Vector3 getMovementDirection()
+    {
+        return currentmoveDirection;
     }
 
 
@@ -53,7 +60,7 @@ public class FourierPlayer : MonoBehaviour
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         movementDirection.Normalize();
 
-        
+        currentmoveDirection = movementDirection;
 
         transform.Translate(movementDirection * playerMoveSpeed * Time.deltaTime, Space.World);
 
@@ -62,6 +69,7 @@ public class FourierPlayer : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
     }
 
     private void FixedUpdate()

@@ -550,7 +550,6 @@ GameObject:
   m_Component:
   - component: {fileID: 269800692}
   - component: {fileID: 269800691}
-  - component: {fileID: 269800693}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -624,23 +623,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 22, y: 0, z: 0}
---- !u!114 &269800693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269800689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6c9c4996999974da3c32e89137e7da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 269800691}
-  Camera_Sensitivity: 0
-  CameraLookAtTarget: {x: 0, y: 0, z: 0}
-  translationTime: 0
-  cameraMoveRange: 0
 --- !u!1 &296990761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,6 +2262,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428512472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1134946621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1134946623}
+  - component: {fileID: 1134946622}
+  m_Layer: 0
+  m_Name: CameraController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1134946622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134946621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ae1cf74691e547b5aba6c4d440d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 269800691}
+  cameraMoveRange: 6
+  Camera_Sensitivity: 0.005
+  CameraLookAtTarget: {x: 0, y: 4.5, z: 0}
+--- !u!4 &1134946623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134946621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2239011, y: 6.85, z: -0.09838262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1228788222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3229,6 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1625701126}
+  - component: {fileID: 1625701127}
   m_Layer: 0
   m_Name: GameplayController
   m_TagString: Untagged
@@ -3251,6 +3282,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625701127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625701124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a044064af117ba49b7f12c3089fb6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels: []
 --- !u!1 &1636539477
 GameObject:
   m_ObjectHideFlags: 0
@@ -12728,3 +12772,4 @@ SceneRoots:
   - {fileID: 8218352541829601881}
   - {fileID: 6550300037428850721}
   - {fileID: 1281584979}
+  - {fileID: 1134946623}

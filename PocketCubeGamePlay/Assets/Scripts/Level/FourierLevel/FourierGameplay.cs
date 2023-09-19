@@ -6,14 +6,15 @@ public class FourierGameplay : MonoBehaviour
 {
     FourierScriptableObject levelData;
     public List<GameObject> levels;
-
-    
+    FourierCameraController cameraController;
+    FourierPlayer player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        cameraController = FindObjectOfType<FourierCameraController>();
+        player           = FindObjectOfType<FourierPlayer>();
+
     }
 
     // Update is called once per frame
@@ -24,6 +25,9 @@ public class FourierGameplay : MonoBehaviour
 
             
         }
+
+        cameraController.onUpdateCameraWithPlayerMovement(player.getMovementDirection());
+
     }
 
     public void ColorChanger()
