@@ -34,6 +34,8 @@ public class CubeController : MonoBehaviour
 
     }
 
+    
+
     public bool getIsFalling()
     {
         return isFalling;

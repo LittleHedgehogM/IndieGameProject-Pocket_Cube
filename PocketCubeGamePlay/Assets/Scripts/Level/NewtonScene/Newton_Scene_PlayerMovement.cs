@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Newton_Scene_PlayerMovement : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
     [SerializeField] private Transform EyeLeft;
     [SerializeField] private Transform EyeRight;
     [SerializeField] float translationTime;
+
+    public static event Action PlayerCollideWithCube;
+
 
     Vector3 currentmoveDirection;
 
@@ -72,6 +77,14 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
         return currentmoveDirection;
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Cube") == true)
+        {
+            PlayerCollideWithCube?.Invoke();
+        }
+    }
+    
     // Update is called once per frame
     public void OnUpdate()
     {

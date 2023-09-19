@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,12 @@ public class NewtonScenePlayController : MonoBehaviour
     Scene_Newton_Camera_Controller myCameraController;
     Newton_Scene_PlayerMovement myPlayerMovement;
     Newton_Scene_VFX_Controller myVFXController;
+    LevelLoaderScript myLevelLoader;
+
 
     [SerializeField] [Range(0, 3)] private float dist_threshold;
     [SerializeField] [Range(0, 3)] private float  leave_dist_threshold;
-
+    
 
     enum PlayStatus
     {
@@ -61,6 +64,7 @@ public class NewtonScenePlayController : MonoBehaviour
         myPlayerMovement    = FindObjectOfType<Newton_Scene_PlayerMovement>();
         myCameraController  = FindObjectOfType<Scene_Newton_Camera_Controller>();
         myVFXController     = FindObjectOfType<Newton_Scene_VFX_Controller>();
+        myLevelLoader       = FindObjectOfType<LevelLoaderScript>();
 
         Scale_Left.GetComponent<Scale>().insertCoin(coin1);
         Scale_Left.GetComponent<Scale>().insertCoin(coin2);
@@ -82,13 +86,24 @@ public class NewtonScenePlayController : MonoBehaviour
     {
         Scene_Newton_Camera_Controller.zoomInFinish += onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  += onCameraResetFinish;
+        Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
+        
     }
 
     private void OnDisable()
     {
         Scene_Newton_Camera_Controller.zoomInFinish -= onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  -= onCameraResetFinish;
+        Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
 
+    }
+
+    void LoadNextLevel()
+    {
+        if (myPlayStatus == PlayStatus.InScaleDraw)
+        {
+            myLevelLoader.LoadNextLevel();
+        }
     }
 
     public void onCameraTranslationFinish()
@@ -107,6 +122,12 @@ public class NewtonScenePlayController : MonoBehaviour
     }
 
 
+    IEnumerator DelayForSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        myPlayStatus = PlayStatus.PlayerMovement;
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -116,12 +137,14 @@ public class NewtonScenePlayController : MonoBehaviour
             myVFXController.PlayCubeVFX();
             if (Cube.GetComponent<CubeController>().getIsFalling() == false)
             {
-                myPlayerMovement.OnUpdate();              
+                myPlayerMovement.OnUpdate();
+                
+                
             }   
         }
         else if (myPlayStatus == PlayStatus.Configuration)
         {
-            myPlayStatus = PlayStatus.PlayerMovement;
+            StartCoroutine(DelayForSeconds(1));
         }
 
         else if (myPlayStatus == PlayStatus.PlayerMovement)
@@ -138,7 +161,6 @@ public class NewtonScenePlayController : MonoBehaviour
                 return;
             }
 
-            // player Movement and camera movement Update
             myPlayerMovement.OnUpdate();
             myCameraController.onUpdateCameraWithPlayerMovement(myPlayerMovement.getMovementDirection());
 
@@ -304,5 +326,6 @@ public class NewtonScenePlayController : MonoBehaviour
             }
         }
     }
+
 
 }

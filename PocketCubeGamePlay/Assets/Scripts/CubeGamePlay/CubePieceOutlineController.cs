@@ -7,19 +7,19 @@ public class CubePieceOutlineController : MonoBehaviour
 
     public static void enableOutline(GameObject cubePiece)
     {
-        Outline cubeOutLine = cubePiece.GetComponentInChildren<Outline>();
+        CubeOutline cubeOutLine = cubePiece.GetComponentInChildren<CubeOutline>();
         if (cubeOutLine != null)
         {
-            cubeOutLine.enabled = true;
+            cubeOutLine.DrawOutLine();  
         }
     }
 
     public static void disableOutline(GameObject cubePiece)
     {
-        Outline cubeOutLine = cubePiece.GetComponentInChildren<Outline>();
+        CubeOutline cubeOutLine = cubePiece.GetComponentInChildren<CubeOutline>();
         if (cubeOutLine != null)
         {
-            cubeOutLine.enabled = false;
+            cubeOutLine.UndrawOutline();
         }
     }
 
