@@ -73,11 +73,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
@@ -171,8 +171,8 @@ Material:
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
     - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
     - _ReflectOff01: {r: 0.35570186, g: 0.4334, b: 0.5188679, a: 1}
-    - _diffusegradient01: {r: 1, g: 1, b: 1, a: 1}
-    - _diffusegradient02: {r: 0.3679245, g: 0.20016016, b: 0.3679245, a: 1}
+    - _diffusegradient01: {r: 0.49827933, g: 0.5796568, b: 0.7169812, a: 1}
+    - _diffusegradient02: {r: 0.27058825, g: 0.34901962, b: 0.60784316, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
     - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []
