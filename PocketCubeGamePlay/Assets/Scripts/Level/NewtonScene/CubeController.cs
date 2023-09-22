@@ -6,6 +6,11 @@ public class CubeController : MonoBehaviour
 
     private bool isFalling = false;
 
+    //Audio
+    [SerializeField]
+    private AK.Wwise.Event cubeDropSound;
+    [SerializeField] private GameObject audioPlayer;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -16,6 +21,10 @@ public class CubeController : MonoBehaviour
     {
         //previousPosition = transform.position;
         isFalling = true;
+
+        // -------------- Audio
+        cubeDropSound.Post(audioPlayer);
+
         rb.isKinematic = false;
         
     }
@@ -38,6 +47,8 @@ public class CubeController : MonoBehaviour
 
     public bool getIsFalling()
     {
+        
+
         return isFalling;
 
     }

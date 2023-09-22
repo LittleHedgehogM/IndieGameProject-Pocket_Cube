@@ -26,7 +26,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B6692334-1DD5-15AA-D21F-F042F093B060}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{4D3421BB-33EB-731B-72A8-750B24B08CF3}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -106,6 +106,95 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{E85D3CFE-9BDA-D21E-7A07-4A1A9D656A24}">
+			<ShortName>Level1</ShortName>
+			<Path>Level1.bnk</Path>
+			<Media>
+				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>放上金币.wav</ShortName>
+					<CachePath>SFX/放上金币_10C4C929.wem</CachePath>
+				</File>
+				<File Id="183830389" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>魔方掉下来.wav</ShortName>
+					<CachePath>SFX/魔方掉下来_10C4C929.wem</CachePath>
+				</File>
+				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>台阶下降.wav</ShortName>
+					<CachePath>SFX/台阶下降_A566A362.wem</CachePath>
+				</File>
+				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>拿走.wav</ShortName>
+					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
+				</File>
+				<File Id="531784239" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>镜头-拉近.wav</ShortName>
+					<CachePath>SFX/镜头-拉近_E9B475B3.wem</CachePath>
+				</File>
+				<File Id="634861032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>镜头-拉远.wav</ShortName>
+					<CachePath>SFX/镜头-拉远_69F35151.wem</CachePath>
+				</File>
+				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hover.wav</ShortName>
+					<CachePath>SFX/hover_10C4C929.wem</CachePath>
+				</File>
+				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>台阶上升.wav</ShortName>
+					<CachePath>SFX/台阶上升_4C21F071.wem</CachePath>
+				</File>
+				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境音效.wav</ShortName>
+					<CachePath>SFX/环境音效_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="0.6073486" DurationMax="0.6073486">
+					<MediaRefs>
+						<MediaRef Id="531784239"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="0.5992514" DurationMax="0.5992514">
+					<MediaRefs>
+						<MediaRef Id="634861032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2914979601" Name="Play_Coin_add" DurationType="OneShot" DurationMin="1.9837868" DurationMax="1.9837868">
+					<MediaRefs>
+						<MediaRef Id="66674890"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3981976879" Name="Play_Coin_takeAway" DurationType="OneShot" DurationMin="1.0314059" DurationMax="1.0314059">
+					<MediaRefs>
+						<MediaRef Id="364095599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="2.2552154" DurationMax="2.2552154">
+					<MediaRefs>
+						<MediaRef Id="183830389"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1962302600" Name="Play_hover" DurationType="OneShot" DurationMin="0.12773243" DurationMax="0.12773243">
+					<MediaRefs>
+						<MediaRef Id="649493178"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869256356"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
+					<MediaRefs>
+						<MediaRef Id="232274638"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="731342154" Name="Play_Plate_Lift" DurationType="OneShot" DurationMin="2.0144258" DurationMax="2.0144258">
+					<MediaRefs>
+						<MediaRef Id="793816760"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A3003F23-F7AC-6C07-7E19-9B55CBD5B12C}</FileHash>
+	<FileHash>{F9B66B02-345E-5B6F-200E-706B796DFBD1}</FileHash>
 </SoundBanksInfo>

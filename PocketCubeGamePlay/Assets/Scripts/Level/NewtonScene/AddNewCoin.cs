@@ -8,6 +8,9 @@ public class AddNewCoin : MonoBehaviour
     [SerializeField]
     private GameObject coinInitPosition;
 
+    [SerializeField]
+    private AK.Wwise.Event addCoin;
+
     public void AddCoin(GameObject coin)
     {
          Scale myScale = this.GetComponent<Scale>();
@@ -22,10 +25,16 @@ public class AddNewCoin : MonoBehaviour
             coin.transform.position = coinInitPosition.transform.position + randomOffset;
             coin.transform.rotation = coinInitPosition.transform.rotation;            
             coin.GetComponent<Rigidbody>().isKinematic = false;
+
+            
+
             myScale.insertCoin(coin);
 
+            addCoin.Post(coinInitPosition);
+
+
             //print("Total weight = " + myScale.getTotalWeight());
-         }
+        }
     }
 
   

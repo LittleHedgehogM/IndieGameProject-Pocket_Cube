@@ -14,6 +14,8 @@ public class MaterialChangeOutline : MonoBehaviour
     [SerializeField] Color highlightOutlineColor;
     private bool enableMaterialChange = false;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +57,7 @@ public class MaterialChangeOutline : MonoBehaviour
         if (enableMaterialChange)
         {
             HighlightMaterial();
+            
         }
        
     }

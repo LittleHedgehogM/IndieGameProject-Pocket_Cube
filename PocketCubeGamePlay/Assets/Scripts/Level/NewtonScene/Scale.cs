@@ -24,6 +24,18 @@ public class Scale : MonoBehaviour
 
     private int previousWeight;
 
+    // -------------- Audio
+    [SerializeField]
+    private AK.Wwise.Event scaleUp;
+    [SerializeField]
+    private AK.Wwise.Event scaleDown;
+    
+    [SerializeField]
+    private AK.Wwise.Event removeCoin;
+    private bool audioPlayed = false;
+
+
+
     public bool isEmpty()
     {
         return coinsOnScale.Count == 0;
@@ -68,7 +80,31 @@ public class Scale : MonoBehaviour
         {
             currentUsedTime += Time.deltaTime;
             t = currentUsedTime / translationTime;
+
+            
+
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+
+            // -------------- Audio
+            if (startPosition.y > targetPosition.y && !audioPlayed)
+            {
+                scaleUp.Post(gameObject);
+                audioPlayed = true;
+                //Debug.Log("scaleUpAudioPlay");
+            }
+            else if (startPosition.y < targetPosition.y && !audioPlayed)
+            {
+                scaleDown.Post(gameObject);
+                audioPlayed = true;
+                //Debug.Log("scaleDownAudioPlay");
+            }
+
+            if (t > 1)
+            {
+                audioPlayed = false;
+                //Debug.Log("scaleUpAudioOtherRound");
+            }
+
             yield return null;
         }
     }
@@ -88,7 +124,9 @@ public class Scale : MonoBehaviour
 
     public void insertCoin(GameObject coin)
     {
-        coinsOnScale.Add(coin);
+        
+
+        coinsOnScale.Add(coin);     
         coin.transform.parent = transform;
         updateWeight();
     }
@@ -98,6 +136,9 @@ public class Scale : MonoBehaviour
         if (coinsOnScale.Contains(coinToPop))
         {
             coinsOnScale.Remove(coinToPop);
+
+            removeCoin.Post(coinToPop); // -------------- Audio
+
             coinToPop.transform.parent = null;
 
         }
