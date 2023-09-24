@@ -43,14 +43,16 @@ public class FourierPlayer : MonoBehaviour
         return transform.position;
     }
 
-    // Update is called once per frame
-    void Update() 
+    private void FixedUpdate()
     {
+        // gravity adjust
+        myRigidbody.useGravity = useGravity;
+
         // fall
-        
+
         if (myRigidbody.velocity.y < 0)
         {
-            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;    
+            myRigidbody.velocity += Vector3.up * Physics.gravity.y * (fallStrength - 1) * Time.deltaTime;
 
 
         }
@@ -61,11 +63,11 @@ public class FourierPlayer : MonoBehaviour
 
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize(); 
+        movementDirection.Normalize();
 
         transform.Translate(movementDirection * playerMoveSpeed * Time.deltaTime, Space.World);
-        
-        
+
+
         currentmoveDirection = (transform.position - playerPrevPosition).normalized;
         playerPrevPosition = transform.position;
 
@@ -75,17 +77,6 @@ public class FourierPlayer : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-
-    }
-
-    private void FixedUpdate()
-    {
-        // gravity adjust
-        myRigidbody.useGravity = useGravity;
-
-        //myRigidbody.AddForce(gravity);
-
-        //Physics.gravity = gravity;
     }
 
     

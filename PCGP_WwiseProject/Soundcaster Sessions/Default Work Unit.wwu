@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{5373FA68-95B5-4A03-A2AC-771EE5302000}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{578694CD-005D-46A1-927C-0C894FDDB2D7}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Newton_environment" ID="{B474D4B7-BB27-40D6-BD25-4F95060D0DE7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="hover" ID="{B5B04F7F-8538-492C-8ED2-73E4213444D7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Coin_add" ID="{7051EDD0-3215-4E2E-8E29-7EB6B315D092}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Plate_Down" ID="{43A464F4-7D8A-41C4-B692-929D6115B56C}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Coin_takeAway" ID="{167B8790-A5DC-43A3-96D9-12B23B0C4866}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Plate_Lift" ID="{B9D2EB7A-7D3E-4A0C-8DCC-BF7F09C4B75C}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Cube_drop" ID="{0270D588-AEB6-40A4-830B-7F615707E8AA}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
