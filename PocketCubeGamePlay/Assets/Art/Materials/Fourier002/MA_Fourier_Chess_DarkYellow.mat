@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Fourier_Chess_Yellow
+  m_Name: MA_Fourier_Chess_DarkYellow
   m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -135,7 +135,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _N_BaseCellOffset001: 2
-    - _N_BaseCellOffset002: 1
+    - _N_BaseCellOffset002: 2.44
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
     - _OutlineWidth: 0
@@ -169,8 +169,8 @@ Material:
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.19496846, g: 0.30861977, b: 1, a: 1}
-    - _ReflectOff01: {r: 1, g: 0.9868641, b: 0.9308176, a: 1}
+    - _Reflect02: {r: 0.5849056, g: 0.23311034, b: 0.003678579, a: 1}
+    - _ReflectOff01: {r: 0, g: 0, b: 0, a: 1}
     - _diffusegradient01: {r: 1, g: 0.9282751, b: 0.78930813, a: 1}
     - _diffusegradient02: {r: 0.8679245, g: 0.6163802, b: 0.12009009, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
