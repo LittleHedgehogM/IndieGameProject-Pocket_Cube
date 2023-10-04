@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585070900157857882
+    m_lastTime: -8585070217932682069
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585062246384735964
+    m_lastTime: -8585057063971606993
     List:
     - name: Level1
       guid: 22ec6efb585ee1479bd8e114af5e693e
@@ -127,172 +127,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585062246384796114
     List: []
-  - PhysicalPath: Events\Level1.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Level1
-      ObjectType: 12
-      guid: fdc3b775b21fed47b692ca4598a411ef
-    ParentPath: Events\Level1
-    guid: fdc3b775b21fed47b692ca4598a411ef
-    GuidInternal: 
-    m_lastTime: -8585062246384555675
-    List:
-    - name: Play_Camera_zoomIn
-      guid: eb12c4fc76290e46b298c8dd393e0b85
-      id: 977134866
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Camera_zoomIn
-        ObjectType: 3
-        guid: eb12c4fc76290e46b298c8dd393e0b85
-      Path: Events\Level1\Play_Camera_zoomIn
-      maxAttenuation: 0
-      maxDuration: 0.6073486
-      minDuration: 0.6073486
-    - name: Play_Camera_zoomOut
-      guid: f28e9ac31eb1a04abe7623951acfffbc
-      id: 2892692845
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Camera_zoomOut
-        ObjectType: 3
-        guid: f28e9ac31eb1a04abe7623951acfffbc
-      Path: Events\Level1\Play_Camera_zoomOut
-      maxAttenuation: 0
-      maxDuration: 0.5992514
-      minDuration: 0.5992514
-    - name: Play_Coin_add
-      guid: 6c321761973a0349888d0a55be9b3bc9
-      id: 2914979601
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Coin_add
-        ObjectType: 3
-        guid: 6c321761973a0349888d0a55be9b3bc9
-      Path: Events\Level1\Play_Coin_add
-      maxAttenuation: 0
-      maxDuration: 1.9837868
-      minDuration: 1.9837868
-    - name: Play_Coin_takeAway
-      guid: 39df2880446fac4da37f598a03abc571
-      id: 3981976879
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Coin_takeAway
-        ObjectType: 3
-        guid: 39df2880446fac4da37f598a03abc571
-      Path: Events\Level1\Play_Coin_takeAway
-      maxAttenuation: 0
-      maxDuration: 1.0314059
-      minDuration: 1.0314059
-    - name: Play_Cube_drop
-      guid: b9ff80a2de5348449502a9fc7fef1619
-      id: 797967755
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Cube_drop
-        ObjectType: 3
-        guid: b9ff80a2de5348449502a9fc7fef1619
-      Path: Events\Level1\Play_Cube_drop
-      maxAttenuation: 0
-      maxDuration: 2.2552154
-      minDuration: 2.2552154
-    - name: Play_hover
-      guid: 94a580e67402a645a268c53d40008927
-      id: 1962302600
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_hover
-        ObjectType: 3
-        guid: 94a580e67402a645a268c53d40008927
-      Path: Events\Level1\Play_hover
-      maxAttenuation: 0
-      maxDuration: 0.12773243
-      minDuration: 0.12773243
-    - name: Play_Newton_environment
-      guid: d6d1eb8a0da4b2418636a8004bd0ca28
-      id: 2419270649
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Newton_environment
-        ObjectType: 3
-        guid: d6d1eb8a0da4b2418636a8004bd0ca28
-      Path: Events\Level1\Play_Newton_environment
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Plate_Down
-      guid: 5d4b263bcca9ab4fb9f77f613703e433
-      id: 3551052341
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Plate_Down
-        ObjectType: 3
-        guid: 5d4b263bcca9ab4fb9f77f613703e433
-      Path: Events\Level1\Play_Plate_Down
-      maxAttenuation: 0
-      maxDuration: 1.7832654
-      minDuration: 1.7832654
-    - name: Play_Plate_Lift
-      guid: 50c90c10d09c724fa2c4f8b8cf30a2ae
-      id: 731342154
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level1
-        ObjectType: 12
-        guid: fdc3b775b21fed47b692ca4598a411ef
-      - ElementName: Play_Plate_Lift
-        ObjectType: 3
-        guid: 50c90c10d09c724fa2c4f8b8cf30a2ae
-      Path: Events\Level1\Play_Plate_Lift
-      maxAttenuation: 0
-      maxDuration: 2.0144258
-      minDuration: 2.0144258
   - PhysicalPath: Events\Level3.wwu
     PathAndIcons:
     - ElementName: Events
@@ -304,7 +138,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585065195375029316
+    m_lastTime: -8585064944014224293
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
