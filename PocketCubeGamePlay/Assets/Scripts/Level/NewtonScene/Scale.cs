@@ -124,8 +124,6 @@ public class Scale : MonoBehaviour
 
     public void insertCoin(GameObject coin)
     {
-        
-
         coinsOnScale.Add(coin);     
         coin.transform.parent = transform;
         updateWeight();

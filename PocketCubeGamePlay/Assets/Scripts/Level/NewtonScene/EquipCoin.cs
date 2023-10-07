@@ -21,6 +21,9 @@ public class EquipCoin : MonoBehaviour
     {
         if (canEquip())
         {
+
+            // play equip coin animation
+
             coin.transform.position = PlayerCoinHolder.transform.position;
             coin.transform.rotation = PlayerCoinHolder.transform.rotation;
             coin.transform.parent   = PlayerCoinHolder.transform;

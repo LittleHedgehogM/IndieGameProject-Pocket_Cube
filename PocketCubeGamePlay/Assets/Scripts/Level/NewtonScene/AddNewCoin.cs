@@ -23,10 +23,11 @@ public class AddNewCoin : MonoBehaviour
             //                              coinToAdd.transform.rotation);
 
             coin.transform.position = coinInitPosition.transform.position + randomOffset;
-            coin.transform.rotation = coinInitPosition.transform.rotation;            
+            coin.transform.rotation = coinInitPosition.transform.rotation;
+            coin.transform.parent = transform;
             coin.GetComponent<Rigidbody>().isKinematic = false;
 
-            
+            print(coin.transform.position);
 
             myScale.insertCoin(coin);
 

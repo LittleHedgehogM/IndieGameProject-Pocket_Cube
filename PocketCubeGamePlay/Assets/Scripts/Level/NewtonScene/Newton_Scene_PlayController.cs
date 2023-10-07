@@ -25,7 +25,6 @@ public class NewtonScenePlayController : MonoBehaviour
         InPutCoin,
         InTakeCoin,
         InScaleDraw,
-        /*InScalePositionAdjustment,*/
         InCameraTranslation,
     }
     PlayStatus myPlayStatus;
@@ -56,7 +55,30 @@ public class NewtonScenePlayController : MonoBehaviour
     
     [SerializeField]
     GameObject Cube;
+
+    [SerializeField]
+    Animator cubeTransition;
+
     GameObject currentScale;
+
+    [SerializeField]
+    Animator REyeAnimator;
+    [SerializeField]
+    Animator LEyeAnimator;
+
+    [SerializeField]
+    Animator REyeBallAnimator;
+    [SerializeField]
+    Animator LEyeBallAnimator;
+
+    //[SerializeField]
+    //Animator RCoinAnimator;
+    //[SerializeField]
+    //Animator LCoinAnimator;
+
+    bool isPlayingSwallowAnimation = false;
+    bool isPlayingSpriteAnimation = false;
+    GameObject activeCoin = null;
 
     void Start()
     {
@@ -122,6 +144,41 @@ public class NewtonScenePlayController : MonoBehaviour
     }
 
 
+    private void PlaySpriteAnimation(bool isLeftEye, GameObject coin)
+    {
+        string animName = "Sprite";
+        if (isLeftEye)
+        {
+            LEyeAnimator.SetTrigger(animName);
+            LEyeBallAnimator.SetTrigger(animName);
+        }
+        else
+        {
+            REyeAnimator.SetTrigger(animName);
+            REyeBallAnimator.SetTrigger(animName);
+
+        }
+        coin.GetComponent<CoinAnimationController>().PlaySpriteAnim(isLeftEye);
+    }
+
+    private void PlaySwallowAnimation(bool isLeftEye, GameObject coin)
+    {
+        string animName = "Swallow";
+        if (isLeftEye)
+        {
+            LEyeAnimator.SetTrigger(animName);
+            LEyeBallAnimator.SetTrigger(animName);
+        }
+        else
+        {
+            REyeAnimator.SetTrigger(animName);
+            REyeBallAnimator.SetTrigger(animName);
+        }
+        coin.GetComponent<CoinAnimationController>().PlaySwallowAnim(isLeftEye);
+
+    }
+
+
     IEnumerator DelayForSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -135,12 +192,15 @@ public class NewtonScenePlayController : MonoBehaviour
         if (myPlayStatus == PlayStatus.InScaleDraw)
         {
             myVFXController.PlayCubeVFX();
-            if (Cube.GetComponent<CubeController>().getIsFalling() == false)
+            bool isPlayingAnimation = cubeTransition.GetCurrentAnimatorStateInfo(0).IsName("AM_Cube_Finsh")
+                && cubeTransition.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
+
+            if (!isPlayingAnimation)
             {
                 myPlayerMovement.OnUpdate();
-                
-                
-            }   
+                // is press key Enter, transition to apple scene
+            }
+
         }
         else if (myPlayStatus == PlayStatus.Configuration)
         {
@@ -150,12 +210,12 @@ public class NewtonScenePlayController : MonoBehaviour
         else if (myPlayStatus == PlayStatus.PlayerMovement)
         {
             // check if draw
-            int leftWeight  = Scale_Left.GetComponent<Scale>().getTotalWeight();
+            int leftWeight = Scale_Left.GetComponent<Scale>().getTotalWeight();
             int rightWeight = Scale_Right.GetComponent<Scale>().getTotalWeight();
 
             if (leftWeight == 5 && rightWeight == 5)
             {
-                Cube.GetComponent<CubeController>().startsFalling();
+                cubeTransition.SetTrigger("IsNewtonPuzzleSolved");
                 myPlayStatus = PlayStatus.InScaleDraw;
 
                 return;
@@ -169,14 +229,14 @@ public class NewtonScenePlayController : MonoBehaviour
 
             if (Dist_L < dist_threshold)
             {
-               myCameraController.showLeftEye();
-               myPlayerMovement.setEnableMovement(false);
-               myPlayerMovement.TranslateToLeftEye();
-               myPlayStatus = PlayStatus.InCameraTranslation;
-               currentScale = Scale_Left;
-               Scale_Left.GetComponent<ScaleHighlighter>().HighlightScale();
-               Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
-               myVFXController.PlayDisplayEyeAndScaleVFX(currentScale.transform);
+                myCameraController.showLeftEye();
+                myPlayerMovement.setEnableMovement(false);
+                myPlayerMovement.TranslateToLeftEye();
+                myPlayStatus = PlayStatus.InCameraTranslation;
+                currentScale = Scale_Left;
+                Scale_Left.GetComponent<ScaleHighlighter>().HighlightScale();
+                Scale_Right.GetComponent<ScaleHighlighter>().disableHighlight();
+                myVFXController.PlayDisplayEyeAndScaleVFX(currentScale.transform);
 
             }
             else if (Dist_R < dist_threshold)
@@ -198,7 +258,7 @@ public class NewtonScenePlayController : MonoBehaviour
                 Scale_Left.GetComponent<ScaleHighlighter>().disableHighlight();
                 myVFXController.StopDisplayEyeAndScaleVFX();
             }
-            
+
         }
         else if (myPlayStatus == PlayStatus.InCameraTranslation)
         {
@@ -206,13 +266,11 @@ public class NewtonScenePlayController : MonoBehaviour
             {
                 currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
             }
-            
 
         }
         else if (myPlayStatus == PlayStatus.InDisplayEyeAndScale)
         {
             currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
-
             myPlayerMovement.OnUpdate();
             float Dist_L = myDetectDistance.getDistanceBetweenPlayerAndLeftEye();
             float Dist_R = myDetectDistance.getDistanceBetweenPlayerAndRightEye();
@@ -226,7 +284,7 @@ public class NewtonScenePlayController : MonoBehaviour
             RaycastHit hit;
             Ray ray;
             ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
-            
+
             if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
@@ -253,77 +311,112 @@ public class NewtonScenePlayController : MonoBehaviour
 
                     }
                 }
-                    
+
             }
 
         }
         else if (myPlayStatus == PlayStatus.InPutCoin)
         {
-            currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
-
-            // if can put coin
-            EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
-            GameObject coin = playerEquipCoin.getEquipped();
-            if (coin != null)
+            if (isPlayingSwallowAnimation)
             {
-                playerEquipCoin.Drop();
-                currentScale.GetComponent<AddNewCoin>().AddCoin(coin);
-                myPlayStatus = PlayStatus.InDisplayEyeAndScale;
-                myVFXController.PlayScalePutVFX(currentScale.transform);
-                StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
+                Animator coinAnimator = activeCoin.GetComponent<Animator>();
+                isPlayingSwallowAnimation = coinAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
+                if (!isPlayingSwallowAnimation)
+                {
+                    currentScale.GetComponent<AddNewCoin>().AddCoin(activeCoin);
+                    myVFXController.PlayScalePutVFX(currentScale.transform);
+                    StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
+                    myPlayStatus = PlayStatus.InDisplayEyeAndScale;
+                    print(coin4.transform.position);
+                    print(coin5.transform.position);
+                }
+
             }
+            else
+            {
+                currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
+                // if can put coin
+                EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
+                GameObject coin = playerEquipCoin.getEquipped();
+                if (coin != null)
+                {
+                    activeCoin = coin;
+                    playerEquipCoin.Drop();    
+                    PlaySwallowAnimation(currentScale == Scale_Left, coin);
+                    isPlayingSwallowAnimation = true;
+                }
+            }
+
 
         }
         else if (myPlayStatus == PlayStatus.InTakeCoin)
         {
-            currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
-
-            List<GameObject> coins = currentScale.GetComponent<Scale>().getCoinsOnScales();
-            foreach (GameObject coin in coins)
+            if (isPlayingSpriteAnimation)
             {
-                coin.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(true);
-            }
-
-            myPlayerMovement.setEnableMovement(false);
-            EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
-            if (Input.GetMouseButtonUp(0))
-            {
-                //GameObject coinHit = null;
-                RaycastHit hit;
-                Ray ray;
-                ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit))
+                
+                if (activeCoin != null)
                 {
-                    GameObject coinHit = hit.collider.gameObject;
-                    if (coinHit == coin1 || coinHit == coin2 || coinHit == coin3
-                        || coinHit == coin4 || coinHit == coin5)
-                    {
+                    Animator coinAnimator = activeCoin.GetComponent<Animator>();
+                    isPlayingSpriteAnimation = coinAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
 
-                        //coinHit.GetComponent<Rigidbody>().isKinematic = true;
-                        
-                        currentScale.GetComponent<Scale>().popCoin(coinHit);
-                        playerEquipCoin.Equip(coinHit);
-                        coinHit.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(false);
-                        if (currentScale == Scale_Left)
+                    if (!isPlayingSpriteAnimation)
+                    {
+                        EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
+                        playerEquipCoin.Equip(activeCoin);
+                        activeCoin.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(false);
+                        myPlayStatus = PlayStatus.InDisplayEyeAndScale;
+                        myPlayerMovement.setEnableMovement(true);
+
+                    }
+                }
+                
+            }
+            else
+            {
+                currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
+                List<GameObject> coins = currentScale.GetComponent<Scale>().getCoinsOnScales();
+                foreach (GameObject coin in coins)
+                {
+                    coin.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(true);
+                }
+
+                myPlayerMovement.setEnableMovement(false);
+                //EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
+                if (Input.GetMouseButtonUp(0))
+                {
+                    RaycastHit hit;
+                    Ray ray;
+                    ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        GameObject coinHit = hit.collider.gameObject;
+                        if (coinHit == coin1 || coinHit == coin2 || coinHit == coin3
+                            || coinHit == coin4 || coinHit == coin5)
                         {
-                            myCameraController.showLeftEye();
-                        }
-                        else if (currentScale == Scale_Right)
-                        {
-                            myCameraController.showRightEye();
-                        }
-                        //myCameraController.TranslateBackToInitPosition();
-                        //myPlayStatus = PlayStatus.InDisplayEyeAndScale;
-                        StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
-                        myPlayStatus = PlayStatus.InCameraTranslation;
-                        
-                        foreach (GameObject coin in coins)
-                        {
-                            coin.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(false);
+                            currentScale.GetComponent<Scale>().popCoin(coinHit);
+                                              
+                            if (currentScale == Scale_Left)
+                            {
+                                myCameraController.showLeftEye();
+                            }
+                            else if (currentScale == Scale_Right)
+                            {
+                                myCameraController.showRightEye();
+                            }
+                            StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());                        
+                            foreach (GameObject coin in coins)
+                            {
+                                coin.GetComponent<MaterialChangeOutline>().SetEnableMaterialChange(false);
+                            }
+                            activeCoin = coinHit;
+                            PlaySpriteAnimation(currentScale == Scale_Left, coinHit);
+                            isPlayingSpriteAnimation = true;
                         }
                     }
                 }
             }
+
+            
         }
     }
 
