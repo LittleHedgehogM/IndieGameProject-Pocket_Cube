@@ -6,11 +6,10 @@ using UnityEngine;
 public class Electro_Switch : MonoBehaviour
 {
     GameObject go;
-    Material[] materials;
-    public bool isSwitchOn;
-    [SerializeField] private Color colorOn = new Color(253, 178, 64);
-    [SerializeField] private Color colorOff = new Color(219, 219, 219);
-    [SerializeField] private float colorTranslationTime = 0.1f;
+    Material material;
+    [SerializeField] bool isSwitchOn;
+    [SerializeField] private Color colorOn;// = new Color(253, 178, 64);
+    [SerializeField] private Color colorOff;// = new Color(219, 219, 219);
     public static event Action SwitchColorTranslationFinished;
 
     bool isInteractionEnabled = false;
@@ -18,7 +17,7 @@ public class Electro_Switch : MonoBehaviour
     void Start()
     {
         go = this.gameObject;
-        materials = go.GetComponent<MeshRenderer>().materials;
+        material = go.GetComponent<MeshRenderer>().material;
         InitSwitchColor();
     }
 
@@ -27,12 +26,14 @@ public class Electro_Switch : MonoBehaviour
     {
         return isSwitchOn;
     }
+
     public void InitSwitchColor()
     {
-        foreach (Material mat in materials)
-        {
-            mat.SetColor("_diffusegradient01", isSwitchOn?colorOn:colorOff);
-        }
+        //foreach (Material mat in material)
+        //{
+            material.SetColor("_diffusegradient01", isSwitchOn?colorOn:colorOff);
+            //Debug.Log(this.gameObject.name + ", " + material.name);
+        //}
 
     }
 
@@ -50,56 +51,35 @@ public class Electro_Switch : MonoBehaviour
         
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("Entered collision with " + collision.gameObject.name);
-    //        switchColor();
-    //    }
-    //}
-
-    private IEnumerator TranslateToColor(Color startColor, Color targetColor)
-    {
-
-        float currentUsedTime = 0;
-        float t = 0;
-
-
-        while (t < 1)
-        {
-            Color aColor = Color.Lerp(startColor, targetColor, currentUsedTime);
-            currentUsedTime += Time.deltaTime;
-            t = currentUsedTime / colorTranslationTime;
-            foreach (Material mat in materials)
-            {
-                mat.SetColor("_diffusegradient01", aColor);
-            }
-            yield return null;
-        }
-        //SwitchColorTranslationFinished?.Invoke();
-    }
-
-
     public void switchColor()
     {
         isSwitchOn = !isSwitchOn;
-        foreach (Material mat in materials)
-        {
-            mat.SetColor("_diffusegradient01", isSwitchOn ? colorOn : colorOff);
-        }
+        //foreach (Material mat in material)
+        //{
+        //    mat.SetColor("_diffusegradient01", isSwitchOn ? colorOn : colorOff);
+        //}
+        material.SetColor("_diffusegradient01", isSwitchOn ? colorOn : colorOff);
         SwitchColorTranslationFinished?.Invoke();
-        //if (isSwitchOn)
-        //{
-        //    StartCoroutine(TranslateToColor(colorOn, colorOff));
-        //}
-        //else
-        //{
-        //    StartCoroutine(TranslateToColor(colorOff, colorOn));
-        //}
     }
 
+    //private IEnumerator TranslateToColor(Color startColor, Color targetColor)
+    //{
+
+    //    float currentUsedTime = 0;
+    //    float t = 0;
 
 
-
+    //    while (t < 1)
+    //    {
+    //        Color aColor = Color.Lerp(startColor, targetColor, currentUsedTime);
+    //        currentUsedTime += Time.deltaTime;
+    //        t = currentUsedTime / colorTranslationTime;
+    //        foreach (Material mat in materials)
+    //        {
+    //            mat.SetColor("_diffusegradient01", aColor);
+    //        }
+    //        yield return null;
+    //    }
+    //    //SwitchColorTranslationFinished?.Invoke();
+    //}
 }

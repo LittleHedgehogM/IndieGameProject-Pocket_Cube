@@ -35,9 +35,6 @@ public class Newton_Scene_VFX_Controller : MonoBehaviour
         //}
     }
 
-
-
-
     public void PlayDisplayEyeAndScaleVFX(Transform scaleTransform)
     {
         if (DisplayScale_VFX_Instance == null)

@@ -6,9 +6,9 @@ public class StarPuzzleController : MonoBehaviour
 {
     [SerializeField] Electro_Switch leftSwitch;
     [SerializeField] Electro_Switch rightSwitch;
-    [SerializeField] Electro_Circuit leftCircuit;
-    [SerializeField] Electro_Circuit rightCircuit;
-    [SerializeField] Electro_Circuit centerCircuit;
+    //[SerializeField] Electro_Circuit leftCircuit;
+    //[SerializeField] Electro_Circuit rightCircuit;
+    //[SerializeField] Electro_Circuit centerCircuit;
 
     bool isLeftSwitchOn = false;
     bool isRightSwitchOn = false;
@@ -16,51 +16,51 @@ public class StarPuzzleController : MonoBehaviour
     private void OnEnable()
     {
         Electro_Switch.SwitchColorTranslationFinished += OnAnySwitchUpdated;
-        Electro_Circuit.CircuitChange += onAnyCircuitUpdated;
+        //Electro_Circuit.CircuitChange += onAnyCircuitUpdated;
     }
 
 
     private void OnDisable()
     {
-        Electro_Switch.SwitchColorTranslationFinished -= OnAnySwitchUpdated; 
-        Electro_Circuit.CircuitChange -= onAnyCircuitUpdated;
+        Electro_Switch.SwitchColorTranslationFinished -= OnAnySwitchUpdated;
+        //Electro_Circuit.CircuitChange -= onAnyCircuitUpdated;
 
     }
 
     private void OnAnySwitchUpdated()
     {
-        if (isLeftSwitchOn != leftSwitch.isElectroSwitchOn())
-        {
-            isLeftSwitchOn = leftSwitch.isElectroSwitchOn();
-            leftCircuit.changeCircuitColor(isLeftSwitchOn);
-        }
-        else if (isRightSwitchOn != rightSwitch.isElectroSwitchOn())
-        {
-            isRightSwitchOn = rightSwitch.isElectroSwitchOn();
-            rightCircuit.changeCircuitColor(isRightSwitchOn);
-        }
-        
+        //if (isLeftSwitchOn != leftSwitch.isElectroSwitchOn())
+        //{
+        //    isLeftSwitchOn = leftSwitch.isElectroSwitchOn();
+        //    leftCircuit.changeCircuitColor(isLeftSwitchOn);
+        //}
+        //else if (isRightSwitchOn != rightSwitch.isElectroSwitchOn())
+        //{
+        //    isRightSwitchOn = rightSwitch.isElectroSwitchOn();
+        //    rightCircuit.changeCircuitColor(isRightSwitchOn);
+        //}
+
     }
 
-    private IEnumerator Wait()
-    {
-        
-        yield return new WaitForSeconds(1);
-        centerCircuit.changeCircuitColor(true);
-    }
+    //private IEnumerator Wait()
+    //{
+
+        //yield return new WaitForSeconds(1);
+        //centerCircuit.changeCircuitColor(true);
+    //}
 
     private void onAnyCircuitUpdated()
     {
-        if (leftSwitch.isElectroSwitchOn() && rightSwitch.isElectroSwitchOn())
-        {
-            centerCircuit.changeCircuitColor(true);
-        }
-        else if (centerCircuit.getIsCircuitValid())
-        {
-            centerCircuit.changeCircuitColor(false);
-        }
-        
-        
+        //if (leftSwitch.isElectroSwitchOn() && rightSwitch.isElectroSwitchOn())
+        //{
+        //    centerCircuit.changeCircuitColor(true);
+        //}
+        //else if (centerCircuit.getIsCircuitValid())
+        //{
+        //    centerCircuit.changeCircuitColor(false);
+        //}
+
+
     }
 
     public bool isStarPuzzleSolved()

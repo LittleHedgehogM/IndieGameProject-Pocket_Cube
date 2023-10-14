@@ -1,50 +1,77 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Electro_CollideChecker : MonoBehaviour
 {
+    [System.Serializable]
+    public enum RangeTag
+    {
+        Star,
+        Moon,
+        Sun
+    }
+
+    [SerializeField]
+    public RangeTag myTag;
+
     public static event Action EnterStarRange;
     public static event Action LeaveStarRange;
-    //public static event Action EnterSwitchControlPos;
-    //public static event Action LeaveSwitchControlPos;
-    //Electro_PlayerMovement myPlayerMovement;
 
-    private void Start()
-    {
-        //myPlayerMovement = FindObjectOfType<Electro_PlayerMovement>();
+    public static event Action EnterSunRange;
+    public static event Action LeaveSunRange;
 
-    }
+    public static event Action EnterMoonRange;
+    public static event Action LeaveMoonRange;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Area" && collision.gameObject.name == "StarRange")
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Entered collision with Star Range");
-            EnterStarRange?.Invoke();
+            switch (myTag)
+            {
+                case RangeTag.Star:
+                {
+                    EnterStarRange?.Invoke();
+                    break;
+                }
+                case RangeTag.Moon:
+                {
+                    EnterMoonRange?.Invoke();
+                    break;
+                }
+                case RangeTag.Sun:
+                {
+                    EnterSunRange?.Invoke();
+                    break;
+                }
+            }
+            
         }
-        //else if (collision.gameObject.tag == "SwitchControlPos")
-        //{
-        //    //EnterSwitchControlPos?.Invoke();
-        //    // translate to 
-        //    myPlayerMovement.TranslateTo(collision.gameObject.transform);
-        //}
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Area" && collision.gameObject.name == "StarRange")
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Leave collision with Star Range");
-            LeaveStarRange?.Invoke();
+            switch (myTag)
+            {
+                case RangeTag.Star:
+                    {
+                        LeaveStarRange?.Invoke();
+                        break;
+                    }
+                case RangeTag.Moon:
+                    {
+                        LeaveMoonRange?.Invoke();
+                        break;
+                    }
+                case RangeTag.Sun:
+                    {
+                        LeaveSunRange?.Invoke();
+                        break;
+                    }
+            }
         }
-        //else if (collision.gameObject.tag == "SwitchControlPos")
-        //{
-
-        //    LeaveSwitchControlPos?.Invoke();
-        //    // translate to 
-        //}
     }
-
    
 }

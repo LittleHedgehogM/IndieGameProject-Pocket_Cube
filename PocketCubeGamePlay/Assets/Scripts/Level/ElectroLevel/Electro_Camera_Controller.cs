@@ -15,6 +15,7 @@ public class Electro_Camera_Controller : MonoBehaviour
     [SerializeField] private float translationTime;
     [SerializeField] private float Camera_Sensitivity;
     [SerializeField] Vector3 CameraLookAtTarget;
+
     public static event Action TranslateCameraFinish;
     public static event Action ResetCameraFinish;
 
@@ -45,27 +46,70 @@ public class Electro_Camera_Controller : MonoBehaviour
         }
     }
 
+
+    public GameObject checkCollision()
+    {
+        GameObject hitObject = null;
+        RaycastHit hit;
+        Ray ray;
+        ray = mainCam.ScreenPointToRay(Input.mousePosition);
+
+        if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit))
+        {
+            hitObject = hit.collider.gameObject;
+            print("Hit Object" + hitObject.name);
+        }
+        return hitObject;
+    }
+
+
+    public bool isStarCam()
+    {
+        return mainCam.transform.position == starCam.transform.position;
+    }
+
+    public bool isSunCam()
+    {
+        return mainCam.transform.position == sunCam.transform.position;
+    }
+
+    public bool isMoonCam()
+    {
+        return mainCam.transform.position == moonCam.transform.position;
+    }
+
     public void showStarCam()
     {
-        StartCoroutine(TranslateTo(starCam));
+        StartCoroutine(TranslateTo(starCam, false));
     }
 
     public void showSunCam()
     {
-        StartCoroutine(TranslateTo(sunCam));
+        StartCoroutine(TranslateTo(sunCam, true));
     }
 
     public void showMoonCam()
     {
-        StartCoroutine(TranslateTo(moonCam));
+        StartCoroutine(TranslateTo(moonCam, true));
+    }
+
+
+    public void resetSunCam()
+    {
+        StartCoroutine(TranslateBackToInitPosition(true));
+    }
+
+    public void resetMoonCam()
+    {
+        StartCoroutine(TranslateBackToInitPosition(true));
     }
 
     public void resetCam()
     {
-        StartCoroutine(TranslateBackToInitPosition());
+        StartCoroutine(TranslateBackToInitPosition(false));
     }
 
-    private IEnumerator TranslateTo(Camera targetCam)
+    private IEnumerator TranslateTo(Camera targetCam, bool isLookAtTarget)
     {
 
         float currentUsedTime = 0;
@@ -83,11 +127,13 @@ public class Electro_Camera_Controller : MonoBehaviour
         {
             currentUsedTime += Time.deltaTime;
             t = currentUsedTime / translationTime;
-
-
-
-            mainCam.transform.position = Vector3.Lerp(startPosition, targetCam.transform.position, t);
-            mainCam.transform.rotation = Quaternion.Lerp(startRotation, targetCam.transform.rotation, t);
+            mainCam.transform.position = Vector3.Slerp(startPosition, targetCam.transform.position, t);
+            mainCam.transform.rotation = Quaternion.Slerp(startRotation, targetCam.transform.rotation, t);
+            if (isLookAtTarget)
+            {
+                mainCam.transform.LookAt(CameraLookAtTarget);
+            }
+            
             mainCam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(startSize, endSize, t);
 
             //print("ZoomIn" + targetCam.name);
@@ -98,7 +144,7 @@ public class Electro_Camera_Controller : MonoBehaviour
         TranslateCameraFinish?.Invoke();
     }
 
-    public IEnumerator TranslateBackToInitPosition()
+    public IEnumerator TranslateBackToInitPosition(bool isLookAtTarget)
     {
         // -------------- Audio
         // -------------- Audio
@@ -113,9 +159,15 @@ public class Electro_Camera_Controller : MonoBehaviour
         {
             currentUsedTime += Time.deltaTime;
             t = currentUsedTime / translationTime;
-            mainCam.transform.position = Vector3.Lerp(startPosition, MainCamInitPosition, t);
-            mainCam.transform.rotation = Quaternion.Lerp(startRotation, MainCamInitRotation, t);
+            mainCam.transform.position = Vector3.Slerp(startPosition, MainCamInitPosition, t);
+            mainCam.transform.rotation = Quaternion.Slerp(startRotation, MainCamInitRotation, t);
             mainCam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(size, MainCamInitScale, t);
+
+            if (isLookAtTarget)
+            {
+              mainCam.transform.LookAt(CameraLookAtTarget);
+
+            }
 
 
 
