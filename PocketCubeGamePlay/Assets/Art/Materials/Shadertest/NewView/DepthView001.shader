@@ -194,8 +194,8 @@ Node;AmplifyShaderEditor.RegisterLocalVarNode;151;-1105.558,-1176.856;Inherit;Fa
 Node;AmplifyShaderEditor.RangedFloatNode;139;-2400,-1014.665;Inherit;False;Property;_R_BaseCellOffset001;R_Base Cell Offset001;3;0;Create;True;0;0;0;False;0;False;2.235294;2;0;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;141;-2397.925,-857.3234;Inherit;False;Property;_R_BaseCellOffset002;R_Base Cell Offset002;4;0;Create;True;0;0;0;False;0;False;2.235294;1;0;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;142;-1789.638,-1018.655;Inherit;False;Constant;_Float2;Float 1;12;0;Create;True;0;0;0;False;0;False;0.95;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.ColorNode;15;174.7075,-500.4691;Inherit;False;Property;_diffusegradient01;diffusegradient01;0;0;Create;True;0;0;0;False;0;False;1,1,1,1;0.1886792,0.08355793,0,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.ColorNode;14;174.7075,-335.4592;Inherit;False;Property;_diffusegradient02;diffusegradient02;1;0;Create;True;0;0;0;False;0;False;0.3509552,0.6132076,0.5379074,1;0.6320754,0.3899657,0.1232348,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;15;174.7075,-500.4691;Inherit;False;Property;_diffusegradient01;diffusegradient01;0;0;Create;True;0;0;0;False;0;False;1,1,1,1;0.4705883,0.2078432,0,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;14;174.7075,-335.4592;Inherit;False;Property;_diffusegradient02;diffusegradient02;1;0;Create;True;0;0;0;False;0;False;0.3509552,0.6132076,0.5379074,1;0.7058824,0.4745098,0.2196079,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ViewDirInputsCoordNode;4;-558.6985,-44.58756;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RangedFloatNode;2;-858.6157,-237.6478;Inherit;False;Property;_HeighRatioInPut;HeighRatioInPut ;7;0;Create;True;0;0;0;False;0;False;10;1.5;0;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SamplerNode;50;-1429.37,-293.4409;Inherit;True;Property;_TextureSample2;Texture Sample 0;6;0;Create;True;0;0;0;False;0;False;-1;4043a05d39af1aa4eb2717e1db3c205b;9138feb8dc43c494395caba74376a3a5;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -225,4 +225,4 @@ WireConnection;137;0;136;0
 WireConnection;5;1;3;0
 WireConnection;151;0;137;0
 ASEEND*/
-//CHKSM=36F7A3C43A29EB1DAC719D97DFBD314014F137F5
+//CHKSM=AC62C7F8FD16444268B132B963F93B9FD7C7C7AF
