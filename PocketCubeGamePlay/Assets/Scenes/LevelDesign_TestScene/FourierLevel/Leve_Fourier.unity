@@ -2218,6 +2218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8604769633651268479, guid: f59f41825e22ac149bdd6bf2ec08469f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7000935217988417176, guid: f59f41825e22ac149bdd6bf2ec08469f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2537,15 +2541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 718761861636412501, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 718761861636412501, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 718761861636412501, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: ShapeModule.m_Scale.z
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 718761861636412501, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -2561,15 +2565,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.94955
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.94955
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.94955
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2610,6 +2614,10 @@ PrefabInstance:
     - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144785073162187426, guid: de99b1347ea746243bcb13913b608d21, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5939889784605340485, guid: de99b1347ea746243bcb13913b608d21, type: 3}
       propertyPath: m_Name
@@ -6424,7 +6432,7 @@ MonoBehaviour:
   diffuseGradient02:
   - {r: 0.27058825, g: 0.34901962, b: 0.60784316, a: 0}
   - {r: 0.9058824, g: 0.8352942, b: 0.72156864, a: 0}
-  - {r: 0.3372549, g: 0.3372549, b: 0.5176471, a: 0}
+  - {r: 0.1773466, g: 0.1773466, b: 0.46226418, a: 0}
   lerpTime: 0.8
   goalColor: {r: 0.5764706, g: 0.7019608, b: 0.91372555, a: 0}
   isBridgeActive: 0
@@ -6616,11 +6624,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diffuseGradient01:
-  - {r: 0.5764706, g: 0.7019608, b: 0.91372555, a: 0}
+  - {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 0.79215693, g: 0.6039216, b: 0.7490196, a: 0}
   diffuseGradient02:
-  - {r: 0.22352943, g: 0.2901961, b: 0.50980395, a: 0}
+  - {r: 0.121568635, g: 0.18431373, b: 0.38823533, a: 0}
   - {r: 0.9058824, g: 0.8352942, b: 0.72156864, a: 0}
   - {r: 0.3372549, g: 0.3372549, b: 0.5176471, a: 0}
   lerpTime: 0.8

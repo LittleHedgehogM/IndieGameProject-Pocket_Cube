@@ -64,23 +64,22 @@ Shader "Aqin/Diffusion"
 			float3 temp_cast_0 = (myVarName5).xxx;
 			float3 temp_output_14_0_g11 = temp_cast_0;
 			float mulTime93 = _Time.y * _Timescale1;
-			float temp_output_104_0 = saturate( mulTime93 );
-			float temp_output_4_0_g11 = frac( ( temp_output_104_0 - ( _interval01 - _intervalsub ) ) );
+			float temp_output_4_0_g11 = frac( ( mulTime93 - ( _interval01 - _intervalsub ) ) );
 			float3 temp_cast_1 = (temp_output_4_0_g11).xxx;
 			float3 temp_cast_2 = (( temp_output_4_0_g11 - _widthvalue )).xxx;
 			float3 temp_cast_3 = (myVarName5).xxx;
 			float3 temp_output_14_0_g12 = temp_cast_3;
-			float temp_output_4_0_g12 = frac( ( temp_output_104_0 - ( _interval02 - _intervalsub ) ) );
+			float temp_output_4_0_g12 = frac( ( mulTime93 - ( _interval02 - _intervalsub ) ) );
 			float3 temp_cast_4 = (temp_output_4_0_g12).xxx;
 			float3 temp_cast_5 = (( temp_output_4_0_g12 - _widthvalue )).xxx;
 			float3 temp_cast_6 = (myVarName5).xxx;
 			float3 temp_output_14_0_g10 = temp_cast_6;
-			float temp_output_4_0_g10 = frac( ( temp_output_104_0 - ( _interval03 - _intervalsub ) ) );
+			float temp_output_4_0_g10 = frac( ( mulTime93 - ( _interval03 - _intervalsub ) ) );
 			float3 temp_cast_7 = (temp_output_4_0_g10).xxx;
 			float3 temp_cast_8 = (( temp_output_4_0_g10 - _widthvalue )).xxx;
 			float3 temp_cast_9 = (myVarName5).xxx;
 			float3 temp_output_14_0_g9 = temp_cast_9;
-			float temp_output_4_0_g9 = frac( ( temp_output_104_0 - ( _interval04 - _intervalsub ) ) );
+			float temp_output_4_0_g9 = frac( ( mulTime93 - ( _interval04 - _intervalsub ) ) );
 			float3 temp_cast_10 = (temp_output_4_0_g9).xxx;
 			float3 temp_cast_11 = (( temp_output_4_0_g9 - _widthvalue )).xxx;
 			float2 uv_Spider_BaseColor = i.uv_texcoord * _Spider_BaseColor_ST.xy + _Spider_BaseColor_ST.zw;
@@ -184,12 +183,12 @@ Node;AmplifyShaderEditor.PowerNode;47;-287.4461,-308.7299;Inherit;True;False;2;0
 Node;AmplifyShaderEditor.PowerNode;78;200.4775,-304.7526;Inherit;True;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;79;40.75069,-445.4951;Inherit;False;Property;_softetrans;softe trans;9;0;Create;True;0;0;0;False;0;False;0.33;2;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;62;-547.3916,-314.0568;Inherit;False;Property;_softe;softe;8;0;Create;True;0;0;0;False;0;False;0.33;1.5;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.ColorNode;67;293.6812,429.974;Float;False;Property;_transport;transport;1;0;Create;True;0;0;0;False;0;False;1,0,0,0;1,1,1,0.6431373;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;67;293.6812,429.974;Float;False;Property;_transport;transport;1;0;Create;True;0;0;0;False;0;False;1,0,0,0;1,1,1,0.3098039;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;72;-234.8527,777.2554;Inherit;False;Property;_Texturepower;Texture power;12;0;Create;True;0;0;0;False;0;False;0;0.58;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;61;1669.182,7.135491;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;Aqin/Diffusion;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Transparent;0.5;True;True;1;False;Transparent;;Transparent;All;12;all;True;True;True;True;0;False;;True;1;False;;255;False;;255;False;;5;False;;1;False;;1;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Absolute;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;59;265.5882,38.38722;Inherit;True;3;3;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;49;831.4749,10.30313;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;52;517.0212,-159.8178;Inherit;False;Property;_Color;Color;0;1;[HDR];Create;True;0;0;0;False;0;False;8,0,0,0;0.1589609,0.2015563,0.496933,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;52;517.0212,-159.8178;Inherit;False;Property;_Color;Color;0;1;[HDR];Create;True;0;0;0;False;0;False;8,0,0,0;0.2728729,0.2996617,0.5943396,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;66;820.3841,323.9394;Inherit;True;3;3;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.FunctionNode;100;-359.1752,377.4015;Inherit;False;Ring Diffion;-1;;9;c7334664b95e91246a23b7cf4f00e885;0;4;14;FLOAT3;0,0,0;False;15;FLOAT;1;False;16;FLOAT;0.33;False;17;FLOAT;0.1;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.FunctionNode;101;-352.6105,227.7831;Inherit;False;Ring Diffion;-1;;10;c7334664b95e91246a23b7cf4f00e885;0;4;14;FLOAT3;0,0,0;False;15;FLOAT;1;False;16;FLOAT;0.33;False;17;FLOAT;0.1;False;1;FLOAT3;0
@@ -234,19 +233,19 @@ WireConnection;66;0;59;0
 WireConnection;66;1;67;4
 WireConnection;66;2;78;0
 WireConnection;100;14;37;0
-WireConnection;100;15;104;0
+WireConnection;100;15;93;0
 WireConnection;100;16;84;0
 WireConnection;100;17;40;0
 WireConnection;101;14;37;0
-WireConnection;101;15;104;0
+WireConnection;101;15;93;0
 WireConnection;101;16;83;0
 WireConnection;101;17;40;0
 WireConnection;102;14;37;0
-WireConnection;102;15;104;0
+WireConnection;102;15;93;0
 WireConnection;102;16;80;0
 WireConnection;102;17;40;0
 WireConnection;103;14;37;0
-WireConnection;103;15;104;0
+WireConnection;103;15;93;0
 WireConnection;103;16;82;0
 WireConnection;103;17;40;0
 WireConnection;80;0;39;0
@@ -260,4 +259,4 @@ WireConnection;84;1;81;0
 WireConnection;93;0;38;0
 WireConnection;104;0;93;0
 ASEEND*/
-//CHKSM=F019CF5C818755D19D9F85ED0720BB0EB593D66F
+//CHKSM=177D072E723A47C157DA946DA5FE822D4BD9D065
