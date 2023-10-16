@@ -10,7 +10,7 @@ public class MainMenuPanel : BasePanel
     public TextMeshProUGUI Tittle;
     public Button StartBtn;
     public Button SettingBtn;
-    public Button CollectionBtn;
+    //public Button CollectionBtn;
     public Button CreditBtn;
     public Button QuitBtn;
     private StartSceneCameraController StartSceneCameraController;
@@ -21,7 +21,7 @@ public class MainMenuPanel : BasePanel
     {
         StartBtn.onClick.AddListener(OnStartBtn);
         SettingBtn.onClick.AddListener(OnSettingBtn);
-        CollectionBtn.onClick.AddListener(OnCollectionBtn);
+        //CollectionBtn.onClick.AddListener(OnCollectionBtn);
         CreditBtn.onClick.AddListener(OnCreditBtn);
         QuitBtn.onClick.AddListener(OnQuitBtn);
         
@@ -51,10 +51,10 @@ public class MainMenuPanel : BasePanel
         UIManager.Instance.OpenPanel(UIConst.SettingPanel);
     }
 
-    public void OnCollectionBtn()
+    /*public void OnCollectionBtn()
     {
         UIManager.Instance.OpenPanel(UIConst.CollectionPanel);
-    }
+    }*/
 
     public void OnCreditBtn()
     {
