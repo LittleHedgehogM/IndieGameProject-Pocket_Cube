@@ -44,6 +44,8 @@ public class MainMenuLevels : MonoBehaviour
     {
         pressAnyKey.onClick.AddListener(OnPressAnyKey);
 
+        levelStatus = PlayerPrefs.GetInt("Level");
+
         if (levelStatus >= 0)
         {
             //active
