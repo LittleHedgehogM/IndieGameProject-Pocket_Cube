@@ -20,7 +20,8 @@ public class Electro_Puzzle : MonoBehaviour
     public class Circuit
     {
         public GateLogic logic;
-        public Transform logicGateTransform;
+        //public Transform logicGateTransform;
+        public GameObject logicGateHolder;
         public Electro_Switch switch_Left;
         public Electro_Switch switch_right;
     }
@@ -62,7 +63,10 @@ public class Electro_Puzzle : MonoBehaviour
     [SerializeField]
     Electro_CollideChecker puzzleRangeCollider;
 
-    [SerializeField] private Transform playerTargetPosPuzzle;
+    [SerializeField] 
+    private Transform playerTargetPosPuzzle;
+
+
 
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
@@ -73,6 +77,9 @@ public class Electro_Puzzle : MonoBehaviour
 
     private bool isLeftAnimEnds;
     private bool isRightAnimEnds;
+
+    private bool isCircuitAnimPlaying;
+
     public void setInteractable()
     {
         if (currentState == PuzzleState.NonInteractable )
@@ -149,7 +156,7 @@ public class Electro_Puzzle : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
-                PlayVFXAt(myCircuit.logicGateTransform);
+                PlayVFXAt(myCircuit.logicGateHolder.transform);
                 isFirstTimeEnter = false;
             }
             isLeftSwitchOn  = myCircuit.switch_Left.isElectroSwitchOn();
@@ -181,47 +188,23 @@ public class Electro_Puzzle : MonoBehaviour
 
     private void updateCircuit()
     {
-
-        if (!isLeftSwitchOn && myCircuit.switch_Left.isElectroSwitchOn())
-        {
-            leftCircuitAnimator.SetTrigger("PlayAnim");
-        }
-
-
-        if (!isRightSwitchOn && myCircuit.switch_right.isElectroSwitchOn())
-        {
-             rightCircuitAnimator.SetTrigger("PlayAnim");
-        }
-
-        if (isRightSwitchOn && !myCircuit.switch_right.isElectroSwitchOn())
-        {
-             rightCircuitAnimator.SetTrigger("GoIdle");
-             isRightAnimEnds = false;
-             cancelEffects();
-        }
-        
-        if (isLeftSwitchOn && !myCircuit.switch_Left.isElectroSwitchOn())
-        {
-            leftCircuitAnimator.SetTrigger("GoIdle");
-            isLeftAnimEnds = false;
-            cancelEffects();
-        }
         isLeftSwitchOn  = myCircuit.switch_Left.isElectroSwitchOn();
         isRightSwitchOn = myCircuit.switch_right.isElectroSwitchOn();
     }
 
     private void cancelEffects()
     {
-
+        leftCircuitAnimator.SetTrigger("GoIdle");
+        rightCircuitAnimator.SetTrigger("GoIdle");
         centerCircuitAnimator.SetTrigger("GoIdle");
         turnAnimator.SetTrigger("GoIdle");
-        StarFinishIcon.GetComponent<Renderer>().enabled = false;
         lightAnimator.SetTrigger("GoIdle");
+        StarFinishIcon.GetComponent<Renderer>().enabled = false;
     }
 
     private void PlayCenterAnim()
     {
-        if (isLeftSwitchOn && isRightSwitchOn && isLeftAnimEnds && isRightAnimEnds)
+        if (isLeftSwitchOn && isRightSwitchOn)
         {
             centerCircuitAnimator.SetTrigger("PlayAnim");
         }
@@ -242,37 +225,46 @@ public class Electro_Puzzle : MonoBehaviour
     private IEnumerator WaitAndPlayLightAnim()
     {
         yield return new WaitForSeconds(1);
-        lightAnimator.Play("AM_Star_Light");
+        lightAnimator.SetTrigger("PlayAnim");
     }
 
     public void CenterCircuitAnimEnds()
     {
-        //isMiddleAnimEnds = true;
         StarFinishIcon.GetComponent<Renderer>().enabled = true;
-        //turnAnimator.Play("AM_Star_Turn", -1, 0f);
         turnAnimator.SetTrigger("PlayAnim");
-        // wait 1 sec and play lightAnim
         StartCoroutine(WaitAndPlayLightAnim());
     }
 
     public void UpdatePuzzle()
     {
-        //switch(currentState)
-        //{
-        //    case PuzzleState.NonInteractable:
-        //    {
-        //        break;
-        //    }
-        //    case PuzzleState.Interactable:
-        //    {
-        //        break;
-        //    }
-        //    case PuzzleState.InPuzzle:
-        //    {
-        //        updateCircuit();         
-        //        break;
-        //    }
-        //}
+
+        
+        if (isLeftSwitchOn && isRightSwitchOn && currentState == PuzzleState.InPuzzle)
+        {
+            GameObject hitObject = myCameraController.checkCollision();
+            if (hitObject != null && hitObject == myCircuit.logicGateHolder)
+            {
+                if (isCircuitAnimPlaying)
+                {
+                    isCircuitAnimPlaying = false;             
+                    myCircuit.switch_Left.setInteractionEnabled(true);
+                    myCircuit.switch_right.setInteractionEnabled(true);
+                    cancelEffects();
+                }
+                else
+                {
+                    isCircuitAnimPlaying = true;
+                    myCircuit.switch_Left.setInteractionEnabled(false);
+                    myCircuit.switch_right.setInteractionEnabled(false);
+                    leftCircuitAnimator.SetTrigger("PlayAnim");
+                    rightCircuitAnimator.SetTrigger("PlayAnim");
+                    PlayVFXAt(myCircuit.logicGateHolder.transform);
+                }
+                
+            }
+
+        }
+       
     }
 
 }

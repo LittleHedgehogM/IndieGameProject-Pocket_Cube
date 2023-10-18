@@ -85,23 +85,23 @@ public class Electro_Camera_Controller : MonoBehaviour
 
     public void showSunCam()
     {
-        StartCoroutine(TranslateTo(sunCam, true));
+        StartCoroutine(TranslateTo(sunCam, false));
     }
 
     public void showMoonCam()
     {
-        StartCoroutine(TranslateTo(moonCam, true));
+        StartCoroutine(TranslateTo(moonCam, false));
     }
 
 
     public void resetSunCam()
     {
-        StartCoroutine(TranslateBackToInitPosition(true));
+        StartCoroutine(TranslateBackToInitPosition(false));
     }
 
     public void resetMoonCam()
     {
-        StartCoroutine(TranslateBackToInitPosition(true));
+        StartCoroutine(TranslateBackToInitPosition(false));
     }
 
     public void resetCam()

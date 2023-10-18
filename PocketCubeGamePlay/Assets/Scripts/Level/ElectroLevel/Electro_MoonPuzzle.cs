@@ -18,9 +18,11 @@ public class Electro_MoonPuzzle : MonoBehaviour
     [System.Serializable]
     public class Circuit
     {
-        public Transform logicGateLeftTransform;
-        public Transform logicGateRightTransform;
-        public Transform logicGateCenterTransform;
+
+        public GameObject logicGateLeft;
+        public GameObject logicGateRight;
+        public GameObject logicGateCenter;
+
         public Electro_Switch switch_Or_left;
         public Electro_Switch switch_Or_right;
         public Electro_Switch switch_nand_left;
@@ -69,6 +71,11 @@ public class Electro_MoonPuzzle : MonoBehaviour
 
     private bool isLeftAnimEnds;
     private bool isRightAnimEnds;
+
+    private bool isLeftCircuitAnimPlaying = false;
+    private bool isRightCircuitAnimPlaying = false;
+    private bool isCenterCircuitAnimPlaying = false;
+
     public void setInteractable()
     {
         if (currentState == PuzzleState.NonInteractable)
@@ -150,9 +157,9 @@ public class Electro_MoonPuzzle : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
-                PlayVFXAt(myCircuit.logicGateLeftTransform);
-                PlayVFXAt(myCircuit.logicGateRightTransform);
-                PlayVFXAt(myCircuit.logicGateCenterTransform);
+                PlayVFXAt(myCircuit.logicGateLeft.transform);
+                PlayVFXAt(myCircuit.logicGateRight.transform);
+                PlayVFXAt(myCircuit.logicGateCenter.transform);
                 isFirstTimeEnter = false;
             }
             isLSwitchOrLeftOn = myCircuit.switch_Or_left.isElectroSwitchOn();
@@ -193,39 +200,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
     }
 
     private void updateCircuit()
-    {
-
-        bool leftCircuitResult = or(myCircuit.switch_Or_left.isElectroSwitchOn(), myCircuit.switch_Or_right.isElectroSwitchOn());
-
-        if (or(isLSwitchOrLeftOn, isLSwitchOrRightOn) && !leftCircuitResult)
-        {
-            leftCircuitAnimator.SetTrigger("PlayAnim");
-            isLeftAnimEnds = false;
-        }
-        if (!or(isLSwitchOrLeftOn, isLSwitchOrRightOn) && leftCircuitResult)
-        {
-            leftCircuitAnimator.SetTrigger("GoIdle");
-            cancelEffects(); 
-            isLeftAnimEnds = false;
-
-        }
-
-
-        bool rightCircuitResult = nand(myCircuit.switch_nand_left.isElectroSwitchOn(), myCircuit.switch_nand_right.isElectroSwitchOn());
-        if (nand(isRSwitchNandLeftOn, isRSwitchNandRightOn) && !rightCircuitResult)
-        {
-            rightCircuitAnimator.SetTrigger("PlayAnim");
-            isRightAnimEnds = false;
-        }
-        if (!nand(isRSwitchNandLeftOn, isRSwitchNandRightOn) && rightCircuitResult)
-        {
-            rightCircuitAnimator.SetTrigger("GoIdle");
-            cancelEffects() ;
-            isRightAnimEnds = false;
-
-        }
-
-
+    {      
         isLSwitchOrLeftOn = myCircuit.switch_Or_left.isElectroSwitchOn();
         isLSwitchOrRightOn = myCircuit.switch_Or_right.isElectroSwitchOn();
         isRSwitchNandLeftOn = myCircuit.switch_nand_left.isElectroSwitchOn();
@@ -243,25 +218,20 @@ public class Electro_MoonPuzzle : MonoBehaviour
 
     private void PlayCenterAnim()
     {
-        if ( (!or(isLSwitchOrLeftOn, isLSwitchOrRightOn)) &&
-              (!nand(isRSwitchNandLeftOn, isRSwitchNandRightOn))
-              && isLeftAnimEnds && isRightAnimEnds)
-        {
-            centerCircuitAnimator.SetTrigger("PlayAnim");
-            //centerCircuitAnimator.Play("AM_Sun_Middle");
-        }
+        centerCircuitAnimator.SetTrigger("PlayAnim");
+
     }
 
     public void LeftMoonCircuitAnimEnds()
     {
         isLeftAnimEnds = true;
-        PlayCenterAnim();
+        //PlayCenterAnim();
     }
 
     public void RightMoonCircuitAnimEnds()
     {
         isRightAnimEnds = true;
-        PlayCenterAnim();
+        //PlayCenterAnim();
     }
 
     private IEnumerator WaitAndPlayLightAnim()
@@ -273,29 +243,82 @@ public class Electro_MoonPuzzle : MonoBehaviour
 
     public void CenterCircuitAnimEnds()
     {
-        //isMiddleAnimEnds = true;
         MoonFinishIcon.GetComponent<Renderer>().enabled = true;
-        turnAnimator.Play("AM_Moon_Turn");
+        turnAnimator.SetTrigger("PlayAnim");
         StartCoroutine(WaitAndPlayLightAnim());
     }
 
     public void UpdatePuzzle()
     {
-        //switch (currentState)
-        //{
-        //    case PuzzleState.NonInteractable:
-        //        {
-        //            break;
-        //        }
-        //    case PuzzleState.Interactable:
-        //        {
-        //            break;
-        //        }
-        //    case PuzzleState.InPuzzle:
-        //        {
-        //            updateCircuit();
-        //            break;
-        //        }
-        //}
+        if (currentState == PuzzleState.InPuzzle) 
+        {
+            bool isLeftCircuitValid = !isLSwitchOrLeftOn && !isLSwitchOrRightOn;
+            bool isRightCircuitValid = isRSwitchNandLeftOn && isRSwitchNandRightOn;
+            GameObject hitObject = myCameraController.checkCollision();
+
+            if (hitObject != null) 
+            {
+                if (hitObject == myCircuit.logicGateLeft && isLeftCircuitValid && !isCenterCircuitAnimPlaying)
+                {
+                    if (isLeftCircuitAnimPlaying)
+                    {
+                        leftCircuitAnimator.SetTrigger("GoIdle");
+                        isLeftCircuitAnimPlaying = false;
+                        myCircuit.switch_Or_left.setInteractionEnabled(true);
+                        myCircuit.switch_Or_right.setInteractionEnabled(true);
+                        cancelEffects();
+                    }
+                    else
+                    {
+                        leftCircuitAnimator.SetTrigger("PlayAnim");
+                        isLeftCircuitAnimPlaying = true;
+                        myCircuit.switch_Or_left.setInteractionEnabled(false);
+                        myCircuit.switch_Or_right.setInteractionEnabled(false);
+                        PlayVFXAt(myCircuit.logicGateLeft.transform);
+                    }
+                }
+                else if (hitObject == myCircuit.logicGateRight && isRightCircuitValid && !isCenterCircuitAnimPlaying)
+                {
+                    if (isRightCircuitAnimPlaying)
+                    {
+                        rightCircuitAnimator.SetTrigger("GoIdle");
+                        isRightCircuitAnimPlaying = false;
+                        myCircuit.switch_nand_right.setInteractionEnabled(true);
+                        myCircuit.switch_nand_left.setInteractionEnabled(true);
+                        cancelEffects();
+                    }
+                    else
+                    {
+                        rightCircuitAnimator.SetTrigger("PlayAnim");
+                        isRightCircuitAnimPlaying = true;
+                        myCircuit.switch_nand_right.setInteractionEnabled(false);
+                        myCircuit.switch_nand_left.setInteractionEnabled(false);
+                        PlayVFXAt(myCircuit.logicGateRight.transform);
+
+                    }
+                }
+                else if (hitObject == myCircuit.logicGateCenter 
+                        && isLeftCircuitValid && isRightCircuitValid && isLeftAnimEnds && isRightAnimEnds)
+                {
+                    if (isCenterCircuitAnimPlaying)
+                    {
+                        isCenterCircuitAnimPlaying = false;
+                        cancelEffects();
+                    }
+                    else
+                    {
+                        isCenterCircuitAnimPlaying = true;
+                        PlayVFXAt(myCircuit.logicGateCenter.transform);
+                        centerCircuitAnimator.SetTrigger("PlayAnim");
+                        myCircuit.switch_nand_right.setInteractionEnabled(false);
+                        myCircuit.switch_nand_left.setInteractionEnabled(false);
+                        myCircuit.switch_Or_left.setInteractionEnabled(false);
+                        myCircuit.switch_Or_right.setInteractionEnabled(false);
+                    }
+                }
+            }
+         
+                
+        }
     }
 }

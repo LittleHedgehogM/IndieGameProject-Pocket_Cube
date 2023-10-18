@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 137921512}
   - component: {fileID: 137921514}
   - component: {fileID: 137921513}
+  - component: {fileID: 137921515}
   m_Layer: 0
   m_Name: RightGate
   m_TagString: Untagged
@@ -706,6 +707,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137921511}
+  m_Mesh: {fileID: 4149957431159973565, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &137921515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137921511}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4149957431159973565, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1 &153796480
 GameObject:
@@ -884,7 +907,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -908,13 +931,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169490171}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14537786, y: -0.38377458, z: 0.057268493, w: 0.9101113}
-  m_LocalPosition: {x: 16.75, y: 15.4, z: -17.77}
+  m_LocalRotation: {x: 0.07744541, y: 0.38122335, z: -0.030168097, w: 0.9207393}
+  m_LocalPosition: {x: 16.75, y: 9.85, z: -17.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1303480791}
-  m_LocalEulerAnglesHint: {x: 17.973, y: -45.798, z: -0.442}
+  m_LocalEulerAnglesHint: {x: 9.533, y: 45, z: 0.203}
 --- !u!1 &206884522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1165,7 @@ GameObject:
   - component: {fileID: 266827061}
   - component: {fileID: 266827063}
   - component: {fileID: 266827062}
+  - component: {fileID: 266827064}
   m_Layer: 0
   m_Name: LeftGate
   m_TagString: Untagged
@@ -1214,6 +1238,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266827060}
+  m_Mesh: {fileID: 7357975494151122687, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &266827064
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266827060}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 7357975494151122687, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1001 &268115300
 PrefabInstance:
@@ -2252,6 +2298,7 @@ GameObject:
   - component: {fileID: 398494241}
   - component: {fileID: 398494243}
   - component: {fileID: 398494242}
+  - component: {fileID: 398494244}
   m_Layer: 0
   m_Name: CenterXorGate
   m_TagString: Untagged
@@ -2324,6 +2371,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398494240}
+  m_Mesh: {fileID: 8771168082606699943, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &398494244
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398494240}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8771168082606699943, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1001 &407079215
 PrefabInstance:
@@ -2676,6 +2745,7 @@ GameObject:
   - component: {fileID: 536934554}
   - component: {fileID: 536934556}
   - component: {fileID: 536934555}
+  - component: {fileID: 536934557}
   m_Layer: 0
   m_Name: LogicGateHolder
   m_TagString: Untagged
@@ -2748,6 +2818,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536934553}
+  m_Mesh: {fileID: 9158066187421414108, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &536934557
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536934553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 9158066187421414108, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1 &584281268
 GameObject:
@@ -3038,7 +3130,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3062,13 +3154,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640399145}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.222745, y: 0.36542854, z: -0.09614294, w: 0.8986675}
-  m_LocalPosition: {x: -7.54, y: 9, z: -8.24}
+  m_LocalRotation: {x: 0.085744455, y: 0.38074914, z: -0.031189626, w: 0.9201659}
+  m_LocalPosition: {x: -7.54, y: 8.19, z: -8.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1303480791}
-  m_LocalEulerAnglesHint: {x: 28.074, y: 44.094, z: -0.65}
+  m_LocalEulerAnglesHint: {x: 10.46, y: 45, z: 0.46}
 --- !u!1 &650026616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,8 +3551,8 @@ Transform:
   m_GameObject: {fileID: 747957091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071069, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 3.2880466, y: 0.02, z: 3.2880473}
-  m_LocalScale: {x: 4, y: 0.01, z: 4}
+  m_LocalPosition: {x: 3.422, y: 0.02, z: 3.459}
+  m_LocalScale: {x: 3.57212, y: 0.01, z: 3.5706}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 972316336}
@@ -3834,9 +3926,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   myCircuit:
-    logicGateLeftTransform: {fileID: 1640360121}
-    logicGateRightTransform: {fileID: 2011427021}
-    logicGateCenterTransform: {fileID: 398494241}
+    logicGateLeft: {fileID: 1640360120}
+    logicGateRight: {fileID: 2011427020}
+    logicGateCenter: {fileID: 398494240}
     switch_Or_left: {fileID: 1984194479}
     switch_Or_right: {fileID: 936799363}
     switch_nand_left: {fileID: 1619467581}
@@ -4512,7 +4604,7 @@ GameObject:
   - component: {fileID: 905522423}
   - component: {fileID: 905522422}
   m_Layer: 0
-  m_Name: Switch_Xor_RightHolder
+  m_Name: Switch_Nand_RightHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4836,7 +4928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCircuit:
     logic: 0
-    logicGateTransform: {fileID: 536934554}
+    logicGateHolder: {fileID: 536934553}
     switch_Left: {fileID: 74434106}
     switch_right: {fileID: 1424848777}
   currentState: 1
@@ -5203,8 +5295,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46595305, y: 1, z: 1.3601251}
-  m_Center: {x: -0.26702178, y: 0, z: -0.004230343}
+  m_Size: {x: 0.37874663, y: 1, z: 1.1690544}
+  m_Center: {x: -0.22341834, y: 0, z: -0.027878525}
 --- !u!23 &1008220952
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6198,7 +6290,7 @@ GameObject:
   - component: {fileID: 1174161587}
   - component: {fileID: 1174161586}
   m_Layer: 0
-  m_Name: Switch_Xor_LeftHolder
+  m_Name: Switch_Nand_LeftHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6391,8 +6483,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.55570984, y: 1, z: 1.5569069}
-  m_Center: {x: -0.31189802, y: 0, z: 0.14138687}
+  m_Size: {x: 0.51778436, y: 1, z: 1.1242546}
+  m_Center: {x: -0.3308607, y: 0, z: 0.073906176}
 --- !u!23 &1182105955
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6815,6 +6907,7 @@ GameObject:
   - component: {fileID: 1223634803}
   - component: {fileID: 1223634805}
   - component: {fileID: 1223634804}
+  - component: {fileID: 1223634806}
   m_Layer: 0
   m_Name: CenterGate
   m_TagString: Untagged
@@ -6887,6 +6980,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223634802}
+  m_Mesh: {fileID: -850319498213505653, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &1223634806
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223634802}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -850319498213505653, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1 &1245745643 stripped
 GameObject:
@@ -7598,11 +7713,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   myCircuit:
-    logicGateLeftTransform: {fileID: 266827061}
-    logicGateRightTransform: {fileID: 137921512}
-    logicGateCenterTransform: {fileID: 1223634803}
-    switch_Xor_left: {fileID: 2094669704}
-    switch_Xor_right: {fileID: 433949140}
+    logicGateLeft: {fileID: 266827060}
+    logicGateRight: {fileID: 137921511}
+    logicGateCenter: {fileID: 1223634802}
+    switch_Nand_left: {fileID: 2094669704}
+    switch_Nand_right: {fileID: 433949140}
     switch_not: {fileID: 1324245578}
   leftCircuitAnimator: {fileID: 1036008602}
   rightCircuitAnimator: {fileID: 505750422}
@@ -7669,7 +7784,7 @@ Transform:
   m_GameObject: {fileID: 1388596421}
   serializedVersion: 2
   m_LocalRotation: {x: -0.27059805, y: 0.27059805, z: -0.6532815, w: 0.6532815}
-  m_LocalPosition: {x: -4.100001, y: 2.95, z: 2.6600003}
+  m_LocalPosition: {x: -4.18, y: 2.95, z: 3.31}
   m_LocalScale: {x: 0.5138601, y: 0.51386, z: 0.5725428}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7692,7 +7807,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -8418,7 +8533,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -8856,6 +8971,7 @@ GameObject:
   - component: {fileID: 1640360121}
   - component: {fileID: 1640360123}
   - component: {fileID: 1640360122}
+  - component: {fileID: 1640360124}
   m_Layer: 0
   m_Name: Left_OrGate
   m_TagString: Untagged
@@ -8928,6 +9044,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640360120}
+  m_Mesh: {fileID: 100846100501432528, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &1640360124
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640360120}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 100846100501432528, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1 &1655058862
 GameObject:
@@ -10583,6 +10721,7 @@ GameObject:
   - component: {fileID: 2011427021}
   - component: {fileID: 2011427023}
   - component: {fileID: 2011427022}
+  - component: {fileID: 2011427024}
   m_Layer: 0
   m_Name: RightNandGate
   m_TagString: Untagged
@@ -10655,6 +10794,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011427020}
+  m_Mesh: {fileID: -8879308425103827292, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
+--- !u!64 &2011427024
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011427020}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -8879308425103827292, guid: 3bbb3a48680195d4d8571e4ed7a743cd, type: 3}
 --- !u!1 &2041112573 stripped
 GameObject:

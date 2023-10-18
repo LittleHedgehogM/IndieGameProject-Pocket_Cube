@@ -29,12 +29,7 @@ public class Electro_Switch : MonoBehaviour
 
     public void InitSwitchColor()
     {
-        //foreach (Material mat in material)
-        //{
-            material.SetColor("_diffusegradient01", isSwitchOn?colorOn:colorOff);
-            //Debug.Log(this.gameObject.name + ", " + material.name);
-        //}
-
+        material.SetColor("_diffusegradient01", isSwitchOn?colorOn:colorOff);
     }
 
     public void setInteractionEnabled(bool isEnabled)
@@ -54,32 +49,8 @@ public class Electro_Switch : MonoBehaviour
     public void switchColor()
     {
         isSwitchOn = !isSwitchOn;
-        //foreach (Material mat in material)
-        //{
-        //    mat.SetColor("_diffusegradient01", isSwitchOn ? colorOn : colorOff);
-        //}
         material.SetColor("_diffusegradient01", isSwitchOn ? colorOn : colorOff);
         SwitchColorTranslationFinished?.Invoke();
     }
 
-    //private IEnumerator TranslateToColor(Color startColor, Color targetColor)
-    //{
-
-    //    float currentUsedTime = 0;
-    //    float t = 0;
-
-
-    //    while (t < 1)
-    //    {
-    //        Color aColor = Color.Lerp(startColor, targetColor, currentUsedTime);
-    //        currentUsedTime += Time.deltaTime;
-    //        t = currentUsedTime / colorTranslationTime;
-    //        foreach (Material mat in materials)
-    //        {
-    //            mat.SetColor("_diffusegradient01", aColor);
-    //        }
-    //        yield return null;
-    //    }
-    //    //SwitchColorTranslationFinished?.Invoke();
-    //}
 }
