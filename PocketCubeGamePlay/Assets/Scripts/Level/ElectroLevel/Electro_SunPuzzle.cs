@@ -75,12 +75,21 @@ public class Electro_SunPuzzle : MonoBehaviour
     private bool isRightCircuitAnimPlaying = false;
     private bool isCenterCircuitAnimPlaying = false;
 
-    public void setInteractable()
+    private bool isPuzzleSolved;
+
+    public void setNotInteractable()
     {
-        if (currentState == PuzzleState.NonInteractable)
-        {
-            currentState = PuzzleState.Interactable;
-        }
+        currentState = PuzzleState.NonInteractable;    
+    }
+
+   
+    public void setIsPuzzleSolved()
+    {
+        isPuzzleSolved = true;
+    }
+    public bool getIsPuzzleSolved()
+    {
+        return isPuzzleSolved;
     }
 
     private void OnEnable()
@@ -93,6 +102,7 @@ public class Electro_SunPuzzle : MonoBehaviour
         Electro_AnimController.SunRightCircuitAnimFinished  += RightSunCircuitAnimEnds;
         Electro_AnimController.SunCenterCircuitAnimFinished += CenterCircuitAnimEnds;
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
+        Electro_AnimController.SunPuzzleSolved += setIsPuzzleSolved;
 
     }
     private void OnDisable()
@@ -105,6 +115,8 @@ public class Electro_SunPuzzle : MonoBehaviour
         Electro_AnimController.SunRightCircuitAnimFinished  -= RightSunCircuitAnimEnds;
         Electro_AnimController.SunCenterCircuitAnimFinished -= CenterCircuitAnimEnds;
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
+        Electro_AnimController.SunPuzzleSolved -= setIsPuzzleSolved;
+
 
     }
 
@@ -125,7 +137,6 @@ public class Electro_SunPuzzle : MonoBehaviour
             myCameraController.showSunCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
-            //StarPuzzleObject.SetActive(false);
             CenterCubeObject.SetActive(false);
         }
 
@@ -135,11 +146,11 @@ public class Electro_SunPuzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.InPuzzle)
         {
+            //myPlayerMovement.setEnableMovement(false);
             myCameraController.resetSunCam();
             myCircuit.switch_Nand_left.setInteractionEnabled(false);
             myCircuit.switch_Nand_right.setInteractionEnabled(false);
             myCircuit.switch_not.setInteractionEnabled(false);
-           // StarPuzzleObject.SetActive(true);
             CenterCubeObject.SetActive(true);
 
         }
@@ -170,14 +181,13 @@ public class Electro_SunPuzzle : MonoBehaviour
 
     private void onLeaveRangeCameraResetFinish()
     {
-         currentState = PuzzleState.Interactable;
+        if (currentState == PuzzleState.InPuzzle)
+        {           
+            currentState = PuzzleState.Interactable;
+        }
+        myPlayerMovement.setEnableMovement(true);
     }
 
-    public bool isPuzzleSolved()
-    {
-        return myCircuit.switch_Nand_left.isElectroSwitchOn()
-            && myCircuit.switch_Nand_right.isElectroSwitchOn();
-    }
 
     private void PlayVFXAt(Transform gateTransform)
     {
@@ -187,9 +197,10 @@ public class Electro_SunPuzzle : MonoBehaviour
     }
 
 
-    private bool xor(bool a, bool b){
-        return !a && !b;
-    }
+    //private bool xor(bool a, bool b){
+    //    return !a && !b;
+    //}
+
     private void updateCircuit()
     {
         isSwitchNandLeftOn   = myCircuit.switch_Nand_left.isElectroSwitchOn();
@@ -204,15 +215,6 @@ public class Electro_SunPuzzle : MonoBehaviour
         turnAnimator.SetTrigger("GoIdle");
         SunFinishIcon.GetComponent<Renderer>().enabled = false;
         lightAnimator.SetTrigger("GoIdle");
-    }
-
-    private void PlayCenterAnim()
-    {
-        if ( isSwitchNandLeftOn && !isSwitchNotOn)
-        {
-            //centerCircuitAnimator.SetTrigger("PlayAnim");
-            centerCircuitAnimator.Play("AM_Sun_Middle");
-        }
     }
 
     public void LeftSunCircuitAnimEnds()
@@ -234,7 +236,6 @@ public class Electro_SunPuzzle : MonoBehaviour
 
     public void CenterCircuitAnimEnds()
     {
-        //isMiddleAnimEnds = true;
         SunFinishIcon.GetComponent<Renderer>().enabled = true;
         turnAnimator.Play("AM_Sun_Turn");
         StartCoroutine(WaitAndPlayLightAnim());
@@ -292,6 +293,7 @@ public class Electro_SunPuzzle : MonoBehaviour
                         centerCircuitAnimator.SetTrigger("GoIdle");
                         isCenterCircuitAnimPlaying = false;
                         cancelEffects();
+                        isPuzzleSolved = false;
                     }
                     else
                     {
@@ -301,7 +303,6 @@ public class Electro_SunPuzzle : MonoBehaviour
                         myCircuit.switch_not.setInteractionEnabled(false);
                         myCircuit.switch_Nand_right.setInteractionEnabled(false);
                         myCircuit.switch_Nand_left.setInteractionEnabled(false);
-
 
                     }
                 }

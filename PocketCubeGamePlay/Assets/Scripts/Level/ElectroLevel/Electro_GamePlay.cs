@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
 using UnityEngine;
 
 public class Electro_GamePlay : MonoBehaviour
@@ -10,6 +11,11 @@ public class Electro_GamePlay : MonoBehaviour
     [SerializeField] private Electro_Puzzle starPuzzle;
     [SerializeField] private Electro_SunPuzzle sunPuzzle;
     [SerializeField] private Electro_MoonPuzzle moonPuzzle;
+    [SerializeField] private Animator centerAnimator;
+    [SerializeField] private Animator cubeAnimator;
+
+    private bool isScenePuzzleSolved;
+
 
     void Start()
     {
@@ -18,15 +24,46 @@ public class Electro_GamePlay : MonoBehaviour
         starPuzzle.Init();
         sunPuzzle.Init();
         moonPuzzle.Init();
-    } 
+        isScenePuzzleSolved = false;
+    }
+
 
     void Update()
     {
-        myPlayerMovement.OnUpdate();
-        starPuzzle.UpdatePuzzle();
-        sunPuzzle.UpdatePuzzle();
-        moonPuzzle.UpdatePuzzle();
-        
+
+        if (!isScenePuzzleSolved) 
+        {
+             myPlayerMovement.OnUpdate();
+             starPuzzle.UpdatePuzzle();
+             sunPuzzle.UpdatePuzzle();
+             moonPuzzle.UpdatePuzzle();
+
+             if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())
+             {
+
+                  starPuzzle.LeaveRange();
+                  starPuzzle.setNotInteractable();
+
+                  sunPuzzle.LeaveRange();
+                  sunPuzzle.setNotInteractable();
+
+                  moonPuzzle.LeaveRange();
+                  moonPuzzle.setNotInteractable();
+
+                  isScenePuzzleSolved = true;
+                  centerAnimator.Play("AM_Center_Normal");
+                  cubeAnimator.Play("AM_CenterCube_Finsh");
+             }
+        }
+        else 
+        {
+            myPlayerMovement.OnUpdate();
+            Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
+            myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
+        }
+
+
+
     }
 
 

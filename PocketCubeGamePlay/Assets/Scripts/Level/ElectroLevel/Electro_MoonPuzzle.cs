@@ -75,14 +75,13 @@ public class Electro_MoonPuzzle : MonoBehaviour
     private bool isLeftCircuitAnimPlaying = false;
     private bool isRightCircuitAnimPlaying = false;
     private bool isCenterCircuitAnimPlaying = false;
-
-    public void setInteractable()
+    private bool isPuzzleSolved = false;
+    public void setNotInteractable()
     {
-        if (currentState == PuzzleState.NonInteractable)
-        {
-            currentState = PuzzleState.Interactable;
-        }
+        currentState = PuzzleState.NonInteractable;
     }
+
+
 
     private void OnEnable()
     {
@@ -93,6 +92,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
         Electro_AnimController.MoonLeftCircuitAnimFinished += LeftMoonCircuitAnimEnds;
         Electro_AnimController.MoonRightCircuitAnimFinished += RightMoonCircuitAnimEnds;
         Electro_AnimController.MoonCenterCircuitAnimFinished += CenterCircuitAnimEnds;
+        Electro_AnimController.MoonPuzzleSolved += setIsPuzzleSolved;
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
     }
     private void OnDisable()
@@ -105,6 +105,17 @@ public class Electro_MoonPuzzle : MonoBehaviour
         Electro_AnimController.MoonRightCircuitAnimFinished -= RightMoonCircuitAnimEnds;
         Electro_AnimController.MoonCenterCircuitAnimFinished -= CenterCircuitAnimEnds;
         Electro_Switch.SwitchColorTranslationFinished -= updateCircuit;
+        Electro_AnimController.MoonPuzzleSolved -= setIsPuzzleSolved;
+
+    }
+
+    public void setIsPuzzleSolved()
+    {
+        isPuzzleSolved = true;
+    }
+    public bool getIsPuzzleSolved()
+    {
+        return isPuzzleSolved;
     }
 
     public void Init()
@@ -134,6 +145,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.InPuzzle)
         {
+            //myPlayerMovement.setEnableMovement(false);
             myCameraController.resetSunCam();
             myCircuit.switch_Or_left.setInteractionEnabled(false);
             myCircuit.switch_Or_right.setInteractionEnabled(false);
@@ -150,13 +162,14 @@ public class Electro_MoonPuzzle : MonoBehaviour
         if (myCameraController.isMoonCam())
         {
             currentState = PuzzleState.InPuzzle;
-            myCircuit.switch_Or_left.setInteractionEnabled(true);
-            myCircuit.switch_Or_right.setInteractionEnabled(true);
-            myCircuit.switch_nand_left.setInteractionEnabled(true);
-            myCircuit.switch_nand_right.setInteractionEnabled(true);
+            
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
+                myCircuit.switch_Or_left.setInteractionEnabled(true);
+                myCircuit.switch_Or_right.setInteractionEnabled(true);
+                myCircuit.switch_nand_left.setInteractionEnabled(true);
+                myCircuit.switch_nand_right.setInteractionEnabled(true);
                 PlayVFXAt(myCircuit.logicGateLeft.transform);
                 PlayVFXAt(myCircuit.logicGateRight.transform);
                 PlayVFXAt(myCircuit.logicGateCenter.transform);
@@ -172,31 +185,20 @@ public class Electro_MoonPuzzle : MonoBehaviour
 
     private void onLeaveRangeCameraResetFinish()
     {
-        currentState = PuzzleState.Interactable;
+        if (currentState == PuzzleState.InPuzzle)
+        {
+            currentState = PuzzleState.Interactable;
+        }
+        myPlayerMovement.setEnableMovement(true);
+
     }
 
-    public bool isPuzzleSolved()
-    {
-        return myCircuit.switch_Or_left.isElectroSwitchOn()
-            && myCircuit.switch_Or_right.isElectroSwitchOn();
-    }
 
     private void PlayVFXAt(Transform gateTransform)
     {
         GameObject DisplayGateVFX = Instantiate(GateVFX, gateTransform.position, gateTransform.rotation);
         DisplayGateVFX.transform.SetParent(gateTransform);
         DisplayGateVFX.GetComponent<ParticleSystem>().Play();
-    }
-
-
-    private bool nand(bool a, bool b)
-    {
-        return !(a&&b);
-    }
-
-    private bool or(bool a, bool b)
-    {
-        return a || b;
     }
 
     private void updateCircuit()
@@ -216,22 +218,14 @@ public class Electro_MoonPuzzle : MonoBehaviour
         lightAnimator.SetTrigger("GoIdle");
     }
 
-    private void PlayCenterAnim()
-    {
-        centerCircuitAnimator.SetTrigger("PlayAnim");
-
-    }
-
     public void LeftMoonCircuitAnimEnds()
     {
         isLeftAnimEnds = true;
-        //PlayCenterAnim();
     }
 
     public void RightMoonCircuitAnimEnds()
     {
         isRightAnimEnds = true;
-        //PlayCenterAnim();
     }
 
     private IEnumerator WaitAndPlayLightAnim()
@@ -266,7 +260,6 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         isLeftCircuitAnimPlaying = false;
                         myCircuit.switch_Or_left.setInteractionEnabled(true);
                         myCircuit.switch_Or_right.setInteractionEnabled(true);
-                        cancelEffects();
                     }
                     else
                     {
@@ -285,7 +278,6 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         isRightCircuitAnimPlaying = false;
                         myCircuit.switch_nand_right.setInteractionEnabled(true);
                         myCircuit.switch_nand_left.setInteractionEnabled(true);
-                        cancelEffects();
                     }
                     else
                     {
@@ -304,12 +296,13 @@ public class Electro_MoonPuzzle : MonoBehaviour
                     {
                         isCenterCircuitAnimPlaying = false;
                         cancelEffects();
+                        isPuzzleSolved = false;
                     }
                     else
                     {
-                        isCenterCircuitAnimPlaying = true;
-                        PlayVFXAt(myCircuit.logicGateCenter.transform);
                         centerCircuitAnimator.SetTrigger("PlayAnim");
+                        isCenterCircuitAnimPlaying = true;
+                        PlayVFXAt(myCircuit.logicGateCenter.transform);                        
                         myCircuit.switch_nand_right.setInteractionEnabled(false);
                         myCircuit.switch_nand_left.setInteractionEnabled(false);
                         myCircuit.switch_Or_left.setInteractionEnabled(false);

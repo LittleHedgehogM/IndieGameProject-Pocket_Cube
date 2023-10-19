@@ -75,19 +75,25 @@ public class Electro_Puzzle : MonoBehaviour
     bool isLeftSwitchOn; //= myCircuit.switch_Left.isElectroSwitchOn();
     bool isRightSwitchOn; //= myCircuit.switch_right.isElectroSwitchOn();
 
-    private bool isLeftAnimEnds;
-    private bool isRightAnimEnds;
+    //private bool isLeftAnimEnds;
+    //private bool isRightAnimEnds;
 
     private bool isCircuitAnimPlaying;
-
-    public void setInteractable()
+    private bool isPuzzleSolved = false;
+    public void setNotInteractable()
     {
-        if (currentState == PuzzleState.NonInteractable )
-        {
-            currentState = PuzzleState.Interactable;
-        }
+        currentState = PuzzleState.NonInteractable;
     }
-    
+
+    public void setIsPuzzleSolved()
+    {
+        isPuzzleSolved = true;
+    }
+    public bool getIsPuzzleSolved()
+    {
+        return isPuzzleSolved;
+    }
+
     private void OnEnable()
     {
         Electro_CollideChecker.EnterStarRange += EnterRange;
@@ -98,8 +104,9 @@ public class Electro_Puzzle : MonoBehaviour
         Electro_AnimController.StarRightCircuitAnimFinished  += RightStarCircuitAnimEnds;
         Electro_AnimController.StarCenterCircuitAnimFinished += CenterCircuitAnimEnds;
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
-
+        Electro_AnimController.StarPuzzleSolved += setIsPuzzleSolved;
     }
+
     private void OnDisable()
     {
         Electro_CollideChecker.EnterStarRange -= EnterRange;
@@ -110,6 +117,8 @@ public class Electro_Puzzle : MonoBehaviour
         Electro_AnimController.StarRightCircuitAnimFinished -= RightStarCircuitAnimEnds;
         Electro_AnimController.StarCenterCircuitAnimFinished -= CenterCircuitAnimEnds;
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
+        Electro_AnimController.StarPuzzleSolved -= setIsPuzzleSolved;
+
 
     }
 
@@ -120,9 +129,8 @@ public class Electro_Puzzle : MonoBehaviour
         myPlayerMovement = FindAnyObjectByType<Electro_PlayerMovement>();
         StarFinishIcon.GetComponent<Renderer>().enabled = false;
         isFirstTimeEnter = true;
-        isLeftAnimEnds = false;
-        isRightAnimEnds = false;
-        //isMiddleAnimEnds = false;
+        //isLeftAnimEnds = false;
+        //isRightAnimEnds = false;
     }
 
     public void EnterRange()
@@ -169,14 +177,14 @@ public class Electro_Puzzle : MonoBehaviour
 
     private void onLeaveRangeCameraResetFinish()
     {
-        currentState = PuzzleState.Interactable;
+        if (currentState == PuzzleState.InPuzzle)
+        {
+            
+            currentState = PuzzleState.Interactable;
+        }
+        myPlayerMovement.setEnableMovement(true);
     }
 
-    public bool isPuzzleSolved()
-    {
-        return myCircuit.switch_Left.isElectroSwitchOn() 
-            && myCircuit.switch_right.isElectroSwitchOn();
-    }
 
     private void PlayVFXAt(Transform gateTransform)
     {
@@ -212,13 +220,11 @@ public class Electro_Puzzle : MonoBehaviour
 
     public void LeftStarCircuitAnimEnds()
     {
-        isLeftAnimEnds = true;
         PlayCenterAnim();
     }
 
     public void RightStarCircuitAnimEnds()
     {
-        isRightAnimEnds = true;
         PlayCenterAnim();
     }
 
@@ -250,6 +256,7 @@ public class Electro_Puzzle : MonoBehaviour
                     myCircuit.switch_Left.setInteractionEnabled(true);
                     myCircuit.switch_right.setInteractionEnabled(true);
                     cancelEffects();
+                    isPuzzleSolved = false;
                 }
                 else
                 {

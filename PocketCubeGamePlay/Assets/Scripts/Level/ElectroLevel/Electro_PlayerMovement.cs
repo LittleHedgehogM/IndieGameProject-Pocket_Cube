@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class Electro_PlayerMovement : MonoBehaviour
 {
+    //Electro_Camera_Controller myCameraController;
 
     [SerializeField][Range(0, 5)] float playerMoveSpeed = 5.0f;
     [SerializeField] float rotationSpeed = 720f;
     [SerializeField] float translationTime = 1.0f;
-
+    [SerializeField]  Transform orientation;
     Vector3 currentmoveDirection;
     public static event Action TranslationFinish;
+
+
 
 
     private bool isMovementEnabled = true;
@@ -52,13 +55,9 @@ public class Electro_PlayerMovement : MonoBehaviour
     void Start()
     {
         currentmoveDirection = Vector3.zero;
+        //myCameraController = FindObjectOfType<Electro_Camera_Controller>();
+
     }
-
-    //public void Update()
-    //{
-    //    OnUpdate();
-    //}
-
 
     public Vector3 getPlayerCurrentPosition()
     {
@@ -75,12 +74,15 @@ public class Electro_PlayerMovement : MonoBehaviour
     {
         if (isMovementEnabled)
         {
-            // move
+
+            Vector3 viewDir = transform.position - new Vector3(Camera.main.transform.position.x, 
+                                transform.position.y, Camera.main.transform.position.z);
+            orientation.forward = viewDir.normalized;
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
+            Vector3 movementDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;/*new Vector3(horizontalInput, 0, verticalInput);*/
 
-            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
             movementDirection.Normalize();
 
             currentmoveDirection = movementDirection;

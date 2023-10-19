@@ -18,6 +18,11 @@ public class Electro_AnimController : MonoBehaviour
     public static event Action MoonRightCircuitAnimFinished;
     public static event Action MoonCenterCircuitAnimFinished;
 
+
+    public static event Action SunPuzzleSolved;
+    public static event Action MoonPuzzleSolved;
+    public static event Action StarPuzzleSolved;
+
     //==================================
     public void StarLeftAnimDone()
     {
@@ -65,4 +70,22 @@ public class Electro_AnimController : MonoBehaviour
     {
         MoonCenterCircuitAnimFinished?.Invoke();
     }
+
+
+    //====================================
+    public void SetSunPuzzleSolved()
+    {
+        SunPuzzleSolved?.Invoke();
+    }
+
+    public void SetMoonPuzzleSolved()
+    {
+        MoonPuzzleSolved?.Invoke();
+    }
+
+    public void SetStarPuzzleSolved()
+    {
+        StarPuzzleSolved.Invoke();
+    }
+
 }

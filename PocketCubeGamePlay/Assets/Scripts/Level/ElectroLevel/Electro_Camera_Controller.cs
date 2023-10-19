@@ -135,9 +135,6 @@ public class Electro_Camera_Controller : MonoBehaviour
             }
             
             mainCam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(startSize, endSize, t);
-
-            //print("ZoomIn" + targetCam.name);
-
             yield return null;
         }
 
@@ -165,12 +162,8 @@ public class Electro_Camera_Controller : MonoBehaviour
 
             if (isLookAtTarget)
             {
-              mainCam.transform.LookAt(CameraLookAtTarget);
-
+                mainCam.transform.LookAt(CameraLookAtTarget);
             }
-
-
-
             yield return null;
         }
 
