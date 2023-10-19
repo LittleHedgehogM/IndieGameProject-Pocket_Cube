@@ -14,15 +14,15 @@ public class FourierColorChanger : MonoBehaviour
 
     public float lerpTime;
     [SerializeField] private Color goalColor;
-    [SerializeField] bool isBridgeActive;
+    //[SerializeField] bool isBridgeActive;
 
     
     private float targetPoint;
     private Material material;
-    public GameObject bridge;
+    //public GameObject bridge;
 
     private bool levelEnter = false;
-    private bool isLevelPass = false;
+    public bool isLevelPass = false;
     private int levelFirstEnter = 0;
     private bool pushTransitions = false;
 
@@ -34,14 +34,10 @@ public class FourierColorChanger : MonoBehaviour
     {
         material = GetComponent<Renderer>().material;
         
-        bridge.SetActive(false);   
+        //bridge.SetActive(false);   
         
         
         
-        
-    }
-    private void Start()
-    {
         
     }
 
@@ -118,8 +114,8 @@ public class FourierColorChanger : MonoBehaviour
         if (levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
         {
             isLevelPass = true;
-            bridge.SetActive(true);
-            //print(this.gameObject.name + "pass");
+            
+            print(this.gameObject.name + "pass");
         }
 
 
@@ -191,7 +187,7 @@ public class FourierColorChanger : MonoBehaviour
         {
             
             levelEnter = true;
-            //print("Player Enter");
+            print("Player Enter");
             if ( levelFirstEnter == 0)
             {
                 levelFirstEnter++;
