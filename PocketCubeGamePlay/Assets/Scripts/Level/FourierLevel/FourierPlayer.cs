@@ -84,7 +84,7 @@ public class FourierPlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Area"))
         {
-            if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y.ToString("f1") == "0.0")
+            if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y <= 0.1)
             {
                 jumpPS.Play();
                 jumpSFX.Post(gameObject);
