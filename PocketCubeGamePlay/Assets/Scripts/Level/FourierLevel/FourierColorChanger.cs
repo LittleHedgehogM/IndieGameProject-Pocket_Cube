@@ -187,7 +187,7 @@ public class FourierColorChanger : MonoBehaviour
         {
             
             levelEnter = true;
-            //print("Player Enter");
+            print("Player Enter");
             if ( levelFirstEnter == 0)
             {
                 levelFirstEnter++;
