@@ -10,7 +10,7 @@ public class FourierCameraController : MonoBehaviour
     [SerializeField] private float Axis_X_Scaler;
     [SerializeField] private float Axis_Y_Scaler;
 
-
+    [SerializeField] private FourierPlayer playerMovement;
 
     [SerializeField] Vector3 CameraLookAtTarget;
 
@@ -22,6 +22,11 @@ public class FourierCameraController : MonoBehaviour
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         MainCamInitPosition = mainCam.transform.position;
         //MainCamInitRotation = mainCam.transform.rotation;
+    }
+
+    void Update()
+    {
+        onUpdateCameraWithPlayerMovement(playerMovement.getMovementDirection());
     }
 
     public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)

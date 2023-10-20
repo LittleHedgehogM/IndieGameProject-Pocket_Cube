@@ -13,8 +13,8 @@ public class MainMenuPanel : BasePanel
     //public Button CollectionBtn;
     public Button CreditBtn;
     public Button QuitBtn;
-    private StartSceneCameraController StartSceneCameraController;
-    private GameObject CameraController;
+    //private StartSceneCameraController StartSceneCameraController;
+    //private GameObject CameraController;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,12 +26,23 @@ public class MainMenuPanel : BasePanel
         QuitBtn.onClick.AddListener(OnQuitBtn);
         
     }
+    private void awake()
+    {
+        if(PlayerPrefs.GetInt("Level") == 0)
+        {
+            StartBtn.GetComponent<TextMeshProUGUI>().text = "Start Game";
+        }
+        else if(PlayerPrefs.GetInt("Level") > 0)
+        {
+            StartBtn.GetComponent<TextMeshProUGUI>().text = "Continue";
+        }
+    }
 
     private void Start()
     {
         string panelTittle = gameObject.name;
         Tittle.text = panelTittle;
-        CameraController = GameObject.Find("CameraController");
+        //CameraController = GameObject.Find("CameraController");
         
     }
 
@@ -40,9 +51,23 @@ public class MainMenuPanel : BasePanel
     public void OnStartBtn()
     {
         
+
         //print("OnStartBtn");
-        UIManager.Instance.OpenPanel(UIConst.LevelMapPanel);
-        CameraController.SendMessage("MoveToLevelScene");
+        switch (PlayerPrefs.GetInt("Level"))
+        {
+            /*case 0:
+                LevelManager.Instance.LoadScene();
+                break;*/
+            case 1:
+                LevelManager.Instance.LoadScene("NewtonLevel_GPP_Test");
+                break;
+            case 2:
+                break;
+            case 3:
+                LevelManager.Instance.LoadScene("Level_Fourier");
+                break;
+        }
+
         ClosePanel();
     }
 

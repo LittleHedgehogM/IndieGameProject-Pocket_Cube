@@ -185,13 +185,13 @@ public class FourierColorChanger : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            
+            print(levelFirstEnter + gameObject.name);
             levelEnter = true;
-            print("Player Enter" + gameObject.name);
-            if ( levelFirstEnter == 0)
+            //print("Player Enter" + gameObject.name);
+            /*if ( levelFirstEnter == 0)
             {
                 levelFirstEnter++;
-            }                 
+            }  */               
         }
     }
     private void OnCollisionExit(Collision col)
@@ -199,7 +199,7 @@ public class FourierColorChanger : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             levelEnter = false;
-            print("Player Exit" + gameObject.name);
+            //print("Player Exit" + gameObject.name);
             if (levelFirstEnter == 0)
             {
                 levelFirstEnter++;
