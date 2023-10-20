@@ -77,6 +77,8 @@ public class FourierPlayer : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+
     }
 
     
@@ -84,7 +86,7 @@ public class FourierPlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Area"))
         {
-            if (Input.GetKeyDown(KeyCode.Space) && myRigidbody.velocity.y <= 0.1)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 jumpPS.Play();
                 jumpSFX.Post(gameObject);

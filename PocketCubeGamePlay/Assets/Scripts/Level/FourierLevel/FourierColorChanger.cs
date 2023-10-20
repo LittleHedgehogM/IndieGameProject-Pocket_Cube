@@ -187,7 +187,7 @@ public class FourierColorChanger : MonoBehaviour
         {
             
             levelEnter = true;
-            print("Player Enter");
+            print("Player Enter" + gameObject.name);
             if ( levelFirstEnter == 0)
             {
                 levelFirstEnter++;
@@ -199,7 +199,7 @@ public class FourierColorChanger : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             levelEnter = false;
-            print("Player Exit");
+            print("Player Exit" + gameObject.name);
             if (levelFirstEnter == 0)
             {
                 levelFirstEnter++;
