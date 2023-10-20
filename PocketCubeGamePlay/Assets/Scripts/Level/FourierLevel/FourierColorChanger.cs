@@ -29,6 +29,7 @@ public class FourierColorChanger : MonoBehaviour
     /*[Header("Off: Color change on playerEnter | On: Color change on GameStart")]
     [SerializeField]*/
     //public int transitionOnStart;
+    [SerializeField] private GameObject levelExit;
 
     void Awake()
     {
@@ -114,7 +115,7 @@ public class FourierColorChanger : MonoBehaviour
         if (levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
         {
             isLevelPass = true;
-            
+            levelExit.SetActive(false);
             print(this.gameObject.name + "pass");
         }
 

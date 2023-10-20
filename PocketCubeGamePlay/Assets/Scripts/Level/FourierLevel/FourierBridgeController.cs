@@ -10,7 +10,13 @@ public class FourierBridgeController : MonoBehaviour
 
     [SerializeField] GameObject bridge_2;
     [SerializeField] FourierColorChanger level_2;
-    [SerializeField] FourierColorChanger level_3; 
+    [SerializeField] FourierColorChanger level_3;
+
+    //[Header("Level Obstacle")]
+    //[SerializeField] GameObject obstacle_1;
+    //[SerializeField] GameObject obstacle_2;
+    //[SerializeField] GameObject obstacle_3;
+
     
     void Start()
     {
@@ -26,11 +32,13 @@ public class FourierBridgeController : MonoBehaviour
         if (level_1.isLevelPass && !bridge_1.activeSelf)
         {
             bridge_1.SetActive(true);
+            //obstacle_1.SetActive(false);
         }
 
         if (level_2.isLevelPass && level_3.isLevelPass && !bridge_2.activeSelf)
         {
             bridge_2.SetActive(true);
+            //obstacle_2.SetActive(false);
         }
 
         
