@@ -2314,8 +2314,8 @@ Transform:
   m_GameObject: {fileID: 844795102}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6532815, y: 0.2705981, z: 0.27059802, w: -0.65328145}
-  m_LocalPosition: {x: -0.10625672, y: 0.7224231, z: -2.8356452}
-  m_LocalScale: {x: -198.49037, y: -321.62064, z: -32.21898}
+  m_LocalPosition: {x: -0.10625672, y: 0.73, z: -2.8356452}
+  m_LocalScale: {x: -198.49037, y: -321.62064, z: -48.157707}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 514019003}
@@ -4454,6 +4454,7 @@ GameObject:
   - component: {fileID: 1707659646953837739}
   - component: {fileID: 6086799572414104817}
   - component: {fileID: 6086799572414104818}
+  - component: {fileID: 6086799572414104819}
   m_Layer: 0
   m_Name: polt01
   m_TagString: Area
@@ -7242,6 +7243,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7222047448857504609, guid: f4fec09400779604a9a6bf7dd32f0d57, type: 3}
+--- !u!114 &6086799572414104819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363567934809744457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6137953143095680263
 GameObject:
   m_ObjectHideFlags: 0

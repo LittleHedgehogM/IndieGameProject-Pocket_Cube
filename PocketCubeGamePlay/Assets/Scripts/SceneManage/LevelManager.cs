@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
+    [SerializeField] private int _loadingTime;
 
     private PlayerData playerData;
 
@@ -42,7 +43,7 @@ public class LevelManager : MonoBehaviour
         _loaderCanvas.SetActive(true);
 
         do{
-            await Task.Delay(100);
+            await Task.Delay(_loadingTime);
 
             _progressBar.fillAmount = scene.progress;
         }while (scene.progress < 0.9f);

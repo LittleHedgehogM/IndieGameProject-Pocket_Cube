@@ -26,24 +26,24 @@ public class MainMenuPanel : BasePanel
         QuitBtn.onClick.AddListener(OnQuitBtn);
         
     }
-    private void awake()
-    {
-        if(PlayerPrefs.GetInt("Level") == 0)
-        {
-            StartBtn.GetComponent<TextMeshProUGUI>().text = "Start Game";
-        }
-        else if(PlayerPrefs.GetInt("Level") > 0)
-        {
-            StartBtn.GetComponent<TextMeshProUGUI>().text = "Continue";
-        }
-    }
+    
 
     private void Start()
     {
         string panelTittle = gameObject.name;
         Tittle.text = panelTittle;
         //CameraController = GameObject.Find("CameraController");
-        
+        if (PlayerPrefs.GetInt("Level") == 0)
+        {
+            print("start");
+            StartBtn.GetComponent<TextMeshProUGUI>().text = "Start Game";
+        }
+        else if (PlayerPrefs.GetInt("Level") > 0)
+        {
+            print("Continue");
+            StartBtn.GetComponent<TextMeshProUGUI>().text = "Continue";
+        }
+
     }
 
     // Update is called once per frame

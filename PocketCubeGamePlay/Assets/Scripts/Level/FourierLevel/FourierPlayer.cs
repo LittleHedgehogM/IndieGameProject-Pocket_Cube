@@ -22,6 +22,8 @@ public class FourierPlayer : MonoBehaviour
     public AK.Wwise.Event jumpSFX;
     [SerializeField] private ParticleSystem jumpPS;
 
+    private bool jumpSwitch = false ;
+
 
 
     void Start()
@@ -43,7 +45,24 @@ public class FourierPlayer : MonoBehaviour
         return transform.position;
     }
 
-    private void FixedUpdate()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && jumpSwitch)
+        {
+            
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                print("Space Down");
+                jumpPS.Play();
+                jumpSFX.Post(gameObject);
+
+                //jump
+                myRigidbody.velocity = Vector3.up * jumpStrength;
+            }
+        }
+    }
+
+    void FixedUpdate()
     {
         // gravity adjust
         myRigidbody.useGravity = useGravity;
@@ -78,22 +97,33 @@ public class FourierPlayer : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
+        //jump
+        /*if (Input.GetKeyDown(KeyCode.Space) && jumpSwitch)
+        {
+            jumpPS.Play();
+            jumpSFX.Post(gameObject);
 
+            //jump
+           *//* myRigidbody.velocity = Vector3.up * jumpStrength;
+        }*/
+
+        
     }
-
     
-    private void OnTriggerStay(Collider col)
+    void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Area"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                jumpPS.Play();
-                jumpSFX.Post(gameObject);
+            jumpSwitch = true;
+                /*if (Input.GetKeyDown(KeyCode.Space))
+                {
+                print("Space Down");
+                    jumpPS.Play();
+                    jumpSFX.Post(gameObject);
 
-                //jump
-                myRigidbody.velocity = Vector3.up * jumpStrength;
-            }
+                    //jump
+                    myRigidbody.velocity = Vector3.up * jumpStrength;
+                }*/
         }
     }
 
