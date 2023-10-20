@@ -6,25 +6,13 @@ public class Origin_SphereRotator : MonoBehaviour
 {
 
     [SerializeField] Camera mainCam;
-
-    private GameObject checkCollision()
-    {
-        GameObject hitObject = null;
-        RaycastHit hit;
-        Ray ray;
-        ray = mainCam.ScreenPointToRay(Input.mousePosition);
-
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
-        {
-            hitObject = hit.collider.gameObject;
-            print("Hit Object" + hitObject.name);
-        }
-        return hitObject;
-    }
-
+    [SerializeField] Quaternion targetQuaternion;
+    [SerializeField] Animator sphereAnimator;
     Vector2 mouseDownPos;
     Vector2 mouseUpPos;
     private bool isSphereHit  = false;
+
+    private bool enableRotation = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,35 +23,50 @@ public class Origin_SphereRotator : MonoBehaviour
     void Update()
     {
 
-        GameObject hitObject = null;
-        RaycastHit hit;
-        Ray ray;
-        ray = mainCam.ScreenPointToRay(Input.mousePosition);
-
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
+        if (enableRotation)
         {
-            hitObject = hit.collider.gameObject;
-            if (hitObject != null && hitObject.gameObject.name == "SphereCollider")
+            GameObject hitObject = null;
+            RaycastHit hit;
+            Ray ray;
+            ray = mainCam.ScreenPointToRay(Input.mousePosition);
+
+            if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
             {
-                mouseDownPos = mainCam.ScreenToViewportPoint(Input.mousePosition); 
-                isSphereHit = true;
+                hitObject = hit.collider.gameObject;
+                if (hitObject != null && hitObject.gameObject.name == "SphereCollider")
+                {
+                    mouseDownPos = mainCam.ScreenToViewportPoint(Input.mousePosition); 
+                    isSphereHit = true;
+                }
             }
+
+            if (Input.GetMouseButton(0) && isSphereHit)
+            {
+                mouseUpPos = mainCam.ScreenToViewportPoint(Input.mousePosition);
+                Vector3 direction =  mouseUpPos- mouseDownPos;  
+                transform.rotation = Quaternion.Euler(direction.y*100, -direction.x * 100, 0) * transform.rotation;
+
+                mouseDownPos = mainCam.ScreenToViewportPoint(Input.mousePosition);
+
+                float angleDiff = Quaternion.Angle(transform.rotation, targetQuaternion);
+                print(angleDiff);
+                if (angleDiff <= 1.5f )
+                {
+                    print("Reach Target angle" + angleDiff);
+                    enableRotation = false;
+                }
+
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                isSphereHit = false;
+            }
+
         }
-
-
-        if (Input.GetMouseButton(0) && isSphereHit)
+        else 
         {
-            mouseUpPos = mainCam.ScreenToViewportPoint(Input.mousePosition);
-            Vector3 direction =  mouseUpPos- mouseDownPos;  
-            transform.rotation = Quaternion.Euler(direction.y*100, -direction.x * 100, 0) * transform.rotation;
-
-            mouseDownPos = mainCam.ScreenToViewportPoint(Input.mousePosition);
+            
         }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            isSphereHit = false;
-        }
-
     }
 }
