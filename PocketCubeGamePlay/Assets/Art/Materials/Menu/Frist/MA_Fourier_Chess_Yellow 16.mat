@@ -152,7 +152,7 @@ Material:
     - _ReflectOffset005: 1.24129
     - _ReflectOffset2: 0.5333898
     - _ReflectOffset3: 2
-    - _ReflectPow: 0.57058823
+    - _ReflectPow: 0.372
     - _ShadowContribution: 0.7272412
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -165,13 +165,13 @@ Material:
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.8426399, b: 1, a: 1}
+    - _Color0: {r: 0.7264151, g: 0.7264151, b: 0.2512756, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 1, g: 1, b: 1, a: 1}
-    - _ReflectOff01: {r: 1, g: 0.32704395, b: 0.66190857, a: 1}
-    - _diffusegradient01: {r: 0.55345905, g: 0.6959722, b: 1, a: 1}
-    - _diffusegradient02: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
+    - _Reflect02: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    - _ReflectOff01: {r: 0.7924528, g: 0.7734387, b: 0.19935913, a: 1}
+    - _diffusegradient01: {r: 0.30344197, g: 0.38679248, b: 0.122849144, a: 1}
+    - _diffusegradient02: {r: 0.5562076, g: 0.5754717, b: 0.4759404, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
   m_BuildTextureStacks: []

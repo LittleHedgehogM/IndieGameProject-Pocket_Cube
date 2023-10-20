@@ -108,10 +108,10 @@ Material:
     - _ASEOutlineWidth: 0
     - _B_BaseCellOffset: -0.61912626
     - _BaseCellOffset: -0.073514424
-    - _BaseCellOffset001: -0.09803539
+    - _BaseCellOffset001: -0.35
     - _BaseCellOffset002: 0.52056116
-    - _BaseCellOffset003: 0.4836274
-    - _BaseCellOffset004: 0.6377987
+    - _BaseCellOffset003: 0.438
+    - _BaseCellOffset004: 0.741
     - _BaseCellOffset1: -0.09570599
     - _BaseCellSharpness: 0.5383997
     - _BumpScale: 1
@@ -142,8 +142,8 @@ Material:
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
-    - _R_BaseCellOffset001: 2
-    - _R_BaseCellOffset002: 1
+    - _R_BaseCellOffset001: 0.74
+    - _R_BaseCellOffset002: 2.43
     - _R_BaseCellOffset1: 1.3479434
     - _R_BaseCellOffset2: 1.6729951
     - _R_BaseCellOffset3: 0.72279984
@@ -152,7 +152,7 @@ Material:
     - _ReflectOffset005: 1.24129
     - _ReflectOffset2: 0.5333898
     - _ReflectOffset3: 2
-    - _ReflectPow: 0.57058823
+    - _ReflectPow: 0.307
     - _ShadowContribution: 0.7272412
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -165,13 +165,13 @@ Material:
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0.23169568, g: 0.58915406, b: 0.6698113, a: 1}
+    - _Color0: {r: 0.8490566, g: 0.64559096, b: 0.16553926, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
     - _Reflect02: {r: 0.7254902, g: 0.7019608, b: 0.7372549, a: 1}
-    - _ReflectOff01: {r: 0.5911949, g: 1, b: 0.60664225, a: 1}
-    - _diffusegradient01: {r: 0.08627451, g: 0.19607845, b: 0.43137258, a: 1}
-    - _diffusegradient02: {r: 0.227451, g: 0.49803925, b: 0.9960785, a: 1}
+    - _ReflectOff01: {r: 1, g: 1, b: 0.38431376, a: 1}
+    - _diffusegradient01: {r: 0.38088614, g: 0.4528302, b: 0.10110356, a: 1}
+    - _diffusegradient02: {r: 0.6862745, g: 0.7686275, b: 0.34117648, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
   m_BuildTextureStacks: []

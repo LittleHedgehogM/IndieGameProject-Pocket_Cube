@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ma_ICe 2
-  m_Shader: {fileID: 4800000, guid: dfb3a5a8a2c76c5448d22ca773662cf5, type: 3}
+  m_Name: Ma_ICe 1
+  m_Shader: {fileID: 4800000, guid: 1915ed461a351fe448aebe7c41653c3f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _EMISSION
-  m_LightmapFlags: 5
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -64,17 +64,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: 4043a05d39af1aa4eb2717e1db3c205b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: -0.78, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
@@ -88,18 +80,16 @@ Material:
     - _DetailNormalMapScale: 1
     - _Distortion: 0.033
     - _DstBlend: 0
-    - _EdgeLength: 15
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeighRatioInPut: 10
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 2
     - _Parallax: 0.02
     - _ReflectOffset001: 10
-    - _ReflectOffset002: 1.6665542
+    - _ReflectOffset002: 1.67
     - _ReflectPow: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -115,14 +105,11 @@ Material:
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 1, g: 1, b: 1, a: 0}
-    - _Basecolor: {r: 1, g: 1, b: 1, a: 0.8509804}
+    - _Basecolor: {r: 1, g: 1, b: 1, a: 0.24705882}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PortalColor: {r: 0.93333334, g: 0.93333334, b: 0.93333334, a: 0}
     - _Reflect02: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectOff01: {r: 1, g: 1, b: 1, a: 0}
-    - _Transport: {r: 1, g: 1, b: 1, a: 0.7058824}
-    - _diffusegradient01: {r: 1, g: 1, b: 1, a: 1}
-    - _diffusegradient02: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_BuildTextureStacks: []
