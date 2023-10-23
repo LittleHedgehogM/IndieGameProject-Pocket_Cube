@@ -47,7 +47,7 @@ public class FourierCameraController : MonoBehaviour
             float x = 0;
             time += Time.deltaTime;
             x = time;
-            print(Mathf.Sin(x) * cameraMovement);
+            //print(Mathf.Sin(x) * cameraMovement);
             mainCam.transform.position += Camera_Sensitivity * (playerMovementVector + Mathf.Sin(x * cameraBeat) * cameraMovement);
             mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         }

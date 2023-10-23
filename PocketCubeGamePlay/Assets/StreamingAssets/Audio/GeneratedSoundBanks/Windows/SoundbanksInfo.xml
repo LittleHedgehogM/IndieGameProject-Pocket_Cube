@@ -26,7 +26,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{4D3421BB-33EB-731B-72A8-750B24B08CF3}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5FCADDFD-F281-AA0B-340B-2051B1A07588}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -106,7 +106,7 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{E85D3CFE-9BDA-D21E-7A07-4A1A9D656A24}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{5E5242B5-6F02-9CCA-1448-96961F97A28D}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -120,7 +120,7 @@
 				</File>
 				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶下降.wav</ShortName>
-					<CachePath>SFX/台阶下降_A566A362.wem</CachePath>
+					<CachePath>SFX/台阶下降_9FADFD58.wem</CachePath>
 				</File>
 				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>拿走.wav</ShortName>
@@ -128,11 +128,11 @@
 				</File>
 				<File Id="531784239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>镜头-拉近.wav</ShortName>
-					<CachePath>SFX/镜头-拉近_E9B475B3.wem</CachePath>
+					<CachePath>SFX/镜头-拉近_4E672B94.wem</CachePath>
 				</File>
 				<File Id="634861032" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>镜头-拉远.wav</ShortName>
-					<CachePath>SFX/镜头-拉远_69F35151.wem</CachePath>
+					<CachePath>SFX/镜头-拉远_22640D1E.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
@@ -140,7 +140,7 @@
 				</File>
 				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶上升.wav</ShortName>
-					<CachePath>SFX/台阶上升_4C21F071.wem</CachePath>
+					<CachePath>SFX/台阶上升_0243C708.wem</CachePath>
 				</File>
 				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>环境音效.wav</ShortName>
@@ -196,5 +196,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F9B66B02-345E-5B6F-200E-706B796DFBD1}</FileHash>
+	<FileHash>{447DE52A-848E-C9B5-9FA3-9C32359D5F01}</FileHash>
 </SoundBanksInfo>

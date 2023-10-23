@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../../../../../../PCGP_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../../PCGP_WwiseProject/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../../PCGP_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E8ACFD26-817E-0E52-2DEE-A7D5FFA3BE57}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5FCADDFD-F281-AA0B-340B-2051B1A07588}">
+			<ShortName>Level3</ShortName>
+			<Path>Level3.bnk</Path>
+			<Media>
+				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 3 Demo.wav</ShortName>
+					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
+				</File>
+				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_88ECCD51.wem</CachePath>
+				</File>
+				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_C7FB753E.wem</CachePath>
+				</File>
+				<File Id="644617565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Jump.wav</ShortName>
+					<CachePath>SFX/L3_Jump_D407F890.wem</CachePath>
+				</File>
+				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_Hit_bad.wav</ShortName>
+					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
+				</File>
+				<File Id="701432904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>How to make an Amazing Merry Go Round from Cardboard - Just5mins-1.wav</ShortName>
+					<CachePath>SFX/How to make an Amazing Merry Go Round from Cardboard - Just5mins-1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3_destroy.wav</ShortName>
+					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="945801009" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
+					<MediaRefs>
+						<MediaRef Id="743988009"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4190464387" Name="Play_L3_Hit_bad" DurationType="OneShot" DurationMin="0.25094482" DurationMax="0.25094482">
+					<MediaRefs>
+						<MediaRef Id="656407472"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="1.2151191" DurationMax="1.3252789">
+					<MediaRefs>
+						<MediaRef Id="228576140"/>
+						<MediaRef Id="371716904"/>
+						<MediaRef Id="531891813"/>
+						<MediaRef Id="644617565"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="945801009"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2158818887" Name="Play_Level3_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="217342985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3155709310" Name="Play_MerryGoRoundMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="701432904"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{5E5242B5-6F02-9CCA-1448-96961F97A28D}">
+			<ShortName>Level1</ShortName>
+			<Path>Level1.bnk</Path>
+			<Media>
+				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>放上金币.wav</ShortName>
+					<CachePath>SFX/放上金币_10C4C929.wem</CachePath>
+				</File>
+				<File Id="183830389" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>魔方掉下来.wav</ShortName>
+					<CachePath>SFX/魔方掉下来_10C4C929.wem</CachePath>
+				</File>
+				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>台阶下降.wav</ShortName>
+					<CachePath>SFX/台阶下降_9FADFD58.wem</CachePath>
+				</File>
+				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>拿走.wav</ShortName>
+					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
+				</File>
+				<File Id="531784239" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>镜头-拉近.wav</ShortName>
+					<CachePath>SFX/镜头-拉近_4E672B94.wem</CachePath>
+				</File>
+				<File Id="634861032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>镜头-拉远.wav</ShortName>
+					<CachePath>SFX/镜头-拉远_22640D1E.wem</CachePath>
+				</File>
+				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hover.wav</ShortName>
+					<CachePath>SFX/hover_10C4C929.wem</CachePath>
+				</File>
+				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>台阶上升.wav</ShortName>
+					<CachePath>SFX/台阶上升_0243C708.wem</CachePath>
+				</File>
+				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境音效.wav</ShortName>
+					<CachePath>SFX/环境音效_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="0.6073486" DurationMax="0.6073486">
+					<MediaRefs>
+						<MediaRef Id="531784239"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="0.5992514" DurationMax="0.5992514">
+					<MediaRefs>
+						<MediaRef Id="634861032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2914979601" Name="Play_Coin_add" DurationType="OneShot" DurationMin="1.9837868" DurationMax="1.9837868">
+					<MediaRefs>
+						<MediaRef Id="66674890"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3981976879" Name="Play_Coin_takeAway" DurationType="OneShot" DurationMin="1.0314059" DurationMax="1.0314059">
+					<MediaRefs>
+						<MediaRef Id="364095599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="2.2552154" DurationMax="2.2552154">
+					<MediaRefs>
+						<MediaRef Id="183830389"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1962302600" Name="Play_hover" DurationType="OneShot" DurationMin="0.12773243" DurationMax="0.12773243">
+					<MediaRefs>
+						<MediaRef Id="649493178"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869256356"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
+					<MediaRefs>
+						<MediaRef Id="232274638"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="731342154" Name="Play_Plate_Lift" DurationType="OneShot" DurationMin="2.0144258" DurationMax="2.0144258">
+					<MediaRefs>
+						<MediaRef Id="793816760"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{1088700A-8E4C-E01C-256B-63A6E5A02F9B}</FileHash>
+</SoundBanksInfo>

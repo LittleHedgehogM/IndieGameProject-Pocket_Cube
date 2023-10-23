@@ -9,6 +9,7 @@ public class MainMenuPanel : BasePanel
 {
     public TextMeshProUGUI Tittle;
     public Button StartBtn;
+    [SerializeField] private TMP_Text startText;
     public Button SettingBtn;
     //public Button CollectionBtn;
     public Button CreditBtn;
@@ -36,12 +37,12 @@ public class MainMenuPanel : BasePanel
         if (PlayerPrefs.GetInt("Level") == 0)
         {
             print("start");
-            StartBtn.GetComponent<TextMeshProUGUI>().text = "Start Game";
+            startText.text = "Start Game";
         }
         else if (PlayerPrefs.GetInt("Level") > 0)
         {
             print("Continue");
-            StartBtn.GetComponent<TextMeshProUGUI>().text = "Continue";
+            startText.text = "Continue";
         }
 
     }
@@ -55,13 +56,14 @@ public class MainMenuPanel : BasePanel
         //print("OnStartBtn");
         switch (PlayerPrefs.GetInt("Level"))
         {
-            /*case 0:
-                LevelManager.Instance.LoadScene();
-                break;*/
+            case 0:
+                LevelManager.Instance.LoadScene("First GPP");
+                break;
             case 1:
                 LevelManager.Instance.LoadScene("NewtonLevel_GPP_Test");
                 break;
             case 2:
+                LevelManager.Instance.LoadScene("ELE_GPP Temp");
                 break;
             case 3:
                 LevelManager.Instance.LoadScene("Level_Fourier");

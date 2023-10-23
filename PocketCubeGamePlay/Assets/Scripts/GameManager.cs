@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        UIManager.Instance.OpenPanel(UIConst.MainMenuPanel);
+        //UIManager.Instance.OpenPanel(UIConst.MainMenuPanel);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -23,9 +24,11 @@ public class GameManager : MonoBehaviour
     {
         if (!UIManager.Instance.panelDict.ContainsKey(UIConst.SettingPanel) && !UIManager.Instance.panelDict.ContainsKey(UIConst.MainMenuPanel) && Input.GetKeyDown(KeyCode.Escape) )
         {
-            print("ESC");
+            //print("ESC");
             UIManager.Instance.OpenPanel(UIConst.SettingPanel);
         }
+
+        
     }
 
     

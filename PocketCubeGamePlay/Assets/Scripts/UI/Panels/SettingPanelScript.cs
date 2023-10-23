@@ -7,13 +7,14 @@ using TMPro;
 public class SettingsPanel : BasePanel
 {
     public TextMeshProUGUI Tittle;
-    public Button BackBtn;
+    public Button ReturnBtn;
 
     // Start is called before the first frame update
     void Start()
     {
         string panelTittle = gameObject.name;
         Tittle.text = panelTittle;
+        ReturnBtn.onClick.AddListener(OnClickReturn);
     }
 
     // Update is called once per frame
@@ -23,5 +24,11 @@ public class SettingsPanel : BasePanel
         {
             ClosePanel();
         }
+    }
+
+    void OnClickReturn()
+    {
+        LevelManager.Instance.LoadScene("StartGame");
+        ClosePanel();
     }
 }

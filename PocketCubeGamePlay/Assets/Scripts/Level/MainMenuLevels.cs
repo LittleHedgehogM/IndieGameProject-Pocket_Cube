@@ -109,7 +109,7 @@ public class MainMenuLevels : MonoBehaviour
                     break;
 
                 case 1:
-                    Debug.Log("case 1" + fromRotation + toRotation1);
+                    //Debug.Log("case 1" + fromRotation + toRotation1);
                     transform.rotation = Quaternion.Lerp(fromRotation, toRotation1, Time.deltaTime * lerpSpeed);
 
                     break;
