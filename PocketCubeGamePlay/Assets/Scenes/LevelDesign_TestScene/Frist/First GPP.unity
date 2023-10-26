@@ -1185,12 +1185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sphere: {fileID: 1585254214}
   mainCam: {fileID: 269800691}
-  leftAxis: {fileID: 2102978252793285619}
-  rightAxis: {fileID: 4244914468441899662}
-  upAxis: {fileID: 238787442200254755}
-  downAxis: {fileID: 7954551063006319340}
-  angleGapX: 72
-  angleGapY: 36
+  leftAxis: {fileID: 7403543666167190058}
+  rightAxis: {fileID: 6514335277834762998}
+  upAxis: {fileID: 5055981500364875031}
+  downAxis: {fileID: 7954551063006319342}
   translationTime: 0.5
 --- !u!1 &817463617
 GameObject:
@@ -2660,6 +2658,7 @@ GameObject:
   - component: {fileID: 2238595119572644457}
   - component: {fileID: 5055981500364875029}
   - component: {fileID: 5055981500364875030}
+  - component: {fileID: 5055981500364875031}
   m_Layer: 0
   m_Name: UpAxis
   m_TagString: Untagged
@@ -2806,8 +2805,10 @@ GameObject:
   - component: {fileID: 4588362379033024398}
   - component: {fileID: 3240060093895664317}
   - component: {fileID: 6154495447189449966}
+  - component: {fileID: 6154495447189449967}
+  - component: {fileID: 6154495447189449968}
   m_Layer: 0
-  m_Name: "\u68F1\u89D2\u7403.040"
+  m_Name: RotationTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3922,6 +3923,7 @@ GameObject:
   - component: {fileID: 7403543666167190056}
   - component: {fileID: 6444947562633404714}
   - component: {fileID: 7403543666167190057}
+  - component: {fileID: 7403543666167190058}
   m_Layer: 0
   m_Name: LeftAxis
   m_TagString: Untagged
@@ -4604,7 +4606,7 @@ GameObject:
   - component: {fileID: 1530276708230104288}
   - component: {fileID: 2263895118828862281}
   m_Layer: 0
-  m_Name: "\u68F1\u89D2\u7403.042"
+  m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5917,6 +5919,7 @@ GameObject:
   - component: {fileID: 2032708981942667284}
   - component: {fileID: 6514335277834762996}
   - component: {fileID: 6514335277834762997}
+  - component: {fileID: 6514335277834762998}
   m_Layer: 0
   m_Name: RightAxis
   m_TagString: Untagged
@@ -6321,7 +6324,7 @@ GameObject:
   - component: {fileID: 6062835586728689161}
   - component: {fileID: 6025782077085467395}
   m_Layer: 0
-  m_Name: "\u68F1\u89D2\u7403.044"
+  m_Name: Layer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6540,6 +6543,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3729111536635181004, guid: 4294e14d8363ab642985a02cab54c7dc, type: 3}
+--- !u!114 &5055981500364875031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238787442200254755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54a5a09ac6837e4ab7b7d7be88d1975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 2
 --- !u!1 &5072443468155785699
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,7 +6770,7 @@ GameObject:
   - component: {fileID: 8848967315601100327}
   - component: {fileID: 3499681635197571614}
   m_Layer: 0
-  m_Name: "\u68F1\u89D2\u7403.043"
+  m_Name: Layer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7557,6 +7573,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6154495447189449967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460945284846688585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8733115e8b892ea429dc4ef9e072cd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorWhite: {r: 0.8980392, g: 0.8980392, b: 0.8980392, a: 0}
+  colorGreen: {r: 0.46908143, g: 0.6886792, b: 0.322683, a: 0}
+  animator: {fileID: 6154495447189449968}
+--- !u!95 &6154495447189449968
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460945284846688585}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95f2e81aa37d68649bbd5f1b23c9ec70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &6292547621509962822
 Transform:
   m_ObjectHideFlags: 0
@@ -7759,6 +7811,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4684058438356655415, guid: 4294e14d8363ab642985a02cab54c7dc, type: 3}
+--- !u!114 &6514335277834762998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244914468441899662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54a5a09ac6837e4ab7b7d7be88d1975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 1
 --- !u!23 &6532588127373821770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8508,6 +8573,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7664787492714953524, guid: 4294e14d8363ab642985a02cab54c7dc, type: 3}
+--- !u!114 &7403543666167190058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102978252793285619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54a5a09ac6837e4ab7b7d7be88d1975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 0
 --- !u!4 &7449186462616637513
 Transform:
   m_ObjectHideFlags: 0
@@ -8815,6 +8893,7 @@ GameObject:
   - component: {fileID: 3951333747075763269}
   - component: {fileID: 5269825894993762722}
   - component: {fileID: 7954551063006319341}
+  - component: {fileID: 7954551063006319342}
   m_Layer: 0
   m_Name: DownAxis
   m_TagString: Untagged
@@ -8844,6 +8923,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 9043639471205694055, guid: 4294e14d8363ab642985a02cab54c7dc, type: 3}
+--- !u!114 &7954551063006319342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954551063006319340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54a5a09ac6837e4ab7b7d7be88d1975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 3
 --- !u!4 &7980862347835901540
 Transform:
   m_ObjectHideFlags: 0
