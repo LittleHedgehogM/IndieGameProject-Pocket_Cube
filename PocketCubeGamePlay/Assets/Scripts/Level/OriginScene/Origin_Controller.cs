@@ -13,8 +13,6 @@ public class Origin_Controller : MonoBehaviour
     [SerializeField] private Origin_Axis upAxis;
     [SerializeField] private Origin_Axis downAxis;
 
-    //[SerializeField] [Range (30, 90)] float angleGapX;
-    //[SerializeField][Range(30, 90)] float angleGapY;
     Origin_RotationTarget myRotationTarget;
    
 
@@ -24,7 +22,7 @@ public class Origin_Controller : MonoBehaviour
 
     int leftAxisClickCount  = 0;
     int upAxisClickCount = 0;
-
+    Quaternion originAngle;
 
     enum PuzzleState
     {
@@ -40,7 +38,9 @@ public class Origin_Controller : MonoBehaviour
         currentState = PuzzleState.Phase_One;
         InitPhaseOne();
         enableInteraction = true;
-        
+        originAngle = Sphere.transform.rotation;
+
+
     }
 
     private void OnEnable()
@@ -133,23 +133,28 @@ public class Origin_Controller : MonoBehaviour
         downAxis. setActive(false);
     }
 
-    private void InitPhaseTwo()
+    private IEnumerator InitPhaseTwo()
     {
-        myRotationTarget.InitPhaseTwo();
         leftAxis.setActive(false);
         rightAxis.setActive(false);
+        yield return new WaitForSeconds(1);
+        myRotationTarget.InitPhaseTwo();      
         upAxis.setActive(true);
         downAxis.setActive(true);
     }
     
-    private void InitPhaseThree()
+    private IEnumerator InitPhaseThree()
     {
+        yield return new WaitForSeconds(1);
+
         myRotationTarget.InitPhaseThree();
         leftAxis.setActive(true);
         rightAxis.setActive(true);
         upAxis.setActive(true);
         downAxis.setActive(true);
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -170,7 +175,9 @@ public class Origin_Controller : MonoBehaviour
                       Debug.Log("FirstPhaseSolved");
                       myRotationTarget.FinishPhaseOne();
                       currentState = PuzzleState.Phase_Two;
-                      InitPhaseTwo();
+                      StartCoroutine(InitPhaseTwo());
+                      //InitPhaseTwo();
+                      
                  }
                  break;
             }
@@ -181,13 +188,14 @@ public class Origin_Controller : MonoBehaviour
                       Debug.Log("SecondPhaseSolved");
                       myRotationTarget.FinishPhaseTwo();
                       currentState = PuzzleState.Phase_Three;
-                      InitPhaseThree();
+                      StartCoroutine(InitPhaseThree());
+
                  }
                 break;
             }
             case PuzzleState.Phase_Three:
             {
-                if (leftAxisClickCount == 0 && upAxisClickCount == 0)
+                if (Quaternion.Angle(Sphere.transform.rotation, originAngle) <0.1f)
                 {
                       Debug.Log("ThirdPhaseSolved");
                       myRotationTarget.FinishPhaseThree();

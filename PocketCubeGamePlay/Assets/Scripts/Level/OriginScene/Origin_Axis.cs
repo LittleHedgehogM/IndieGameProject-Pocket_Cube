@@ -14,7 +14,7 @@ public class Origin_Axis : MonoBehaviour
         down,
     }
     [SerializeField] Axis axis;
-
+    [SerializeField] Animator animator;
 
     public static event Action LeftAxisClicked;
     public static event Action RightAxisClicked;
@@ -25,9 +25,11 @@ public class Origin_Axis : MonoBehaviour
     private float edgeLength = 0.003f;
     private GameObject go;
     private Material material;
+    bool isCurrentAxisActive = false;
+
     public void setActive(bool isActive)
     {
-         this.gameObject.SetActive(isActive);
+        this.gameObject.SetActive(isActive);
     }
 
     public GameObject getGameObject()
