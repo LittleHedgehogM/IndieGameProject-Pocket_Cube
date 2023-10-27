@@ -85,6 +85,8 @@ public class Electro_PlayerMovement : MonoBehaviour
 
             movementDirection.Normalize();
 
+            
+
             currentmoveDirection = movementDirection;
 
             transform.Translate(movementDirection * playerMoveSpeed * Time.deltaTime, Space.World);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Origin_RotationTarget : MonoBehaviour
     Material material_phase_one;
     Material material_phase_two;
     Material material_phase_three;
-
+    
     [SerializeField] private Color colorWhite;
     [SerializeField] private Color colorGreen;
     [SerializeField] private Animator animator;
@@ -20,6 +21,7 @@ public class Origin_RotationTarget : MonoBehaviour
     Color diffuse01;
     Color diffuse02;
 
+    public static Action TargetVanished;
 
     // Start is called before the first frame update
     void Awake()
@@ -89,5 +91,9 @@ public class Origin_RotationTarget : MonoBehaviour
         animator.Play("FirstSceneTargetAnimation");
     }
 
+    public void targetVanish()
+    {
+        TargetVanished?.Invoke();
+    }
 
 }

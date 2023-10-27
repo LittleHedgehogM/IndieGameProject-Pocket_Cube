@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Art/Models/test/sence/Game_FourierLevel.unity
     guid: 4a6b1b5c382515043b2034ad8df5ae48
   - enabled: 1
-    path: Assets/Scenes/Level/NewtonLevel_GPP_Test.unity
+    path: Assets/Scenes/LevelDesign_TestScene/NewtonLevel/NewtonLevel_GPP_Test.unity
     guid: 1dd2967978496c941a762d3a49c153b0
   - enabled: 1
     path: Assets/Scenes/GamePlay_TestScene/Apple.unity
@@ -27,9 +27,15 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelDesign_TestScene/MainMenu/StartGame.unity
     guid: 5b44a363de8296b4c8dd149b98e985a8
   - enabled: 1
-    path: Assets/Scenes/LevelDesign_TestScene/Frist/First GPP.unity
+    path: Assets/Scenes/LevelDesign_TestScene/OriginLevel/First GPP.unity
     guid: e1d3c4aa03c848f4793d0fae8f955fe4
   - enabled: 1
     path: Assets/Scenes/LevelDesign_TestScene/Electromagnetism/ELE_GPP Temp.unity
     guid: 443b0ec4fc10dc347ba11a6ad583ce38
+  - enabled: 1
+    path: Assets/Scenes/LevelDesign_TestScene/Cube/EM_Status/Status.unity
+    guid: b45e88ed8c9e4f24abc2f352dd2a45a8
+  - enabled: 1
+    path: Assets/Scenes/LevelDesign_TestScene/Cube/First_Character/Character.unity
+    guid: 16ebcfa8cc53d6e42a567fb5ad3b7105
   m_configObjects: {}

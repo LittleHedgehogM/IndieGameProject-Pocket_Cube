@@ -85,8 +85,9 @@ public class Electro_MoonPuzzle : MonoBehaviour
         currentState = PuzzleState.NonInteractable;
     }
 
-    private void restore(){
-        
+    public bool isInPuzzle() 
+    {
+        return currentState == PuzzleState.InPuzzle;
     }
 
     private void OnEnable()

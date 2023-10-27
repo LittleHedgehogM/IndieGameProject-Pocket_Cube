@@ -84,7 +84,10 @@ public class Electro_Puzzle : MonoBehaviour
     {
         currentState = PuzzleState.NonInteractable;
     }
-
+    public bool isInPuzzle()
+    {
+        return currentState == PuzzleState.InPuzzle;
+    }
     public void setIsPuzzleSolved()
     {
         isPuzzleSolved = true;
