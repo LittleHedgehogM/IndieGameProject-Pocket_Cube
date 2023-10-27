@@ -40,7 +40,6 @@ public class Origin_Controller : MonoBehaviour
         enableInteraction = true;
         originAngle = Sphere.transform.rotation;
 
-
     }
 
     private void OnEnable()
@@ -154,7 +153,17 @@ public class Origin_Controller : MonoBehaviour
         downAxis.setActive(true);
     }
 
-    
+    private IEnumerator InitSolved()
+    {
+        yield return new WaitForSeconds(1);
+        leftAxis.setActive(false);
+        rightAxis.setActive(false);
+        upAxis.setActive(false);
+        downAxis.setActive(false);
+        myRotationTarget.minimizeTargetAndshowCube();
+        // play Cube Animation
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -202,7 +211,7 @@ public class Origin_Controller : MonoBehaviour
                       currentState = PuzzleState.Solved;
                       //StartCoroutine(myRotationTarget.minimizeTargetAndshowCube());
                       //enableInteraction = false;
-                      myRotationTarget.minimizeTargetAndshowCube();
+                      StartCoroutine(InitSolved());
                 }
                 break;
             }

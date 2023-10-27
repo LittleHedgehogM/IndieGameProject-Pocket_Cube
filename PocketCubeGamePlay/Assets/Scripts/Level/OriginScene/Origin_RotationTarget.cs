@@ -22,7 +22,7 @@ public class Origin_RotationTarget : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         go = this.gameObject;
         material_phase_one = go.GetComponent<MeshRenderer>().materials[8];
@@ -36,8 +36,6 @@ public class Origin_RotationTarget : MonoBehaviour
     }
 
     public void InitPhaseOne(){
-
-
         material_phase_one.SetColor("_ReflectOff01", colorGreen);
         material_phase_one.SetColor("_Reflect02", colorGreen);
         material_phase_one.SetColor("_diffusegradient01", colorGreen);
