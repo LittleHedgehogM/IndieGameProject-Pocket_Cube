@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
@@ -16,7 +17,6 @@ public class Electro_GamePlay : MonoBehaviour
 
     private bool isScenePuzzleSolved;
 
-
     void Start()
     {
         myCameraController  = FindObjectOfType<Electro_Camera_Controller>();
@@ -34,6 +34,13 @@ public class Electro_GamePlay : MonoBehaviour
         if (!isScenePuzzleSolved) 
         {
              myPlayerMovement.OnUpdate();
+
+            //if (!starPuzzle.isInPuzzle() && !moonPuzzle.isInPuzzle() && !sunPuzzle.isInPuzzle())
+            //{
+            //    Vector3 playerMovementVector = myPlayerMovement.getMovementDirection().normalized;
+            //    myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
+            //}
+
              starPuzzle.UpdatePuzzle();
              sunPuzzle.UpdatePuzzle();
              moonPuzzle.UpdatePuzzle();
@@ -60,6 +67,8 @@ public class Electro_GamePlay : MonoBehaviour
             myPlayerMovement.OnUpdate();
             Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
             myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
+
+
         }
 
 

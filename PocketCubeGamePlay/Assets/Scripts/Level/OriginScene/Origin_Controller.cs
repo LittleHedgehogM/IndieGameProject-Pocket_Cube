@@ -12,6 +12,7 @@ public class Origin_Controller : MonoBehaviour
 
     [SerializeField] private Origin_Axis upAxis;
     [SerializeField] private Origin_Axis downAxis;
+    [SerializeField] private Origin_Cube cubeController;
 
     Origin_RotationTarget myRotationTarget;
    
@@ -48,6 +49,7 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.RightAxisClicked    +=isRightAxisClicked;
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
         Origin_Axis.DownAxisClicked     +=isDownAxisClicked;
+        Origin_RotationTarget.TargetVanished += PlayCubeAnim;
     }
 
     private void OnDisable()
@@ -56,6 +58,8 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.RightAxisClicked    -= isRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= isDownAxisClicked;
+        Origin_RotationTarget.TargetVanished -= PlayCubeAnim;
+
     }
 
     private void isLeftAxisClicked()
@@ -156,13 +160,14 @@ public class Origin_Controller : MonoBehaviour
     private IEnumerator InitSolved()
     {
         yield return new WaitForSeconds(1);
-        leftAxis.setActive(false);
-        rightAxis.setActive(false);
-        upAxis.setActive(false);
-        downAxis.setActive(false);
         myRotationTarget.minimizeTargetAndshowCube();
-        // play Cube Animation
     }
+
+    private void PlayCubeAnim()
+    {
+        cubeController.PlayAnim();
+    }
+
 
 
     // Update is called once per frame
