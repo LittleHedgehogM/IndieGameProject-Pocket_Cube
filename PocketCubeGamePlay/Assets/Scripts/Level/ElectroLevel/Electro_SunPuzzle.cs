@@ -59,6 +59,10 @@ public class Electro_SunPuzzle : MonoBehaviour
     [SerializeField] private GameObject StarPuzzleObject;
     [SerializeField] private GameObject CenterCubeObject;
 
+    [SerializeField] private Electro_MeshControl RightWall;
+    [SerializeField] private Electro_MeshControl StarPuzzle;
+    [SerializeField] private Electro_MeshControl MoonPuzzle;
+
 
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
@@ -138,6 +142,8 @@ public class Electro_SunPuzzle : MonoBehaviour
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
             CenterCubeObject.SetActive(false);
+
+
         }
 
     }
@@ -153,6 +159,9 @@ public class Electro_SunPuzzle : MonoBehaviour
             myCircuit.switch_not.setInteractionEnabled(false);
             CenterCubeObject.SetActive(true);
 
+            RightWall.Show();
+            StarPuzzle.Show();
+            MoonPuzzle.Show();
         }
     }
 
@@ -172,11 +181,16 @@ public class Electro_SunPuzzle : MonoBehaviour
                 PlayVFXAt(myCircuit.logicGateCenter.transform);
                 isFirstTimeEnter = false;
             }
-            isSwitchNandLeftOn   = myCircuit.switch_Nand_left.isElectroSwitchOn();
-            isSwitchNandRightOn  = myCircuit.switch_Nand_right.isElectroSwitchOn();
-            isSwitchNotOn       = myCircuit.switch_not.isElectroSwitchOn();
+            isSwitchNandLeftOn = myCircuit.switch_Nand_left.isElectroSwitchOn();
+            isSwitchNandRightOn = myCircuit.switch_Nand_right.isElectroSwitchOn();
+            isSwitchNotOn = myCircuit.switch_not.isElectroSwitchOn();
+
+            // hide 
+            RightWall.Hide();
+            StarPuzzle.Hide();
+            MoonPuzzle.Hide();
+
         }
-        
     }
 
     private void onLeaveRangeCameraResetFinish()
