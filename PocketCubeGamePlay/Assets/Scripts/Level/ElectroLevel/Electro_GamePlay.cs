@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
+using TMPro.Examples;
 using UnityEngine;
 
 public class Electro_GamePlay : MonoBehaviour
@@ -31,32 +32,26 @@ public class Electro_GamePlay : MonoBehaviour
     void Update()
     {
 
-        if (!isScenePuzzleSolved) 
+        if (!isScenePuzzleSolved)
         {
-             myPlayerMovement.OnUpdate();
-
-            //if (!starPuzzle.isInPuzzle() && !moonPuzzle.isInPuzzle() && !sunPuzzle.isInPuzzle())
-            //{
-            //    Vector3 playerMovementVector = myPlayerMovement.getMovementDirection().normalized;
-            //    myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
-            //}
-
+            myPlayerMovement.OnUpdate();
+            if (!starPuzzle.isInPuzzle() && !sunPuzzle.isInPuzzle() && !moonPuzzle.isInPuzzle())
+            {
+                Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
+                myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
+            } 
              starPuzzle.UpdatePuzzle();
              sunPuzzle.UpdatePuzzle();
              moonPuzzle.UpdatePuzzle();
 
-             if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())
+            
+            if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())
              {
-
-                  starPuzzle.LeaveRange();
                   starPuzzle.setNotInteractable();
-
-                  sunPuzzle.LeaveRange();
                   sunPuzzle.setNotInteractable();
-
-                  moonPuzzle.LeaveRange();
                   moonPuzzle.setNotInteractable();
 
+                  myCameraController.resetCam();
                   isScenePuzzleSolved = true;
                   centerAnimator.Play("AM_Center_Normal");
                   cubeAnimator.Play("AM_CenterCube_Finsh");
@@ -67,7 +62,6 @@ public class Electro_GamePlay : MonoBehaviour
             myPlayerMovement.OnUpdate();
             Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
             myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
-
 
         }
 

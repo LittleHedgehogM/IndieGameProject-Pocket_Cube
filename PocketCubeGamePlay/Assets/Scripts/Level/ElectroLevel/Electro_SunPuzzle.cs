@@ -83,7 +83,10 @@ public class Electro_SunPuzzle : MonoBehaviour
 
     public void setNotInteractable()
     {
-        currentState = PuzzleState.NonInteractable;    
+        currentState = PuzzleState.NonInteractable;
+        myCircuit.switch_Nand_left.setInteractionEnabled(false);
+        myCircuit.switch_Nand_right.setInteractionEnabled(false);
+        myCircuit.switch_not.setInteractionEnabled(false);
     }
     public bool isInPuzzle()
     {
@@ -141,12 +144,12 @@ public class Electro_SunPuzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.Interactable)
         {
+            currentState = PuzzleState.InPuzzle;
+
             myCameraController.showSunCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
             CenterCubeObject.SetActive(false);
-
-
         }
 
     }
@@ -161,7 +164,6 @@ public class Electro_SunPuzzle : MonoBehaviour
             myCircuit.switch_Nand_right.setInteractionEnabled(false);
             myCircuit.switch_not.setInteractionEnabled(false);
             CenterCubeObject.SetActive(true);
-
             RightWall.Show();
             StarPuzzle.Show();
             MoonPuzzle.Show();

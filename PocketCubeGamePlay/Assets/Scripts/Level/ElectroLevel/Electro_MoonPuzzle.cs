@@ -82,6 +82,10 @@ public class Electro_MoonPuzzle : MonoBehaviour
     private bool isPuzzleSolved = false;
     public void setNotInteractable()
     {
+        myCircuit.switch_Or_left.setInteractionEnabled(false);
+        myCircuit.switch_Or_right.setInteractionEnabled(false);
+        myCircuit.switch_nand_left.setInteractionEnabled(false);
+        myCircuit.switch_nand_right.setInteractionEnabled(false);
         currentState = PuzzleState.NonInteractable;
     }
 
@@ -139,11 +143,11 @@ public class Electro_MoonPuzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.Interactable)
         {
+            currentState = PuzzleState.InPuzzle;
             myCameraController.showMoonCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
             CenterCubeObject.SetActive(false);
-
         }
 
     }
@@ -158,7 +162,6 @@ public class Electro_MoonPuzzle : MonoBehaviour
             myCircuit.switch_Or_right.setInteractionEnabled(false);
             myCircuit.switch_nand_left.setInteractionEnabled(false);
             myCircuit.switch_nand_right.setInteractionEnabled(false);
-            // StarPuzzleObject.SetActive(true);
             CenterCubeObject.SetActive(true);
             LeftWallMeshControl.Show();
             StarPuzzleMeshControl.Show();

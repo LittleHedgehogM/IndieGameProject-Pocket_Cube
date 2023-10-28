@@ -82,6 +82,9 @@ public class Electro_Puzzle : MonoBehaviour
     private bool isPuzzleSolved = false;
     public void setNotInteractable()
     {
+        myCircuit.switch_Left.setInteractionEnabled(false);
+        myCircuit.switch_right.setInteractionEnabled(false);
+
         currentState = PuzzleState.NonInteractable;
     }
     public bool isInPuzzle()
@@ -140,6 +143,7 @@ public class Electro_Puzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.Interactable)
         {
+            currentState = PuzzleState.InPuzzle;
             myCameraController.showStarCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
@@ -154,6 +158,7 @@ public class Electro_Puzzle : MonoBehaviour
             myCameraController.resetCam();
             myCircuit.switch_Left.setInteractionEnabled(false);
             myCircuit.switch_right.setInteractionEnabled(false);
+            currentState = PuzzleState.Interactable;
         }     
     }
     
@@ -182,7 +187,6 @@ public class Electro_Puzzle : MonoBehaviour
     {
         if (currentState == PuzzleState.InPuzzle)
         {
-            
             currentState = PuzzleState.Interactable;
         }
         myPlayerMovement.setEnableMovement(true);

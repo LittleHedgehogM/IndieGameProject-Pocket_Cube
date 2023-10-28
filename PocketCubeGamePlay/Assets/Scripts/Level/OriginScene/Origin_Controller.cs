@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,14 @@ public class Origin_Controller : MonoBehaviour
     [SerializeField] private Origin_Axis upAxis;
     [SerializeField] private Origin_Axis downAxis;
     [SerializeField] private Origin_Cube cubeController;
-
-    Origin_RotationTarget myRotationTarget;
    
+    Origin_RotationTarget myRotationTarget;
+    public static Action DisableAllAxis;
 
     [SerializeField][Range(0.5f, 3f)]  private float translationTime;
+    [SerializeField] AnimationCurve translationCurve;
+
+    public static Action rotateFinish;
 
     bool enableInteraction = true;
 
@@ -101,7 +105,7 @@ public class Origin_Controller : MonoBehaviour
             currentUsedTime += Time.deltaTime;
             t = currentUsedTime / translationTime;
 
-            float targetAngle = Mathf.Lerp(0, angleGap, t);
+            float targetAngle = Mathf.Lerp(0, angleGap, translationCurve.Evaluate(t));
             float deltaAngle = targetAngle - currentAngle ;
             currentAngle = targetAngle ;
             Sphere.transform.RotateAround(Sphere.transform.position, Axis, isClockwise ? deltaAngle : -deltaAngle) ;
@@ -109,7 +113,7 @@ public class Origin_Controller : MonoBehaviour
             yield return null;
         }
         enableInteraction = true;
-
+        rotateFinish?.Invoke();
     }
 
     float currentUpGap = 108.0f;
@@ -168,8 +172,6 @@ public class Origin_Controller : MonoBehaviour
         cubeController.PlayAnim();
     }
 
-
-
     // Update is called once per frame
     void Update()
     {
@@ -177,9 +179,6 @@ public class Origin_Controller : MonoBehaviour
         {
             return;
         }
-        //GameObject hitObject = null;
-        //RaycastHit hit;
-        //Ray ray;
         switch (currentState)
         {
             case PuzzleState.Phase_One:
@@ -189,9 +188,7 @@ public class Origin_Controller : MonoBehaviour
                       Debug.Log("FirstPhaseSolved");
                       myRotationTarget.FinishPhaseOne();
                       currentState = PuzzleState.Phase_Two;
-                      StartCoroutine(InitPhaseTwo());
-                      //InitPhaseTwo();
-                      
+                      StartCoroutine(InitPhaseTwo());                      
                  }
                  break;
             }
@@ -214,16 +211,13 @@ public class Origin_Controller : MonoBehaviour
                       Debug.Log("ThirdPhaseSolved");
                       myRotationTarget.FinishPhaseThree();
                       currentState = PuzzleState.Solved;
-                      //StartCoroutine(myRotationTarget.minimizeTargetAndshowCube());
-                      //enableInteraction = false;
                       StartCoroutine(InitSolved());
+                      DisableAllAxis?.Invoke();
                 }
                 break;
             }
             case PuzzleState.Solved:
-            {
-                
-                
+            {                               
                 break;
             }
             default:

@@ -25,16 +25,33 @@ public class Origin_Axis : MonoBehaviour
     private float edgeLength = 0.003f;
     private GameObject go;
     private Material material;
-    bool isCurrentAxisActive = false;
-
+    bool isInteractable = true;
     public void setActive(bool isActive)
     {
         this.gameObject.SetActive(isActive);
     }
 
-    public GameObject getGameObject()
+    private void OnEnable()
     {
-        return go;
+        Origin_Controller.DisableAllAxis += setNotInteractable;
+        Origin_Controller.rotateFinish += setInteractable;
+    }
+
+    private void OnDisable()
+    {
+        Origin_Controller.DisableAllAxis -= setNotInteractable;
+        Origin_Controller.rotateFinish -= setInteractable;
+
+    }
+
+    public void setNotInteractable()
+    {
+        isInteractable = false;
+    }
+
+    public void setInteractable()
+    {
+        isInteractable = true;
     }
 
     void Start()
@@ -54,19 +71,20 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseExit()
     {
-        //material.SetFloat("_BaseCellOffset002", 0.5f);
         material.SetColor("_diffusegradient01", Color.white);
         material.SetFloat("_OutlineWidth", 0);
-
     }
 
     private void OnMouseUp()
     {
+        if (!isInteractable) {
+            return;
+        }
+
         switch (axis) 
         {
             case Axis.left:{
                  Debug.Log("Left Axis Hit");
-
                  LeftAxisClicked?.Invoke();
                  break;
             }
@@ -88,7 +106,9 @@ public class Origin_Axis : MonoBehaviour
                  DownAxisClicked?.Invoke();
                  break;
             }
+                
         }
+        isInteractable = false;
     }
 
 }
