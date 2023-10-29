@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9381de0f26b35df43a82e54072ca5feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableFinish: 0
+  enableFinish: 1
   restoreAnimationTime: 1
   animationCurve:
     serializedVersion: 2
@@ -5290,31 +5290,31 @@ MonoBehaviour:
   FrontLeftDown:
     cubePiece: {fileID: 1816860653}
     position: {x: -0.5, y: -0.5, z: -0.5}
-    rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
   FrontRightUp:
     cubePiece: {fileID: 2055552223}
-    position: {x: -0.5, y: -0.5, z: 0.5}
+    position: {x: -0.5, y: 0.5, z: -0.5}
     rotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071064}
   FrontRightDown:
     cubePiece: {fileID: 755391431}
     position: {x: 0.5, y: -0.5, z: -0.5}
-    rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
   BackLeftUp:
     cubePiece: {fileID: 2140227218}
     position: {x: 0.5, y: 0.5, z: 0.5}
     rotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071064}
   BackLeftDown:
     cubePiece: {fileID: 660483508}
-    position: {x: -0.5, y: 0.5, z: -0.5}
-    rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+    position: {x: -0.5, y: -0.5, z: 0.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
   BackRightUp:
     cubePiece: {fileID: 2028261706}
-    position: {x: 0.5, y: -0.5, z: 0.5}
+    position: {x: 0.5, y: 0.5, z: -0.5}
     rotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071064}
   BackRightDown:
     cubePiece: {fileID: 888137246}
-    position: {x: 0.5, y: 0.5, z: -0.5}
-    rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+    position: {x: 0.5, y: -0.5, z: 0.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &1227900756
 Transform:
   m_ObjectHideFlags: 0
