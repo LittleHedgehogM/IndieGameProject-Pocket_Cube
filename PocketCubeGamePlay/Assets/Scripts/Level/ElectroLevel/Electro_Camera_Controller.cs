@@ -65,17 +65,17 @@ public class Electro_Camera_Controller : MonoBehaviour
 
     public bool isStarCam()
     {
-        return mainCam.transform.position == starCam.transform.position;
+        return Vector3.Distance(mainCam.transform.position, starCam.transform.position) < 0.001f;
     }
 
     public bool isSunCam()
     {
-        return mainCam.transform.position == sunCam.transform.position;
+        return Vector3.Distance(mainCam.transform.position, sunCam.transform.position) < 0.001f;
     }
 
     public bool isMoonCam()
     {
-        return mainCam.transform.position == moonCam.transform.position;
+        return Vector3.Distance(mainCam.transform.position, moonCam.transform.position) < 0.001f;
     }
 
     public void showStarCam()

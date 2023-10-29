@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class NewtonScenePlayController : MonoBehaviour
 {
@@ -199,6 +200,20 @@ public class NewtonScenePlayController : MonoBehaviour
             {
                 myPlayerMovement.OnUpdate();
                 // is press key Enter, transition to apple scene
+                
+                RaycastHit hit;
+                Ray ray;
+                ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
+
+                if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit))
+                {
+                    GameObject hitObject = hit.collider.gameObject;
+                    if (hitObject == Cube)
+                    {                        
+                        FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+                    }
+
+                }
             }
 
         }

@@ -178,15 +178,17 @@ public class Electro_MoonPuzzle : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
-                myCircuit.switch_Or_left.setInteractionEnabled(true);
-                myCircuit.switch_Or_right.setInteractionEnabled(true);
-                myCircuit.switch_nand_left.setInteractionEnabled(true);
-                myCircuit.switch_nand_right.setInteractionEnabled(true);
+
                 PlayVFXAt(myCircuit.logicGateLeft.transform);
                 PlayVFXAt(myCircuit.logicGateRight.transform);
                 PlayVFXAt(myCircuit.logicGateCenter.transform);
                 isFirstTimeEnter = false;
             }
+
+            myCircuit.switch_Or_left.setInteractionEnabled(true);
+            myCircuit.switch_Or_right.setInteractionEnabled(true);
+            myCircuit.switch_nand_left.setInteractionEnabled(true);
+            myCircuit.switch_nand_right.setInteractionEnabled(true);
             isLSwitchOrLeftOn = myCircuit.switch_Or_left.isElectroSwitchOn();
             isLSwitchOrRightOn = myCircuit.switch_Or_right.isElectroSwitchOn();
             isRSwitchNandLeftOn = myCircuit.switch_nand_left.isElectroSwitchOn();
