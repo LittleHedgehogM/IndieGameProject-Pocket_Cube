@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,9 +10,18 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
-    [SerializeField] private GameObject _loaderCanvas;
-    [SerializeField] private Image _progressBar;
+    //[SerializeField] private GameObject _loaderCanvas;
+    //[SerializeField] private Image _progressBar;
     [SerializeField] private int _loadingTime;
+
+    //[SerializeField] private Image transitionImg;
+    //[SerializeField] private float transitionSpeed;
+    //private float alpha;
+    //[SerializeField] 
+    [SerializeField]private Animator _animatorTransition;
+    
+
+    [SerializeField] private Image titleIMG;
 
     private PlayerData playerData;
 
@@ -26,31 +36,49 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //_animatorTransition = GameObject.Find("CrossFade").GetComponent<Animator>();
+        
     }
 
     void Start()
     {
         CreatePlayerData();
+        //print(_animatorTransition);
     }
 
     
     public async void LoadScene(string sceneName)
     {
-        
+        titleIMG.sprite = Resources.Load<Sprite>(sceneName);
+        _animatorTransition.Play("Crossfade_Start");       
+       
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
-
-        _loaderCanvas.SetActive(true);
-
-        do{
+       
+        //_loaderCanvas.SetActive(true);
+        
+        do
+        {
             await Task.Delay(_loadingTime);
 
-            _progressBar.fillAmount = scene.progress;
+            //_progressBar.fillAmount = scene.progress;
+
         }while (scene.progress < 0.9f);
 
+       
         scene.allowSceneActivation = true;
-        _loaderCanvas.SetActive(false);
+        _animatorTransition.SetTrigger("End");
+        //_animatorTransition.Play("Entry");
+        //_animatorTransition = GameObject.Find("CrossFade").GetComponent<Animator>();
 
+        //_animatorTransition.Play("Entry");
+
+        //_loaderCanvas.SetActive(false);
+
+        //print(_animatorTransition);
+
+        //Sync Data
         if (playerData.level < 1 && sceneName == "NewtonLevel_GPP_Test")
         {
             playerData.level = 1;
@@ -69,7 +97,14 @@ public class LevelManager : MonoBehaviour
             SaveData();
             //print("Reached Level" + playerData.level);
         }
-        print("Current level status :" + playerData.level);
+
+        
+
+        
+
+      
+
+
     }
 
 
@@ -90,4 +125,8 @@ public class LevelManager : MonoBehaviour
 
         Debug.Log(playerData.level);
     }
+
+
+    //协程
+    
 }
