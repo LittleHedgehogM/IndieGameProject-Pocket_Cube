@@ -10,7 +10,7 @@ public class RotateWholeCubeManager : MonoBehaviour
     [SerializeField] [Range(0,1)] private float mouseSenstivity;
     private Vector3 previousMousePosition;
     //Vector2 mouseDelta;
-    CubePlayCameraController cameraColler;
+    CubePlayCameraController cameraController;
 
 
     //public GameObject SwipeTarget;
@@ -21,7 +21,7 @@ public class RotateWholeCubeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraColler = FindObjectOfType<CubePlayCameraController>();
+        cameraController = FindObjectOfType<CubePlayCameraController>();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class RotateWholeCubeManager : MonoBehaviour
 
     public bool InitPosition()
     {
-        previousMousePosition = cameraColler.ScreenToViewportPoint(Input.mousePosition);
+        previousMousePosition = cameraController.ScreenToViewportPoint(Input.mousePosition);
         return SelectFace.GetMouseRayHitFace(Input.mousePosition) !=null;
     }
 
@@ -41,9 +41,9 @@ public class RotateWholeCubeManager : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            Vector3 direction = previousMousePosition - cameraColler.ScreenToViewportPoint(Input.mousePosition);
+            Vector3 direction = previousMousePosition - cameraController.ScreenToViewportPoint(Input.mousePosition);
             direction *= mouseSenstivity;
-            cameraColler.RotateMainCamera(direction);
+            cameraController.RotateMainCamera(direction);
 
             //cam.transform.position = Vector3.zero;
             //cam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 180);
@@ -56,7 +56,7 @@ public class RotateWholeCubeManager : MonoBehaviour
         }
 
         //previousMousePosition = Input.mousePosition;
-        previousMousePosition = cameraColler.ScreenToViewportPoint(Input.mousePosition); ;
+        previousMousePosition = cameraController.ScreenToViewportPoint(Input.mousePosition); ;
     }
 
 
@@ -69,9 +69,9 @@ public class RotateWholeCubeManager : MonoBehaviour
         }
         else if (Input.GetMouseButton(1))
         {
-            Vector3 direction = previousMousePosition - cameraColler.ScreenToViewportPoint(Input.mousePosition);
+            Vector3 direction = previousMousePosition - cameraController.ScreenToViewportPoint(Input.mousePosition);
             direction *= mouseSenstivity;
-            cameraColler.RotateMainCamera(direction);
+            cameraController.RotateMainCamera(direction);
 
             //cam.transform.position = Vector3.zero;
             //cam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 180);
@@ -84,7 +84,7 @@ public class RotateWholeCubeManager : MonoBehaviour
         }
 
         //previousMousePosition = Input.mousePosition;
-        previousMousePosition = cameraColler.ScreenToViewportPoint(Input.mousePosition); ;
+        previousMousePosition = cameraController.ScreenToViewportPoint(Input.mousePosition); ;
     }
 
     //void SwipeWholeCube()

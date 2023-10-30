@@ -42,6 +42,8 @@ public class CubePlayCameraController : MonoBehaviour
     Vector3 translationRotateAxis;
     float translationRotateDegree = 0;
 
+    float currentCameraX;
+    float currentCameraY;
 
     //List<Vector3> candidateUpAxis;
 
@@ -92,28 +94,31 @@ public class CubePlayCameraController : MonoBehaviour
         mainCam.orthographic = true;
         currentUsedTime = 0;
 
-    }
-
-    private Vector3 getClosestUpAxis(List<Vector3> candidateUpAxis)
-    {
-        Vector3 cameraUp = mainCam.transform.up;
-
-        float minAngle = Mathf.Infinity;
-        Vector3 targetUpAxis = Vector3.zero;
-        foreach (Vector3 axis in candidateUpAxis)
-        {
-            float angle = Vector3.Angle(cameraUp, axis);
-            if (angle < minAngle)
-            {
-                targetUpAxis = axis;
-            }
-        }
-
-        // also find the minAngle
-
-        return targetUpAxis;
+        currentCameraX = initialCameraX;
+        currentCameraY = initialCameraY;
 
     }
+
+    //private Vector3 getClosestUpAxis(List<Vector3> candidateUpAxis)
+    //{
+    //    Vector3 cameraUp = mainCam.transform.up;
+
+    //    float minAngle = Mathf.Infinity;
+    //    Vector3 targetUpAxis = Vector3.zero;
+    //    foreach (Vector3 axis in candidateUpAxis)
+    //    {
+    //        float angle = Vector3.Angle(cameraUp, axis);
+    //        if (angle < minAngle)
+    //        {
+    //            targetUpAxis = axis;
+    //        }
+    //    }
+
+    //    // also find the minAngle
+
+    //    return targetUpAxis;
+
+    //}
 
     public void RotateMainCamera(Vector2 direction)
     {
@@ -127,13 +132,40 @@ public class CubePlayCameraController : MonoBehaviour
         cam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 180, Space.World);
         cam.transform.Translate(initialCameraPosition);
 
+        currentCameraX += direction.x;
+        currentCameraY += direction.y;
+
+        if (currentCameraX >1) {
+            currentCameraX -= 2 ;
+        }
+        else if (currentCameraX <-1){
+            currentCameraX += 2;
+        }
+
+
+        if (currentCameraY >1) {
+            currentCameraY -= 2;
+        }
+        else if(currentCameraY <-1)
+        {
+            currentCameraY += 2;
+        }
     }
 
     public void InitCameraResetTranslation()
     {
+
         currentUsedTime = 0;
         startPosition = mainCam.transform.position;
         startRotation = mainCam.transform.rotation;
+        currentRotationDegree = 0;
+
+
+        Vector2 currentPos = new Vector2(currentCameraX, currentCameraY);
+        Vector2 initPos = new Vector2(initialCameraX, initialCameraY);
+        resetCameraTime = Mathf.Clamp( 0.5f * (Vector2.Distance(currentPos, initPos))/0.3f, 0, 0.7f);
+
+
     }
 
     public bool ResetCamera()
@@ -181,11 +213,29 @@ public class CubePlayCameraController : MonoBehaviour
 
     private bool ResetCameraTo(Camera targetCamera)
     {
+        
         currentUsedTime += Time.deltaTime;
         float t = currentUsedTime / resetCameraTime;
 
-        mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, resetCameraCurve.Evaluate(t));
-        mainCam.transform.LookAt(PocketCube.transform, Vector3.up);
+        float targetCameraX = Mathf.Lerp(currentCameraX, initialCameraX, resetCameraCurve.Evaluate(t));
+        float targetCameraY = Mathf.Lerp(currentCameraY, initialCameraY, resetCameraCurve.Evaluate(t));
+
+        float deltaCameraX  = targetCameraX - currentCameraX;
+        float deltaCameraY = targetCameraY - currentCameraY;
+
+        mainCam.transform.position = Vector3.zero;
+        mainCam.transform.Rotate(new Vector3(1, 0, 0), deltaCameraY * 180);
+        mainCam.transform.Rotate(new Vector3(0, 1, 0), -deltaCameraX * 180, Space.World);
+        mainCam.transform.Translate(initialCameraPosition);
+
+        currentCameraX = targetCameraX;
+        currentCameraY = targetCameraY;
+
+        //Debug.Log("camera direction x= " + currentCameraX + ", y = " + currentCameraY);
+
+        //mainCam.transform.position = Vector3.Lerp(startPosition, targetCamera.transform.position, resetCameraCurve.Evaluate(t));
+        //mainCam.transform.LookAt(PocketCube.transform, Vector3.up);
+
         return t >= 1;
     }
 
@@ -249,7 +299,6 @@ public class CubePlayCameraController : MonoBehaviour
             float deltaAngle = angle - currentRotationDegree;
             mainCam.transform.RotateAround(PocketCube.transform.position, translationRotateAxis, deltaAngle);
             currentRotationDegree = angle;
-
 
             //float selfRotationAngle = Mathf.Lerp(0, selfRotationDegree, translationCurve.Evaluate(t));
             //float deltaSelfRotationAngle = selfRotationDegree - currentSelfRotationAngle;
