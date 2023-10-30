@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9381de0f26b35df43a82e54072ca5feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableFinish: 0
+  enableFinish: 1
   restoreAnimationTime: 1
   animationCurve:
     serializedVersion: 2
@@ -8728,7 +8728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9fd8d9d95064243b2dbf97d457ecc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: 0
+  NextLevel: 4
   transition: {fileID: 1499073464}
   transitionTime: 1
 --- !u!4 &2003641156
