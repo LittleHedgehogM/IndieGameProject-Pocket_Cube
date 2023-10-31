@@ -83,19 +83,20 @@ public class LevelManager : MonoBehaviour
         {
             playerData.level = 1;
             SaveData();
-            //print("Reached Level" + playerData.level);
+            print("Reached Level" + playerData.level);
         }
         else if(playerData.level < 2 && sceneName == "ELE_GPP Temp")
         {
             playerData.level = 2;
             SaveData();
+            print("Reached Level" + playerData.level);
         }
 
         else if(playerData.level < 3 && sceneName == "Level_Fourier")
         {
             playerData.level = 3;
             SaveData();
-            //print("Reached Level" + playerData.level);
+            print("Reached Level" + playerData.level);
         }
 
         

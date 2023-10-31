@@ -5,12 +5,26 @@ using UnityEngine.UI;
 
 public class SceneSelectorPanel : MonoBehaviour
 {
+    public static SceneSelectorPanel Instance;
     [SerializeField] private Button nextScene_Btn;
     [SerializeField] private GameObject panel;
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        
         nextScene_Btn.onClick.AddListener(OnNextSceneBtn);
     }
 
