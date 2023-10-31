@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static CubeInPlayPhase;
 
 public class CubePlayManager : MonoBehaviour
 {
@@ -46,6 +47,23 @@ public class CubePlayManager : MonoBehaviour
     }
 
 
+    public bool CanUseSkill(){
+
+        return currentCubePlayPhase == CubePlay.Play 
+            && myCubeInPlayPhase.GetCubePlayStatus() == CubePlayStatus.WaitForInput;
+    }
+
+
+    public bool CanRestoreDiagonalSkill(){
+        return currentCubePlayPhase == CubePlay.Play
+               && myCubeInPlayPhase.CanRestoreDiagional();
+    }
+
+    public bool CanRestoreCommutationSkill()
+    {
+        return currentCubePlayPhase == CubePlay.Play
+               && myCubeInPlayPhase.CanRestoreCommuation();
+    }
 
     private void OnEnable()
     {

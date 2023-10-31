@@ -165,12 +165,19 @@ public class CubePlayCameraController : MonoBehaviour
         Vector2 initPos = new Vector2(initialCameraX, initialCameraY);
         resetCameraTime = Mathf.Clamp( 0.5f * (Vector2.Distance(currentPos, initPos))/0.3f, 0, 0.7f);
 
-
     }
 
     public bool ResetCamera()
     {
         return ResetCameraTo(initialCam);
+    }
+
+    public void instantResetCam(){
+
+        mainCam.transform.position = initialCam.transform.position;
+        mainCam.transform.rotation = initialCam.transform.rotation;
+        //RotateCamera(mainCam, new Vector2(initialCameraX, initialCameraY));
+
     }
 
     public void SetTargetCameraToRight()
@@ -211,11 +218,57 @@ public class CubePlayCameraController : MonoBehaviour
         // display finish button 
     }
 
+
+    //public IEnumerator ResetCameraToInitialCam()
+    //{
+
+    //    float t = 0;
+    //    currentUsedTime = 0;
+    //    startPosition = mainCam.transform.position;
+    //    startRotation = mainCam.transform.rotation;
+    //    currentRotationDegree = 0;
+
+    //    Vector2 currentPos = new Vector2(currentCameraX, currentCameraY);
+    //    Vector2 initPos = new Vector2(initialCameraX, initialCameraY);
+    //    resetCameraTime = Mathf.Clamp(0.5f * (Vector2.Distance(currentPos, initPos)) / 0.3f, 0, 0.7f);
+        
+    //    while (t<=1 && resetCameraTime != 0f)
+    //    {
+    //        currentUsedTime += Time.deltaTime;
+    //        t = currentUsedTime / resetCameraTime;
+
+    //        float targetCameraX = Mathf.Lerp(currentCameraX, initialCameraX, resetCameraCurve.Evaluate(t));
+    //        float targetCameraY = Mathf.Lerp(currentCameraY, initialCameraY, resetCameraCurve.Evaluate(t));
+
+    //        float deltaCameraX = targetCameraX - currentCameraX;
+    //        float deltaCameraY = targetCameraY - currentCameraY;
+
+    //        mainCam.transform.position = Vector3.zero;
+    //        mainCam.transform.Rotate(new Vector3(1, 0, 0), deltaCameraY * 180);
+    //        mainCam.transform.Rotate(new Vector3(0, 1, 0), -deltaCameraX * 180, Space.World);
+    //        mainCam.transform.Translate(initialCameraPosition);
+
+    //        currentCameraX = targetCameraX;
+    //        currentCameraY = targetCameraY;
+    //        yield return null;
+    //    }
+
+    //    yield return null;
+    //}
+
+
+
+
     private bool ResetCameraTo(Camera targetCamera)
     {
         
+        if (resetCameraTime == 0)
+        {
+            return true;
+        }
+    
         currentUsedTime += Time.deltaTime;
-        float t = currentUsedTime / resetCameraTime;
+        float t = currentUsedTime / resetCameraTime;   
 
         float targetCameraX = Mathf.Lerp(currentCameraX, initialCameraX, resetCameraCurve.Evaluate(t));
         float targetCameraY = Mathf.Lerp(currentCameraY, initialCameraY, resetCameraCurve.Evaluate(t));

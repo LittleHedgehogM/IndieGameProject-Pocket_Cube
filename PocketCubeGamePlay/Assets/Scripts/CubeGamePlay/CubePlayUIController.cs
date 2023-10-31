@@ -39,7 +39,6 @@ public class CubePlayUIController : MonoBehaviour
     public static event Action onRestoreCommutationCheckPoint;
 
 
-
     private int _swipeCount;
     public int SwipeCount
     {
@@ -135,16 +134,19 @@ public class CubePlayUIController : MonoBehaviour
     
     public void clickDiagonalButton()
     {
-       isDiagonalApplied = !isDiagonalApplied;
-       if (isDiagonalApplied)
+
+       if (!isDiagonalApplied && CubePlayManager.instance.CanUseSkill())
        {
             onEnterDiagonalState?.Invoke();
             DiagonalButton.image.color = Color.grey;
+            isDiagonalApplied = true;
+
         }
-       else
+       else if (isDiagonalApplied && CubePlayManager.instance.CanRestoreDiagonalSkill())
        {
             onRestoreDiagonalCheckPoint?.Invoke();
             DiagonalButton.image.color = Color.white;
+            isDiagonalApplied = false;
 
         }
     }
@@ -156,17 +158,18 @@ public class CubePlayUIController : MonoBehaviour
 
     public void clickCommutationButton()
     {
-        isCommutationApplied = !isCommutationApplied;
-        if (isCommutationApplied)
+        //isCommutationApplied = !isCommutationApplied;
+        if (!isCommutationApplied && CubePlayManager.instance.CanUseSkill())
         {
             onEnterCommutationState?.Invoke();
             CommutationButton.image.color = Color.grey;
-
+            isCommutationApplied = true;
         }
-        else
+        else if (isCommutationApplied && CubePlayManager.instance.CanRestoreCommutationSkill())
         {
             onRestoreCommutationCheckPoint?.Invoke();
             CommutationButton.image.color = Color.white;
+            isCommutationApplied = false;
 
         }
     }
@@ -204,6 +207,10 @@ public class CubePlayUIController : MonoBehaviour
     private void CubeSolved()
     {
        FinishButton.gameObject.SetActive(true);
+       DiagonalButton.transform.localScale = Vector3.zero;
+       CommutationButton.transform.localScale = Vector3.zero;
+       ResetCameraButton.transform.localScale = Vector3.zero;
+       RestartButton.transform.localScale = Vector3.zero;
   
     }
 

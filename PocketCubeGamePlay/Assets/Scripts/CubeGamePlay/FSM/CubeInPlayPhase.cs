@@ -132,16 +132,23 @@ public class CubeInPlayPhase : GameplayPhase
         }
     }
 
+    public bool CanRestoreCommuation()
+    {
+        return currentPlayStatus == CubePlayStatus.WaitForInput || currentPlayStatus == CubePlayStatus.InCommutation;
+    }
 
+    public bool CanRestoreDiagional()
+    {
+        return currentPlayStatus == CubePlayStatus.WaitForInput || currentPlayStatus == CubePlayStatus.InDiagonal;
+    }
 
     public void RestoreCommutationCheckPoint()
     {
-        if (currentPlayStatus == CubePlayStatus.WaitForInput)
+        if (CanRestoreCommuation())
         {
 
             CubePlayCheckPoint.instance.loadCurrentStateCommutation();
-            myCubePlayCameraController.ResetCamera();
-
+            myCubePlayCameraController.instantResetCam();
             restoreFinish = false;
             StartCoroutine(startRestoreAnimation());
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
@@ -152,14 +159,13 @@ public class CubeInPlayPhase : GameplayPhase
 
     public void RestoreDiagonalCheckPoint()
     {
-        if (currentPlayStatus == CubePlayStatus.WaitForInput)
+        if (CanRestoreDiagional())
         {
             CubePlayCheckPoint.instance.loadCurrentStateDiagonal();
-            myCubePlayCameraController.ResetCamera();
-
-            restoreFinish = false;
+            myCubePlayCameraController.instantResetCam();
             StartCoroutine(startRestoreAnimation());
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
+            restoreFinish = false;
         }
     }
 
@@ -299,6 +305,7 @@ public class CubeInPlayPhase : GameplayPhase
 
     public override void onEnd()
     {
+        // set UI button invisible
 
     }
 
@@ -324,6 +331,8 @@ public class CubeInPlayPhase : GameplayPhase
             currentRotationDegree = angle;
             pocketCube.transform.RotateAround(pocketCube.transform.position, Vector3.up, deltaAngle);
             pocketCube.transform.localScale = Vector3.Lerp(startScale, endScale, animationCurve.Evaluate(t));
+
+            // restore camera at the same time
 
             yield return null;
 
