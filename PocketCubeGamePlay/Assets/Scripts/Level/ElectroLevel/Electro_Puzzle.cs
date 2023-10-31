@@ -66,7 +66,8 @@ public class Electro_Puzzle : MonoBehaviour
     [SerializeField] 
     private Transform playerTargetPosPuzzle;
 
-
+    [SerializeField]
+    private Electro_MeshControl starMeshControl;
 
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
@@ -82,6 +83,7 @@ public class Electro_Puzzle : MonoBehaviour
     private bool isPuzzleSolved = false;
     public void setNotInteractable()
     {
+        starMeshControl.Show();
         myCircuit.switch_Left.setInteractionEnabled(false);
         myCircuit.switch_right.setInteractionEnabled(false);
 

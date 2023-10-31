@@ -15,6 +15,9 @@ public class Electro_GamePlay : MonoBehaviour
     [SerializeField] private Electro_MoonPuzzle moonPuzzle;
     [SerializeField] private Animator centerAnimator;
     [SerializeField] private Animator cubeAnimator;
+    [SerializeField] private Electro_MeshControl rightWallMesh;
+    [SerializeField] private Electro_MeshControl leftWallMesh;
+    [SerializeField] private Electro_MeshControl centerMesh;
 
     private bool isScenePuzzleSolved;
 
@@ -47,6 +50,9 @@ public class Electro_GamePlay : MonoBehaviour
             
             if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())
              {
+                  rightWallMesh.Show();
+                  leftWallMesh.Show();
+                  centerMesh.Show();
                   starPuzzle.setNotInteractable();
                   sunPuzzle.setNotInteractable();
                   moonPuzzle.setNotInteractable();

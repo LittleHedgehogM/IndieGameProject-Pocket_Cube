@@ -3633,6 +3633,9 @@ MonoBehaviour:
   moonPuzzle: {fileID: 848035033}
   centerAnimator: {fileID: 719207244}
   cubeAnimator: {fileID: 1065386219}
+  rightWallMesh: {fileID: 977283965}
+  leftWallMesh: {fileID: 1866066775}
+  centerMesh: {fileID: 1413908111}
 --- !u!1 &747957091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,6 +4131,7 @@ MonoBehaviour:
   LeftWallMeshControl: {fileID: 1866066775}
   StarPuzzleMeshControl: {fileID: 1139508398}
   SunPuzzleMeshControl: {fileID: 1186792826}
+  MoonPuzzleMeshControl: {fileID: 1710484020}
 --- !u!1001 &858592680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5140,6 +5144,7 @@ MonoBehaviour:
   GateVFX: {fileID: 707507397}
   puzzleRangeCollider: {fileID: 747957096}
   playerTargetPosPuzzle: {fileID: 972316336}
+  starMeshControl: {fileID: 1139508398}
 --- !u!1 &970165854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90a3024106a7dbb47a9e417ce9621d1c, type: 3}
@@ -8057,6 +8062,7 @@ MonoBehaviour:
   RightWall: {fileID: 977283965}
   StarPuzzle: {fileID: 1139508398}
   MoonPuzzle: {fileID: 1710484020}
+  SunPuzzleMeshControl: {fileID: 1186792826}
 --- !u!1 &1380443376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0df8c4ecb3c63cf418d9cc9a042355ac, type: 3}
@@ -8258,6 +8264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413908110}
+  - component: {fileID: 1413908111}
   m_Layer: 0
   m_Name: CenterCube
   m_TagString: Untagged
@@ -8282,6 +8289,18 @@ Transform:
   - {fileID: 1881590346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1413908111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413908109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff77df601909571429289bbb7a410bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1424848773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11184,7 +11203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9fd8d9d95064243b2dbf97d457ecc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: 7
+  NextLevel: 6
   transition: {fileID: 1599938460}
   transitionTime: 1
 --- !u!4 &1961046531

@@ -62,6 +62,7 @@ public class Electro_SunPuzzle : MonoBehaviour
     [SerializeField] private Electro_MeshControl RightWall;
     [SerializeField] private Electro_MeshControl StarPuzzle;
     [SerializeField] private Electro_MeshControl MoonPuzzle;
+    [SerializeField] private Electro_MeshControl SunPuzzleMeshControl;
 
 
     bool isFirstTimeEnter;
@@ -83,6 +84,7 @@ public class Electro_SunPuzzle : MonoBehaviour
 
     public void setNotInteractable()
     {
+        SunPuzzleMeshControl.Show();
         currentState = PuzzleState.NonInteractable;
         myCircuit.switch_Nand_left.setInteractionEnabled(false);
         myCircuit.switch_Nand_right.setInteractionEnabled(false);

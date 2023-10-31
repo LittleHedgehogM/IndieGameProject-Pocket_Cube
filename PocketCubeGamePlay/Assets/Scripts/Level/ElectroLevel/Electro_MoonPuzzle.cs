@@ -63,7 +63,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
     [SerializeField] private Electro_MeshControl StarPuzzleMeshControl;
     [SerializeField] private Electro_MeshControl SunPuzzleMeshControl;
 
-
+    [SerializeField] private Electro_MeshControl MoonPuzzleMeshControl;
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
     Electro_PlayerMovement myPlayerMovement;
@@ -82,6 +82,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
     private bool isPuzzleSolved = false;
     public void setNotInteractable()
     {
+        MoonPuzzleMeshControl.Show();
         myCircuit.switch_Or_left.setInteractionEnabled(false);
         myCircuit.switch_Or_right.setInteractionEnabled(false);
         myCircuit.switch_nand_left.setInteractionEnabled(false);
