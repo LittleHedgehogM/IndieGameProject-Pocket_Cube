@@ -7481,6 +7481,7 @@ GameObject:
   - component: {fileID: 4030935555799737092}
   - component: {fileID: 1963539837377978546}
   - component: {fileID: 460334171910989176}
+  - component: {fileID: 4286479509974722579}
   m_Layer: 0
   m_Name: backboard_L002
   m_TagString: Untagged
@@ -7488,6 +7489,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4286479509974722579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286479509974722578}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.109346874, y: 0.019209165, z: 0.008797813}
+  m_Center: {x: -0.0006245175, y: -0.05347359, z: -0.0048483983}
 --- !u!4 &4465675461836127579
 Transform:
   m_ObjectHideFlags: 0
@@ -7696,6 +7718,7 @@ GameObject:
   - component: {fileID: 2713120618015800865}
   - component: {fileID: 8521033568302945426}
   - component: {fileID: 7735280438000255682}
+  - component: {fileID: 8521033568302945427}
   m_Layer: 0
   m_Name: backboard_R002
   m_TagString: Untagged
@@ -8418,6 +8441,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516210112265435671}
   m_Mesh: {fileID: -1474820277592858565, guid: 4f4b60879036b9643974ea993dbcd4dc, type: 3}
+--- !u!65 &8521033568302945427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516210112265435671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.102481335, y: 0.01549432, z: 0.010112609}
+  m_Center: {x: -0.0026588163, y: -0.055330977, z: -0.0050562774}
 --- !u!4 &8629960860275430775
 Transform:
   m_ObjectHideFlags: 0
