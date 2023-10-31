@@ -29,11 +29,9 @@ public class GameManager : MonoBehaviour
     {
         if (!UIManager.Instance.panelDict.ContainsKey(UIConst.SettingPanel) && !(SceneManager.GetActiveScene().name == "StartGame") && Input.GetKeyDown(KeyCode.Escape) )
         {
-            //print("ESC");
+            print("ESC");
             UIManager.Instance.OpenPanel(UIConst.SettingPanel);
         }
-
-        
     }
 
     

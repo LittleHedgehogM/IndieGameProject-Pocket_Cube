@@ -20,6 +20,11 @@ public class SettingsPanel : BasePanel
         ReturnBtn.onClick.AddListener(OnClickReturn);
         ExitBtn.onClick.AddListener(OnClickExit);
         ResetDataBtn.onClick.AddListener(OnClickResetData);
+
+        if(SceneManager.GetActiveScene().name == "StartGame")
+        {
+            ReturnBtn.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +53,10 @@ public class SettingsPanel : BasePanel
         PlayerPrefs.SetInt("Level", 0);
         print(PlayerPrefs.GetInt("Level"));
         ClosePanel();
+        if (SceneManager.GetActiveScene().name == "StartGame")
+        {
+            UIManager.Instance.ClosePanel(UIConst.MainMenuPanel);
+        }
         SceneManager.LoadScene("StartGame");
     }
 }

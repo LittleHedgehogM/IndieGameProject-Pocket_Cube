@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: 386413734}
   - component: {fileID: 386413733}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1929,8 +1929,8 @@ MonoBehaviour:
   mainCam: {fileID: 269800691}
   cameraMoveRange: 4
   Camera_Sensitivity: 0.01
-  Axis_X_Scaler: 1
-  Axis_Y_Scaler: 0.3
+  Axis_X_Scaler: 0.8
+  Axis_Y_Scaler: 0.1
   playerMovement: {fileID: 640771307}
   CameraLookAtTarget: {x: 0, y: 1.7, z: 6.87}
   cameraMovement: {x: 0, y: 0.3, z: 0}
