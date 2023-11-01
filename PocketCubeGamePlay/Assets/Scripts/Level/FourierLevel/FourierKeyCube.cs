@@ -41,7 +41,7 @@ public class FourierKeyCube : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (levelPass)
+        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
         {
             FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
         }

@@ -52,7 +52,7 @@ public class FourierPlayer : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                print("Space Down");
+                //print("Space Down");
                 jumpPS.Play();
                 jumpSFX.Post(gameObject);
 
