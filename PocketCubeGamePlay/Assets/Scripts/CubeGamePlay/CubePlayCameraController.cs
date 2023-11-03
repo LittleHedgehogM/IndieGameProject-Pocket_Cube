@@ -256,7 +256,9 @@ public class CubePlayCameraController : MonoBehaviour
     //    yield return null;
     //}
 
-
+    public Camera getMainCam(){
+        return mainCam;
+    }
 
 
     private bool ResetCameraTo(Camera targetCamera)

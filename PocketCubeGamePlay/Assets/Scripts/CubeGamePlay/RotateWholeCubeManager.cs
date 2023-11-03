@@ -33,7 +33,7 @@ public class RotateWholeCubeManager : MonoBehaviour
     public bool InitPosition()
     {
         previousMousePosition = cameraController.ScreenToViewportPoint(Input.mousePosition);
-        return SelectFace.GetMouseRayHitFace(Input.mousePosition) !=null;
+        return true;/*SelectFace.GetMouseRayHitFace(Input.mousePosition) !=null;*/
     }
 
 

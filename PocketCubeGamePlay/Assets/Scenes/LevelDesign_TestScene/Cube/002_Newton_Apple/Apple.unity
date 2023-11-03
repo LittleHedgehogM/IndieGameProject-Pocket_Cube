@@ -3397,6 +3397,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   cubeTranslationTime: 0.5
   rotateSpeed: 90
+  mouseSenstivity: 0.506
 --- !u!114 &771636596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3927,6 +3928,7 @@ GameObject:
   - component: {fileID: 992353649}
   - component: {fileID: 992353648}
   - component: {fileID: 992353650}
+  - component: {fileID: 992353651}
   m_Layer: 0
   m_Name: PocketCube
   m_TagString: Untagged
@@ -4245,6 +4247,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcdebd5ef71682498938a6f70023b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &992353651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992353635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1635628825be72f488dd38d3709b45e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrontLeftUpIce: {fileID: 7393391728474601188}
+  FrontLeftDownIce: {fileID: 1500837998370536160}
+  FrontRightUpIce: {fileID: 522492681121405661}
+  FrontRightDownIce: {fileID: 1878522359068099329}
+  BackLeftUpIce: {fileID: 5438480192797384582}
+  BackLeftDownIce: {fileID: 1283143709944727072}
+  BackRightUpIce: {fileID: 5563513265428282082}
+  BackRightDownIce: {fileID: 4110417837257759847}
+  lerpTime: 0.5
 --- !u!1 &994103981
 GameObject:
   m_ObjectHideFlags: 0
