@@ -14,8 +14,7 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
     [SerializeField] private Camera Cam_LookAt_Scale_R;
     [SerializeField] private float Camera_Sensitivity;
     [SerializeField] Vector3 CameraLookAtTarget;
-    [SerializeField] private float translationTime;
-
+    [SerializeField][Range(0.5f, 1)] private float translationTime;
     [SerializeField][Range (4, 6)] private float cameraMoveRange;
     
     public static event Action zoomInFinish;
@@ -73,18 +72,12 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
 
     public void showLeftEye()
     {
-        //mainCam.enabled = false;
-        //Cam_LookAt_Eye_L.enabled = true;
-        //Cam_LookAt_Scale_L.enabled = true;
+
         StartCoroutine(ZoomInTo(Cam_LookAt_Eye_L));
     }
 
     public void showRightEye()
     {
-        //mainCam.enabled = false;
-        //Cam_LookAt_Eye_R.enabled = true;
-        //Cam_LookAt_Scale_R.enabled = true;
-
         StartCoroutine(ZoomInTo(Cam_LookAt_Eye_R));
     }
 
@@ -133,13 +126,9 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
             currentUsedTime += Time.deltaTime;
             t = currentUsedTime / translationTime;
 
-            
-
             mainCam.transform.position = Vector3.Lerp(startPosition, targetCam.transform.position, t);
             mainCam.transform.rotation = Quaternion.Lerp(startRotation, targetCam.transform.rotation, t);
             mainCam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(startSize, endSize, t);
-
-            //print("ZoomIn" + targetCam.name);
 
             yield return null;
         }
