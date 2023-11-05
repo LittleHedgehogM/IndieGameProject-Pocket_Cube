@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FourierColorChanger : MonoBehaviour
@@ -30,11 +31,12 @@ public class FourierColorChanger : MonoBehaviour
     [SerializeField]*/
     //public int transitionOnStart;
     [SerializeField] private GameObject levelExit;
+    //[SerializeField] private GameObject levelEnterCol;
 
     void Awake()
     {
         material = GetComponent<Renderer>().material;
-        
+        //levelEnterCol.SetActive(false);
         //bridge.SetActive(false);   
         
         
@@ -187,14 +189,26 @@ public class FourierColorChanger : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             print(levelFirstEnter + gameObject.name);
-            levelEnter = true;
-            //print("Player Enter" + gameObject.name);
-            /*if ( levelFirstEnter == 0)
-            {
-                levelFirstEnter++;
-            }  */               
+            levelEnter = true;           
         }
     }
+
+
+   /* private IEnumerator ActivateEnterCol()
+    {
+        yield return new WaitForSeconds(1);
+        if (levelEnter)
+        {
+            levelEnterCol.SetActive(true);
+        }
+            
+    }*/
+
+    /*private void ActivateEnterCol()
+    {
+        levelEnterCol.SetActive(true);
+    }*/
+
     private void OnCollisionExit(Collision col)
     {
         if (col.gameObject.CompareTag("Player"))

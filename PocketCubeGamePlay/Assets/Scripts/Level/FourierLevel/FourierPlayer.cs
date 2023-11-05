@@ -115,6 +115,7 @@ public class FourierPlayer : MonoBehaviour
         if (col.gameObject.CompareTag("Area"))
         {
             jumpSwitch = true;
+            print("jumpSwitch = true");
                 /*if (Input.GetKeyDown(KeyCode.Space))
                 {
                 print("Space Down");
@@ -127,7 +128,12 @@ public class FourierPlayer : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        jumpSwitch = false;
+    }
+
+
 
 
 
