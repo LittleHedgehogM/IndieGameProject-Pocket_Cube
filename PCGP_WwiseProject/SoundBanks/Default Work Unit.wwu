@@ -31,6 +31,48 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Level2" ID="{37530EBB-A81B-4DEE-BA35-F9B41531F9CD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Level2" ID="{C8108632-DC7E-4E38-AA64-AB46A1077C91}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Player" ID="{B056AF5C-625E-4D3E-AD9E-3E5E10FF5B10}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Player" ID="{814EAB55-06CE-409D-A755-98CB3DDE3669}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Level0" ID="{2E047177-D5BD-4E8B-B59F-3E3E571958B9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Level0" ID="{599F4329-F555-4A58-9F65-725DC1CB0A17}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="UI" ID="{8275B238-CFF4-4B1F-9796-A6D91836FBD9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="UI" ID="{A56ECCC8-D02D-4A2E-9C61-C5790579AEAD}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Cube" ID="{331DF144-D913-4C88-9567-3E9C779451A5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Cube" ID="{C30F9FE3-B575-4092-A531-E51C7AE1C983}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Main" ID="{46B96F25-4E2E-48A3-AE7B-3DE3972CA7F7}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Main" ID="{BDB9E4DC-DC9D-4A79-BAE6-44E24D3674E1}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
