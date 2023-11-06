@@ -19,6 +19,7 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
     [SerializeField] private Transform EyeLeft;
     [SerializeField] private Transform EyeRight;
     [SerializeField] float translationTime;
+    [SerializeField] private Animator playerAnimator;
 
     public static event Action PlayerCollideWithCube;
 
@@ -40,6 +41,18 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
     public void TranslateToRightEye()
     {
         StartCoroutine(TranslateToTarget(targetTransformRight));
+    }
+
+
+    private void Walk()
+    {
+        playerAnimator.SetTrigger("isWalking");
+    }
+
+    private void Idle()
+    {
+        playerAnimator.SetTrigger("isIdle");
+
     }
 
     private IEnumerator TranslateToTarget(Transform target)
@@ -85,6 +98,10 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
         }
     }
     
+
+
+
+
     // Update is called once per frame
     public void OnUpdate()
     {
@@ -94,7 +111,19 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
+            if (horizontalInput!=0 || verticalInput!=0) 
+            {
+                Walk();
+            }
+            else 
+            {
+                Idle();
+            }
 
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            //    playerAnimator.SetTrigger("isJumping");
+            //}
             Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
             movementDirection.Normalize();
 
@@ -108,6 +137,10 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed*Time.deltaTime);
             }
         }
+        //else 
+        //{
+        //    Idle();
+        //}
 
     }
 
