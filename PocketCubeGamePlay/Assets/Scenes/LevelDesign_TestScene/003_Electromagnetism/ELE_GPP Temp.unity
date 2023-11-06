@@ -4132,6 +4132,7 @@ MonoBehaviour:
   StarPuzzleMeshControl: {fileID: 1139508398}
   SunPuzzleMeshControl: {fileID: 1186792826}
   MoonPuzzleMeshControl: {fileID: 1710484020}
+  CenterMeshControl: {fileID: 1413908111}
 --- !u!1001 &858592680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7620,7 +7621,7 @@ MonoBehaviour:
   sunCam: {fileID: 169490173}
   moonCam: {fileID: 640399147}
   starCam: {fileID: 1000024635}
-  cameraMoveRange: 5.003
+  cameraMoveRange: 4.827
   translationTime: 1
   Camera_Sensitivity: 0.005
   CameraLookAtTarget: {x: 0, y: 4.5, z: 0}
@@ -8063,6 +8064,7 @@ MonoBehaviour:
   StarPuzzle: {fileID: 1139508398}
   MoonPuzzle: {fileID: 1710484020}
   SunPuzzleMeshControl: {fileID: 1186792826}
+  centerMeshControl: {fileID: 1413908111}
 --- !u!1 &1380443376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0df8c4ecb3c63cf418d9cc9a042355ac, type: 3}
