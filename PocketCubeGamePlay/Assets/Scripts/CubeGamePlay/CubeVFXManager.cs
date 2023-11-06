@@ -8,41 +8,34 @@ public class CubeVFXManager : MonoBehaviour
 
     [SerializeField] private GameObject finish_VFX;
     [SerializeField] private GameObject skill_VFX;
-    private GameObject finish_VFX_Instance = null;
-    private GameObject skill_VFX_Instance = null;
+
+    private void Start()
+    {
+        finish_VFX.SetActive(false);    
+        skill_VFX.SetActive(false);
+    }
 
     public void PlayFinishVFX()
     {
-        if (finish_VFX_Instance == null)
-        {
-            finish_VFX_Instance = Instantiate(finish_VFX, Vector3.zero, finish_VFX.transform.rotation); 
-            finish_VFX_Instance.transform.SetParent(null);
-            finish_VFX_Instance.GetComponent<ParticleSystem>().Play();
-        }
+        finish_VFX.SetActive(true);
+        finish_VFX.transform.parent = null;
+        finish_VFX.transform.position = Vector3.zero;
+        finish_VFX.GetComponent<ParticleSystem>().Play();
         
     }
 
     public void PlaySkillVFX()
     {
-        if (skill_VFX_Instance == null)
-        {
-            skill_VFX_Instance = Instantiate(skill_VFX, Vector3.zero, skill_VFX.transform.rotation);
-            skill_VFX_Instance.transform.SetParent(null);
-            skill_VFX_Instance.GetComponent<ParticleSystem>().Play();
-            
-        }
-
-        var main = skill_VFX_Instance.GetComponent<ParticleSystem>().main;
-        main.loop = false;
+        skill_VFX.SetActive(true);
+        skill_VFX.transform.parent = null;
+        skill_VFX.transform.position = Vector3.zero;
+        skill_VFX.GetComponent<ParticleSystem>().Play();
+       // var main = skill_VFX.GetComponent<ParticleSystem>().main;
+        //main.loop = false;
     }
 
     public void StopSkillVFX()
     {
-        if (skill_VFX_Instance != null)
-        {
-            skill_VFX_Instance.GetComponent<ParticleSystem>().Stop();
-            skill_VFX_Instance = null;
-        }
 
     }
 }
