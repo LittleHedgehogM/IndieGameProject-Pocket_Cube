@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Player" ID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="SFX_Loop" ID="{FB29EF61-1045-45A9-A283-9A038FE724E7}" ShortID="605770500">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Move_Loop" ID="{CCD630D8-E2D2-40E9-A213-0598C4A89394}" ShortID="311942477">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="走路LOOP" ID="{078485DF-28D8-4C14-873D-9DFD96E53810}">
+									<Language>SFX</Language>
+									<AudioFile>走路LOOP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="989788284"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="走路LOOP" ID="{078485DF-28D8-4C14-873D-9DFD96E53810}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

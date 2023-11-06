@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9B84821C-9241-469F-A19B-BB1A25FFD965}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Cube" ID="{9B84821C-9241-469F-A19B-BB1A25FFD965}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="SFX" ID="{66A92BD7-9C28-4F5E-9A85-74C57E3C220C}" ShortID="878328982">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="cube_ani" ID="{9D55853C-BB6F-468D-8799-350B61E81D94}" ShortID="169521416">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_ani" ID="{564609CF-9648-40C9-B4B0-F4EAD0728CDF}">
+									<Language>SFX</Language>
+									<AudioFile>cube_ani.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="579273831"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_ani" ID="{564609CF-9648-40C9-B4B0-F4EAD0728CDF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cube_click" ID="{87BC9E5C-BE74-4388-8769-7AE86F8911F4}" ShortID="579943783">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_click" ID="{AB6E345E-9280-4127-A065-E075637F3193}">
+									<Language>SFX</Language>
+									<AudioFile>cube_click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="44885334"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_click" ID="{AB6E345E-9280-4127-A065-E075637F3193}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cube_roll01" ID="{703C3670-92F6-4BB8-8CA4-07970B66EEC6}" ShortID="700999153">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_roll01" ID="{F23205DA-92BD-41B5-9A4A-79E33C4BB965}">
+									<Language>SFX</Language>
+									<AudioFile>cube_roll01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="22892153"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_roll01" ID="{F23205DA-92BD-41B5-9A4A-79E33C4BB965}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cube_roll02" ID="{87F53AD8-6BCD-4B38-9097-45664B36F748}" ShortID="177198713">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_roll02" ID="{F99B3156-BC4F-47C0-8777-F386269C644F}">
+									<Language>SFX</Language>
+									<AudioFile>cube_roll02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="481933197"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_roll02" ID="{F99B3156-BC4F-47C0-8777-F386269C644F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
