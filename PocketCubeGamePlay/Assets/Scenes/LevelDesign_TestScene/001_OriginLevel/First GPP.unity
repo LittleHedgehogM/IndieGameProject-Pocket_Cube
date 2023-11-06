@@ -140,7 +140,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &151113036
 BoxCollider:
@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 269800690}
   - component: {fileID: 269800694}
   - component: {fileID: 269800693}
+  - component: {fileID: 269800695}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -460,7 +461,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 19, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 904619055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 22, y: 0, z: 0}
 --- !u!114 &269800693
@@ -540,6 +542,22 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &269800695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269800689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e653dab4ec77842bd2c15959c8cb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationTime: 0.461
+  lookAtTarget: {x: 0, y: 4.5, z: 0}
+  mainCam: {fileID: 269800691}
+  sensitivity: 0.0186
 --- !u!1 &283181617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 627df09dfbc317a4aa59f76bbe325e4c, type: 3}
@@ -1423,6 +1441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 1
   animator: {fileID: 747982158}
+  colorSelected: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 0}
 --- !u!64 &747982160
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1606,7 +1625,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &817463618
 BoxCollider:
@@ -1867,8 +1886,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904619054}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17693806, y: 4.3940754, z: 1.967483}
+  m_LocalRotation: {x: -0.19080894, y: 0, z: -0, w: 0.9816273}
+  m_LocalPosition: {x: 0.17693806, y: 0.6804886, z: 40.674313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1876,7 +1895,7 @@ Transform:
   - {fileID: 906520895}
   - {fileID: 627082942}
   - {fileID: 1994294039}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 269800692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905320517
 GameObject:
@@ -2067,21 +2086,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1166853561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148564281121}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97012ce2fd85b87478a8c6fd9e07e325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 269800691}
-  targetQuaternion: {x: -0.1741143, y: 0.37542382, z: 0.07984448, w: -0.906844}
-  sphereAnimator: {fileID: 1166853560}
 --- !u!1 &1169354991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,12 +2494,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520967469}
+  - component: {fileID: 1520967470}
   m_Layer: 0
   m_Name: Env
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1520967469
 Transform:
@@ -2584,8 +2589,25 @@ Transform:
   - {fileID: 8723744521903361010}
   - {fileID: 151113039}
   - {fileID: 817463621}
+  - {fileID: 5203196495164759954}
   m_Father: {fileID: 543450653444846360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520967470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520967468}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e653dab4ec77842bd2c15959c8cb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationTime: 0
+  lookAtTarget: {x: 0, y: 0, z: 0}
+  mainCam: {fileID: 0}
+  sensitivity: 0
 --- !u!1 &1585254214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3489,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5203196495164759954}
   - {fileID: 312497941}
   - {fileID: 1520967469}
   m_Father: {fileID: 0}
@@ -3761,7 +3782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543450653089897883}
   - component: {fileID: 1166853560}
-  - component: {fileID: 1166853561}
   m_Layer: 0
   m_Name: CenterSphere
   m_TagString: Untagged
@@ -7126,6 +7146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 2
   animator: {fileID: 5055981500364875032}
+  colorSelected: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 0}
 --- !u!95 &5055981500364875032
 Animator:
   serializedVersion: 5
@@ -7281,12 +7302,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806664879743421642}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0.15, y: 5, z: 0.15}
-  m_LocalScale: {x: 515, y: 515, z: 500}
+  m_LocalRotation: {x: -0.70710695, y: -0, z: 0.000000029802322, w: 0.7071067}
+  m_LocalPosition: {x: 0.15000004, y: 5, z: 0.15000005}
+  m_LocalScale: {x: 514.99994, y: 515, z: 499.99994}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 543450653444846360}
+  m_Father: {fileID: 1520967469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5221041243864844455
 MeshRenderer:
@@ -9122,6 +9143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 0
   animator: {fileID: 7403543666167190059}
+  colorSelected: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
 --- !u!95 &7403543666167190059
 Animator:
   serializedVersion: 5
@@ -9594,6 +9616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 3
   animator: {fileID: 7954551063006319343}
+  colorSelected: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 0}
 --- !u!95 &7954551063006319343
 Animator:
   serializedVersion: 5
@@ -10429,7 +10452,6 @@ SceneRoots:
   - {fileID: 269800692}
   - {fileID: 872739071}
   - {fileID: 1438561806}
-  - {fileID: 904619055}
   - {fileID: 543450653444846360}
   - {fileID: 543450653089897883}
   - {fileID: 1618049179}
