@@ -51,8 +51,13 @@ public class LevelManager : MonoBehaviour
     public async void LoadScene(string sceneName)
     {
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
-        _animatorTransition.Play("Crossfade_Start");       
-       
+        _animatorTransition.Play("Crossfade_Start");
+        
+        await Task.Delay(_loadingTime);
+
+        titleIMG.sprite = Resources.Load<Sprite>("textpages/"+sceneName);
+        _animatorTransition.Play("Crossfade_Start");
+
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
        

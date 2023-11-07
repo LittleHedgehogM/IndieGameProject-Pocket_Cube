@@ -63,7 +63,7 @@ public class Electro_SunPuzzle : MonoBehaviour
     [SerializeField] private Electro_MeshControl StarPuzzle;
     [SerializeField] private Electro_MeshControl MoonPuzzle;
     [SerializeField] private Electro_MeshControl SunPuzzleMeshControl;
-
+    [SerializeField] private Electro_MeshControl centerMeshControl;
 
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
@@ -151,7 +151,9 @@ public class Electro_SunPuzzle : MonoBehaviour
             myCameraController.showSunCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
-            CenterCubeObject.SetActive(false);
+            //CenterCubeObject.SetActive(false);
+            centerMeshControl.Hide();
+
         }
 
     }
@@ -165,7 +167,8 @@ public class Electro_SunPuzzle : MonoBehaviour
             myCircuit.switch_Nand_left.setInteractionEnabled(false);
             myCircuit.switch_Nand_right.setInteractionEnabled(false);
             myCircuit.switch_not.setInteractionEnabled(false);
-            CenterCubeObject.SetActive(true);
+            //CenterCubeObject.SetActive(true);
+            centerMeshControl.Show();
             RightWall.Show();
             StarPuzzle.Show();
             MoonPuzzle.Show();

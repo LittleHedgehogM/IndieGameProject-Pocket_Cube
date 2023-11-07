@@ -10,7 +10,7 @@ public class CubePieceOutlineController : MonoBehaviour
         CubeOutline cubeOutLine = cubePiece.GetComponentInChildren<CubeOutline>();
         if (cubeOutLine != null)
         {
-            cubeOutLine.DrawOutLine();  
+            cubeOutLine.DrawOutline();  
         }
     }
 
@@ -19,7 +19,7 @@ public class CubePieceOutlineController : MonoBehaviour
         CubeOutline cubeOutLine = cubePiece.GetComponentInChildren<CubeOutline>();
         if (cubeOutLine != null)
         {
-            cubeOutLine.UndrawOutline();
+           cubeOutLine.EraseOutline();
         }
     }
 

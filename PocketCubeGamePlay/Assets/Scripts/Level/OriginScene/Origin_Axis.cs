@@ -13,6 +13,7 @@ public class Origin_Axis : MonoBehaviour
         up,
         down,
     }
+
     [SerializeField] Axis axis;
     [SerializeField] Animator animator;
 
@@ -21,7 +22,8 @@ public class Origin_Axis : MonoBehaviour
     public static event Action UpAxisClicked;
     public static event Action DownAxisClicked;
 
-
+    [SerializeField] private Color colorSelected;
+    
     private float edgeLength = 0.003f;
     private GameObject go;
     private Material material;
@@ -64,7 +66,7 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        material.SetColor("_diffusegradient01", Color.gray);
+        material.SetColor("_diffusegradient01", colorSelected);
         material.SetFloat("_OutlineWidth", edgeLength);
 
     }
@@ -86,6 +88,7 @@ public class Origin_Axis : MonoBehaviour
             case Axis.left:{
                  Debug.Log("Left Axis Hit");
                  LeftAxisClicked?.Invoke();
+                 
                  break;
             }
             case Axis.right:{

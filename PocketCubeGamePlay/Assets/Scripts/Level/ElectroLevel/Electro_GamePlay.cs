@@ -68,10 +68,7 @@ public class Electro_GamePlay : MonoBehaviour
             myPlayerMovement.OnUpdate();
             Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
             myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
-
         }
-
-
 
     }
 

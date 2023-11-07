@@ -152,7 +152,7 @@ public class CubeInPlayPhase : GameplayPhase
             restoreFinish = false;
             StartCoroutine(startRestoreAnimation());
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
-
+            myCommutationSkill.EraseOutline();
         }
 
     }
@@ -166,6 +166,7 @@ public class CubeInPlayPhase : GameplayPhase
             StartCoroutine(startRestoreAnimation());
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
             restoreFinish = false;
+            myDiagonalSkill.EraseOutline();
         }
     }
 

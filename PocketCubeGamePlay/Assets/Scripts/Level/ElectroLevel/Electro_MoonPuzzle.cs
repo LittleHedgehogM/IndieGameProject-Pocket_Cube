@@ -62,8 +62,9 @@ public class Electro_MoonPuzzle : MonoBehaviour
     [SerializeField] private Electro_MeshControl LeftWallMeshControl;
     [SerializeField] private Electro_MeshControl StarPuzzleMeshControl;
     [SerializeField] private Electro_MeshControl SunPuzzleMeshControl;
-
     [SerializeField] private Electro_MeshControl MoonPuzzleMeshControl;
+    [SerializeField] private Electro_MeshControl CenterMeshControl;
+
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
     Electro_PlayerMovement myPlayerMovement;
@@ -148,7 +149,8 @@ public class Electro_MoonPuzzle : MonoBehaviour
             myCameraController.showMoonCam();
             myPlayerMovement.TranslateTo(playerTargetPosPuzzle);
             myPlayerMovement.setEnableMovement(false);
-            CenterCubeObject.SetActive(false);
+            //CenterCubeObject.SetActive(false);
+            CenterMeshControl.Hide();
         }
 
     }
@@ -163,7 +165,9 @@ public class Electro_MoonPuzzle : MonoBehaviour
             myCircuit.switch_Or_right.setInteractionEnabled(false);
             myCircuit.switch_nand_left.setInteractionEnabled(false);
             myCircuit.switch_nand_right.setInteractionEnabled(false);
-            CenterCubeObject.SetActive(true);
+            //CenterCubeObject.SetActive(true);
+            CenterMeshControl.Show();
+
             LeftWallMeshControl.Show();
             StarPuzzleMeshControl.Show();
             SunPuzzleMeshControl.Show();

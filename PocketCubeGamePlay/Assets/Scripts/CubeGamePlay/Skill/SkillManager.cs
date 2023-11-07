@@ -44,10 +44,23 @@ public abstract class SkillManager : MonoBehaviour
         ResetValues();
     }
 
+    public void EraseOutline()
+    {
+        if (FirstCubeHit != null)
+        {
+            CubePieceOutlineController.disableOutline(FirstCubeHit);
+        }
+        if (SecondCubeHit != null)
+        {
+            CubePieceOutlineController.disableOutline(SecondCubeHit);
+        }
+    }
+
     public void ResetValues()
     {
         currentState = SkillState.WaitForSelectFirstCube;
         commomFaceNormalAxis = Vector3.zero;
+        EraseOutline();
         FirstFaceHit = null;
         SecondFaceHit = null;
         FirstCubeHit = null;
