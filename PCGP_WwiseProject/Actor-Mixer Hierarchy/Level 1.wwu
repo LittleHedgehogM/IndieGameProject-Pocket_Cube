@@ -188,60 +188,6 @@
 								<ActiveSource Name="拿走" ID="{DC92BAE3-7B05-42AF-9D6F-94A7C9780445}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Camera_zoomIn" ID="{A38234D5-BB43-41E1-820F-417B33510824}" ShortID="575088949">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="镜头-拉近" ID="{B73123A8-5EE4-40FF-B53F-A24408598FFE}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.607348635920062"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>镜头-拉近.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="531784239"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="镜头-拉近" ID="{B73123A8-5EE4-40FF-B53F-A24408598FFE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Camera_zoomOut" ID="{334C6CF8-616F-42BE-929A-C7CDB8D8BF99}" ShortID="738616702">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="镜头-拉远" ID="{40558EA3-B069-4D4D-9176-33BA56FD4B62}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.599251370679945"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>镜头-拉远.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="634861032"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="镜头-拉远" ID="{40558EA3-B069-4D4D-9176-33BA56FD4B62}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Cube_drop" ID="{0270D588-AEB6-40A4-830B-7F615707E8AA}" ShortID="622875953">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
@@ -291,6 +237,50 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="hover" ID="{3AB1E1DC-F186-4ADE-B06D-C59BFAA9D75B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Camera_zoomIn" ID="{EECBDC53-F05D-4289-B66F-35BDD977424A}" ShortID="730332044">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Camera_zoomIn" ID="{8F868D9B-4D84-4890-BBAC-B9B0ABF498E2}">
+									<Language>SFX</Language>
+									<AudioFile>Camera_zoomIn.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="286706430"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Camera_zoomIn" ID="{8F868D9B-4D84-4890-BBAC-B9B0ABF498E2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Camera_zoomOut" ID="{49092573-FD25-49F2-B320-2E64338068C0}" ShortID="590161624">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Camera_zoomOut" ID="{124DC7A2-9E3A-4B67-92F3-98548E72ACCF}">
+									<Language>SFX</Language>
+									<AudioFile>Camera_zoomOut.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="739887170"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Camera_zoomOut" ID="{124DC7A2-9E3A-4B67-92F3-98548E72ACCF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

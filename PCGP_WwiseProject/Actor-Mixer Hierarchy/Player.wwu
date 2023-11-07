@@ -13,7 +13,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Move_Loop" ID="{CCD630D8-E2D2-40E9-A213-0598C4A89394}" ShortID="311942477">
+						<Sound Name="Move_Loop" ID="{C7D76B61-51B2-4303-9EF8-1B3D3FFCC1F6}" ShortID="35087028">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
@@ -26,16 +26,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="走路LOOP" ID="{078485DF-28D8-4C14-873D-9DFD96E53810}">
+								<AudioFileSource Name="Move_Loop" ID="{075D67F8-AEB1-47DC-B2D2-E418FA092DD0}">
 									<Language>SFX</Language>
-									<AudioFile>走路LOOP.wav</AudioFile>
+									<AudioFile>Move_Loop.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="989788284"/>
+										<MediaID ID="62613895"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="走路LOOP" ID="{078485DF-28D8-4C14-873D-9DFD96E53810}" Platform="Linked"/>
+								<ActiveSource Name="Move_Loop" ID="{075D67F8-AEB1-47DC-B2D2-E418FA092DD0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

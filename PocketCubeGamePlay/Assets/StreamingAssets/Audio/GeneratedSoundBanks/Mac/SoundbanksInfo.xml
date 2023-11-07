@@ -9,19 +9,19 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{B6F563A9-6904-BC3B-04E0-4458F653873C}">
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{5953C01E-C38A-F679-11B1-35DC7114E707}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<Media>
-				<File Id="989788284" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>走路LOOP.wav</ShortName>
-					<CachePath>SFX/走路LOOP_D79FB2B7.wem</CachePath>
+				<File Id="62613895" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Move_Loop.wav</ShortName>
+					<CachePath>SFX/Move_Loop_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="3382199950" Name="Play_Move_Loop" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="989788284"/>
+						<MediaRef Id="62613895"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -221,7 +221,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{5E5242B5-6F02-9CCA-1448-96961F97A28D}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{09ECA75E-19C9-5509-3685-65DA888E5DF2}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -237,21 +237,21 @@
 					<ShortName>台阶下降.wav</ShortName>
 					<CachePath>SFX/台阶下降_9FADFD58.wem</CachePath>
 				</File>
+				<File Id="286706430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Camera_zoomIn.wav</ShortName>
+					<CachePath>SFX/Camera_zoomIn_10C4C929.wem</CachePath>
+				</File>
 				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>拿走.wav</ShortName>
 					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
 				</File>
-				<File Id="531784239" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>镜头-拉近.wav</ShortName>
-					<CachePath>SFX/镜头-拉近_4E672B94.wem</CachePath>
-				</File>
-				<File Id="634861032" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>镜头-拉远.wav</ShortName>
-					<CachePath>SFX/镜头-拉远_22640D1E.wem</CachePath>
-				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
 					<CachePath>SFX/hover_10C4C929.wem</CachePath>
+				</File>
+				<File Id="739887170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Camera_zoomOut.wav</ShortName>
+					<CachePath>SFX/Camera_zoomOut_10C4C929.wem</CachePath>
 				</File>
 				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶上升.wav</ShortName>
@@ -263,14 +263,14 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="0.6073486" DurationMax="0.6073486">
+				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="2.741111" DurationMax="2.741111">
 					<MediaRefs>
-						<MediaRef Id="531784239"/>
+						<MediaRef Id="286706430"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="0.5992514" DurationMax="0.5992514">
+				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="2.300771" DurationMax="2.300771">
 					<MediaRefs>
-						<MediaRef Id="634861032"/>
+						<MediaRef Id="739887170"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2914979601" Name="Play_Coin_add" DurationType="OneShot" DurationMin="1.9837868" DurationMax="1.9837868">
@@ -441,5 +441,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4C6768C5-49BB-2C24-3E2A-C266AB93F236}</FileHash>
+	<FileHash>{D1CD2B1B-9C6B-D52D-7B24-1951DD163854}</FileHash>
 </SoundBanksInfo>

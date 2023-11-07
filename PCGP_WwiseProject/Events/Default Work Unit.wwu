@@ -99,14 +99,14 @@
 					<ChildrenList>
 						<Event Name="Stop_Move_Loop" ID="{2E20446E-01B6-4880-A13B-1CD06146A423}">
 							<ChildrenList>
-								<Action Name="" ID="{419FF8F2-DF9F-4DF6-853F-C70D2429F33B}" ShortID="314235344">
+								<Action Name="" ID="{FA353524-333A-487D-9BB5-3706E9323A11}" ShortID="1039781323">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Move_Loop" ID="{CCD630D8-E2D2-40E9-A213-0598C4A89394}" WorkUnitID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}"/>
+											<ObjectRef Name="Move_Loop" ID="{C7D76B61-51B2-4303-9EF8-1B3D3FFCC1F6}" WorkUnitID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -114,13 +114,13 @@
 						</Event>
 						<Event Name="Play_Move_Loop" ID="{E7FE30AE-1A00-4F73-9B25-BCB21683FE70}">
 							<ChildrenList>
-								<Action Name="" ID="{FC8DA10B-9CC2-43D7-B44E-C0E5855F0698}" ShortID="829846627">
+								<Action Name="" ID="{061E4B9A-07C3-4FD6-9303-340A9FB82EA7}" ShortID="481149724">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Move_Loop" ID="{CCD630D8-E2D2-40E9-A213-0598C4A89394}" WorkUnitID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}"/>
+											<ObjectRef Name="Move_Loop" ID="{C7D76B61-51B2-4303-9EF8-1B3D3FFCC1F6}" WorkUnitID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

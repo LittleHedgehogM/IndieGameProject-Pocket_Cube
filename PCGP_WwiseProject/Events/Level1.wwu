@@ -81,10 +81,10 @@
 				</Event>
 				<Event Name="Play_Camera_zoomOut" ID="{C39A8EF2-B11E-4AA0-BE76-23951ACFFFBC}">
 					<ChildrenList>
-						<Action Name="" ID="{4107E4CB-7792-4BAB-A2FF-810222BB2033}" ShortID="749473271">
+						<Action Name="" ID="{11044819-42C1-40D6-BE65-22B8DEE8A7C9}" ShortID="687523959">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Camera_zoomOut" ID="{334C6CF8-616F-42BE-929A-C7CDB8D8BF99}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+									<ObjectRef Name="Camera_zoomOut" ID="{49092573-FD25-49F2-B320-2E64338068C0}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -103,10 +103,10 @@
 				</Event>
 				<Event Name="Play_Camera_zoomIn" ID="{FCC412EB-2976-460E-B298-C8DD393E0B85}">
 					<ChildrenList>
-						<Action Name="" ID="{44FF4315-CCAB-4886-94FA-1D27BC068B9C}" ShortID="123363310">
+						<Action Name="" ID="{CCDB95BF-B70C-4E32-9E2C-CBA6E4B2B377}" ShortID="261291458">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Camera_zoomIn" ID="{A38234D5-BB43-41E1-820F-417B33510824}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+									<ObjectRef Name="Camera_zoomIn" ID="{EECBDC53-F05D-4289-B66F-35BDD977424A}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
