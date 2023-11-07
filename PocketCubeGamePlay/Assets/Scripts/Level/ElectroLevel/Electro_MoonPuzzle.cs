@@ -68,6 +68,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
     Electro_PlayerMovement myPlayerMovement;
+    Electro_VFX_ObjectPool myVFXObjectPool;
 
     bool isLSwitchOrLeftOn;
     bool isLSwitchOrRightOn;
@@ -136,6 +137,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
         myCameraController = FindObjectOfType<Electro_Camera_Controller>();
         myPlayerMovement = FindAnyObjectByType<Electro_PlayerMovement>();
         MoonFinishIcon.GetComponent<Renderer>().enabled = false;
+        myVFXObjectPool = FindObjectOfType<Electro_VFX_ObjectPool>();
         isFirstTimeEnter = true;
         isLeftAnimEnds = false;
         isRightAnimEnds = false;
@@ -184,9 +186,13 @@ public class Electro_MoonPuzzle : MonoBehaviour
             if (isFirstTimeEnter)
             {
 
-                PlayVFXAt(myCircuit.logicGateLeft.transform);
-                PlayVFXAt(myCircuit.logicGateRight.transform);
-                PlayVFXAt(myCircuit.logicGateCenter.transform);
+                //PlayVFXAt(myCircuit.logicGateLeft.transform);
+                //PlayVFXAt(myCircuit.logicGateRight.transform);
+                //PlayVFXAt(myCircuit.logicGateCenter.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_nand_right.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_nand_left.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_Or_left.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_Or_right.transform);
                 isFirstTimeEnter = false;
             }
 
@@ -219,10 +225,10 @@ public class Electro_MoonPuzzle : MonoBehaviour
     }
 
 
-    private void PlayVFXAt(Transform gateTransform)
+    private void PlayVFXAt(Transform aTransform)
     {
-        GameObject DisplayGateVFX = Instantiate(GateVFX, gateTransform.position, gateTransform.rotation);
-        DisplayGateVFX.transform.SetParent(gateTransform);
+        GameObject DisplayGateVFX = Instantiate(GateVFX, aTransform.position, aTransform.rotation);
+        DisplayGateVFX.transform.SetParent(aTransform);
         DisplayGateVFX.GetComponent<ParticleSystem>().Play();
     }
 
@@ -292,7 +298,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         isLeftCircuitAnimPlaying = true;
                         myCircuit.switch_Or_left.setInteractionEnabled(false);
                         myCircuit.switch_Or_right.setInteractionEnabled(false);
-                        PlayVFXAt(myCircuit.logicGateLeft.transform);
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateLeft.transform);
                     }
                 }
                 else if (hitObject == myCircuit.logicGateRight && isRightCircuitValid && !isCenterCircuitAnimPlaying)
@@ -310,7 +316,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         isRightCircuitAnimPlaying = true;
                         myCircuit.switch_nand_right.setInteractionEnabled(false);
                         myCircuit.switch_nand_left.setInteractionEnabled(false);
-                        PlayVFXAt(myCircuit.logicGateRight.transform);
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateRight.transform);
 
                     }
                 }
@@ -327,7 +333,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
                     {
                         centerCircuitAnimator.SetTrigger("PlayAnim");
                         isCenterCircuitAnimPlaying = true;
-                        PlayVFXAt(myCircuit.logicGateCenter.transform);                        
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateCenter.transform);                        
                         myCircuit.switch_nand_right.setInteractionEnabled(false);
                         myCircuit.switch_nand_left.setInteractionEnabled(false);
                         myCircuit.switch_Or_left.setInteractionEnabled(false);

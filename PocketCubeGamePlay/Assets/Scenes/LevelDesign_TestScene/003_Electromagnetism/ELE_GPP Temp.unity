@@ -1214,6 +1214,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
       propertyPath: lengthInSec
       value: 1
       objectReference: {fileID: 0}
@@ -2410,6 +2414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 914a73cab5d712e45b430feced609f95, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1889003057716489450, guid: 914a73cab5d712e45b430feced609f95, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.4254303
@@ -3594,6 +3602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722108105}
   - component: {fileID: 722108106}
+  - component: {fileID: 722108107}
   m_Layer: 0
   m_Name: GamePlayController
   m_TagString: Untagged
@@ -3636,6 +3645,20 @@ MonoBehaviour:
   rightWallMesh: {fileID: 977283965}
   leftWallMesh: {fileID: 1866066775}
   centerMesh: {fileID: 1413908111}
+--- !u!114 &722108107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722108104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90847eb3a44ff964f90cfbae457ea44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfx: {fileID: 707507397}
+  poolSize: 6
 --- !u!1 &747957091
 GameObject:
   m_ObjectHideFlags: 0

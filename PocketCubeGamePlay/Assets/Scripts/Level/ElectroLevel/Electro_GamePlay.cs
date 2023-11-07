@@ -32,36 +32,56 @@ public class Electro_GamePlay : MonoBehaviour
     }
 
 
+    private void OnEnable()
+    {
+        Electro_Camera_Controller.ResetCameraFinish += onResetCameraFinish;
+    }
+
+    private void OnDisable()
+    {
+        Electro_Camera_Controller.ResetCameraFinish -= onResetCameraFinish;
+
+    }
+
+    private void onResetCameraFinish()
+    {
+        if (isScenePuzzleSolved) 
+        {
+            myPlayerMovement.setEnableMovement(true);
+        }
+    }
+
     void Update()
     {
-
         if (!isScenePuzzleSolved)
-        {
-            myPlayerMovement.OnUpdate();
-            if (!starPuzzle.isInPuzzle() && !sunPuzzle.isInPuzzle() && !moonPuzzle.isInPuzzle())
-            {
-                Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
-                myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
-            } 
-             starPuzzle.UpdatePuzzle();
-             sunPuzzle.UpdatePuzzle();
-             moonPuzzle.UpdatePuzzle();
-
-            
+        {                      
             if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())
-             {
+            {
                   rightWallMesh.Show();
                   leftWallMesh.Show();
                   centerMesh.Show();
                   starPuzzle.setNotInteractable();
                   sunPuzzle.setNotInteractable();
                   moonPuzzle.setNotInteractable();
-
+                  myPlayerMovement.setEnableMovement(false);
                   myCameraController.resetCam();
                   isScenePuzzleSolved = true;
                   centerAnimator.Play("AM_Center_Normal");
                   cubeAnimator.Play("AM_CenterCube_Finsh");
-             }
+            }
+            else 
+            {
+                 myPlayerMovement.OnUpdate();
+                 if (!starPuzzle.isInPuzzle() && !sunPuzzle.isInPuzzle() && !moonPuzzle.isInPuzzle())
+                 {
+                    Vector3 playerMovementVector = myPlayerMovement.getMovementDirection();
+                    myCameraController.onUpdateCameraWithPlayerMovement(playerMovementVector);
+                 } 
+                 starPuzzle.UpdatePuzzle();
+                 sunPuzzle.UpdatePuzzle();
+                 moonPuzzle.UpdatePuzzle();
+            }
+
         }
         else 
         {

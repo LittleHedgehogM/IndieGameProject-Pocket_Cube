@@ -2067,7 +2067,7 @@ Transform:
   m_GameObject: {fileID: 374201824}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.0929, z: 0}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2127,6 +2127,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &374925430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1392055971398381079, guid: c2da24b05a72f5e45bacd3dfd32fb73a, type: 3}
+  m_PrefabInstance: {fileID: 177066238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &445969329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2953,7 +2958,7 @@ GameObject:
   - component: {fileID: 722108108}
   - component: {fileID: 722108109}
   m_Layer: 0
-  m_Name: PlayController
+  m_Name: NewtonPlayController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3058,12 +3063,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6046ab7acb57c4292b21314dfbda11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube_VFX: {fileID: 1469587178}
   put_coin_VFX: {fileID: 1177603187}
   take_coin_VFX: {fileID: 872719898}
   LeftScaleTransform: {fileID: 376056986915032666}
   RightScaleTransform: {fileID: 8462618663764177721}
-  LeftEyeTransform: {fileID: 0}
-  RightEyeTransform: {fileID: 0}
+  CubeTransform: {fileID: 374925430}
   putCoinOffsetTransformLeft: {fileID: 952233869}
   putCoinOffsetTransformRight: {fileID: 338731923}
 --- !u!1 &761109153
@@ -4320,6 +4325,10 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198171353879996996, guid: 1f4bf49fb0057724b9efaceaa41bf530, type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5335,6 +5344,10 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19898864, guid: 9d1e2985c8baf13408a8b12db00d769d, type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19978564, guid: 9d1e2985c8baf13408a8b12db00d769d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5620,6 +5633,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+--- !u!1 &1469587178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+  m_PrefabInstance: {fileID: 1469587177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1564335986
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,7 +5663,7 @@ Transform:
   m_GameObject: {fileID: 1564335986}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.0858, z: 0}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8902,7 +8920,6 @@ SceneRoots:
   - {fileID: 543450653021343637}
   - {fileID: 1207680033}
   - {fileID: 566104479}
-  - {fileID: 722108105}
   - {fileID: 1655007316}
   - {fileID: 1292689047}
   - {fileID: 1438561806}
@@ -8916,4 +8933,5 @@ SceneRoots:
   - {fileID: 1321569479}
   - {fileID: 38612318}
   - {fileID: 647643777}
+  - {fileID: 722108105}
   - {fileID: 1364201441}

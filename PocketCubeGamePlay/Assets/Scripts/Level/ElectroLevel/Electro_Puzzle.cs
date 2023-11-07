@@ -20,7 +20,6 @@ public class Electro_Puzzle : MonoBehaviour
     public class Circuit
     {
         public GateLogic logic;
-        //public Transform logicGateTransform;
         public GameObject logicGateHolder;
         public Electro_Switch switch_Left;
         public Electro_Switch switch_right;
@@ -37,7 +36,6 @@ public class Electro_Puzzle : MonoBehaviour
     }
 
     public PuzzleState currentState;
-
 
     [SerializeField]
     private Animator leftCircuitAnimator;
@@ -72,6 +70,7 @@ public class Electro_Puzzle : MonoBehaviour
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
     Electro_PlayerMovement myPlayerMovement;
+    Electro_VFX_ObjectPool myVFXObjectPool;
 
     bool isLeftSwitchOn; //= myCircuit.switch_Left.isElectroSwitchOn();
     bool isRightSwitchOn; //= myCircuit.switch_right.isElectroSwitchOn();
@@ -127,7 +126,6 @@ public class Electro_Puzzle : MonoBehaviour
         Electro_Switch.SwitchColorTranslationFinished += updateCircuit;
         Electro_AnimController.StarPuzzleSolved -= setIsPuzzleSolved;
 
-
     }
 
 
@@ -135,6 +133,7 @@ public class Electro_Puzzle : MonoBehaviour
     {
         myCameraController = FindObjectOfType<Electro_Camera_Controller>();
         myPlayerMovement = FindAnyObjectByType<Electro_PlayerMovement>();
+        myVFXObjectPool = FindObjectOfType<Electro_VFX_ObjectPool>();
         StarFinishIcon.GetComponent<Renderer>().enabled = false;
         isFirstTimeEnter = true;
         //isLeftAnimEnds = false;
@@ -174,14 +173,14 @@ public class Electro_Puzzle : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
-                PlayVFXAt(myCircuit.logicGateHolder.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_Left.gameObject.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_right.gameObject.transform);
                 isFirstTimeEnter = false;
             }
             isLeftSwitchOn  = myCircuit.switch_Left.isElectroSwitchOn();
             isRightSwitchOn = myCircuit.switch_right.isElectroSwitchOn();
         
         }
-
         
     }
 
@@ -197,9 +196,8 @@ public class Electro_Puzzle : MonoBehaviour
 
     private void PlayVFXAt(Transform gateTransform)
     {
-        GameObject DisplayGateVFX = Instantiate(GateVFX, gateTransform.position, gateTransform.rotation);
-        DisplayGateVFX.transform.SetParent(gateTransform);
-        DisplayGateVFX.GetComponent<ParticleSystem>().Play();
+        myVFXObjectPool.PlayVFXAt(gateTransform);
+
     }
 
 
@@ -252,8 +250,7 @@ public class Electro_Puzzle : MonoBehaviour
 
     public void UpdatePuzzle()
     {
-
-        
+       
         if (isLeftSwitchOn && isRightSwitchOn && currentState == PuzzleState.InPuzzle)
         {
             GameObject hitObject = myCameraController.checkCollision();
@@ -274,7 +271,7 @@ public class Electro_Puzzle : MonoBehaviour
                     myCircuit.switch_right.setInteractionEnabled(false);
                     leftCircuitAnimator.SetTrigger("PlayAnim");
                     rightCircuitAnimator.SetTrigger("PlayAnim");
-                    PlayVFXAt(myCircuit.logicGateHolder.transform);
+                    myVFXObjectPool.PlayVFXAt(myCircuit.logicGateHolder.transform);
                 }
                 
             }

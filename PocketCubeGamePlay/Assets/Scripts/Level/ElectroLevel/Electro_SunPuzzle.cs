@@ -68,6 +68,7 @@ public class Electro_SunPuzzle : MonoBehaviour
     bool isFirstTimeEnter;
     Electro_Camera_Controller myCameraController;
     Electro_PlayerMovement myPlayerMovement;
+    Electro_VFX_ObjectPool myVFXObjectPool;
 
     bool isSwitchNandLeftOn; 
     bool isSwitchNandRightOn; 
@@ -137,6 +138,7 @@ public class Electro_SunPuzzle : MonoBehaviour
         myCameraController = FindObjectOfType<Electro_Camera_Controller>();
         myPlayerMovement = FindAnyObjectByType<Electro_PlayerMovement>();
         SunFinishIcon.GetComponent<Renderer>().enabled = false;
+        myVFXObjectPool = FindObjectOfType<Electro_VFX_ObjectPool>();
         isFirstTimeEnter = true;
         isLeftAnimEnds = false;
         isRightAnimEnds = false;
@@ -186,9 +188,12 @@ public class Electro_SunPuzzle : MonoBehaviour
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
-                PlayVFXAt(myCircuit.logicGateLeft.transform);
-                PlayVFXAt(myCircuit.logicGateRight.transform);
-                PlayVFXAt(myCircuit.logicGateCenter.transform);
+                //PlayVFXAt(myCircuit.logicGateLeft.transform);
+                //PlayVFXAt(myCircuit.logicGateRight.transform);
+                //PlayVFXAt(myCircuit.logicGateCenter.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_Nand_left.gameObject.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_Nand_right.gameObject.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.switch_not.gameObject.transform);
                 isFirstTimeEnter = false;
             }
             isSwitchNandLeftOn = myCircuit.switch_Nand_left.isElectroSwitchOn();
@@ -288,7 +293,7 @@ public class Electro_SunPuzzle : MonoBehaviour
                         isLeftCircuitAnimPlaying = true;
                         myCircuit.switch_Nand_right.setInteractionEnabled(false);
                         myCircuit.switch_Nand_left.setInteractionEnabled(false);
-                        PlayVFXAt(myCircuit.logicGateLeft.transform);
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateLeft.transform);
                     }
                 }
                 if (hitObject == myCircuit.logicGateRight && !isSwitchNotOn && !isCenterCircuitAnimPlaying)
@@ -304,7 +309,7 @@ public class Electro_SunPuzzle : MonoBehaviour
                         rightCircuitAnimator.SetTrigger("PlayAnim");
                         isRightCircuitAnimPlaying = true;
                         myCircuit.switch_not.setInteractionEnabled(false);
-                        PlayVFXAt(myCircuit.logicGateRight.transform);
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateRight.transform);
 
                     }
 
@@ -323,7 +328,7 @@ public class Electro_SunPuzzle : MonoBehaviour
                     {
                         centerCircuitAnimator.SetTrigger("PlayAnim");
                         isCenterCircuitAnimPlaying = true;
-                        PlayVFXAt(myCircuit.logicGateCenter.transform);
+                        myVFXObjectPool.PlayVFXAt(myCircuit.logicGateCenter.transform);
                         myCircuit.switch_not.setInteractionEnabled(false);
                         myCircuit.switch_Nand_right.setInteractionEnabled(false);
                         myCircuit.switch_Nand_left.setInteractionEnabled(false);
