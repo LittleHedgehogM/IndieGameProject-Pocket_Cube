@@ -17,7 +17,7 @@ public class Origin_Controller : MonoBehaviour
    
     Origin_RotationTarget myRotationTarget;
     public static Action DisableAllAxis;
-
+    Origin_VFXController myVFXController;
     [SerializeField][Range(0.5f, 3f)]  private float translationTime;
     [SerializeField] AnimationCurve translationCurve;
 
@@ -44,6 +44,7 @@ public class Origin_Controller : MonoBehaviour
         InitPhaseOne();
         enableInteraction = true;
         originAngle = Sphere.transform.rotation;
+        myVFXController = FindObjectOfType<Origin_VFXController>();
 
     }
 
@@ -95,6 +96,8 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator Rotate(Vector3 Axis, bool isClockwise, float angleGap)
     {
+        myVFXController.playRotationVFXAt(Sphere.transform);
+
         float currentUsedTime = 0;
         float t = 0;
         float currentAngle = 0f;
@@ -169,6 +172,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void PlayCubeAnim()
     {
+        myVFXController.playCubeFinishVFXAt(cubeController.transform);
         cubeController.PlayAnim();
     }
 
