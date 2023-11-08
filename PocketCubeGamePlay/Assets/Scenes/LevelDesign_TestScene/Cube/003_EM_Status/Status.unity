@@ -3338,7 +3338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9381de0f26b35df43a82e54072ca5feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableFinish: 1
+  enableFinish: 0
   restoreAnimationTime: 1
   animationCurve:
     serializedVersion: 2
@@ -5206,39 +5206,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0d37ec02e16184a8560d78b46d64ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeStateString: BUBLURURUFLFFRFDLLDDBDBR
+  cubeStateString: UFRBRLDLFUFRLFRBLUDUDBDB
   FrontLeftUp:
     cubePiece: {fileID: 1337247419}
-    position: {x: 0.5, y: 0.5, z: -0.5}
-    rotation: {x: 0.00000036804425, y: 0.0000003680443, z: -0.7071066, w: 0.70710707}
+    position: {x: -0.5, y: -0.5, z: -0.5}
+    rotation: {x: -0.000000006578886, y: 0.0000005483728, z: 0.7071071, w: 0.7071065}
   FrontLeftDown:
     cubePiece: {fileID: 1816860653}
-    position: {x: -0.5, y: -0.5, z: -0.5}
-    rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+    position: {x: 0.5, y: 0.5, z: 0.5}
+    rotation: {x: -0.000000092839755, y: -0.7071068, z: 0.7071068, w: -0.000000092839755}
   FrontRightUp:
     cubePiece: {fileID: 2055552223}
-    position: {x: 0.5, y: -0.5, z: -0.5}
-    rotation: {x: 0.00000036804425, y: 0.0000003680443, z: -0.7071066, w: 0.70710707}
+    position: {x: -0.5, y: 0.5, z: -0.5}
+    rotation: {x: -0.000000006578886, y: 0.0000005483728, z: 0.7071071, w: 0.7071065}
   FrontRightDown:
     cubePiece: {fileID: 755391431}
-    position: {x: -0.5, y: -0.5, z: 0.5}
-    rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+    position: {x: 0.5, y: -0.5, z: -0.5}
+    rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   BackLeftUp:
     cubePiece: {fileID: 2140227218}
-    position: {x: -0.5, y: 0.5, z: -0.5}
-    rotation: {x: -0.7071068, y: 0.00000036804397, z: -0.00000036804389, w: 0.70710677}
+    position: {x: -0.5, y: 0.5, z: 0.5}
+    rotation: {x: -0.00000010326039, y: 0.00000052049256, z: -2.206838e-14, w: 1}
   BackLeftDown:
     cubePiece: {fileID: 660483508}
-    position: {x: -0.5, y: 0.5, z: 0.5}
-    rotation: {x: -0.7071068, y: -8.526513e-14, z: 9.947598e-14, w: 0.70710677}
+    position: {x: 0.5, y: -0.5, z: 0.5}
+    rotation: {x: 0.000000023572596, y: -0.7071068, z: 0.7071068, w: 0.000000019847306}
   BackRightUp:
     cubePiece: {fileID: 2028261706}
-    position: {x: 0.5, y: 0.5, z: 0.5}
-    rotation: {x: 0, y: 0.0000005204929, z: 0, w: 1}
+    position: {x: 0.5, y: 0.5, z: -0.5}
+    rotation: {x: -0.7071069, y: 0.0000003680439, z: -0.00000036804403, w: 0.70710665}
   BackRightDown:
     cubePiece: {fileID: 888137246}
-    position: {x: 0.5, y: -0.5, z: 0.5}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+    position: {x: -0.5, y: -0.5, z: 0.5}
+    rotation: {x: -0.00000038236465, y: 0.00000026932528, z: -0.70710707, w: 0.70710653}
 --- !u!4 &1227900756
 Transform:
   m_ObjectHideFlags: 0
