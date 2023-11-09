@@ -12,6 +12,7 @@ public class Origin_CursorController : MonoBehaviour
     {
         setNormalCursor();
     }
+
     public void setNormalCursor()
     {
         CursorMode mode = CursorMode.ForceSoftware;

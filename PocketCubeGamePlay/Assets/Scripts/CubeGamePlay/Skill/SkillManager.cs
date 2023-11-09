@@ -29,7 +29,7 @@ public abstract class SkillManager : MonoBehaviour
     protected CubePlayCameraController myCameraController;
     RotateWholeCubeManager myRotateWholeCubeManager;
     CubeVFXManager myCubeVFXManager;
-
+    CubeCursorController myCursorController;
     protected Vector3 startPos;
     protected Vector3 endPos;
     protected Vector3 startScale;
@@ -41,6 +41,7 @@ public abstract class SkillManager : MonoBehaviour
         myCameraController = FindObjectOfType<CubePlayCameraController>();
         myRotateWholeCubeManager = FindObjectOfType<RotateWholeCubeManager>();
         myCubeVFXManager = FindObjectOfType<CubeVFXManager>();
+        myCursorController = FindObjectOfType<CubeCursorController>();
         ResetValues();
     }
 
@@ -78,6 +79,9 @@ public abstract class SkillManager : MonoBehaviour
     {
         if (currentState == SkillState.WaitForSelectFirstCube)
         {
+
+            myCursorController.setNormalCursor();
+
             if (Input.GetMouseButtonDown(1))
             {
                 myRotateWholeCubeManager.InitPosition();
@@ -85,10 +89,13 @@ public abstract class SkillManager : MonoBehaviour
             if (Input.GetMouseButton(1)&& !Input.GetMouseButton(0))
             {
                 // enable camera rotation
+                myCursorController.setRotationCursor();
                 myRotateWholeCubeManager.RotateWholeCubeForSkill();
-
             }
-
+            if (!Input.GetMouseButton(1) && Input.GetMouseButton(0))
+            {
+                myCursorController.setSkillCursor();   
+            }
             if (!Input.GetMouseButton(1)&&Input.GetMouseButtonUp(0))
             {
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
@@ -141,6 +148,12 @@ public abstract class SkillManager : MonoBehaviour
         }
         else if (currentState == SkillState.WaitForSelectSecondCube)
         {
+            myCursorController.setNormalCursor();
+
+            if (!Input.GetMouseButton(1) && Input.GetMouseButton(0))
+            {
+                myCursorController.setSkillCursor();
+            }
             if (Input.GetMouseButtonUp(0))
             {
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);

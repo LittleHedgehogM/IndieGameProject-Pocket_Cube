@@ -29,6 +29,7 @@ public class CubeInPlayPhase : GameplayPhase
     RotateWholeCubeManager myRotateWholeCubeManager;
     CubePlayUIController myUIController;
     CubePlayCameraController myCubePlayCameraController;
+    CubeCursorController myCubeCursorController;
     CubeState cubeState;
     ReadCube readCube;
 
@@ -54,10 +55,12 @@ public class CubeInPlayPhase : GameplayPhase
         readCube = FindObjectOfType<ReadCube>();
         myUIController = FindObjectOfType<CubePlayUIController>();
         myCubePlayCameraController = FindObjectOfType<CubePlayCameraController>();
-
-
+        myCubeCursorController = FindObjectOfType<CubeCursorController>();
+        myCubeCursorController.setNormalCursor();
         currentPlayStatus = CubePlayStatus.WaitForInput;
         myUIController.InitCubePlayUIElements();
+
+        
     }
 
 
@@ -134,11 +137,13 @@ public class CubeInPlayPhase : GameplayPhase
 
     public bool CanRestoreCommuation()
     {
+        myCubeCursorController.setNormalCursor();
         return currentPlayStatus == CubePlayStatus.WaitForInput || currentPlayStatus == CubePlayStatus.InCommutation;
     }
 
     public bool CanRestoreDiagional()
     {
+        myCubeCursorController.setNormalCursor();
         return currentPlayStatus == CubePlayStatus.WaitForInput || currentPlayStatus == CubePlayStatus.InDiagonal;
     }
 
@@ -146,7 +151,6 @@ public class CubeInPlayPhase : GameplayPhase
     {
         if (CanRestoreCommuation())
         {
-
             CubePlayCheckPoint.instance.loadCurrentStateCommutation();
             myCubePlayCameraController.instantResetCam();
             restoreFinish = false;
@@ -206,7 +210,7 @@ public class CubeInPlayPhase : GameplayPhase
         myDiagonalSkill.ResetValues();
         myCommutationSkill.ResetValues();
         myCubePlayCameraController.onRestart();
-        
+        myCubeCursorController.setNormalCursor();
 
     }
 
@@ -233,6 +237,7 @@ public class CubeInPlayPhase : GameplayPhase
         }
         else if (currentPlayStatus == CubePlayStatus.WaitForInput)
         {
+            myCubeCursorController.setNormalCursor();
             readCube.ReadState();
             // priority : Commutation = Diagonal >  swipe > rotation
             bool isMouseScrollWheelForward = Input.GetAxis("Mouse ScrollWheel") > 0f;
@@ -252,14 +257,18 @@ public class CubeInPlayPhase : GameplayPhase
 
             }
             else if (isLeftMouseClickDown)
-            {
+            {                
                 initalMousePressPos = Input.mousePosition;
+            }
+            else if (isLeftMouseHold)
+            {
+                myCubeCursorController.setSwipeCursor();
             }
             else if (isLeftMouseClickUp)
             {
                 endMousePressPos = Input.mousePosition;
                 if (mySwipeFaceManager.InitSwipeMouseDrag(initalMousePressPos, endMousePressPos))
-                {
+                {    
                     currentPlayStatus = CubePlayStatus.InSwipe;
                 }
             }
@@ -267,6 +276,7 @@ public class CubeInPlayPhase : GameplayPhase
             {
                 if (myRotateWholeCubeManager.InitPosition())
                 {
+                    myCubeCursorController.setRotationCursor();
                     currentPlayStatus = CubePlayStatus.InRotation;
                 }
             }
@@ -301,6 +311,8 @@ public class CubeInPlayPhase : GameplayPhase
 
         return false;
     }
+
+
 
 
 

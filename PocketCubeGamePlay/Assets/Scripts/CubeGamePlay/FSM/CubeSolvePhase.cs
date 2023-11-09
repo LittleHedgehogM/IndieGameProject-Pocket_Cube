@@ -18,7 +18,7 @@ public class CubeSolvedPhase : GameplayPhase
     CubeSolveState currentState;
     CubePlayCameraController myCameraController;
     CubeVFXManager myVFXManager;
-
+    CubeCursorController myCursorController;
     [SerializeField] private AnimationCurve cubeTranslationCurve;
     [SerializeField][Range(0, 1)] private float cubeTranslationTime;
 
@@ -35,6 +35,9 @@ public class CubeSolvedPhase : GameplayPhase
         myVFXManager = FindObjectOfType<CubeVFXManager>();
         //translateBackFinish = false;
         myCubeIceController = FindObjectOfType<CubeIceController>();
+        myCursorController = FindObjectOfType<CubeCursorController>();
+        myCursorController.setNormalCursor();
+
     }
 
     //private IEnumerator  playFinishAnimation()
@@ -156,6 +159,7 @@ public class CubeSolvedPhase : GameplayPhase
             }
             else if (Input.GetMouseButton(1))
             {
+                myCursorController.setRotationCursor();
                 Vector3 direction = previousMousePosition - myCameraController.ScreenToViewportPoint(Input.mousePosition);
                 direction *= mouseSenstivity;
                 myCameraController.RotateMainCamera(direction);
@@ -163,6 +167,7 @@ public class CubeSolvedPhase : GameplayPhase
             }
             else 
             {
+                myCursorController.setNormalCursor();
                 mainCam.transform.RotateAround(pocketCube.transform.position, mainCam.transform.up, Time.deltaTime * rotateSpeed);
                 
             }
