@@ -23,6 +23,8 @@ public class Origin_Axis : MonoBehaviour
     public static event Action DownAxisClicked;
 
     [SerializeField] private Color colorSelected;
+    Origin_CursorController myCursorController;
+
     
     private float edgeLength = 0.003f;
     private GameObject go;
@@ -62,10 +64,13 @@ public class Origin_Axis : MonoBehaviour
         material = go.GetComponent<MeshRenderer>().material;
         material.SetColor("_diffusegradient01", Color.white);
         material.SetFloat("_OutlineWidth", 0);
+
+        myCursorController = FindObjectOfType<Origin_CursorController>();
     }
 
     private void OnMouseEnter()
     {
+        myCursorController.setHoverCursor();
         material.SetColor("_diffusegradient01", colorSelected);
         material.SetFloat("_OutlineWidth", edgeLength);
 
@@ -73,6 +78,7 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseExit()
     {
+        myCursorController.setNormalCursor();
         material.SetColor("_diffusegradient01", Color.white);
         material.SetFloat("_OutlineWidth", 0);
     }

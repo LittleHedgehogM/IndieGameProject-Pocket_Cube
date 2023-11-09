@@ -96,7 +96,6 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator Rotate(Vector3 Axis, bool isClockwise, float angleGap)
     {
-        myVFXController.playRotationVFXAt(Sphere.transform);
 
         float currentUsedTime = 0;
         float t = 0;
@@ -145,6 +144,7 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator InitPhaseTwo()
     {
+        myVFXController.playRotationVFXAt(Sphere.transform);
         leftAxis.setActive(false);
         rightAxis.setActive(false);
         yield return new WaitForSeconds(1);
@@ -155,6 +155,7 @@ public class Origin_Controller : MonoBehaviour
     
     private IEnumerator InitPhaseThree()
     {
+        myVFXController.playRotationVFXAt(Sphere.transform);
         yield return new WaitForSeconds(1);
 
         myRotationTarget.InitPhaseThree();
