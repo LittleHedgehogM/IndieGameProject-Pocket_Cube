@@ -8,8 +8,9 @@ public class Electro_CubeController : MonoBehaviour
 {
     public static Action onCubeEnabled;
     [SerializeField] private GameObject cubeVFX;
-    [SerializeField] private Transform CubeTransform
-    ;
+    [SerializeField] private Transform CubeTransform;
+
+
     public void enableCube()
     {
         onCubeEnabled?.Invoke();

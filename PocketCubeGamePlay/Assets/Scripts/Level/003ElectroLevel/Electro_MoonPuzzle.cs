@@ -82,13 +82,22 @@ public class Electro_MoonPuzzle : MonoBehaviour
     private bool isRightCircuitAnimPlaying = false;
     private bool isCenterCircuitAnimPlaying = false;
     private bool isPuzzleSolved = false;
+
+
+    private void setGateAndSwitchNotInteractable(bool enable){
+        myCircuit.switch_Or_left.setInteractionEnabled(enable);
+        myCircuit.switch_Or_right.setInteractionEnabled(enable);
+        myCircuit.switch_nand_left.setInteractionEnabled(enable);
+        myCircuit.switch_nand_right.setInteractionEnabled(enable);
+        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+        myCircuit.logicGateCenter.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+    }
+
     public void setNotInteractable()
     {
         MoonPuzzleMeshControl.Show();
-        myCircuit.switch_Or_left.setInteractionEnabled(false);
-        myCircuit.switch_Or_right.setInteractionEnabled(false);
-        myCircuit.switch_nand_left.setInteractionEnabled(false);
-        myCircuit.switch_nand_right.setInteractionEnabled(false);
+        setGateAndSwitchNotInteractable(false);
         currentState = PuzzleState.NonInteractable;
     }
 
@@ -141,6 +150,8 @@ public class Electro_MoonPuzzle : MonoBehaviour
         isFirstTimeEnter = true;
         isLeftAnimEnds = false;
         isRightAnimEnds = false;
+        setGateAndSwitchNotInteractable(false);
+
     }
 
     public void EnterRange()
@@ -163,10 +174,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
         {
             //myPlayerMovement.setEnableMovement(false);
             myCameraController.resetSunCam();
-            myCircuit.switch_Or_left.setInteractionEnabled(false);
-            myCircuit.switch_Or_right.setInteractionEnabled(false);
-            myCircuit.switch_nand_left.setInteractionEnabled(false);
-            myCircuit.switch_nand_right.setInteractionEnabled(false);
+            setGateAndSwitchNotInteractable(false);
             //CenterCubeObject.SetActive(true);
             CenterMeshControl.Show();
 
@@ -196,10 +204,7 @@ public class Electro_MoonPuzzle : MonoBehaviour
                 isFirstTimeEnter = false;
             }
 
-            myCircuit.switch_Or_left.setInteractionEnabled(true);
-            myCircuit.switch_Or_right.setInteractionEnabled(true);
-            myCircuit.switch_nand_left.setInteractionEnabled(true);
-            myCircuit.switch_nand_right.setInteractionEnabled(true);
+            setGateAndSwitchNotInteractable(true);
             isLSwitchOrLeftOn = myCircuit.switch_Or_left.isElectroSwitchOn();
             isLSwitchOrRightOn = myCircuit.switch_Or_right.isElectroSwitchOn();
             isRSwitchNandLeftOn = myCircuit.switch_nand_left.isElectroSwitchOn();
@@ -328,6 +333,8 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         isCenterCircuitAnimPlaying = false;
                         cancelEffects();
                         isPuzzleSolved = false;
+                        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+                        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
                     }
                     else
                     {
@@ -338,6 +345,9 @@ public class Electro_MoonPuzzle : MonoBehaviour
                         myCircuit.switch_nand_left.setInteractionEnabled(false);
                         myCircuit.switch_Or_left.setInteractionEnabled(false);
                         myCircuit.switch_Or_right.setInteractionEnabled(false);
+                        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(false);
+                        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(false);
+
                     }
                 }
             }

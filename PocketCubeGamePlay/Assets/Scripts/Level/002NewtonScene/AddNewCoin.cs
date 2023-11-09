@@ -10,7 +10,7 @@ public class AddNewCoin : MonoBehaviour
 
     [SerializeField]
     private AK.Wwise.Event addCoin;
-    private float range = 0.04f;
+    private float range = 0.02f;
 
     public void AddCoin(GameObject coin)
     {

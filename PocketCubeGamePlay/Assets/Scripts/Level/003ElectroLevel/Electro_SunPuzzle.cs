@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer.Internal;
 using UnityEngine;
 
@@ -83,13 +84,24 @@ public class Electro_SunPuzzle : MonoBehaviour
 
     private bool isPuzzleSolved;
 
+
+    private void setGateAndSwitchNotInteractable(bool enable)
+    {
+        myCircuit.switch_Nand_left.setInteractionEnabled(enable);
+        myCircuit.switch_Nand_right.setInteractionEnabled(enable);
+        myCircuit.switch_not.setInteractionEnabled(enable);
+        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+        myCircuit.logicGateCenter.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+    }
+
+
     public void setNotInteractable()
     {
         SunPuzzleMeshControl.Show();
         currentState = PuzzleState.NonInteractable;
-        myCircuit.switch_Nand_left.setInteractionEnabled(false);
-        myCircuit.switch_Nand_right.setInteractionEnabled(false);
-        myCircuit.switch_not.setInteractionEnabled(false);
+        setGateAndSwitchNotInteractable(false);
+
     }
     public bool isInPuzzle()
     {
@@ -142,6 +154,8 @@ public class Electro_SunPuzzle : MonoBehaviour
         isFirstTimeEnter = true;
         isLeftAnimEnds = false;
         isRightAnimEnds = false;
+        setGateAndSwitchNotInteractable(false);
+
     }
 
     public void EnterRange()
@@ -166,9 +180,7 @@ public class Electro_SunPuzzle : MonoBehaviour
         {
             //myPlayerMovement.setEnableMovement(false);
             myCameraController.resetSunCam();
-            myCircuit.switch_Nand_left.setInteractionEnabled(false);
-            myCircuit.switch_Nand_right.setInteractionEnabled(false);
-            myCircuit.switch_not.setInteractionEnabled(false);
+            setGateAndSwitchNotInteractable(false);
             //CenterCubeObject.SetActive(true);
             centerMeshControl.Show();
             RightWall.Show();
@@ -182,9 +194,7 @@ public class Electro_SunPuzzle : MonoBehaviour
         if (myCameraController.isSunCam())
         {
             currentState = PuzzleState.InPuzzle;
-            myCircuit.switch_Nand_left.setInteractionEnabled(true);
-            myCircuit.switch_Nand_right.setInteractionEnabled(true);
-            myCircuit.switch_not.setInteractionEnabled(true);
+            setGateAndSwitchNotInteractable(true);
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
@@ -323,6 +333,9 @@ public class Electro_SunPuzzle : MonoBehaviour
                         isCenterCircuitAnimPlaying = false;
                         cancelEffects();
                         isPuzzleSolved = false;
+                        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+                        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+
                     }
                     else
                     {
@@ -332,6 +345,8 @@ public class Electro_SunPuzzle : MonoBehaviour
                         myCircuit.switch_not.setInteractionEnabled(false);
                         myCircuit.switch_Nand_right.setInteractionEnabled(false);
                         myCircuit.switch_Nand_left.setInteractionEnabled(false);
+                        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(false);
+                        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(false);
 
                     }
                 }

@@ -13,6 +13,7 @@ public class Electro_PlayerMovement : MonoBehaviour
     [SerializeField]  Transform orientation;
     Vector3 currentmoveDirection;
     public static event Action TranslationFinish;
+    [SerializeField] private Animator playerAnimator;
 
 
 
@@ -58,7 +59,16 @@ public class Electro_PlayerMovement : MonoBehaviour
         //myCameraController = FindObjectOfType<Electro_Camera_Controller>();
 
     }
+    private void Walk()
+    {
+        playerAnimator.SetTrigger("isWalking");
+    }
 
+    private void Idle()
+    {
+        playerAnimator.SetTrigger("isIdle");
+
+    }
     public Vector3 getPlayerCurrentPosition()
     {
         return transform.position;
@@ -85,7 +95,14 @@ public class Electro_PlayerMovement : MonoBehaviour
 
             movementDirection.Normalize();
 
-            
+            if (horizontalInput != 0 || verticalInput != 0)
+            {
+                Walk();
+            }
+            else
+            {
+                Idle();
+            }
 
             currentmoveDirection = movementDirection;
 

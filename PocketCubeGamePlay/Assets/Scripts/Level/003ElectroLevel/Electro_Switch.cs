@@ -13,12 +13,15 @@ public class Electro_Switch : MonoBehaviour
     public static event Action SwitchColorTranslationFinished;
 
     bool isInteractionEnabled = false;
+    Electro_CursorController myCursorController;
+
 
     void Start()
     {
         go = this.gameObject;
         material = go.GetComponent<MeshRenderer>().material;
         InitSwitchColor();
+        myCursorController = FindObjectOfType<Electro_CursorController>();
     }
 
 
@@ -37,10 +40,32 @@ public class Electro_Switch : MonoBehaviour
         isInteractionEnabled = isEnabled;
     }
 
+    private void OnMouseEnter()
+    {
+        if (isInteractionEnabled)
+        {
+            myCursorController.setSelectCursor();
+        }
+    }
+
+    private void OnMouseExit()
+    {
+       
+        myCursorController.setDefaultCursor();
+
+    }
+    private void OnMouseDown()
+    {
+        if (isInteractionEnabled){
+            myCursorController.setClickDownCursor();
+        }
+    }
+
     private void OnMouseUp()
     {
         if (isInteractionEnabled)
         {
+            myCursorController.setSelectCursor();
             switchColor();
         }
         

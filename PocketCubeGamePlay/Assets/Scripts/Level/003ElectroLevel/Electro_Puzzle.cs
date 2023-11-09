@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Electro_Puzzle : MonoBehaviour
@@ -80,12 +81,19 @@ public class Electro_Puzzle : MonoBehaviour
 
     private bool isCircuitAnimPlaying;
     private bool isPuzzleSolved = false;
+
+
+    private void setGateAndSwitchNotInteractable(bool enable)
+    {
+        myCircuit.switch_Left.setInteractionEnabled(enable);
+        myCircuit.switch_right.setInteractionEnabled(enable);
+        myCircuit.logicGateHolder.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(enable);
+    }
+
     public void setNotInteractable()
     {
         starMeshControl.Show();
-        myCircuit.switch_Left.setInteractionEnabled(false);
-        myCircuit.switch_right.setInteractionEnabled(false);
-
+        setGateAndSwitchNotInteractable(false);
         currentState = PuzzleState.NonInteractable;
     }
     public bool isInPuzzle()
@@ -136,6 +144,9 @@ public class Electro_Puzzle : MonoBehaviour
         myVFXObjectPool = FindObjectOfType<Electro_VFX_ObjectPool>();
         StarFinishIcon.GetComponent<Renderer>().enabled = false;
         isFirstTimeEnter = true;
+        setGateAndSwitchNotInteractable(false);
+
+
         //isLeftAnimEnds = false;
         //isRightAnimEnds = false;
     }
@@ -157,8 +168,7 @@ public class Electro_Puzzle : MonoBehaviour
         if (currentState == PuzzleState.InPuzzle)
         {
             myCameraController.resetCam();
-            myCircuit.switch_Left.setInteractionEnabled(false);
-            myCircuit.switch_right.setInteractionEnabled(false);
+            setGateAndSwitchNotInteractable(false);
             currentState = PuzzleState.Interactable;
         }     
     }
@@ -168,8 +178,8 @@ public class Electro_Puzzle : MonoBehaviour
         if (myCameraController.isStarCam())
         { 
             currentState = PuzzleState.InPuzzle;
-            myCircuit.switch_Left.setInteractionEnabled(true);
-            myCircuit.switch_right.setInteractionEnabled(true);
+            setGateAndSwitchNotInteractable(true);
+
             myPlayerMovement.setEnableMovement(true);
             if (isFirstTimeEnter)
             {
@@ -191,13 +201,6 @@ public class Electro_Puzzle : MonoBehaviour
             currentState = PuzzleState.Interactable;
         }
         myPlayerMovement.setEnableMovement(true);
-    }
-
-
-    private void PlayVFXAt(Transform gateTransform)
-    {
-        myVFXObjectPool.PlayVFXAt(gateTransform);
-
     }
 
 
@@ -261,6 +264,9 @@ public class Electro_Puzzle : MonoBehaviour
                     isCircuitAnimPlaying = false;             
                     myCircuit.switch_Left.setInteractionEnabled(true);
                     myCircuit.switch_right.setInteractionEnabled(true);
+                    myCircuit.logicGateHolder.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+
+
                     cancelEffects();
                     isPuzzleSolved = false;
                 }

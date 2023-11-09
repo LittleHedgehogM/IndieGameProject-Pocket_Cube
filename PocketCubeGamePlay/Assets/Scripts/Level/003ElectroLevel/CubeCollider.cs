@@ -8,6 +8,12 @@ public class CubeCollider : MonoBehaviour
 {
 
     bool isEnabled = false;
+    Electro_CursorController myCursorController;
+    private void Start()
+    {
+        myCursorController = FindObjectOfType<Electro_CursorController>();
+    }
+
     private void OnEnable()
     {
         Electro_CubeController.onCubeEnabled += enableCubeCollide;
@@ -23,11 +29,37 @@ public class CubeCollider : MonoBehaviour
        isEnabled = true;
     }
 
-    // Start is called before the first frame update
-    private void OnMouseUp()
+    private void OnMouseEnter()
+    {
+        if (isEnabled)
+        { 
+            myCursorController.setSelectCursor();
+        }
+    }
+
+    private void OnMouseExit()
     {
         if (isEnabled)
         {
+            myCursorController.setDefaultCursor();
+        }
+
+    }
+    private void OnMouseDown()
+    {
+        if (isEnabled)
+        {
+            myCursorController.setClickDownCursor();
+        }
+    }
+
+    // Start is called before the first frame update
+    private void OnMouseUp()
+    {
+        
+        if (isEnabled)
+        {
+            myCursorController.setSelectCursor();
             FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
         }
     }
