@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Apple_001
-  m_Shader: {fileID: 4800000, guid: 8d74546f68f90d24a8f37048d5b91d82, type: 3}
+  m_Name: MA_Newton_white 4
+  m_Shader: {fileID: 4800000, guid: 229a5923b6714444387fdd2bbe031178, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -73,15 +73,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample4:
         m_Texture: {fileID: 2800000, guid: 097c312032aaba1478210efd3dcf6910, type: 3}
@@ -110,8 +110,8 @@ Material:
     - _BaseCellOffset: -0.073514424
     - _BaseCellOffset001: -0.09803539
     - _BaseCellOffset002: 0.52056116
-    - _BaseCellOffset003: 0.85
-    - _BaseCellOffset004: 0.832
+    - _BaseCellOffset003: 0.4836274
+    - _BaseCellOffset004: 0.6377987
     - _BaseCellOffset1: -0.09570599
     - _BaseCellSharpness: 0.5383997
     - _BumpScale: 1
@@ -131,14 +131,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeighRatioInPut: 1.5
+    - _HeighRatioInPut: 0.5561711
     - _Metallic: 0
     - _Mode: 0
-    - _N_BaseCellOffset001: 2.12
+    - _N_BaseCellOffset001: 2
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.028
+    - _OutlineWidth: 0
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
@@ -148,7 +148,7 @@ Material:
     - _R_BaseCellOffset2: 1.6729951
     - _R_BaseCellOffset3: 0.72279984
     - _ReflectOffset001: 2.588895
-    - _ReflectOffset002: 3.5
+    - _ReflectOffset002: 2.6389735
     - _ReflectOffset005: 1.24129
     - _ReflectOffset2: 0.5333898
     - _ReflectOffset3: 2
@@ -165,13 +165,14 @@ Material:
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0, b: 0, a: 1}
+    - _Color0: {r: 0.3773585, g: 0.250062, b: 0.027293192, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
-    - _Reflect02: {r: 0.4433962, g: 0.11991214, b: 0.1308097, a: 1}
-    - _ReflectOff01: {r: 0.23733237, g: 0.24054566, b: 0.3773585, a: 1}
-    - _diffusegradient01: {r: 1, g: 0.6031671, b: 0.5251572, a: 1}
-    - _diffusegradient02: {r: 0.8018868, g: 0.13121785, b: 0, a: 1}
+    - _Reflect02: {r: 1, g: 1, b: 1, a: 1}
+    - _ReflectOff01: {r: 1, g: 0.31760997, b: 1, a: 1}
+    - _diffusegradient01: {r: 1, g: 0.85227525, b: 0.6194968, a: 1}
+    - _diffusegradient02: {r: 0.735849, g: 0.58102196, b: 0.3100747, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
+    - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []
