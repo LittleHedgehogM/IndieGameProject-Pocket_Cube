@@ -96,11 +96,7 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
         {
             PlayerCollideWithCube?.Invoke();
         }
-    }
-    
-
-
-
+    }   
 
     // Update is called once per frame
     public void OnUpdate()

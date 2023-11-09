@@ -9,10 +9,15 @@ public class Origin_Cube : MonoBehaviour
     bool isEnabled = false;
     [SerializeField] Animator cubeAnimator;
     [SerializeField] GameObject cubeVFX;
+    Origin_CursorController cursorController;
     public void PlayAnim(){
         cubeAnimator.Play("Show");
     }
 
+    private void Start()
+    {
+        cursorController = FindObjectOfType<Origin_CursorController>();
+    }
     public void enableCube(){
         isEnabled = true;
 
@@ -22,10 +27,23 @@ public class Origin_Cube : MonoBehaviour
         cubeVFX.GetComponent<ParticleSystem>().Play();
     }
 
+    private void OnMouseExit()
+    {
+        cursorController.setNormalCursor();
+    }
+    private void OnMouseEnter()
+    {
+        if (isEnabled)
+        {
+            cursorController.setHoverCursor();
+        }
+    }
+
     private void OnMouseUp()
     {
         if (isEnabled)
         {
+            cursorController.setNormalCursor();
             FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
         }
     }

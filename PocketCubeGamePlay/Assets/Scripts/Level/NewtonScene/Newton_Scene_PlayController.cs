@@ -12,6 +12,7 @@ public class NewtonScenePlayController : MonoBehaviour
     Newton_Scene_PlayerMovement myPlayerMovement;
     Newton_Scene_VFX_Controller myVFXController;
     LevelLoaderScript myLevelLoader;
+    Newton_CursorController myCursorController;
 
 
     [SerializeField] [Range(0, 3)] private float dist_threshold;
@@ -72,11 +73,6 @@ public class NewtonScenePlayController : MonoBehaviour
     [SerializeField]
     Animator LEyeBallAnimator;
 
-    //[SerializeField]
-    //Animator RCoinAnimator;
-    //[SerializeField]
-    //Animator LCoinAnimator;
-
     bool isPlayingSwallowAnimation = false;
     bool isPlayingSpriteAnimation = false;
     GameObject activeCoin = null;
@@ -88,7 +84,7 @@ public class NewtonScenePlayController : MonoBehaviour
         myCameraController  = FindObjectOfType<Scene_Newton_Camera_Controller>();
         myVFXController     = FindObjectOfType<Newton_Scene_VFX_Controller>();
         myLevelLoader       = FindObjectOfType<LevelLoaderScript>();
-
+        myCursorController = FindObjectOfType<Newton_CursorController>();
         Scale_Left.GetComponent<Scale>().insertCoin(coin1);
         Scale_Left.GetComponent<Scale>().insertCoin(coin2);
         Scale_Left.GetComponent<Scale>().insertCoin(coin3);
@@ -207,7 +203,6 @@ public class NewtonScenePlayController : MonoBehaviour
         }
     }
 
-
     private bool CheckIfIsScaleDraw()
     {
         int leftWeight = Scale_Left.GetComponent<Scale>().getTotalWeight();
@@ -294,6 +289,7 @@ public class NewtonScenePlayController : MonoBehaviour
         }
         else if (myPlayStatus == PlayStatus.InDisplayEyeAndScale)
         {
+            myCursorController.setDefaultCursor();
             if (CheckIfIsScaleDraw())
             {
                 return;
@@ -314,31 +310,51 @@ public class NewtonScenePlayController : MonoBehaviour
             Ray ray;
             ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
 
-            if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
                 if (hitObject == coin1 || hitObject == coin2 || hitObject == coin3
                     || hitObject == coin4 || hitObject == coin5 || hitObject == currentScale)
                 {
                     EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
-                    if (playerEquipCoin.getEquipped() != null) // if player has a coin
+                    
+                    if (playerEquipCoin.getEquipped() != null) 
                     {
-                        myPlayStatus = PlayStatus.InPutCoin;
-                    }
-                    else if (!currentScale.GetComponent<Scale>().isEmpty()) 
-                    {
-                        myPlayStatus = PlayStatus.InTakeCoin;
-                        if (currentScale == Scale_Left)
+                        myCursorController.setSelectCursor();
+                        if (Input.GetMouseButton(0))
                         {
-                            myCameraController.showLeftcale();
+                            myCursorController.setClickDownCursor();
+                        }
+                    }
+                    else if (!currentScale.GetComponent<Scale>().isEmpty())
+                    { 
+                        myCursorController.setViewCursor();
+                    }
+                        
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        if (playerEquipCoin.getEquipped() != null) // if player has a coin
+                        {
+                            myCursorController.setDefaultCursor();
+                            myPlayStatus = PlayStatus.InPutCoin;
+                        }
+                        else if (!currentScale.GetComponent<Scale>().isEmpty()) 
+                        {
+                            myCursorController.setDefaultCursor();
+                            myPlayStatus = PlayStatus.InTakeCoin;
+                            if (currentScale == Scale_Left)
+                            {
+                                myCameraController.showLeftcale();
+
+                            }
+                            else if (currentScale == Scale_Right)
+                            {
+                                myCameraController.showRightScale();
+                            }
 
                         }
-                        else if (currentScale == Scale_Right)
-                        {
-                            myCameraController.showRightScale();
-                        }
-
                     }
+                    
                 }
 
             }
@@ -356,8 +372,9 @@ public class NewtonScenePlayController : MonoBehaviour
                     myVFXController.PlayScalePutVFX(currentScale.transform);
                     StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
                     myPlayStatus = PlayStatus.InDisplayEyeAndScale;
-                    print(coin4.transform.position);
-                    print(coin5.transform.position);
+                    //print(coin4.transform.position);
+                    //print(coin5.transform.position);
+
                 }
 
             }
@@ -400,30 +417,40 @@ public class NewtonScenePlayController : MonoBehaviour
             }
             else
             {
+                myCursorController.setDefaultCursor();
                 currentScale.GetComponent<ScaleHighlighter>().HighlightScale();
                 setEnableAllCoinMaterialChange(true);
 
                 myPlayerMovement.setEnableMovement(false);
-                if (Input.GetMouseButtonUp(0))
-                {
-                    RaycastHit hit;
-                    Ray ray;
-                    ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                Ray ray;
+                ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
                     if (Physics.Raycast(ray, out hit))
                     {
                         GameObject coinHit = hit.collider.gameObject;
                         if (coinHit == coin1 || coinHit == coin2 || coinHit == coin3
                             || coinHit == coin4 || coinHit == coin5)
                         {
-                            activeCoin = coinHit;
-                            currentScale.GetComponent<Scale>().popCoin(coinHit);
-                            cameraShowEyeAndScale();
-                            StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
-                            setEnableAllCoinMaterialChange(false);                           
-                            PlaySpriteAnimation(currentScale == Scale_Left, coinHit);
-                            isPlayingSpriteAnimation = true;
+                            myCursorController.setSelectCursor();
+                            if(Input.GetMouseButton(0))
+                            {
+                                myCursorController.setClickDownCursor();
+
+                            }
+                            else if (Input.GetMouseButtonUp(0)) 
+                            {
+                                myCursorController.setDefaultCursor();
+                                activeCoin = coinHit;
+                                currentScale.GetComponent<Scale>().popCoin(coinHit);
+                                cameraShowEyeAndScale();
+                                StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
+                                setEnableAllCoinMaterialChange(false);                           
+                                PlaySpriteAnimation(currentScale == Scale_Left, coinHit);
+                                isPlayingSpriteAnimation = true;
+                            }                        
+                            
                         }
-                        else 
+                        else if (Input.GetMouseButtonUp(0))
                         {
                             cameraShowEyeAndScale();
                             myPlayStatus = PlayStatus.InDisplayEyeAndScale;
@@ -432,7 +459,7 @@ public class NewtonScenePlayController : MonoBehaviour
                         }
                     }
                     
-                }
+                  
             }
 
             
