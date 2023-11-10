@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FourierKeyCube : MonoBehaviour
 {
+    [SerializeField] private FourierColorChanger Level1;
+    [SerializeField] private FourierColorChanger Level2;
+    [SerializeField] private FourierColorChanger Level3;
     [SerializeField] private FourierColorChanger Level4;
     [SerializeField] private FourierColorChanger Level5;
 
@@ -13,7 +16,8 @@ public class FourierKeyCube : MonoBehaviour
     [SerializeField] private bool levelPass = false;
 
     [SerializeField] private ParticleSystem cubeFx;
-
+    //[SerializeField] private ParticleSystem cubeLevelPassFx;
+    //private bool cubeLevelPassFxReady = true;
     private bool played = false;
     // Update is called once per frame
     void Update()

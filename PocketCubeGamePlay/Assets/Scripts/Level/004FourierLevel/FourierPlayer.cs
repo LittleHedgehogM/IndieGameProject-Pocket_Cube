@@ -17,6 +17,7 @@ public class FourierPlayer : MonoBehaviour
     public Vector3 gravity;
     Vector3 currentmoveDirection = Vector3.zero;
     Vector3 playerPrevPosition = Vector3.zero;
+    Vector3 movementDirection;
 
     //audio
     public AK.Wwise.Event jumpSFX;
@@ -24,7 +25,7 @@ public class FourierPlayer : MonoBehaviour
 
     private bool jumpSwitch = false ;
 
-
+    [SerializeField] Animator playerAni;
 
     void Start()
     {
@@ -47,11 +48,11 @@ public class FourierPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && jumpSwitch)
+        if (jumpSwitch)
         {
-            
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                playerAni.SetTrigger("isJumping");
                 //print("Space Down");
                 jumpPS.Play();
                 jumpSFX.Post(gameObject);
@@ -60,6 +61,21 @@ public class FourierPlayer : MonoBehaviour
                 myRigidbody.velocity = Vector3.up * jumpStrength;
             }
         }
+             
+        if  (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            playerAni.SetTrigger("isWalking");
+            //print("walk");
+            
+
+        }
+        else 
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        {
+            playerAni.SetTrigger("isIdle");
+            //print("stop");
+        }
+
     }
 
     void FixedUpdate()
@@ -81,7 +97,7 @@ public class FourierPlayer : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         movementDirection.Normalize();
 
         transform.Translate(movementDirection * playerMoveSpeed * Time.deltaTime, Space.World);

@@ -33,12 +33,16 @@ public class FourierColorChanger : MonoBehaviour
     [SerializeField] private GameObject levelExit;
     //[SerializeField] private GameObject levelEnterCol;
 
+    //[SerializeField] 
+    private ParticleSystem levelPassFx;
+    [SerializeField] ParticleSystem cubeLevelPassFx;
+
     void Awake()
     {
         material = GetComponent<Renderer>().material;
         //levelEnterCol.SetActive(false);
         //bridge.SetActive(false);   
-        
+        levelPassFx = GetComponentInChildren<ParticleSystem>();
         
         
         
@@ -117,6 +121,9 @@ public class FourierColorChanger : MonoBehaviour
         if (levelEnter & material.GetColor("_diffusegradient01") == goalColor & levelFirstEnter == 1 & !isLevelPass)
         {
             isLevelPass = true;
+            levelPassFx.Play();
+            cubeLevelPassFx.Play();
+
             levelExit.SetActive(false);
             print(this.gameObject.name + "pass");
         }
