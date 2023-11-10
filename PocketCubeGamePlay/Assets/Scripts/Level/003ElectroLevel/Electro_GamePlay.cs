@@ -63,11 +63,11 @@ public class Electro_GamePlay : MonoBehaviour
                   starPuzzle.setNotInteractable();
                   sunPuzzle.setNotInteractable();
                   moonPuzzle.setNotInteractable();
-                  myPlayerMovement.setEnableMovement(false);
                   myCameraController.resetCam();
                   isScenePuzzleSolved = true;
                   centerAnimator.Play("AM_Center_Normal");
                   cubeAnimator.Play("AM_CenterCube_Finsh");
+                  return;
             }
             else 
             {

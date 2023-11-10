@@ -22,13 +22,14 @@ public class Electro_Camera_Controller : MonoBehaviour
     Vector3     MainCamInitPosition;
     Quaternion  MainCamInitRotation;
     float       MainCamInitScale;
-
+    bool isResettingCam;
     private void Start()
     {
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         MainCamInitPosition = mainCam.transform.position;
         MainCamInitRotation = mainCam.transform.rotation;
         MainCamInitScale = mainCam.GetComponent<Camera>().orthographicSize;
+        isResettingCam = false;
     }
 
     public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)
@@ -106,7 +107,11 @@ public class Electro_Camera_Controller : MonoBehaviour
 
     public void resetCam()
     {
-        StartCoroutine(TranslateBackToInitPosition(false));
+        if (!isResettingCam){   
+            StartCoroutine(TranslateBackToInitPosition(false));
+            isResettingCam = true;
+        }
+        
     }
 
     private IEnumerator TranslateTo(Camera targetCam, bool isLookAtTarget)
@@ -168,6 +173,7 @@ public class Electro_Camera_Controller : MonoBehaviour
         }
 
         ResetCameraFinish?.Invoke();
+        isResettingCam = false;
     }
 }
 
