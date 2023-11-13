@@ -118,6 +118,62 @@
 						</Sound>
 					</ChildrenList>
 				</ActorMixer>
+				<ActorMixer Name="Ani" ID="{EE4AFE61-EA73-4B85-89C9-6AADB576AD7D}" ShortID="920983899">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="kaichang" ID="{6F780ED2-D20D-448A-AF52-E2FDD561C85C}" ShortID="167504568">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="kaichang" ID="{93E9234F-1848-446C-9152-9F0923960201}">
+									<Language>SFX</Language>
+									<AudioFile>kaichang.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="545451843"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="kaichang" ID="{93E9234F-1848-446C-9152-9F0923960201}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="jiqiren" ID="{149F8C44-1F36-4E33-B702-62055F198123}" ShortID="688084252">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="jiqiren" ID="{A551B596-50CE-47B5-A837-B38FBEC41DD4}">
+									<Language>SFX</Language>
+									<AudioFile>jiqiren.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="557601517"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="jiqiren" ID="{A551B596-50CE-47B5-A837-B38FBEC41DD4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

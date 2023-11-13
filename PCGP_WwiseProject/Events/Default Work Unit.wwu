@@ -310,6 +310,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_kaichang" ID="{F2BC47B4-9D07-475E-B052-0E77D3A98795}">
+							<ChildrenList>
+								<Action Name="" ID="{652C0B54-62B8-42BF-A1A5-651C272F0613}" ShortID="435898957">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="kaichang" ID="{6F780ED2-D20D-448A-AF52-E2FDD561C85C}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_jiqiren" ID="{8F552C66-6F10-4667-A45F-1152762F880F}">
+							<ChildrenList>
+								<Action Name="" ID="{9D78E272-9DB4-42DA-86B5-E935F259F1BF}" ShortID="793443867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="jiqiren" ID="{149F8C44-1F36-4E33-B702-62055F198123}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
