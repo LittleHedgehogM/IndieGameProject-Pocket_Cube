@@ -141,7 +141,7 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{DBFC3873-1D8A-83AE-86EF-A922FBBDFD6F}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{C1BBA426-6A29-D39D-8662-054EC639FDCF}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -149,21 +149,21 @@
 					<ShortName>一级点击.wav</ShortName>
 					<CachePath>SFX/一级点击_10C4C929.wem</CachePath>
 				</File>
-				<File Id="305866854" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>二级点击.wav</ShortName>
-					<CachePath>SFX/二级点击_10C4C929.wem</CachePath>
+				<File Id="46414968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Side_Unlock02.wav</ShortName>
+					<CachePath>SFX/Side_Unlock02_10C4C929.wem</CachePath>
 				</File>
-				<File Id="448907797" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>左右二级解锁.wav</ShortName>
-					<CachePath>SFX/左右二级解锁_10C4C929.wem</CachePath>
+				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Click_lv2.wav</ShortName>
+					<CachePath>SFX/Click_lv2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>环境.wav</ShortName>
 					<CachePath>SFX/环境_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="724896607" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>左右一级解锁.wav</ShortName>
-					<CachePath>SFX/左右一级解锁_10C4C929.wem</CachePath>
+				<File Id="574144294" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Side_Unlock01.wav</ShortName>
+					<CachePath>SFX/Side_Unlock01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="800172585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>光照射.wav</ShortName>
@@ -184,9 +184,9 @@
 						<MediaRef Id="3392313"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2495038571" Name="Play_Click_lv2" DurationType="OneShot" DurationMin="0.3281179" DurationMax="0.3281179">
+				<Event Id="2495038571" Name="Play_Click_lv2" DurationType="OneShot" DurationMin="1.2531519" DurationMax="1.2531519">
 					<MediaRefs>
-						<MediaRef Id="305866854"/>
+						<MediaRef Id="537191680"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="108392005" Name="Play_Enviroment" DurationType="Infinite">
@@ -209,14 +209,14 @@
 						<MediaRef Id="800172585"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2931672207" Name="Play_Side_Unlock01" DurationType="OneShot" DurationMin="3.737211" DurationMax="3.737211">
+				<Event Id="2931672207" Name="Play_Side_Unlock01" DurationType="OneShot" DurationMin="3.2761679" DurationMax="3.2761679">
 					<MediaRefs>
-						<MediaRef Id="724896607"/>
+						<MediaRef Id="574144294"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2931672204" Name="Play_Side_Unlock02" DurationType="OneShot" DurationMin="6.981451" DurationMax="6.981451">
+				<Event Id="2931672204" Name="Play_Side_Unlock02" DurationType="OneShot" DurationMin="5.367755" DurationMax="5.367755">
 					<MediaRefs>
-						<MediaRef Id="448907797"/>
+						<MediaRef Id="46414968"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -441,5 +441,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D1CD2B1B-9C6B-D52D-7B24-1951DD163854}</FileHash>
+	<FileHash>{AC924058-EB8C-91B2-2645-CC2186939D6B}</FileHash>
 </SoundBanksInfo>

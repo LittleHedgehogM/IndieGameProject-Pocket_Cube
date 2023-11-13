@@ -41,6 +41,19 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX_Single" ID="{4255CE48-6EF2-4C7C-B503-586A558F747C}" ShortID="906546020">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -51,6 +64,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Click_lv1" ID="{8DB8137D-5B44-45A1-835A-8228F19DE953}" ShortID="596047279">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -95,6 +116,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Click_lv2" ID="{C41590E1-28A8-4A0F-A55F-9ACA3865A89C}" ShortID="346934129">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -111,9 +140,16 @@
 										<MediaID ID="305866854"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Click_lv2" ID="{A1E580FC-6DC4-42C2-91A8-CE9585E24474}">
+									<Language>SFX</Language>
+									<AudioFile>Click_lv2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="537191680"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="二级点击" ID="{1C88E432-BA46-407A-BCB2-D470A899B9D8}" Platform="Linked"/>
+								<ActiveSource Name="Click_lv2" ID="{A1E580FC-6DC4-42C2-91A8-CE9585E24474}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Shine" ID="{49BCF36C-BBE1-44E1-B950-84E89B8AC84D}" ShortID="445953221">
@@ -155,9 +191,16 @@
 										<MediaID ID="724896607"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Side_Unlock01" ID="{976F96E8-E31F-4AEF-B38C-248564FF9AF1}">
+									<Language>SFX</Language>
+									<AudioFile>Side_Unlock01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="574144294"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="左右一级解锁" ID="{0C4E5A18-098A-41F1-A4E3-94B2397A04E5}" Platform="Linked"/>
+								<ActiveSource Name="Side_Unlock01" ID="{976F96E8-E31F-4AEF-B38C-248564FF9AF1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Side_Unlock02" ID="{2D839D17-413E-4D45-8A77-D29167DFC662}" ShortID="950067422">
@@ -177,9 +220,16 @@
 										<MediaID ID="448907797"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Side_Unlock02" ID="{5BE29298-E73B-4D65-96AB-85561FB6D44E}">
+									<Language>SFX</Language>
+									<AudioFile>Side_Unlock02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="46414968"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="左右二级解锁" ID="{180610CD-576E-42A8-8CE6-DB3D1495675F}" Platform="Linked"/>
+								<ActiveSource Name="Side_Unlock02" ID="{5BE29298-E73B-4D65-96AB-85561FB6D44E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Final" ID="{FD26F09D-36E6-4BDF-9918-A4D9EC80EA20}" ShortID="182649644">
