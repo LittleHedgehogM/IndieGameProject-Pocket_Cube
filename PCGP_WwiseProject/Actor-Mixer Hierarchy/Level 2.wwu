@@ -16,6 +16,11 @@
 						<Sound Name="Enviroment" ID="{0A8E2973-C930-4F62-A298-9ACC1E8D239D}" ShortID="729532004">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
