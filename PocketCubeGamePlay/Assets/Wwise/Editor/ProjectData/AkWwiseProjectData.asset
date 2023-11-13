@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585024175125721455
+    m_lastTime: -8585021351424883949
     List:
     - name: Cube
       guid: 44f11d3313d9884c95673e9c779451a5
@@ -209,7 +209,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585020791938511090
+    m_lastTime: -8585017291208071632
     List:
     - name: Cube
       guid: e39f0fc375b59240a531e51c7ae1c983
@@ -499,6 +499,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.630499
       minDuration: 5.630499
+    - name: Play_jiqiren
+      guid: 662c558f106f6746a45f1152762f880f
+      id: 1467814842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_jiqiren
+        ObjectType: 3
+        guid: 662c558f106f6746a45f1152762f880f
+      Path: Events\Default Work Unit\Main\Play_jiqiren
+      maxAttenuation: 0
+      maxDuration: 9.25
+      minDuration: 9.25
+    - name: Play_kaichang
+      guid: b447bcf2079d5e47b0520e77d3a98795
+      id: 4070326154
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_kaichang
+        ObjectType: 3
+        guid: b447bcf2079d5e47b0520e77d3a98795
+      Path: Events\Default Work Unit\Main\Play_kaichang
+      maxAttenuation: 0
+      maxDuration: 13
+      minDuration: 13
     - name: Play_Main_Click01
       guid: f9465b33b65e7a4ea9464ec71e999e44
       id: 905487977
@@ -970,7 +1010,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585035220833000712
+    m_lastTime: -8585030372668082558
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
