@@ -23,6 +23,11 @@ public class Electro_Camera_Controller : MonoBehaviour
     Quaternion  MainCamInitRotation;
     float       MainCamInitScale;
     bool isResettingCam;
+
+    //-------Audio
+    [Header("Audio")]
+    [SerializeField] private AK.Wwise.Event btn01Sound;
+    [SerializeField] private AK.Wwise.Event btn02Sound;
     private void Start()
     {
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
@@ -59,6 +64,15 @@ public class Electro_Camera_Controller : MonoBehaviour
         {
             hitObject = hit.collider.gameObject;
             print("Hit Object" + hitObject.name);
+            //Audio
+            if (hitObject.tag == "Level2Btn01")
+            {
+                btn01Sound.Post(gameObject);
+            }
+            else if (hitObject.tag == "Level2Btn02")
+            {
+                btn02Sound.Post(gameObject);
+            }
         }
         return hitObject;
     }

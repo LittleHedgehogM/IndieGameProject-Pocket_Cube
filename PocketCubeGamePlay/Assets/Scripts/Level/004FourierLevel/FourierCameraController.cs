@@ -54,7 +54,7 @@ public class FourierCameraController : MonoBehaviour
             
             playerMovementVector.y *= Axis_Y_Scaler;
             playerMovementVector.x *= Axis_X_Scaler;
-            float x = 0;
+            //float x = 0;
             time += Time.deltaTime;
             //x = time;
             //print(Mathf.Sin(x) * cameraMovement);
