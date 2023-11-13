@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Test_Character002
-  m_Shader: {fileID: 4800000, guid: fe47256946381d4448e8fcd6fb4642c8, type: 3}
+  m_Name: MA_Character002 1
+  m_Shader: {fileID: 4800000, guid: 639bc5feac5a4f54da09449ce6d742e8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -108,10 +108,10 @@ Material:
     - _ASEOutlineWidth: 0
     - _B_BaseCellOffset: -0.61912626
     - _BaseCellOffset: -0.073514424
-    - _BaseCellOffset001: 1
+    - _BaseCellOffset001: 0.85
     - _BaseCellOffset002: 1
     - _BaseCellOffset003: 0.42395937
-    - _BaseCellOffset004: 0.5945997
+    - _BaseCellOffset004: 0.805
     - _BaseCellOffset1: -0.09570599
     - _BaseCellSharpness: 0.5383997
     - _BumpScale: 1
@@ -134,7 +134,7 @@ Material:
     - _HeighRatioInPut: 1.5
     - _Metallic: 0
     - _Mode: 0
-    - _N_BaseCellOffset001: 2
+    - _N_BaseCellOffset001: 2.24
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
@@ -171,7 +171,7 @@ Material:
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
     - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
     - _ReflectOff01: {r: 0.35570186, g: 0.4334, b: 0.5188679, a: 1}
-    - _diffusegradient01: {r: 1, g: 1, b: 1, a: 1}
+    - _diffusegradient01: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
     - _diffusegradient02: {r: 1, g: 1, b: 1, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
     - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
