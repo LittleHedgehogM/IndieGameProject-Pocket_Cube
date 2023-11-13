@@ -30,6 +30,8 @@ namespace AK
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
+        static const AkUniqueID PLAY_JIQIREN = 1467814842U;
+        static const AkUniqueID PLAY_KAICHANG = 4070326154U;
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
