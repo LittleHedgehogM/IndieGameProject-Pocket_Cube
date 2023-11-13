@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using TMPro.Examples;
+using UnityEngine.Video;
 
 public class MainMenuPanel : BasePanel
 {
@@ -14,6 +15,8 @@ public class MainMenuPanel : BasePanel
     //public Button CollectionBtn;
     public Button CreditBtn;
     public Button QuitBtn;
+
+    [SerializeField]private VideoPlayer openningVideo;
     //private StartSceneCameraController StartSceneCameraController;
     //private GameObject CameraController;
 
@@ -57,6 +60,7 @@ public class MainMenuPanel : BasePanel
         switch (PlayerPrefs.GetInt("Level"))
         {
             case 0:
+                
                 LevelManager.Instance.LoadScene("First GPP");
                 break;
             case 1:
@@ -100,4 +104,6 @@ public class MainMenuPanel : BasePanel
         base.ClosePanel();
 
     }
+
+   
 }
