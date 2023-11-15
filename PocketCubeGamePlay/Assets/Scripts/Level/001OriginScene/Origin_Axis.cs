@@ -91,6 +91,7 @@ public class Origin_Axis : MonoBehaviour
 
         switch (axis) 
         {
+            // Click Axis
             case Axis.left:{
                  Debug.Log("Left Axis Hit");
                  LeftAxisClicked?.Invoke();
