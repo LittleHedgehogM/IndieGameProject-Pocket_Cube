@@ -40,6 +40,7 @@ public class Newton_CubeController : MonoBehaviour
     {
         if (canInteract) 
         {
+            cursorController.setDefaultCursor();
             RaycastHit hit;
             Ray ray;
             ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
@@ -60,6 +61,7 @@ public class Newton_CubeController : MonoBehaviour
                         FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
                     }
                 }
+
 
             }
         }

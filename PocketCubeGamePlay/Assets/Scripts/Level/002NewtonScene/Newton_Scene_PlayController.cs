@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -218,6 +219,24 @@ public class NewtonScenePlayController : MonoBehaviour
         return false;
     }
 
+
+    private bool isHoverCoinsOnScale(GameObject hitObject)
+    {
+        if (currentScale !=null)
+        {
+            List<GameObject> coins = currentScale.GetComponent<Scale>().getCoinsOnScales();
+            foreach (GameObject coin in coins)
+            {
+                if (hitObject == coin)
+                {
+                    return true;
+                }
+            }
+            
+        }
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -313,12 +332,13 @@ public class NewtonScenePlayController : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
-                if (hitObject == coin1 || hitObject == coin2 || hitObject == coin3
-                    || hitObject == coin4 || hitObject == coin5 || hitObject == currentScale)
+                EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
+                GameObject coinOnPlayer = playerEquipCoin.getEquipped();
+
+                if (isHoverCoinsOnScale(hitObject) ||  hitObject == currentScale || (hitObject == coinOnPlayer && coinOnPlayer!=null))
                 {
-                    EquipCoin playerEquipCoin = player.GetComponent<EquipCoin>();
-                    
-                    if (playerEquipCoin.getEquipped() != null) 
+                                      
+                    if (coinOnPlayer != null) 
                     {
                         myCursorController.setSelectCursor();
                         if (Input.GetMouseButton(0))
@@ -333,7 +353,7 @@ public class NewtonScenePlayController : MonoBehaviour
                         
                     if (Input.GetMouseButtonUp(0))
                     {
-                        if (playerEquipCoin.getEquipped() != null) // if player has a coin
+                        if (coinOnPlayer != null) // if player has a coin
                         {
                             myCursorController.setDefaultCursor();
                             myPlayStatus = PlayStatus.InPutCoin;
@@ -428,8 +448,7 @@ public class NewtonScenePlayController : MonoBehaviour
                     if (Physics.Raycast(ray, out hit))
                     {
                         GameObject coinHit = hit.collider.gameObject;
-                        if (coinHit == coin1 || coinHit == coin2 || coinHit == coin3
-                            || coinHit == coin4 || coinHit == coin5)
+                        if (isHoverCoinsOnScale(coinHit))
                         {
                             myCursorController.setSelectCursor();
                             if(Input.GetMouseButton(0))
