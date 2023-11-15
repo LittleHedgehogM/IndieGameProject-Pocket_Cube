@@ -20,19 +20,19 @@ public class Origin_CursorController : MonoBehaviour
 
     private void setOffset(ref Vector2 offset, ref Texture2D texture)
     {
+        Debug.Log("texture width = " + texture.width + "," + texture.height);
         offset = new Vector2(texture.width * 0.5f, texture.height * 0.5f);
-
     }
 
     public void setNormalCursor()
     {
-        Cursor.SetCursor(normalCursor, Vector2.zero, mode); 
+        Cursor.SetCursor(normalCursor, normalOffset, mode); 
     }
 
 
     public void setHoverCursor()
     {
-        Cursor.SetCursor(hoverAxisCursor, Vector2.zero, mode);
+        Cursor.SetCursor(hoverAxisCursor, hoverOffset, mode);
     }
 
 
