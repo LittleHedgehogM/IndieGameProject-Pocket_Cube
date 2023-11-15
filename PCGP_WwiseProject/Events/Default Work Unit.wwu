@@ -222,17 +222,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_cube_roll02" ID="{2D3149F6-6777-4348-8A8B-C32A9651D714}">
-							<ChildrenList>
-								<Action Name="" ID="{C80852DD-2B3C-45A1-B4B2-E9471FD17EED}" ShortID="679391109">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="cube_roll02" ID="{87F53AD8-6BCD-4B38-9097-45664B36F748}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_cube_ani" ID="{376F5E8C-22A4-4033-92FF-8750A4CFACCC}">
 							<ChildrenList>
 								<Action Name="" ID="{DF85289B-6BF4-471E-927B-CE19DD71A2D2}" ShortID="483636442">
@@ -244,12 +233,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_cube_roll01" ID="{98CAD9A5-5BB0-432C-982B-1650B91B39F5}">
+						<Event Name="Play_cube_roll" ID="{EEB0D5C9-B361-49B6-9352-F4D87865C775}">
 							<ChildrenList>
-								<Action Name="" ID="{D69DA96D-200E-4B19-8B91-1DF6045202C3}" ShortID="248539776">
+								<Action Name="" ID="{BF068A11-FADC-43A5-AAC9-36E261E1EBFC}" ShortID="548023399">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="cube_roll01" ID="{703C3670-92F6-4BB8-8CA4-07970B66EEC6}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+											<ObjectRef Name="cube_roll" ID="{C0671F02-2A79-4341-8B4C-08D39E3F7A17}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
