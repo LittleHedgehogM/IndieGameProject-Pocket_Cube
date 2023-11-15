@@ -25,8 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_ANI = 3351884458U;
         static const AkUniqueID PLAY_CUBE_CLICK = 1884814068U;
         static const AkUniqueID PLAY_CUBE_DROP = 797967755U;
-        static const AkUniqueID PLAY_CUBE_ROLL01 = 1807308532U;
-        static const AkUniqueID PLAY_CUBE_ROLL02 = 1807308535U;
+        static const AkUniqueID PLAY_CUBE_ROLL = 2377298701U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
@@ -77,6 +76,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMB = 1117531639U;
+        static const AkUniqueID ANI = 1067198645U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
     } // namespace BUSSES

@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{640930EC-909A-B6B9-ABAD-B4ECB4994D04}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{28988EFE-63C6-4296-AB10-B73401F96737}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -37,6 +37,8 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1067198645" Name="Ani"/>
+				<Bus Id="1117531639" Name="Amb"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -221,7 +223,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{09ECA75E-19C9-5509-3685-65DA888E5DF2}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{BDDCAB96-99F3-C770-30B6-EDA45A720B23}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -310,7 +312,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08C57715-6140-D6C6-7AB9-093F8A284D06}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{4F0A463B-982E-3862-F94E-2E79DA909C8A}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -360,7 +362,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2BE11ABD-D00E-5F44-8F1F-0B1F9E36F012}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D82527EA-5FE3-31C7-196A-9C52327EB5D3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -396,7 +398,7 @@
 						<MediaRef Id="557601517"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4070326154" Name="Play_kaichang" DurationType="OneShot" DurationMin="13" DurationMax="13">
+				<Event Id="4070326154" Name="Play_kaichang" DurationType="OneShot" DurationMin="10.687506" DurationMax="10.687506">
 					<MediaRefs>
 						<MediaRef Id="545451843"/>
 					</MediaRefs>
@@ -414,7 +416,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{790F51FC-11C7-A223-B4BA-79CE58C15807}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{F195654F-1201-3304-2407-93376AEC59E3}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -446,18 +448,14 @@
 						<MediaRef Id="44885334"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1807308532" Name="Play_cube_roll01" DurationType="OneShot" DurationMin="0.83732426" DurationMax="0.83732426">
+				<Event Id="2377298701" Name="Play_cube_roll" DurationType="OneShot" DurationMin="0.83732426" DurationMax="0.99342406">
 					<MediaRefs>
 						<MediaRef Id="22892153"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1807308535" Name="Play_cube_roll02" DurationType="OneShot" DurationMin="0.99342406" DurationMax="0.99342406">
-					<MediaRefs>
 						<MediaRef Id="481933197"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8ACBFBE5-0FEB-E348-DE17-12A225F0F64B}</FileHash>
+	<FileHash>{C877863E-A057-CC43-E983-52EBFEF2DC8E}</FileHash>
 </SoundBanksInfo>
