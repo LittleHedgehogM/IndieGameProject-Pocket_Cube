@@ -158,6 +158,7 @@ public class SwipeFaceManager : MonoBehaviour
         {
             InitSwipe();
             currentSwipeState = SwipeState.Swiping;
+            // Audio Add
 
         }
         else if (currentSwipeState == SwipeState.Swiping)
