@@ -50,7 +50,7 @@ public class SubtitleBlock: MonoBehaviour
         localtimer += Time.deltaTime;
         if (localtimer >= 5)
         {
-            if(index <= words.Count)
+            if(index < words.Count-1)
             {
                 index++;
             }
