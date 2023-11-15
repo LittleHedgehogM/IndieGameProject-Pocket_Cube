@@ -97,6 +97,7 @@ public class Origin_Controller : MonoBehaviour
     private IEnumerator Rotate(Vector3 Axis, bool isClockwise, float angleGap)
     {
 
+        // Add rotate sphere audio
         float currentUsedTime = 0;
         float t = 0;
         float currentAngle = 0f;
@@ -173,6 +174,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void PlayCubeAnim()
     {
+        // Cube Animation Start
         myVFXController.playCubeFinishVFXAt(cubeController.transform);
         cubeController.PlayAnim();
     }

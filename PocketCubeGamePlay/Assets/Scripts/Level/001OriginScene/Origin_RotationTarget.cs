@@ -89,6 +89,7 @@ public class Origin_RotationTarget : MonoBehaviour
 
     public void targetVanish()
     {
+        // Sphere Animation Finish
         TargetVanished?.Invoke();
     }
 
