@@ -13,6 +13,7 @@ public class CubeSolvedPhase : GameplayPhase
         PlayAnimation,
         WaitForQuit
     }
+
     CubeState cubeState;
 
     CubeSolveState currentState;
@@ -133,10 +134,6 @@ public class CubeSolvedPhase : GameplayPhase
     //    translateBackFinish = true;
     //    //myCubeIceController.HideIce();
     //    yield return null;
-
-
-
-
     //}
 
     // return true if is finished
@@ -168,6 +165,10 @@ public class CubeSolvedPhase : GameplayPhase
             else 
             {
                 myCursorController.setNormalCursor();
+                if (Input.GetMouseButton(0))
+                {
+                    myCursorController.setSwipeCursor();
+                }
                 mainCam.transform.RotateAround(pocketCube.transform.position, mainCam.transform.up, Time.deltaTime * rotateSpeed);
                 
             }

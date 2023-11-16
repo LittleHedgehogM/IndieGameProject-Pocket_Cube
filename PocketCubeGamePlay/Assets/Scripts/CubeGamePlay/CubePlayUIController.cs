@@ -13,7 +13,7 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myDiagonalCountText;
     [SerializeField] private TextMeshProUGUI myCommutationCountText;
     [SerializeField] private TextMeshProUGUI myIsCubeSolvedText;
-
+    [SerializeField] private TextMeshProUGUI myTipsText;
     public Button DiagonalButton;
     public Button CommutationButton;
     public Button RestartButton;
@@ -211,6 +211,7 @@ public class CubePlayUIController : MonoBehaviour
        CommutationButton.transform.localScale = Vector3.zero;
        ResetCameraButton.transform.localScale = Vector3.zero;
        RestartButton.transform.localScale = Vector3.zero;
+       myTipsText.transform.localScale = Vector3.zero;
   
     }
 

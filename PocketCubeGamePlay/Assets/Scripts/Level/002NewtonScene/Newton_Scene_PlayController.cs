@@ -250,6 +250,10 @@ public class NewtonScenePlayController : MonoBehaviour
             {
                 myPlayerMovement.OnUpdate();                
             }
+            else 
+            {
+                myPlayerMovement.GoIdle();
+            }
 
         }
         else if (myPlayStatus == PlayStatus.Configuration)

@@ -55,6 +55,11 @@ public class Newton_Scene_PlayerMovement : MonoBehaviour
 
     }
 
+    public void GoIdle()
+    {
+        Idle();
+    }
+
     private IEnumerator TranslateToTarget(Transform target)
     {
         float currentUsedTime = 0;
