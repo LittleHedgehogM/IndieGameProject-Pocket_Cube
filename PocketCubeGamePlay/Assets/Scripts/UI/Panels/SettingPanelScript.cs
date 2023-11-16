@@ -16,6 +16,7 @@ public class SettingsPanel : BasePanel
     [SerializeField] private Button ExitBtn;
     [SerializeField] private Button TutorialBtn;
     private bool diskSwitch = true;
+    
 
     [Header("Option Tab")]
     [SerializeField] private GameObject optionTab;
@@ -31,6 +32,7 @@ public class SettingsPanel : BasePanel
     [SerializeField] private Button MoveRight;
     [SerializeField] private RectTransform tutorialIMG;
     private bool tutorialSwitch = true;
+    private float tutorialWidth = 1160f;
     //[SerializeField] private float speed;
     //
 
@@ -121,7 +123,7 @@ public class SettingsPanel : BasePanel
         if (tutorialSwitch)
         {
             tutorialSwitch = false;
-            StartCoroutine(TutorialMove(new Vector2(1040, 0)));
+            StartCoroutine(TutorialMove(new Vector2(tutorialWidth, 0)));
         }
         
     }
@@ -131,7 +133,7 @@ public class SettingsPanel : BasePanel
         if (tutorialSwitch)
         {
             tutorialSwitch = false;
-            StartCoroutine(TutorialMove(new Vector2(-1040, 0)));
+            StartCoroutine(TutorialMove(new Vector2(-tutorialWidth, 0)));
         }
         
     }

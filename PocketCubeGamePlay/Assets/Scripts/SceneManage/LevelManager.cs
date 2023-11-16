@@ -117,19 +117,20 @@ public class LevelManager : MonoBehaviour
     //PlayerPrefs Load and Save
     private void CreatePlayerData()
     {
-        playerData = new PlayerData(0);
+        playerData = new PlayerData(0,0);
     }
     public void SaveData()
     {
         PlayerPrefs.SetInt("Level", playerData.level);
+        PlayerPrefs.SetInt("Tutorials", playerData.tutorials);
 
     }
 
     public void LoadData()
     {
-        playerData = new PlayerData(PlayerPrefs.GetInt("Level"));
+        playerData = new PlayerData(PlayerPrefs.GetInt("Level"), PlayerPrefs.GetInt("Tutorials"));
 
-        Debug.Log(playerData.level);
+        Debug.Log("Reached Level: " + playerData.level + "; Seen Tutorials: " + playerData.tutorials);
     }
 
 
