@@ -25,6 +25,8 @@ public class SettingsPanel : BasePanel
 
     [Header("Exit Tab")]
     [SerializeField] private GameObject exitTab;
+    [SerializeField] private Button ExitYes;
+    [SerializeField] private Button ExitNo;
 
     [Header("Tutorial Tab")]
     [SerializeField] private GameObject tutorialTab;
@@ -54,9 +56,13 @@ public class SettingsPanel : BasePanel
         MoveLeft.onClick.AddListener(OnClickMoveLeft);
         MoveRight.onClick.AddListener(OnClickMoveRight);
 
-
+        //Settings
         ReturnBtn.onClick.AddListener(OnClickReturn); 
         ResetDataBtn.onClick.AddListener(OnClickResetData);
+
+        //Exit
+        ExitYes.onClick.AddListener(OnExitYes);
+        ExitNo.onClick.AddListener(OnExitNo);
 
         if(SceneManager.GetActiveScene().name == "StartGame")
         {
@@ -78,7 +84,7 @@ public class SettingsPanel : BasePanel
         }
     }
 
-
+#region DiskTabs
     //option:0 ;Exit:120 ;tutorial:240;
     void OnClickOption()
     {
@@ -103,7 +109,6 @@ public class SettingsPanel : BasePanel
     }
 
     
-
     void OnClickExit()
     {
         if (diskSwitch) 
@@ -138,27 +143,6 @@ public class SettingsPanel : BasePanel
         
     }
 
-    void OnClickReturn()
-    {
-        ClosePanel();
-        LevelManager.Instance.LoadScene("StartGame");
-        
-    }
-
-    
-
-    void OnClickResetData()
-    {
-        PlayerPrefs.SetInt("Level", 0);
-        print(PlayerPrefs.GetInt("Level"));
-        ClosePanel();
-        if (SceneManager.GetActiveScene().name == "StartGame")
-        {
-            UIManager.Instance.ClosePanel(UIConst.MainMenuPanel);
-        }
-        SceneManager.LoadScene("StartGame");
-    }
-
     IEnumerator DiskSwitch(Vector3 targetAngle, int tab)
     {
         optionTab.SetActive(false);
@@ -166,7 +150,7 @@ public class SettingsPanel : BasePanel
         exitTab.SetActive(false);
         diskSwitch = false;
         var target = Quaternion.Euler(targetAngle);
-        float t = 0f;          
+        float t = 0f;
 
 
         while (t < 1f)
@@ -188,11 +172,35 @@ public class SettingsPanel : BasePanel
                     break;
             }
             yield return null;
-        }   
+        }
         diskSwitch = true;
         yield break;
     }
+    #endregion
 
+
+    //Settings
+    void OnClickReturn()
+    {
+        ClosePanel();
+        LevelManager.Instance.LoadScene("StartGame");
+        
+    }
+
+    void OnClickResetData()
+    {
+        PlayerPrefs.SetInt("Level", 0);
+        print(PlayerPrefs.GetInt("Level"));
+        ClosePanel();
+        if (SceneManager.GetActiveScene().name == "StartGame")
+        {
+            UIManager.Instance.ClosePanel(UIConst.MainMenuPanel);
+        }
+        SceneManager.LoadScene("StartGame");
+    }
+
+    
+    //Tutorials
     IEnumerator TutorialMove(Vector2 moveLength)
     {
         print(tutorialIMG.anchoredPosition);
@@ -251,6 +259,16 @@ public class SettingsPanel : BasePanel
 
         
 
+    }
+
+    void OnExitYes()
+    {
+        Application.Quit();
+    }
+
+    void OnExitNo()
+    {
+        ClosePanel();
     }
 }
 

@@ -120,7 +120,8 @@ public class MainMenuPanel : BasePanel
 
     public void OnQuitBtn()
     {
-        UIManager.Instance.OpenPanel(UIConst.ExitPanel);
+        Application.Quit();
+        //UIManager.Instance.OpenPanel(UIConst.ExitPanel);
     }
 
 
