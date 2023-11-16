@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.57481635, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.5748164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5819,6 +5819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Fourier
       objectReference: {fileID: 0}
+    - target: {fileID: 1213031985264248072, guid: 588f38903a096fb46bd6be846401d936, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2155042293557783605, guid: 588f38903a096fb46bd6be846401d936, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.27622196
@@ -8866,7 +8870,6 @@ GameObject:
   - component: {fileID: 1707659646953837739}
   - component: {fileID: 6086799572414104817}
   - component: {fileID: 6086799572414104818}
-  - component: {fileID: 6086799572414104819}
   m_Layer: 0
   m_Name: polt01
   m_TagString: Area
@@ -11668,24 +11671,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7222047448857504609, guid: f4fec09400779604a9a6bf7dd32f0d57, type: 3}
---- !u!114 &6086799572414104819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363567934809744457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &6137953143095680263
 GameObject:
   m_ObjectHideFlags: 0
