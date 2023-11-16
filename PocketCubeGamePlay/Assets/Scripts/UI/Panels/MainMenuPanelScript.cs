@@ -8,15 +8,15 @@ using UnityEngine.Video;
 
 public class MainMenuPanel : BasePanel
 {
-    public TextMeshProUGUI Tittle;
-    public Button StartBtn;
-    [SerializeField] private TMP_Text startText;
+    
+    [SerializeField]private Button StartBtn;
+    [SerializeField]private Button ContinueBtn;
     public Button SettingBtn;
     //public Button CollectionBtn;
     public Button CreditBtn;
     public Button QuitBtn;
 
-    [SerializeField]private VideoPlayer openningVideo;
+    
     //private StartSceneCameraController StartSceneCameraController;
     //private GameObject CameraController;
 
@@ -24,29 +24,35 @@ public class MainMenuPanel : BasePanel
     void Awake()
     {
         StartBtn.onClick.AddListener(OnStartBtn);
+        ContinueBtn.onClick.AddListener(OnContinueBtn);
         SettingBtn.onClick.AddListener(OnSettingBtn);
         //CollectionBtn.onClick.AddListener(OnCollectionBtn);
-        CreditBtn.onClick.AddListener(OnCreditBtn);
+        //CreditBtn.onClick.AddListener(OnCreditBtn);
         QuitBtn.onClick.AddListener(OnQuitBtn);
-        
+
+
+
+        if (PlayerPrefs.GetInt("Level") == 0)
+        {
+            print("start");
+            StartBtn.gameObject.SetActive(true);
+            ContinueBtn.gameObject.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("Level") > 0)
+        {
+            print("Continue");
+            StartBtn.gameObject.SetActive(false);
+            ContinueBtn.gameObject.SetActive(true);
+        }
     }
     
 
     private void Start()
     {
         string panelTittle = gameObject.name;
-        Tittle.text = panelTittle;
+        
         //CameraController = GameObject.Find("CameraController");
-        if (PlayerPrefs.GetInt("Level") == 0)
-        {
-            print("start");
-            startText.text = "Start Game";
-        }
-        else if (PlayerPrefs.GetInt("Level") > 0)
-        {
-            print("Continue");
-            startText.text = "Continue";
-        }
+        
 
     }
 
@@ -61,6 +67,26 @@ public class MainMenuPanel : BasePanel
         {
             case 0:
                 
+                LevelManager.Instance.LoadScene("First GPP");
+                break;
+            case 1:
+                LevelManager.Instance.LoadScene("NewtonLevel_GPP_Test");
+                break;
+            case 2:
+                LevelManager.Instance.LoadScene("ELE_GPP Temp");
+                break;
+            case 3:
+                LevelManager.Instance.LoadScene("Level_Fourier");
+                break;
+        }
+
+        ClosePanel();
+    }
+    public void OnContinueBtn()
+    {
+        switch (PlayerPrefs.GetInt("Level"))
+        {
+            case 0:
                 LevelManager.Instance.LoadScene("First GPP");
                 break;
             case 1:
