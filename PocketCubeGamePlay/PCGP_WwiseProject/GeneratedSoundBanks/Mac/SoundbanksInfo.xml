@@ -362,7 +362,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D82527EA-5FE3-31C7-196A-9C52327EB5D3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{50A2C76C-88E5-CBC9-BC9F-68E2B7D5CBDE}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -403,13 +403,9 @@
 						<MediaRef Id="545451843"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="905487977" Name="Play_Main_Click01" DurationType="OneShot" DurationMin="2.8620634" DurationMax="2.8620634">
+				<Event Id="2820543912" Name="Play_Main_Click" DurationType="OneShot" DurationMin="2.8620634" DurationMax="3.6915646">
 					<MediaRefs>
 						<MediaRef Id="516143800"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="905487978" Name="Play_Main_Click02" DurationType="OneShot" DurationMin="3.6915646" DurationMax="3.6915646">
-					<MediaRefs>
 						<MediaRef Id="678952220"/>
 					</MediaRefs>
 				</Event>
@@ -457,5 +453,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB93548D-9CA9-9BD2-8A7E-153192458D1B}</FileHash>
+	<FileHash>{4B91B3BD-8723-6485-ED0F-BA610F9664C2}</FileHash>
 </SoundBanksInfo>

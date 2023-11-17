@@ -35,8 +35,7 @@ namespace AK
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
         static const AkUniqueID PLAY_LEVEL3_MUSIC = 2158818887U;
-        static const AkUniqueID PLAY_MAIN_CLICK01 = 905487977U;
-        static const AkUniqueID PLAY_MAIN_CLICK02 = 905487978U;
+        static const AkUniqueID PLAY_MAIN_CLICK = 2820543912U;
         static const AkUniqueID PLAY_MERRYGOROUNDMUSIC = 3155709310U;
         static const AkUniqueID PLAY_MID_UNLOCK = 928358091U;
         static const AkUniqueID PLAY_MOVE_LOOP = 3382199950U;
