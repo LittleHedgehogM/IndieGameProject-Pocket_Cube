@@ -30,9 +30,10 @@ public class SubtitleBlock: MonoBehaviour
         //testText.text = subtitletext;
         testText.text = "Here is typed text";
 
-        words = new List<string>(mytxtData.text.Split('\n'));
+        words = new List<string>(mytxtData.text.Split('&'));
         Debug.Log(words[0]);
 
+       
         //subTitleSource = mytxtData;
         /* if (subTitleSource == null) return;
          subt = SubtitleBlock.ParseSubtitles(subTitleSource.text);
@@ -53,6 +54,17 @@ public class SubtitleBlock: MonoBehaviour
             if(index < words.Count-1)
             {
                 index++;
+            }
+            else
+            {
+                var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+                var imgLayer = this.GetComponentInChildren<Image>();
+                //var textLayer = this.GetComponent<TextMeshProUGUI>();
+                //Debug.Log(imgLayer);
+                Destroy(textLayer);
+                Destroy(imgLayer);
+                //textLayer.SetActive(false);
+                Destroy(this);
             }
             localtimer = 0;
         }
