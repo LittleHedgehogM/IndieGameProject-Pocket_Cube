@@ -29,6 +29,7 @@ public class Electro_GamePlay : MonoBehaviour
         sunPuzzle.Init();
         moonPuzzle.Init();
         isScenePuzzleSolved = false;
+        Application.targetFrameRate = 60;
     }
 
 

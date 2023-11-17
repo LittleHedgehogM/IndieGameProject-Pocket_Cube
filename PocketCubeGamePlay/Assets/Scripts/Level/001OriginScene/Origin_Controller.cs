@@ -45,7 +45,7 @@ public class Origin_Controller : MonoBehaviour
         enableInteraction = true;
         originAngle = Sphere.transform.rotation;
         myVFXController = FindObjectOfType<Origin_VFXController>();
-
+        Application.targetFrameRate = 60;
     }
 
     private void OnEnable()
