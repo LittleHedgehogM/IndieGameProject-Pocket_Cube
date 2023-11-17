@@ -261,14 +261,12 @@ public class Electro_Puzzle : MonoBehaviour
             {
                 if (isCircuitAnimPlaying)
                 {
-                    isCircuitAnimPlaying = false;             
-                    myCircuit.switch_Left.setInteractionEnabled(true);
-                    myCircuit.switch_right.setInteractionEnabled(true);
-                    myCircuit.logicGateHolder.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
-
-
-                    cancelEffects();
-                    isPuzzleSolved = false;
+                    //isCircuitAnimPlaying = false;             
+                    //myCircuit.switch_Left.setInteractionEnabled(true);
+                    //myCircuit.switch_right.setInteractionEnabled(true);
+                    //myCircuit.logicGateHolder.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+                    //cancelEffects();
+                    //isPuzzleSolved = false;
                 }
                 else
                 {

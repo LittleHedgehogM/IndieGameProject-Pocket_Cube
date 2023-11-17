@@ -292,10 +292,10 @@ public class Electro_MoonPuzzle : MonoBehaviour
                 {
                     if (isLeftCircuitAnimPlaying)
                     {
-                        leftCircuitAnimator.SetTrigger("GoIdle");
-                        isLeftCircuitAnimPlaying = false;
-                        myCircuit.switch_Or_left.setInteractionEnabled(true);
-                        myCircuit.switch_Or_right.setInteractionEnabled(true);
+                        //leftCircuitAnimator.SetTrigger("GoIdle");
+                        //isLeftCircuitAnimPlaying = false;
+                        //myCircuit.switch_Or_left.setInteractionEnabled(true);
+                        //myCircuit.switch_Or_right.setInteractionEnabled(true);
                     }
                     else
                     {
@@ -310,10 +310,10 @@ public class Electro_MoonPuzzle : MonoBehaviour
                 {
                     if (isRightCircuitAnimPlaying)
                     {
-                        rightCircuitAnimator.SetTrigger("GoIdle");
-                        isRightCircuitAnimPlaying = false;
-                        myCircuit.switch_nand_right.setInteractionEnabled(true);
-                        myCircuit.switch_nand_left.setInteractionEnabled(true);
+                        //rightCircuitAnimator.SetTrigger("GoIdle");
+                        //isRightCircuitAnimPlaying = false;
+                        //myCircuit.switch_nand_right.setInteractionEnabled(true);
+                        //myCircuit.switch_nand_left.setInteractionEnabled(true);
                     }
                     else
                     {
@@ -330,11 +330,11 @@ public class Electro_MoonPuzzle : MonoBehaviour
                 {
                     if (isCenterCircuitAnimPlaying)
                     {
-                        isCenterCircuitAnimPlaying = false;
-                        cancelEffects();
-                        isPuzzleSolved = false;
-                        myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
-                        myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+                        //isCenterCircuitAnimPlaying = false;
+                        //cancelEffects();
+                        //isPuzzleSolved = false;
+                        //myCircuit.logicGateRight.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
+                        //myCircuit.logicGateLeft.GetComponentInChildren<Electro_LogicGate>().setInteractionEnabled(true);
                     }
                     else
                     {
