@@ -10,13 +10,21 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}"/>
+						<Bus Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
 						<Bus Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}">
 							<PropertyList>
 								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
 						<Bus Name="Ani" ID="{7D0B06F9-C212-4B45-A1E9-B56AE1A5BB0C}">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}"/>
