@@ -147,6 +147,16 @@
 						</Event>
 						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
 							<ChildrenList>
+								<Action Name="" ID="{CEFBB1ED-9F8E-40D8-8041-1F45FB3F1E7B}" ShortID="896807247">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
@@ -187,6 +197,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="reduce" ID="{E37F29B1-5DCB-41D0-8C48-C91450150A12}" WorkUnitID="{BE3FF75A-95B0-41E3-A20A-CFE7D577F38A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Opening" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}">
+							<ChildrenList>
+								<Action Name="" ID="{09CBFD99-9F4C-4AF2-A1B6-7FF8D413658C}" ShortID="223234347">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Open" ID="{68200122-2421-421A-93CD-798B1C24877B}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -277,45 +298,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Main_Click01" ID="{335B46F9-5EB6-4E7A-A946-4EC71E999E44}">
+						<Event Name="Play_Main_Click" ID="{A1454092-7F5D-4545-98A1-B47FD8455FAD}">
 							<ChildrenList>
-								<Action Name="" ID="{8AD436BF-A516-47EF-B11E-77D3581C8708}" ShortID="1056433458">
+								<Action Name="" ID="{4E909E37-9B84-4A34-B8DF-8BA56D004B39}" ShortID="857736479">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Main_Click01" ID="{2515A741-3A5B-45DB-9777-91297FB7B5EE}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Main_Click02" ID="{1B75452C-4286-421B-B5B0-03209FF7426A}">
-							<ChildrenList>
-								<Action Name="" ID="{094D489F-9EF6-45A1-A22F-6B8DBB7257D8}" ShortID="216790053">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Main_Click02" ID="{1DA6F245-C9C0-4FB7-BD01-EEBC93E19764}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_kaichang" ID="{F2BC47B4-9D07-475E-B052-0E77D3A98795}">
-							<ChildrenList>
-								<Action Name="" ID="{652C0B54-62B8-42BF-A1A5-651C272F0613}" ShortID="435898957">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="kaichang" ID="{6F780ED2-D20D-448A-AF52-E2FDD561C85C}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_jiqiren" ID="{8F552C66-6F10-4667-A45F-1152762F880F}">
-							<ChildrenList>
-								<Action Name="" ID="{9D78E272-9DB4-42DA-86B5-E935F259F1BF}" ShortID="793443867">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="jiqiren" ID="{149F8C44-1F36-4E33-B702-62055F198123}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+											<ObjectRef Name="Main_Click" ID="{C28BB6D1-00A6-488F-B52D-AA8E3F8C3B1C}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
