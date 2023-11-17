@@ -5372,7 +5372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -15, y: 162}
+  m_AnchoredPosition: {x: 615.4, y: 301.39996}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190433852
@@ -5894,7 +5894,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
+      propertyPath: m_margin.x
+      value: -305.8756
+      objectReference: {fileID: 0}
+    - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
+      propertyPath: m_margin.z
+      value: -256.11728
+      objectReference: {fileID: 0}
+    - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 930044949455852915, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_Name
@@ -5910,7 +5930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5922,15 +5942,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: -1971
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: -1030
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5962,11 +5982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1498
+      value: 550.9
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -416
+      value: -171
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5996,7 +6016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1246724797}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -7486,7 +7506,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7515,7 +7535,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 346.32202, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
