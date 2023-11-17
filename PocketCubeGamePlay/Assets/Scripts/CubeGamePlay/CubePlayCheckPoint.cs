@@ -35,6 +35,8 @@ public class CubePlayCheckPoint : MonoBehaviour
     CubeState myCubeState;
     ReadCube readCube;
 
+    CubePlayUIController myCubePlayUIController;
+
     string CM_StateString;
     Vector3 CM_FLU_position;
     Quaternion CM_FLU_rotation;
@@ -52,7 +54,7 @@ public class CubePlayCheckPoint : MonoBehaviour
     Quaternion CM_BRU_rotation;
     Vector3 CM_BRD_position;
     Quaternion CM_BRD_rotation;
-
+    int CM_currentSteps;
 
     string DG_StateString;
     Vector3 DG_FLU_position;
@@ -71,13 +73,17 @@ public class CubePlayCheckPoint : MonoBehaviour
     Quaternion DG_BRU_rotation;
     Vector3 DG_BRD_position;
     Quaternion DG_BRD_rotation;
+    int DG_currentSteps;
 
     private void Awake()
     {
        myCubeState = FindObjectOfType<CubeState>();
        readCube = FindObjectOfType<ReadCube>();
-        if (instance == null)
+       myCubePlayUIController = FindObjectOfType<CubePlayUIController>();
+       if (instance == null)
             instance = this;
+        CM_currentSteps  = 0;
+        DG_currentSteps  = 0;
     }
 
     public void saveCurrentStateCommutation()
@@ -110,6 +116,8 @@ public class CubePlayCheckPoint : MonoBehaviour
 
         CM_BRD_position = BackRightDown.transform.position;
         CM_BRD_rotation = BackRightDown.transform.rotation;
+
+        CM_currentSteps = myCubePlayUIController.getCurrentSwipeSteps();
     }
 
 
@@ -144,6 +152,9 @@ public class CubePlayCheckPoint : MonoBehaviour
 
         DG_BRD_position = BackRightDown.transform.position;
         DG_BRD_rotation = BackRightDown.transform.rotation;
+
+        DG_currentSteps = myCubePlayUIController.getCurrentSwipeSteps();
+
     }
 
     public void loadCurrentStateCommutation()
@@ -172,6 +183,7 @@ public class CubePlayCheckPoint : MonoBehaviour
         BackRightDown.transform.position = CM_BRD_position;
         BackRightDown.transform.rotation = CM_BRD_rotation;
 
+        myCubePlayUIController.restoreTotalStepsCommutation(CM_currentSteps);
         
     }
 
@@ -200,6 +212,9 @@ public class CubePlayCheckPoint : MonoBehaviour
 
         BackRightDown.transform.position = DG_BRD_position;
         BackRightDown.transform.rotation = DG_BRD_rotation;
+
+        myCubePlayUIController.restoreTotalStepsCommutation(DG_currentSteps);
+
     }
 
 

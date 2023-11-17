@@ -59,7 +59,6 @@ public class CubePlayUIController : MonoBehaviour
         {
             _diagonalCount = value;
             UpdateTotalStepsCountText();
-
             //UpdateDiagonalCountText(_diagonalCount);
         }
     }
@@ -84,6 +83,23 @@ public class CubePlayUIController : MonoBehaviour
             _solveResult = value;
             UpdateSolveStatusText(_solveResult);
         }
+    }
+
+    public int getCurrentSwipeSteps()
+    {
+        return SwipeCount;
+    }
+
+    public void restoreTotalStepsDiagonal(int restoreSteps)
+    {
+        SwipeCount = restoreSteps;
+        DiagonalCount = 0;
+    }
+
+    public void restoreTotalStepsCommutation(int restoreSteps)
+    {
+        SwipeCount = restoreSteps;
+        CommutationCount = 0;
     }
 
     public void onRestart()
@@ -219,14 +235,14 @@ public class CubePlayUIController : MonoBehaviour
   
     }
 
-    private void UpdateTotalStepCount()
-    {
-        totalSteps = SwipeCount + DiagonalCount + CommutationCount;
-        //if (totalSteps > suggestedStepCount)
-        //{
-        //    RestartButton.gameObject.SetActive(true);
-        //}
-    }
+    //private void UpdateTotalStepCount()
+    //{
+    //    totalSteps = SwipeCount + DiagonalCount + CommutationCount;
+    //    //if (totalSteps > suggestedStepCount)
+    //    //{
+    //    //    RestartButton.gameObject.SetActive(true);
+    //    //}
+    //}
 
     void UpdateTotalStepsCountText()
     {
