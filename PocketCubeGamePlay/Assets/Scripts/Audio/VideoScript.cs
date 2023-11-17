@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class VideoScript: MonoBehaviour
     private VideoPlayer vid;
     [SerializeField] AK.Wwise.Event sound;
     //private bool isOpeningPlayed = false;
+    public static Action VideoFinished;
+
     void Start()
     {
         vid = GetComponent<VideoPlayer>();
@@ -20,5 +23,7 @@ public class VideoScript: MonoBehaviour
     void DestroyAfterVideoPlayed(VideoPlayer vp)
     {
         gameObject.SetActive(false);
+        VideoFinished?.Invoke();
+        // play camera 
     }
 }

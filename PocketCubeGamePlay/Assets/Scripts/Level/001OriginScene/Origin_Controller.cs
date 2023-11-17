@@ -42,7 +42,7 @@ public class Origin_Controller : MonoBehaviour
         myRotationTarget = FindObjectOfType<Origin_RotationTarget>();
         currentState = PuzzleState.Phase_One;
         InitPhaseOne();
-        enableInteraction = true;
+        enableInteraction = false;
         originAngle = Sphere.transform.rotation;
         myVFXController = FindObjectOfType<Origin_VFXController>();
 
@@ -50,6 +50,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void OnEnable()
     {
+        Cinemachine_cart.CinemachineFinished += EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     +=isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    +=isRightAxisClicked;
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
@@ -59,6 +60,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void OnDisable()
     {
+        Cinemachine_cart.CinemachineFinished -= EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     -= isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    -= isRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
@@ -177,6 +179,11 @@ public class Origin_Controller : MonoBehaviour
         // Cube Animation Start
         myVFXController.playCubeFinishVFXAt(cubeController.transform);
         cubeController.PlayAnim();
+    }
+
+    private void EnableSceneInteraction()
+    {
+        enableInteraction = true;
     }
 
     // Update is called once per frame
