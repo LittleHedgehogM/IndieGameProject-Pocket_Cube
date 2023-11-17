@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{704853DB-64FD-1FFD-52C6-E2DA49CF6979}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{95DF9DD8-33F1-55D4-C410-466DD2572C4D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -321,7 +321,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{23145288-CBF0-E926-081F-B4E9A435BC37}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{E61896E3-1F75-25B4-F09D-6F425D4FF7C5}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -385,7 +385,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B3467AD4-B739-76F8-8A8C-5199E83276F8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8635C19B-87BF-A431-2D42-E2AD1CC58D39}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -408,9 +408,13 @@
 						<MediaRef Id="626564496"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2820543912" Name="Play_Main_Click" DurationType="OneShot" DurationMin="2.8620634" DurationMax="3.6915646">
+				<Event Id="905487977" Name="Play_Main_Click01" DurationType="OneShot" DurationMin="2.8620634" DurationMax="2.8620634">
 					<MediaRefs>
 						<MediaRef Id="516143800"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="905487978" Name="Play_Main_Click02" DurationType="OneShot" DurationMin="3.6915646" DurationMax="3.6915646">
+					<MediaRefs>
 						<MediaRef Id="678952220"/>
 					</MediaRefs>
 				</Event>
@@ -458,5 +462,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C822A161-9771-DDBA-0C47-B20CF4F06990}</FileHash>
+	<FileHash>{5ECB37F2-5A7C-4E36-4044-2CF0A5CB708D}</FileHash>
 </SoundBanksInfo>
