@@ -70,7 +70,7 @@ using UnityEngine;
                 {UIConst.CreditPanel,"Panel/CreditPanel" },
                 {UIConst.ExitPanel, "Panel/ExitPanel" },
                 {UIConst.SceneSelectorPanel, "Panel/SceneSelectorPanel" },
-                {UIConst.TutotialWindowPanel, "Panel/TutotialWindowPanel" }
+                {UIConst.TutorialWindowPanel, "Panel/TutorialWindowPanel" }
 
 
             };
@@ -139,7 +139,7 @@ using UnityEngine;
         public const string CreditPanel = "CreditPanel";
         public const string ExitPanel = "ExitPanel";
         public const string SceneSelectorPanel = "SceneSelectorPanel";
-        public const string TutotialWindowPanel = "TutotialWindowPanel";
+        public const string TutorialWindowPanel = "TutorialWindowPanel";
 }
 
 

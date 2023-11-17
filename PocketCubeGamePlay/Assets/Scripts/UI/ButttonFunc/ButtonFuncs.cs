@@ -13,8 +13,20 @@ public class ButtonFuncs : MonoBehaviour
     public void ResetSavedataAndReboot()
     {
         PlayerPrefs.SetInt("Level", 0);
+        PlayerPrefs.SetInt("Tutorial", 0);
         print(PlayerPrefs.GetInt("Level"));
         
         SceneManager.LoadScene("StartGame");
+    }
+
+    public void ClickOpenPanel(string panelName)
+    {
+        //string Name = "UIConst." + panelName;
+        UIManager.Instance.OpenPanel(panelName);
+    }
+
+    public void SaveTutorialData(int totorialData)
+    {
+        PlayerPrefs.SetInt("Tutorials", totorialData);
     }
 }
