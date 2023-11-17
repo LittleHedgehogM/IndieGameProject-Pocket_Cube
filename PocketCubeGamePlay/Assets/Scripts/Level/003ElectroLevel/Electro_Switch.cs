@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Electro_Switch : MonoBehaviour
 {
@@ -14,14 +16,17 @@ public class Electro_Switch : MonoBehaviour
 
     bool isInteractionEnabled = false;
     Electro_CursorController myCursorController;
-
-
+    Vector3 scale = Vector3.zero;
+    Vector3 pressScale = Vector3.zero;
     void Start()
     {
         go = this.gameObject;
         material = go.GetComponent<MeshRenderer>().material;
         InitSwitchColor();
         myCursorController = FindObjectOfType<Electro_CursorController>();
+        scale = transform.localScale;
+        pressScale = scale * 0.9f;
+        
     }
 
 
@@ -50,14 +55,13 @@ public class Electro_Switch : MonoBehaviour
 
     private void OnMouseExit()
     {
-       
         myCursorController.setDefaultCursor();
-
     }
     private void OnMouseDown()
     {
         if (isInteractionEnabled){
             myCursorController.setClickDownCursor();
+            transform.localScale = pressScale;
         }
     }
 
@@ -67,6 +71,7 @@ public class Electro_Switch : MonoBehaviour
         {
             myCursorController.setSelectCursor();
             switchColor();
+            transform.localScale = scale;
         }
         
     }
