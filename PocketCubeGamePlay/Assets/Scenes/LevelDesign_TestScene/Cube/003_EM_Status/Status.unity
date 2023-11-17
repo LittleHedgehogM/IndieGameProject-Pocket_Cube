@@ -3662,7 +3662,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   cubeTranslationTime: 0.5
-  rotateSpeed: 90
+  rotateSpeed: 45
   mouseSenstivity: 0.52
 --- !u!114 &771636596
 MonoBehaviour:
@@ -7792,7 +7792,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1814961019}
-  - {fileID: 1900457655}
   - {fileID: 179051583}
   - {fileID: 1732400084}
   - {fileID: 635318299}
@@ -8581,6 +8580,7 @@ RectTransform:
   - {fileID: 607095122}
   - {fileID: 1964983624}
   - {fileID: 1008725022}
+  - {fileID: 1900457655}
   m_Father: {fileID: 1713922962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -9008,7 +9008,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1713922962}
+    m_TransformParent: {fileID: 1808400188}
     m_Modifications:
     - target: {fileID: 44452442447404414, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_text
@@ -9084,11 +9084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1971
+      value: -1051
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1020
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_LocalScale.x
@@ -9132,11 +9132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 550.9
+      value: -64.5
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -133.6
+      value: 72.60004
       objectReference: {fileID: 0}
     - target: {fileID: 6279441516281135796, guid: 2e34082a054cb9a4ba3ac2fcca5ba87d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
