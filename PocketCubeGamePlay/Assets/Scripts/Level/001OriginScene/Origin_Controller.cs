@@ -42,7 +42,7 @@ public class Origin_Controller : MonoBehaviour
         myRotationTarget = FindObjectOfType<Origin_RotationTarget>();
         currentState = PuzzleState.Phase_One;
         InitPhaseOne();
-        enableInteraction = false;
+        enableInteraction = true;
         originAngle = Sphere.transform.rotation;
         myVFXController = FindObjectOfType<Origin_VFXController>();
 
@@ -50,7 +50,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void OnEnable()
     {
-        Cinemachine_cart.CinemachineFinished += EnableSceneInteraction;
+        //Cinemachine_cart.CinemachineFinished += EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     +=isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    +=isRightAxisClicked;
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
@@ -60,7 +60,7 @@ public class Origin_Controller : MonoBehaviour
 
     private void OnDisable()
     {
-        Cinemachine_cart.CinemachineFinished -= EnableSceneInteraction;
+        //Cinemachine_cart.CinemachineFinished -= EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     -= isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    -= isRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
