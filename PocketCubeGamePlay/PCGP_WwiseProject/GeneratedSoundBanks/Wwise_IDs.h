@@ -30,7 +30,6 @@ namespace AK
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
-        static const AkUniqueID PLAY_KAICHANG = 4070326154U;
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
@@ -40,7 +39,7 @@ namespace AK
         static const AkUniqueID PLAY_MID_UNLOCK = 928358091U;
         static const AkUniqueID PLAY_MOVE_LOOP = 3382199950U;
         static const AkUniqueID PLAY_NEWTON_ENVIRONMENT = 2419270649U;
-        static const AkUniqueID PLAY_OPEN = 2281287634U;
+        static const AkUniqueID PLAY_OPENING = 1808131806U;
         static const AkUniqueID PLAY_PLATE_DOWN = 3551052341U;
         static const AkUniqueID PLAY_PLATE_LIFT = 731342154U;
         static const AkUniqueID PLAY_REDUCE = 3470104452U;

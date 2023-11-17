@@ -147,6 +147,16 @@
 						</Event>
 						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
 							<ChildrenList>
+								<Action Name="" ID="{CEFBB1ED-9F8E-40D8-8041-1F45FB3F1E7B}" ShortID="896807247">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
@@ -192,7 +202,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Open" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}">
+						<Event Name="Play_Opening" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}">
 							<ChildrenList>
 								<Action Name="" ID="{09CBFD99-9F4C-4AF2-A1B6-7FF8D413658C}" ShortID="223234347">
 									<ReferenceList>
@@ -283,28 +293,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Amb_Main" ID="{4DF0688B-485D-48E0-92CD-C9A28FEE98EB}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_kaichang" ID="{F2BC47B4-9D07-475E-B052-0E77D3A98795}">
-							<ChildrenList>
-								<Action Name="" ID="{652C0B54-62B8-42BF-A1A5-651C272F0613}" ShortID="435898957">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="kaichang" ID="{6F780ED2-D20D-448A-AF52-E2FDD561C85C}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_jiqiren" ID="{8F552C66-6F10-4667-A45F-1152762F880F}">
-							<ChildrenList>
-								<Action Name="" ID="{9D78E272-9DB4-42DA-86B5-E935F259F1BF}" ShortID="793443867">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="jiqiren" ID="{149F8C44-1F36-4E33-B702-62055F198123}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

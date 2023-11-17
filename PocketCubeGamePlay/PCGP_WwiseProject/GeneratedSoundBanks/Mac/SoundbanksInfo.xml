@@ -223,7 +223,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{BDDCAB96-99F3-C770-30B6-EDA45A720B23}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{57563887-3E6F-DF9D-E9D3-16904E334EB6}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -246,6 +246,10 @@
 				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>拿走.wav</ShortName>
 					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
+				</File>
+				<File Id="557601517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqiren.wav</ShortName>
+					<CachePath>SFX/jiqiren_10C4C929.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
@@ -295,6 +299,11 @@
 						<MediaRef Id="649493178"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1467814842" Name="Play_jiqiren" DurationType="OneShot" DurationMin="9.25" DurationMax="9.25">
+					<MediaRefs>
+						<MediaRef Id="557601517"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="869256356"/>
@@ -312,7 +321,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{5F16546A-2463-6C5E-A6CD-742F8B7181D7}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{23145288-CBF0-E926-081F-B4E9A435BC37}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -351,7 +360,7 @@
 						<MediaRef Id="204222952"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2281287634" Name="Play_Open" DurationType="Infinite">
+				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="100758862"/>
 						<MediaRef Id="201197348"/>
@@ -376,21 +385,13 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{50A2C76C-88E5-CBC9-BC9F-68E2B7D5CBDE}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B3467AD4-B739-76F8-8A8C-5199E83276F8}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="516143800" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click01.wav</ShortName>
 					<CachePath>SFX/Main_Click01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="545451843" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>kaichang.wav</ShortName>
-					<CachePath>SFX/kaichang_10C4C929.wem</CachePath>
-				</File>
-				<File Id="557601517" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>jiqiren.wav</ShortName>
-					<CachePath>SFX/jiqiren_10C4C929.wem</CachePath>
 				</File>
 				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_Main.wav</ShortName>
@@ -405,16 +406,6 @@
 				<Event Id="1871703286" Name="Play_Amb_Main" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="626564496"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1467814842" Name="Play_jiqiren" DurationType="OneShot" DurationMin="9.25" DurationMax="9.25">
-					<MediaRefs>
-						<MediaRef Id="557601517"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4070326154" Name="Play_kaichang" DurationType="OneShot" DurationMin="10.687506" DurationMax="10.687506">
-					<MediaRefs>
-						<MediaRef Id="545451843"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2820543912" Name="Play_Main_Click" DurationType="OneShot" DurationMin="2.8620634" DurationMax="3.6915646">
@@ -467,5 +458,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{50DC2651-A665-6B2C-71A1-B9089AEAE427}</FileHash>
+	<FileHash>{C822A161-9771-DDBA-0C47-B20CF4F06990}</FileHash>
 </SoundBanksInfo>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585014628264091154
+    m_lastTime: -8585014668168285355
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585014628287224609
+    m_lastTime: -8585014668192239803
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -117,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585014628264259787
+    m_lastTime: -8585013868111438501
     List:
     - name: Cube
       guid: 44f11d3313d9884c95673e9c779451a5
@@ -243,7 +243,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585014628294247975
+    m_lastTime: -8585013866105476762
     List:
     - name: Cube
       guid: e39f0fc375b59240a531e51c7ae1c983
@@ -513,9 +513,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.630499
       minDuration: 5.630499
-    - name: Play_jiqiren
-      guid: 662c558f106f6746a45f1152762f880f
-      id: 1467814842
+    - name: Play_Main_Click
+      guid: 924045a15d7f454598a1b47fd8455fad
+      id: 2820543912
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -526,73 +526,13 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 4
         guid: dce4b9bd9ddc794abae644e24d3674e1
-      - ElementName: Play_jiqiren
+      - ElementName: Play_Main_Click
         ObjectType: 3
-        guid: 662c558f106f6746a45f1152762f880f
-      Path: Events\Default Work Unit\Main\Play_jiqiren
-      maxAttenuation: 0
-      maxDuration: 9.25
-      minDuration: 9.25
-    - name: Play_kaichang
-      guid: b447bcf2079d5e47b0520e77d3a98795
-      id: 4070326154
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Main
-        ObjectType: 4
-        guid: dce4b9bd9ddc794abae644e24d3674e1
-      - ElementName: Play_kaichang
-        ObjectType: 3
-        guid: b447bcf2079d5e47b0520e77d3a98795
-      Path: Events\Default Work Unit\Main\Play_kaichang
-      maxAttenuation: 0
-      maxDuration: 10.687506
-      minDuration: 10.687506
-    - name: Play_Main_Click01
-      guid: f9465b33b65e7a4ea9464ec71e999e44
-      id: 905487977
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Main
-        ObjectType: 4
-        guid: dce4b9bd9ddc794abae644e24d3674e1
-      - ElementName: Play_Main_Click01
-        ObjectType: 3
-        guid: f9465b33b65e7a4ea9464ec71e999e44
-      Path: Events\Default Work Unit\Main\Play_Main_Click01
-      maxAttenuation: 0
-      maxDuration: 2.8620634
-      minDuration: 2.8620634
-    - name: Play_Main_Click02
-      guid: 2c45751b86421b42b5b003209ff7426a
-      id: 905487978
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Main
-        ObjectType: 4
-        guid: dce4b9bd9ddc794abae644e24d3674e1
-      - ElementName: Play_Main_Click02
-        ObjectType: 3
-        guid: 2c45751b86421b42b5b003209ff7426a
-      Path: Events\Default Work Unit\Main\Play_Main_Click02
+        guid: 924045a15d7f454598a1b47fd8455fad
+      Path: Events\Default Work Unit\Main\Play_Main_Click
       maxAttenuation: 0
       maxDuration: 3.6915646
-      minDuration: 3.6915646
+      minDuration: 2.8620634
     - name: Play_Mid_Unlock
       guid: 1e6705ed9548234cb300270f29f1e109
       id: 928358091
@@ -630,6 +570,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: ae30fee7001a734f9b25bcb21683fe70
       Path: Events\Default Work Unit\Player\Play_Move_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Opening
+      guid: 18fab525dd5a364fac2af77087c3c686
+      id: 1808131806
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_Opening
+        ObjectType: 3
+        guid: 18fab525dd5a364fac2af77087c3c686
+      Path: Events\Default Work Unit\Level0\Play_Opening
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -858,7 +818,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585014628294213257
+    m_lastTime: -8585013868214416020
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -962,6 +922,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.12773243
       minDuration: 0.12773243
+    - name: Play_jiqiren
+      guid: 662c558f106f6746a45f1152762f880f
+      id: 1467814842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_jiqiren
+        ObjectType: 3
+        guid: 662c558f106f6746a45f1152762f880f
+      Path: Events\Level1\Play_jiqiren
+      maxAttenuation: 0
+      maxDuration: 9.25
+      minDuration: 9.25
     - name: Play_Newton_environment
       guid: d6d1eb8a0da4b2418636a8004bd0ca28
       id: 2419270649
@@ -1024,7 +1001,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585014628294193416
+    m_lastTime: -8585014668200320773
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1174,7 +1151,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585014628294158696
+    m_lastTime: -8585014668200310798
     List:
     - name: New_Game_Parameter
       guid: 55362c88a4b4f7408a04ed774d899757
@@ -1202,7 +1179,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585014628264185393
+    m_lastTime: -8585014668168315682
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1216,7 +1193,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585014628264155635
+    m_lastTime: -8585014668168305756
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1230,10 +1207,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585014628264120910
+    m_lastTime: -8585014668168290397
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a000000220000002300000038000000b8060000bd060000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
