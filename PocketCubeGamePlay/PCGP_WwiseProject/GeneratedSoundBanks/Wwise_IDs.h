@@ -40,6 +40,7 @@ namespace AK
         static const AkUniqueID PLAY_MID_UNLOCK = 928358091U;
         static const AkUniqueID PLAY_MOVE_LOOP = 3382199950U;
         static const AkUniqueID PLAY_NEWTON_ENVIRONMENT = 2419270649U;
+        static const AkUniqueID PLAY_OPEN = 2281287634U;
         static const AkUniqueID PLAY_PLATE_DOWN = 3551052341U;
         static const AkUniqueID PLAY_PLATE_LIFT = 731342154U;
         static const AkUniqueID PLAY_REDUCE = 3470104452U;

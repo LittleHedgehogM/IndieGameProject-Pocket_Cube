@@ -312,7 +312,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{679DA9BC-7CA3-FEC8-B935-1D7ECA596F6F}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{5F16546A-2463-6C5E-A6CD-742F8B7181D7}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -324,9 +324,17 @@
 					<ShortName>roll01.wav</ShortName>
 					<CachePath>SFX/roll01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="100758862" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Open02.wav</ShortName>
+					<CachePath>SFX/Open02_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="165154750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll_long.wav</ShortName>
 					<CachePath>SFX/roll_long_10C4C929.wem</CachePath>
+				</File>
+				<File Id="201197348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Open01.wav</ShortName>
+					<CachePath>SFX/Open01_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_level00.wav</ShortName>
@@ -341,6 +349,12 @@
 				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="204222952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2281287634" Name="Play_Open" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="100758862"/>
+						<MediaRef Id="201197348"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="4.0965757" DurationMax="4.0965757">
@@ -453,5 +467,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4B91B3BD-8723-6485-ED0F-BA610F9664C2}</FileHash>
+	<FileHash>{50DC2651-A665-6B2C-71A1-B9089AEAE427}</FileHash>
 </SoundBanksInfo>
