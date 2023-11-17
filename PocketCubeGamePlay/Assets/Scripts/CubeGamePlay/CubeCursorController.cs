@@ -8,34 +8,38 @@ public class CubeCursorController : MonoBehaviour
     [SerializeField] private Texture2D rotateTexture;
     [SerializeField] private Texture2D swipeTexture;
     [SerializeField] private Texture2D skillTexture;
-
+    Vector2 normalOffset;
+    Vector2 rotateOffset;
+    Vector2 swipeOffset;
+    Vector2 skillOffset;
+    CursorMode mode = CursorMode.ForceSoftware;
 
     private void Start()
     {
+        normalOffset = new Vector2(normalTexture.width * 0.5f, normalTexture.height * 0.5f);
+        rotateOffset = new Vector2(rotateTexture.width * 0.5f, rotateTexture.height * 0.5f);
+        swipeOffset  = new Vector2(swipeTexture.width * 0.5f,  swipeTexture.height * 0.5f);
+        skillOffset  = new Vector2(skillTexture.width * 0.5f,  skillTexture.height * 0.5f);
         setNormalCursor();
     }
 
     public void setNormalCursor()
     {
-        CursorMode mode = CursorMode.ForceSoftware;
-        Cursor.SetCursor(normalTexture, Vector2.zero, mode);
+        Cursor.SetCursor(normalTexture, normalOffset, mode);
     }
 
     public void setRotationCursor()
     {
-        CursorMode mode = CursorMode.ForceSoftware;
-        Cursor.SetCursor(rotateTexture, Vector2.zero, mode);
+        Cursor.SetCursor(rotateTexture, rotateOffset, mode);
     }
 
     public void setSwipeCursor()
     {
-        CursorMode mode = CursorMode.ForceSoftware;
-        Cursor.SetCursor(swipeTexture, Vector2.zero, mode);
+        Cursor.SetCursor(swipeTexture, swipeOffset, mode);
     }
 
     public void setSkillCursor(){
-        CursorMode mode = CursorMode.ForceSoftware;
-        Cursor.SetCursor(skillTexture, Vector2.zero, mode);
+        Cursor.SetCursor(skillTexture, skillOffset, mode);
     }
 
 }

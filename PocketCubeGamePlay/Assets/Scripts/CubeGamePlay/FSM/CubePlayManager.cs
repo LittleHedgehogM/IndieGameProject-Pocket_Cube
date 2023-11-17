@@ -25,7 +25,7 @@ public class CubePlayManager : MonoBehaviour
     CubeConfigurationPhase myCubeConfigurationPhase;
     CubeInPlayPhase myCubeInPlayPhase;
     CubeSolvedPhase myCubeSolvedPhase;
-
+    CubePlayUIController myCubeUIController;
 
 
     private void Awake()
@@ -38,7 +38,7 @@ public class CubePlayManager : MonoBehaviour
         myCubeConfigurationPhase = FindObjectOfType<CubeConfigurationPhase>();
         myCubeInPlayPhase        = FindObjectOfType<CubeInPlayPhase>();
         myCubeSolvedPhase        = FindObjectOfType<CubeSolvedPhase>();
-        
+        myCubeUIController       = FindObjectOfType<CubePlayUIController>();
         currentCubePlayPhase = CubePlay.Configuration;
         myCubeConfigurationPhase.onStart();
 
@@ -71,7 +71,8 @@ public class CubePlayManager : MonoBehaviour
         CubePlayUIController.onEnterCommutationState        += SetStateToCommutation;
         CubePlayUIController.onRestoreCommutationCheckPoint += RestoreCommutationCheckPoint;
         CubePlayUIController.onRestoreDiagonalCheckPoint    += RestoreDiagonalCheckPoint;
-        
+        ButtonClick.OnMyCallback                            += HandleCallback;
+
     }
 
 
@@ -81,6 +82,28 @@ public class CubePlayManager : MonoBehaviour
         CubePlayUIController.onEnterCommutationState        -= SetStateToCommutation;
         CubePlayUIController.onRestoreCommutationCheckPoint -= RestoreCommutationCheckPoint;
         CubePlayUIController.onRestoreDiagonalCheckPoint    -= RestoreDiagonalCheckPoint;
+        ButtonClick.OnMyCallback                            -= HandleCallback;
+
+    }
+
+    void HandleCallback(string message)
+    {
+        if (message.Contains("Restart"))
+        {
+            onRestart();
+        }     
+        else if (message.Contains("Diagonal"))
+        {
+            myCubeUIController.clickDiagonalButton();
+        }
+        else if (message.Contains("Commutation"))
+        {
+            myCubeUIController.clickCommutationButton();
+        }
+        else if (message.Contains("ResetCamera"))
+        {
+            SetStateToResetCamera();
+        }
 
     }
 
@@ -137,7 +160,7 @@ public class CubePlayManager : MonoBehaviour
             myCubeConfigurationPhase.onRestart();
             myCubeInPlayPhase.onRestart();
             myCubeSolvedPhase.onRestart();
-           
+            
             //load scene
             //Scene scene = SceneManager.GetActiveScene();
             //SceneManager.LoadScene(scene.name);

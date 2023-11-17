@@ -45,9 +45,8 @@ public class CubePlayUIController : MonoBehaviour
         get { return _swipeCount; }
         set 
         { 
-            _swipeCount = value;
-            UpdateSwipeCountText(_swipeCount);
-            UpdateTotalStepCount();
+            _swipeCount = value;           
+            UpdateTotalStepsCountText();
         }
     }
 
@@ -59,8 +58,9 @@ public class CubePlayUIController : MonoBehaviour
         set
         {
             _diagonalCount = value;
-            UpdateDiagonalCountText(_diagonalCount);
-            UpdateTotalStepCount();
+            UpdateTotalStepsCountText();
+
+            //UpdateDiagonalCountText(_diagonalCount);
         }
     }
     private int _commutationCount;
@@ -70,8 +70,8 @@ public class CubePlayUIController : MonoBehaviour
         set 
         {
             _commutationCount = value;
-            UpdateCommutationCountText(_commutationCount);
-            UpdateTotalStepCount();
+            UpdateTotalStepsCountText();
+            //UpdateCommutationCountText(_commutationCount);
         }
     }
 
@@ -147,6 +147,7 @@ public class CubePlayUIController : MonoBehaviour
             onRestoreDiagonalCheckPoint?.Invoke();
             DiagonalButton.image.color = Color.white;
             isDiagonalApplied = false;
+            DiagonalCount = 0;
 
         }
     }
@@ -170,6 +171,7 @@ public class CubePlayUIController : MonoBehaviour
             onRestoreCommutationCheckPoint?.Invoke();
             CommutationButton.image.color = Color.white;
             isCommutationApplied = false;
+            CommutationCount = 0;
 
         }
     }
@@ -188,6 +190,7 @@ public class CubePlayUIController : MonoBehaviour
         //{
         //    isCommutationApplied = true;
         //}
+        CommutationCount = 1;
     }
 
     void onDiagonalFinished()
@@ -197,6 +200,7 @@ public class CubePlayUIController : MonoBehaviour
         //{
         //    isDiagonalApplied = true;
         //}
+        DiagonalCount = 1;
     }
 
     void onSwipeFinished()
@@ -218,15 +222,16 @@ public class CubePlayUIController : MonoBehaviour
     private void UpdateTotalStepCount()
     {
         totalSteps = SwipeCount + DiagonalCount + CommutationCount;
-        if (totalSteps > suggestedStepCount)
-        {
-            //RestartButton.gameObject.SetActive(true);
-        }
+        //if (totalSteps > suggestedStepCount)
+        //{
+        //    RestartButton.gameObject.SetActive(true);
+        //}
     }
 
-    void UpdateSwipeCountText(int swipeCount)
+    void UpdateTotalStepsCountText()
     {
-        mySwipeCountText.text = "Swipe Count = " + swipeCount;
+        totalSteps = SwipeCount + DiagonalCount + CommutationCount;
+        mySwipeCountText.text = totalSteps + " step" + ((totalSteps>1)? "s": "");
     }
 
     void UpdateDiagonalCountText(int diagonalCount)
