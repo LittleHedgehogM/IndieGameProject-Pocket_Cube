@@ -207,6 +207,7 @@
 								<Action Name="" ID="{89463969-620B-4C4F-8F43-0C626B4E2A83}" ShortID="262538462">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -308,12 +309,23 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Main_Click" ID="{A1454092-7F5D-4545-98A1-B47FD8455FAD}">
+						<Event Name="Play_Main_Click01" ID="{27959535-9419-438D-9C73-2EC6416DAF5D}">
 							<ChildrenList>
-								<Action Name="" ID="{4E909E37-9B84-4A34-B8DF-8BA56D004B39}" ShortID="857736479">
+								<Action Name="" ID="{59E44DAB-A629-4550-88F9-1F97B3072F74}" ShortID="171210045">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Main_Click" ID="{C28BB6D1-00A6-488F-B52D-AA8E3F8C3B1C}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+											<ObjectRef Name="Main_Click01" ID="{2515A741-3A5B-45DB-9777-91297FB7B5EE}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Main_Click02" ID="{7EDDDE79-7B0F-4CBB-A2DE-EC8A4E022859}">
+							<ChildrenList>
+								<Action Name="" ID="{ED1BFFE3-682C-4C2F-9F97-824AF43DBEE8}" ShortID="717034756">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_Click02" ID="{1DA6F245-C9C0-4FB7-BD01-EEBC93E19764}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
