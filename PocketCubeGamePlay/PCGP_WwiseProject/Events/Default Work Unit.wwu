@@ -276,6 +276,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_cube_skillclick01" ID="{2F383B85-5546-4CCF-9B48-A07995DEEF46}">
+							<ChildrenList>
+								<Action Name="" ID="{30D8DF22-5B51-434E-AA90-8EBDC61E928B}" ShortID="789679465">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cube_skillclick01" ID="{498E46C9-C97F-470A-9510-E234AC1A137B}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_cube_skillclick02" ID="{755D725B-2C11-4727-A62B-674D41198BEA}">
+							<ChildrenList>
+								<Action Name="" ID="{41EABD2B-3D28-4634-86C3-46D661BF3A7C}" ShortID="337608922">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cube_skillclick02" ID="{A625973B-A055-4B28-8D81-E98CA5F6E498}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main" ID="{BDB9E4DC-DC9D-4A79-BAE6-44E24D3674E1}" ShortID="369500642">

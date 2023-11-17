@@ -421,7 +421,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{F195654F-1201-3304-2407-93376AEC59E3}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{B8D22994-4AA6-F7B0-B4D5-84F5116815ED}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -433,6 +433,10 @@
 					<ShortName>cube_click.wav</ShortName>
 					<CachePath>SFX/cube_click_10C4C929.wem</CachePath>
 				</File>
+				<File Id="82225691" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_skillclick01.wav</ShortName>
+					<CachePath>SFX/cube_skillclick01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="481933197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_roll02.wav</ShortName>
 					<CachePath>SFX/cube_roll02_10C4C929.wem</CachePath>
@@ -440,6 +444,10 @@
 				<File Id="579273831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_ani.wav</ShortName>
 					<CachePath>SFX/cube_ani_10C4C929.wem</CachePath>
+				</File>
+				<File Id="703256073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_skillclick02.wav</ShortName>
+					<CachePath>SFX/cube_skillclick02_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -459,8 +467,18 @@
 						<MediaRef Id="481933197"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3603099912" Name="Play_cube_skillclick01" DurationType="OneShot" DurationMin="2.1250114" DurationMax="2.1250114">
+					<MediaRefs>
+						<MediaRef Id="82225691"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3603099915" Name="Play_cube_skillclick02" DurationType="OneShot" DurationMin="1.9375057" DurationMax="1.9375057">
+					<MediaRefs>
+						<MediaRef Id="703256073"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5ECB37F2-5A7C-4E36-4044-2CF0A5CB708D}</FileHash>
+	<FileHash>{0E97E6EC-C217-170C-691B-11D49D4C1C53}</FileHash>
 </SoundBanksInfo>

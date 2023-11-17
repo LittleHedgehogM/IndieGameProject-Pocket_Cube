@@ -26,6 +26,8 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_CLICK = 1884814068U;
         static const AkUniqueID PLAY_CUBE_DROP = 797967755U;
         static const AkUniqueID PLAY_CUBE_ROLL = 2377298701U;
+        static const AkUniqueID PLAY_CUBE_SKILLCLICK01 = 3603099912U;
+        static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
