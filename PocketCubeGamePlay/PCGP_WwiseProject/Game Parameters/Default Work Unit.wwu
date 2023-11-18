@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{9E9700E2-03D1-4275-8204-80365A2664B5}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="New_Game_Parameter" ID="{882C3655-B4A4-40F7-8A04-ED774D899757}"/>
+				<Folder Name="Volumn" ID="{24490DF7-481E-45B3-97DC-B0DBAB470421}" ShortID="664490759">
+					<ChildrenList>
+						<GameParameter Name="Main_Vol" ID="{CFB05403-8806-4613-B7FF-D022E3232F83}"/>
+						<GameParameter Name="SFX_Vol" ID="{C04204CF-4756-49F6-AB2E-9E3493C0D241}"/>
+						<GameParameter Name="Music_Vol" ID="{497D4E81-B350-4D71-A6D9-A265C67DFD99}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264091154
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,11 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585013810012664201
+<<<<<<< Updated upstream
+    m_lastTime: -8585012928786714073
+=======
+    m_lastTime: -8585012927708951669
+>>>>>>> Stashed changes
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -105,6 +109,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: 853d7646a1730a4ea2c7dadd2c92891f
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 3557c607ea16fc438de4c087f64ab9e2
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3557c607ea16fc438de4c087f64ab9e2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -117,7 +138,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585013846426520982
+    m_lastTime: -8585013862600397771
     List:
     - name: Cube
       guid: 44f11d3313d9884c95673e9c779451a5
@@ -243,7 +264,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585013719660464055
+<<<<<<< Updated upstream
+    m_lastTime: -8585012928445325701
+=======
+    m_lastTime: -8585012927711322595
+>>>>>>> Stashed changes
     List:
     - name: Cube
       guid: e39f0fc375b59240a531e51c7ae1c983
@@ -878,7 +903,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585013846431932857
+    m_lastTime: -8585013862603617095
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1061,7 +1086,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585014656783383511
+    m_lastTime: -8585014628294193416
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1211,8 +1236,46 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585014656783383511
+<<<<<<< Updated upstream
+    m_lastTime: -8585012928786421984
+=======
+    m_lastTime: -8585012927711288111
+>>>>>>> Stashed changes
     List:
+    - name: Main_Vol
+      guid: 0354b0cf06881346b7ffd022e3232f83
+      id: 243859308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: Main_Vol
+        ObjectType: 13
+        guid: 0354b0cf06881346b7ffd022e3232f83
+      Path: Game Parameters\Default Work Unit\Volumn\Main_Vol
+    - name: Music_Vol
+      guid: 814e7d4950b3714da6d9a265c67dfd99
+      id: 2246609544
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: Music_Vol
+        ObjectType: 13
+        guid: 814e7d4950b3714da6d9a265c67dfd99
+      Path: Game Parameters\Default Work Unit\Volumn\Music_Vol
     - name: New_Game_Parameter
       guid: 55362c88a4b4f7408a04ed774d899757
       id: 3671138082
@@ -1227,6 +1290,37 @@ MonoBehaviour:
         ObjectType: 13
         guid: 55362c88a4b4f7408a04ed774d899757
       Path: Game Parameters\Default Work Unit\New_Game_Parameter
+    - name: SFX_Vol
+      guid: cf0442c05647f649ab2e9e3493c0d241
+      id: 42448320
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: SFX_Vol
+        ObjectType: 13
+        guid: cf0442c05647f649ab2e9e3493c0d241
+      Path: Game Parameters\Default Work Unit\Volumn\SFX_Vol
+    - name: Volumn
+      guid: f70d49241e48b34597dcb0dbab470421
+      id: 2415836744
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      Path: Game Parameters\Default Work Unit\Volumn
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -1239,7 +1333,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264185393
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1253,7 +1347,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264155635
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1267,10 +1361,14 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264120910
     List: []
   ExpandedFileSystemItemIds: 
+<<<<<<< Updated upstream
+  ExpandedWaapiItemIds: 05000000060000000a000000330000003400000038000000
+=======
   ExpandedWaapiItemIds: 
+>>>>>>> Stashed changes
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

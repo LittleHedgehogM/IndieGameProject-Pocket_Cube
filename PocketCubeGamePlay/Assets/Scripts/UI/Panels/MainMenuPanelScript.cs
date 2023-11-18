@@ -15,12 +15,10 @@ public class MainMenuPanel : BasePanel
     //public Button CollectionBtn;
     public Button CreditBtn;
     public Button QuitBtn;
-
+    [SerializeField] AK.Wwise.Event Click01;
+    [SerializeField] AK.Wwise.Event Click02;
     
-    //private StartSceneCameraController StartSceneCameraController;
-    //private GameObject CameraController;
-
-    // Start is called before the first frame update
+    
     void Awake()
     {
         StartBtn.onClick.AddListener(OnStartBtn);
@@ -60,8 +58,8 @@ public class MainMenuPanel : BasePanel
 
     public void OnStartBtn()
     {
-        
 
+        Click02.Post(gameObject);
         //print("OnStartBtn");
         switch (PlayerPrefs.GetInt("Level"))
         {
@@ -84,6 +82,7 @@ public class MainMenuPanel : BasePanel
     }
     public void OnContinueBtn()
     {
+        Click02.Post(gameObject);
         switch (PlayerPrefs.GetInt("Level"))
         {
             case 0:
@@ -105,6 +104,7 @@ public class MainMenuPanel : BasePanel
 
     public void OnSettingBtn()
     {
+        Click01.Post(gameObject);
         UIManager.Instance.OpenPanel(UIConst.SettingPanel);
     }
 
@@ -120,6 +120,7 @@ public class MainMenuPanel : BasePanel
 
     public void OnQuitBtn()
     {
+        Click01.Post(gameObject);
         Application.Quit();
         //UIManager.Instance.OpenPanel(UIConst.ExitPanel);
     }

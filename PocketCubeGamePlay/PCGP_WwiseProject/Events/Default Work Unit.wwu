@@ -116,7 +116,8 @@
 							<ChildrenList>
 								<Action Name="" ID="{061E4B9A-07C3-4FD6-9303-340A9FB82EA7}" ShortID="481149724">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -147,16 +148,6 @@
 						</Event>
 						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
 							<ChildrenList>
-								<Action Name="" ID="{CEFBB1ED-9F8E-40D8-8041-1F45FB3F1E7B}" ShortID="896807247">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
@@ -211,7 +202,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Loop" ID="{3E7BDCEE-F394-43D7-B4D0-B84BC462E786}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+											<ObjectRef Name="Amb_Main" ID="{4DF0688B-485D-48E0-92CD-C9A28FEE98EB}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -348,6 +339,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Main_Click02" ID="{1DA6F245-C9C0-4FB7-BD01-EEBC93E19764}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Main_Hover" ID="{4DDB65A5-B205-4986-B379-42FFEA1916B8}">
+							<ChildrenList>
+								<Action Name="" ID="{7A7A5494-BD75-401E-B974-C927F743A5F9}" ShortID="980631162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_Hover" ID="{79446B5F-455A-43ED-9553-F3D83B197956}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

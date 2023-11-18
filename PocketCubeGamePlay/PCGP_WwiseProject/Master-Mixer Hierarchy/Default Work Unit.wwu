@@ -14,30 +14,151 @@
 							<PropertyList>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{805A63CC-76BD-4BEF-A15A-916E29A6835F}" ShortID="929769940">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Music_Vol" ID="{497D4E81-B350-4D71-A6D9-A265C67DFD99}" WorkUnitID="{9E9700E2-03D1-4275-8204-80365A2664B5}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{66395684-4C60-475A-849D-4D19E315A96D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
-						<Bus Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}">
-							<PropertyList>
-								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-						</Bus>
-						<Bus Name="Ani" ID="{7D0B06F9-C212-4B45-A1E9-B56AE1A5BB0C}">
-							<PropertyList>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}"/>
-									<DuckingParam>
-										<Volume>-96</Volume>
-										<FadeInTime>1.5</FadeInTime>
-										<FadeOutTime>0</FadeOutTime>
-										<FadeCurve>FadeExp2</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
+						<Bus Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}">
+							<ChildrenList>
+								<Bus Name="Ani" ID="{7D0B06F9-C212-4B45-A1E9-B56AE1A5BB0C}">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}"/>
+											<DuckingParam>
+												<Volume>-96</Volume>
+												<FadeInTime>1.5</FadeInTime>
+												<FadeOutTime>0</FadeOutTime>
+												<FadeCurve>FadeExp2</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}">
+									<PropertyList>
+										<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{988BB782-A064-4C14-A694-A7FD7CF018CB}" ShortID="788097077">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="SFX_Vol" ID="{C04204CF-4756-49F6-AB2E-9E3493C0D241}" WorkUnitID="{9E9700E2-03D1-4275-8204-80365A2664B5}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{8888F771-0567-45C9-B70B-88B6A1F3B4CA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{A6DEB0D4-9471-49F0-8AF8-480AD4DB1319}" ShortID="806872492">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Main_Vol" ID="{CFB05403-8806-4613-B7FF-D022E3232F83}" WorkUnitID="{9E9700E2-03D1-4275-8204-80365A2664B5}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{053343A9-57C1-43AF-9379-50E00DFA348F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
