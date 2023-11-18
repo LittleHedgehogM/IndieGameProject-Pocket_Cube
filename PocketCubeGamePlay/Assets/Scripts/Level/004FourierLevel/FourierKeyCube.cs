@@ -20,6 +20,15 @@ public class FourierKeyCube : MonoBehaviour
     //private bool cubeLevelPassFxReady = true;
     private bool played = false;
     // Update is called once per frame
+
+    FourierCursorController myCursorController;
+
+
+    private void Start()
+    {
+        myCursorController = FindObjectOfType<FourierCursorController>();
+    }
+
     void Update()
     {
         
@@ -43,10 +52,34 @@ public class FourierKeyCube : MonoBehaviour
         
     }
 
+    private void OnMouseEnter()
+    {
+        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
+        {
+            myCursorController.setSelectCursor();
+        }
+    }
+
+    private void OnMouseExit() 
+    {
+        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
+        {
+            myCursorController.setDefaultCursor();
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
+        {
+            myCursorController.setClickDownCursor();
+        }
+    }
     private void OnMouseUp()
     {
         if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
         {
+            myCursorController.setSelectCursor();
             FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
         }
         
