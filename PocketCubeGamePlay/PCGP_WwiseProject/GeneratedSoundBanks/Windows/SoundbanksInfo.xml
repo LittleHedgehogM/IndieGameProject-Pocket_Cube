@@ -389,10 +389,18 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3A2634DA-7B0F-ED7F-8515-FA05267B5366}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1304B953-3372-95D0-09DB-EE80D74F1B49}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="389796112" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Hover02.wav</ShortName>
+					<CachePath>SFX/Main_Hover02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="460004517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Hover01.wav</ShortName>
+					<CachePath>SFX/Main_Hover01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="516143800" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click01.wav</ShortName>
 					<CachePath>SFX/Main_Click01_10C4C929.wem</CachePath>
@@ -404,6 +412,10 @@
 				<File Id="678952220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click02.wav</ShortName>
 					<CachePath>SFX/Main_Click02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="706841471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Hover03.wav</ShortName>
+					<CachePath>SFX/Main_Hover03_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -420,6 +432,13 @@
 				<Event Id="905487978" Name="Play_Main_Click02" DurationType="OneShot" DurationMin="3.6915646" DurationMax="3.6915646">
 					<MediaRefs>
 						<MediaRef Id="678952220"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3712401318" Name="Play_Main_Hover" DurationType="OneShot" DurationMin="1.062517" DurationMax="1.1406349">
+					<MediaRefs>
+						<MediaRef Id="389796112"/>
+						<MediaRef Id="460004517"/>
+						<MediaRef Id="706841471"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -484,5 +503,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AEBC35E3-E03D-6466-AF8F-0C0F32E18719}</FileHash>
+	<FileHash>{E1C92C62-E63E-5D50-41C2-F9A2065DACDA}</FileHash>
 </SoundBanksInfo>

@@ -344,6 +344,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Main_Hover" ID="{4DDB65A5-B205-4986-B379-42FFEA1916B8}">
+							<ChildrenList>
+								<Action Name="" ID="{7A7A5494-BD75-401E-B974-C927F743A5F9}" ShortID="980631162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_Hover" ID="{79446B5F-455A-43ED-9553-F3D83B197956}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
