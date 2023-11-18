@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{5953C01E-C38A-F679-11B1-35DC7114E707}">
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{BFFFD43A-EF1A-C49D-4086-026816881080}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<Media>
@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4B2D0E4B-181C-A867-D3B3-4C75B0F8348F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F2812649-7539-3B3F-6FEC-81EA656648BB}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -50,7 +50,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{23FEA865-7BE7-F28A-6D61-95BEB6F8D04A}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{55FA28EA-EF6D-8B41-F798-19FC8D44C436}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -67,7 +67,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5FCADDFD-F281-AA0B-340B-2051B1A07588}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5BF2DD37-8776-D3D2-BB68-F9E1F3F1A61B}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -147,7 +147,7 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{A94F08C0-B9A1-9C2C-0145-4979010D6686}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{E5F1F90B-A3D5-898E-64AA-7E47D2ACF870}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -227,7 +227,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{57563887-3E6F-DF9D-E9D3-16904E334EB6}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{6E9AFA83-0E00-24A2-74D0-0CFC06FD32FB}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -325,7 +325,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{956613E4-40BB-C087-FB34-70F325F1B25E}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{8D9F4176-9757-C17C-73DA-05274CA0B891}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -389,7 +389,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8635C19B-87BF-A431-2D42-E2AD1CC58D39}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3A2634DA-7B0F-ED7F-8515-FA05267B5366}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -425,7 +425,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{B8D22994-4AA6-F7B0-B4D5-84F5116815ED}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{717BD02E-C32C-C3F8-3485-016E48567F84}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -484,5 +484,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E51FA875-597D-CA81-D90E-7760799041F1}</FileHash>
+	<FileHash>{AEBC35E3-E03D-6466-AF8F-0C0F32E18719}</FileHash>
 </SoundBanksInfo>

@@ -54,29 +54,31 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<Bus Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}">
-							<PropertyList>
-								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-						</Bus>
-						<Bus Name="Ani" ID="{7D0B06F9-C212-4B45-A1E9-B56AE1A5BB0C}">
-							<PropertyList>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}"/>
-									<DuckingParam>
-										<Volume>-96</Volume>
-										<FadeInTime>1.5</FadeInTime>
-										<FadeOutTime>0</FadeOutTime>
-										<FadeCurve>FadeExp2</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
-						</Bus>
 						<Bus Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}">
+							<ChildrenList>
+								<Bus Name="Ani" ID="{7D0B06F9-C212-4B45-A1E9-B56AE1A5BB0C}">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}"/>
+											<DuckingParam>
+												<Volume>-96</Volume>
+												<FadeInTime>1.5</FadeInTime>
+												<FadeOutTime>0</FadeOutTime>
+												<FadeCurve>FadeExp2</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}">
+									<PropertyList>
+										<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
