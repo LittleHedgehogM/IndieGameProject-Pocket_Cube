@@ -97,7 +97,7 @@ public class NewtonScenePlayController : MonoBehaviour
         Scale_Right.GetComponent<Scale>().InitScalePosition();
 
         myPlayStatus = PlayStatus.Configuration;
-        Application.targetFrameRate = 60;
+
 
     }
 
