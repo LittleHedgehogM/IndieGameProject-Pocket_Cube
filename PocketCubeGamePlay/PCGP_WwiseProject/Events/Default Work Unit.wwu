@@ -147,16 +147,6 @@
 						</Event>
 						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
 							<ChildrenList>
-								<Action Name="" ID="{CEFBB1ED-9F8E-40D8-8041-1F45FB3F1E7B}" ShortID="896807247">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb_0" ID="{BEF619C5-4CF9-4042-B386-F5EFC865604E}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>

@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{67FA3324-51D7-2B77-C372-C5B92978A3B9}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4B2D0E4B-181C-A867-D3B3-4C75B0F8348F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -37,12 +37,16 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1067198645" Name="Ani"/>
 				<Bus Id="1117531639" Name="Amb"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="42448320" Name="SFX_Vol"/>
+				<GameParameter Id="243859308" Name="Main_Vol"/>
+				<GameParameter Id="2246609544" Name="Music_Vol"/>
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
@@ -321,7 +325,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{E61896E3-1F75-25B4-F09D-6F425D4FF7C5}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{956613E4-40BB-C087-FB34-70F325F1B25E}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -480,5 +484,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9A0B5ADE-C571-0B6E-93AE-9076CA4E6C90}</FileHash>
+	<FileHash>{E51FA875-597D-CA81-D90E-7760799041F1}</FileHash>
 </SoundBanksInfo>

@@ -7,6 +7,6 @@ public class UIAnimationScript : MonoBehaviour
     // Start is called before the first frame update
     private void MainMenuClickSound()
     {
-        AkSoundEngine.PostEvent("Play_Main_Click", gameObject);
+        AkSoundEngine.PostEvent("Play_Main_Click01", gameObject);
     }
 }
