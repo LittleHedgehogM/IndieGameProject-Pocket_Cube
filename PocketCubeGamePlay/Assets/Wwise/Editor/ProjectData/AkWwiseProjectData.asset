@@ -243,7 +243,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585013839181409716
+    m_lastTime: -8585013315979054510
     List:
     - name: Cube
       guid: e39f0fc375b59240a531e51c7ae1c983
@@ -473,6 +473,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.99342406
       minDuration: 0.83732426
+    - name: Play_cube_skillclick01
+      guid: 853b382f4655cf4c9b48a07995deef46
+      id: 3603099912
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_skillclick01
+        ObjectType: 3
+        guid: 853b382f4655cf4c9b48a07995deef46
+      Path: Events\Default Work Unit\Cube\Play_cube_skillclick01
+      maxAttenuation: 0
+      maxDuration: 2.1250114
+      minDuration: 2.1250114
+    - name: Play_cube_skillclick02
+      guid: 5b725d75112c2747a62b674d41198bea
+      id: 3603099915
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_skillclick02
+        ObjectType: 3
+        guid: 5b725d75112c2747a62b674d41198bea
+      Path: Events\Default Work Unit\Cube\Play_cube_skillclick02
+      maxAttenuation: 0
+      maxDuration: 1.9375057
+      minDuration: 1.9375057
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
@@ -513,9 +553,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.630499
       minDuration: 5.630499
-    - name: Play_Main_Click
-      guid: 924045a15d7f454598a1b47fd8455fad
-      id: 2820543912
+    - name: Play_Main_Click01
+      guid: 3595952719948d439c732ec6416daf5d
+      id: 905487977
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -526,13 +566,33 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 4
         guid: dce4b9bd9ddc794abae644e24d3674e1
-      - ElementName: Play_Main_Click
+      - ElementName: Play_Main_Click01
         ObjectType: 3
-        guid: 924045a15d7f454598a1b47fd8455fad
-      Path: Events\Default Work Unit\Main\Play_Main_Click
+        guid: 3595952719948d439c732ec6416daf5d
+      Path: Events\Default Work Unit\Main\Play_Main_Click01
+      maxAttenuation: 0
+      maxDuration: 2.8620634
+      minDuration: 2.8620634
+    - name: Play_Main_Click02
+      guid: 79dedd7e0f7bbb4ca2deec8a4e022859
+      id: 905487978
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_Main_Click02
+        ObjectType: 3
+        guid: 79dedd7e0f7bbb4ca2deec8a4e022859
+      Path: Events\Default Work Unit\Main\Play_Main_Click02
       maxAttenuation: 0
       maxDuration: 3.6915646
-      minDuration: 2.8620634
+      minDuration: 3.6915646
     - name: Play_Mid_Unlock
       guid: 1e6705ed9548234cb300270f29f1e109
       id: 928358091

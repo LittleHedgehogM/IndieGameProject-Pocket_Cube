@@ -10,6 +10,7 @@ public class VideoScript: MonoBehaviour
     [SerializeField] AK.Wwise.Event sound;
     //private bool isOpeningPlayed = false;
     public static Action VideoFinished;
+    [SerializeField] GameObject performCamera;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class VideoScript: MonoBehaviour
     void DestroyAfterVideoPlayed(VideoPlayer vp)
     {
         gameObject.SetActive(false);
+        performCamera.SetActive(true);
         VideoFinished?.Invoke();
         // play camera 
     }
