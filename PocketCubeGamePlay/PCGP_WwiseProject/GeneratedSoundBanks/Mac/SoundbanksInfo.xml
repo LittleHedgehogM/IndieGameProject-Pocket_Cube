@@ -389,7 +389,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8516CE79-5385-E73F-D890-48039921530C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8E999903-072F-EAF5-565A-BDEAF1F5A16F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -400,6 +400,10 @@
 				<File Id="460004517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Hover01.wav</ShortName>
 					<CachePath>SFX/Main_Hover01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="503180703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Hover03.wav</ShortName>
+					<CachePath>SFX/Main_Hover03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="516143800" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click01.wav</ShortName>
@@ -430,10 +434,11 @@
 						<MediaRef Id="678952220"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3712401318" Name="Play_Main_Hover" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+				<Event Id="3712401318" Name="Play_Main_Hover" DurationType="OneShot" DurationMin="0.12501134" DurationMax="0.12501134">
 					<MediaRefs>
 						<MediaRef Id="389796112"/>
 						<MediaRef Id="460004517"/>
+						<MediaRef Id="503180703"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -498,5 +503,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{90B102C6-9482-84AE-2E4C-4929C7E5EE7D}</FileHash>
+	<FileHash>{D145AC0D-8661-F218-700B-5843335FF406}</FileHash>
 </SoundBanksInfo>
