@@ -38,12 +38,14 @@ public class Origin_Axis : MonoBehaviour
     private void OnEnable()
     {
         Origin_Controller.DisableAllAxis += setNotInteractable;
+        Origin_Controller.EnableAllAxis += setInteractable;
         Origin_Controller.rotateFinish += setInteractable;
     }
 
     private void OnDisable()
     {
         Origin_Controller.DisableAllAxis -= setNotInteractable;
+        Origin_Controller.EnableAllAxis -= setInteractable;
         Origin_Controller.rotateFinish -= setInteractable;
 
     }

@@ -17,13 +17,14 @@ public class Origin_Controller : MonoBehaviour
    
     Origin_RotationTarget myRotationTarget;
     public static Action DisableAllAxis;
+    public static Action EnableAllAxis; 
     Origin_VFXController myVFXController;
     [SerializeField][Range(0.5f, 3f)]  private float translationTime;
     [SerializeField] AnimationCurve translationCurve;
 
     public static Action rotateFinish;
 
-    bool enableInteraction = true;
+    bool enableInteraction;
 
     int leftAxisClickCount  = 0;
     int upAxisClickCount = 0;
@@ -42,9 +43,10 @@ public class Origin_Controller : MonoBehaviour
         myRotationTarget = FindObjectOfType<Origin_RotationTarget>();
         currentState = PuzzleState.Phase_One;
         InitPhaseOne();
-        enableInteraction = true;
+        enableInteraction = false;
         originAngle = Sphere.transform.rotation;
         myVFXController = FindObjectOfType<Origin_VFXController>();
+        DisableAllAxis?.Invoke();
 
     }
 
@@ -56,6 +58,7 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
         Origin_Axis.DownAxisClicked     +=isDownAxisClicked;
         Origin_RotationTarget.TargetVanished += PlayCubeAnim;
+        SceneOpeningCameraAnimationControl.PerformCameraFinished += enableSceneInteraction;
     }
 
     private void OnDisable()
@@ -66,7 +69,14 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= isDownAxisClicked;
         Origin_RotationTarget.TargetVanished -= PlayCubeAnim;
+        SceneOpeningCameraAnimationControl.PerformCameraFinished -= enableSceneInteraction;
 
+
+    }
+
+    private void enableSceneInteraction()
+    {
+        EnableAllAxis?.Invoke();
     }
 
     private void isLeftAxisClicked()
@@ -181,10 +191,6 @@ public class Origin_Controller : MonoBehaviour
         cubeController.PlayAnim();
     }
 
-    private void EnableSceneInteraction()
-    {
-        enableInteraction = true;
-    }
 
     // Update is called once per frame
     void Update()

@@ -29,18 +29,26 @@ public class Electro_GamePlay : MonoBehaviour
         sunPuzzle.Init();
         moonPuzzle.Init();
         isScenePuzzleSolved = false;
+        myPlayerMovement.setEnableMovement(false);
     }
 
 
     private void OnEnable()
     {
         Electro_Camera_Controller.ResetCameraFinish += onResetCameraFinish;
+        SceneOpeningCameraAnimationControl.PerformCameraFinished += enablePlayerMovement;
     }
 
     private void OnDisable()
     {
         Electro_Camera_Controller.ResetCameraFinish -= onResetCameraFinish;
+        SceneOpeningCameraAnimationControl.PerformCameraFinished -= enablePlayerMovement;
 
+
+    }
+    private void enablePlayerMovement()
+    {
+        myPlayerMovement.setEnableMovement(true);
     }
 
     private void onResetCameraFinish()

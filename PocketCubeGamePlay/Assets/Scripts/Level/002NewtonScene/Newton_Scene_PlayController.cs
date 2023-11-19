@@ -104,10 +104,13 @@ public class NewtonScenePlayController : MonoBehaviour
 
     private void OnEnable()
     {
+        
         Scene_Newton_Camera_Controller.zoomInFinish += onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  += onCameraResetFinish;
         Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
-        
+        SceneOpeningCameraAnimationControl.PerformCameraFinished += enablePlayerMovement;
+
+
     }
 
     private void OnDisable()
@@ -115,7 +118,14 @@ public class NewtonScenePlayController : MonoBehaviour
         Scene_Newton_Camera_Controller.zoomInFinish -= onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  -= onCameraResetFinish;
         Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
+        SceneOpeningCameraAnimationControl.PerformCameraFinished -= enablePlayerMovement;
 
+
+    }
+
+    private void enablePlayerMovement()
+    {
+        myPlayerMovement.setEnableMovement(true);
     }
 
     void LoadNextLevel()
@@ -258,7 +268,9 @@ public class NewtonScenePlayController : MonoBehaviour
         }
         else if (myPlayStatus == PlayStatus.Configuration)
         {
-            StartCoroutine(DelayForSeconds(1));
+            StartCoroutine(DelayForSeconds(0.5f));
+            myPlayerMovement.setEnableMovement(false);
+
         }
 
         else if (myPlayStatus == PlayStatus.PlayerMovement)

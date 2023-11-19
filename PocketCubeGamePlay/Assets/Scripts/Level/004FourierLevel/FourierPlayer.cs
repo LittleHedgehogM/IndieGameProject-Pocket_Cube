@@ -22,6 +22,7 @@ public class FourierPlayer : MonoBehaviour
     //audio
     public AK.Wwise.Event jumpSFX;
     [SerializeField] private ParticleSystem jumpPS;
+    bool playerMovementEnabled;
 
     private bool jumpSwitch = false ;
 
@@ -32,7 +33,24 @@ public class FourierPlayer : MonoBehaviour
         gravity = Physics.gravity;
         jumpPS.Stop();
         playerPrevPosition = transform.position;
+        playerMovementEnabled = false;
 
+    }
+
+    private void OnEnable()
+    {
+        FourierAniCtl.PerformCameraFinished += enableMovement;
+    }
+
+
+    private void OnDisable()
+    {
+        FourierAniCtl.PerformCameraFinished -= enableMovement;
+    }
+
+    private void enableMovement()
+    {
+        playerMovementEnabled = true;
     }
 
     public Vector3 getMovementDirection()
@@ -48,6 +66,11 @@ public class FourierPlayer : MonoBehaviour
 
     private void Update()
     {
+        
+        if (!playerMovementEnabled) 
+        {
+            return;
+        }
         if (jumpSwitch)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -80,6 +103,10 @@ public class FourierPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!playerMovementEnabled)
+        {
+            return;
+        }
         // gravity adjust
         myRigidbody.useGravity = useGravity;
 

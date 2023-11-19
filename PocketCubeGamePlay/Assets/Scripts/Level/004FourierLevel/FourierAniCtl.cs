@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -7,14 +8,15 @@ public class FourierAniCtl : MonoBehaviour
 {
     [SerializeField]Animator ani;
     AnimatorStateInfo stateinfo;
+    public static Action PerformCameraFinished;
+
     private void Start()
     {
 
             //获取动画层 0 指Base Layer.
             
             //判断是否正在播放walk动画.
-            
-       
+                
     }
 
     private void Update()
@@ -23,6 +25,7 @@ public class FourierAniCtl : MonoBehaviour
         if (!stateinfo.IsName("FourierCam_CubeToPlayer"))
         {
             gameObject.SetActive(false);
+            PerformCameraFinished?.Invoke();
         }
     }
 
