@@ -9,4 +9,8 @@ public class UIAnimationScript : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_Main_Click01", gameObject);
     }
+    private void MainMenuHoverSound()
+    {
+        AkSoundEngine.PostEvent("Play_Main_Hover", gameObject);
+    }
 }
