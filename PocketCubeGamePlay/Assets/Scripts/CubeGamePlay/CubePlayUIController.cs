@@ -65,7 +65,6 @@ public class CubePlayUIController : MonoBehaviour
         {
             _diagonalCount = value;
             UpdateTotalStepsCountText();
-            //UpdateDiagonalCountText(_diagonalCount);
         }
     }
     private int _commutationCount;
@@ -76,7 +75,6 @@ public class CubePlayUIController : MonoBehaviour
         {
             _commutationCount = value;
             UpdateTotalStepsCountText();
-            //UpdateCommutationCountText(_commutationCount);
         }
     }
 
@@ -134,8 +132,8 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalCount = 0;
         SolveResult = false;
         totalSteps = 0;
-        StartCoroutine(TutorialInvisible());
-
+        //StartCoroutine(TutorialInvisible());
+        SetTutorialInvisible();
 
     }
 
@@ -158,7 +156,6 @@ public class CubePlayUIController : MonoBehaviour
     
     public void clickDiagonalButton()
     {
-
        if (!isDiagonalApplied && CubePlayManager.instance.CanUseSkill())
        {
             onEnterDiagonalState?.Invoke();
@@ -209,21 +206,11 @@ public class CubePlayUIController : MonoBehaviour
 
     void onCommutationFinished()
     {
-        //CommutationCount++;
-        //if (CommutationCount >= maxCommutation)
-        //{
-        //    isCommutationApplied = true;
-        //}
         CommutationCount = 1;
     }
 
     void onDiagonalFinished()
     {
-        //DiagonalCount++;
-        //if (DiagonalCount >= maxDiagonal)
-        //{
-        //    isDiagonalApplied = true;
-        //}
         DiagonalCount = 1;
     }
 
@@ -245,35 +232,19 @@ public class CubePlayUIController : MonoBehaviour
 
     }
 
-    //private void UpdateTotalStepCount()
-    //{
-    //    totalSteps = SwipeCount + DiagonalCount + CommutationCount;
-    //    //if (totalSteps > suggestedStepCount)
-    //    //{
-    //    //    RestartButton.gameObject.SetActive(true);
-    //    //}
-    //}
-
     void UpdateTotalStepsCountText()
     {
         totalSteps = SwipeCount + DiagonalCount + CommutationCount;
         mySwipeCountText.text = totalSteps + " step" + ((totalSteps>1)? "s": "");
     }
-
-    void UpdateDiagonalCountText(int diagonalCount)
-    {
-        myDiagonalCountText.text = "Diagonal Count = " + diagonalCount;
-    }
-
-    void UpdateCommutationCountText(int commutationCount)
-    {
-        myCommutationCountText.text = "Commutation Count = " + commutationCount;
-    }
     
     void UpdateSolveStatusText(bool isCubeSolved)
     {
-        myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"False");
+        myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"No");
     }
+
+
+
 
     private IEnumerator TutorialInvisible()
     {
@@ -284,19 +255,29 @@ public class CubePlayUIController : MonoBehaviour
         float currentTime = 0;
         float translationTime = 1.0f;
         float t = currentTime / translationTime;
+        float targetAlpha = 0.5f;
         while(t<1)
         {
             currentTime += Time.deltaTime;
             t = currentTime / translationTime;
-            float currentAlpha = Mathf.Lerp(AlphaVal, 0, t);
+            float currentAlpha = Mathf.Lerp(AlphaVal, targetAlpha, t);
             TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, currentAlpha);
             yield return null;
 
         }
-
-        TutorialImage.transform.localScale = Vector3.zero;
+        //TutorialImage.transform.localScale = Vector3.zero;
         yield return null;
         
+    }
+
+    public void SetTutorialVisible()
+    {
+        if (TutorialImage.isActiveAndEnabled)
+        {
+            TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, 1.0f);
+
+        }
+
     }
 
     public void SetTutorialInvisible()
@@ -304,6 +285,7 @@ public class CubePlayUIController : MonoBehaviour
         if (TutorialImage.isActiveAndEnabled)
         {
             StartCoroutine(TutorialInvisible());
+            //TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, 0.3f);
         }
         
     }
