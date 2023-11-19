@@ -52,7 +52,7 @@ public class FourierPlayer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                playerAni.SetTrigger("isJumping");
+                //playerAni.SetTrigger("isJumping");
                 //print("Space Down");
                 jumpPS.Play();
                 jumpSFX.Post(gameObject);
