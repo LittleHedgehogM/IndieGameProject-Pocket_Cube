@@ -255,7 +255,7 @@ public class CubePlayUIController : MonoBehaviour
         float currentTime = 0;
         float translationTime = 1.0f;
         float t = currentTime / translationTime;
-        float targetAlpha = 0.5f;
+        float targetAlpha = 0f;
         while(t<1)
         {
             currentTime += Time.deltaTime;
