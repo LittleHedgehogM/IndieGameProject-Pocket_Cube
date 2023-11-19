@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,10 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myCommutationCountText;
     [SerializeField] private TextMeshProUGUI myIsCubeSolvedText;
     [SerializeField] private TextMeshProUGUI myTipsText;
+    [SerializeField] private UnityEngine.UI.Image TutorialImage;
+    [SerializeField][Range(3, 8)] private int sleepAfterSeconds;
+
+
     public Button DiagonalButton;
     public Button CommutationButton;
     public Button RestartButton;
@@ -23,6 +28,7 @@ public class CubePlayUIController : MonoBehaviour
 
     [SerializeField] private bool isCommutationUnlocked;
     [SerializeField] private bool isDiagonalUnlocked;
+    [SerializeField] private bool isShowTutorial;
     [SerializeField] private int maxCommutation;
     [SerializeField] private int maxDiagonal;
     [SerializeField] private int suggestedStepCount;
@@ -113,6 +119,7 @@ public class CubePlayUIController : MonoBehaviour
         // hide restart and finish button
         DiagonalButton.gameObject.SetActive(isDiagonalUnlocked);
         CommutationButton.gameObject.SetActive(isCommutationUnlocked);
+        TutorialImage.gameObject.SetActive(isShowTutorial);
         FinishButton.gameObject.SetActive(false);
         RestartButton.gameObject.SetActive(true);
 
@@ -127,6 +134,7 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalCount = 0;
         SolveResult = false;
         totalSteps = 0;
+        StartCoroutine(TutorialInvisible());
 
 
     }
@@ -232,7 +240,9 @@ public class CubePlayUIController : MonoBehaviour
        ResetCameraButton.transform.localScale = Vector3.zero;
        RestartButton.transform.localScale = Vector3.zero;
        myTipsText.transform.localScale = Vector3.zero;
-  
+       TutorialImage.transform.localScale = Vector3.zero;
+
+
     }
 
     //private void UpdateTotalStepCount()
@@ -265,5 +275,37 @@ public class CubePlayUIController : MonoBehaviour
         myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"False");
     }
 
+    private IEnumerator TutorialInvisible()
+    {
+        yield return new WaitForSeconds(sleepAfterSeconds);
+
+        float AlphaVal = TutorialImage.color.a;
+
+        float currentTime = 0;
+        float translationTime = 1.0f;
+        float t = currentTime / translationTime;
+        while(t<1)
+        {
+            currentTime += Time.deltaTime;
+            t = currentTime / translationTime;
+            float currentAlpha = Mathf.Lerp(AlphaVal, 0, t);
+            TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, currentAlpha);
+            yield return null;
+
+        }
+
+        TutorialImage.transform.localScale = Vector3.zero;
+        yield return null;
+        
+    }
+
+    public void SetTutorialInvisible()
+    {
+        if (TutorialImage.isActiveAndEnabled)
+        {
+            StartCoroutine(TutorialInvisible());
+        }
+        
+    }
 
 }
