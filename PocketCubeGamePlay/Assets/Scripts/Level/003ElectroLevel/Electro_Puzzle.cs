@@ -189,6 +189,12 @@ public class Electro_Puzzle : MonoBehaviour
             }
             isLeftSwitchOn  = myCircuit.switch_Left.isElectroSwitchOn();
             isRightSwitchOn = myCircuit.switch_right.isElectroSwitchOn();
+            if(isPuzzleSolved) 
+            {
+                myCircuit.switch_Left.setInteractionEnabled(false);
+                myCircuit.switch_right.setInteractionEnabled(false);
+            }
+            
         
         }
         

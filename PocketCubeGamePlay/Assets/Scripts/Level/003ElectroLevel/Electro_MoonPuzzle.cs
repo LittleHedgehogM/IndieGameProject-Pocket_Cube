@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Electro_MoonPuzzle : MonoBehaviour
@@ -202,9 +203,17 @@ public class Electro_MoonPuzzle : MonoBehaviour
                 myVFXObjectPool.PlayVFXAt(myCircuit.switch_Or_left.transform);
                 myVFXObjectPool.PlayVFXAt(myCircuit.switch_Or_right.transform);
                 isFirstTimeEnter = false;
+            }         
+            setGateAndSwitchNotInteractable(true);
+            
+            if (isPuzzleSolved)
+            {
+                myCircuit.switch_Or_left.setInteractionEnabled(false);
+                myCircuit.switch_Or_right.setInteractionEnabled(false);
+                myCircuit.switch_nand_left.setInteractionEnabled(false);
+                myCircuit.switch_nand_right.setInteractionEnabled(false);
             }
 
-            setGateAndSwitchNotInteractable(true);
             isLSwitchOrLeftOn = myCircuit.switch_Or_left.isElectroSwitchOn();
             isLSwitchOrRightOn = myCircuit.switch_Or_right.isElectroSwitchOn();
             isRSwitchNandLeftOn = myCircuit.switch_nand_left.isElectroSwitchOn();

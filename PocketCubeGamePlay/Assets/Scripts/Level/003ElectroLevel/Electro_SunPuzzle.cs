@@ -206,6 +206,14 @@ public class Electro_SunPuzzle : MonoBehaviour
                 myVFXObjectPool.PlayVFXAt(myCircuit.switch_not.gameObject.transform);
                 isFirstTimeEnter = false;
             }
+
+            if (isPuzzleSolved) 
+            {
+                myCircuit.switch_Nand_left.setInteractionEnabled(false);
+                myCircuit.switch_Nand_right.setInteractionEnabled(false);
+                myCircuit.switch_not.setInteractionEnabled(false);
+            }
+
             isSwitchNandLeftOn = myCircuit.switch_Nand_left.isElectroSwitchOn();
             isSwitchNandRightOn = myCircuit.switch_Nand_right.isElectroSwitchOn();
             isSwitchNotOn = myCircuit.switch_not.isElectroSwitchOn();
