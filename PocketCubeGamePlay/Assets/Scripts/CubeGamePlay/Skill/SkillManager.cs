@@ -74,6 +74,37 @@ public abstract class SkillManager : MonoBehaviour
         return true;
     }
 
+
+    private void OnEnable()
+    {
+        CubePlayCameraController.SkillCameraTranslationFinish += setNextStateToSelectSecondCube;
+        CubePlayCameraController.SkillCameraTranslationBackFinish += setNextStateToSkillFinish;
+    }
+
+    private void OnDisable()
+    {
+        CubePlayCameraController.SkillCameraTranslationFinish -= setNextStateToSelectSecondCube;
+        CubePlayCameraController.SkillCameraTranslationBackFinish += setNextStateToSkillFinish;
+
+    }
+
+    private void setNextStateToSelectSecondCube()
+    {
+        if (currentState == SkillState.TranslateCamera)
+        {
+            currentState = SkillState.WaitForSelectSecondCube;
+        }
+    }
+
+    private void setNextStateToSkillFinish()
+    {
+        if (currentState == SkillState.TranslateCameraBack)
+        {
+            currentState = SkillState.SkillFinish;
+        }
+    }
+
+
     // Update is called once per frame
     public void onUpdate()
     {
@@ -138,16 +169,15 @@ public abstract class SkillManager : MonoBehaviour
                     }
 
                     // highlight
+                    StartCoroutine(myCameraController.CameraTranslate());
                     currentState = SkillState.TranslateCamera;
                 }
 
             }
         }
         else if (currentState == SkillState.TranslateCamera)
-        {
-
-            StartCoroutine(myCameraController.CameraTranslate());
-            currentState = SkillState.WaitForSelectSecondCube;
+        {         
+            //currentState = SkillState.WaitForSelectSecondCube;
             
         }
         else if (currentState == SkillState.WaitForSelectSecondCube)
@@ -193,26 +223,28 @@ public abstract class SkillManager : MonoBehaviour
             if (checkSkillApplyFinish())
             {
                 myCameraController.InitTargetRotationBack();
+                myCubeVFXManager.PlaySkillVFX();
+                StartCoroutine(myCameraController.CameraTranslateBack());
                 currentState = SkillState.TranslateCameraBack;
+                CubePieceOutlineController.disableOutline(FirstCubeHit);
+                CubePieceOutlineController.disableOutline(SecondCubeHit);
+
             }
             
 
         }
         else if (currentState == SkillState.TranslateCameraBack)
         {
-            myCubeVFXManager.PlaySkillVFX();
-            StartCoroutine(myCameraController.CameraTranslateBack());
-            currentState = SkillState.SkillFinish;
+            //myCubeVFXManager.PlaySkillVFX();
+            //StartCoroutine(myCameraController.CameraTranslateBack());
+            //currentState = SkillState.SkillFinish;
            
 
         }
         else if (currentState == SkillState.SkillFinish)
         {
             
-
             currentState = SkillState.WaitForInput;
-            CubePieceOutlineController.disableOutline(FirstCubeHit);
-            CubePieceOutlineController.disableOutline(SecondCubeHit);
 
             InvokeFinish();
             myCubeVFXManager.StopSkillVFX();

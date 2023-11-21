@@ -94,16 +94,46 @@ public class CubePlayUIController : MonoBehaviour
         return SwipeCount;
     }
 
-    public void restoreTotalStepsDiagonal(int restoreSteps)
+    public bool getIsCommutationApplied() 
+    {
+        return isCommutationApplied;
+    }
+
+    public bool getIsDiagonalApplied()
+    {
+        return isDiagonalApplied;
+    }
+
+    public void restoreTotalStepsDiagonal(int restoreSteps, bool commutationApplied)
     {
         SwipeCount = restoreSteps;
         DiagonalCount = 0;
+        isCommutationApplied = commutationApplied;
+        CommutationCount = commutationApplied ? 1 : 0;
+        if (commutationApplied) {
+            CommutationButton.image.color = Color.grey;
+        }
+        else 
+        {
+            CommutationButton.image.color = Color.white;
+        }
     }
 
-    public void restoreTotalStepsCommutation(int restoreSteps)
+    public void restoreTotalStepsCommutation(int restoreSteps, bool diagonalApplied)
     {
         SwipeCount = restoreSteps;
         CommutationCount = 0;
+        isDiagonalApplied = diagonalApplied;
+        DiagonalCount = diagonalApplied ? 1 : 0;
+        if (diagonalApplied) 
+        {
+            DiagonalButton.image.color = Color.grey;
+        }
+        else
+        {
+            DiagonalButton.image.color = Color.white;
+
+        }
     }
 
     public void onRestart()
@@ -132,7 +162,6 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalCount = 0;
         SolveResult = false;
         totalSteps = 0;
-        //StartCoroutine(TutorialInvisible());
         SetTutorialInvisible();
 
     }
@@ -171,6 +200,10 @@ public class CubePlayUIController : MonoBehaviour
             DiagonalCount = 0;
 
         }
+        else if (isDiagonalApplied && !CubePlayManager.instance.CanRestoreDiagonalSkill())
+        {
+            DiagonalButton.image.color = Color.grey;
+        }
     }
 
     public void clickFinishButton()
@@ -193,6 +226,11 @@ public class CubePlayUIController : MonoBehaviour
             CommutationButton.image.color = Color.white;
             isCommutationApplied = false;
             CommutationCount = 0;
+
+        }
+        else if (isCommutationApplied && !CubePlayManager.instance.CanRestoreCommutationSkill())
+        {
+            CommutationButton.image.color = Color.grey;
 
         }
     }

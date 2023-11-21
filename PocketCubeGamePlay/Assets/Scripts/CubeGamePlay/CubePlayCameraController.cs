@@ -47,6 +47,9 @@ public class CubePlayCameraController : MonoBehaviour
 
     //List<Vector3> candidateUpAxis;
 
+    public static Action SkillCameraTranslationFinish;
+    public static Action SkillCameraTranslationBackFinish;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -361,8 +364,8 @@ public class CubePlayCameraController : MonoBehaviour
             //currentSelfRotationAngle = selfRotationAngle;
 
             yield return null;
-        }        
-
+        }
+        SkillCameraTranslationFinish?.Invoke();
     }
 
     public void InitTargetRotationBack()
@@ -397,6 +400,7 @@ public class CubePlayCameraController : MonoBehaviour
 
             yield return null;
         }
+        SkillCameraTranslationBackFinish?.Invoke();
     }
 
 

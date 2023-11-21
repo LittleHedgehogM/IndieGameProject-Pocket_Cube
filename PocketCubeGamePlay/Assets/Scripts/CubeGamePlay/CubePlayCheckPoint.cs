@@ -55,6 +55,7 @@ public class CubePlayCheckPoint : MonoBehaviour
     Vector3 CM_BRD_position;
     Quaternion CM_BRD_rotation;
     int CM_currentSteps;
+    bool CM_isDiagonalApplied;
 
     string DG_StateString;
     Vector3 DG_FLU_position;
@@ -74,6 +75,8 @@ public class CubePlayCheckPoint : MonoBehaviour
     Vector3 DG_BRD_position;
     Quaternion DG_BRD_rotation;
     int DG_currentSteps;
+    bool DG_isCommutationApplied;
+
 
     private void Awake()
     {
@@ -82,8 +85,12 @@ public class CubePlayCheckPoint : MonoBehaviour
        myCubePlayUIController = FindObjectOfType<CubePlayUIController>();
        if (instance == null)
             instance = this;
+            
         CM_currentSteps  = 0;
+        CM_isDiagonalApplied = false;
+
         DG_currentSteps  = 0;
+        DG_isCommutationApplied = false;
     }
 
     public void saveCurrentStateCommutation()
@@ -117,7 +124,10 @@ public class CubePlayCheckPoint : MonoBehaviour
         CM_BRD_position = BackRightDown.transform.position;
         CM_BRD_rotation = BackRightDown.transform.rotation;
 
+
         CM_currentSteps = myCubePlayUIController.getCurrentSwipeSteps();
+        CM_isDiagonalApplied = myCubePlayUIController.getIsDiagonalApplied();
+
     }
 
 
@@ -154,6 +164,8 @@ public class CubePlayCheckPoint : MonoBehaviour
         DG_BRD_rotation = BackRightDown.transform.rotation;
 
         DG_currentSteps = myCubePlayUIController.getCurrentSwipeSteps();
+        DG_isCommutationApplied = myCubePlayUIController.getIsCommutationApplied();
+
 
     }
 
@@ -183,8 +195,9 @@ public class CubePlayCheckPoint : MonoBehaviour
         BackRightDown.transform.position = CM_BRD_position;
         BackRightDown.transform.rotation = CM_BRD_rotation;
 
-        myCubePlayUIController.restoreTotalStepsCommutation(CM_currentSteps);
-        
+        myCubePlayUIController.restoreTotalStepsCommutation(CM_currentSteps, CM_isDiagonalApplied);
+
+
     }
 
     public void loadCurrentStateDiagonal()
@@ -213,7 +226,7 @@ public class CubePlayCheckPoint : MonoBehaviour
         BackRightDown.transform.position = DG_BRD_position;
         BackRightDown.transform.rotation = DG_BRD_rotation;
 
-        myCubePlayUIController.restoreTotalStepsCommutation(DG_currentSteps);
+        myCubePlayUIController.restoreTotalStepsDiagonal(DG_currentSteps, DG_isCommutationApplied);
 
     }
 
