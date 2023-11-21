@@ -16,7 +16,7 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myIsCubeSolvedText;
     [SerializeField] private TextMeshProUGUI myTipsText;
     [SerializeField] private UnityEngine.UI.Image TutorialImage;
-    [SerializeField][Range(3, 8)] private int sleepAfterSeconds;
+    [SerializeField][Range(5,20)] private int sleepAfterSeconds;
 
 
     public Button DiagonalButton;

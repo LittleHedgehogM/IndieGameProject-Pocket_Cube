@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Origin_RotationTarget : MonoBehaviour
@@ -11,6 +12,7 @@ public class Origin_RotationTarget : MonoBehaviour
     [SerializeField] private Color colorWhite;
     [SerializeField] private Color colorGreen;
     [SerializeField] private Animator animator;
+    [SerializeField] private float waitSeconds;
 
     Color reflect01;
     Color reflect02;
@@ -18,6 +20,8 @@ public class Origin_RotationTarget : MonoBehaviour
     Color diffuse02;
 
     public static Action TargetVanished;
+    public static Action PhaseOneFinished;
+    public static Action PhaseTwoFinished;
 
     // Start is called before the first frame update
     void Awake()
@@ -40,12 +44,15 @@ public class Origin_RotationTarget : MonoBehaviour
         material_phase_one.SetColor("_diffusegradient02", colorGreen);
     }
 
-    public void FinishPhaseOne()
+    public IEnumerator FinishPhaseOne()
     {
+        yield return new WaitForSeconds(waitSeconds);
         material_phase_one.SetColor("_ReflectOff01", reflect01);
         material_phase_one.SetColor("_Reflect02", reflect02);
         material_phase_one.SetColor("_diffusegradient01", diffuse01);
         material_phase_one.SetColor("_diffusegradient02", diffuse02);
+        yield return null;
+        PhaseOneFinished?.Invoke();
     }
 
     public void InitPhaseTwo()
@@ -57,12 +64,16 @@ public class Origin_RotationTarget : MonoBehaviour
     }
 
 
-    public void FinishPhaseTwo()
+    public IEnumerator FinishPhaseTwo()
     {
+        yield return new WaitForSeconds(waitSeconds);
         material_phase_two.SetColor("_ReflectOff01", reflect01);
         material_phase_two.SetColor("_Reflect02", reflect02);
         material_phase_two.SetColor("_diffusegradient01", diffuse01);
         material_phase_two.SetColor("_diffusegradient02", diffuse02);
+        yield return null;
+        PhaseTwoFinished?.Invoke();
+
     }
 
     public void InitPhaseThree()

@@ -57,6 +57,8 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.RightAxisClicked    +=isRightAxisClicked;
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
         Origin_Axis.DownAxisClicked     +=isDownAxisClicked;
+        Origin_RotationTarget.PhaseOneFinished += PhaseTwo;
+        Origin_RotationTarget.PhaseTwoFinished += PhaseThree;
         Origin_RotationTarget.TargetVanished += PlayCubeAnim;
         SceneOpeningCameraAnimationControl.PerformCameraFinished += enableSceneInteraction;
     }
@@ -68,6 +70,8 @@ public class Origin_Controller : MonoBehaviour
         Origin_Axis.RightAxisClicked    -= isRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= isDownAxisClicked;
+        Origin_RotationTarget.PhaseOneFinished -= PhaseTwo;
+        Origin_RotationTarget.PhaseTwoFinished -= PhaseThree;
         Origin_RotationTarget.TargetVanished -= PlayCubeAnim;
         SceneOpeningCameraAnimationControl.PerformCameraFinished -= enableSceneInteraction;
 
@@ -155,6 +159,16 @@ public class Origin_Controller : MonoBehaviour
         downAxis. setActive(false);
     }
 
+    private void PhaseTwo(){
+        if (currentState == PuzzleState.Phase_Two)
+        {
+            enableSceneInteraction();
+            StartCoroutine(InitPhaseTwo());
+
+        }
+       
+    }
+
     private IEnumerator InitPhaseTwo()
     {
         myVFXController.playRotationVFXAt(Sphere.transform);
@@ -166,6 +180,15 @@ public class Origin_Controller : MonoBehaviour
         downAxis.setActive(true);
     }
     
+    private void PhaseThree()
+    {
+        if (currentState == PuzzleState.Phase_Three) 
+        {
+            enableSceneInteraction();
+            StartCoroutine(InitPhaseThree());
+        }   
+    }
+
     private IEnumerator InitPhaseThree()
     {
         myVFXController.playRotationVFXAt(Sphere.transform);
@@ -205,23 +228,26 @@ public class Origin_Controller : MonoBehaviour
             {
                  if (leftAxisClickCount == 4 || leftAxisClickCount == -1)
                  {
-                      Debug.Log("FirstPhaseSolved");
-                      myRotationTarget.FinishPhaseOne();
+                      Debug.Log("FirstPhaseSolved");                
+                      StartCoroutine(myRotationTarget.FinishPhaseOne());
                       currentState = PuzzleState.Phase_Two;
-                      StartCoroutine(InitPhaseTwo());                      
-                 }
+                      DisableAllAxis?.Invoke();
+                      //StartCoroutine(InitPhaseTwo());                      
+                    }
                  break;
             }
             case PuzzleState.Phase_Two:
             {
                 if (upAxisClickCount == 2 || upAxisClickCount == -2)
-                 {
+                {
                       Debug.Log("SecondPhaseSolved");
-                      myRotationTarget.FinishPhaseTwo();
+                      StartCoroutine(myRotationTarget.FinishPhaseTwo());
+                      //myRotationTarget.FinishPhaseTwo();
                       currentState = PuzzleState.Phase_Three;
-                      StartCoroutine(InitPhaseThree());
+                      DisableAllAxis?.Invoke();
+                      //StartCoroutine(InitPhaseThree());
 
-                 }
+                }
                 break;
             }
             case PuzzleState.Phase_Three:

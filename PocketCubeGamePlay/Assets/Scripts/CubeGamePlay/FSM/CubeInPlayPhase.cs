@@ -240,23 +240,25 @@ public class CubeInPlayPhase : GameplayPhase
             myCubeCursorController.setNormalCursor();
             readCube.ReadState();
             // priority : Commutation = Diagonal >  swipe > rotation
-            bool isMouseScrollWheelForward = Input.GetAxis("Mouse ScrollWheel") > 0f;
-            bool isMouseScrollWheelBackward = Input.GetAxis("Mouse ScrollWheel") < 0f;
+            //bool isMouseScrollWheelForward = Input.GetAxis("Mouse ScrollWheel") > 0f;
+            //bool isMouseScrollWheelBackward = Input.GetAxis("Mouse ScrollWheel") < 0f;
             bool isRightMouseClickDown = Input.GetMouseButtonDown(1);
             bool isRightMouseHold = Input.GetMouseButton(1);
             bool isLeftMouseHold = Input.GetMouseButton(0);
             bool isLeftMouseClickDown = Input.GetMouseButtonDown(0);
             bool isLeftMouseClickUp = Input.GetMouseButtonUp(0);
 
-            if ((isMouseScrollWheelForward || isMouseScrollWheelBackward) && !isLeftMouseHold && !isRightMouseHold)
-            {
-                if (mySwipeFaceManager.InitSwipeMouseScroll(isMouseScrollWheelForward, Input.mousePosition))
-                {
-                    currentPlayStatus = CubePlayStatus.InSwipe;
-                }
+            //if ((isMouseScrollWheelForward || isMouseScrollWheelBackward) && !isLeftMouseHold && !isRightMouseHold)
+            //{
+            //    if (mySwipeFaceManager.InitSwipeMouseScroll(isMouseScrollWheelForward, Input.mousePosition))
+            //    {
+            //        currentPlayStatus = CubePlayStatus.InSwipe;
+            //    }
 
-            }
-            else if (isLeftMouseClickDown)
+            //}
+            //else 
+            
+            if (isLeftMouseClickDown)
             {                
                 initalMousePressPos = Input.mousePosition;
             }

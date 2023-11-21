@@ -72,17 +72,37 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        myCursorController.setHoverCursor();
-        material.SetColor("_diffusegradient01", colorSelected);
-        material.SetFloat("_OutlineWidth", edgeLength);
+        if (isInteractable)
+        {
+            myCursorController.setHoverCursor();
+            material.SetColor("_diffusegradient01", colorSelected);
+            material.SetFloat("_OutlineWidth", edgeLength);
+        }
+        else
+        {
+            myCursorController.setNormalCursor();
+        }
 
     }
 
+
+    private void OnMouseOver()
+    {
+        if (!isInteractable)
+        {
+            myCursorController.setNormalCursor();
+        }
+        else 
+        {
+            myCursorController.setHoverCursor();
+        }
+    }
     private void OnMouseExit()
     {
         myCursorController.setNormalCursor();
         material.SetColor("_diffusegradient01", Color.white);
         material.SetFloat("_OutlineWidth", 0);
+       
     }
 
     private void OnMouseUp()
@@ -95,26 +115,22 @@ public class Origin_Axis : MonoBehaviour
         {
             // Click Axis
             case Axis.left:{
-                 Debug.Log("Left Axis Hit");
-                 LeftAxisClicked?.Invoke();
-                 
+                 //Debug.Log("Left Axis Hit");
+                 LeftAxisClicked?.Invoke();                
                  break;
             }
             case Axis.right:{
-                 Debug.Log("Right Axis Hit");
-
+                // Debug.Log("Right Axis Hit");
                  RightAxisClicked?.Invoke();
                  break;
             }
             case Axis.up:{
-                 Debug.Log("Up Axis Hit");
-
+                 //Debug.Log("Up Axis Hit");
                  UpAxisClicked?.Invoke();
                  break;
             }
             case Axis.down:{
-                Debug.Log("Down Axis Hit");
-
+                //Debug.Log("Down Axis Hit");
                  DownAxisClicked?.Invoke();
                  break;
             }
