@@ -38,6 +38,9 @@ public class ButtonClick : MonoBehaviour
             }
             else if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0))
             {
+                //Audio
+                AkSoundEngine.PostEvent("Play_cube_click", gameObject);
+                //
                 buttonImage.color = pressedColor;
             }
             

@@ -113,14 +113,10 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{12219DC9-8B10-7539-C4EB-B0B711000AD0}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{92B40C0C-9361-19A0-A6AF-237A45189E61}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
-				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level 3 Demo.wav</ShortName>
-					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
@@ -179,17 +175,11 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="2158818887" Name="Play_Level3_Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="217342985"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3155709310" Name="Play_MerryGoRoundMusic" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="701432904"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
@@ -264,7 +254,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{C2E1E3CF-367C-3740-3B63-75394E9B4813}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{E5A3A786-E5E5-1BFD-0A44-3D4EB54DDD3D}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -304,10 +294,6 @@
 					<ShortName>台阶上升.wav</ShortName>
 					<CachePath>SFX/台阶上升_0243C708.wem</CachePath>
 				</File>
-				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>环境音效.wav</ShortName>
-					<CachePath>SFX/环境音效_D79FB2B7.wem</CachePath>
-				</File>
 			</Media>
 			<Events>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="2.741111" DurationMax="2.741111">
@@ -343,11 +329,6 @@
 				<Event Id="1467814842" Name="Play_jiqiren" DurationType="OneShot" DurationMin="9.25" DurationMax="9.25">
 					<MediaRefs>
 						<MediaRef Id="557601517"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="869256356"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
@@ -547,5 +528,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B183C327-6F60-0A78-74E9-5105218E4F7D}</FileHash>
+	<FileHash>{9D505B16-4A1C-5210-A8A4-9AD05E83988F}</FileHash>
 </SoundBanksInfo>

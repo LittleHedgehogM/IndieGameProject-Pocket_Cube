@@ -129,9 +129,10 @@ public abstract class SkillManager : MonoBehaviour
             }
             if (!Input.GetMouseButton(1)&&Input.GetMouseButtonUp(0))
             {
-                
-            
+
+
                 // Add Audio Select First Cube
+                AkSoundEngine.PostEvent("Play_cube_skillclick01", gameObject);
 
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
 
@@ -192,6 +193,8 @@ public abstract class SkillManager : MonoBehaviour
             {
 
                 // Add Audio Select Second Cube
+                AkSoundEngine.PostEvent("Play_cube_skillclick02", gameObject);
+
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
 
                 if (faceHit != null) // ray Hit Any Cube Piece

@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class DontDestroyObjects : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static DontDestroyObjects Instance;
+    //[SerializeField] private Button btnSetting;
+    void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-    }
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

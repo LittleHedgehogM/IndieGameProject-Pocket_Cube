@@ -206,6 +206,9 @@ public class Origin_Controller : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         myRotationTarget.minimizeTargetAndshowCube();
+
+        //Audio
+        AkSoundEngine.PostEvent("Play_reduce", gameObject);
     }
 
     private void PlayCubeAnim()

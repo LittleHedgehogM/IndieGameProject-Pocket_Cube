@@ -100,6 +100,9 @@ public class CubeConfigurationPhase : GameplayPhase
         if (currentState == ConfigurationState.Animation)
         {
             StartCoroutine(playStartAnimation());
+            //Audio
+            AkSoundEngine.PostEvent("Play_cube_ani", gameObject);
+            //
             currentState = ConfigurationState.Check;
         }
         else if (currentState == ConfigurationState.Check)

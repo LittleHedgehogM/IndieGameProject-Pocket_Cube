@@ -159,6 +159,7 @@ public class SwipeFaceManager : MonoBehaviour
             InitSwipe();
             currentSwipeState = SwipeState.Swiping;
             // Audio Add
+            AkSoundEngine.PostEvent("Play_cube_roll", gameObject);
 
         }
         else if (currentSwipeState == SwipeState.Swiping)

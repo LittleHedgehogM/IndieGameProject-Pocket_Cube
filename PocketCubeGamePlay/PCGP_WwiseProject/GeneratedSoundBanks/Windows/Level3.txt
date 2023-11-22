@@ -1,8 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	507378310	Play_L3_destroy			\Level3\Play_L3_destroy	
 	1593461692	Play_L3_Jump			\Level3\Play_L3_Jump	
-	2158818887	Play_Level3_Music			\Level3\Play_Level3_Music	
-	3042334185	Stop_Level3_Music			\Level3\Stop_Level3_Music	
 	3155709310	Play_MerryGoRoundMusic			\Level3\Play_MerryGoRoundMusic	
 	3379697116	Stop_MerryGoRoundMusic			\Level3\Stop_MerryGoRoundMusic	
 	4190464387	Play_L3_Hit_bad			\Level3\Play_L3_Hit_bad	
@@ -11,12 +9,11 @@ Effect plug-ins	ID	Name	Type				Notes
 	945801009	RoomVerb (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	217342985	Level 3 Demo	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level 3 Demo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level3\Level 3 Demo\Level 3 Demo		7639676
-	228576140	L3_Jump	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_96AE51AE.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump		85020
-	371716904	L3_Jump_01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_88ECCD51.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_01		101576
-	531891813	L3_Jump_03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_C7FB753E.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_03		82144
-	644617565	L3_Jump_02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_D407F890.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_02		93660
-	656407472	L3_Hit_bad	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Hit_bad_646DF284.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Hit_bad		44364
-	701432904	How to make an Amazing Merry Go Round from Cardboard - Just5mins-1	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\How to make an Amazing Merry Go Round from Cardboard - Just5mins-1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MerryGoRound\MerryGoRoundMusic\How to make an Amazing Merry Go Round from Cardboard - Just5mins-1		2116896
-	743988009	L3_destroy	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_destroy_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		79676
+	228576140	L3_Jump	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_96AE51AE.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump		85020
+	371716904	L3_Jump_01	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_88ECCD51.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_01		101576
+	531891813	L3_Jump_03	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_C7FB753E.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_03		82144
+	644617565	L3_Jump_02	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_D407F890.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_02		93660
+	656407472	L3_Hit_bad	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Hit_bad_646DF284.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Hit_bad		44364
+	701432904	How to make an Amazing Merry Go Round from Cardboard - Just5mins-1	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\How to make an Amazing Merry Go Round from Cardboard - Just5mins-1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MerryGoRound\MerryGoRoundMusic\How to make an Amazing Merry Go Round from Cardboard - Just5mins-1		2116896
+	743988009	L3_destroy	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_destroy_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		79676
 
