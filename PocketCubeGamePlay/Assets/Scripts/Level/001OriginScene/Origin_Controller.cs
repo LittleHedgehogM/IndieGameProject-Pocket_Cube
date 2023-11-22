@@ -111,13 +111,15 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator Rotate(Vector3 Axis, bool isClockwise, float angleGap)
     {
-
-        // Add rotate sphere audio
         float currentUsedTime = 0;
         float t = 0;
         float currentAngle = 0f;
 
         translationTime = 0.5f * ( (angleGap) / 72.0f);
+
+        // Add rotate sphere audio
+        AkSoundEngine.PostEvent("Play_roll", gameObject);
+
         while (t < 1)
         {
             currentUsedTime += Time.deltaTime;
