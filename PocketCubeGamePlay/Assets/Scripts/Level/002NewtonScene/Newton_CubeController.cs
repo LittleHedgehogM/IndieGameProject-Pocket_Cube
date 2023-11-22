@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.Examples;
@@ -12,6 +13,8 @@ public class Newton_CubeController : MonoBehaviour
     Newton_CursorController cursorController;
 
     bool canInteract = false;
+
+    public static Action CubeClicked;
 
     public GameObject getCube()
     {
@@ -36,6 +39,9 @@ public class Newton_CubeController : MonoBehaviour
         cursorController = FindObjectOfType<Newton_CursorController>();
 
     }
+
+
+
     private void Update()
     {
         if (canInteract) 
@@ -58,7 +64,8 @@ public class Newton_CubeController : MonoBehaviour
                     }
                     else if (Input.GetMouseButtonUp(0)) 
                     {
-                        FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+                        CubeClicked?.Invoke();
+                        canInteract = false;
                     }
                 }
 

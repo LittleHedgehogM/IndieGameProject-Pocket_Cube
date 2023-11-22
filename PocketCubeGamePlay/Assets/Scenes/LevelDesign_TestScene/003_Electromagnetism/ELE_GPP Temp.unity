@@ -3770,6 +3770,7 @@ MonoBehaviour:
   rightWallMesh: {fileID: 977283965}
   leftWallMesh: {fileID: 1866066775}
   centerMesh: {fileID: 1413908111}
+  cubeControl: {fileID: 1881590349}
 --- !u!114 &722108107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8891,6 +8892,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f2f7227da1e5a48be3e6bd6c7d3ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomInTime: 1.823
+  zoomInAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   mainCam: {fileID: 269800691}
   sunCam: {fileID: 169490173}
   moonCam: {fileID: 640399147}
@@ -8899,6 +8925,7 @@ MonoBehaviour:
   translationTime: 1
   Camera_Sensitivity: 0.005
   CameraLookAtTarget: {x: 0, y: 4.5, z: 0}
+  CubeTransform: {fileID: 1413908110}
   btn01Sound:
     idInternal: 0
     valueGuidInternal: 
@@ -14273,10 +14300,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e653dab4ec77842bd2c15959c8cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomInTime: 0
+  zoomInAnimationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 2726941423056266257}
   sensitivity: 0
+  CubeTransform: {fileID: 0}
 --- !u!1 &1284566933384964379
 GameObject:
   m_ObjectHideFlags: 0

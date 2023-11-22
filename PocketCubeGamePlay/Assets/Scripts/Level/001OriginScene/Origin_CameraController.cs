@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Origin_CameraController : MonoBehaviour
+public class Origin_CameraController : CameraZoomInHelper
 {
     [SerializeField][Range(0, 1.0f)] float translationTime;
     [SerializeField] Vector3 lookAtTarget;
     [SerializeField] Camera mainCam;
     [SerializeField][Range(0, 0.05f)] float sensitivity;
+    [SerializeField] Transform CubeTransform;
 
     public static Action PerformCameraStarts;
 
@@ -17,15 +18,13 @@ public class Origin_CameraController : MonoBehaviour
         mainCam.transform.LookAt(lookAtTarget);
     }
 
-
     private void OnEnable()
     {
         Origin_Axis.LeftAxisClicked   += RotateWhenLeftAxisClicked;
         Origin_Axis.RightAxisClicked  += RotateWhenRightAxisClicked;
         Origin_Axis.UpAxisClicked     += RotateWhenUpAxisClicked;
         Origin_Axis.DownAxisClicked   += RotateWhenDownAxisClicked;
-
-
+        Origin_Cube.CubeClicked       += zoomInCube;
     }
 
     private void OnDisable()
@@ -34,6 +33,7 @@ public class Origin_CameraController : MonoBehaviour
         Origin_Axis.RightAxisClicked    -= RotateWhenRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= RotateWhenUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= RotateWhenDownAxisClicked;
+        Origin_Cube.CubeClicked         -= zoomInCube;
     }
 
     public void startPerformCam()
@@ -93,4 +93,32 @@ public class Origin_CameraController : MonoBehaviour
         yield return null;
 
    }
+
+   private void zoomInCube()
+   {
+        zoomInCube(mainCam, CubeTransform,  lookAtTarget);
+   }
+
+   //private IEnumerator zoomInCubeTranslation()
+   //{
+   //     float t = 0;
+   //     float currentUsedTime = 0;
+   //     float translationTime = 3.0f;
+   //     float camSize = mainCam.orthographicSize;
+   //     float targetCamSize = 3;
+   //     while (t < 1)
+   //     {
+   //         currentUsedTime += Time.deltaTime;
+   //         t = currentUsedTime / translationTime;
+   //         Vector3 currentLookAtTarget = Vector3.Slerp(lookAtTarget, CubeTransform.position, t);
+   //         mainCam.transform.LookAt(currentLookAtTarget);
+   //         mainCam.orthographicSize = Mathf.Lerp(camSize, targetCamSize, t);
+   //         yield return null;
+   //     }
+
+   //     yield return null;
+   //     ZoomInCubeFinished?.Invoke();
+   //     FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+   // }
+
 }
