@@ -75,12 +75,16 @@
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="AMB" ID="{A4DFB755-AD0D-4BEC-A1A2-D5861B2D801F}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="AMB" ID="{89823A69-07DC-4758-8792-61C4F7DF2655}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Music" ID="{010FB972-D8B2-4ABD-A33E-56BABE15C7B4}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Music" ID="{2FCD5AB7-3CF0-4E5D-8617-0657789CDF92}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -27,9 +27,51 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{28A3EC5D-4474-9802-AA85-BDACC5B50C51}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{EDF2EFF6-74FD-EF66-EC13-3D83003BB22C}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
+			<Media>
+				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Amb_level00.wav</ShortName>
+					<CachePath>SFX/Amb_level00_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境.wav</ShortName>
+					<CachePath>SFX/环境_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Amb_Main.wav</ShortName>
+					<CachePath>SFX/Amb_Main_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境音效.wav</ShortName>
+					<CachePath>SFX/环境音效_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204222952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1871703286" Name="Play_Amb_Main" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="626564496"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="108392005" Name="Play_Enviroment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="549092072"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869256356"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4FF0CBA3-608D-B551-F19D-E61D8ADDDFE3}">
 			<ShortName>Init</ShortName>
@@ -414,9 +456,37 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{5CA0EF40-9A31-C8A9-F477-B161A47ADA97}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="201197348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Open01.wav</ShortName>
+					<CachePath>SFX/Open01_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 3 Demo.wav</ShortName>
+					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kaichangzhi02.wav</ShortName>
+					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2158818887" Name="Play_Level3_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="217342985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="201197348"/>
+						<MediaRef Id="987084990"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{E886721D-CAF3-36F9-5E44-68CF80375F7F}">
 			<ShortName>Cube</ShortName>
@@ -477,5 +547,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F1F986A7-7344-63BC-2A17-D65BE7CA6CA6}</FileHash>
+	<FileHash>{B183C327-6F60-0A78-74E9-5105218E4F7D}</FileHash>
 </SoundBanksInfo>
