@@ -862,6 +862,9 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Open" ID="{68200122-2421-421A-93CD-798B1C24877B}" ShortID="766299">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="145"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -958,7 +961,7 @@
 						</MusicSegment>
 						<MusicSegment Name="Open02" ID="{385F3F18-4209-41CB-B5E6-66C945AB2C37}" ShortID="709269787">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="40750"/>
+								<Property Name="EndPosition" Type="Real64" Value="65008.6018569088"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -969,23 +972,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Open02" ID="{1562ED96-8A96-4D8C-A805-5CD5137DEBF0}" ShortID="893452480">
+								<MusicTrack Name="kaichangzhi02" ID="{2B4DC93A-D2BC-4FF7-8EFC-AE7389E764A8}" ShortID="1007239593">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Open02" ID="{FF9181CA-5E88-4194-BFA5-030952585163}">
+										<AudioFileSource Name="kaichangzhi02" ID="{32910765-8613-4973-83E9-0E7EE44498FF}">
 											<Language>SFX</Language>
-											<AudioFile>Open02.wav</AudioFile>
+											<AudioFile>kaichangzhi02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="100758862"/>
+												<MediaID ID="987084990"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{62F6DAFF-49FC-4071-8A55-333E51804C8E}">
+										<MusicTransition Name="Root" ID="{269D9E26-BFE4-4343-A8D5-4A3DDB6E8B0E}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -996,18 +999,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{54B23158-9705-4C02-9BEC-D5B5263FC67D}">
+													<MusicTrackSequence Name="" ID="{C42801A3-5822-4BF0-B160-064BB1E97907}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Open02" ID="{F51A19F4-5DFA-4B0F-8364-BDE41B141C82}">
+																		<MusicClip Name="kaichangzhi02" ID="{64708DDC-1D56-4455-B33C-32CEAB836572}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="40750"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="56275.873015873"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Open02" ID="{FF9181CA-5E88-4194-BFA5-030952585163}"/>
+																			<AudioSourceRef Name="kaichangzhi02" ID="{32910765-8613-4973-83E9-0E7EE44498FF}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -1032,7 +1035,7 @@
 											<MusicCue Name="Exit Cue" ID="{CA2E3CDA-65AA-4CE8-9022-93424003F3C9}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="40750"/>
+													<Property Name="TimeMs" Type="Real64" Value="52965.5172413793"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>

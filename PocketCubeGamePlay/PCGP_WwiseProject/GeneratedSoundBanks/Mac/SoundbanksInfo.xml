@@ -50,7 +50,7 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{55FA28EA-EF6D-8B41-F798-19FC8D44C436}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{D86C153D-1161-52A4-69D0-0033A475A316}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -67,7 +67,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5BF2DD37-8776-D3D2-BB68-F9E1F3F1A61B}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{12219DC9-8B10-7539-C4EB-B0B711000AD0}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -147,7 +147,7 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{E5F1F90B-A3D5-898E-64AA-7E47D2ACF870}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{CF0E4B0A-4DBC-D7CD-D1EE-669671A08C90}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -325,7 +325,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{96FE51E5-91CC-D6B5-46BF-14029245295B}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{50826107-8600-1F0D-97ED-1573FEC37768}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -336,10 +336,6 @@
 				<File Id="67729679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll01.wav</ShortName>
 					<CachePath>SFX/roll01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="100758862" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Open02.wav</ShortName>
-					<CachePath>SFX/Open02_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="165154750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll_long.wav</ShortName>
@@ -357,6 +353,10 @@
 					<ShortName>roll02.wav</ShortName>
 					<CachePath>SFX/roll02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kaichangzhi02.wav</ShortName>
+					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
@@ -366,8 +366,8 @@
 				</Event>
 				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="100758862"/>
 						<MediaRef Id="201197348"/>
+						<MediaRef Id="987084990"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="4.0965757" DurationMax="4.0965757">
@@ -389,7 +389,7 @@
 				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8E999903-072F-EAF5-565A-BDEAF1F5A16F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D4F207AA-D0F6-CBA1-20A2-A0FF548CC9C2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -444,7 +444,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{717BD02E-C32C-C3F8-3485-016E48567F84}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{E886721D-CAF3-36F9-5E44-68CF80375F7F}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -503,5 +503,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D145AC0D-8661-F218-700B-5843335FF406}</FileHash>
+	<FileHash>{7FDD33E1-41C9-DBDC-2B37-701D6D042493}</FileHash>
 </SoundBanksInfo>
