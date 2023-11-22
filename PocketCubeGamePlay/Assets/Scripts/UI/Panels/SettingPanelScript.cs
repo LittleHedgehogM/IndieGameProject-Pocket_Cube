@@ -22,6 +22,7 @@ public class SettingsPanel : BasePanel
     [SerializeField] private GameObject optionTab;
     [SerializeField] private Button ResetDataBtn;
     [SerializeField] private Button ReturnBtn;
+    [SerializeField] private Button BackGameBtn;
 
     [Header("Exit Tab")]
     [SerializeField] private GameObject exitTab;
@@ -56,9 +57,10 @@ public class SettingsPanel : BasePanel
         MoveLeft.onClick.AddListener(OnClickMoveLeft);
         MoveRight.onClick.AddListener(OnClickMoveRight);
 
-        //Settings
+        //Option
         ReturnBtn.onClick.AddListener(OnClickReturn); 
         ResetDataBtn.onClick.AddListener(OnClickResetData);
+        BackGameBtn.onClick.AddListener(ClosePanel);
 
         //Exit
         ExitYes.onClick.AddListener(OnExitYes);

@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image titleIMG;
 
     private PlayerData playerData;
+    [SerializeField] Button settingBtn;
 
     void Awake()
     {
@@ -37,8 +38,14 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (SceneManager.GetActiveScene().name == "StartGame")
+        {
+            print("disable btn");
+            settingBtn.gameObject.SetActive(false);
+        }
+
         //_animatorTransition = GameObject.Find("CrossFade").GetComponent<Animator>();
-        
+        settingBtn.onClick.AddListener(OnClickSetting);
     }
 
     void Start()
@@ -71,7 +78,10 @@ public class LevelManager : MonoBehaviour
 
         }while (scene.progress < 0.9f);
 
-       
+
+        
+
+
         scene.allowSceneActivation = true;
         _animatorTransition.SetTrigger("End");
         //_animatorTransition.Play("Entry");
@@ -84,6 +94,9 @@ public class LevelManager : MonoBehaviour
         //print(_animatorTransition);
 
         //Sync Data
+
+        
+
         if (playerData.level < 1 && sceneName == "NewtonLevel_GPP_Test")
         {
             playerData.level = 1;
@@ -104,11 +117,20 @@ public class LevelManager : MonoBehaviour
             print("Reached Level" + playerData.level);
         }
 
-        
 
-        
 
-      
+
+
+        print("active btn");
+        settingBtn.gameObject.SetActive(true);
+        print(SceneManager.GetActiveScene().name);
+        print(sceneName);
+        if (sceneName == "StartGame")
+        {
+            print("disable btn");
+            settingBtn.gameObject.SetActive(false);
+        }
+
 
 
     }
@@ -135,5 +157,10 @@ public class LevelManager : MonoBehaviour
 
 
     //协程
-    
+    private void OnClickSetting()
+    {
+        UIManager.Instance.OpenPanel(UIConst.SettingPanel);
+    }
+
+
 }

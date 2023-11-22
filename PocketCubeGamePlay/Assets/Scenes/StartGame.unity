@@ -22323,6 +22323,17 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1327906273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428453003127315647, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
+  m_PrefabInstance: {fileID: 1530679782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417162931
 GameObject:
   m_ObjectHideFlags: 0
@@ -27654,6 +27665,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435960496720611138, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
+      propertyPath: settingBtn
+      value: 
+      objectReference: {fileID: 1327906273}
     - target: {fileID: 1362159075319126589, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.060739875
@@ -34389,7 +34404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1530276707693218133
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36794,10 +36809,10 @@ SceneRoots:
   - {fileID: 1230443990}
   - {fileID: 1530679782}
   - {fileID: 1189287675}
-  - {fileID: 7750363313002848093}
   - {fileID: 672340357}
   - {fileID: 5544601262584852958}
   - {fileID: 1949917916}
   - {fileID: 761087746}
   - {fileID: 655408005}
   - {fileID: 2093712414}
+  - {fileID: 7750363313002848093}
