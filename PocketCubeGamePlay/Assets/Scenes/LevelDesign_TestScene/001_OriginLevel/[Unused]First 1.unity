@@ -2823,7 +2823,7 @@ MonoBehaviour:
   coin4: {fileID: 0}
   coin5: {fileID: 0}
   player: {fileID: 875369514}
-  Cube: {fileID: 0}
+  myCubeController: {fileID: 0}
   cubeTransition: {fileID: 0}
   REyeAnimator: {fileID: 0}
   LEyeAnimator: {fileID: 0}
@@ -2870,12 +2870,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6046ab7acb57c4292b21314dfbda11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube_VFX: {fileID: 0}
   put_coin_VFX: {fileID: 0}
   take_coin_VFX: {fileID: 0}
   LeftScaleTransform: {fileID: 0}
   RightScaleTransform: {fileID: 0}
-  LeftEyeTransform: {fileID: 0}
-  RightEyeTransform: {fileID: 0}
+  CubeTransform: {fileID: 0}
   putCoinOffsetTransformLeft: {fileID: 0}
   putCoinOffsetTransformRight: {fileID: 0}
 --- !u!1 &817463617
@@ -3156,6 +3156,7 @@ MonoBehaviour:
   EyeLeft: {fileID: 0}
   EyeRight: {fileID: 0}
   translationTime: 0.5
+  playerAnimator: {fileID: 0}
 --- !u!114 &875369520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3799,6 +3800,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1523213294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523213296}
+  - component: {fileID: 1523213295}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1523213295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523213294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e163769240d978743a2550692b0deaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: d814562321cb43b40a1c84fd97f46536, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1523213296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523213294}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1618049179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3994,3 +4052,4 @@ SceneRoots:
   - {fileID: 151113039}
   - {fileID: 817463621}
   - {fileID: 1618049179}
+  - {fileID: 1523213296}
