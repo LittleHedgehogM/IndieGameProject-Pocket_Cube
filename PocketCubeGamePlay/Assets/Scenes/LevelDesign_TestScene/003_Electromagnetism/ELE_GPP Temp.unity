@@ -8925,7 +8925,7 @@ MonoBehaviour:
   translationTime: 1
   Camera_Sensitivity: 0.005
   CameraLookAtTarget: {x: 0, y: 4.5, z: 0}
-  CubeTransform: {fileID: 1413908110}
+  CubeTransform: {fileID: 1839668089}
   btn01Sound:
     idInternal: 0
     valueGuidInternal: 
@@ -12147,6 +12147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fd4e85de485a24caa73639df7633f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1839668089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4382481054016244661, guid: 1b915f01491ce7c44a2d8d291605dafa, type: 3}
+  m_PrefabInstance: {fileID: 1881590345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840310771
 GameObject:
   m_ObjectHideFlags: 0

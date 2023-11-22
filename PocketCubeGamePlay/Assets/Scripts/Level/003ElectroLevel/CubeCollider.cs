@@ -9,6 +9,9 @@ public class CubeCollider : MonoBehaviour
 
     bool isEnabled = false;
     Electro_CursorController myCursorController;
+
+    public static Action CubeClicked;
+
     private void Start()
     {
         myCursorController = FindObjectOfType<Electro_CursorController>();
@@ -60,7 +63,8 @@ public class CubeCollider : MonoBehaviour
         if (isEnabled)
         {
             myCursorController.setSelectCursor();
-            FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+            CubeClicked?.Invoke();
+            isEnabled = false;
         }
     }
 }

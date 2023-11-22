@@ -13,11 +13,18 @@ public class Electro_CubeController : MonoBehaviour
 
     public void enableCube()
     {
+        StartCoroutine(cubeEnable());
+    }
+
+    private IEnumerator cubeEnable()
+    {
+        yield return new WaitForSeconds(1.5f);
         onCubeEnabled?.Invoke();
         //show VFX
         cubeVFX.SetActive(true);
         cubeVFX.transform.position = CubeTransform.position;
         cubeVFX.GetComponent<ParticleSystem>().Play();
     }
+
 
 }

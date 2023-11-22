@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static System.TimeZoneInfo;
 
-public class Electro_Camera_Controller : MonoBehaviour
+public class Electro_Camera_Controller : CameraZoomInHelper
 {
 
     [SerializeField] private Camera mainCam;
@@ -15,6 +15,7 @@ public class Electro_Camera_Controller : MonoBehaviour
     [SerializeField] private float translationTime;
     [SerializeField] private float Camera_Sensitivity;
     [SerializeField] Vector3 CameraLookAtTarget;
+    [SerializeField] Transform CubeTransform;
 
     public static event Action TranslateCameraFinish;
     public static event Action ResetCameraFinish;
@@ -28,6 +29,19 @@ public class Electro_Camera_Controller : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AK.Wwise.Event btn01Sound;
     [SerializeField] private AK.Wwise.Event btn02Sound;
+
+    bool disableCameraMovementWithPlayer = false;
+    private void OnEnable()
+    {
+        CubeCollider.CubeClicked += zoomInCube;
+    }
+
+    private void OnDisable()
+    {
+        CubeCollider.CubeClicked -= zoomInCube;
+    }
+
+
     private void Start()
     {
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
@@ -37,8 +51,14 @@ public class Electro_Camera_Controller : MonoBehaviour
         isResettingCam = false;
     }
 
+
+
     public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)
     {
+        if(disableCameraMovementWithPlayer)
+        {
+            return;
+        }
         float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
         if (dist < cameraMoveRange)
         {
@@ -121,9 +141,9 @@ public class Electro_Camera_Controller : MonoBehaviour
 
     public void resetCam()
     {
-        if (!isResettingCam){   
-            StartCoroutine(TranslateBackToInitPosition(false));
-            isResettingCam = true;
+        if (!isResettingCam){  
+            isResettingCam = true; 
+            StartCoroutine(TranslateBackToInitPosition(false));      
         }
         
     }
@@ -188,6 +208,12 @@ public class Electro_Camera_Controller : MonoBehaviour
 
         ResetCameraFinish?.Invoke();
         isResettingCam = false;
+    }
+
+    private void zoomInCube()
+    {
+        zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
+        disableCameraMovementWithPlayer = true;
     }
 }
 

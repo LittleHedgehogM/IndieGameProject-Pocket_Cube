@@ -18,6 +18,7 @@ public class Electro_GamePlay : MonoBehaviour
     [SerializeField] private Electro_MeshControl rightWallMesh;
     [SerializeField] private Electro_MeshControl leftWallMesh;
     [SerializeField] private Electro_MeshControl centerMesh;
+    [SerializeField] private Electro_CubeController cubeControl;
 
     private bool isScenePuzzleSolved;
     public static Action CubeShow;
@@ -76,6 +77,7 @@ public class Electro_GamePlay : MonoBehaviour
                   isScenePuzzleSolved = true;
                   centerAnimator.Play("AM_Center_Normal");
                   cubeAnimator.Play("AM_CenterCube_Finsh");
+                  cubeControl.enableCube();
                   CubeShow?.Invoke();
                   return;
             }
