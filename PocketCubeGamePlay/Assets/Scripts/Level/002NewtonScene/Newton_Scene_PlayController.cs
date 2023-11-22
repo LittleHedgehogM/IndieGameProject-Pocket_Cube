@@ -17,8 +17,9 @@ public class NewtonScenePlayController : MonoBehaviour
 
 
     [SerializeField] [Range(0, 3)] private float dist_threshold;
-    [SerializeField] [Range(0, 3)] private float  leave_dist_threshold;
-    
+    [SerializeField] [Range(0, 3)] private float leave_dist_threshold;
+
+    public static Action ScaleDraw;
 
     enum PlayStatus
     {
@@ -224,6 +225,7 @@ public class NewtonScenePlayController : MonoBehaviour
             myCubeController.startCubeAnimation();
             myPlayStatus = PlayStatus.InScaleDraw;
             myCameraController.resetCam();
+            ScaleDraw?.Invoke();
             return true;
         }
         return false;

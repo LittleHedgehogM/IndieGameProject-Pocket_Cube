@@ -1,4 +1,4 @@
-
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
@@ -20,6 +20,7 @@ public class Electro_GamePlay : MonoBehaviour
     [SerializeField] private Electro_MeshControl centerMesh;
 
     private bool isScenePuzzleSolved;
+    public static Action CubeShow;
 
     void Start()
     {
@@ -75,6 +76,7 @@ public class Electro_GamePlay : MonoBehaviour
                   isScenePuzzleSolved = true;
                   centerAnimator.Play("AM_Center_Normal");
                   cubeAnimator.Play("AM_CenterCube_Finsh");
+                  CubeShow?.Invoke();
                   return;
             }
             else 

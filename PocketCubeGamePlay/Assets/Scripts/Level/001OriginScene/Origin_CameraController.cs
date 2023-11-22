@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class Origin_CameraController : MonoBehaviour
     [SerializeField] Vector3 lookAtTarget;
     [SerializeField] Camera mainCam;
     [SerializeField][Range(0, 0.05f)] float sensitivity;
+
+    public static Action PerformCameraStarts;
 
     private void Start()
     {
@@ -31,6 +34,11 @@ public class Origin_CameraController : MonoBehaviour
         Origin_Axis.RightAxisClicked    -= RotateWhenRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= RotateWhenUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= RotateWhenDownAxisClicked;
+    }
+
+    public void startPerformCam()
+    {
+        PerformCameraStarts?.Invoke();
     }
 
     private void RotateWhenLeftAxisClicked()

@@ -9,6 +9,7 @@ public class SceneTutorialController : MonoBehaviour
 {
     [SerializeField] Image TutorialImage;
     [SerializeField] [Range (0, 10)] int seconds;
+    [SerializeField] bool disableTutorial;
 
     public static Action TutorialEnds;
 
@@ -21,17 +22,28 @@ public class SceneTutorialController : MonoBehaviour
         scale = TutorialImage.transform.localScale;
         TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, 0);
         TutorialImage.transform.localScale = Vector3.zero;
+
+        if (disableTutorial)
+        {
+            TutorialEnds?.Invoke();
+        }
     }
 
     private void OnEnable()
     {
-        SceneOpeningCameraAnimationControl.PerformCameraFinished += TutorialStarts;
+        if (!disableTutorial)
+        {
+            SceneOpeningCameraAnimationControl.PerformCameraFinished += TutorialStarts;
+        }
+        
     }
 
     private void OnDisable() 
     {
-        SceneOpeningCameraAnimationControl.PerformCameraFinished -= TutorialStarts;
-
+        if (!disableTutorial)
+        {
+            SceneOpeningCameraAnimationControl.PerformCameraFinished -= TutorialStarts;
+        }
     }
 
     public void TutorialStarts()

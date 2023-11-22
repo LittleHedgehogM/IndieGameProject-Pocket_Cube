@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,7 @@ public class FourierKeyCube : MonoBehaviour
 
     FourierCursorController myCursorController;
 
-
+    public static Action CubeShow;
     private void Start()
     {
         myCursorController = FindObjectOfType<FourierCursorController>();
@@ -45,6 +46,7 @@ public class FourierKeyCube : MonoBehaviour
         transform.Rotate(_rotation * _speed * Time.deltaTime, Space.World);
         if (!played)
         {
+            CubeShow?.Invoke();
             cubeFx.Play();
             played = true;
         }

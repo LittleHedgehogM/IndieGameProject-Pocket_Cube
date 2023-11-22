@@ -39,13 +39,13 @@ public class FourierPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        FourierAniCtl.PerformCameraFinished += enableMovement;
+        SceneTutorialController.TutorialEnds += enableMovement;
     }
 
 
     private void OnDisable()
     {
-        FourierAniCtl.PerformCameraFinished -= enableMovement;
+        SceneTutorialController.TutorialEnds -= enableMovement;
     }
 
     private void enableMovement()

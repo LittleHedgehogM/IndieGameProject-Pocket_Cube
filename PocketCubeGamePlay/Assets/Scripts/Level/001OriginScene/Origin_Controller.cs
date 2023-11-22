@@ -23,7 +23,7 @@ public class Origin_Controller : MonoBehaviour
     [SerializeField] AnimationCurve translationCurve;
 
     public static Action rotateFinish;
-
+    public static Action CubeShow;
     bool enableInteraction;
 
     int leftAxisClickCount  = 0;
@@ -214,6 +214,7 @@ public class Origin_Controller : MonoBehaviour
     private void PlayCubeAnim()
     {
         // Cube Animation Start
+        CubeShow?.Invoke();
         myVFXController.playCubeFinishVFXAt(cubeController.transform);
         cubeController.PlayAnim();
     }
