@@ -27,6 +27,10 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{28A3EC5D-4474-9802-AA85-BDACC5B50C51}">
+			<ShortName>AMB</ShortName>
+			<Path>AMB.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4FF0CBA3-608D-B551-F19D-E61D8ADDDFE3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -147,7 +151,7 @@
 				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{CF0E4B0A-4DBC-D7CD-D1EE-669671A08C90}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{75F3343A-2725-2A8C-B9F9-64DE65617D35}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -162,10 +166,6 @@
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
 					<CachePath>SFX/Click_lv2_10C4C929.wem</CachePath>
-				</File>
-				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>环境.wav</ShortName>
-					<CachePath>SFX/环境_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="574144294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock01.wav</ShortName>
@@ -195,11 +195,6 @@
 						<MediaRef Id="537191680"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="108392005" Name="Play_Enviroment" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="549092072"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
 					<MediaRefs>
 						<MediaRef Id="859865721"/>
@@ -227,7 +222,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{6E9AFA83-0E00-24A2-74D0-0CFC06FD32FB}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{C2E1E3CF-367C-3740-3B63-75394E9B4813}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -325,7 +320,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{50826107-8600-1F0D-97ED-1573FEC37768}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{79E5FE59-F868-622D-B047-8C493D52A3BA}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -341,35 +336,16 @@
 					<ShortName>roll_long.wav</ShortName>
 					<CachePath>SFX/roll_long_10C4C929.wem</CachePath>
 				</File>
-				<File Id="201197348" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Open01.wav</ShortName>
-					<CachePath>SFX/Open01_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Amb_level00.wav</ShortName>
-					<CachePath>SFX/Amb_level00_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="220131361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll02.wav</ShortName>
 					<CachePath>SFX/roll02_10C4C929.wem</CachePath>
 				</File>
-				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>kaichangzhi02.wav</ShortName>
-					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
+				<File Id="460131778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>unlock01.wav</ShortName>
+					<CachePath>SFX/unlock01_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="204222952"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="201197348"/>
-						<MediaRef Id="987084990"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="4.0965757" DurationMax="4.0965757">
 					<MediaRefs>
 						<MediaRef Id="5423351"/>
@@ -386,10 +362,14 @@
 						<MediaRef Id="165154750"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4083196823" Name="Play_unlock01" DurationType="OneShot" DurationMin="1.5805669" DurationMax="1.5805669">
+					<MediaRefs>
+						<MediaRef Id="460131778"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D4F207AA-D0F6-CBA1-20A2-A0FF548CC9C2}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3729328E-0BF8-C625-832E-0349F5B23E97}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -409,21 +389,12 @@
 					<ShortName>Main_Click01.wav</ShortName>
 					<CachePath>SFX/Main_Click01_10C4C929.wem</CachePath>
 				</File>
-				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Amb_Main.wav</ShortName>
-					<CachePath>SFX/Amb_Main_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="678952220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click02.wav</ShortName>
 					<CachePath>SFX/Main_Click02_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1871703286" Name="Play_Amb_Main" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="626564496"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="905487977" Name="Play_Main_Click01" DurationType="OneShot" DurationMin="2.8620634" DurationMax="2.8620634">
 					<MediaRefs>
 						<MediaRef Id="516143800"/>
@@ -441,8 +412,11 @@
 						<MediaRef Id="503180703"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{E886721D-CAF3-36F9-5E44-68CF80375F7F}">
 			<ShortName>Cube</ShortName>
@@ -503,5 +477,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7FDD33E1-41C9-DBDC-2B37-701D6D042493}</FileHash>
+	<FileHash>{F1F986A7-7344-63BC-2A17-D65BE7CA6CA6}</FileHash>
 </SoundBanksInfo>
