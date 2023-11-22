@@ -5,7 +5,7 @@ using UnityEngine;
 using static System.TimeZoneInfo;
 using static UnityEngine.GraphicsBuffer;
 
-public class Scene_Newton_Camera_Controller : MonoBehaviour
+public class Scene_Newton_Camera_Controller : CameraZoomInHelper
 {
     [SerializeField] private Camera mainCam;
     [SerializeField] private Camera Cam_LookAt_Eye_L;
@@ -14,6 +14,7 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
     [SerializeField] private Camera Cam_LookAt_Scale_R;
     [SerializeField] private float Camera_Sensitivity;
     [SerializeField] Vector3 CameraLookAtTarget;
+    [SerializeField] Transform CubeTransform;
     [SerializeField][Range(0.5f, 1)] private float translationTime;
     [SerializeField][Range (4, 6)] private float cameraMoveRange;
     
@@ -35,6 +36,17 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
         MainCamInitRotation = mainCam.transform.rotation;
         MainCamInitScale = mainCam.GetComponent<Camera>().orthographicSize;
     }
+
+    private void OnEnable()
+    {
+        Newton_CubeController.CubeClicked += zoomInCube;
+    }
+
+    private void OnDisable()
+    {
+        Newton_CubeController.CubeClicked -= zoomInCube;
+    }
+
     public bool isMainCam()
     {
         return mainCam.enabled;
@@ -173,11 +185,12 @@ public class Scene_Newton_Camera_Controller : MonoBehaviour
 
     public void resetCam()
     {
-        //mainCam.enabled = true;
-        //Cam_LookAt_Eye_L.enabled = false;
-        //Cam_LookAt_Eye_R.enabled = false;
-        //Cam_LookAt_Scale_L.enabled= false;
-        //Cam_LookAt_Scale_R.enabled= false;
         StartCoroutine(TranslateBackToInitPosition());
+    }
+
+
+    public void zoomInCube()
+    {
+        zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
     }
 }

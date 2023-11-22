@@ -22,6 +22,8 @@ public class Origin_Controller : MonoBehaviour
     [SerializeField][Range(0.5f, 3f)]  private float translationTime;
     [SerializeField] AnimationCurve translationCurve;
 
+
+
     public static Action rotateFinish;
     public static Action CubeShow;
     bool enableInteraction;
@@ -175,7 +177,7 @@ public class Origin_Controller : MonoBehaviour
         myVFXController.playRotationVFXAt(Sphere.transform);
         leftAxis.setActive(false);
         rightAxis.setActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         myRotationTarget.InitPhaseTwo();      
         upAxis.setActive(true);
         downAxis.setActive(true);
@@ -193,7 +195,7 @@ public class Origin_Controller : MonoBehaviour
     private IEnumerator InitPhaseThree()
     {
         myVFXController.playRotationVFXAt(Sphere.transform);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
 
         myRotationTarget.InitPhaseThree();
         leftAxis.setActive(true);
@@ -250,7 +252,6 @@ public class Origin_Controller : MonoBehaviour
                       //myRotationTarget.FinishPhaseTwo();
                       currentState = PuzzleState.Phase_Three;
                       DisableAllAxis?.Invoke();
-                      //StartCoroutine(InitPhaseThree());
 
                 }
                 break;

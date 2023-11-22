@@ -10,6 +10,9 @@ public class Origin_Cube : MonoBehaviour
     [SerializeField] Animator cubeAnimator;
     [SerializeField] GameObject cubeVFX;
     Origin_CursorController cursorController;
+
+    public static Action CubeClicked;
+
     public void PlayAnim(){
         cubeAnimator.Play("Show");
     }
@@ -17,6 +20,7 @@ public class Origin_Cube : MonoBehaviour
     private void Start()
     {
         cursorController = FindObjectOfType<Origin_CursorController>();
+        
     }
     public void enableCube(){
         isEnabled = true;
@@ -43,8 +47,9 @@ public class Origin_Cube : MonoBehaviour
     {
         if (isEnabled)
         {
-            cursorController.setNormalCursor();
-            FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+            //cursorController.setNormalCursor();
+            isEnabled = false;
+            CubeClicked?.Invoke();
         }
     }
 }

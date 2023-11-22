@@ -600,10 +600,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e653dab4ec77842bd2c15959c8cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomInTime: 1.275
+  zoomInAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   translationTime: 0.461
   lookAtTarget: {x: 0, y: 4.5, z: 0}
   mainCam: {fileID: 269800691}
   sensitivity: 0.0278
+  CubeTransform: {fileID: 989353593938406247}
 --- !u!1 &283181617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 627df09dfbc317a4aa59f76bbe325e4c, type: 3}
@@ -4266,10 +4292,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e653dab4ec77842bd2c15959c8cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomInTime: 0
+  zoomInAnimationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 0}
   sensitivity: 0
+  CubeTransform: {fileID: 0}
 --- !u!1 &1585254214
 GameObject:
   m_ObjectHideFlags: 0
