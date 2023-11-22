@@ -38,6 +38,8 @@ public class Origin_Controller : MonoBehaviour
         Solved,
     };
     private PuzzleState currentState;
+
+
     private void Start()
     {
         myRotationTarget = FindObjectOfType<Origin_RotationTarget>();
@@ -52,29 +54,26 @@ public class Origin_Controller : MonoBehaviour
 
     private void OnEnable()
     {
-        //Cinemachine_cart.CinemachineFinished += EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     +=isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    +=isRightAxisClicked;
         Origin_Axis.UpAxisClicked       +=isUpAxisClicked;
         Origin_Axis.DownAxisClicked     +=isDownAxisClicked;
         Origin_RotationTarget.PhaseOneFinished += PhaseTwo;
         Origin_RotationTarget.PhaseTwoFinished += PhaseThree;
-        Origin_RotationTarget.TargetVanished += PlayCubeAnim;
-        SceneOpeningCameraAnimationControl.PerformCameraFinished += enableSceneInteraction;
+        Origin_RotationTarget.TargetVanished    += PlayCubeAnim;
+        SceneTutorialController.TutorialEnds    += enableSceneInteraction;
     }
 
     private void OnDisable()
     {
-        //Cinemachine_cart.CinemachineFinished -= EnableSceneInteraction;
         Origin_Axis.LeftAxisClicked     -= isLeftAxisClicked;
         Origin_Axis.RightAxisClicked    -= isRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= isUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= isDownAxisClicked;
-        Origin_RotationTarget.PhaseOneFinished -= PhaseTwo;
-        Origin_RotationTarget.PhaseTwoFinished -= PhaseThree;
-        Origin_RotationTarget.TargetVanished -= PlayCubeAnim;
-        SceneOpeningCameraAnimationControl.PerformCameraFinished -= enableSceneInteraction;
-
+        Origin_RotationTarget.PhaseOneFinished  -= PhaseTwo;
+        Origin_RotationTarget.PhaseTwoFinished  -= PhaseThree;
+        Origin_RotationTarget.TargetVanished    -= PlayCubeAnim;
+        SceneTutorialController.TutorialEnds    -= enableSceneInteraction;
 
     }
 
