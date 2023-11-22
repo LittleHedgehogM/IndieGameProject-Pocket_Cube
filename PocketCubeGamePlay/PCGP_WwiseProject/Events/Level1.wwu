@@ -3,27 +3,6 @@
 	<Events>
 		<WorkUnit Name="Level1" ID="{75B7C3FD-1FB2-47ED-B692-CA4598A411EF}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Newton_environment" ID="{8AEBD1D6-A40D-41B2-8636-A8004BD0CA28}">
-					<ChildrenList>
-						<Action Name="" ID="{95068597-13A8-4A6D-BC7A-A7A272146B50}" ShortID="141010514">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Newton_environment" ID="{B474D4B7-BB27-40D6-BD25-4F95060D0DE7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CC9F1289-9DB3-43A4-A764-BABD228524DB}" ShortID="286089748">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Newton_environment" ID="{B474D4B7-BB27-40D6-BD25-4F95060D0DE7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_hover" ID="{E680A594-0274-45A6-A268-C53D40008927}">
 					<ChildrenList>
 						<Action Name="" ID="{85C57787-2B77-4875-B44C-9081605E5642}" ShortID="390829615">

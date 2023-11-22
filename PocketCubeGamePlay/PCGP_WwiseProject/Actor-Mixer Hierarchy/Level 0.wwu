@@ -4,6 +4,19 @@
 		<WorkUnit Name="Level 0" ID="{BE3FF75A-95B0-41E3-A20A-CFE7D577F38A}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="SFX_Single" ID="{A444C0D5-27C1-46A2-97BB-88C2F8A704CE}" ShortID="53048922">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -111,6 +124,28 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="reduce" ID="{E4C72E8C-CFF0-463E-A7DE-659534A1BFF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="unlock01" ID="{2DB6B5D0-80D1-4F94-B4E2-DF5383451981}" ShortID="275777470">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="unlock01" ID="{18D8777F-88E4-488B-8450-8B231FA27800}">
+									<Language>SFX</Language>
+									<AudioFile>unlock01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="460131778"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="unlock01" ID="{18D8777F-88E4-488B-8450-8B231FA27800}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

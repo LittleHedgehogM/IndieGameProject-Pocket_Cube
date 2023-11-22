@@ -39,31 +39,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Level3_Music" ID="{356B5101-BF16-4BC0-918E-6831E702C30B}">
-					<ChildrenList>
-						<Action Name="" ID="{A3E4DDB2-BA42-4CD5-9437-D4714DE63315}" ShortID="600909075">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Level3" ID="{307FE6DB-1DDF-4034-B9FA-2D5BAC2C6B63}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Level3_Music" ID="{780A5F3D-C2CD-42AA-BBE6-432443C63145}">
-					<ChildrenList>
-						<Action Name="" ID="{1724E6B3-506A-4F89-9F89-0368D6315872}" ShortID="692200025">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Level3" ID="{307FE6DB-1DDF-4034-B9FA-2D5BAC2C6B63}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
 				<Event Name="Stop_MerryGoRoundMusic" ID="{AE443683-34B9-4B23-87A4-25513F4490B4}">
 					<ChildrenList>
