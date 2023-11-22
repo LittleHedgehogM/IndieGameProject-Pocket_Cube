@@ -2344,6 +2344,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 32dc1ff11f6823842b0f3acb3a4c34b1, type: 2}
   decodeBank: 0
+  overrideLoadSetting: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
@@ -6986,13 +6987,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482189056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a2334636ba8c449862760e7db61eb0, type: 3}
+  m_Script: {fileID: 11500000, guid: d3352f8dce38f714ebb0975cfd079958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subtitletext: {fileID: 0}
   testText: {fileID: 999576253}
-  subtitle_file_name: Fourth
-  localtimer: 0
+  subtitle_file_name: Fourier
 --- !u!1 &1485482650
 GameObject:
   m_ObjectHideFlags: 0
@@ -9028,6 +9027,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 548a8e890b8dae145a066faa87f369a3, type: 2}
   decodeBank: 0
+  overrideLoadSetting: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 
