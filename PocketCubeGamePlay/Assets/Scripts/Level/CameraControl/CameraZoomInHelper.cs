@@ -21,7 +21,7 @@ public class CameraZoomInHelper : MonoBehaviour
         float t = 0;
         float currentUsedTime = 0;
         float camSize = mainCam.orthographicSize;
-        float targetCamSize = 3;
+        float targetCamSize = 2;
         while (t < 1)
         {
             currentUsedTime += Time.deltaTime;

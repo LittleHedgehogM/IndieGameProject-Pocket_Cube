@@ -99,26 +99,5 @@ public class Origin_CameraController : CameraZoomInHelper
         zoomInCube(mainCam, CubeTransform,  lookAtTarget);
    }
 
-   //private IEnumerator zoomInCubeTranslation()
-   //{
-   //     float t = 0;
-   //     float currentUsedTime = 0;
-   //     float translationTime = 3.0f;
-   //     float camSize = mainCam.orthographicSize;
-   //     float targetCamSize = 3;
-   //     while (t < 1)
-   //     {
-   //         currentUsedTime += Time.deltaTime;
-   //         t = currentUsedTime / translationTime;
-   //         Vector3 currentLookAtTarget = Vector3.Slerp(lookAtTarget, CubeTransform.position, t);
-   //         mainCam.transform.LookAt(currentLookAtTarget);
-   //         mainCam.orthographicSize = Mathf.Lerp(camSize, targetCamSize, t);
-   //         yield return null;
-   //     }
-
-   //     yield return null;
-   //     ZoomInCubeFinished?.Invoke();
-   //     FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
-   // }
 
 }
