@@ -18,6 +18,9 @@ public class CubeVFXManager : MonoBehaviour
     public void PlayFinishVFX()
     {
         finish_VFX.SetActive(true);
+        // finish cube audio
+        AkSoundEngine.PostEvent("Play_cube_final", gameObject);
+
         finish_VFX.transform.parent = null;
         finish_VFX.transform.position = Vector3.zero;
         finish_VFX.GetComponent<ParticleSystem>().Play();
