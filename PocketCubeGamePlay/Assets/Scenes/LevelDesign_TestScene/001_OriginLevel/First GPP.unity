@@ -1363,7 +1363,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: fb92b34adfd2bf44a969205f423defe8, type: 2}
   decodeBank: 0
-  overrideLoadSetting: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
@@ -3255,7 +3254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1375244362
 RectTransform:
   m_ObjectHideFlags: 0
