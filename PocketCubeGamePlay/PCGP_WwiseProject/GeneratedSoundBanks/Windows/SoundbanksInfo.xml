@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{EDF2EFF6-74FD-EF66-EC13-3D83003BB22C}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{BD3E46EF-5F2F-0321-D2A4-CA8802E57368}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7AF7E92C-6A71-C0CF-E559-67C4786BBC41}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4AA81A32-47CF-0706-D879-57E51131AA8E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -113,7 +113,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AC63872F-8FBF-0CB3-619D-79AF48E789C4}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AAAAB9DB-180C-01E3-767B-C09C1390975C}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -437,7 +437,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{5CA0EF40-9A31-C8A9-F477-B161A47ADA97}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{AF3D2863-1127-A55C-FED3-8FDEA52E8471}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -469,7 +469,7 @@
 				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{A46B782E-0B25-02EA-A9E3-512F9BEDB048}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{1F110AB4-4960-712E-8F13-1C0FA9F719E8}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -485,6 +485,10 @@
 					<ShortName>cube_skillclick01.wav</ShortName>
 					<CachePath>SFX/cube_skillclick01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="357215054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_final_Click.wav</ShortName>
+					<CachePath>SFX/cube_final_Click_10C4C929.wem</CachePath>
+				</File>
 				<File Id="481933197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_roll02.wav</ShortName>
 					<CachePath>SFX/cube_roll02_10C4C929.wem</CachePath>
@@ -497,6 +501,10 @@
 					<ShortName>cube_skillclick02.wav</ShortName>
 					<CachePath>SFX/cube_skillclick02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="853657409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_final.wav</ShortName>
+					<CachePath>SFX/cube_final_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3351884458" Name="Play_cube_ani" DurationType="OneShot" DurationMin="1.6731973" DurationMax="1.6731973">
@@ -507,6 +515,16 @@
 				<Event Id="1884814068" Name="Play_cube_click" DurationType="OneShot" DurationMin="0.50968254" DurationMax="0.50968254">
 					<MediaRefs>
 						<MediaRef Id="44885334"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3125553524" Name="Play_cube_final" DurationType="OneShot" DurationMin="4.92932" DurationMax="4.92932">
+					<MediaRefs>
+						<MediaRef Id="853657409"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="347704305" Name="Play_cube_final_Click" DurationType="OneShot" DurationMin="1.5197959" DurationMax="1.5197959">
+					<MediaRefs>
+						<MediaRef Id="357215054"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2377298701" Name="Play_cube_roll" DurationType="OneShot" DurationMin="0.83732426" DurationMax="0.99342406">
@@ -528,5 +546,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE3A6773-5BF4-ED55-E7F9-FE273259B2BA}</FileHash>
+	<FileHash>{C9165087-3162-4845-6ADC-8A12A487B5CA}</FileHash>
 </SoundBanksInfo>
