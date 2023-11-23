@@ -185,6 +185,7 @@ public class Electro_Puzzle : MonoBehaviour
             {
                 myVFXObjectPool.PlayVFXAt(myCircuit.switch_Left.gameObject.transform);
                 myVFXObjectPool.PlayVFXAt(myCircuit.switch_right.gameObject.transform);
+                myVFXObjectPool.PlayVFXAt(myCircuit.logicGateHolder.transform);
                 isFirstTimeEnter = false;
             }
             isLeftSwitchOn  = myCircuit.switch_Left.isElectroSwitchOn();
