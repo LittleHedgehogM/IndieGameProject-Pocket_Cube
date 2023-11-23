@@ -184,50 +184,6 @@
 								<ActiveSource Name="cube_skillclick02" ID="{18C1C2F7-B256-4755-A8C3-8F717BDEFA2E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="cube_final" ID="{F7A8DFC5-E96D-4BE5-AADD-9DA2C02F69F3}" ShortID="672465071">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="cube_final" ID="{410E6309-9FB1-4189-8E84-C0B76BE719E6}">
-									<Language>SFX</Language>
-									<AudioFile>cube_final.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="261327153"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="cube_final" ID="{410E6309-9FB1-4189-8E84-C0B76BE719E6}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="cube_final_Click" ID="{CF67BD32-3503-4920-A6B7-8E0044FFC1DE}" ShortID="867054832">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="cube_final_Click" ID="{2C486412-8F14-43CB-9727-C75628D82034}">
-									<Language>SFX</Language>
-									<AudioFile>cube_final_Click.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1045489054"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="cube_final_Click" ID="{2C486412-8F14-43CB-9727-C75628D82034}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
