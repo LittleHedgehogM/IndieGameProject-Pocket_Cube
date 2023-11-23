@@ -48,7 +48,6 @@
 				</ActorMixer>
 				<ActorMixer Name="SFX_Single" ID="{4255CE48-6EF2-4C7C-B503-586A558F747C}" ShortID="906546020">
 					<PropertyList>
-						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
