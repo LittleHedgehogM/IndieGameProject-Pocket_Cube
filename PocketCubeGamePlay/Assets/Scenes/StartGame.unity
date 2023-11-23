@@ -34482,7 +34482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &1530276707693218133
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34942,7 +34942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5677460099998611454, guid: a2db126b65d188642888465209007877, type: 3}
       propertyPath: m_AnimationTriggers.m_HighlightedTrigger
-      value: 
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 5677460099998611454, guid: a2db126b65d188642888465209007877, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
