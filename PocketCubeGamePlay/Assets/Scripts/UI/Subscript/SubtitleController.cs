@@ -63,10 +63,11 @@ public class SubtitleController : MonoBehaviour
     {
         EnableSubtitle();
         testText.text = subtitle_sequence[4];
-        await Task.Delay(10000);
+        await Task.Delay(6000);
         testText.text = subtitle_sequence[5];
-        await Task.Delay(10000);
+        await Task.Delay(9000);
         DisableSubtitle();
+        EndofSubtitle();
     }
 
     async void LoadCubeSolved()
@@ -97,4 +98,13 @@ public class SubtitleController : MonoBehaviour
         textLayer.enabled = false;
     }
 
+    void EndofSubtitle()
+    {
+        var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+        var imgLayer = this.GetComponentInChildren<Image>();
+
+        Destroy(imgLayer);
+        Destroy(textLayer);
+        Destroy(this);
+    }
 }
