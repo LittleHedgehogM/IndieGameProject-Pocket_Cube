@@ -184,28 +184,6 @@
 								<ActiveSource Name="cube_skillclick02" ID="{18C1C2F7-B256-4755-A8C3-8F717BDEFA2E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="cube_final" ID="{428AA07A-031A-4D5F-BD07-13EE9639DE9B}" ShortID="862322762">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="cube_final" ID="{7D12BE54-A018-42E7-8722-0D359346929D}">
-									<Language>SFX</Language>
-									<AudioFile>cube_final.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="853657409"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="cube_final" ID="{7D12BE54-A018-42E7-8722-0D359346929D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="cube_final_Click" ID="{972DC382-B44B-44E0-83B2-6CF8795F4CD9}" ShortID="144015468">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -226,6 +204,82 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="cube_final_Click" ID="{89A09F8B-E739-42C4-BCE4-F8ED356DF728}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cube_final" ID="{428AA07A-031A-4D5F-BD07-13EE9639DE9B}" ShortID="862322762">
+							<PropertyList>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_final" ID="{7D12BE54-A018-42E7-8722-0D359346929D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.801628477477947"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>cube_final.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="853657409"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_final" ID="{7D12BE54-A018-42E7-8722-0D359346929D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cube_final_loop" ID="{F8B9239F-8093-4D45-8119-0C3D0FE6E1ED}" ShortID="236708032">
+							<PropertyList>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cube_final_loop" ID="{F8A0FE5F-CAE9-4865-9785-F7E3A7D269CD}">
+									<Language>SFX</Language>
+									<AudioFile>cube_final_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="832323392"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cube_final_loop" ID="{F8A0FE5F-CAE9-4865-9785-F7E3A7D269CD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

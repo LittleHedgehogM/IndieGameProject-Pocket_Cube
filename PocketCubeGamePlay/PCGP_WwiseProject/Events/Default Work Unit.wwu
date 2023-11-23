@@ -280,6 +280,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{51FA3257-49BD-4C52-82C8-A04960A008F5}" ShortID="267730188">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cube_final_loop" ID="{F8B9239F-8093-4D45-8119-0C3D0FE6E1ED}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
