@@ -157,6 +157,8 @@ public class CubeInPlayPhase : GameplayPhase
             StartCoroutine(startRestoreAnimation());
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
             myCommutationSkill.EraseOutline();
+            // recover audio
+            AkSoundEngine.PostEvent("Play_cube_ani", gameObject);
         }
 
     }
@@ -171,6 +173,8 @@ public class CubeInPlayPhase : GameplayPhase
             currentPlayStatus = CubePlayStatus.InRestoreCheckPoint;
             restoreFinish = false;
             myDiagonalSkill.EraseOutline();
+            // recover audio
+            AkSoundEngine.PostEvent("Play_cube_ani", gameObject);
         }
     }
 
