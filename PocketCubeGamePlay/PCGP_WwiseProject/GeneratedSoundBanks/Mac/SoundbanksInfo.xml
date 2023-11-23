@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{147A1E22-E2D8-9866-27D6-D0671271379F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CB5A8BC5-0EC4-E211-4080-1675D32FA44A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -141,7 +141,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AAAAB9DB-180C-01E3-767B-C09C1390975C}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{7F44272F-4A94-1B8E-E753-A3F189E7194E}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -165,13 +165,13 @@
 					<ShortName>L3_Hit_bad.wav</ShortName>
 					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
 				</File>
-				<File Id="701432904" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>How to make an Amazing Merry Go Round from Cardboard - Just5mins-1.wav</ShortName>
-					<CachePath>SFX/How to make an Amazing Merry Go Round from Cardboard - Just5mins-1_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1034677683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶棋盘_loop.wav</ShortName>
+					<CachePath>SFX/傅里叶棋盘_loop_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -180,6 +180,11 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="2720351442" Name="Play_Fourier" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1034677683"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
 					<MediaRefs>
 						<MediaRef Id="743988009"/>
@@ -203,12 +208,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3155709310" Name="Play_MerryGoRoundMusic" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="701432904"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3379697116" Name="Stop_MerryGoRoundMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{600FE049-14E0-90B4-5950-0A5926F8802D}">
@@ -497,7 +497,7 @@
 				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{C00A68B3-1A3B-18C9-B379-8359DB467C00}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{BEFD46AA-4651-3CA8-D129-F1210F050F9B}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -535,7 +535,7 @@
 				</File>
 				<File Id="853657409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_final.wav</ShortName>
-					<CachePath>SFX/cube_final_7FE8AF9C.wem</CachePath>
+					<CachePath>SFX/cube_final_FBFAABC0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -579,5 +579,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB78258B-EDDB-21CB-6D9E-B27F80EECF7E}</FileHash>
+	<FileHash>{53DA2D46-2485-6867-BB1E-FED78697F7EC}</FileHash>
 </SoundBanksInfo>
