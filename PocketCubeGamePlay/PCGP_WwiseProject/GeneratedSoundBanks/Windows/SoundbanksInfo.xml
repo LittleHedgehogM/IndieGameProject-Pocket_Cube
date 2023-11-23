@@ -371,7 +371,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{3C465322-40EA-579A-A5ED-70B5D2ECF041}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{07041D92-5B2E-956A-7649-1086A8344B7B}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -397,7 +397,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="4.0965757" DurationMax="4.0965757">
+				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="5.102086" DurationMax="5.102086">
 					<MediaRefs>
 						<MediaRef Id="5423351"/>
 					</MediaRefs>
@@ -413,7 +413,7 @@
 						<MediaRef Id="165154750"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4083196823" Name="Play_unlock01" DurationType="OneShot" DurationMin="1.5805669" DurationMax="1.5805669">
+				<Event Id="4083196823" Name="Play_unlock01" DurationType="OneShot" DurationMin="1.9775283" DurationMax="1.9775283">
 					<MediaRefs>
 						<MediaRef Id="460131778"/>
 					</MediaRefs>
@@ -574,5 +574,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2C144D15-1873-036E-C6BE-1888314CB36D}</FileHash>
+	<FileHash>{A52287DF-706A-9D02-CCFB-7841CFAEE409}</FileHash>
 </SoundBanksInfo>
