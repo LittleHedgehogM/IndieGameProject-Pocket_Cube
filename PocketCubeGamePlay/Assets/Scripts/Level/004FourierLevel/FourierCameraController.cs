@@ -26,6 +26,16 @@ public class FourierCameraController : CameraZoomInHelper
 
     bool disableCameraMovement = false;
 
+    private void OnEnable()
+    {
+        CubeClickEvent.CubeClick += zoomInCube;
+    }
+
+    private void OnDisable()
+    {
+        CubeClickEvent.CubeClick -= zoomInCube;
+    }
+
 
     private void Start()
     {
