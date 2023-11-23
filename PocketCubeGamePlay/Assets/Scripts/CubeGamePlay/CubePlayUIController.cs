@@ -41,7 +41,7 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image finishImage;
     [SerializeField][Range(0, 5)] private int pre_finishDuration;
     [SerializeField][Range(0, 5)] private int display_finishDuration;
-
+    private float finishAlpha;
 
     private int totalSteps;
     private bool isCommutationApplied;
@@ -52,6 +52,7 @@ public class CubePlayUIController : MonoBehaviour
 
     public static event Action onEnterCommutationState;
     public static event Action onRestoreCommutationCheckPoint;
+
 
 
     private int _swipeCount;
@@ -338,10 +339,12 @@ public class CubePlayUIController : MonoBehaviour
 
     private void SetFinishImageInvisible()
     {
+        finishAlpha = finishImage.color.a;
         if (finishImage.isActiveAndEnabled)
         {
             finishImage.gameObject.SetActive(false);
         }
+
     }
 
     private IEnumerator FinishRoutine()
@@ -355,7 +358,7 @@ public class CubePlayUIController : MonoBehaviour
             finishImage.gameObject.SetActive(true);
             finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, 0);
             float startAlphaVal = 0;
-            float targetAlphaVal = 0.3f;
+            float targetAlphaVal = finishAlpha;
             float currentTime = 0;
             float translationTime = 0.5f;
             float t = 0;
@@ -373,7 +376,7 @@ public class CubePlayUIController : MonoBehaviour
             yield return new WaitForSeconds(display_finishDuration);
             FinishButton.gameObject.SetActive(true);
 
-            startAlphaVal = 0.3f;
+            startAlphaVal = finishAlpha;
             targetAlphaVal = 0;
             currentTime = 0;
             translationTime = 0.5f;
