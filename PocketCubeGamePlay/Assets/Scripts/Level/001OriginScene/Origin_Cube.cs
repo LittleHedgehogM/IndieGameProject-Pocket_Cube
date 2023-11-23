@@ -48,8 +48,7 @@ public class Origin_Cube : CubeClickEvent
             //cursorController.setNormalCursor();
             isEnabled = false;
             CubeClick?.Invoke();
-            // click cube
-            AkSoundEngine.PostEvent("Play_box_click", gameObject);
+            
         }
     }
 }

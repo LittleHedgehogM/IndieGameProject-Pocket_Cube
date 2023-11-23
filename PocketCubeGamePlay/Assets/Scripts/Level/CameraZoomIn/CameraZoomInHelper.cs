@@ -28,6 +28,9 @@ public class CameraZoomInHelper : MonoBehaviour
 
     public void zoomInCube(Camera mainCam, Transform CubeTransform, Vector3 lookAtTarget)
     {
+        // click cube
+        AkSoundEngine.PostEvent("Play_box_click", gameObject);
+
         StartCoroutine(zoomInCubeTranslation(mainCam, CubeTransform, lookAtTarget));
     }
 
