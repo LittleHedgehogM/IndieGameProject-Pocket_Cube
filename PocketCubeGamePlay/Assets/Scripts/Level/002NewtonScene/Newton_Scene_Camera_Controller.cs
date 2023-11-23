@@ -29,22 +29,14 @@ public class Scene_Newton_Camera_Controller : CameraZoomInHelper
     [SerializeField] private AK.Wwise.Event cameraZoomIn;
     [SerializeField] private AK.Wwise.Event cameraZoomOut;
 
+    bool disableCameraMovementWithPlayer = false;
+
     private void Start()
     {
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         MainCamInitPosition = mainCam.transform.position;
         MainCamInitRotation = mainCam.transform.rotation;
         MainCamInitScale = mainCam.GetComponent<Camera>().orthographicSize;
-    }
-
-    private void OnEnable()
-    {
-        Newton_CubeController.CubeClicked += zoomInCube;
-    }
-
-    private void OnDisable()
-    {
-        Newton_CubeController.CubeClicked -= zoomInCube;
     }
 
     public bool isMainCam()
@@ -67,8 +59,24 @@ public class Scene_Newton_Camera_Controller : CameraZoomInHelper
         return Cam_LookAt_Scale_R;
     }
 
+
+    private void OnEnable()
+    {
+        CubeClickEvent.CubeClick += zoomInCube;
+    }
+
+    private void OnDisable()
+    {
+        CubeClickEvent.CubeClick -= zoomInCube;
+    }
+
+
     public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)
     {
+        if (disableCameraMovementWithPlayer)
+        {
+            return;
+        }
         float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
         if (dist < cameraMoveRange)
         {
@@ -189,8 +197,9 @@ public class Scene_Newton_Camera_Controller : CameraZoomInHelper
     }
 
 
-    public void zoomInCube()
+    public override void zoomInCube()
     {
+        disableCameraMovementWithPlayer = true;
         zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
     }
 }

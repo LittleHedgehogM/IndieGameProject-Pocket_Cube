@@ -9,7 +9,22 @@ public class CameraZoomInHelper : MonoBehaviour
     [SerializeField][Range(0.5f, 2f)] private float zoomInTime;
     [SerializeField] private AnimationCurve zoomInAnimationCurve;
 
-    public static Action ZoomInCubeFinished;
+    //public static Action ZoomInCubeFinished;
+
+    //private void OnEnable()
+    //{
+    //    CubeClickEvent.CubeClick += zoomInCube;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    CubeClickEvent.CubeClick -= zoomInCube;
+    //}
+
+    public virtual void zoomInCube()
+    {
+        Debug.Log("CameraZoomInHelper");
+    }
 
     public void zoomInCube(Camera mainCam, Transform CubeTransform, Vector3 lookAtTarget)
     {

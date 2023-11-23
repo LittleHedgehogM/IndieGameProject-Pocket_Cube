@@ -24,7 +24,7 @@ public class Origin_CameraController : CameraZoomInHelper
         Origin_Axis.RightAxisClicked  += RotateWhenRightAxisClicked;
         Origin_Axis.UpAxisClicked     += RotateWhenUpAxisClicked;
         Origin_Axis.DownAxisClicked   += RotateWhenDownAxisClicked;
-        Origin_Cube.CubeClicked       += zoomInCube;
+        CubeClickEvent.CubeClick      += zoomInCube;
     }
 
     private void OnDisable()
@@ -33,8 +33,9 @@ public class Origin_CameraController : CameraZoomInHelper
         Origin_Axis.RightAxisClicked    -= RotateWhenRightAxisClicked;
         Origin_Axis.UpAxisClicked       -= RotateWhenUpAxisClicked;
         Origin_Axis.DownAxisClicked     -= RotateWhenDownAxisClicked;
-        Origin_Cube.CubeClicked         -= zoomInCube;
+        CubeClickEvent.CubeClick        -= zoomInCube;
     }
+
 
     public void startPerformCam()
     {
@@ -94,8 +95,9 @@ public class Origin_CameraController : CameraZoomInHelper
 
    }
 
-   private void zoomInCube()
+   public override void zoomInCube()
    {
+        Debug.Log("OriginCamController");
         zoomInCube(mainCam, CubeTransform,  lookAtTarget);
    }
 

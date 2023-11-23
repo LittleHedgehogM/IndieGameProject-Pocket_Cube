@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FourierKeyCube : MonoBehaviour
+public class FourierKeyCube : CubeClickEvent
 {
     [SerializeField] private FourierColorChanger Level1;
     [SerializeField] private FourierColorChanger Level2;
@@ -25,6 +25,8 @@ public class FourierKeyCube : MonoBehaviour
     FourierCursorController myCursorController;
 
     public static Action CubeShow;
+
+
     private void Start()
     {
         myCursorController = FindObjectOfType<FourierCursorController>();
@@ -82,11 +84,12 @@ public class FourierKeyCube : MonoBehaviour
         if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
         {
             myCursorController.setSelectCursor();
-            FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+            //FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
+            CubeClick?.Invoke();
+
         }
         
     }
-
     public void easyPass()
     {
         levelPass = true;

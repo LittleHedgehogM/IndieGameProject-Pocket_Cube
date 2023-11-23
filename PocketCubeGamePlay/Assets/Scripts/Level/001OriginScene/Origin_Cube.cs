@@ -4,14 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Origin_Cube : MonoBehaviour
+public class Origin_Cube : CubeClickEvent
 {
     bool isEnabled = false;
     [SerializeField] Animator cubeAnimator;
     [SerializeField] GameObject cubeVFX;
     Origin_CursorController cursorController;
-
-    public static Action CubeClicked;
 
     public void PlayAnim(){
         cubeAnimator.Play("Show");
@@ -49,7 +47,7 @@ public class Origin_Cube : MonoBehaviour
         {
             //cursorController.setNormalCursor();
             isEnabled = false;
-            CubeClicked?.Invoke();
+            CubeClick?.Invoke();
             // click cube
             AkSoundEngine.PostEvent("Play_box_click", gameObject);
         }

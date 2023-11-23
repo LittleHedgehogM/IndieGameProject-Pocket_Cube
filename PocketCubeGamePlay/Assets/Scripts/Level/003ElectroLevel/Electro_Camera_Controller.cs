@@ -31,16 +31,16 @@ public class Electro_Camera_Controller : CameraZoomInHelper
     [SerializeField] private AK.Wwise.Event btn02Sound;
 
     bool disableCameraMovementWithPlayer = false;
+
     private void OnEnable()
     {
-        CubeCollider.CubeClicked += zoomInCube;
+        CubeClickEvent.CubeClick += zoomInCube;
     }
 
     private void OnDisable()
     {
-        CubeCollider.CubeClicked -= zoomInCube;
+        CubeClickEvent.CubeClick -= zoomInCube;
     }
-
 
     private void Start()
     {
@@ -210,7 +210,7 @@ public class Electro_Camera_Controller : CameraZoomInHelper
         isResettingCam = false;
     }
 
-    private void zoomInCube()
+    public override void zoomInCube()
     {
         zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
         disableCameraMovementWithPlayer = true;

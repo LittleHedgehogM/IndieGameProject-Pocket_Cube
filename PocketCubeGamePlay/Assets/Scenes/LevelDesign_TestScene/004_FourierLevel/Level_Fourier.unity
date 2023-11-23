@@ -4370,7 +4370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 884474698}
   - component: {fileID: 884474697}
-  - component: {fileID: 884474696}
   - component: {fileID: 884474695}
   - component: {fileID: 884474694}
   - component: {fileID: 884474699}
@@ -4415,35 +4414,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &884474696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884474693}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5ae1cf74691e547b5aba6c4d440d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomInTime: 0
-  zoomInAnimationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  mainCam: {fileID: 884474697}
-  cameraMoveRange: 4
-  Camera_Sensitivity: 0.02
-  Axis_X_Scaler: 0.8
-  Axis_Y_Scaler: 0.2
-  playerMovement: {fileID: 539057230}
-  CameraLookAtTarget: {x: 0.16, y: 0.26, z: 46.02}
-  cameraMovement: {x: 0, y: 0.3, z: 0}
-  cameraBeat: 0.8
-  camPerform: {fileID: 884474693}
 --- !u!20 &884474697
 Camera:
   m_ObjectHideFlags: 0
@@ -8717,10 +8687,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ae1cf74691e547b5aba6c4d440d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomInTime: 0
+  zoomInTime: 1.429
   zoomInAnimationCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -8734,6 +8722,7 @@ MonoBehaviour:
   cameraMovement: {x: 0, y: 0.3, z: 0}
   cameraBeat: 0.8
   camPerform: {fileID: 884474693}
+  CubeTransform: {fileID: 788507916221270312}
 --- !u!20 &2045749203
 Camera:
   m_ObjectHideFlags: 0

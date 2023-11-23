@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FourierCameraController : MonoBehaviour
+public class FourierCameraController : CameraZoomInHelper
 {
     [SerializeField] private Camera mainCam;
     [SerializeField][Range(4, 6)] private float cameraMoveRange;
@@ -17,9 +17,15 @@ public class FourierCameraController : MonoBehaviour
     [SerializeField] Vector3 cameraMovement;
     [SerializeField] float cameraBeat;
     [SerializeField] GameObject camPerform;
+
+    [SerializeField] private Transform CubeTransform;
+
     float time;
     Vector3 MainCamInitPosition;
     //Quaternion MainCamInitRotation;
+
+    bool disableCameraMovement = false;
+
 
     private void Start()
     {
@@ -30,6 +36,11 @@ public class FourierCameraController : MonoBehaviour
 
     void Update()
     {
+
+        if (disableCameraMovement) 
+        {
+            return;        
+        }
         if (camPerform.activeSelf)
         {
             onUpdateCameraWithPlayerMovement(playerMovement.getMovementDirection());
@@ -90,5 +101,12 @@ public class FourierCameraController : MonoBehaviour
             mainCam.transform.position += Camera_Sensitivity * (MainCamInitPosition - mainCam.transform.position);
             mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
         }
+    }
+
+    public override void zoomInCube()
+    {
+        disableCameraMovement = true;
+        zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
+
     }
 }

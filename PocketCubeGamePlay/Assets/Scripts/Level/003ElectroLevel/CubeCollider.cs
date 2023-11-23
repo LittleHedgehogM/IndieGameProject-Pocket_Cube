@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CubeCollider : MonoBehaviour
+public class CubeCollider : CubeClickEvent
 {
 
     bool isEnabled = false;
     Electro_CursorController myCursorController;
-
-    public static Action CubeClicked;
 
     private void Start()
     {
@@ -63,7 +61,7 @@ public class CubeCollider : MonoBehaviour
         if (isEnabled)
         {
             myCursorController.setSelectCursor();
-            CubeClicked?.Invoke();
+            CubeClick?.Invoke();
             isEnabled = false;
         }
     }

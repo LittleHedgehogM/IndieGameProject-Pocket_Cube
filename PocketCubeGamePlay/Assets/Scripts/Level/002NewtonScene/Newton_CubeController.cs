@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.Examples;
 using UnityEngine;
 
-public class Newton_CubeController : MonoBehaviour
+public class Newton_CubeController : CubeClickEvent
 {
     
     [SerializeField] private Animator cubeAnimator;
@@ -13,8 +12,6 @@ public class Newton_CubeController : MonoBehaviour
     Newton_CursorController cursorController;
 
     bool canInteract = false;
-
-    public static Action CubeClicked;
 
     public GameObject getCube()
     {
@@ -64,7 +61,7 @@ public class Newton_CubeController : MonoBehaviour
                     }
                     else if (Input.GetMouseButtonUp(0)) 
                     {
-                        CubeClicked?.Invoke();
+                        CubeClick?.Invoke();
                         canInteract = false;
                     }
                 }
