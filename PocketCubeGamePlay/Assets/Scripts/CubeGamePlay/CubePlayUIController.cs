@@ -9,37 +9,46 @@ using Button = UnityEngine.UI.Button;
 
 public class CubePlayUIController : MonoBehaviour
 {
-
+    [Header("Text Settings")]
     [SerializeField] private TextMeshProUGUI mySwipeCountText;
     [SerializeField] private TextMeshProUGUI myDiagonalCountText;
     [SerializeField] private TextMeshProUGUI myCommutationCountText;
     [SerializeField] private TextMeshProUGUI myIsCubeSolvedText;
     [SerializeField] private TextMeshProUGUI myTipsText;
-    [SerializeField] private UnityEngine.UI.Image TutorialImage;
-    [SerializeField][Range(5,20)] private int sleepAfterSeconds;
-
-
+    
+    [Header("Button Settings")]
     public Button DiagonalButton;
     public Button CommutationButton;
     public Button RestartButton;
     public Button FinishButton;
     public Button ResetCameraButton;
-    private int totalSteps;
 
+
+    [Header("Skill Settings")]
     [SerializeField] private bool isCommutationUnlocked;
     [SerializeField] private bool isDiagonalUnlocked;
-    [SerializeField] private bool isShowTutorial;
+
     [SerializeField] private int maxCommutation;
     [SerializeField] private int maxDiagonal;
     [SerializeField] private int suggestedStepCount;
 
+    [Header("Tutorial Settings")]
+    [SerializeField] private bool isShowTutorial;
+    [SerializeField] private UnityEngine.UI.Image TutorialImage;
+    [SerializeField][Range(0,20)] private int tutorialDuration;
 
+    [Header("Finish Settings")]
+    [SerializeField] private UnityEngine.UI.Image finishImage;
+    [SerializeField][Range(0, 5)] private int pre_finishDuration;
+    [SerializeField][Range(0, 5)] private int display_finishDuration;
+
+
+    private int totalSteps;
     private bool isCommutationApplied;
     private bool isDiagonalApplied;
 
     public static event Action onEnterDiagonalState;
     public static event Action onRestoreDiagonalCheckPoint;
-
 
     public static event Action onEnterCommutationState;
     public static event Action onRestoreCommutationCheckPoint;
@@ -148,6 +157,7 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalButton.gameObject.SetActive(isDiagonalUnlocked);
         CommutationButton.gameObject.SetActive(isCommutationUnlocked);
         TutorialImage.gameObject.SetActive(isShowTutorial);
+
         FinishButton.gameObject.SetActive(false);
         RestartButton.gameObject.SetActive(true);
 
@@ -163,6 +173,7 @@ public class CubePlayUIController : MonoBehaviour
         SolveResult = false;
         totalSteps = 0;
         SetTutorialInvisible();
+        SetFinishImageInvisible();
 
     }
 
@@ -259,14 +270,15 @@ public class CubePlayUIController : MonoBehaviour
 
     private void CubeSolved()
     {
-       FinishButton.gameObject.SetActive(true);
+       
        DiagonalButton.transform.localScale = Vector3.zero;
        CommutationButton.transform.localScale = Vector3.zero;
        ResetCameraButton.transform.localScale = Vector3.zero;
        RestartButton.transform.localScale = Vector3.zero;
        myTipsText.transform.localScale = Vector3.zero;
        TutorialImage.transform.localScale = Vector3.zero;
-
+       StartCoroutine(FinishRoutine());
+       //FinishButton.gameObject.SetActive(true);
 
     }
 
@@ -281,15 +293,11 @@ public class CubePlayUIController : MonoBehaviour
         myIsCubeSolvedText.text = "Is Cube Solved? " + (isCubeSolved? "Yes":"No");
     }
 
-
-
-
     private IEnumerator TutorialInvisible()
     {
-        yield return new WaitForSeconds(sleepAfterSeconds);
+        yield return new WaitForSeconds(tutorialDuration);
 
         float AlphaVal = TutorialImage.color.a;
-
         float currentTime = 0;
         float translationTime = 1.0f;
         float t = currentTime / translationTime;
@@ -326,6 +334,68 @@ public class CubePlayUIController : MonoBehaviour
             //TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, 0.3f);
         }
         
+    }
+
+    private void SetFinishImageInvisible()
+    {
+        if (finishImage.isActiveAndEnabled)
+        {
+            finishImage.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator FinishRoutine()
+    {
+        
+        yield return new WaitForSeconds(pre_finishDuration);
+
+        if (display_finishDuration > 0) 
+        { 
+
+            finishImage.gameObject.SetActive(true);
+            finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, 0);
+            float startAlphaVal = 0;
+            float targetAlphaVal = 0.3f;
+            float currentTime = 0;
+            float translationTime = 0.5f;
+            float t = 0;
+            /*show image*/
+            while (t < 1)
+            {
+                currentTime += Time.deltaTime;
+                t = currentTime / translationTime;
+                float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
+                finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
+                yield return null;
+
+            }
+
+            yield return new WaitForSeconds(display_finishDuration);
+            FinishButton.gameObject.SetActive(true);
+
+            startAlphaVal = 0.3f;
+            targetAlphaVal = 0;
+            currentTime = 0;
+            translationTime = 0.5f;
+            t = 0;
+
+            /*hide image*/
+            while (t < 1)
+            {
+                currentTime += Time.deltaTime;
+                t = currentTime / translationTime;
+                float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
+                finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
+                yield return null;
+            }
+            yield return null;
+        
+        }
+        else
+        {
+            FinishButton.gameObject.SetActive(true);
+            yield return null;
+        }
     }
 
 }
