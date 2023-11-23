@@ -25,6 +25,8 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_ANI = 3351884458U;
         static const AkUniqueID PLAY_CUBE_CLICK = 1884814068U;
         static const AkUniqueID PLAY_CUBE_DROP = 797967755U;
+        static const AkUniqueID PLAY_CUBE_FINAL = 3125553524U;
+        static const AkUniqueID PLAY_CUBE_FINAL_CLICK = 347704305U;
         static const AkUniqueID PLAY_CUBE_ROLL = 2377298701U;
         static const AkUniqueID PLAY_CUBE_SKILLCLICK01 = 3603099912U;
         static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
@@ -52,6 +54,8 @@ namespace AK
         static const AkUniqueID PLAY_SHINE = 3162051019U;
         static const AkUniqueID PLAY_SIDE_UNLOCK01 = 2931672207U;
         static const AkUniqueID PLAY_SIDE_UNLOCK02 = 2931672204U;
+        static const AkUniqueID PLAY_UI_ROLL = 2857954946U;
+        static const AkUniqueID PLAY_UI_TURN = 245126902U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;

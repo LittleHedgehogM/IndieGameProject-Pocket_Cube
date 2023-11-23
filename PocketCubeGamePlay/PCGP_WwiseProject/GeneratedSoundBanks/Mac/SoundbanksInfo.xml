@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{EDF2EFF6-74FD-EF66-EC13-3D83003BB22C}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{65708FA2-1512-4DD8-F78A-72F8095AA59E}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4FF0CBA3-608D-B551-F19D-E61D8ADDDFE3}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{147A1E22-E2D8-9866-27D6-D0671271379F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -96,10 +96,26 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{21A70980-76F0-12A2-FE98-466BB50EB50A}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8F35562F-27A4-0E24-1473-8A821E9B54BC}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
+				<File Id="56359378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_roll01.wav</ShortName>
+					<CachePath>SFX/UI_roll01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="312476759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_turn02.wav</ShortName>
+					<CachePath>SFX/UI_turn02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="322749515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_turn01.wav</ShortName>
+					<CachePath>SFX/UI_turn01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="335589814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_roll02.wav</ShortName>
+					<CachePath>SFX/UI_roll02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="915713439" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>box_click.wav</ShortName>
 					<CachePath>SFX/box_click_10C4C929.wem</CachePath>
@@ -111,9 +127,21 @@
 						<MediaRef Id="915713439"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.54226756" DurationMax="0.6252834">
+					<MediaRefs>
+						<MediaRef Id="56359378"/>
+						<MediaRef Id="335589814"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="245126902" Name="Play_UI_turn" DurationType="OneShot" DurationMin="0.30521542" DurationMax="0.40907028">
+					<MediaRefs>
+						<MediaRef Id="312476759"/>
+						<MediaRef Id="322749515"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AC63872F-8FBF-0CB3-619D-79AF48E789C4}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AAAAB9DB-180C-01E3-767B-C09C1390975C}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -437,7 +465,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{5CA0EF40-9A31-C8A9-F477-B161A47ADA97}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{359BF155-7B74-66B8-CC91-694F2FFEE837}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -469,7 +497,7 @@
 				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{A46B782E-0B25-02EA-A9E3-512F9BEDB048}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{1F110AB4-4960-712E-8F13-1C0FA9F719E8}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -485,6 +513,10 @@
 					<ShortName>cube_skillclick01.wav</ShortName>
 					<CachePath>SFX/cube_skillclick01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="357215054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_final_Click.wav</ShortName>
+					<CachePath>SFX/cube_final_Click_10C4C929.wem</CachePath>
+				</File>
 				<File Id="481933197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_roll02.wav</ShortName>
 					<CachePath>SFX/cube_roll02_10C4C929.wem</CachePath>
@@ -497,6 +529,10 @@
 					<ShortName>cube_skillclick02.wav</ShortName>
 					<CachePath>SFX/cube_skillclick02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="853657409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cube_final.wav</ShortName>
+					<CachePath>SFX/cube_final_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3351884458" Name="Play_cube_ani" DurationType="OneShot" DurationMin="1.6731973" DurationMax="1.6731973">
@@ -507,6 +543,16 @@
 				<Event Id="1884814068" Name="Play_cube_click" DurationType="OneShot" DurationMin="0.50968254" DurationMax="0.50968254">
 					<MediaRefs>
 						<MediaRef Id="44885334"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3125553524" Name="Play_cube_final" DurationType="OneShot" DurationMin="4.92932" DurationMax="4.92932">
+					<MediaRefs>
+						<MediaRef Id="853657409"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="347704305" Name="Play_cube_final_Click" DurationType="OneShot" DurationMin="1.5197959" DurationMax="1.5197959">
+					<MediaRefs>
+						<MediaRef Id="357215054"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2377298701" Name="Play_cube_roll" DurationType="OneShot" DurationMin="0.83732426" DurationMax="0.99342406">
@@ -528,5 +574,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EEAA92AF-42D1-D747-7689-46BC4A07F7D2}</FileHash>
+	<FileHash>{7EA4B660-5412-ECE5-CE28-0E08ABA02B00}</FileHash>
 </SoundBanksInfo>

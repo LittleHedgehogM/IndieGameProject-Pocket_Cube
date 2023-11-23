@@ -184,6 +184,124 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_roll" ID="{36B9509C-53C6-48D0-A83A-2AE446644E77}" ShortID="430420591">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_roll01" ID="{5F9D8DFB-5C53-4908-8A25-6AE52552068B}" ShortID="189375094">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_roll01" ID="{94B3B381-2B2A-480B-AAE4-853AC84906B0}">
+											<Language>SFX</Language>
+											<AudioFile>UI_roll01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56359378"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_roll01" ID="{94B3B381-2B2A-480B-AAE4-853AC84906B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_roll02" ID="{6A83FBE5-19D8-4D9F-A77F-F9F9CB34A1BC}" ShortID="113692890">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_roll02" ID="{3E26BFED-2DC1-4A37-B306-4BB5E3DF5CA7}">
+											<Language>SFX</Language>
+											<AudioFile>UI_roll02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="335589814"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_roll02" ID="{3E26BFED-2DC1-4A37-B306-4BB5E3DF5CA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_turn" ID="{2F9BDD0A-E3FC-4D5A-8A4C-2433A4DE6AA9}" ShortID="791686485">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_turn01" ID="{E2AB45D4-6C98-4782-B637-6F7DD6111F45}" ShortID="747835275">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_turn01" ID="{54FE69AA-A6A7-446F-891C-83BDCD6449C1}">
+											<Language>SFX</Language>
+											<AudioFile>UI_turn01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="322749515"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_turn01" ID="{54FE69AA-A6A7-446F-891C-83BDCD6449C1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_turn02" ID="{43F7C9F4-13C3-4C1C-AFA4-2EEDF1AE6665}" ShortID="826203698">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_turn02" ID="{3A82D8BE-29F6-4169-8916-8CC8150DBBFD}">
+											<Language>SFX</Language>
+											<AudioFile>UI_turn02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="312476759"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_turn02" ID="{3A82D8BE-29F6-4169-8916-8CC8150DBBFD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX_Loop" ID="{3E7BDCEE-F394-43D7-B4D0-B84BC462E786}" ShortID="733213329">

@@ -12,39 +12,6 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 						</Reference>
 					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Enviroment" ID="{0A8E2973-C930-4F62-A298-9ACC1E8D239D}" ShortID="729532004">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-11</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="环境" ID="{37625222-D841-4B34-8612-6DFC3EAF7AB9}">
-									<Language>SFX</Language>
-									<AudioFile>环境.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="549092072"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="环境" ID="{37625222-D841-4B34-8612-6DFC3EAF7AB9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX_Single" ID="{4255CE48-6EF2-4C7C-B503-586A558F747C}" ShortID="906546020">
 					<PropertyList>
@@ -332,6 +299,52 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="最终特效" ID="{18B869E9-E58A-4DB1-AD0A-C24AE2521677}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="AMB" ID="{441047DE-BF81-49A9-878A-D58911D1E5CF}" ShortID="628334833">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Enviroment" ID="{0A8E2973-C930-4F62-A298-9ACC1E8D239D}" ShortID="729532004">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="环境" ID="{37625222-D841-4B34-8612-6DFC3EAF7AB9}">
+									<Language>SFX</Language>
+									<AudioFile>环境.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="549092072"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="环境" ID="{37625222-D841-4B34-8612-6DFC3EAF7AB9}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
