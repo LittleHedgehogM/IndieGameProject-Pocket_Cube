@@ -59,7 +59,11 @@ public class Electro_Switch : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (isInteractionEnabled){
+        if (isInteractionEnabled)
+        {
+            // switch click audio
+            AkSoundEngine.PostEvent("Play_Click_lv1", gameObject);
+
             myCursorController.setClickDownCursor();
             transform.localScale = pressScale;
         }

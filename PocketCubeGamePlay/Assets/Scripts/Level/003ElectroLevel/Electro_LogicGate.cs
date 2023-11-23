@@ -33,6 +33,9 @@ public class Electro_LogicGate : MonoBehaviour
     {
         if (isInteractionEnabled)
         {
+            // gate click audio
+            AkSoundEngine.PostEvent("Play_Click_lv2", gameObject);
+
             myCursorController.setClickDownCursor();
             this.transform.localScale = smallScale;
         }
