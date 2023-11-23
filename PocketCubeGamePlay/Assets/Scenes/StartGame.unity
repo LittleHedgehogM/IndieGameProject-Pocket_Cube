@@ -22308,17 +22308,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1327906273 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7428453003127315647, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-  m_PrefabInstance: {fileID: 1530679782}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1417162931
 GameObject:
   m_ObjectHideFlags: 0
@@ -27650,10 +27639,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 435960496720611138, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: settingBtn
-      value: 
-      objectReference: {fileID: 1327906273}
     - target: {fileID: 1362159075319126589, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.060739875
@@ -27694,46 +27679,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2298299116781315061, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -130
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066931505674216725, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -75
-      objectReference: {fileID: 0}
     - target: {fileID: 4551154273211956276, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_Name
       value: Level Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 6137028264999746508, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6137028264999746508, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 58d7e7332e3ab3c4dbeed9babec33966, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

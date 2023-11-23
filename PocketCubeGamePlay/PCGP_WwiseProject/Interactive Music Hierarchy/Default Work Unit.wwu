@@ -673,7 +673,7 @@
 						</MusicPlaylistItem>
 					</Playlist>
 				</MusicPlaylistContainer>
-				<MusicPlaylistContainer Name="MerryGoRound" ID="{EF353701-B6E7-4C2B-BA95-87F4B764B1EC}" ShortID="506565523">
+				<MusicPlaylistContainer Name="Fourier" ID="{EF353701-B6E7-4C2B-BA95-87F4B764B1EC}" ShortID="506565523">
 					<PropertyList>
 						<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
 						<Property Name="GridOffsetPreset" Type="int16" Value="1"/>
@@ -691,11 +691,6 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-21</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -706,7 +701,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="MerryGoRoundMusic" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}" ShortID="999524716">
+						<MusicSegment Name="Fourier" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}" ShortID="999524716">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="291624"/>
 								<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
@@ -722,23 +717,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="How to make an Amazing Merry Go Round from Cardboard - Just5mins-1" ID="{7453EFF8-6E11-46F3-B467-F7CEC59E2AF7}" ShortID="568656493">
+								<MusicTrack Name="Fourier_loop" ID="{E3323AB5-0F7A-4A26-8E6C-BDA3B6CDFE35}" ShortID="640556333">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="How to make an Amazing Merry Go Round from Cardboard - Just5mins-1" ID="{FACA76C5-6350-464F-B82C-536334A315B3}">
+										<AudioFileSource Name="傅里叶棋盘_loop" ID="{B1792BD4-E8F9-496C-9646-95761CEC133E}">
 											<Language>SFX</Language>
-											<AudioFile>How to make an Amazing Merry Go Round from Cardboard - Just5mins-1.wav</AudioFile>
+											<AudioFile>傅里叶棋盘_loop.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="701432904"/>
+												<MediaID ID="1034677683"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{E4AEE9DE-175D-4A9A-A0EE-FECD597BA149}">
+										<MusicTransition Name="Root" ID="{16100C81-0454-413A-8EF9-614045F900B3}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -749,18 +744,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{9912E25E-2364-4B15-82AE-3505914DDAC5}">
+													<MusicTrackSequence Name="" ID="{1BC8C658-A85D-4084-B698-5E75D9A5AB56}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="How to make an Amazing Merry Go Round from Cardboard - Just5mins-1" ID="{A6F5863D-77D5-40E9-8449-7767D7E8CD4B}">
+																		<MusicClip Name="傅里叶棋盘_loop" ID="{41ABE358-B869-43D6-A4F3-F5F6578DF4BB}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="156000"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="How to make an Amazing Merry Go Round from Cardboard - Just5mins-1" ID="{FACA76C5-6350-464F-B82C-536334A315B3}"/>
+																			<AudioSourceRef Name="傅里叶棋盘_loop" ID="{B1792BD4-E8F9-496C-9646-95761CEC133E}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -785,7 +780,7 @@
 											<MusicCue Name="Exit Cue" ID="{036E7A44-28E2-4A8C-91D8-D5BAAAA84163}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="12000"/>
+													<Property Name="TimeMs" Type="Real64" Value="156000"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -795,7 +790,7 @@
 											<MusicCue Name="" ID="{58D66031-B290-40F6-9539-25D8184F7E0E}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="3000"/>
+													<Property Name="TimeMs" Type="Real64" Value="4500"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -815,7 +810,7 @@
 											<MusicCue Name="" ID="{1592BC20-6F29-443E-85AA-773FFE92AF2C}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="9000"/>
+													<Property Name="TimeMs" Type="Real64" Value="18000"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -857,7 +852,7 @@
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
-									<SegmentRef Name="MerryGoRoundMusic" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}"/>
+									<SegmentRef Name="Fourier" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>

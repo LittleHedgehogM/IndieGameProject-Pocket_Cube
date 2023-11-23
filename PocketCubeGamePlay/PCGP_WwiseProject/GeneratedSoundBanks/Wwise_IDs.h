@@ -32,6 +32,7 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
+        static const AkUniqueID PLAY_FOURIER = 2720351442U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
@@ -41,7 +42,6 @@ namespace AK
         static const AkUniqueID PLAY_MAIN_CLICK01 = 905487977U;
         static const AkUniqueID PLAY_MAIN_CLICK02 = 905487978U;
         static const AkUniqueID PLAY_MAIN_HOVER = 3712401318U;
-        static const AkUniqueID PLAY_MERRYGOROUNDMUSIC = 3155709310U;
         static const AkUniqueID PLAY_MID_UNLOCK = 928358091U;
         static const AkUniqueID PLAY_MOVE_LOOP = 3382199950U;
         static const AkUniqueID PLAY_NEWTON_ENVIRONMENT = 2419270649U;
@@ -59,8 +59,8 @@ namespace AK
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
+        static const AkUniqueID STOP_FOURIER = 2908913188U;
         static const AkUniqueID STOP_LEVEL3_MUSIC = 3042334185U;
-        static const AkUniqueID STOP_MERRYGOROUNDMUSIC = 3379697116U;
         static const AkUniqueID STOP_MOVE_LOOP = 1423719756U;
     } // namespace EVENTS
 
