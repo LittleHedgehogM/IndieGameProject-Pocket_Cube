@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{BD3E46EF-5F2F-0321-D2A4-CA8802E57368}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{65708FA2-1512-4DD8-F78A-72F8095AA59E}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -96,10 +96,26 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{21A70980-76F0-12A2-FE98-466BB50EB50A}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8F35562F-27A4-0E24-1473-8A821E9B54BC}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
+				<File Id="56359378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_roll01.wav</ShortName>
+					<CachePath>SFX/UI_roll01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="312476759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_turn02.wav</ShortName>
+					<CachePath>SFX/UI_turn02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="322749515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_turn01.wav</ShortName>
+					<CachePath>SFX/UI_turn01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="335589814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_roll02.wav</ShortName>
+					<CachePath>SFX/UI_roll02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="915713439" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>box_click.wav</ShortName>
 					<CachePath>SFX/box_click_10C4C929.wem</CachePath>
@@ -109,6 +125,18 @@
 				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="1.5695012" DurationMax="1.5695012">
 					<MediaRefs>
 						<MediaRef Id="915713439"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.54226756" DurationMax="0.6252834">
+					<MediaRefs>
+						<MediaRef Id="56359378"/>
+						<MediaRef Id="335589814"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="245126902" Name="Play_UI_turn" DurationType="OneShot" DurationMin="0.30521542" DurationMax="0.40907028">
+					<MediaRefs>
+						<MediaRef Id="312476759"/>
+						<MediaRef Id="322749515"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -437,7 +465,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{AF3D2863-1127-A55C-FED3-8FDEA52E8471}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{359BF155-7B74-66B8-CC91-694F2FFEE837}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -546,5 +574,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C9165087-3162-4845-6ADC-8A12A487B5CA}</FileHash>
+	<FileHash>{2C144D15-1873-036E-C6BE-1888314CB36D}</FileHash>
 </SoundBanksInfo>

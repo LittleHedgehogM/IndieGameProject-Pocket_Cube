@@ -54,6 +54,8 @@ namespace AK
         static const AkUniqueID PLAY_SHINE = 3162051019U;
         static const AkUniqueID PLAY_SIDE_UNLOCK01 = 2931672207U;
         static const AkUniqueID PLAY_SIDE_UNLOCK02 = 2931672204U;
+        static const AkUniqueID PLAY_UI_ROLL = 2857954946U;
+        static const AkUniqueID PLAY_UI_TURN = 245126902U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
