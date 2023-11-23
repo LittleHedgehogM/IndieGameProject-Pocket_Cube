@@ -131,8 +131,7 @@ public abstract class SkillManager : MonoBehaviour
             {
 
 
-                // Add Audio Select First Cube
-                AkSoundEngine.PostEvent("Play_cube_skillclick01", gameObject);
+                
 
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
 
@@ -168,9 +167,11 @@ public abstract class SkillManager : MonoBehaviour
                     {
                         myCameraController.SetTargetCameraToFront();
                     }
-
+                    // Add Audio Select First Cube
+                    AkSoundEngine.PostEvent("Play_cube_skillclick01", gameObject);
                     // highlight
                     StartCoroutine(myCameraController.CameraTranslate());
+
                     currentState = SkillState.TranslateCamera;
                 }
 
@@ -192,8 +193,7 @@ public abstract class SkillManager : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
 
-                // Add Audio Select Second Cube
-                AkSoundEngine.PostEvent("Play_cube_skillclick02", gameObject);
+                
 
                 GameObject faceHit = SelectFace.GetMouseRayHitFace(Input.mousePosition);
 
@@ -211,7 +211,8 @@ public abstract class SkillManager : MonoBehaviour
                         endPos       = SecondCubeHit.transform.position;
                         startScale   = FirstCubeHit.transform.localScale;
                         CubePieceOutlineController.enableOutline(SecondCubeHit);
-
+                        // Add Audio Select Second Cube
+                        AkSoundEngine.PostEvent("Play_cube_skillclick02", gameObject);
                         StartCoroutine(startAnimation());
 
                     }
