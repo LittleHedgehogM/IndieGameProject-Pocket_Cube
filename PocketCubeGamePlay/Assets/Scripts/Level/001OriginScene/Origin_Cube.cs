@@ -50,6 +50,8 @@ public class Origin_Cube : MonoBehaviour
             //cursorController.setNormalCursor();
             isEnabled = false;
             CubeClicked?.Invoke();
+            // click cube
+            AkSoundEngine.PostEvent("Play_box_click", gameObject);
         }
     }
 }

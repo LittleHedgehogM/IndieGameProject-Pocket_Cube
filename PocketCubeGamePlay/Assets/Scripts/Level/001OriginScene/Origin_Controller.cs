@@ -174,6 +174,9 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator InitPhaseTwo()
     {
+        // unlock green face audio
+        AkSoundEngine.PostEvent("Play_unlock01", gameObject);
+
         myVFXController.playRotationVFXAt(Sphere.transform);
         leftAxis.setActive(false);
         rightAxis.setActive(false);
@@ -194,6 +197,8 @@ public class Origin_Controller : MonoBehaviour
 
     private IEnumerator InitPhaseThree()
     {
+        // unlock green face audio
+        AkSoundEngine.PostEvent("Play_unlock01", gameObject);
         myVFXController.playRotationVFXAt(Sphere.transform);
         yield return new WaitForSeconds(1.5f);
 
