@@ -46,31 +46,53 @@ public class SubtitleController : MonoBehaviour
     {
         EnableSubtitle();
         testText.text = subtitle_sequence[0];
-        await Task.Delay(4000);
-        testText.text = subtitle_sequence[1];
+        try
+        {
+            await Task.Delay(4000);
+            testText.text = subtitle_sequence[1];
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
     }
 
     async void LoadTutorialGuide()
     {
         testText.text = subtitle_sequence[2];
-        await Task.Delay(6000);
-        testText.text = subtitle_sequence[3];
-        await Task.Delay(8000);
-        DisableSubtitle();
+        try
+        {
+            await Task.Delay(6000);
+            testText.text = subtitle_sequence[3];
+            await Task.Delay(8000);
+            DisableSubtitle();
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
     }
 
     async void LoadCubeShow()
     {
         EnableSubtitle();
         testText.text = subtitle_sequence[4];
-        await Task.Delay(6000);
-        testText.text = subtitle_sequence[5];
-        await Task.Delay(9000);
-        DisableSubtitle();
+        try
+        {
+            await Task.Delay(6000);
+            testText.text = subtitle_sequence[5];
+            await Task.Delay(9000);
+            DisableSubtitle();
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+
         //EndofSubtitle();
     }
 
-    async void LoadCubeSolved()
+    /*async void LoadCubeSolved()
     {
         EnableSubtitle();
         testText.text = subtitle_sequence[6];
@@ -78,27 +100,41 @@ public class SubtitleController : MonoBehaviour
         testText.text = subtitle_sequence[7];
         await Task.Delay(10000);
         DisableSubtitle();
-    }
+    }*/
 
     void EnableSubtitle()
     {
-        var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
-        var imgLayer = this.GetComponentInChildren<Image>();
+        try
+        {
+            var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+            var imgLayer = this.GetComponentInChildren<Image>();
 
-        imgLayer.enabled = true;
-        textLayer.enabled = true;
+            imgLayer.enabled = true;
+            textLayer.enabled = true;
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
     }
 
     void DisableSubtitle()
     {
-        var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
-        var imgLayer = this.GetComponentInChildren<Image>();
+        try
+        {
+            var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+            var imgLayer = this.GetComponentInChildren<Image>();
 
-        imgLayer.enabled = false;
-        textLayer.enabled = false;
+            imgLayer.enabled = false;
+            textLayer.enabled = false;
+        }
+        catch(Exception e)
+        {
+            Debug.LogException(e);
+        }
     }
 
-    void EndofSubtitle()
+    /*void EndofSubtitle()
     {
         var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
         var imgLayer = this.GetComponentInChildren<Image>();
@@ -106,5 +142,5 @@ public class SubtitleController : MonoBehaviour
         Destroy(imgLayer);
         Destroy(textLayer);
         Destroy(this);
-    }
+    }*/
 }
