@@ -67,7 +67,7 @@ public class SubtitleController : MonoBehaviour
         testText.text = subtitle_sequence[5];
         await Task.Delay(9000);
         DisableSubtitle();
-        EndofSubtitle();
+        //EndofSubtitle();
     }
 
     async void LoadCubeSolved()
