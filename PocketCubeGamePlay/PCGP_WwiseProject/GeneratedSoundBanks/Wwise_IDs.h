@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_ROLL = 2377298701U;
         static const AkUniqueID PLAY_CUBE_SKILLCLICK01 = 3603099912U;
         static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
+        static const AkUniqueID PLAY_ELE_BGM = 2654027537U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_FOURIER = 2720351442U;
@@ -38,7 +39,6 @@ namespace AK
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
-        static const AkUniqueID PLAY_LEVEL3_MUSIC = 2158818887U;
         static const AkUniqueID PLAY_MAIN_CLICK01 = 905487977U;
         static const AkUniqueID PLAY_MAIN_CLICK02 = 905487978U;
         static const AkUniqueID PLAY_MAIN_HOVER = 3712401318U;
@@ -60,9 +60,28 @@ namespace AK
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
         static const AkUniqueID STOP_FOURIER = 2908913188U;
-        static const AkUniqueID STOP_LEVEL3_MUSIC = 3042334185U;
         static const AkUniqueID STOP_MOVE_LOOP = 1423719756U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace FOURIERPHASE
+        {
+            static const AkUniqueID GROUP = 3207373244U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PHASE_00 = 2002117581U;
+                static const AkUniqueID PHASE_01 = 2002117580U;
+                static const AkUniqueID PHASE_02 = 2002117583U;
+                static const AkUniqueID PHASE_03 = 2002117582U;
+                static const AkUniqueID PHASE_04 = 2002117577U;
+                static const AkUniqueID PHASE_05 = 2002117576U;
+            } // namespace STATE
+        } // namespace FOURIERPHASE
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {
@@ -82,7 +101,6 @@ namespace AK
         static const AkUniqueID LEVEL2 = 2678230381U;
         static const AkUniqueID LEVEL3 = 2678230380U;
         static const AkUniqueID MAIN = 3161908922U;
-        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BANKS

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585008946025811346
+    m_lastTime: -8585008658555116160
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -140,7 +140,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585009023617593998
+    m_lastTime: -8585008165970289611
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -240,20 +240,6 @@ MonoBehaviour:
         ObjectType: 7
         guid: 256fb9462e4ea348ae7b3de3972ca7f7
       Path: SoundBanks\Default Work Unit\Main
-    - name: Music
-      guid: 72b90f01b2d8bd4aa33e56babe15c7b4
-      id: 3991942870
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 229d856017c3f84a992874c52206f964
-      - ElementName: Music
-        ObjectType: 7
-        guid: 72b90f01b2d8bd4aa33e56babe15c7b4
-      Path: SoundBanks\Default Work Unit\Music
     - name: Player
       guid: 5caf56b05e623e4dad9e3e5e10ff5b10
       id: 1069431850
@@ -294,7 +280,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585008676610901611
+    m_lastTime: -8585008192271148925
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -378,23 +364,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: dce4b9bd9ddc794abae644e24d3674e1
       Path: Events\Default Work Unit\Main
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Music
-      guid: b75acd2ff03c5d4e86170657789cdf92
-      id: 3991942870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Music
-        ObjectType: 4
-        guid: b75acd2ff03c5d4e86170657789cdf92
-      Path: Events\Default Work Unit\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -638,6 +607,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.9375057
       minDuration: 1.9375057
+    - name: Play_ELE_BGM
+      guid: 250ee2618be025438c96be10d0f4df6f
+      id: 2654027537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_ELE_BGM
+        ObjectType: 3
+        guid: 250ee2618be025438c96be10d0f4df6f
+      Path: Events\Default Work Unit\Level2\Play_ELE_BGM
+      maxAttenuation: 0
+      maxDuration: 106.8
+      minDuration: 106.8
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
@@ -678,26 +667,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.630499
       minDuration: 5.630499
-    - name: Play_Level3_Music
-      guid: 01516b3516bfc04b918e6831e702c30b
-      id: 2158818887
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Music
-        ObjectType: 4
-        guid: b75acd2ff03c5d4e86170657789cdf92
-      - ElementName: Play_Level3_Music
-        ObjectType: 3
-        guid: 01516b3516bfc04b918e6831e702c30b
-      Path: Events\Default Work Unit\Music\Play_Level3_Music
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_Main_Click01
       guid: 3595952719948d439c732ec6416daf5d
       id: 905487977
@@ -828,13 +797,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Music
+      - ElementName: Level0
         ObjectType: 4
-        guid: b75acd2ff03c5d4e86170657789cdf92
+        guid: 29439f5955f5584a9f65725dc1cb0a17
       - ElementName: Play_Opening
         ObjectType: 3
         guid: 18fab525dd5a364fac2af77087c3c686
-      Path: Events\Default Work Unit\Music\Play_Opening
+      Path: Events\Default Work Unit\Level0\Play_Opening
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1075,26 +1044,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_Level3_Music
-      guid: 3d5f0a78cdc2aa42bbe6432443c63145
-      id: 3042334185
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Music
-        ObjectType: 4
-        guid: b75acd2ff03c5d4e86170657789cdf92
-      - ElementName: Stop_Level3_Music
-        ObjectType: 3
-        guid: 3d5f0a78cdc2aa42bbe6432443c63145
-      Path: Events\Default Work Unit\Music\Stop_Level3_Music
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Stop_Move_Loop
       guid: 6e44202eb6018048a13b1cd06146a423
       id: 1423719756
@@ -1143,7 +1092,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585009740929979885
+    m_lastTime: -8585009710760205634
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1309,7 +1258,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585009740929815967
+    m_lastTime: -8585008199284619113
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1325,6 +1274,40 @@ MonoBehaviour:
         ObjectType: 3
         guid: f8630d3a8f475143a5f76be40e846b59
       Path: Events\Level3\Hit_Record
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fourier
+      guid: f50017166d9cad4db2dab04087257f9f
+      id: 2720351442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_Fourier
+        ObjectType: 3
+        guid: f50017166d9cad4db2dab04087257f9f
+      Path: Events\Level3\Play_Fourier
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fourier_Music
+      guid: 10d5f4d6c4cd1a4e9132b8f1aefc85af
+      id: 350874706
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 2c511cbffc8fd94cb802f2451468e7f2
+      - ElementName: Play_Fourier_Music
+        ObjectType: 3
+        guid: 10d5f4d6c4cd1a4e9132b8f1aefc85af
+      Path: Events\Level3\Play_Fourier_Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1379,26 +1362,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.3252789
       minDuration: 1.2151191
-    - name: Play_MerryGoRoundMusic
-      guid: f50017166d9cad4db2dab04087257f9f
-      id: 3155709310
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level3
-        ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
-      - ElementName: Play_MerryGoRoundMusic
-        ObjectType: 3
-        guid: f50017166d9cad4db2dab04087257f9f
-      Path: Events\Level3\Play_MerryGoRoundMusic
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stop_MerryGoRoundMusic
+    - name: Stop_Fourier
       guid: 833644aeb934234b87a425513f4490b4
-      id: 3379697116
+      id: 2908913188
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1406,10 +1372,10 @@ MonoBehaviour:
       - ElementName: Level3
         ObjectType: 12
         guid: 2c511cbffc8fd94cb802f2451468e7f2
-      - ElementName: Stop_MerryGoRoundMusic
+      - ElementName: Stop_Fourier
         ObjectType: 3
         guid: 833644aeb934234b87a425513f4490b4
-      Path: Events\Level3\Stop_MerryGoRoundMusic
+      Path: Events\Level3\Stop_Fourier
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1518,8 +1484,138 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585014628264185393
-    List: []
+    m_lastTime: -8585008207659414269
+    List:
+    - name: FourierPhase
+      guid: a2d9535c6af6314890ef5adc8d67cbaf
+      id: 3207373244
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 551c67d894344d4c9f9422edb33c3b94
+      - ElementName: FourierPhase
+        ObjectType: 9
+        guid: a2d9535c6af6314890ef5adc8d67cbaf
+      Path: States\Default Work Unit\FourierPhase
+      values:
+      - name: None
+        guid: af35f182b65c8f499d74c992db59ec37
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: None
+          ObjectType: 8
+          guid: af35f182b65c8f499d74c992db59ec37
+      - name: phase_00
+        guid: 779b4fe26aecf146b98d742a26694ca4
+        id: 2002117581
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_00
+          ObjectType: 8
+          guid: 779b4fe26aecf146b98d742a26694ca4
+      - name: phase_01
+        guid: daa4b62b261bd34a92fc52370e51a891
+        id: 2002117580
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_01
+          ObjectType: 8
+          guid: daa4b62b261bd34a92fc52370e51a891
+      - name: phase_02
+        guid: 71c7756e3d5a854ebd97af77b564f7ae
+        id: 2002117583
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_02
+          ObjectType: 8
+          guid: 71c7756e3d5a854ebd97af77b564f7ae
+      - name: phase_03
+        guid: b0c1d499d24f4641b726499118a2713c
+        id: 2002117582
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_03
+          ObjectType: 8
+          guid: b0c1d499d24f4641b726499118a2713c
+      - name: phase_04
+        guid: bfcdf35de0022349be3b7e8d39e5d034
+        id: 2002117577
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_04
+          ObjectType: 8
+          guid: bfcdf35de0022349be3b7e8d39e5d034
+      - name: phase_05
+        guid: fc4608c5e930a94caea49f72e9d20d1c
+        id: 2002117576
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_05
+          ObjectType: 8
+          guid: fc4608c5e930a94caea49f72e9d20d1c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1549,7 +1645,7 @@ MonoBehaviour:
     m_lastTime: -8585014628264120910
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000002300000024000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

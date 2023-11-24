@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D8671C55-3494-4C4D-9F94-22EDB33C3B94}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{D8671C55-3494-4C4D-9F94-22EDB33C3B94}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D8671C55-3494-4C4D-9F94-22EDB33C3B94}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="FourierPhase" ID="{5C53D9A2-F66A-4831-90EF-5ADC8D67CBAF}">
+					<ChildrenList>
+						<State Name="None" ID="{82F135AF-5CB6-498F-9D74-C992DB59EC37}"/>
+						<State Name="phase_00" ID="{E24F9B77-EC6A-46F1-B98D-742A26694CA4}"/>
+						<State Name="phase_01" ID="{2BB6A4DA-1B26-4AD3-92FC-52370E51A891}"/>
+						<State Name="phase_02" ID="{6E75C771-5A3D-4E85-BD97-AF77B564F7AE}"/>
+						<State Name="phase_03" ID="{99D4C1B0-4FD2-4146-B726-499118A2713C}"/>
+						<State Name="phase_04" ID="{5DF3CDBF-02E0-4923-BE3B-7E8D39E5D034}"/>
+						<State Name="phase_05" ID="{C50846FC-30E9-4CA9-AEA4-9F72E9D20D1C}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

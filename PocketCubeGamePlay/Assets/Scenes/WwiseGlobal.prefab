@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7305275727492379789}
   - component: {fileID: 1890763708981440436}
   - component: {fileID: 7492392668437754109}
-  - component: {fileID: 5511729556695930957}
   - component: {fileID: 3369251197271100318}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -96,30 +95,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
---- !u!114 &5511729556695930957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8171565792614017376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b626ff3d70d5b92448f81c24e1750bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 147995278c7b36a4fa2b049300b6d145, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &3369251197271100318
 MonoBehaviour:
   m_ObjectHideFlags: 0

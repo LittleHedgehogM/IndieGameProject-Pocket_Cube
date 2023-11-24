@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F3C2C411-6C45-6D34-2C88-109246489545}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3B047A08-E3BB-FB2D-1C5A-C847AC9C1B78}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -95,6 +95,19 @@
 				<GameParameter Id="2246609544" Name="Music_Vol"/>
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3207373244" Name="FourierPhase">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2002117576" Name="phase_05"/>
+						<State Id="2002117577" Name="phase_04"/>
+						<State Id="2002117580" Name="phase_01"/>
+						<State Id="2002117581" Name="phase_00"/>
+						<State Id="2002117582" Name="phase_03"/>
+						<State Id="2002117583" Name="phase_02"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8F35562F-27A4-0E24-1473-8A821E9B54BC}">
 			<ShortName>UI</ShortName>
@@ -211,7 +224,7 @@
 				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{600FE049-14E0-90B4-5950-0A5926F8802D}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{EDC60704-E89A-DC91-CB49-533DA1D91754}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -222,6 +235,10 @@
 				<File Id="46414968" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock02.wav</ShortName>
 					<CachePath>SFX/Side_Unlock02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="479617910" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ELE.wav</ShortName>
+					<CachePath>SFX/ELE_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
@@ -253,6 +270,11 @@
 				<Event Id="2495038571" Name="Play_Click_lv2" DurationType="OneShot" DurationMin="1.2531519" DurationMax="1.2531519">
 					<MediaRefs>
 						<MediaRef Id="537191680"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2654027537" Name="Play_ELE_BGM" DurationType="OneShot" DurationMin="106.8" DurationMax="106.8">
+					<MediaRefs>
+						<MediaRef Id="479617910"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
@@ -371,7 +393,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{07041D92-5B2E-956A-7649-1086A8344B7B}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{E0607242-769C-2DFE-98CE-91D5A7ABC83C}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -387,6 +409,10 @@
 					<ShortName>roll_long.wav</ShortName>
 					<CachePath>SFX/roll_long_10C4C929.wem</CachePath>
 				</File>
+				<File Id="201197348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Open01.wav</ShortName>
+					<CachePath>SFX/Open01_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="220131361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll02.wav</ShortName>
 					<CachePath>SFX/roll02_10C4C929.wem</CachePath>
@@ -395,8 +421,18 @@
 					<ShortName>unlock01.wav</ShortName>
 					<CachePath>SFX/unlock01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kaichangzhi02.wav</ShortName>
+					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="201197348"/>
+						<MediaRef Id="987084990"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3470104452" Name="Play_reduce" DurationType="OneShot" DurationMin="5.102086" DurationMax="5.102086">
 					<MediaRefs>
 						<MediaRef Id="5423351"/>
@@ -463,38 +499,6 @@
 						<MediaRef Id="503180703"/>
 					</MediaRefs>
 				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{359BF155-7B74-66B8-CC91-694F2FFEE837}">
-			<ShortName>Music</ShortName>
-			<Path>Music.bnk</Path>
-			<Media>
-				<File Id="201197348" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Open01.wav</ShortName>
-					<CachePath>SFX/Open01_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="217342985" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level 3 Demo.wav</ShortName>
-					<CachePath>SFX/Level 3 Demo_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>kaichangzhi02.wav</ShortName>
-					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2158818887" Name="Play_Level3_Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="217342985"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="201197348"/>
-						<MediaRef Id="987084990"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3042334185" Name="Stop_Level3_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{BEFD46AA-4651-3CA8-D129-F1210F050F9B}">
@@ -579,5 +583,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CDAD109A-82EC-9D94-69A0-086ECE1EA477}</FileHash>
+	<FileHash>{8BABB07F-4309-8E6C-CEF4-70D74D5ECE82}</FileHash>
 </SoundBanksInfo>

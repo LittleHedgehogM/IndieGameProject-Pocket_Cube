@@ -75,6 +75,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Fourier_Music" ID="{D6F4D510-CDC4-4E1A-9132-B8F1AEFC85AF}">
+					<ChildrenList>
+						<Action Name="" ID="{FC9B22A3-6BB9-4F6E-8E0E-D1EC04C30483}" ShortID="696193920">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{92AB6245-75B7-44C3-8775-0D39A714A1D8}" ShortID="487014624">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fourier Music" ID="{4750F57B-323D-4871-A731-0121DE17AFC4}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
