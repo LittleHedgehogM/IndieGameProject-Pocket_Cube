@@ -48,23 +48,49 @@ public class SubtitleController : MonoBehaviour
         testText.text = subtitle_sequence[0];
         try
         {
-            await Task.Delay(4000);
+            await Task.Delay(6000);
             testText.text = subtitle_sequence[1];
         }
         catch (Exception e)
         {
             Debug.LogException(e);
         }
+        try
+        {
+            await Task.Delay(6000);
+            DisableSubtitle();
+        }
+        catch(Exception e)
+        {
+
+        }
+
     }
 
     async void LoadTutorialGuide()
     {
+        EnableSubtitle();
         testText.text = subtitle_sequence[2];
         try
         {
             await Task.Delay(6000);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+        try
+        {
             testText.text = subtitle_sequence[3];
             await Task.Delay(8000);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+
+        try
+        {
             DisableSubtitle();
         }
         catch (Exception e)
@@ -81,7 +107,13 @@ public class SubtitleController : MonoBehaviour
         {
             await Task.Delay(6000);
             testText.text = subtitle_sequence[5];
-            await Task.Delay(9000);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+        try {
+            await Task.Delay(8000);
             DisableSubtitle();
         }
         catch (Exception e)
