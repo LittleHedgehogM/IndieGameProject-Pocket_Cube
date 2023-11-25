@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Newton_002
+  m_Name: MA_Fourier_Round_DarkPurple 2
   m_Shader: {fileID: 4800000, guid: 229a5923b6714444387fdd2bbe031178, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -73,11 +73,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: df2bad5f2f660604eb5627fdab9245e1, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: 9138feb8dc43c494395caba74376a3a5, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
         m_Texture: {fileID: 2800000, guid: 9fb015b33574ef74eae24849a3c3e563, type: 3}
@@ -131,14 +131,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeighRatioInPut: 1.5
+    - _HeighRatioInPut: 0
     - _Metallic: 0
     - _Mode: 0
     - _N_BaseCellOffset001: 2
     - _N_BaseCellOffset002: 1
     - _NormalScale: 0.5
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.014
+    - _OutlineWidth: 0
     - _OutlineWidth1: 0.077176474
     - _Parallax: 0.02
     - _R_BaseCellOffset: 1.8764074
@@ -171,8 +171,8 @@ Material:
     - _OutlineTint: {r: 1, g: 1, b: 1, a: 0}
     - _Reflect02: {r: 0.5255118, g: 0.43529412, b: 0.6509804, a: 1}
     - _ReflectOff01: {r: 0.35570186, g: 0.4334, b: 0.5188679, a: 1}
-    - _diffusegradient01: {r: 0.46873137, g: 0.7705918, b: 0.9433962, a: 1}
-    - _diffusegradient02: {r: 0, g: 0.4355662, b: 0.764151, a: 1}
+    - _diffusegradient01: {r: 0.5372549, g: 0.93725497, b: 1, a: 1}
+    - _diffusegradient02: {r: 0.8459119, g: 0.9779874, b: 1, a: 1}
     - _diffusegradient2: {r: 0.7169812, g: 0.32896787, b: 0, a: 1}
     - _outlinecolor: {r: 0.3207547, g: 0.25620028, b: 0.25620028, a: 1}
   m_BuildTextureStacks: []
