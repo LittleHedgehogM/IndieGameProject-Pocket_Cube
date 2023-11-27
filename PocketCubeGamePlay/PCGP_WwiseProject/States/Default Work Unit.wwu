@@ -14,6 +14,12 @@
 						<State Name="phase_05" ID="{C50846FC-30E9-4CA9-AEA4-9F72E9D20D1C}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="ELE" ID="{FD773182-8ECC-46BF-807E-499DAE36CE3F}">
+					<ChildrenList>
+						<State Name="None" ID="{F1822FD1-248D-4A02-AE36-8E509278E41E}"/>
+						<State Name="P2" ID="{C9F4A1A1-F7C3-4953-ADCE-09FD5F84BEEF}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

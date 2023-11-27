@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0133F154-0E52-7EAE-9F0E-D189A4AA294D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{97A48C8B-63E2-3011-4409-7367B77FBDFF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -96,6 +96,12 @@
 				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="563281699" Name="ELE">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1635194255" Name="P2"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3207373244" Name="FourierPhase">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -108,6 +114,20 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="6529029" Name="ELE_Cube">
+					<Switches>
+						<Switch Id="930712164" Name="Off"/>
+						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1533533912" Name="ELE_BGM">
+					<Switches>
+						<Switch Id="1125500713" Name="Intro"/>
+						<Switch Id="4184794294" Name="Outro"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8F35562F-27A4-0E24-1473-8A821E9B54BC}">
 			<ShortName>UI</ShortName>
@@ -224,7 +244,7 @@
 				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{EDC60704-E89A-DC91-CB49-533DA1D91754}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{02F9F17D-D730-6C0C-6137-D1158B8528D7}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -236,9 +256,17 @@
 					<ShortName>Side_Unlock02.wav</ShortName>
 					<CachePath>SFX/Side_Unlock02_10C4C929.wem</CachePath>
 				</File>
-				<File Id="479617910" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ELE.wav</ShortName>
-					<CachePath>SFX/ELE_D79FB2B7.wem</CachePath>
+				<File Id="97900267" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>电磁 ver2  layer2.wav</ShortName>
+					<CachePath>SFX/电磁 ver2  layer2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="206351303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>电磁_intro.wav</ShortName>
+					<CachePath>SFX/电磁_intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="287942534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>电磁_main loop.wav</ShortName>
+					<CachePath>SFX/电磁_main loop_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
@@ -247,6 +275,10 @@
 				<File Id="574144294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock01.wav</ShortName>
 					<CachePath>SFX/Side_Unlock01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="721466819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>电磁_outro.wav</ShortName>
+					<CachePath>SFX/电磁_outro_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="800172585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>光照射.wav</ShortName>
@@ -272,10 +304,23 @@
 						<MediaRef Id="537191680"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2654027537" Name="Play_ELE_BGM" DurationType="OneShot" DurationMin="106.8" DurationMax="106.8">
-					<MediaRefs>
-						<MediaRef Id="479617910"/>
-					</MediaRefs>
+				<Event Id="2654027537" Name="Play_ELE_BGM" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533533912" Id="1125500713"/>
+							<MediaRefs>
+								<MediaRef Id="97900267"/>
+								<MediaRef Id="206351303"/>
+								<MediaRef Id="287942534"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533533912" Id="4184794294"/>
+							<MediaRefs>
+								<MediaRef Id="721466819"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
 					<MediaRefs>
@@ -303,6 +348,20 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="6529029" Name="ELE_Cube">
+					<Switches>
+						<Switch Id="930712164" Name="Off"/>
+						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1533533912" Name="ELE_BGM">
+					<Switches>
+						<Switch Id="1125500713" Name="Intro"/>
+						<Switch Id="4184794294" Name="Outro"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{E5A3A786-E5E5-1BFD-0A44-3D4EB54DDD3D}">
 			<ShortName>Level1</ShortName>
@@ -584,5 +643,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{64CF47A5-B54D-313D-175A-B3EBDE54FEE2}</FileHash>
+	<FileHash>{AC5297FE-A8AB-C1C2-E3C7-C1A78CB2C262}</FileHash>
 </SoundBanksInfo>

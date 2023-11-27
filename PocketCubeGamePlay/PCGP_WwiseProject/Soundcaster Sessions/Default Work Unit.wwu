@@ -48,6 +48,10 @@
 							<ObjectRef Name="Play_Opening" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_ELE_BGM" ID="{FEA5D591-5037-4E92-8C52-1A278691DC49}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -64,9 +68,13 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{F1822FD1-248D-4A02-AE36-8E509278E41E}"/>
 						<CurrentStateRef Name="None" ID="{82F135AF-5CB6-498F-9D74-C992DB59EC37}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Intro" ID="{F269E7A3-6CC2-460C-89E9-E734BA31AFC4}"/>
+						<CurrentSwitchRef Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

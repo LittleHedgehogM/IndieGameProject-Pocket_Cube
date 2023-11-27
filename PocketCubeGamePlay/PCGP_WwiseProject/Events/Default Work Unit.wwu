@@ -82,12 +82,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_ELE_BGM" ID="{61E20E25-E08B-4325-8C96-BE10D0F4DF6F}">
+						<Event Name="Play_ELE_BGM" ID="{FEA5D591-5037-4E92-8C52-1A278691DC49}">
 							<ChildrenList>
-								<Action Name="" ID="{56C942E8-12BE-439C-A197-B706E8DBD91A}" ShortID="436681673">
+								<Action Name="" ID="{63D5D540-4DE6-4653-91D7-0B4EDE8E874E}" ShortID="579960815">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -95,10 +94,24 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{52C98A98-6108-4D5B-9375-92A7FE17F77E}" ShortID="367508000">
+								<Action Name="" ID="{F9B1CA7C-E8A7-47B1-821F-860F090FE1C7}" ShortID="284580408">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ELE" ID="{C4474FED-F852-46F0-B949-D0F813A00B49}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
+											<ObjectRef Name="ELE_BGM" ID="{26524DA4-46ED-4602-8B23-334C1B205930}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Set_ELE_Drum_On" ID="{3B9A71BC-6BFE-4424-956B-35BA02C0BC53}">
+							<ChildrenList>
+								<Action Name="" ID="{D0E11242-884D-41B0-A33E-D81BA41FC76C}" ShortID="835790619">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

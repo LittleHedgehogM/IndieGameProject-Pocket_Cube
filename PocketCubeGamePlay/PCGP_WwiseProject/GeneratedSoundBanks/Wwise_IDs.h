@@ -66,6 +66,17 @@ namespace AK
 
     namespace STATES
     {
+        namespace ELE
+        {
+            static const AkUniqueID GROUP = 563281699U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID P2 = 1635194255U;
+            } // namespace STATE
+        } // namespace ELE
+
         namespace FOURIERPHASE
         {
             static const AkUniqueID GROUP = 3207373244U;
@@ -83,6 +94,32 @@ namespace AK
         } // namespace FOURIERPHASE
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace ELE_BGM
+        {
+            static const AkUniqueID GROUP = 1533533912U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID INTRO = 1125500713U;
+                static const AkUniqueID OUTRO = 4184794294U;
+            } // namespace SWITCH
+        } // namespace ELE_BGM
+
+        namespace ELE_CUBE
+        {
+            static const AkUniqueID GROUP = 6529029U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace SWITCH
+        } // namespace ELE_CUBE
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

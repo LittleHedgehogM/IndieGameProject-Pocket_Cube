@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="ELE_BGM" ID="{5EB72331-1C32-4134-B2FA-0B3363D32102}">
+					<ChildrenList>
+						<Switch Name="Intro" ID="{F269E7A3-6CC2-460C-89E9-E734BA31AFC4}"/>
+						<Switch Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="ELE_Cube" ID="{1C5C6F9A-A4C7-4C7C-9849-BB9009587FB1}">
+					<ChildrenList>
+						<Switch Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}"/>
+						<Switch Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
