@@ -36,7 +36,7 @@ public class SwipeFaceManager : MonoBehaviour
     SwipeState currentSwipeState;
 
     public static event Action onSwipeFinished;
-
+    public static event Action SwipeException;
     // Start is called before the first frame update
     void Start()
     {
@@ -171,20 +171,30 @@ public class SwipeFaceManager : MonoBehaviour
             float deltaDegree = degree - CurrentSwipeDegree;
             CurrentSwipeDegree = degree;
 
-            foreach (GameObject cube in CurrentSwipeFace)
+            try
             {
-                cube.transform.RotateAround(this.transform.position, CurrentSwipeAxis, isCurrentSwipeClockWise ? deltaDegree : -deltaDegree);
+                foreach (GameObject cube in CurrentSwipeFace)
+                {
+                    cube.transform.RotateAround(this.transform.position, CurrentSwipeAxis, isCurrentSwipeClockWise ? deltaDegree : -deltaDegree);
+                }
+                if (t >=1 )
+                {
+
+                    RoundUpPositions();
+                    currentSwipeState = SwipeState.FinishSwipe;
+                }
             }
+            catch(Exception e)
+            {
+                // exception
+                SwipeException?.Invoke();
+                Debug.LogException(e);
+                ResetValues();
+                currentSwipeState = SwipeState.WaitForSwipe;
+            }
+            
             // CurrentSwipeDegree += deltaDegree;
-            if (t >=1 )
-            {
-
-                RoundUpPositions();
-                currentSwipeState = SwipeState.FinishSwipe;
-                
-
-
-            }
+            
         }
         else if (currentSwipeState == SwipeState.FinishSwipe)
         {
@@ -310,7 +320,7 @@ public class SwipeFaceManager : MonoBehaviour
 
     public bool isValidSwipe(Vector3 currentMouseSwipe)
     {
-        return currentMouseSwipe.sqrMagnitude > 1;
+        return currentMouseSwipe.magnitude > 30;
     }
 
 
