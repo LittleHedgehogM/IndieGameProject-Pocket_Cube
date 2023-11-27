@@ -67,6 +67,7 @@ public class CubeInPlayPhase : GameplayPhase
     private void OnEnable()
     {
         SwipeFaceManager.onSwipeFinished += onAnyCubeStateChanged;
+        SwipeFaceManager.SwipeException += SwipeExceptionHandler;
         RotateWholeCubeManager.onRotateWholeCubeFinished += onRotationFinished;
         DiagonalSkill.onDiagonalFinished += onAnyCubeStateChanged;
         CommutationSkill.onCommutataionFinished += onAnyCubeStateChanged;
@@ -76,9 +77,18 @@ public class CubeInPlayPhase : GameplayPhase
     private void OnDisable()
     {
         SwipeFaceManager.onSwipeFinished -= onAnyCubeStateChanged;
+        SwipeFaceManager.SwipeException -= SwipeExceptionHandler;
         RotateWholeCubeManager.onRotateWholeCubeFinished -= onRotationFinished;
         DiagonalSkill.onDiagonalFinished -= onAnyCubeStateChanged;
         CommutationSkill.onCommutataionFinished -= onAnyCubeStateChanged;
+    }
+
+    private void SwipeExceptionHandler()
+    {
+        if (currentPlayStatus == CubePlayStatus.InSwipe)
+        {
+            currentPlayStatus = CubePlayStatus.WaitForInput;
+        }
     }
 
     private void onAnyCubeStateChanged()
