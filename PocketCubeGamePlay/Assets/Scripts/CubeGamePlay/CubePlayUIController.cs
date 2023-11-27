@@ -391,6 +391,7 @@ public class CubePlayUIController : MonoBehaviour
                 finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
                 yield return null;
             }
+            finishImage.gameObject.transform.localScale = Vector3.zero;
             yield return null;
         
         }
