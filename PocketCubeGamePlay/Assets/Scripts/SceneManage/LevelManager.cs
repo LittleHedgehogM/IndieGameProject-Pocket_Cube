@@ -117,10 +117,6 @@ public class LevelManager : MonoBehaviour
             print("Reached Level" + playerData.level);
         }
 
-
-
-
-
         print("active btn");
         settingBtn.gameObject.SetActive(true);
         print(SceneManager.GetActiveScene().name);

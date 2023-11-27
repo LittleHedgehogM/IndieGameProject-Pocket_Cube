@@ -59,6 +59,7 @@ namespace AK
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
+        static const AkUniqueID STOP_CUBE_FINAL_LOOP = 247134943U;
         static const AkUniqueID STOP_FOURIER = 2908913188U;
         static const AkUniqueID STOP_MOVE_LOOP = 1423719756U;
     } // namespace EVENTS

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using static System.TimeZoneInfo;
 using Button = UnityEngine.UI.Button;
 //using static CubePlayManager;
 
@@ -351,8 +352,10 @@ public class CubePlayUIController : MonoBehaviour
     {
         
         yield return new WaitForSeconds(pre_finishDuration);
+        FinishButton.gameObject.SetActive(true);
+        yield return null;
 
-        if (display_finishDuration > 0) 
+        /*if (display_finishDuration > 0) 
         { 
 
             finishImage.gameObject.SetActive(true);
@@ -362,7 +365,7 @@ public class CubePlayUIController : MonoBehaviour
             float currentTime = 0;
             float translationTime = 0.5f;
             float t = 0;
-            /*show image*/
+            *//*show image*//*
             while (t < 1)
             {
                 currentTime += Time.deltaTime;
@@ -382,7 +385,7 @@ public class CubePlayUIController : MonoBehaviour
             translationTime = 0.5f;
             t = 0;
 
-            /*hide image*/
+            *//*hide image*//*
             while (t < 1)
             {
                 currentTime += Time.deltaTime;
@@ -399,7 +402,100 @@ public class CubePlayUIController : MonoBehaviour
         {
             FinishButton.gameObject.SetActive(true);
             yield return null;
-        }
+        }*/
     }
+
+
+    //
+    [SerializeField] Button FinishInfoBtn;
+    private LevelManager levelManager;
+
+    private void Start()
+    {
+        FinishButton.onClick.AddListener(OnClickFinishButton);
+        FinishInfoBtn.onClick.AddListener(OnClickFinishInfoBtn);
+
+        FinishInfoBtn.gameObject.SetActive(false);
+        levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+    }
+
+    private void OnClickFinishButton()
+    {
+        AkSoundEngine.PostEvent("Play_cube_final_Click", gameObject);
+        FinishButton.gameObject.SetActive(false);
+        StartCoroutine(FinishImageShow());
+    }
+
+    private IEnumerator FinishImageShow()
+    {
+
+            finishImage.gameObject.SetActive(true);
+            finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, 0);
+            float startAlphaVal = 0;
+            float targetAlphaVal = finishAlpha;
+            float currentTime = 0;
+            float translationTime = 0.5f;
+            float t = 0;
+            /*show image*/
+            while (t < 1)
+            {
+                currentTime += Time.deltaTime;
+                t = currentTime / translationTime;
+                float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
+                finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
+                yield return null;
+
+            }
+
+        yield return new WaitForSeconds(display_finishDuration);
+        FinishInfoBtn.gameObject.SetActive(true);
+        yield return null;
+
+    }
+
+    private void OnClickFinishInfoBtn()
+    {
+        AkSoundEngine.PostEvent("Stop_cube_final_loop", gameObject);
+        StartCoroutine(FinishImageHide());    
+    }
+
+    private IEnumerator FinishImageHide()
+    {
+
+        float startAlphaVal = finishAlpha;
+        float targetAlphaVal = 0;
+        float currentTime = 0;
+        float translationTime = 0.5f;
+        float t = 0;
+
+        //*hide image*//*
+        while (t < 1)
+        {
+            currentTime += Time.deltaTime;
+            t = currentTime / translationTime;
+            float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
+            finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
+            yield return null;
+        }
+        finishImage.gameObject.SetActive(false);
+        print("finishImageHide");
+        switch (PlayerPrefs.GetInt("Level"))
+        {
+            case 0:
+                levelManager.LoadScene("NewtonLevel_GPP_Test");
+                break;
+            case 1:
+                levelManager.LoadScene("ELE_GPP Temp");
+                break;
+            case 2:
+                levelManager.LoadScene("Level_Fourier");
+                break;
+            case 3:
+                levelManager.LoadScene("StartGame");
+                break;
+        }
+        yield return null;
+    }
+
 
 }

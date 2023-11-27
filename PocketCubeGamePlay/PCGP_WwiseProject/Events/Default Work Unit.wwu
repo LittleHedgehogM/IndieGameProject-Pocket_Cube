@@ -350,6 +350,22 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_cube_final_loop" ID="{3A51C281-42E1-4ACE-92A7-7A5B53CCABE3}">
+							<ChildrenList>
+								<Action Name="" ID="{48370509-61CC-4AE6-8946-06AC01986A20}" ShortID="53730876">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cube_final_loop" ID="{F8B9239F-8093-4D45-8119-0C3D0FE6E1ED}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main" ID="{BDB9E4DC-DC9D-4A79-BAE6-44E24D3674E1}" ShortID="369500642">

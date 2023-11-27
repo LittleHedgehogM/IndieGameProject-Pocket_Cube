@@ -501,7 +501,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{BEFD46AA-4651-3CA8-D129-F1210F050F9B}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{E81D208D-61EE-1E71-F0B5-9E78F4F0DA31}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -580,8 +580,9 @@
 						<MediaRef Id="703256073"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="247134943" Name="Stop_cube_final_loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B29B7438-20B8-1ADA-417D-E3C2585FACF6}</FileHash>
+	<FileHash>{64CF47A5-B54D-313D-175A-B3EBDE54FEE2}</FileHash>
 </SoundBanksInfo>
