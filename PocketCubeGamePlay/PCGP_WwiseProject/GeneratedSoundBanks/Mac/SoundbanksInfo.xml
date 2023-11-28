@@ -351,10 +351,14 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{90643154-3C58-305E-EADE-BAB86EF967A2}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{D30D72B5-97F0-89AD-FEFB-E86E34E13849}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
+				<File Id="1852256" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 1 Music_LOOP.wav</ShortName>
+					<CachePath>SFX/Level 1 Music_LOOP_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>放上金币.wav</ShortName>
 					<CachePath>SFX/放上金币_10C4C929.wem</CachePath>
@@ -375,13 +379,13 @@
 					<ShortName>拿走.wav</ShortName>
 					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
 				</File>
+				<File Id="489948701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level 1 Music_Start.wav</ShortName>
+					<CachePath>SFX/Level 1 Music_Start_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="557601517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jiqiren.wav</ShortName>
 					<CachePath>SFX/jiqiren_10C4C929.wem</CachePath>
-				</File>
-				<File Id="582636599" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level 2 Music.wav</ShortName>
-					<CachePath>SFX/Level 2 Music_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
@@ -434,7 +438,8 @@
 				</Event>
 				<Event Id="814842324" Name="Play_Level_1_Music" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="582636599"/>
+						<MediaRef Id="1852256"/>
+						<MediaRef Id="489948701"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
@@ -640,5 +645,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A55FC769-369B-D690-ADCB-8F8DA36B2D03}</FileHash>
+	<FileHash>{4084F92C-5777-BBB8-4097-A1F6F43A5B27}</FileHash>
 </SoundBanksInfo>
