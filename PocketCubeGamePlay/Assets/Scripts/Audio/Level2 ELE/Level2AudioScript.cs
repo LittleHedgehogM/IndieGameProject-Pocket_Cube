@@ -10,11 +10,12 @@ public class Level2AudioScript : MonoBehaviour
     
 
     //[SerializeField] private Collider cube;
-    [SerializeField] private GameObject audioPlayer;
+    private GameObject audioPlayer;
 
 
     private void Start()
     {
+        audioPlayer = GameObject.Find("WwiseGlobal");
         ELE_Bank.Load(audioPlayer);
 
 

@@ -5,8 +5,13 @@ using UnityEngine;
 public class Level2AudioTrigger : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Switch ELE_P2;
-    [SerializeField] private GameObject audioPlayer;
+    private GameObject audioPlayer;
 
+    private void Start()
+    {
+        audioPlayer = GameObject.Find("WwiseGlobal");
+        
+    }
     private void OnMouseDown()
     {
         ELE_P2.SetValue(audioPlayer);
