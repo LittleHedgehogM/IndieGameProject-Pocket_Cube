@@ -405,7 +405,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{8180386A-B1D6-6D60-F52A-88F0E157A787}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{6A64639E-09C2-CB98-CD39-54A8C5B1E448}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -416,6 +416,10 @@
 				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>放上金币.wav</ShortName>
 					<CachePath>SFX/放上金币_10C4C929.wem</CachePath>
+				</File>
+				<File Id="110487141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqiren.wav</ShortName>
+					<CachePath>SFX/jiqiren_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="183830389" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>魔方掉下来.wav</ShortName>
@@ -436,10 +440,6 @@
 				<File Id="489948701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level 1 Music_Start.wav</ShortName>
 					<CachePath>SFX/Level 1 Music_Start_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="557601517" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>jiqiren.wav</ShortName>
-					<CachePath>SFX/jiqiren_10C4C929.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
@@ -485,14 +485,17 @@
 						<MediaRef Id="649493178"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1467814842" Name="Play_jiqiren" DurationType="OneShot" DurationMin="9.25" DurationMax="9.25">
+				<Event Id="1467814842" Name="Play_jiqiren" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="557601517"/>
+						<MediaRef Id="1852256"/>
+						<MediaRef Id="110487141"/>
+						<MediaRef Id="489948701"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="814842324" Name="Play_Level_1_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1852256"/>
+						<MediaRef Id="110487141"/>
 						<MediaRef Id="489948701"/>
 					</MediaRefs>
 				</Event>
@@ -699,5 +702,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2F13FDE-B91D-FF28-49A8-6A77A66D0C78}</FileHash>
+	<FileHash>{8086A8FD-F3E1-DF98-D6B1-DCA4F4FC0E8E}</FileHash>
 </SoundBanksInfo>

@@ -1362,6 +1362,90 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
+								<MusicSegment Name="jiqiren" ID="{06EC3C31-CFED-4D31-884C-E25D37536539}" ShortID="45996996">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="9000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="jiqiren" ID="{49E78B14-7C9E-42DA-BD1B-F4DC975B6651}" ShortID="486039137">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="jiqiren" ID="{74818CEF-52F3-4022-BCFC-47AD9DAB5306}">
+													<Language>SFX</Language>
+													<AudioFile>jiqiren.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="110487141"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E01F3AD8-3562-4E85-A3D3-292544C090DD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{2A751BF6-E6B9-4FAD-BD4D-6D0F8D61FBE2}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="jiqiren" ID="{190C66ED-2044-4100-9EDD-2E9C16B426E3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="9000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="jiqiren" ID="{74818CEF-52F3-4022-BCFC-47AD9DAB5306}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{B0DC2E06-08CF-423A-9CA5-E37AC958E1A3}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{4422653B-3BD5-4126-A27E-217B69A47221}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="9000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{85F9EE6B-5FFF-4711-BA71-CB2B0A0FD5B5}">
@@ -1379,6 +1463,12 @@
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{AC62B9D8-3E60-4AE2-8FE5-0F4D564EAA3F}" ShortID="668069281">
 									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{1593DA8C-3104-43E6-93EE-6DE960810007}" ShortID="846435564">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="jiqiren" ID="{06EC3C31-CFED-4D31-884C-E25D37536539}"/>
+										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{E0C51EDE-3928-45FF-84A4-D90DC79F1277}" ShortID="619756769">
 											<PropertyList>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
