@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Level2CubeAudio : MonoBehaviour
 {
     private GameObject audioPlayer;
+    [SerializeField]private AK.Wwise.Event outro;
     [SerializeField] private Button finishBtn;
     //[SerializeField] private AK.Wwise.Switch ELE_Outro;
 
@@ -17,6 +18,6 @@ public class Level2CubeAudio : MonoBehaviour
 
     private void OnFinishBtn()
     {
-        AkSoundEngine.SetSwitch("ELE_BGM", "Outro", audioPlayer);
+        outro.Post(audioPlayer);
     }
 }

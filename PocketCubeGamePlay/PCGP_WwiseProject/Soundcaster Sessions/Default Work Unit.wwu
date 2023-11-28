@@ -49,8 +49,12 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_ELE_BGM" ID="{FEA5D591-5037-4E92-8C52-1A278691DC49}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
-							<Position X="2" Y="0"/>
+							<ObjectRef Name="Play_ELE_BGM" ID="{8171F07E-A048-4B36-AE38-994B15983DBB}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_ELE_outro" ID="{B2DDF8E9-7E8B-477D-AD97-D5AFE9D3A9DB}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -72,8 +76,8 @@
 						<CurrentStateRef Name="None" ID="{82F135AF-5CB6-498F-9D74-C992DB59EC37}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Intro" ID="{F269E7A3-6CC2-460C-89E9-E734BA31AFC4}"/>
-						<CurrentSwitchRef Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}"/>
+						<CurrentSwitchRef Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>
+						<CurrentSwitchRef Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

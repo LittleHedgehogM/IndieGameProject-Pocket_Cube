@@ -5524,8 +5524,7 @@ MonoBehaviour:
   ELE_BGM:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 449c8c946443b724a87c7c588451a21f, type: 2}
-  audioPlayer: {fileID: 1337166746}
+    WwiseObjectReference: {fileID: 11400000, guid: c121d2c8c0e106045809d639889c7146, type: 2}
 --- !u!1 &848035031
 GameObject:
   m_ObjectHideFlags: 0
@@ -9694,11 +9693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fd4e85de485a24caa73639df7633f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1337166746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8171565792614017376, guid: e4251630d71b0694ba5f9f0a881fcda8, type: 3}
-  m_PrefabInstance: {fileID: 1322627599}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1348382110
 GameObject:
   m_ObjectHideFlags: 0
@@ -13091,7 +13085,6 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c7e1dfa49b3830447a7cf16f93ca4a56, type: 2}
-  audioPlayer: {fileID: 1337166746}
 --- !u!1 &1892445128
 GameObject:
   m_ObjectHideFlags: 0

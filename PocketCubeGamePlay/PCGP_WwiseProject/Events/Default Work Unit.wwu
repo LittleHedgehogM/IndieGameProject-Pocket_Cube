@@ -82,11 +82,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_ELE_BGM" ID="{FEA5D591-5037-4E92-8C52-1A278691DC49}">
+						<Event Name="Play_ELE_BGM" ID="{8171F07E-A048-4B36-AE38-994B15983DBB}">
 							<ChildrenList>
-								<Action Name="" ID="{63D5D540-4DE6-4653-91D7-0B4EDE8E874E}" ShortID="579960815">
+								<Action Name="" ID="{499DADB8-4A07-4C25-862B-E854ECC79330}" ShortID="162866764">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -94,24 +95,32 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{F9B1CA7C-E8A7-47B1-821F-860F090FE1C7}" ShortID="284580408">
+								<Action Name="" ID="{6517FEBF-3320-472D-9D5D-112F8685BFBE}" ShortID="31246366">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ELE_BGM" ID="{26524DA4-46ED-4602-8B23-334C1B205930}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+											<ObjectRef Name="ELE" ID="{85E493A0-73F6-4F57-91E9-BDF8FF93F63E}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Set_ELE_Drum_On" ID="{3B9A71BC-6BFE-4424-956B-35BA02C0BC53}">
+						<Event Name="Play_ELE_outro" ID="{B2DDF8E9-7E8B-477D-AD97-D5AFE9D3A9DB}">
 							<ChildrenList>
-								<Action Name="" ID="{D0E11242-884D-41B0-A33E-D81BA41FC76C}" ShortID="835790619">
+								<Action Name="" ID="{6B4B38E5-ADBF-4621-AA86-AAAE07155248}" ShortID="1009801917">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="23"/>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
+											<ObjectRef Name="ELE" ID="{85E493A0-73F6-4F57-91E9-BDF8FF93F63E}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{355F4FDB-CE7B-49E5-87CB-A2FA99BB8779}" ShortID="959387626">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ELE_outro" ID="{86D64842-713C-46D9-83CD-7D5CD6528BAD}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

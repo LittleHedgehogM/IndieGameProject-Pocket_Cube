@@ -244,7 +244,7 @@
 				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{A56944C7-9A35-788D-0577-D70DE344B173}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{E4EFE89D-D57A-2A9A-1CAB-8A570B572F6F}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -305,22 +305,16 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2654027537" Name="Play_ELE_BGM" DurationType="Infinite">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1533533912" Id="1125500713"/>
-							<MediaRefs>
-								<MediaRef Id="97900267"/>
-								<MediaRef Id="206351303"/>
-								<MediaRef Id="287942534"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1533533912" Id="4184794294"/>
-							<MediaRefs>
-								<MediaRef Id="721466819"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
+					<MediaRefs>
+						<MediaRef Id="97900267"/>
+						<MediaRef Id="206351303"/>
+						<MediaRef Id="287942534"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2857386602" Name="Play_ELE_outro" DurationType="OneShot" DurationMin="36.97436" DurationMax="36.97436">
+					<MediaRefs>
+						<MediaRef Id="721466819"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
 					<MediaRefs>
@@ -347,11 +341,6 @@
 						<MediaRef Id="46414968"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3369266387" Name="Set_ELE_Drum_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetSwitch>
-						<ActionSetSwitchEntry GroupId="6529029" Id="1651971902" Name="On"/>
-					</ActionSetSwitch>
-				</Event>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="6529029" Name="ELE_Cube">
@@ -360,15 +349,9 @@
 						<Switch Id="1651971902" Name="On"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="1533533912" Name="ELE_BGM">
-					<Switches>
-						<Switch Id="1125500713" Name="Intro"/>
-						<Switch Id="4184794294" Name="Outro"/>
-					</Switches>
-				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{52E2CA96-2C66-EF75-2DC3-8C9696DA39D7}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{90643154-3C58-305E-EADE-BAB86EF967A2}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -657,5 +640,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1045A9B6-6DB3-2136-D70E-04F34B2C0F50}</FileHash>
+	<FileHash>{A55FC769-369B-D690-ADCB-8F8DA36B2D03}</FileHash>
 </SoundBanksInfo>

@@ -280,7 +280,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585005084280358655
+    m_lastTime: -8585004429914753758
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -608,7 +608,7 @@ MonoBehaviour:
       maxDuration: 1.9375057
       minDuration: 1.9375057
     - name: Play_ELE_BGM
-      guid: 91d5a5fe3750924e8c521a278691dc49
+      guid: 7ef0718148a0364bae38994b15983dbb
       id: 2654027537
       PathAndIcons:
       - ElementName: Events
@@ -622,11 +622,31 @@ MonoBehaviour:
         guid: 328610c87edc384eaa64ab46a1077c91
       - ElementName: Play_ELE_BGM
         ObjectType: 3
-        guid: 91d5a5fe3750924e8c521a278691dc49
+        guid: 7ef0718148a0364bae38994b15983dbb
       Path: Events\Default Work Unit\Level2\Play_ELE_BGM
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ELE_outro
+      guid: e9f8ddb28b7e7d47ad97d5afe9d3a9db
+      id: 2857386602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_ELE_outro
+        ObjectType: 3
+        guid: e9f8ddb28b7e7d47ad97d5afe9d3a9db
+      Path: Events\Default Work Unit\Level2\Play_ELE_outro
+      maxAttenuation: 0
+      maxDuration: 36.97436
+      minDuration: 36.97436
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
@@ -1004,26 +1024,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Set_ELE_Drum_On
-      guid: bc719a3bfe6b2444956b35ba02c0bc53
-      id: 3369266387
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: Level2
-        ObjectType: 4
-        guid: 328610c87edc384eaa64ab46a1077c91
-      - ElementName: Set_ELE_Drum_On
-        ObjectType: 3
-        guid: bc719a3bfe6b2444956b35ba02c0bc53
-      Path: Events\Default Work Unit\Level2\Set_ELE_Drum_On
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Stop_Amb_level00
       guid: b120720f31d75245b5da0600f7c65403
       id: 352035487
@@ -1835,7 +1835,7 @@ MonoBehaviour:
     m_lastTime: -8585014668168290397
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a0000002a0000002b0000002f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

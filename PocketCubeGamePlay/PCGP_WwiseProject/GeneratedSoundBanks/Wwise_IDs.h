@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_SKILLCLICK01 = 3603099912U;
         static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
         static const AkUniqueID PLAY_ELE_BGM = 2654027537U;
+        static const AkUniqueID PLAY_ELE_OUTRO = 2857386602U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_FOURIER = 2720351442U;
@@ -58,7 +59,6 @@ namespace AK
         static const AkUniqueID PLAY_UI_ROLL = 2857954946U;
         static const AkUniqueID PLAY_UI_TURN = 245126902U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
-        static const AkUniqueID SET_ELE_DRUM_ON = 3369266387U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
         static const AkUniqueID STOP_CUBE_FINAL_LOOP = 247134943U;
