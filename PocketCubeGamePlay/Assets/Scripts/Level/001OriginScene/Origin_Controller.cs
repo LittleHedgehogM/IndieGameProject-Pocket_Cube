@@ -22,7 +22,9 @@ public class Origin_Controller : MonoBehaviour
     [SerializeField][Range(0.5f, 3f)]  private float translationTime;
     [SerializeField] AnimationCurve translationCurve;
 
-
+    [SerializeField] private GameObject Pattern_FirstPhase;
+    [SerializeField] private GameObject Pattern_SecondPhase;
+    [SerializeField] private GameObject Pattern_ThirdPhase;
 
     public static Action rotateFinish;
     public static Action CubeShow;
@@ -51,6 +53,9 @@ public class Origin_Controller : MonoBehaviour
         originAngle = Sphere.transform.rotation;
         myVFXController = FindObjectOfType<Origin_VFXController>();
         DisableAllAxis?.Invoke();
+        Pattern_FirstPhase.SetActive(true);
+        Pattern_SecondPhase.SetActive(false);
+        Pattern_ThirdPhase.SetActive(false);
 
     }
 
@@ -160,6 +165,8 @@ public class Origin_Controller : MonoBehaviour
         rightAxis.setActive(true);
         upAxis.setActive(false);
         downAxis. setActive(false);
+        Pattern_FirstPhase.SetActive(true);
+
     }
 
     private void PhaseTwo(){
@@ -167,13 +174,13 @@ public class Origin_Controller : MonoBehaviour
         {
             enableSceneInteraction();
             StartCoroutine(InitPhaseTwo());
-
-        }
-       
+        } 
     }
 
     private IEnumerator InitPhaseTwo()
     {
+        Pattern_FirstPhase.SetActive(false);
+
         // unlock green face audio
         AkSoundEngine.PostEvent("Play_unlock01", gameObject);
 
@@ -184,8 +191,10 @@ public class Origin_Controller : MonoBehaviour
         myRotationTarget.InitPhaseTwo();      
         upAxis.setActive(true);
         downAxis.setActive(true);
+        Pattern_SecondPhase.SetActive(true);
+
     }
-    
+
     private void PhaseThree()
     {
         if (currentState == PuzzleState.Phase_Three) 
@@ -198,6 +207,8 @@ public class Origin_Controller : MonoBehaviour
     private IEnumerator InitPhaseThree()
     {
         // unlock green face audio
+        Pattern_SecondPhase.SetActive(false);
+
         AkSoundEngine.PostEvent("Play_unlock01", gameObject);
         myVFXController.playRotationVFXAt(Sphere.transform);
         yield return new WaitForSeconds(1.5f);
@@ -207,10 +218,13 @@ public class Origin_Controller : MonoBehaviour
         rightAxis.setActive(true);
         upAxis.setActive(true);
         downAxis.setActive(true);
+        Pattern_ThirdPhase.SetActive(true);
     }
 
     private IEnumerator InitSolved()
     {
+        Pattern_ThirdPhase.SetActive(false);
+
         yield return new WaitForSeconds(1);
         myRotationTarget.minimizeTargetAndshowCube();
 

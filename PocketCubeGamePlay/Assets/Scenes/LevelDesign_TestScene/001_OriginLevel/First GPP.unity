@@ -2488,9 +2488,6 @@ MonoBehaviour:
   upAxis: {fileID: 5055981500364875031}
   downAxis: {fileID: 7954551063006319342}
   cubeController: {fileID: 7782652002010879552}
-  Pattern_phaseone: {fileID: 2125823043}
-  Pattern_phasetwo: {fileID: 486873808}
-  Pattern_phasethree: {fileID: 525524293}
   translationTime: 0.5
   translationCurve:
     serializedVersion: 2
@@ -2534,6 +2531,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  Pattern_FirstPhase: {fileID: 2125823043}
+  Pattern_SecondPhase: {fileID: 486873808}
+  Pattern_ThirdPhase: {fileID: 525524293}
 --- !u!114 &761296184
 MonoBehaviour:
   m_ObjectHideFlags: 0
