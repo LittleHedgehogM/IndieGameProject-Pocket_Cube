@@ -21,6 +21,12 @@ public class CameraZoomInHelper : MonoBehaviour
     //    CubeClickEvent.CubeClick -= zoomInCube;
     //}
 
+    [SerializeField] private GameObject audioPlayer;
+
+    private void Awake()
+    {
+        audioPlayer = GameObject.Find("WwiseGlobal");
+    }
     public virtual void zoomInCube()
     {
         Debug.Log("CameraZoomInHelper");
@@ -29,7 +35,7 @@ public class CameraZoomInHelper : MonoBehaviour
     public void zoomInCube(Camera mainCam, Transform CubeTransform, Vector3 lookAtTarget)
     {
         // click cube
-        AkSoundEngine.PostEvent("Play_box_click", gameObject);
+        AkSoundEngine.PostEvent("Play_box_click", audioPlayer);
 
         StartCoroutine(zoomInCubeTranslation(mainCam, CubeTransform, lookAtTarget));
     }
