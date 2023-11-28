@@ -129,13 +129,33 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8F35562F-27A4-0E24-1473-8A821E9B54BC}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{4A68E9D1-8333-4227-0DF8-02485EBDD3EA}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
 				<File Id="56359378" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_roll01.wav</ShortName>
 					<CachePath>SFX/UI_roll01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="101268654" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua02.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="102104340" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua03.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="168714065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua05.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="274833633" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua04.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="310859014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua07.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua07_10C4C929.wem</CachePath>
 				</File>
 				<File Id="312476759" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_turn02.wav</ShortName>
@@ -149,6 +169,26 @@
 					<ShortName>UI_roll02.wav</ShortName>
 					<CachePath>SFX/UI_roll02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="432892865" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua08.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="527916905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua01.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="546532916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua06.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="801319726" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua10.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="811605796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jiqirenshuohua09.wav</ShortName>
+					<CachePath>SFX/jiqirenshuohua09_10C4C929.wem</CachePath>
+				</File>
 				<File Id="915713439" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>box_click.wav</ShortName>
 					<CachePath>SFX/box_click_10C4C929.wem</CachePath>
@@ -158,6 +198,20 @@
 				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="1.5695012" DurationMax="1.5695012">
 					<MediaRefs>
 						<MediaRef Id="915713439"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2597324022" Name="Play_subtitle" DurationType="OneShot" DurationMin="0.36507937" DurationMax="2.5555103">
+					<MediaRefs>
+						<MediaRef Id="101268654"/>
+						<MediaRef Id="102104340"/>
+						<MediaRef Id="168714065"/>
+						<MediaRef Id="274833633"/>
+						<MediaRef Id="310859014"/>
+						<MediaRef Id="432892865"/>
+						<MediaRef Id="527916905"/>
+						<MediaRef Id="546532916"/>
+						<MediaRef Id="801319726"/>
+						<MediaRef Id="811605796"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.54226756" DurationMax="0.6252834">
@@ -351,7 +405,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{D30D72B5-97F0-89AD-FEFB-E86E34E13849}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{8180386A-B1D6-6D60-F52A-88F0E157A787}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -645,5 +699,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1C51693E-67AB-2455-BC79-3BCA97520D15}</FileHash>
+	<FileHash>{D2F13FDE-B91D-FF28-49A8-6A77A66D0C78}</FileHash>
 </SoundBanksInfo>

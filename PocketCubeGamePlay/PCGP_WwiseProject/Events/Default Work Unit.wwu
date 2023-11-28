@@ -280,6 +280,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_subtitle" ID="{70C233C9-CE59-43AE-8070-2D7D4EB0F6DF}">
+							<ChildrenList>
+								<Action Name="" ID="{3B8E7200-1A38-4D89-97E6-A35C4818B7DA}" ShortID="678735931">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="subtitle" ID="{E6A61435-DF8A-454D-9616-E6239F6C5EE0}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cube" ID="{C30F9FE3-B575-4092-A531-E51C7AE1C983}" ShortID="659362505">

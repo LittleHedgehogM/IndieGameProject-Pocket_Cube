@@ -302,6 +302,241 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="subtitle" ID="{E6A61435-DF8A-454D-9616-E6239F6C5EE0}" ShortID="738728484">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="jiqirenshuohua01" ID="{DC7B8DCC-ECA3-4E50-BAFC-5FB16D632DE2}" ShortID="283097903">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua01" ID="{9C439F61-AB1E-438D-849B-F9CD819A64A2}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="527916905"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua01" ID="{9C439F61-AB1E-438D-849B-F9CD819A64A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua02" ID="{55EBCCCF-63AB-4E97-9359-652C99E10551}" ShortID="440483050">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua02" ID="{A788E457-31DA-4D5C-81BF-A7C860AE2271}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="101268654"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua02" ID="{A788E457-31DA-4D5C-81BF-A7C860AE2271}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua03" ID="{C7CBB83E-BA86-466E-8507-DF69F4802BC0}" ShortID="967104179">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua03" ID="{7215DF14-63DD-47B1-A666-82EAF7B018E2}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="102104340"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua03" ID="{7215DF14-63DD-47B1-A666-82EAF7B018E2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua04" ID="{5E50B09D-FF49-4B35-98E3-CCBE353023FD}" ShortID="103651043">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua04" ID="{252BAFFC-23FE-4493-98DD-A22565DFC0BD}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="274833633"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua04" ID="{252BAFFC-23FE-4493-98DD-A22565DFC0BD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua05" ID="{5FC31372-D72B-44A7-A9BD-A4DD0116EDAE}" ShortID="264050443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua05" ID="{0393885E-D18A-4336-A29D-C15047CC4616}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="168714065"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua05" ID="{0393885E-D18A-4336-A29D-C15047CC4616}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua06" ID="{5D79F9C7-0252-4414-A0D3-9E5A366A7DE1}" ShortID="207955637">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua06" ID="{5CF9BFEF-B7C6-4CA2-A6C1-2C9EF010B38E}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="546532916"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua06" ID="{5CF9BFEF-B7C6-4CA2-A6C1-2C9EF010B38E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua07" ID="{403A71FC-DB7D-42C7-A4DE-BA3702E26D89}" ShortID="565473559">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua07" ID="{74BFC414-24BD-44E9-B980-D2181F2BBFB2}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="310859014"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua07" ID="{74BFC414-24BD-44E9-B980-D2181F2BBFB2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua08" ID="{6086B9DD-42B2-45DE-AED7-42585CFEAD89}" ShortID="627801904">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua08" ID="{C01DF6DA-9504-4F22-831A-2B3EA9FE5E18}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="432892865"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua08" ID="{C01DF6DA-9504-4F22-831A-2B3EA9FE5E18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua09" ID="{FF94636F-ADBF-43AF-BB06-32A06EC726F8}" ShortID="631727534">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua09" ID="{0124C380-953F-495C-9B92-E88724E43CE0}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811605796"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua09" ID="{0124C380-953F-495C-9B92-E88724E43CE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jiqirenshuohua10" ID="{05D4D8FA-3833-41D6-8648-2064448CBE6D}" ShortID="806682319">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jiqirenshuohua10" ID="{23568133-5607-4B51-A069-A3A83D262CE4}">
+											<Language>SFX</Language>
+											<AudioFile>jiqirenshuohua10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="801319726"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jiqirenshuohua10" ID="{23568133-5607-4B51-A069-A3A83D262CE4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX_Loop" ID="{3E7BDCEE-F394-43D7-B4D0-B84BC462E786}" ShortID="733213329">
