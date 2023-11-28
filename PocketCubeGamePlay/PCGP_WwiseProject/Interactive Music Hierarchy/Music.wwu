@@ -1419,6 +1419,17 @@
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{26E1042B-2FBF-4D0A-929E-1D44EAA47885}">
+																<ReferenceList>
+																	<Reference Name="TrackSequenceSwitch">
+																		<ObjectRef Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
+																	</Reference>
+																</ReferenceList>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014668168285355
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585007929897986473
+    m_lastTime: -8585008658555116160
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -140,7 +140,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585007929885167711
+    m_lastTime: -8585008165970289611
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -280,7 +280,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585005299894081352
+    m_lastTime: -8585005084280358655
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -608,7 +608,7 @@ MonoBehaviour:
       maxDuration: 1.9375057
       minDuration: 1.9375057
     - name: Play_ELE_BGM
-      guid: 250ee2618be025438c96be10d0f4df6f
+      guid: 91d5a5fe3750924e8c521a278691dc49
       id: 2654027537
       PathAndIcons:
       - ElementName: Events
@@ -622,11 +622,11 @@ MonoBehaviour:
         guid: 328610c87edc384eaa64ab46a1077c91
       - ElementName: Play_ELE_BGM
         ObjectType: 3
-        guid: 250ee2618be025438c96be10d0f4df6f
+        guid: 91d5a5fe3750924e8c521a278691dc49
       Path: Events\Default Work Unit\Level2\Play_ELE_BGM
       maxAttenuation: 0
-      maxDuration: 106.8
-      minDuration: 106.8
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
@@ -1004,6 +1004,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Set_ELE_Drum_On
+      guid: bc719a3bfe6b2444956b35ba02c0bc53
+      id: 3369266387
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Set_ELE_Drum_On
+        ObjectType: 3
+        guid: bc719a3bfe6b2444956b35ba02c0bc53
+      Path: Events\Default Work Unit\Level2\Set_ELE_Drum_On
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Amb_level00
       guid: b120720f31d75245b5da0600f7c65403
       id: 352035487
@@ -1112,7 +1132,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585007929906714602
+    m_lastTime: -8585009710760205634
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1278,7 +1298,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 2c511cbffc8fd94cb802f2451468e7f2
     GuidInternal: 
-    m_lastTime: -8585007929906707189
+    m_lastTime: -8585008199284619113
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1411,7 +1431,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585012025914478344
+    m_lastTime: -8585012054559580810
     List:
     - name: Main_Vol
       guid: 0354b0cf06881346b7ffd022e3232f83
@@ -1504,8 +1524,58 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585007929885132635
+    m_lastTime: -8585005084261401694
     List:
+    - name: ELE
+      guid: 823177fdcc8ebf46807e499dae36ce3f
+      id: 563281699
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 551c67d894344d4c9f9422edb33c3b94
+      - ElementName: ELE
+        ObjectType: 9
+        guid: 823177fdcc8ebf46807e499dae36ce3f
+      Path: States\Default Work Unit\ELE
+      values:
+      - name: None
+        guid: d12f82f18d24024aae368e509278e41e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: ELE
+          ObjectType: 9
+          guid: 823177fdcc8ebf46807e499dae36ce3f
+        - ElementName: None
+          ObjectType: 8
+          guid: d12f82f18d24024aae368e509278e41e
+      - name: P2
+        guid: a1a1f4c9c3f75349adce09fd5f84beef
+        id: 1635194255
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: ELE
+          ObjectType: 9
+          guid: 823177fdcc8ebf46807e499dae36ce3f
+        - ElementName: P2
+          ObjectType: 8
+          guid: a1a1f4c9c3f75349adce09fd5f84beef
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: FourierPhase
       guid: a2d9535c6af6314890ef5adc8d67cbaf
       id: 3207373244
@@ -1648,8 +1718,108 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585014656758443746
-    List: []
+    m_lastTime: -8585005084261391623
+    List:
+    - name: ELE_BGM
+      guid: 3123b75e321c3441b2fa0b3363d32102
+      id: 1533533912
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: ELE_BGM
+        ObjectType: 11
+        guid: 3123b75e321c3441b2fa0b3363d32102
+      Path: Switches\Default Work Unit\ELE_BGM
+      values:
+      - name: Intro
+        guid: a3e769f2c26c0c4689e9e734ba31afc4
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_BGM
+          ObjectType: 11
+          guid: 3123b75e321c3441b2fa0b3363d32102
+        - ElementName: Intro
+          ObjectType: 10
+          guid: a3e769f2c26c0c4689e9e734ba31afc4
+      - name: Outro
+        guid: d62855a3ed3c5947b3050e642dc02c6b
+        id: 4184794294
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_BGM
+          ObjectType: 11
+          guid: 3123b75e321c3441b2fa0b3363d32102
+        - ElementName: Outro
+          ObjectType: 10
+          guid: d62855a3ed3c5947b3050e642dc02c6b
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ELE_Cube
+      guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+      id: 6529029
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: ELE_Cube
+        ObjectType: 11
+        guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+      Path: Switches\Default Work Unit\ELE_Cube
+      values:
+      - name: Off
+        guid: 4133506b9a050945b349c5380486f0ab
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_Cube
+          ObjectType: 11
+          guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+        - ElementName: Off
+          ObjectType: 10
+          guid: 4133506b9a050945b349c5380486f0ab
+      - name: On
+        guid: b1ede9f08316234aad199a9845b09520
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_Cube
+          ObjectType: 11
+          guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+        - ElementName: On
+          ObjectType: 10
+          guid: b1ede9f08316234aad199a9845b09520
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1662,10 +1832,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014668168290397
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000a00000024000000250000002f000000300000003100000032000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

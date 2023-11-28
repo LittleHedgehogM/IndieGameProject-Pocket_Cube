@@ -244,7 +244,7 @@
 				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{02F9F17D-D730-6C0C-6137-D1158B8528D7}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{7EF82D14-E4E3-8E21-55DA-4BBC7CD751CA}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -346,6 +346,11 @@
 					<MediaRefs>
 						<MediaRef Id="46414968"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="3369266387" Name="Set_ELE_Drum_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="6529029" Id="1651971902" Name="On"/>
+					</ActionSetSwitch>
 				</Event>
 			</Events>
 			<SwitchGroups>
@@ -643,5 +648,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9EA20544-D8B5-F58E-AECC-9E35C4F7C4A7}</FileHash>
+	<FileHash>{AE1C6DCA-36B1-0078-3094-33CCBB836B8B}</FileHash>
 </SoundBanksInfo>
