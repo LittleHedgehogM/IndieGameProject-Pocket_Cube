@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	731342154	Play_Plate_Lift			\Level1\Play_Plate_Lift	
 	797967755	Play_Cube_drop			\Level1\Play_Cube_drop	
+	814842324	Play_Level_1_Music			\Level1\Play_Level_1_Music	
 	977134866	Play_Camera_zoomIn			\Level1\Play_Camera_zoomIn	
 	1467814842	Play_jiqiren			\Level1\Play_jiqiren	
 	1962302600	Play_hover			\Level1\Play_hover	
@@ -10,13 +11,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3981976879	Play_Coin_takeAway			\Level1\Play_Coin_takeAway	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	66674890	Coin_add	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\放上金币_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Coin_add		350036
-	183830389	Cube_drop	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\魔方掉下来_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Cube_drop		397916
-	232274638	Plate_Down	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\台阶下降_9FADFD58.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Plate_Down		314664
-	286706430	Camera_zoomIn	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Camera_zoomIn_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Camera_zoomIn		483628
-	364095599	Coin_takeAway	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\拿走_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Coin_takeAway		182036
-	557601517	jiqiren	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\jiqiren_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Ani\jiqiren		1631796
-	649493178	hover	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\hover_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\hover		22628
-	739887170	Camera_zoomOut	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Camera_zoomOut_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Camera_zoomOut		405952
-	793816760	Plate_Lift	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\台阶上升_0243C708.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Plate_Lift		355440
+	66674890	Coin_add	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\放上金币_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Coin_add		350036
+	183830389	Cube_drop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\魔方掉下来_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Cube_drop		397916
+	232274638	Plate_Down	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\台阶下降_9FADFD58.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Plate_Down		314664
+	286706430	Camera_zoomIn	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Camera_zoomIn_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Camera_zoomIn		483628
+	364095599	Coin_takeAway	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\拿走_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Coin_takeAway		182036
+	557601517	jiqiren	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\jiqiren_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Ani\jiqiren		1631796
+	582636599	Level 2 Music	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level 2 Music_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Level 1 Music\Level 1 Music\Level 2 Music\Level 2 Music		6195612
+	649493178	hover	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\hover_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\hover		22628
+	739887170	Camera_zoomOut	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Camera_zoomOut_10C4C929.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Camera_zoomOut		405952
+	793816760	Plate_Lift	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\台阶上升_0243C708.wem		\Actor-Mixer Hierarchy\Level 1\SFX_Single\Plate_Lift		355440
 

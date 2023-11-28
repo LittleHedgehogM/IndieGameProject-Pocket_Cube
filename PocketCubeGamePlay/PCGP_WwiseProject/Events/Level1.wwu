@@ -102,6 +102,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Level_1_Music" ID="{E5F55A1D-1ED8-4288-B9D5-95C8B78327AB}">
+					<ChildrenList>
+						<Action Name="" ID="{AF67DE7D-2B0A-460B-AD22-937C252ABE90}" ShortID="613669599">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level 1 Music" ID="{39DCE964-12CB-49FD-913C-993C1F44404F}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

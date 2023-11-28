@@ -204,7 +204,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Open01" ID="{6714BD8D-3515-41FC-8A3D-30FF07BB1778}" ShortID="549967290">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="15017.2562358277"/>
+								<Property Name="EndPosition" Type="Real64" Value="19862.0861678005"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -216,23 +216,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Open01" ID="{B666C16B-72B7-4EB4-A55D-8D8294752C93}" ShortID="908509711">
+								<MusicTrack Name="kaichangdonghua" ID="{EE090BA1-AE8D-45BD-BBC7-DFA21E2DA87D}" ShortID="918685682">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Open01" ID="{5736BCB5-D507-44FF-AF5A-A0693E87721E}">
+										<AudioFileSource Name="kaichangdonghua" ID="{5871CB76-7301-45BD-91CF-738D236CEEE0}">
 											<Language>SFX</Language>
-											<AudioFile>Open01.wav</AudioFile>
+											<AudioFile>kaichangdonghua.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="201197348"/>
+												<MediaID ID="602767018"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{23266352-B70C-4506-AD49-1F77E81B3471}">
+										<MusicTransition Name="Root" ID="{ADDE4527-7504-44B7-B7C1-2A1583F007F8}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -243,18 +243,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{A1AD1EFF-3062-4804-8FD5-86C83F2A7778}">
+													<MusicTrackSequence Name="" ID="{230941D4-F6FD-4AE8-BECC-B963495154DA}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Open01" ID="{AC0EA736-49D2-4EE8-A24F-F71FAA032329}">
+																		<MusicClip Name="kaichangdonghua" ID="{FF4D1904-2730-48C9-B897-80E128EF3827}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="15017.2562358277"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="14500"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Open01" ID="{5736BCB5-D507-44FF-AF5A-A0693E87721E}"/>
+																			<AudioSourceRef Name="kaichangdonghua" ID="{5871CB76-7301-45BD-91CF-738D236CEEE0}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
