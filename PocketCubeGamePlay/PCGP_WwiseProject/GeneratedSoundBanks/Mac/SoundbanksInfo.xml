@@ -548,13 +548,17 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{565C5112-6935-1DB7-EB6A-2EB806B69369}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{DA2EA4A3-2EB9-F6E9-52D8-57FB452609E9}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
 				<File Id="5423351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reduce.wav</ShortName>
 					<CachePath>SFX/reduce_10C4C929.wem</CachePath>
+				</File>
+				<File Id="46591062" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kaichang01123.wav</ShortName>
+					<CachePath>SFX/kaichang01123_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="67729679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll01.wav</ShortName>
@@ -572,10 +576,6 @@
 					<ShortName>unlock01.wav</ShortName>
 					<CachePath>SFX/unlock01_10C4C929.wem</CachePath>
 				</File>
-				<File Id="602767018" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>kaichangdonghua.wav</ShortName>
-					<CachePath>SFX/kaichangdonghua_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kaichangzhi02.wav</ShortName>
 					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
@@ -584,7 +584,7 @@
 			<Events>
 				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="602767018"/>
+						<MediaRef Id="46591062"/>
 						<MediaRef Id="987084990"/>
 					</MediaRefs>
 				</Event>
@@ -739,5 +739,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8F742417-5505-9B4A-BE0D-0AD394A2375E}</FileHash>
+	<FileHash>{50E1BDF2-0C89-606E-0621-BE25C34847C8}</FileHash>
 </SoundBanksInfo>

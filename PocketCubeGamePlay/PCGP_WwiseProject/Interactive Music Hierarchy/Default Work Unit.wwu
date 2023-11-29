@@ -31,23 +31,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="kaichangdonghua" ID="{EE090BA1-AE8D-45BD-BBC7-DFA21E2DA87D}" ShortID="918685682">
+								<MusicTrack Name="kaichang01123" ID="{0F561432-6BD8-4445-8870-AB3B0D731C72}" ShortID="499701465">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="kaichangdonghua" ID="{5871CB76-7301-45BD-91CF-738D236CEEE0}">
+										<AudioFileSource Name="kaichang01123" ID="{AC2A1191-A8DA-479F-8B9A-1F1C0581BB5D}">
 											<Language>SFX</Language>
-											<AudioFile>kaichangdonghua.wav</AudioFile>
+											<AudioFile>kaichang01123.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="602767018"/>
+												<MediaID ID="46591062"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{ADDE4527-7504-44B7-B7C1-2A1583F007F8}">
+										<MusicTransition Name="Root" ID="{1F8F4CC3-961D-4739-9035-608F1A40A933}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -58,18 +58,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{230941D4-F6FD-4AE8-BECC-B963495154DA}">
+													<MusicTrackSequence Name="" ID="{7637E9A4-7D25-46BE-91AF-A934C47099EB}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="kaichangdonghua" ID="{FF4D1904-2730-48C9-B897-80E128EF3827}">
+																		<MusicClip Name="kaichang01123" ID="{FEB8EB5A-604A-4F60-B32E-D520102309C7}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="14500"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="13288.7074829932"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="kaichangdonghua" ID="{5871CB76-7301-45BD-91CF-738D236CEEE0}"/>
+																			<AudioSourceRef Name="kaichang01123" ID="{AC2A1191-A8DA-479F-8B9A-1F1C0581BB5D}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
