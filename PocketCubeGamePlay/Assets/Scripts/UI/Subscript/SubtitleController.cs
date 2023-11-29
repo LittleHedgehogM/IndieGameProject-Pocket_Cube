@@ -45,10 +45,12 @@ public class SubtitleController : MonoBehaviour
     async void LoadPrologue()
     {
         EnableSubtitle();
+        AkSoundEngine.PostEvent("Play_subtitle", gameObject);
         testText.text = subtitle_sequence[0];
         try
         {
             await Task.Delay(6000);
+            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
             testText.text = subtitle_sequence[1];
         }
         catch (Exception e)
@@ -70,6 +72,7 @@ public class SubtitleController : MonoBehaviour
     async void LoadTutorialGuide()
     {
         EnableSubtitle();
+        AkSoundEngine.PostEvent("Play_subtitle", gameObject);
         testText.text = subtitle_sequence[2];
         try
         {
@@ -81,6 +84,7 @@ public class SubtitleController : MonoBehaviour
         }
         try
         {
+            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
             testText.text = subtitle_sequence[3];
             await Task.Delay(8000);
         }
@@ -102,10 +106,12 @@ public class SubtitleController : MonoBehaviour
     async void LoadCubeShow()
     {
         EnableSubtitle();
+        AkSoundEngine.PostEvent("Play_subtitle", gameObject);
         testText.text = subtitle_sequence[4];
         try
         {
             await Task.Delay(6000);
+            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
             testText.text = subtitle_sequence[5];
         }
         catch (Exception e)
