@@ -154,6 +154,7 @@ public class SettingsPanel : BasePanel
         var target = Quaternion.Euler(targetAngle);
         float t = 0f;
 
+        AkSoundEngine.PostEvent("Play_UI_roll", gameObject);
 
         while (t < 1f)
         {
@@ -210,7 +211,7 @@ public class SettingsPanel : BasePanel
         print(target);
         float t = 0f;
         print(PlayerPrefs.GetInt("Level"));
-
+        AkSoundEngine.PostEvent("Play_UI_turn", gameObject);
         while ( t < 1f )
         {
             t += Time.deltaTime;

@@ -485,7 +485,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3085234776290972152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3523658894744327892}
+        m_TargetAssemblyTypeName: UIAudioController, Assembly-CSharp
+        m_MethodName: Play_UI_click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1026170824820476903
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +769,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 785526604167037084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3523658894744327892}
+        m_TargetAssemblyTypeName: UIAudioController, Assembly-CSharp
+        m_MethodName: Play_UI_click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1526662292772024607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,7 +3264,7 @@ RectTransform:
   m_GameObject: {fileID: 6012113739069856802}
   m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29018942, y: 0.29018942, z: 0.29018942}
+  m_LocalScale: {x: 0.2901894, y: 0.2901894, z: 0.29018942}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7031102275312665104}
@@ -3526,7 +3550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3523658894744327892}
+        m_TargetAssemblyTypeName: UIAudioController, Assembly-CSharp
+        m_MethodName: Play_UI_click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6419750359031793590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,7 +4525,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3045990916212330955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3523658894744327892}
+        m_TargetAssemblyTypeName: UIAudioController, Assembly-CSharp
+        m_MethodName: Play_UI_click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7979839435736787387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,7 +4865,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5647659221096804506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3523658894744327892}
+        m_TargetAssemblyTypeName: UIAudioController, Assembly-CSharp
+        m_MethodName: Play_UI_click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8741223008335214919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,6 +4977,7 @@ GameObject:
   - component: {fileID: 2508299550461040527}
   - component: {fileID: 4919939457897340197}
   - component: {fileID: 1073908401679084741}
+  - component: {fileID: 3523658894744327892}
   m_Layer: 5
   m_Name: SettingPanel
   m_TagString: Untagged
@@ -5078,6 +5139,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3523658894744327892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9199291789844969292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b60dccd1facd574880cbe5753a4df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9202066686493768308
 GameObject:
   m_ObjectHideFlags: 0
