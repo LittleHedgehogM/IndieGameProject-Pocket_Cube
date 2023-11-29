@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{65708FA2-1512-4DD8-F78A-72F8095AA59E}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{831A66BD-3D5D-446A-4000-07F190991A2F}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -129,7 +129,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{86D977E2-B3F0-8096-EE6D-AA1DD6693731}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B0DECF18-831A-45BB-107C-B02FFA44FD6B}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -199,7 +199,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="2.013288" DurationMax="2.013288">
+				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="2.3214285" DurationMax="2.3214285">
 					<MediaRefs>
 						<MediaRef Id="915713439"/>
 					</MediaRefs>
@@ -414,7 +414,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{6A64639E-09C2-CB98-CD39-54A8C5B1E448}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{8770713A-D25E-C317-F5DC-D6674D08B5AF}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -429,10 +429,6 @@
 				<File Id="110487141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jiqiren.wav</ShortName>
 					<CachePath>SFX/jiqiren_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="183830389" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>魔方掉下来.wav</ShortName>
-					<CachePath>SFX/魔方掉下来_10C4C929.wem</CachePath>
 				</File>
 				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶下降.wav</ShortName>
@@ -462,6 +458,10 @@
 					<ShortName>台阶上升.wav</ShortName>
 					<CachePath>SFX/台阶上升_0243C708.wem</CachePath>
 				</File>
+				<File Id="1010870477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cube_drop.wav</ShortName>
+					<CachePath>SFX/Cube_drop_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="2.741111" DurationMax="2.741111">
@@ -484,9 +484,9 @@
 						<MediaRef Id="364095599"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="2.2552154" DurationMax="2.2552154">
+				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="7.7746487" DurationMax="7.7746487">
 					<MediaRefs>
-						<MediaRef Id="183830389"/>
+						<MediaRef Id="1010870477"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1962302600" Name="Play_hover" DurationType="OneShot" DurationMin="0.12773243" DurationMax="0.12773243">
@@ -711,5 +711,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5525B4BA-13FB-7F86-A205-8B946A94971A}</FileHash>
+	<FileHash>{2837DBD8-8E81-3AC4-3720-1982C2A4A219}</FileHash>
 </SoundBanksInfo>

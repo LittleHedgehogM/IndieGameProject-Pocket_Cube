@@ -180,9 +180,16 @@
 										<MediaID ID="183830389"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Cube_drop" ID="{A1D510EB-C847-424B-B62D-0443EE19A749}">
+									<Language>SFX</Language>
+									<AudioFile>Cube_drop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1010870477"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="魔方掉下来" ID="{AEEA4CBF-8818-4DC1-AEC6-F675969ED14A}" Platform="Linked"/>
+								<ActiveSource Name="Cube_drop" ID="{A1D510EB-C847-424B-B62D-0443EE19A749}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="hover" ID="{B5B04F7F-8538-492C-8ED2-73E4213444D7}" ShortID="270001372">
@@ -274,7 +281,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
