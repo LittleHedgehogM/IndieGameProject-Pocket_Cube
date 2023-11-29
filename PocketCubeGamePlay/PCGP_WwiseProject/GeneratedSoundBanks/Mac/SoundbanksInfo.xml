@@ -129,7 +129,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{4A68E9D1-8333-4227-0DF8-02485EBDD3EA}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{86D977E2-B3F0-8096-EE6D-AA1DD6693731}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -181,6 +181,10 @@
 					<ShortName>jiqirenshuohua06.wav</ShortName>
 					<CachePath>SFX/jiqirenshuohua06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="698630139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_click.wav</ShortName>
+					<CachePath>SFX/UI_click_10C4C929.wem</CachePath>
+				</File>
 				<File Id="801319726" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jiqirenshuohua10.wav</ShortName>
 					<CachePath>SFX/jiqirenshuohua10_10C4C929.wem</CachePath>
@@ -195,7 +199,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="1.5695012" DurationMax="1.5695012">
+				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="2.013288" DurationMax="2.013288">
 					<MediaRefs>
 						<MediaRef Id="915713439"/>
 					</MediaRefs>
@@ -212,6 +216,11 @@
 						<MediaRef Id="546532916"/>
 						<MediaRef Id="801319726"/>
 						<MediaRef Id="811605796"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749424733" Name="Play_UI_click" DurationType="OneShot" DurationMin="0.3672624" DurationMax="0.4007339">
+					<MediaRefs>
+						<MediaRef Id="698630139"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.54226756" DurationMax="0.6252834">
@@ -702,5 +711,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{32412FC5-4396-47BC-9FFF-B62A7AA73621}</FileHash>
+	<FileHash>{DBB24318-4585-5F0B-46FC-76950F05432B}</FileHash>
 </SoundBanksInfo>

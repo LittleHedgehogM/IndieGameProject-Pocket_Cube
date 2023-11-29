@@ -547,6 +547,43 @@
 								</Reference>
 							</ReferenceList>
 						</BlendContainer>
+						<Sound Name="UI_click" ID="{77C28E25-6BBB-4118-BB91-CDFE9D99B632}" ShortID="962382491">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FBA23E3B-38F9-4873-AA39-085903C8C28C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_click" ID="{3938C547-7316-46A3-8434-7C7E7DEF224F}">
+									<Language>SFX</Language>
+									<AudioFile>UI_click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="698630139"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_click" ID="{3938C547-7316-46A3-8434-7C7E7DEF224F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX_Loop" ID="{3E7BDCEE-F394-43D7-B4D0-B84BC462E786}" ShortID="733213329">
