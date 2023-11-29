@@ -553,6 +553,18 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{BE18E788-17CF-4730-ACCD-D3015A4FC20B}" ShortID="743905129">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{7BB0FB20-5BA7-471C-A8A1-14D094737FFC}" ShortID="211023102">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
