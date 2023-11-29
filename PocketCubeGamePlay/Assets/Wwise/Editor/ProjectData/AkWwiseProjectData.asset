@@ -140,7 +140,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585004422081568912
+    m_lastTime: -8585003725040196856
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -280,7 +280,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585003773579964194
+    m_lastTime: -8585003725072003451
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -425,8 +425,8 @@ MonoBehaviour:
         guid: e5b6b33b4e68754caa1507103e58dfa0
       Path: Events\Default Work Unit\UI\Play_box_click
       maxAttenuation: 0
-      maxDuration: 2.013288
-      minDuration: 2.013288
+      maxDuration: 2.3214285
+      minDuration: 2.3214285
     - name: Play_Click_lv1
       guid: a7cbb19712255d4fb4cd2cf889447399
       id: 2495038568
@@ -1172,7 +1172,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585004312274898299
+    m_lastTime: -8585003725072143083
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1257,8 +1257,8 @@ MonoBehaviour:
         guid: b9ff80a2de5348449502a9fc7fef1619
       Path: Events\Level1\Play_Cube_drop
       maxAttenuation: 0
-      maxDuration: 2.2552154
-      minDuration: 2.2552154
+      maxDuration: 7.7746487
+      minDuration: 7.7746487
     - name: Play_hover
       guid: 94a580e67402a645a268c53d40008927
       id: 1962302600
@@ -1351,11 +1351,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Level3
       ObjectType: 12
-      guid: 2c511cbffc8fd94cb802f2451468e7f2
+      guid: 0cf8e1a531472444b5a804aa41c9a9ce
     ParentPath: Events\Level3
-    guid: 2c511cbffc8fd94cb802f2451468e7f2
+    guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8585004477071801091
+    m_lastTime: -8585003717645290714
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1366,45 +1366,71 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
       - ElementName: Hit_Record
         ObjectType: 3
         guid: f8630d3a8f475143a5f76be40e846b59
-      Path: Events\Level3\Hit_Record
+      Path: Events\Level3\Level3\Hit_Record
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Fourier
-      guid: f50017166d9cad4db2dab04087257f9f
-      id: 2720351442
+      maxDuration: 0
+      minDuration: 0
+    - name: Level3
+      guid: 4d5da5d9243a184f9383b89c9664a94e
+      id: 2678230380
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
-      - ElementName: Play_Fourier
-        ObjectType: 3
-        guid: f50017166d9cad4db2dab04087257f9f
-      Path: Events\Level3\Play_Fourier
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      Path: Events\Level3\Level3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Fourier_Music
-      guid: 10d5f4d6c4cd1a4e9132b8f1aefc85af
-      id: 350874706
+    - name: Play_Fourier_Cube
+      guid: 2205e1125d7b3f4b8ce689fb6b47f3f6
+      id: 3420724554
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
-      - ElementName: Play_Fourier_Music
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Fourier_Cube
         ObjectType: 3
-        guid: 10d5f4d6c4cd1a4e9132b8f1aefc85af
-      Path: Events\Level3\Play_Fourier_Music
+        guid: 2205e1125d7b3f4b8ce689fb6b47f3f6
+      Path: Events\Level3\Level3\Play_Fourier_Cube
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fourier_Scene
+      guid: 241a68ae86d4cf409056070881fa3fa4
+      id: 2056255347
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Fourier_Scene
+        ObjectType: 3
+        guid: 241a68ae86d4cf409056070881fa3fa4
+      Path: Events\Level3\Level3\Play_Fourier_Scene
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1417,11 +1443,14 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
       - ElementName: Play_L3_destroy
         ObjectType: 3
         guid: 085d2259b84538469661c08e62168cbc
-      Path: Events\Level3\Play_L3_destroy
+      Path: Events\Level3\Level3\Play_L3_destroy
       maxAttenuation: 0
       maxDuration: 0.4511338
       minDuration: 0.4511338
@@ -1434,11 +1463,14 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
       - ElementName: Play_L3_Hit_bad
         ObjectType: 3
         guid: 9f4b4a639669724e851289d9ddcf1852
-      Path: Events\Level3\Play_L3_Hit_bad
+      Path: Events\Level3\Level3\Play_L3_Hit_bad
       maxAttenuation: 0
       maxDuration: 0.25094482
       minDuration: 0.25094482
@@ -1451,31 +1483,17 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Level3
         ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
       - ElementName: Play_L3_Jump
         ObjectType: 3
         guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
-      Path: Events\Level3\Play_L3_Jump
+      Path: Events\Level3\Level3\Play_L3_Jump
       maxAttenuation: 0
       maxDuration: 1.3252789
       minDuration: 1.2151191
-    - name: Stop_Fourier
-      guid: 833644aeb934234b87a425513f4490b4
-      id: 2908913188
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level3
-        ObjectType: 12
-        guid: 2c511cbffc8fd94cb802f2451468e7f2
-      - ElementName: Stop_Fourier
-        ObjectType: 3
-        guid: 833644aeb934234b87a425513f4490b4
-      Path: Events\Level3\Stop_Fourier
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1775,7 +1793,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585005084261391623
+    m_lastTime: -8585003742039213340
     List:
     - name: ELE_BGM
       guid: 3123b75e321c3441b2fa0b3363d32102
@@ -1877,6 +1895,56 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Fourier_Beat
+      guid: 91ab0ed45585e14d9a8309173d6f12b7
+      id: 3337558774
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: Fourier_Beat
+        ObjectType: 11
+        guid: 91ab0ed45585e14d9a8309173d6f12b7
+      Path: Switches\Default Work Unit\Fourier_Beat
+      values:
+      - name: Off
+        guid: f7c2f6f6a0f273439ed3be45f4c41c22
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: Fourier_Beat
+          ObjectType: 11
+          guid: 91ab0ed45585e14d9a8309173d6f12b7
+        - ElementName: Off
+          ObjectType: 10
+          guid: f7c2f6f6a0f273439ed3be45f4c41c22
+      - name: On
+        guid: 1adcae4726667e429f5c82daac1a26f3
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: Fourier_Beat
+          ObjectType: 11
+          guid: 91ab0ed45585e14d9a8309173d6f12b7
+        - ElementName: On
+          ObjectType: 10
+          guid: 1adcae4726667e429f5c82daac1a26f3
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1892,7 +1960,7 @@ MonoBehaviour:
     m_lastTime: -8585014668168290397
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000190000001a0000001f0000002000000024000000250000002f0000003000000033000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

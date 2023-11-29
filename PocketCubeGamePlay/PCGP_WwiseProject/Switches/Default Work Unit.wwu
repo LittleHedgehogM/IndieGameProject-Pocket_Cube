@@ -15,6 +15,12 @@
 						<Switch Name="On" ID="{F0E9EDB1-1683-4A23-AD19-9A9845B09520}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Fourier_Beat" ID="{D40EAB91-8555-4DE1-9A83-09173D6F12B7}">
+					<ChildrenList>
+						<Switch Name="On" ID="{47AEDC1A-6626-427E-9F5C-82DAAC1A26F3}"/>
+						<Switch Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

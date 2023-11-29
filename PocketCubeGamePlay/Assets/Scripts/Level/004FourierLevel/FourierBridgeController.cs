@@ -12,6 +12,9 @@ public class FourierBridgeController : MonoBehaviour
     [SerializeField] FourierColorChanger level_2;
     [SerializeField] FourierColorChanger level_3;
 
+    [SerializeField] GameObject audioBGM;
+    [SerializeField] AK.Wwise.Switch beatSwitch;
+
     //[Header("Level Obstacle")]
     //[SerializeField] GameObject obstacle_1;
     //[SerializeField] GameObject obstacle_2;
@@ -38,6 +41,7 @@ public class FourierBridgeController : MonoBehaviour
         if (level_2.isLevelPass && level_3.isLevelPass && !bridge_2.activeSelf)
         {
             bridge_2.SetActive(true);
+            beatSwitch.SetValue(audioBGM);
             //obstacle_2.SetActive(false);
         }
 

@@ -1,19 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
-	507378310	Play_L3_destroy			\Level3\Play_L3_destroy	
-	1593461692	Play_L3_Jump			\Level3\Play_L3_Jump	
-	2720351442	Play_Fourier			\Level3\Play_Fourier	
-	2908913188	Stop_Fourier			\Level3\Stop_Fourier	
-	4190464387	Play_L3_Hit_bad			\Level3\Play_L3_Hit_bad	
+	507378310	Play_L3_destroy			\Level3\Level3\Play_L3_destroy	
+	1152672460	Hit_Record			\Level3\Level3\Hit_Record	
+	1593461692	Play_L3_Jump			\Level3\Level3\Play_L3_Jump	
+	2056255347	Play_Fourier_Scene			\Level3\Level3\Play_Fourier_Scene	
+	3420724554	Play_Fourier_Cube			\Level3\Level3\Play_Fourier_Cube	
+	4190464387	Play_L3_Hit_bad			\Level3\Level3\Play_L3_Hit_bad	
 
 Effect plug-ins	ID	Name	Type				Notes
 	945801009	RoomVerb (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	112183314	傅里叶棋盘_魔方loop	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_魔方loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Cube\傅里叶棋盘_魔方loop\傅里叶棋盘_魔方loop		32544096
 	228576140	L3_Jump	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_96AE51AE.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump		85020
+	304097471	傅里叶棋盘_鼓组loop	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_鼓组loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_鼓组loop		25344096
 	371716904	L3_Jump_01	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_88ECCD51.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_01		101576
 	531891813	L3_Jump_03	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_C7FB753E.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_03		82144
 	644617565	L3_Jump_02	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_D407F890.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_02		93660
 	656407472	L3_Hit_bad	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Hit_bad_646DF284.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Hit_bad		44364
 	743988009	L3_destroy	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_destroy_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		79676
-	1034677683	Fourier_loop	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Fourier\Fourier\Fourier_loop		29952096
+	909243550	傅里叶棋盘_旋律loop	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_旋律loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_旋律loop		29952096
 

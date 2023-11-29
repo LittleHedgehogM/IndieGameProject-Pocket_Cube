@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.5748164, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.57481635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2610,6 +2610,13 @@ MonoBehaviour:
   bridge_2: {fileID: 522590960}
   level_2: {fileID: 5808815743327180277}
   level_3: {fileID: 7118604644924629277}
+  audioBGM: {fileID: 2046539458}
+  beatSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a1cedda1f5b7c9a4aab0b2d1403dca4b, type: 2}
 --- !u!1 &561766255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,50 +3123,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 409988, guid: 97003e56c33b48b498c352bb2df766c0, type: 3}
   m_PrefabInstance: {fileID: 628772730}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &649885348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 649885350}
-  - component: {fileID: 649885349}
-  m_Layer: 0
-  m_Name: GetBeats
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &649885349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649885348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f8783450452fb42a37056cabb68b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &649885350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649885348}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2046539459}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651453349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4755,6 +4718,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  audioPlayer: {fileID: 0}
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 884474697}
@@ -9222,6 +9186,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  audioPlayer: {fileID: 0}
   mainCam: {fileID: 2045749203}
   cameraMoveRange: 6
   Camera_Sensitivity: 0.01
@@ -9308,10 +9273,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046539459}
-  - component: {fileID: 2046539463}
   - component: {fileID: 2046539462}
-  - component: {fileID: 2046539460}
   - component: {fileID: 2046539465}
+  - component: {fileID: 2046539466}
+  - component: {fileID: 2046539467}
   m_Layer: 0
   m_Name: WwiseFourier
   m_TagString: Untagged
@@ -9331,24 +9296,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 649885350}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2046539460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046539458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87699b966979bd14680df5b7f4b010e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &2046539462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9371,30 +9321,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &2046539463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046539458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b626ff3d70d5b92448f81c24e1750bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 548a8e890b8dae145a066faa87f369a3, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &2046539465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9415,7 +9341,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 29ca2be7de279d449a5add1a586052ce, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 627df295891c8834eb246774fdb66a75, type: 2}
   useCallbacks: 1
   Callbacks:
   - Flags:
@@ -9448,6 +9374,46 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &2046539466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046539458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b96752b8d2a867468b3d6e371b9f01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fourier_Bank:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 548a8e890b8dae145a066faa87f369a3, type: 2}
+--- !u!114 &2046539467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046539458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b626ff3d70d5b92448f81c24e1750bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 548a8e890b8dae145a066faa87f369a3, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &2060911302
 GameObject:
   m_ObjectHideFlags: 0
@@ -14783,8 +14749,6 @@ SceneRoots:
   - {fileID: 2045749204}
   - {fileID: 7815663246347265199}
   - {fileID: 842509504}
-  - {fileID: 178503351}
-  - {fileID: 2046539459}
   - {fileID: 1562548}
   - {fileID: 310931258}
   - {fileID: 6945322749202643440}
@@ -14794,3 +14758,5 @@ SceneRoots:
   - {fileID: 689024979}
   - {fileID: 676240346}
   - {fileID: 814379616}
+  - {fileID: 2046539459}
+  - {fileID: 178503351}

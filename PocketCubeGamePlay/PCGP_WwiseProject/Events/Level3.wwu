@@ -1,103 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BF1C512C-8FFC-4CD9-B802-F2451468E7F2}" SchemaVersion="110">
+<WwiseDocument Type="WorkUnit" ID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Level3" ID="{BF1C512C-8FFC-4CD9-B802-F2451468E7F2}" PersistMode="Standalone">
+		<WorkUnit Name="Level3" ID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_L3_Jump" ID="{9C8CC137-F085-4BCA-9B91-B12BDC141FA3}">
+				<Folder Name="Level3" ID="{D9A55D4D-3A24-4F18-9383-B89C9664A94E}" ShortID="63501435">
 					<ChildrenList>
-						<Action Name="" ID="{F10CFE97-299C-412F-A6A5-0BA1C8A5678E}" ShortID="225268645">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.75"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_L3_destroy" ID="{59225D08-45B8-4638-9661-C08E62168CBC}">
+							<ChildrenList>
+								<Action Name="" ID="{77E67239-1645-4C78-9B96-6FD36D92CFDB}" ShortID="800100293">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3_destroy" ID="{64FF9F41-F4AC-4DA4-A598-0C2C68ACAE15}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_L3_Jump" ID="{9C8CC137-F085-4BCA-9B91-B12BDC141FA3}">
+							<ChildrenList>
+								<Action Name="" ID="{F10CFE97-299C-412F-A6A5-0BA1C8A5678E}" ShortID="225268645">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_L3_Hit_bad" ID="{634A4B9F-6996-4E72-8512-89D9DDCF1852}">
+							<ChildrenList>
+								<Action Name="" ID="{6894490F-8F8C-45D5-8AE9-765D8A923BA4}" ShortID="134233398">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3_Hit_bad" ID="{6572ECD6-104A-480C-9F5C-C76787C37675}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
+						<Event Name="Play_Fourier_Cube" ID="{12E10522-7B5D-4B3F-8CE6-89FB6B47F3F6}">
+							<ChildrenList>
+								<Action Name="" ID="{71C9815F-94A6-411E-883D-6EFB0B787F2C}" ShortID="475932913">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{59FD1988-772B-4EEA-B19B-B02DEB52D31F}" ShortID="669861207">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fourier_Cube" ID="{9F24017F-BBFF-4FC5-B726-FCF5E4D2C3A3}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Fourier_Scene" ID="{AE681A24-D486-40CF-9056-070881FA3FA4}">
+							<ChildrenList>
+								<Action Name="" ID="{580DC74E-59C4-4B4C-AE57-08F89B54B254}" ShortID="584419968">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E72E73E0-2376-44C9-9A44-8E699F1DBF54}" ShortID="964469741">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Play_L3_Hit_bad" ID="{634A4B9F-6996-4E72-8512-89D9DDCF1852}">
-					<ChildrenList>
-						<Action Name="" ID="{6894490F-8F8C-45D5-8AE9-765D8A923BA4}" ShortID="134233398">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="L3_Hit_bad" ID="{6572ECD6-104A-480C-9F5C-C76787C37675}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_L3_destroy" ID="{59225D08-45B8-4638-9661-C08E62168CBC}">
-					<ChildrenList>
-						<Action Name="" ID="{77E67239-1645-4C78-9B96-6FD36D92CFDB}" ShortID="800100293">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="L3_destroy" ID="{64FF9F41-F4AC-4DA4-A598-0C2C68ACAE15}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
-				<Event Name="Stop_Fourier" ID="{AE443683-34B9-4B23-87A4-25513F4490B4}">
-					<ChildrenList>
-						<Action Name="" ID="{58474DEA-1504-44CF-BE16-484EE4744613}" ShortID="564073846">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Fourier" ID="{AF41179F-8A01-4C49-B4CD-47D4FB5D5F87}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Fourier" ID="{161700F5-9C6D-4DAD-B2DA-B04087257F9F}">
-					<ChildrenList>
-						<Action Name="" ID="{BAD5217E-1D40-4AD0-870D-8BBAEE202C6E}" ShortID="924195465">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{64B74B5A-49A9-43B3-8717-D55F6D185161}" ShortID="736879683">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Fourier" ID="{EF353701-B6E7-4C2B-BA95-87F4B764B1EC}" WorkUnitID="{05CFFB1A-93E1-48C8-8320-67C1F3781899}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Fourier_Music" ID="{D6F4D510-CDC4-4E1A-9132-B8F1AEFC85AF}">
-					<ChildrenList>
-						<Action Name="" ID="{FC9B22A3-6BB9-4F6E-8E0E-D1EC04C30483}" ShortID="696193920">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{92AB6245-75B7-44C3-8775-0D39A714A1D8}" ShortID="487014624">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Fourier Music" ID="{4750F57B-323D-4871-A731-0121DE17AFC4}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

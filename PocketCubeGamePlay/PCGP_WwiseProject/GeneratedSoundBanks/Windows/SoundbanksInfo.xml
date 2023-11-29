@@ -127,6 +127,12 @@
 						<Switch Id="4184794294" Name="Outro"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="3337558774" Name="Fourier_Beat">
+					<Switches>
+						<Switch Id="930712164" Name="Off"/>
+						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B0DECF18-831A-45BB-107C-B02FFA44FD6B}">
@@ -237,13 +243,21 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{4A429DC1-69B4-06D1-F70A-2C38F1685508}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B9FC570B-E6FB-9AAA-3B8D-6FB150078C0D}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
+				<File Id="112183314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶棋盘_魔方loop.wav</ShortName>
+					<CachePath>SFX/傅里叶棋盘_魔方loop_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
+				</File>
+				<File Id="304097471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶棋盘_鼓组loop.wav</ShortName>
+					<CachePath>SFX/傅里叶棋盘_鼓组loop_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
@@ -265,9 +279,9 @@
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
 				</File>
-				<File Id="1034677683" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>傅里叶棋盘_loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_loop_D79FB2B7.wem</CachePath>
+				<File Id="909243550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶棋盘_旋律loop.wav</ShortName>
+					<CachePath>SFX/傅里叶棋盘_旋律loop_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -276,9 +290,16 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2720351442" Name="Play_Fourier" DurationType="Infinite">
+				<Event Id="1152672460" Name="Hit_Record" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3420724554" Name="Play_Fourier_Cube" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="1034677683"/>
+						<MediaRef Id="112183314"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2056255347" Name="Play_Fourier_Scene" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="304097471"/>
+						<MediaRef Id="909243550"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
@@ -304,8 +325,15 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="2908913188" Name="Stop_Fourier" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3337558774" Name="Fourier_Beat">
+					<Switches>
+						<Switch Id="930712164" Name="Off"/>
+						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{E4EFE89D-D57A-2A9A-1CAB-8A570B572F6F}">
 			<ShortName>Level2</ShortName>
@@ -711,5 +739,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2837DBD8-8E81-3AC4-3720-1982C2A4A219}</FileHash>
+	<FileHash>{9F4EEDAD-C610-315E-9B4E-A1F31754A25D}</FileHash>
 </SoundBanksInfo>
