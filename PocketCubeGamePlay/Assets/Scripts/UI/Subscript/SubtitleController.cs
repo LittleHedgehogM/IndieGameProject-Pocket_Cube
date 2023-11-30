@@ -42,103 +42,34 @@ public class SubtitleController : MonoBehaviour
         subtitle_sequence = new List<string>(mytxtData.text.Split('&'));
     }
 
-    async void LoadPrologue()
+    void LoadPrologue()
+    {
+        StartCoroutine(ShowSutitleLine(0));
+    }
+
+    void LoadTutorialGuide()
+    {
+        StartCoroutine(ShowSutitleLine(2));
+    }
+
+    void LoadCubeShow()
+    {
+        StartCoroutine(ShowSutitleLine(4));
+    }
+
+    private IEnumerator ShowSutitleLine(int line)
     {
         EnableSubtitle();
         AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-        testText.text = subtitle_sequence[0];
-        try
-        {
-            await Task.Delay(6000);
-            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-            testText.text = subtitle_sequence[1];
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-        try
-        {
-            await Task.Delay(6000);
-            DisableSubtitle();
-        }
-        catch(Exception e)
-        {
+        testText.text = subtitle_sequence[line];
+        yield return new WaitForSeconds(6f);
 
-        }
-
-    }
-
-    async void LoadTutorialGuide()
-    {
-        EnableSubtitle();
         AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-        testText.text = subtitle_sequence[2];
-        try
-        {
-            await Task.Delay(6000);
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-        try
-        {
-            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-            testText.text = subtitle_sequence[3];
-            await Task.Delay(8000);
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-
-        try
-        {
-            DisableSubtitle();
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-    }
-
-    async void LoadCubeShow()
-    {
-        EnableSubtitle();
-        AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-        testText.text = subtitle_sequence[4];
-        try
-        {
-            await Task.Delay(6000);
-            AkSoundEngine.PostEvent("Play_subtitle", gameObject);
-            testText.text = subtitle_sequence[5];
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-        try {
-            await Task.Delay(8000);
-            DisableSubtitle();
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
-
-        //EndofSubtitle();
-    }
-
-    /*async void LoadCubeSolved()
-    {
-        EnableSubtitle();
-        testText.text = subtitle_sequence[6];
-        await Task.Delay(10000);
-        testText.text = subtitle_sequence[7];
-        await Task.Delay(10000);
+        testText.text = subtitle_sequence[line+1];
+        yield return new WaitForSeconds(6f);
         DisableSubtitle();
-    }*/
+        yield return null;
+    }
 
     void EnableSubtitle()
     {
@@ -158,8 +89,12 @@ public class SubtitleController : MonoBehaviour
 
     void DisableSubtitle()
     {
+        //StartCoroutine(FadeOut());
+
         try
         {
+            //_animatorTransition.Play("Crossfade_Start");
+
             var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
             var imgLayer = this.GetComponentInChildren<Image>();
 
@@ -171,7 +106,27 @@ public class SubtitleController : MonoBehaviour
             Debug.LogException(e);
         }
     }
+    /*
+    private IEnumerator FadeOut()
+    {
+        float timer = 0;
+        float currentUsedTime = 0;
 
+        float alpha = 1;
+        
+        var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+        var imgLayer = this.GetComponentInChildren<Image>();
+        while (timer < 5)
+        {
+            currentUsedTime += Time.deltaTime;
+            timer = currentUsedTime / 5;
+            Debug.Log(textLayer.color);
+            alpha = 1 - (1/timer);
+            textLayer.color = new Color(imgLayer.color.r, imgLayer.color.g, imgLayer.color.b, alpha);
+        }
+        yield return null;
+
+    }*/
     /*void EndofSubtitle()
     {
         var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
