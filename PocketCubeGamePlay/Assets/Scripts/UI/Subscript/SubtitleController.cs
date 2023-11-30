@@ -73,40 +73,14 @@ public class SubtitleController : MonoBehaviour
 
     void EnableSubtitle()
     {
-        try
-        {
-            var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
-            var imgLayer = this.GetComponentInChildren<Image>();
-
-            imgLayer.enabled = true;
-            textLayer.enabled = true;
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-        }
+        StartCoroutine(FadeIn());
     }
 
     void DisableSubtitle()
     {
-        //StartCoroutine(FadeOut());
-
-        try
-        {
-            //_animatorTransition.Play("Crossfade_Start");
-
-            var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
-            var imgLayer = this.GetComponentInChildren<Image>();
-
-            imgLayer.enabled = false;
-            textLayer.enabled = false;
-        }
-        catch(Exception e)
-        {
-            Debug.LogException(e);
-        }
+        StartCoroutine(FadeOut());
     }
-    /*
+    
     private IEnumerator FadeOut()
     {
         float timer = 0;
@@ -116,17 +90,50 @@ public class SubtitleController : MonoBehaviour
         
         var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
         var imgLayer = this.GetComponentInChildren<Image>();
-        while (timer < 5)
+        while (timer < 1)
         {
             currentUsedTime += Time.deltaTime;
-            timer = currentUsedTime / 5;
-            Debug.Log(textLayer.color);
-            alpha = 1 - (1/timer);
-            textLayer.color = new Color(imgLayer.color.r, imgLayer.color.g, imgLayer.color.b, alpha);
-        }
-        yield return null;
+            timer = currentUsedTime / 2;
+            //Debug.Log(textLayer.color);
+            alpha = (1-timer)/timer;
+            textLayer.color = new Color(textLayer.color.r, textLayer.color.g, textLayer.color.b, alpha);
+            imgLayer.color = new Color(imgLayer.color.r, imgLayer.color.g, imgLayer.color.b, alpha);
 
-    }*/
+            yield return null;
+
+        }
+        imgLayer.enabled = false;
+        textLayer.enabled = false;
+
+        yield return null;
+    }
+
+    private IEnumerator FadeIn()
+    {
+        float timer = 0;
+        float currentUsedTime = 0;
+
+        float alpha = 0;
+
+        var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
+        var imgLayer = this.GetComponentInChildren<Image>();
+        imgLayer.enabled = true;
+        textLayer.enabled = true;
+
+        while (timer < 1)
+        {
+            currentUsedTime += Time.deltaTime;
+            timer = currentUsedTime / 0.8f;
+            //Debug.Log(textLayer.color);
+            alpha = timer;
+            textLayer.color = new Color(textLayer.color.r, textLayer.color.g, textLayer.color.b, alpha);
+            imgLayer.color = new Color(imgLayer.color.r, imgLayer.color.g, imgLayer.color.b, alpha);
+
+            yield return null;
+        }
+
+        yield return null;
+    }
     /*void EndofSubtitle()
     {
         var textLayer = this.GetComponentInChildren<TextMeshProUGUI>();
