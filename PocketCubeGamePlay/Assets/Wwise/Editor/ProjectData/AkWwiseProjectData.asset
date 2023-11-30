@@ -12,14 +12,1953 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518950172505e97438b462a5f8b22678, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: a287cf82b481f248a4c830a533661d8a
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: a287cf82b481f248a4c830a533661d8a
+    GuidInternal: 
+    m_lastTime: -8585014656758443746
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 998c34fe9ecd2f44a733c963f36cb869
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: 998c34fe9ecd2f44a733c963f36cb869
+    GuidInternal: 
+    m_lastTime: -8585007929897986473
+    List:
+    - name: Amb
+      guid: 06fb0e4774496c4f91823c0447f162bd
+      id: 1117531639
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3557c607ea16fc438de4c087f64ab9e2
+      - ElementName: Amb
+        ObjectType: 2
+        guid: 06fb0e4774496c4f91823c0447f162bd
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Amb
+    - name: Ani
+      guid: f9060b7d12c2454ba1e9b56ae1a5bb0c
+      id: 1067198645
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3557c607ea16fc438de4c087f64ab9e2
+      - ElementName: Ani
+        ObjectType: 2
+        guid: f9060b7d12c2454ba1e9b56ae1a5bb0c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Ani
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 853d7646a1730a4ea2c7dadd2c92891f
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 853d7646a1730a4ea2c7dadd2c92891f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 3557c607ea16fc438de4c087f64ab9e2
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3557c607ea16fc438de4c087f64ab9e2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 229d856017c3f84a992874c52206f964
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 229d856017c3f84a992874c52206f964
+    GuidInternal: 
+    m_lastTime: -8585002591655304203
+    List:
+    - name: AMB
+      guid: 55b7dfa40dadec4ba1a2d5861b2d801f
+      id: 1117531639
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: AMB
+        ObjectType: 7
+        guid: 55b7dfa40dadec4ba1a2d5861b2d801f
+      Path: SoundBanks\Default Work Unit\AMB
+    - name: Cube
+      guid: 44f11d3313d9884c95673e9c779451a5
+      id: 4052031814
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Cube
+        ObjectType: 7
+        guid: 44f11d3313d9884c95673e9c779451a5
+      Path: SoundBanks\Default Work Unit\Cube
+    - name: Level0
+      guid: 7771042ebdd58b4eb59f3e3e571958b9
+      id: 2678230383
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Level0
+        ObjectType: 7
+        guid: 7771042ebdd58b4eb59f3e3e571958b9
+      Path: SoundBanks\Default Work Unit\Level0
+    - name: Level1
+      guid: 22ec6efb585ee1479bd8e114af5e693e
+      id: 2678230382
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Level1
+        ObjectType: 7
+        guid: 22ec6efb585ee1479bd8e114af5e693e
+      Path: SoundBanks\Default Work Unit\Level1
+    - name: Level2
+      guid: bb0e53371ba8ee4dba35f9b41531f9cd
+      id: 2678230381
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Level2
+        ObjectType: 7
+        guid: bb0e53371ba8ee4dba35f9b41531f9cd
+      Path: SoundBanks\Default Work Unit\Level2
+    - name: Level3
+      guid: ecd24e984ef002488a40cb438e0fc655
+      id: 2678230380
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Level3
+        ObjectType: 7
+        guid: ecd24e984ef002488a40cb438e0fc655
+      Path: SoundBanks\Default Work Unit\Level3
+    - name: Main
+      guid: 256fb9462e4ea348ae7b3de3972ca7f7
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Main
+        ObjectType: 7
+        guid: 256fb9462e4ea348ae7b3de3972ca7f7
+      Path: SoundBanks\Default Work Unit\Main
+    - name: Player
+      guid: 5caf56b05e623e4dad9e3e5e10ff5b10
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: Player
+        ObjectType: 7
+        guid: 5caf56b05e623e4dad9e3e5e10ff5b10
+      Path: SoundBanks\Default Work Unit\Player
+    - name: UI
+      guid: 38b27582f4cf1f4b9796a6d91836fbd9
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: UI
+        ObjectType: 7
+        guid: 38b27582f4cf1f4b9796a6d91836fbd9
+      Path: SoundBanks\Default Work Unit\UI
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 12eec0454970e0458947c795e9496afa
+    ParentPath: Events\Default Work Unit
+    guid: 12eec0454970e0458947c795e9496afa
+    GuidInternal: 
+    m_lastTime: -8585002591689005425
+    List:
+    - name: AMB
+      guid: 693a8289dc075847879261c4f7df2655
+      id: 1117531639
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      Path: Events\Default Work Unit\AMB
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Cube
+      guid: e39f0fc375b59240a531e51c7ae1c983
+      id: 4052031814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      Path: Events\Default Work Unit\Cube
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level0
+      guid: 29439f5955f5584a9f65725dc1cb0a17
+      id: 2678230383
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      Path: Events\Default Work Unit\Level0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level2
+      guid: 328610c87edc384eaa64ab46a1077c91
+      id: 2678230381
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      Path: Events\Default Work Unit\Level2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Main
+      guid: dce4b9bd9ddc794abae644e24d3674e1
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      Path: Events\Default Work Unit\Main
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb_level00
+      guid: 576fc4725a63dd43b9455f00ebf3b32e
+      id: 2850739289
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Play_Amb_level00
+        ObjectType: 3
+        guid: 576fc4725a63dd43b9455f00ebf3b32e
+      Path: Events\Default Work Unit\AMB\Play_Amb_level00
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb_Main
+      guid: 11720f9dfb7b0e45b3003e178aea13d0
+      id: 1871703286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Play_Amb_Main
+        ObjectType: 3
+        guid: 11720f9dfb7b0e45b3003e178aea13d0
+      Path: Events\Default Work Unit\AMB\Play_Amb_Main
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_box_click
+      guid: e5b6b33b4e68754caa1507103e58dfa0
+      id: 1291434436
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      - ElementName: Play_box_click
+        ObjectType: 3
+        guid: e5b6b33b4e68754caa1507103e58dfa0
+      Path: Events\Default Work Unit\UI\Play_box_click
+      maxAttenuation: 0
+      maxDuration: 2.3214285
+      minDuration: 2.3214285
+    - name: Play_Click_lv1
+      guid: a7cbb19712255d4fb4cd2cf889447399
+      id: 2495038568
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Click_lv1
+        ObjectType: 3
+        guid: a7cbb19712255d4fb4cd2cf889447399
+      Path: Events\Default Work Unit\Level2\Play_Click_lv1
+      maxAttenuation: 0
+      maxDuration: 0.33968255
+      minDuration: 0.33968255
+    - name: Play_Click_lv2
+      guid: b288be219ae94343a60ea1f8c3a811bf
+      id: 2495038571
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Click_lv2
+        ObjectType: 3
+        guid: b288be219ae94343a60ea1f8c3a811bf
+      Path: Events\Default Work Unit\Level2\Play_Click_lv2
+      maxAttenuation: 0
+      maxDuration: 1.2531519
+      minDuration: 1.2531519
+    - name: Play_cube_ani
+      guid: 8c5e6f37a422334092ff8750a4cfaccc
+      id: 3351884458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_ani
+        ObjectType: 3
+        guid: 8c5e6f37a422334092ff8750a4cfaccc
+      Path: Events\Default Work Unit\Cube\Play_cube_ani
+      maxAttenuation: 0
+      maxDuration: 1.6731973
+      minDuration: 1.6731973
+    - name: Play_cube_click
+      guid: b13025f14b11034ab78c5dc7b5be880d
+      id: 1884814068
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_click
+        ObjectType: 3
+        guid: b13025f14b11034ab78c5dc7b5be880d
+      Path: Events\Default Work Unit\Cube\Play_cube_click
+      maxAttenuation: 0
+      maxDuration: 0.50968254
+      minDuration: 0.50968254
+    - name: Play_cube_final
+      guid: a92eb37c4955034ba2ce81bae8e7c929
+      id: 3125553524
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_final
+        ObjectType: 3
+        guid: a92eb37c4955034ba2ce81bae8e7c929
+      Path: Events\Default Work Unit\Cube\Play_cube_final
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_cube_final_Click
+      guid: 65f1676ea623bf439d3fdeb9b7a321ad
+      id: 347704305
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_final_Click
+        ObjectType: 3
+        guid: 65f1676ea623bf439d3fdeb9b7a321ad
+      Path: Events\Default Work Unit\Cube\Play_cube_final_Click
+      maxAttenuation: 0
+      maxDuration: 1.5197959
+      minDuration: 1.5197959
+    - name: Play_cube_roll
+      guid: c9d5b0ee61b3b6499352f4d87865c775
+      id: 2377298701
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_roll
+        ObjectType: 3
+        guid: c9d5b0ee61b3b6499352f4d87865c775
+      Path: Events\Default Work Unit\Cube\Play_cube_roll
+      maxAttenuation: 0
+      maxDuration: 0.99342406
+      minDuration: 0.83732426
+    - name: Play_cube_skillclick01
+      guid: 853b382f4655cf4c9b48a07995deef46
+      id: 3603099912
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_skillclick01
+        ObjectType: 3
+        guid: 853b382f4655cf4c9b48a07995deef46
+      Path: Events\Default Work Unit\Cube\Play_cube_skillclick01
+      maxAttenuation: 0
+      maxDuration: 2.1250114
+      minDuration: 2.1250114
+    - name: Play_cube_skillclick02
+      guid: 5b725d75112c2747a62b674d41198bea
+      id: 3603099915
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Play_cube_skillclick02
+        ObjectType: 3
+        guid: 5b725d75112c2747a62b674d41198bea
+      Path: Events\Default Work Unit\Cube\Play_cube_skillclick02
+      maxAttenuation: 0
+      maxDuration: 1.9375057
+      minDuration: 1.9375057
+    - name: Play_ELE_BGM
+      guid: 7ef0718148a0364bae38994b15983dbb
+      id: 2654027537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_ELE_BGM
+        ObjectType: 3
+        guid: 7ef0718148a0364bae38994b15983dbb
+      Path: Events\Default Work Unit\Level2\Play_ELE_BGM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ELE_outro
+      guid: e9f8ddb28b7e7d47ad97d5afe9d3a9db
+      id: 2857386602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_ELE_outro
+        ObjectType: 3
+        guid: e9f8ddb28b7e7d47ad97d5afe9d3a9db
+      Path: Events\Default Work Unit\Level2\Play_ELE_outro
+      maxAttenuation: 0
+      maxDuration: 36.97436
+      minDuration: 36.97436
+    - name: Play_Enviroment
+      guid: bf5bab2bce18554fb2f4f93efddb4f31
+      id: 108392005
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Play_Enviroment
+        ObjectType: 3
+        guid: bf5bab2bce18554fb2f4f93efddb4f31
+      Path: Events\Default Work Unit\AMB\Play_Enviroment
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Final
+      guid: 118ab860836ee444be9010dabc2135a6
+      id: 540950438
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Final
+        ObjectType: 3
+        guid: 118ab860836ee444be9010dabc2135a6
+      Path: Events\Default Work Unit\Level2\Play_Final
+      maxAttenuation: 0
+      maxDuration: 5.630499
+      minDuration: 5.630499
+    - name: Play_Main_Click01
+      guid: 3595952719948d439c732ec6416daf5d
+      id: 905487977
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_Main_Click01
+        ObjectType: 3
+        guid: 3595952719948d439c732ec6416daf5d
+      Path: Events\Default Work Unit\Main\Play_Main_Click01
+      maxAttenuation: 0
+      maxDuration: 2.8620634
+      minDuration: 2.8620634
+    - name: Play_Main_Click02
+      guid: 79dedd7e0f7bbb4ca2deec8a4e022859
+      id: 905487978
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_Main_Click02
+        ObjectType: 3
+        guid: 79dedd7e0f7bbb4ca2deec8a4e022859
+      Path: Events\Default Work Unit\Main\Play_Main_Click02
+      maxAttenuation: 0
+      maxDuration: 3.6915646
+      minDuration: 3.6915646
+    - name: Play_Main_Hover
+      guid: a565db4d05b28649b37942ffea1916b8
+      id: 3712401318
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Main
+        ObjectType: 4
+        guid: dce4b9bd9ddc794abae644e24d3674e1
+      - ElementName: Play_Main_Hover
+        ObjectType: 3
+        guid: a565db4d05b28649b37942ffea1916b8
+      Path: Events\Default Work Unit\Main\Play_Main_Hover
+      maxAttenuation: 0
+      maxDuration: 0.12501134
+      minDuration: 0.12501134
+    - name: Play_Mid_Unlock
+      guid: 1e6705ed9548234cb300270f29f1e109
+      id: 928358091
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Mid_Unlock
+        ObjectType: 3
+        guid: 1e6705ed9548234cb300270f29f1e109
+      Path: Events\Default Work Unit\Level2\Play_Mid_Unlock
+      maxAttenuation: 0
+      maxDuration: 6.573424
+      minDuration: 6.573424
+    - name: Play_Move_Loop
+      guid: ae30fee7001a734f9b25bcb21683fe70
+      id: 3382199950
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Player
+        ObjectType: 4
+        guid: 55ab4e81ce069d40a75598cb3dde3669
+      - ElementName: Play_Move_Loop
+        ObjectType: 3
+        guid: ae30fee7001a734f9b25bcb21683fe70
+      Path: Events\Default Work Unit\Player\Play_Move_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Newton_environment
+      guid: d6d1eb8a0da4b2418636a8004bd0ca28
+      id: 2419270649
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Play_Newton_environment
+        ObjectType: 3
+        guid: d6d1eb8a0da4b2418636a8004bd0ca28
+      Path: Events\Default Work Unit\AMB\Play_Newton_environment
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Opening
+      guid: 18fab525dd5a364fac2af77087c3c686
+      id: 1808131806
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_Opening
+        ObjectType: 3
+        guid: 18fab525dd5a364fac2af77087c3c686
+      Path: Events\Default Work Unit\Level0\Play_Opening
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_reduce
+      guid: 1fe49930ac00404fbf84aaa4095c1ae9
+      id: 3470104452
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_reduce
+        ObjectType: 3
+        guid: 1fe49930ac00404fbf84aaa4095c1ae9
+      Path: Events\Default Work Unit\Level0\Play_reduce
+      maxAttenuation: 0
+      maxDuration: 5.102086
+      minDuration: 5.102086
+    - name: Play_roll
+      guid: c18f65417e3c5642af9ef0b3e417b50d
+      id: 2719919427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_roll
+        ObjectType: 3
+        guid: c18f65417e3c5642af9ef0b3e417b50d
+      Path: Events\Default Work Unit\Level0\Play_roll
+      maxAttenuation: 0
+      maxDuration: 2.0567348
+      minDuration: 1.9179819
+    - name: Play_roll_long
+      guid: 18dbd7d3ae328144b3970c6e2979e279
+      id: 77838900
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_roll_long
+        ObjectType: 3
+        guid: 18dbd7d3ae328144b3970c6e2979e279
+      Path: Events\Default Work Unit\Level0\Play_roll_long
+      maxAttenuation: 0
+      maxDuration: 4.088413
+      minDuration: 4.088413
+    - name: Play_Shine
+      guid: e58b302693702b468528b813793fd26f
+      id: 3162051019
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Shine
+        ObjectType: 3
+        guid: e58b302693702b468528b813793fd26f
+      Path: Events\Default Work Unit\Level2\Play_Shine
+      maxAttenuation: 0
+      maxDuration: 2.9970295
+      minDuration: 2.9970295
+    - name: Play_Side_Unlock01
+      guid: 0c56846e37dda04faf6debea4b49830a
+      id: 2931672207
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Side_Unlock01
+        ObjectType: 3
+        guid: 0c56846e37dda04faf6debea4b49830a
+      Path: Events\Default Work Unit\Level2\Play_Side_Unlock01
+      maxAttenuation: 0
+      maxDuration: 3.2761679
+      minDuration: 3.2761679
+    - name: Play_Side_Unlock02
+      guid: 3dddec64dae7ff4e975a380dc73a3f96
+      id: 2931672204
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level2
+        ObjectType: 4
+        guid: 328610c87edc384eaa64ab46a1077c91
+      - ElementName: Play_Side_Unlock02
+        ObjectType: 3
+        guid: 3dddec64dae7ff4e975a380dc73a3f96
+      Path: Events\Default Work Unit\Level2\Play_Side_Unlock02
+      maxAttenuation: 0
+      maxDuration: 5.367755
+      minDuration: 5.367755
+    - name: Play_subtitle
+      guid: c933c27059ceae4380702d7d4eb0f6df
+      id: 2597324022
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      - ElementName: Play_subtitle
+        ObjectType: 3
+        guid: c933c27059ceae4380702d7d4eb0f6df
+      Path: Events\Default Work Unit\UI\Play_subtitle
+      maxAttenuation: 0
+      maxDuration: 2.5555103
+      minDuration: 0.36507937
+    - name: Play_UI_click
+      guid: 64583f32217c90489fb9e50ad70c5fcf
+      id: 1749424733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      - ElementName: Play_UI_click
+        ObjectType: 3
+        guid: 64583f32217c90489fb9e50ad70c5fcf
+      Path: Events\Default Work Unit\UI\Play_UI_click
+      maxAttenuation: 0
+      maxDuration: 0.4007339
+      minDuration: 0.3672624
+    - name: Play_UI_roll
+      guid: 0b8000976ebf2541affbc3765703076a
+      id: 2857954946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      - ElementName: Play_UI_roll
+        ObjectType: 3
+        guid: 0b8000976ebf2541affbc3765703076a
+      Path: Events\Default Work Unit\UI\Play_UI_roll
+      maxAttenuation: 0
+      maxDuration: 0.6252834
+      minDuration: 0.54226756
+    - name: Play_UI_turn
+      guid: 8994c879dbebeb4b9aa06a641b27a06e
+      id: 245126902
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      - ElementName: Play_UI_turn
+        ObjectType: 3
+        guid: 8994c879dbebeb4b9aa06a641b27a06e
+      Path: Events\Default Work Unit\UI\Play_UI_turn
+      maxAttenuation: 0
+      maxDuration: 0.40907028
+      minDuration: 0.30521542
+    - name: Play_unlock01
+      guid: 307c3a09fe0f6e4a95e456735762fa7f
+      id: 4083196823
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Level0
+        ObjectType: 4
+        guid: 29439f5955f5584a9f65725dc1cb0a17
+      - ElementName: Play_unlock01
+        ObjectType: 3
+        guid: 307c3a09fe0f6e4a95e456735762fa7f
+      Path: Events\Default Work Unit\Level0\Play_unlock01
+      maxAttenuation: 0
+      maxDuration: 1.9775283
+      minDuration: 1.9775283
+    - name: Player
+      guid: 55ab4e81ce069d40a75598cb3dde3669
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Player
+        ObjectType: 4
+        guid: 55ab4e81ce069d40a75598cb3dde3669
+      Path: Events\Default Work Unit\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Amb_level00
+      guid: b120720f31d75245b5da0600f7c65403
+      id: 352035487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Stop_Amb_level00
+        ObjectType: 3
+        guid: b120720f31d75245b5da0600f7c65403
+      Path: Events\Default Work Unit\AMB\Stop_Amb_level00
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Amb_Main
+      guid: a3eba817371365489ca656ed6aabe693
+      id: 1557599088
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 693a8289dc075847879261c4f7df2655
+      - ElementName: Stop_Amb_Main
+        ObjectType: 3
+        guid: a3eba817371365489ca656ed6aabe693
+      Path: Events\Default Work Unit\AMB\Stop_Amb_Main
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_cube_final_loop
+      guid: 81c2513ae142ce4a92a77a5b53ccabe3
+      id: 247134943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Cube
+        ObjectType: 4
+        guid: e39f0fc375b59240a531e51c7ae1c983
+      - ElementName: Stop_cube_final_loop
+        ObjectType: 3
+        guid: 81c2513ae142ce4a92a77a5b53ccabe3
+      Path: Events\Default Work Unit\Cube\Stop_cube_final_loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Move_Loop
+      guid: 6e44202eb6018048a13b1cd06146a423
+      id: 1423719756
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: Player
+        ObjectType: 4
+        guid: 55ab4e81ce069d40a75598cb3dde3669
+      - ElementName: Stop_Move_Loop
+        ObjectType: 3
+        guid: 6e44202eb6018048a13b1cd06146a423
+      Path: Events\Default Work Unit\Player\Stop_Move_Loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI
+      guid: c8cc6ea52dd02e4a9c61c5790579aead
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: UI
+        ObjectType: 4
+        guid: c8cc6ea52dd02e4a9c61c5790579aead
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Level1.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Level1
+      ObjectType: 12
+      guid: fdc3b775b21fed47b692ca4598a411ef
+    ParentPath: Events\Level1
+    guid: fdc3b775b21fed47b692ca4598a411ef
+    GuidInternal: 
+    m_lastTime: -8585004200357433204
+    List:
+    - name: Play_Camera_zoomIn
+      guid: eb12c4fc76290e46b298c8dd393e0b85
+      id: 977134866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Camera_zoomIn
+        ObjectType: 3
+        guid: eb12c4fc76290e46b298c8dd393e0b85
+      Path: Events\Level1\Play_Camera_zoomIn
+      maxAttenuation: 0
+      maxDuration: 2.741111
+      minDuration: 2.741111
+    - name: Play_Camera_zoomOut
+      guid: f28e9ac31eb1a04abe7623951acfffbc
+      id: 2892692845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Camera_zoomOut
+        ObjectType: 3
+        guid: f28e9ac31eb1a04abe7623951acfffbc
+      Path: Events\Level1\Play_Camera_zoomOut
+      maxAttenuation: 0
+      maxDuration: 2.300771
+      minDuration: 2.300771
+    - name: Play_Coin_add
+      guid: 6c321761973a0349888d0a55be9b3bc9
+      id: 2914979601
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Coin_add
+        ObjectType: 3
+        guid: 6c321761973a0349888d0a55be9b3bc9
+      Path: Events\Level1\Play_Coin_add
+      maxAttenuation: 0
+      maxDuration: 1.9837868
+      minDuration: 1.9837868
+    - name: Play_Coin_takeAway
+      guid: 39df2880446fac4da37f598a03abc571
+      id: 3981976879
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Coin_takeAway
+        ObjectType: 3
+        guid: 39df2880446fac4da37f598a03abc571
+      Path: Events\Level1\Play_Coin_takeAway
+      maxAttenuation: 0
+      maxDuration: 1.0314059
+      minDuration: 1.0314059
+    - name: Play_Cube_drop
+      guid: b9ff80a2de5348449502a9fc7fef1619
+      id: 797967755
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Cube_drop
+        ObjectType: 3
+        guid: b9ff80a2de5348449502a9fc7fef1619
+      Path: Events\Level1\Play_Cube_drop
+      maxAttenuation: 0
+      maxDuration: 7.7746487
+      minDuration: 7.7746487
+    - name: Play_hover
+      guid: 94a580e67402a645a268c53d40008927
+      id: 1962302600
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_hover
+        ObjectType: 3
+        guid: 94a580e67402a645a268c53d40008927
+      Path: Events\Level1\Play_hover
+      maxAttenuation: 0
+      maxDuration: 0.12773243
+      minDuration: 0.12773243
+    - name: Play_jiqiren
+      guid: 662c558f106f6746a45f1152762f880f
+      id: 1467814842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_jiqiren
+        ObjectType: 3
+        guid: 662c558f106f6746a45f1152762f880f
+      Path: Events\Level1\Play_jiqiren
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Level_1_Music
+      guid: 1d5af5e5d81e8842b9d595c8b78327ab
+      id: 814842324
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Level_1_Music
+        ObjectType: 3
+        guid: 1d5af5e5d81e8842b9d595c8b78327ab
+      Path: Events\Level1\Play_Level_1_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Plate_Down
+      guid: 5d4b263bcca9ab4fb9f77f613703e433
+      id: 3551052341
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Plate_Down
+        ObjectType: 3
+        guid: 5d4b263bcca9ab4fb9f77f613703e433
+      Path: Events\Level1\Play_Plate_Down
+      maxAttenuation: 0
+      maxDuration: 1.7832654
+      minDuration: 1.7832654
+    - name: Play_Plate_Lift
+      guid: 50c90c10d09c724fa2c4f8b8cf30a2ae
+      id: 731342154
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Plate_Lift
+        ObjectType: 3
+        guid: 50c90c10d09c724fa2c4f8b8cf30a2ae
+      Path: Events\Level1\Play_Plate_Lift
+      maxAttenuation: 0
+      maxDuration: 2.0144258
+      minDuration: 2.0144258
+  - PhysicalPath: Events\Level3.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Level3
+      ObjectType: 12
+      guid: 0cf8e1a531472444b5a804aa41c9a9ce
+    ParentPath: Events\Level3
+    guid: 0cf8e1a531472444b5a804aa41c9a9ce
+    GuidInternal: 
+    m_lastTime: -8585002591689005425
+    List:
+    - name: Hit_Record
+      guid: f8630d3a8f475143a5f76be40e846b59
+      id: 1152672460
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Hit_Record
+        ObjectType: 3
+        guid: f8630d3a8f475143a5f76be40e846b59
+      Path: Events\Level3\Level3\Hit_Record
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Level3
+      guid: 4d5da5d9243a184f9383b89c9664a94e
+      id: 2678230380
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      Path: Events\Level3\Level3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fourier_Cube
+      guid: 2205e1125d7b3f4b8ce689fb6b47f3f6
+      id: 3420724554
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Fourier_Cube
+        ObjectType: 3
+        guid: 2205e1125d7b3f4b8ce689fb6b47f3f6
+      Path: Events\Level3\Level3\Play_Fourier_Cube
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fourier_Scene
+      guid: 241a68ae86d4cf409056070881fa3fa4
+      id: 2056255347
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Fourier_Scene
+        ObjectType: 3
+        guid: 241a68ae86d4cf409056070881fa3fa4
+      Path: Events\Level3\Level3\Play_Fourier_Scene
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_L3_destroy
+      guid: 085d2259b84538469661c08e62168cbc
+      id: 507378310
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_destroy
+        ObjectType: 3
+        guid: 085d2259b84538469661c08e62168cbc
+      Path: Events\Level3\Level3\Play_L3_destroy
+      maxAttenuation: 0
+      maxDuration: 0.4511338
+      minDuration: 0.4511338
+    - name: Play_L3_Hit_bad
+      guid: 9f4b4a639669724e851289d9ddcf1852
+      id: 4190464387
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_Hit_bad
+        ObjectType: 3
+        guid: 9f4b4a639669724e851289d9ddcf1852
+      Path: Events\Level3\Level3\Play_L3_Hit_bad
+      maxAttenuation: 0
+      maxDuration: 0.25094482
+      minDuration: 0.25094482
+    - name: Play_L3_Jump
+      guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
+      id: 1593461692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_Jump
+        ObjectType: 3
+        guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
+      Path: Events\Level3\Level3\Play_L3_Jump
+      maxAttenuation: 0
+      maxDuration: 1.3252789
+      minDuration: 1.2151191
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: e200979ed1037542820480365a2664b5
+    ParentPath: Game Parameters\Default Work Unit
+    guid: e200979ed1037542820480365a2664b5
+    GuidInternal: 
+    m_lastTime: -8585012025914478344
+    List:
+    - name: Main_Vol
+      guid: 0354b0cf06881346b7ffd022e3232f83
+      id: 243859308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: Main_Vol
+        ObjectType: 13
+        guid: 0354b0cf06881346b7ffd022e3232f83
+      Path: Game Parameters\Default Work Unit\Volumn\Main_Vol
+    - name: Music_Vol
+      guid: 814e7d4950b3714da6d9a265c67dfd99
+      id: 2246609544
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: Music_Vol
+        ObjectType: 13
+        guid: 814e7d4950b3714da6d9a265c67dfd99
+      Path: Game Parameters\Default Work Unit\Volumn\Music_Vol
+    - name: New_Game_Parameter
+      guid: 55362c88a4b4f7408a04ed774d899757
+      id: 3671138082
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: New_Game_Parameter
+        ObjectType: 13
+        guid: 55362c88a4b4f7408a04ed774d899757
+      Path: Game Parameters\Default Work Unit\New_Game_Parameter
+    - name: SFX_Vol
+      guid: cf0442c05647f649ab2e9e3493c0d241
+      id: 42448320
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      - ElementName: SFX_Vol
+        ObjectType: 13
+        guid: cf0442c05647f649ab2e9e3493c0d241
+      Path: Game Parameters\Default Work Unit\Volumn\SFX_Vol
+    - name: Volumn
+      guid: f70d49241e48b34597dcb0dbab470421
+      id: 2415836744
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e200979ed1037542820480365a2664b5
+      - ElementName: Volumn
+        ObjectType: 4
+        guid: f70d49241e48b34597dcb0dbab470421
+      Path: Game Parameters\Default Work Unit\Volumn
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 551c67d894344d4c9f9422edb33c3b94
+    ParentPath: States\Default Work Unit
+    guid: 551c67d894344d4c9f9422edb33c3b94
+    GuidInternal: 
+    m_lastTime: -8585004998870328472
+    List:
+    - name: ELE
+      guid: 823177fdcc8ebf46807e499dae36ce3f
+      id: 563281699
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 551c67d894344d4c9f9422edb33c3b94
+      - ElementName: ELE
+        ObjectType: 9
+        guid: 823177fdcc8ebf46807e499dae36ce3f
+      Path: States\Default Work Unit\ELE
+      values:
+      - name: None
+        guid: d12f82f18d24024aae368e509278e41e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: ELE
+          ObjectType: 9
+          guid: 823177fdcc8ebf46807e499dae36ce3f
+        - ElementName: None
+          ObjectType: 8
+          guid: d12f82f18d24024aae368e509278e41e
+      - name: P2
+        guid: a1a1f4c9c3f75349adce09fd5f84beef
+        id: 1635194255
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: ELE
+          ObjectType: 9
+          guid: 823177fdcc8ebf46807e499dae36ce3f
+        - ElementName: P2
+          ObjectType: 8
+          guid: a1a1f4c9c3f75349adce09fd5f84beef
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: FourierPhase
+      guid: a2d9535c6af6314890ef5adc8d67cbaf
+      id: 3207373244
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 551c67d894344d4c9f9422edb33c3b94
+      - ElementName: FourierPhase
+        ObjectType: 9
+        guid: a2d9535c6af6314890ef5adc8d67cbaf
+      Path: States\Default Work Unit\FourierPhase
+      values:
+      - name: None
+        guid: af35f182b65c8f499d74c992db59ec37
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: None
+          ObjectType: 8
+          guid: af35f182b65c8f499d74c992db59ec37
+      - name: phase_00
+        guid: 779b4fe26aecf146b98d742a26694ca4
+        id: 2002117581
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_00
+          ObjectType: 8
+          guid: 779b4fe26aecf146b98d742a26694ca4
+      - name: phase_01
+        guid: daa4b62b261bd34a92fc52370e51a891
+        id: 2002117580
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_01
+          ObjectType: 8
+          guid: daa4b62b261bd34a92fc52370e51a891
+      - name: phase_02
+        guid: 71c7756e3d5a854ebd97af77b564f7ae
+        id: 2002117583
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_02
+          ObjectType: 8
+          guid: 71c7756e3d5a854ebd97af77b564f7ae
+      - name: phase_03
+        guid: b0c1d499d24f4641b726499118a2713c
+        id: 2002117582
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_03
+          ObjectType: 8
+          guid: b0c1d499d24f4641b726499118a2713c
+      - name: phase_04
+        guid: bfcdf35de0022349be3b7e8d39e5d034
+        id: 2002117577
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_04
+          ObjectType: 8
+          guid: bfcdf35de0022349be3b7e8d39e5d034
+      - name: phase_05
+        guid: fc4608c5e930a94caea49f72e9d20d1c
+        id: 2002117576
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 551c67d894344d4c9f9422edb33c3b94
+        - ElementName: FourierPhase
+          ObjectType: 9
+          guid: a2d9535c6af6314890ef5adc8d67cbaf
+        - ElementName: phase_05
+          ObjectType: 8
+          guid: fc4608c5e930a94caea49f72e9d20d1c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+    ParentPath: Switches\Default Work Unit
+    guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+    GuidInternal: 
+    m_lastTime: -8585002591655299646
+    List:
+    - name: ELE_BGM
+      guid: 3123b75e321c3441b2fa0b3363d32102
+      id: 1533533912
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: ELE_BGM
+        ObjectType: 11
+        guid: 3123b75e321c3441b2fa0b3363d32102
+      Path: Switches\Default Work Unit\ELE_BGM
+      values:
+      - name: Intro
+        guid: a3e769f2c26c0c4689e9e734ba31afc4
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_BGM
+          ObjectType: 11
+          guid: 3123b75e321c3441b2fa0b3363d32102
+        - ElementName: Intro
+          ObjectType: 10
+          guid: a3e769f2c26c0c4689e9e734ba31afc4
+      - name: Outro
+        guid: d62855a3ed3c5947b3050e642dc02c6b
+        id: 4184794294
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_BGM
+          ObjectType: 11
+          guid: 3123b75e321c3441b2fa0b3363d32102
+        - ElementName: Outro
+          ObjectType: 10
+          guid: d62855a3ed3c5947b3050e642dc02c6b
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ELE_Cube
+      guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+      id: 6529029
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: ELE_Cube
+        ObjectType: 11
+        guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+      Path: Switches\Default Work Unit\ELE_Cube
+      values:
+      - name: Off
+        guid: 4133506b9a050945b349c5380486f0ab
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_Cube
+          ObjectType: 11
+          guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+        - ElementName: Off
+          ObjectType: 10
+          guid: 4133506b9a050945b349c5380486f0ab
+      - name: On
+        guid: b1ede9f08316234aad199a9845b09520
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: ELE_Cube
+          ObjectType: 11
+          guid: 9a6f5c1cc7a47c4c9849bb9009587fb1
+        - ElementName: On
+          ObjectType: 10
+          guid: b1ede9f08316234aad199a9845b09520
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Fourier_Beat
+      guid: 91ab0ed45585e14d9a8309173d6f12b7
+      id: 3337558774
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+      - ElementName: Fourier_Beat
+        ObjectType: 11
+        guid: 91ab0ed45585e14d9a8309173d6f12b7
+      Path: Switches\Default Work Unit\Fourier_Beat
+      values:
+      - name: Off
+        guid: f7c2f6f6a0f273439ed3be45f4c41c22
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: Fourier_Beat
+          ObjectType: 11
+          guid: 91ab0ed45585e14d9a8309173d6f12b7
+        - ElementName: Off
+          ObjectType: 10
+          guid: f7c2f6f6a0f273439ed3be45f4c41c22
+      - name: On
+        guid: 1adcae4726667e429f5c82daac1a26f3
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bc3d4cfc8bcc444eb836a2d8305cdf57
+        - ElementName: Fourier_Beat
+          ObjectType: 11
+          guid: 91ab0ed45585e14d9a8309173d6f12b7
+        - ElementName: On
+          ObjectType: 10
+          guid: 1adcae4726667e429f5c82daac1a26f3
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 0312bd49e5a5964584ed87b0261d3295
+    ParentPath: Triggers\Default Work Unit
+    guid: 0312bd49e5a5964584ed87b0261d3295
+    GuidInternal: 
+    m_lastTime: -8585014656758443746
+    List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
