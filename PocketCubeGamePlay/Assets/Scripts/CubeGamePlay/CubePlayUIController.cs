@@ -462,22 +462,22 @@ public class CubePlayUIController : MonoBehaviour
     private IEnumerator FinishImageHide()
     {
 
-        float startAlphaVal = finishAlpha;
+        /*float startAlphaVal = finishAlpha;
         float targetAlphaVal = 0;
         float currentTime = 0;
         float translationTime = 0.5f;
-        float t = 0;
+        float t = 0;*/
 
         //*hide image*//*
-        while (t < 1)
+        /*while (t < 1)
         {
             currentTime += Time.deltaTime;
             t = currentTime / translationTime;
             float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
             finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
             yield return null;
-        }
-        finishImage.gameObject.SetActive(false);
+        }*/
+        //finishImage.gameObject.SetActive(false);
         print("finishImageHide");
         switch (PlayerPrefs.GetInt("Level"))
         {
