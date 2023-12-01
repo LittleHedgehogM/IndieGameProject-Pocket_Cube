@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585014628264091154
+    m_lastTime: -8585014668168285355
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8585005248596877209
+    m_lastTime: -8585001786317234211
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -80,6 +80,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: f9060b7d12c2454ba1e9b56ae1a5bb0c
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Ani
+    - name: fx
+      guid: f991a86931412841a88aa3ca11d7aaec
+      id: 1802970371
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 998c34fe9ecd2f44a733c963f36cb869
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3557c607ea16fc438de4c087f64ab9e2
+      - ElementName: fx
+        ObjectType: 2
+        guid: f991a86931412841a88aa3ca11d7aaec
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\fx
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -140,7 +160,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585001930325053646
+    m_lastTime: -8585001917279602079
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -280,7 +300,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585001903980696640
+    m_lastTime: -8585001917314974449
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -1172,7 +1192,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8585001930352988388
+    m_lastTime: -8585001917314964582
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1338,7 +1358,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8585001903980642078
+    m_lastTime: -8585001777565295115
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1495,8 +1515,8 @@ MonoBehaviour:
         guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
       Path: Events\Level3\Level3\Play_L3_Jump
       maxAttenuation: 0
-      maxDuration: 1.3252789
-      minDuration: 1.2151191
+      maxDuration: 0.5752789
+      minDuration: 0.4651191
     - name: Play_Land
       guid: 2f45025be85b8840aa10624b92d96661
       id: 4285282925
@@ -1515,8 +1535,8 @@ MonoBehaviour:
         guid: 2f45025be85b8840aa10624b92d96661
       Path: Events\Level3\Level3\Play_Land
       maxAttenuation: 0
-      maxDuration: 1.1592382
-      minDuration: 0.9028136
+      maxDuration: 1.9092382
+      minDuration: 1.6528137
     - name: Play_Unlock
       guid: 9af0d8ea23d9964c9d8dc0fe34d21967
       id: 1239937734
@@ -1549,7 +1569,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585012036669806509
+    m_lastTime: -8585012054559580810
     List:
     - name: Main_Vol
       guid: 0354b0cf06881346b7ffd022e3232f83
@@ -1642,7 +1662,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585004449594295614
+    m_lastTime: -8585005084261401694
     List:
     - name: ELE
       guid: 823177fdcc8ebf46807e499dae36ce3f
@@ -1836,7 +1856,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585003544116727800
+    m_lastTime: -8585003742039213340
     List:
     - name: ELE_BGM
       guid: 3123b75e321c3441b2fa0b3363d32102
@@ -2000,10 +2020,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585014628264120910
+    m_lastTime: -8585014668168290397
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000001800000019000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

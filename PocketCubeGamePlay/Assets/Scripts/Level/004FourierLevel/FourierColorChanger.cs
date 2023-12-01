@@ -30,7 +30,7 @@ public class FourierColorChanger : MonoBehaviour
     /*[Header("Off: Color change on playerEnter | On: Color change on GameStart")]
     [SerializeField]*/
     //public int transitionOnStart;
-    [SerializeField] private GameObject levelExit;
+    //[SerializeField] private GameObject levelExit;
     //[SerializeField] private GameObject levelEnterCol;
 
     //[SerializeField] 
@@ -122,9 +122,10 @@ public class FourierColorChanger : MonoBehaviour
         {
             isLevelPass = true;
             levelPassFx.Play();
+            AkSoundEngine.PostEvent("Play_Unlock", gameObject);
             cubeLevelPassFx.Play();
 
-            levelExit.SetActive(false);
+            //levelExit.SetActive(false);
             print(this.gameObject.name + "pass");
         }
 

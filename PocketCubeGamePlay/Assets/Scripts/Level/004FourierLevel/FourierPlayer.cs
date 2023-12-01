@@ -20,7 +20,8 @@ public class FourierPlayer : MonoBehaviour
     Vector3 movementDirection;
 
     //audio
-    //public AK.Wwise.Event jumpSFX;
+    [SerializeField] AK.Wwise.Event jumpSFX;
+    [SerializeField] AK.Wwise.Event landSFX;
     [SerializeField] private ParticleSystem jumpPS;
     bool playerMovementEnabled;
 
@@ -78,10 +79,12 @@ public class FourierPlayer : MonoBehaviour
                 //playerAni.SetTrigger("isJumping");
                 //print("Space Down");
                 jumpPS.Play();
-                //jumpSFX.Post(gameObject);
+                jumpSFX.Post(gameObject);
+                landSFX.Post(gameObject);
 
                 //jump
                 myRigidbody.velocity = Vector3.up * jumpStrength;
+                
             }
         }
              

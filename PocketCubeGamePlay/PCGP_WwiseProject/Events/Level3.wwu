@@ -19,9 +19,6 @@
 						<Event Name="Play_L3_Jump" ID="{9C8CC137-F085-4BCA-9B91-B12BDC141FA3}">
 							<ChildrenList>
 								<Action Name="" ID="{F10CFE97-299C-412F-A6A5-0BA1C8A5678E}" ShortID="225268645">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.75"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="L3_Jump" ID="{F5EAE7C1-6F08-4BAF-8648-9C0062FCC129}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
@@ -112,6 +109,9 @@
 						<Event Name="Play_Land" ID="{5B02452F-5BE8-4088-AA10-624B92D96661}">
 							<ChildrenList>
 								<Action Name="" ID="{33130AA9-4A13-4939-902C-01B3E3061CB8}" ShortID="220863770">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.75"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Land" ID="{9853B963-CAC0-4C31-A2BC-BC3DFAB66800}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>

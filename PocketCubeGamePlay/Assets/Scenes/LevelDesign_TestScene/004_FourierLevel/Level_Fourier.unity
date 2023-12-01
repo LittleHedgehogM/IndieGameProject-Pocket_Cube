@@ -1589,13 +1589,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346934832}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.48703247, y: -0.5126396, z: 0.5126396, w: -0.48703247}
-  m_LocalPosition: {x: 0.197, y: 0, z: 1.249}
-  m_LocalScale: {x: 0.4915197, y: 0.37244004, z: 0.47165802}
+  m_LocalRotation: {x: 0.00000035762778, y: 0.00000020861621, z: 0.726351, w: 0.687324}
+  m_LocalPosition: {x: -0.00041, y: -0.00216, z: 0.116}
+  m_LocalScale: {x: 0.00095440703, y: 0.0007231843, z: 0.015519745}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1885914598}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -452.935}
+  m_Father: {fileID: 7819727350930289232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 93.163}
 --- !u!64 &346934834
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4870,7 +4870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &931511566
 Transform:
   m_ObjectHideFlags: 0
@@ -5169,7 +5169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1098377722
 Transform:
   m_ObjectHideFlags: 0
@@ -6724,6 +6724,14 @@ PrefabInstance:
       propertyPath: jumpStrength
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1940460249333519174, guid: 588f38903a096fb46bd6be846401d936, type: 3}
+      propertyPath: jumpSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6beaa2a0f2aab32469da3829fe0c7746, type: 2}
+    - target: {fileID: 1940460249333519174, guid: 588f38903a096fb46bd6be846401d936, type: 3}
+      propertyPath: landSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 948eb7d7199d3f440a1ca5a797a1cb5b, type: 2}
     - target: {fileID: 2155042293557783605, guid: 588f38903a096fb46bd6be846401d936, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.27622196
@@ -7066,13 +7074,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444164879}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7242976, y: -0.0001807511, z: -0.03501794, w: -0.68859774}
-  m_LocalPosition: {x: -2.102, y: -0.041, z: 3.481}
-  m_LocalScale: {x: 0.4915197, y: 0.37244004, z: 0.47165802}
+  m_LocalRotation: {x: 0.00000013411042, y: 0.000000014901158, z: -0.03179846, w: 0.9994944}
+  m_LocalPosition: {x: -0.00493, y: -0.00666, z: 0.0313}
+  m_LocalScale: {x: 0.00095659075, y: 0.0007250637, z: 0.026936116}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1885914598}
-  m_LocalEulerAnglesHint: {x: 94.06299, y: -46.00702, z: -403.18298}
+  m_Father: {fileID: 7819727350930289232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.644}
 --- !u!64 &1444164881
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8351,7 +8359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1869009874
 Transform:
   m_ObjectHideFlags: 0
@@ -8601,8 +8609,6 @@ Transform:
   - {fileID: 1934648168}
   - {fileID: 1098377722}
   - {fileID: 276197872}
-  - {fileID: 1444164880}
-  - {fileID: 346934833}
   - {fileID: 455212194}
   - {fileID: 1385866313}
   - {fileID: 1984948711}
@@ -9501,7 +9507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2094439938
 Transform:
   m_ObjectHideFlags: 0
@@ -11903,7 +11909,6 @@ MonoBehaviour:
   lerpTime: 0.8
   goalColor: {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   isLevelPass: 0
-  levelExit: {fileID: 1535997574}
   cubeLevelPassFx: {fileID: 1725974107}
 --- !u!64 &4207007769288038459
 MeshCollider:
@@ -12699,7 +12704,6 @@ MonoBehaviour:
   lerpTime: 0.8
   goalColor: {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   isLevelPass: 0
-  levelExit: {fileID: 931511565}
   cubeLevelPassFx: {fileID: 1725974107}
 --- !u!64 &5808815743327180278
 MeshCollider:
@@ -12898,7 +12902,6 @@ MonoBehaviour:
   lerpTime: 0.8
   goalColor: {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   isLevelPass: 0
-  levelExit: {fileID: 1098377721}
   cubeLevelPassFx: {fileID: 1725974107}
 --- !u!64 &6086799572414104818
 MeshCollider:
@@ -13610,7 +13613,6 @@ MonoBehaviour:
   lerpTime: 0.8
   goalColor: {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   isLevelPass: 0
-  levelExit: {fileID: 1869009873}
   cubeLevelPassFx: {fileID: 1725974107}
 --- !u!64 &7118604644924629278
 MeshCollider:
@@ -13765,7 +13767,6 @@ MonoBehaviour:
   lerpTime: 0.8
   goalColor: {r: 0.54509807, g: 0.63529414, b: 0.8313726, a: 0}
   isLevelPass: 0
-  levelExit: {fileID: 1535997574}
   cubeLevelPassFx: {fileID: 1725974107}
 --- !u!64 &7689027606585333249
 MeshCollider:
@@ -13860,6 +13861,8 @@ Transform:
   m_Children:
   - {fileID: 7882382965406929671}
   - {fileID: 5053290977098821404}
+  - {fileID: 1444164880}
+  - {fileID: 346934833}
   m_Father: {fileID: 558842426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7821837860052007737
