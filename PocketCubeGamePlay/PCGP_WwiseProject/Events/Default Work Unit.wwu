@@ -130,6 +130,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_ELE_zoomOut" ID="{2AFD1CDF-182A-4A7F-B08B-642CBC828101}">
+							<ChildrenList>
+								<Action Name="" ID="{CE2994E2-4CDD-4B7C-88AB-A15847873AD8}" ShortID="261348289">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ELE_zoomOut" ID="{D03420ED-870E-41A0-9FAA-263F844A82AA}" WorkUnitID="{B9280B89-A8C7-43F6-A936-A4C6BF5344D5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ELE_zoomin" ID="{1E2688D3-4521-4EEA-BEAD-27A83FAE96BE}">
+							<ChildrenList>
+								<Action Name="" ID="{BEC3C4D3-7005-458B-AB6E-26198A5EA59D}" ShortID="610064965">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ELE_zoomin" ID="{652E20BC-B57A-45B2-A663-942EE8F49D17}" WorkUnitID="{B9280B89-A8C7-43F6-A936-A4C6BF5344D5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{814EAB55-06CE-409D-A755-98CB3DDE3669}" ShortID="913087109">

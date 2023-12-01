@@ -301,6 +301,80 @@
 								<ActiveSource Name="最终特效" ID="{18B869E9-E58A-4DB1-AD0A-C24AE2521677}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="ELE_zoomin" ID="{652E20BC-B57A-45B2-A663-942EE8F49D17}" ShortID="906079238">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C0EAA937-BF77-416B-9F10-D23B39216FCE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ELE_zoomin" ID="{8C568B19-5C7F-4C58-B732-DB179CD2A120}">
+									<Language>SFX</Language>
+									<AudioFile>ELE_zoomin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="85237782"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ELE_zoomin" ID="{8C568B19-5C7F-4C58-B732-DB179CD2A120}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ELE_zoomOut" ID="{D03420ED-870E-41A0-9FAA-263F844A82AA}" ShortID="653126495">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{58294A66-9301-47DB-9882-DAF78AE0BFD7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ELE_zoomOut" ID="{921B0648-3AF9-441E-AAE4-10D82A8CF8DB}">
+									<Language>SFX</Language>
+									<AudioFile>ELE_zoomOut.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="230466036"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ELE_zoomOut" ID="{921B0648-3AF9-441E-AAE4-10D82A8CF8DB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AMB" ID="{441047DE-BF81-49A9-878A-D58911D1E5CF}" ShortID="628334833">
