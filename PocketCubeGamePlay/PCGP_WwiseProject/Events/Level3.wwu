@@ -75,6 +75,7 @@
 								<Action Name="" ID="{580DC74E-59C4-4B4C-AE57-08F89B54B254}" ShortID="584419968">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -86,6 +87,7 @@
 								<Action Name="" ID="{C550F3E3-45F4-4BFD-8A1E-711C16F4987F}" ShortID="118943204">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -94,6 +96,10 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{E72E73E0-2376-44C9-9A44-8E699F1DBF54}" ShortID="964469741">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>

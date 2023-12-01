@@ -157,13 +157,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Cube_drop" ID="{0270D588-AEB6-40A4-830B-7F615707E8AA}" ShortID="622875953">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>

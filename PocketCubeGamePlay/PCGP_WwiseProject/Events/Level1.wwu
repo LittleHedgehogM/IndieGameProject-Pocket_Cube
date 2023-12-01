@@ -96,6 +96,7 @@
 						<Action Name="" ID="{39DD2E65-098C-430A-8F80-6CFE7097506B}" ShortID="1006090061">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -104,17 +105,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{9D78E272-9DB4-42DA-86B5-E935F259F1BF}" ShortID="793443867">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Level 1 Music" ID="{39DCE964-12CB-49FD-913C-993C1F44404F}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Level_1_Music" ID="{E5F55A1D-1ED8-4288-B9D5-95C8B78327AB}">
-					<ChildrenList>
-						<Action Name="" ID="{AF67DE7D-2B0A-460B-AD22-937C252ABE90}" ShortID="613669599">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Level 1 Music" ID="{39DCE964-12CB-49FD-913C-993C1F44404F}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>

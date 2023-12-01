@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{BD166783-7072-7236-2419-BA8969DAFB05}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{D995F542-D199-76FC-DBF5-BCD56B9DBB09}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -243,7 +243,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{C5537724-C331-8FF2-FE6C-4ABA6DBE7666}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5713677B-5011-7972-2F67-BCE04D6CFCF5}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -335,7 +335,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{E4EFE89D-D57A-2A9A-1CAB-8A570B572F6F}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{945E72CD-5205-828E-B45B-FDFC918FD552}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -442,7 +442,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{8770713A-D25E-C317-F5DC-D6674D08B5AF}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{1D3C703C-0587-A96D-3BA5-49017D8110B7}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -529,13 +529,6 @@
 						<MediaRef Id="489948701"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="814842324" Name="Play_Level_1_Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="1852256"/>
-						<MediaRef Id="110487141"/>
-						<MediaRef Id="489948701"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
 					<MediaRefs>
 						<MediaRef Id="232274638"/>
@@ -548,7 +541,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{89A67B2D-34EB-D6B8-F01C-ED02194D691A}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{541FD48B-0EFC-0149-9554-0AAF3F7724BA}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -739,5 +732,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5D3E9B96-AA2E-B69A-BE30-13D8610D0635}</FileHash>
+	<FileHash>{E3843BE9-E4E7-818F-2F5B-E9791C514F28}</FileHash>
 </SoundBanksInfo>
