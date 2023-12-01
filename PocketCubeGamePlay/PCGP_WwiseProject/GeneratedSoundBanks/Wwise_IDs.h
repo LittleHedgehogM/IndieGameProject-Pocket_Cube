@@ -39,9 +39,11 @@ namespace AK
         static const AkUniqueID PLAY_FOURIER_SCENE = 2056255347U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
+        static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
+        static const AkUniqueID PLAY_LAND = 4285282925U;
         static const AkUniqueID PLAY_MAIN_CLICK01 = 905487977U;
         static const AkUniqueID PLAY_MAIN_CLICK02 = 905487978U;
         static const AkUniqueID PLAY_MAIN_HOVER = 3712401318U;
@@ -61,6 +63,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_CLICK = 1749424733U;
         static const AkUniqueID PLAY_UI_ROLL = 2857954946U;
         static const AkUniqueID PLAY_UI_TURN = 245126902U;
+        static const AkUniqueID PLAY_UNLOCK = 1239937734U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;

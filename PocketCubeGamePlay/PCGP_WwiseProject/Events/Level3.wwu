@@ -88,6 +88,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -103,6 +104,39 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Land" ID="{5B02452F-5BE8-4088-AA10-624B92D96661}">
+							<ChildrenList>
+								<Action Name="" ID="{33130AA9-4A13-4939-902C-01B3E3061CB8}" ShortID="220863770">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Land" ID="{9853B963-CAC0-4C31-A2BC-BC3DFAB66800}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Unlock" ID="{EAD8F09A-D923-4C96-9D8D-C0FE34D21967}">
+							<ChildrenList>
+								<Action Name="" ID="{6748E99D-0985-4DF0-B01D-7BD6F5B80044}" ShortID="79191403">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Unlock" ID="{39072F2B-5F10-4C5F-BBA2-F633F5A8C602}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Jump" ID="{383CC43E-D0A3-4C9A-8B4B-0840A41E0D83}">
+							<ChildrenList>
+								<Action Name="" ID="{45A6B44B-B684-40AD-BFD7-A69BB2399301}" ShortID="120598261">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump" ID="{683B647E-99AC-403E-BBAF-8FC77E5A15BB}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

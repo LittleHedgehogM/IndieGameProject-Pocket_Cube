@@ -1,22 +1,33 @@
 Event	ID	Name			Wwise Object Path	Notes
 	507378310	Play_L3_destroy			\Level3\Level3\Play_L3_destroy	
 	1152672460	Hit_Record			\Level3\Level3\Hit_Record	
+	1239937734	Play_Unlock			\Level3\Level3\Play_Unlock	
 	1593461692	Play_L3_Jump			\Level3\Level3\Play_L3_Jump	
 	2056255347	Play_Fourier_Scene			\Level3\Level3\Play_Fourier_Scene	
 	3420724554	Play_Fourier_Cube			\Level3\Level3\Play_Fourier_Cube	
+	3689126666	Play_Jump			\Level3\Level3\Play_Jump	
 	4190464387	Play_L3_Hit_bad			\Level3\Level3\Play_L3_Hit_bad	
+	4285282925	Play_Land			\Level3\Level3\Play_Land	
 
 Effect plug-ins	ID	Name	Type				Notes
 	945801009	RoomVerb (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	64915519	jump	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump		188064
 	112183314	傅里叶棋盘_魔方loop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_魔方loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Cube\傅里叶棋盘_魔方loop\傅里叶棋盘_魔方loop		32544096
 	228576140	L3_Jump	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_96AE51AE.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump		85020
+	284291479	land02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\land02_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\land02		176496
+	284612535	land03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\land03_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\land03		184712
 	304097471	傅里叶棋盘_鼓组loop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_鼓组loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_鼓组loop		25344096
 	371716904	L3_Jump_01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_88ECCD51.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_01		101576
 	531891813	L3_Jump_03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_C7FB753E.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_03		82144
+	555154728	jump03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\jump03_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump03		142768
+	573026670	jump02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\jump02_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump02		176496
 	644617565	L3_Jump_02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Jump_D407F890.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_02		93660
 	656407472	L3_Hit_bad	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_Hit_bad_646DF284.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Hit_bad		44364
 	743988009	L3_destroy	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\L3_destroy_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		79676
+	848914903	land01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\land01_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\land01		176496
 	909243550	傅里叶棋盘_旋律loop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\傅里叶棋盘_旋律loop_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_旋律loop		29952096
+	968844488	Level3_Unlock02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\Level3_Unlock02_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Unlock\Level3_Unlock02		286748
+	1036840312	Level3_Unlock01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Mac\SFX\Level3_Unlock01_10C4C929.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Unlock\Level3_Unlock01		337376
 

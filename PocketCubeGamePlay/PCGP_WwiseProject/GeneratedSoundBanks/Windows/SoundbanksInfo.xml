@@ -243,10 +243,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{5713677B-5011-7972-2F67-BCE04D6CFCF5}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B0C606E7-EAAD-AC27-6C30-EB884A562D4D}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
+				<File Id="64915519" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump.wav</ShortName>
+					<CachePath>SFX/jump_10C4C929.wem</CachePath>
+				</File>
 				<File Id="112183314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_魔方loop.wav</ShortName>
 					<CachePath>SFX/傅里叶棋盘_魔方loop_D79FB2B7.wem</CachePath>
@@ -254,6 +258,14 @@
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
+				</File>
+				<File Id="284291479" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>land02.wav</ShortName>
+					<CachePath>SFX/land02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="284612535" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>land03.wav</ShortName>
+					<CachePath>SFX/land03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="304097471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_鼓组loop.wav</ShortName>
@@ -267,6 +279,14 @@
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_C7FB753E.wem</CachePath>
 				</File>
+				<File Id="555154728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump03.wav</ShortName>
+					<CachePath>SFX/jump03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="573026670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump02.wav</ShortName>
+					<CachePath>SFX/jump02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="644617565" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_D407F890.wem</CachePath>
@@ -279,9 +299,21 @@
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
 				</File>
+				<File Id="848914903" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>land01.wav</ShortName>
+					<CachePath>SFX/land01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="909243550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_旋律loop.wav</ShortName>
 					<CachePath>SFX/傅里叶棋盘_旋律loop_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="968844488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_Unlock02.wav</ShortName>
+					<CachePath>SFX/Level3_Unlock02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1036840312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_Unlock01.wav</ShortName>
+					<CachePath>SFX/Level3_Unlock01_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -300,6 +332,13 @@
 					<MediaRefs>
 						<MediaRef Id="304097471"/>
 						<MediaRef Id="909243550"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0.8087982" DurationMax="1.0655782">
+					<MediaRefs>
+						<MediaRef Id="64915519"/>
+						<MediaRef Id="555154728"/>
+						<MediaRef Id="573026670"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
@@ -324,6 +363,19 @@
 							<PluginRef Id="945801009"/>
 						</Custom>
 					</PluginRefs>
+				</Event>
+				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="1" DurationMax="1.046576">
+					<MediaRefs>
+						<MediaRef Id="284291479"/>
+						<MediaRef Id="284612535"/>
+						<MediaRef Id="848914903"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1239937734" Name="Play_Unlock" DurationType="OneShot" DurationMin="1.6250113" DurationMax="1.9120182">
+					<MediaRefs>
+						<MediaRef Id="968844488"/>
+						<MediaRef Id="1036840312"/>
+					</MediaRefs>
 				</Event>
 			</Events>
 			<SwitchGroups>
@@ -732,5 +784,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FCCD59F9-66A2-AC75-B037-9A65C9E8BCA4}</FileHash>
+	<FileHash>{0C3706C3-4614-58C8-CA98-45DA202608FD}</FileHash>
 </SoundBanksInfo>
