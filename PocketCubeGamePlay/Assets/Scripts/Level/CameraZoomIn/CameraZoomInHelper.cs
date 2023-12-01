@@ -21,7 +21,7 @@ public class CameraZoomInHelper : MonoBehaviour
     //    CubeClickEvent.CubeClick -= zoomInCube;
     //}
 
-    [SerializeField] private GameObject audioPlayer;
+    private GameObject audioPlayer;
 
     private void Awake()
     {

@@ -148,7 +148,8 @@ public class Electro_Camera_Controller : CameraZoomInHelper
         float endSize = targetCam.GetComponent<Camera>().orthographicSize;
 
         // -------------- Audio
-        
+        AkSoundEngine.PostEvent("Play_ELE_zoomIn", gameObject);
+
         // -------------- Audio
 
         while (t < 1)
@@ -172,6 +173,7 @@ public class Electro_Camera_Controller : CameraZoomInHelper
     public IEnumerator TranslateBackToInitPosition(bool isLookAtTarget)
     {
         // -------------- Audio
+        AkSoundEngine.PostEvent("Play_ELE_zoomOut", gameObject);
         // -------------- Audio
 
         float currentUsedTime = 0;
