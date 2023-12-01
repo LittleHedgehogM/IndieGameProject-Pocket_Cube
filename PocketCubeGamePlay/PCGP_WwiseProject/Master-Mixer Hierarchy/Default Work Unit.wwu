@@ -78,6 +78,23 @@
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 								</Bus>
+								<Bus Name="fx" ID="{69A891F9-4131-4128-A88A-A3CA11D7AAEC}">
+									<PropertyList>
+										<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}"/>
+											<DuckingParam>
+												<Volume>-3</Volume>
+												<FadeInTime>0</FadeInTime>
+												<FadeOutTime>0</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

@@ -280,7 +280,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8585001930353023101
+    m_lastTime: -8585001903980696640
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -745,8 +745,8 @@ MonoBehaviour:
         guid: a565db4d05b28649b37942ffea1916b8
       Path: Events\Default Work Unit\Main\Play_Main_Hover
       maxAttenuation: 0
-      maxDuration: 0.12501134
-      minDuration: 0.12501134
+      maxDuration: 0.1306215
+      minDuration: 0.11964214
     - name: Play_Mid_Unlock
       guid: 1e6705ed9548234cb300270f29f1e109
       id: 928358091
@@ -1005,8 +1005,8 @@ MonoBehaviour:
         guid: 0b8000976ebf2541affbc3765703076a
       Path: Events\Default Work Unit\UI\Play_UI_roll
       maxAttenuation: 0
-      maxDuration: 0.6252834
-      minDuration: 0.54226756
+      maxDuration: 0.6533444
+      minDuration: 0.5189773
     - name: Play_UI_turn
       guid: 8994c879dbebeb4b9aa06a641b27a06e
       id: 245126902
@@ -1025,8 +1025,8 @@ MonoBehaviour:
         guid: 8994c879dbebeb4b9aa06a641b27a06e
       Path: Events\Default Work Unit\UI\Play_UI_turn
       maxAttenuation: 0
-      maxDuration: 0.40907028
-      minDuration: 0.30521542
+      maxDuration: 0.4274282
+      minDuration: 0.2921065
     - name: Play_unlock01
       guid: 307c3a09fe0f6e4a95e456735762fa7f
       id: 4083196823
@@ -1189,8 +1189,8 @@ MonoBehaviour:
         guid: eb12c4fc76290e46b298c8dd393e0b85
       Path: Events\Level1\Play_Camera_zoomIn
       maxAttenuation: 0
-      maxDuration: 2.741111
-      minDuration: 2.741111
+      maxDuration: 0.9331877
+      minDuration: 0.72836787
     - name: Play_Camera_zoomOut
       guid: f28e9ac31eb1a04abe7623951acfffbc
       id: 2892692845
@@ -1206,8 +1206,8 @@ MonoBehaviour:
         guid: f28e9ac31eb1a04abe7623951acfffbc
       Path: Events\Level1\Play_Camera_zoomOut
       maxAttenuation: 0
-      maxDuration: 2.300771
-      minDuration: 2.300771
+      maxDuration: 1.3020391
+      minDuration: 0.97261417
     - name: Play_Coin_add
       guid: 6c321761973a0349888d0a55be9b3bc9
       id: 2914979601
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8585001930352953677
+    m_lastTime: -8585001903980642078
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1417,6 +1417,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Jump
+      guid: 3ec43c38a3d09a4c8b4b0840a41e0d83
+      id: 3689126666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Jump
+        ObjectType: 3
+        guid: 3ec43c38a3d09a4c8b4b0840a41e0d83
+      Path: Events\Level3\Level3\Play_Jump
+      maxAttenuation: 0
+      maxDuration: 1.1460234
+      minDuration: 0.6888134
     - name: Play_L3_destroy
       guid: 085d2259b84538469661c08e62168cbc
       id: 507378310
@@ -1477,6 +1497,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.3252789
       minDuration: 1.2151191
+    - name: Play_Land
+      guid: 2f45025be85b8840aa10624b92d96661
+      id: 4285282925
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Land
+        ObjectType: 3
+        guid: 2f45025be85b8840aa10624b92d96661
+      Path: Events\Level3\Level3\Play_Land
+      maxAttenuation: 0
+      maxDuration: 1.1592382
+      minDuration: 0.9028136
+    - name: Play_Unlock
+      guid: 9af0d8ea23d9964c9d8dc0fe34d21967
+      id: 1239937734
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Unlock
+        ObjectType: 3
+        guid: 9af0d8ea23d9964c9d8dc0fe34d21967
+      Path: Events\Level3\Level3\Play_Unlock
+      maxAttenuation: 0
+      maxDuration: 2.0268831
+      minDuration: 1.5329206
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

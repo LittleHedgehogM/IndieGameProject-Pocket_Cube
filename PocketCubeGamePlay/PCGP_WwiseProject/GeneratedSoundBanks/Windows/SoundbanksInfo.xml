@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{BFFFD43A-EF1A-C49D-4086-026816881080}">
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{85F05D59-BD08-E244-3945-3C48F98FA76C}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<Media>
@@ -27,7 +27,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{D995F542-D199-76FC-DBF5-BCD56B9DBB09}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{D91B2488-EC38-5085-2B3C-65778E4AC062}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C123FC28-4987-E7A5-B6C8-95DBC5A26E37}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B8A63CF9-6FD0-32ED-27FB-14F3FD037E28}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -86,6 +86,7 @@
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1067198645" Name="Ani"/>
 				<Bus Id="1117531639" Name="Amb"/>
+				<Bus Id="1802970371" Name="fx"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
@@ -135,7 +136,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B0DECF18-831A-45BB-107C-B02FFA44FD6B}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B6797818-B5AE-4E50-9485-4BC66C9663CE}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -229,13 +230,13 @@
 						<MediaRef Id="698630139"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.54226756" DurationMax="0.6252834">
+				<Event Id="2857954946" Name="Play_UI_roll" DurationType="OneShot" DurationMin="0.5189773" DurationMax="0.6533444">
 					<MediaRefs>
 						<MediaRef Id="56359378"/>
 						<MediaRef Id="335589814"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="245126902" Name="Play_UI_turn" DurationType="OneShot" DurationMin="0.30521542" DurationMax="0.40907028">
+				<Event Id="245126902" Name="Play_UI_turn" DurationType="OneShot" DurationMin="0.2921065" DurationMax="0.4274282">
 					<MediaRefs>
 						<MediaRef Id="312476759"/>
 						<MediaRef Id="322749515"/>
@@ -243,7 +244,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B0C606E7-EAAD-AC27-6C30-EB884A562D4D}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{1905A539-5699-3574-846D-F57E3956E1D2}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -334,7 +335,7 @@
 						<MediaRef Id="909243550"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0.8087982" DurationMax="1.0655782">
+				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0.6888134" DurationMax="1.1460234">
 					<MediaRefs>
 						<MediaRef Id="64915519"/>
 						<MediaRef Id="555154728"/>
@@ -364,14 +365,14 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="1" DurationMax="1.046576">
+				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="0.9028136" DurationMax="1.1592382">
 					<MediaRefs>
 						<MediaRef Id="284291479"/>
 						<MediaRef Id="284612535"/>
 						<MediaRef Id="848914903"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1239937734" Name="Play_Unlock" DurationType="OneShot" DurationMin="1.6250113" DurationMax="1.9120182">
+				<Event Id="1239937734" Name="Play_Unlock" DurationType="OneShot" DurationMin="1.5329206" DurationMax="2.0268831">
 					<MediaRefs>
 						<MediaRef Id="968844488"/>
 						<MediaRef Id="1036840312"/>
@@ -387,7 +388,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{945E72CD-5205-828E-B45B-FDFC918FD552}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{A8E3F254-A214-DB40-B1D4-7902D2B71B49}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -494,7 +495,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{1D3C703C-0587-A96D-3BA5-49017D8110B7}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{09B74B72-3B3F-8C41-D87B-B11CC8445687}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -516,7 +517,7 @@
 				</File>
 				<File Id="286706430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Camera_zoomIn.wav</ShortName>
-					<CachePath>SFX/Camera_zoomIn_10C4C929.wem</CachePath>
+					<CachePath>SFX/Camera_zoomIn_D6836987.wem</CachePath>
 				</File>
 				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>拿走.wav</ShortName>
@@ -532,7 +533,7 @@
 				</File>
 				<File Id="739887170" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Camera_zoomOut.wav</ShortName>
-					<CachePath>SFX/Camera_zoomOut_10C4C929.wem</CachePath>
+					<CachePath>SFX/Camera_zoomOut_B6ABA2F1.wem</CachePath>
 				</File>
 				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶上升.wav</ShortName>
@@ -544,12 +545,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="2.741111" DurationMax="2.741111">
+				<Event Id="977134866" Name="Play_Camera_zoomIn" DurationType="OneShot" DurationMin="0.72836787" DurationMax="0.9331877">
 					<MediaRefs>
 						<MediaRef Id="286706430"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="2.300771" DurationMax="2.300771">
+				<Event Id="2892692845" Name="Play_Camera_zoomOut" DurationType="OneShot" DurationMin="0.97261417" DurationMax="1.3020391">
 					<MediaRefs>
 						<MediaRef Id="739887170"/>
 					</MediaRefs>
@@ -593,7 +594,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{541FD48B-0EFC-0149-9554-0AAF3F7724BA}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{89BED3D8-8A1A-58DA-BCE5-A88CE872DB4A}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -656,7 +657,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BEEDC923-7821-3820-F7B0-9550D55C9F09}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8C65DC4C-FEB6-FFB5-321B-0C6F99EBC76B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -692,7 +693,7 @@
 						<MediaRef Id="678952220"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3712401318" Name="Play_Main_Hover" DurationType="OneShot" DurationMin="0.12501134" DurationMax="0.12501134">
+				<Event Id="3712401318" Name="Play_Main_Hover" DurationType="OneShot" DurationMin="0.11964214" DurationMax="0.1306215">
 					<MediaRefs>
 						<MediaRef Id="389796112"/>
 						<MediaRef Id="460004517"/>
@@ -701,7 +702,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{E81D208D-61EE-1E71-F0B5-9E78F4F0DA31}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{9C52042C-2D67-69CA-7513-8DFE1049C00F}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -784,5 +785,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0C3706C3-4614-58C8-CA98-45DA202608FD}</FileHash>
+	<FileHash>{B8771CD2-3E4B-2EA7-025D-4DA5A91C1B99}</FileHash>
 </SoundBanksInfo>

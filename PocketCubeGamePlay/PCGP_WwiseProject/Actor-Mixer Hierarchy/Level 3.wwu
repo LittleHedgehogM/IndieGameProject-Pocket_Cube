@@ -31,7 +31,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+							<ObjectRef Name="fx" ID="{69A891F9-4131-4128-A88A-A3CA11D7AAEC}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -269,6 +269,19 @@
 						<RandomSequenceContainer Name="Jump" ID="{683B647E-99AC-403E-BBAF-8FC77E5A15BB}" ShortID="167116853">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5E63BD5E-A864-43C2-B26B-2E4EB7B62B76}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="278"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -350,6 +363,19 @@
 						<RandomSequenceContainer Name="Land" ID="{9853B963-CAC0-4C31-A2BC-BC3DFAB66800}" ShortID="19556457">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C1294369-14BA-47B0-A407-7C69E056F9C0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-177"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -431,6 +457,19 @@
 						<RandomSequenceContainer Name="Unlock" ID="{39072F2B-5F10-4C5F-BBA2-F633F5A8C602}" ShortID="878377739">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{61EDB272-0929-45D1-9461-42B7EF7F95E9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-101"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

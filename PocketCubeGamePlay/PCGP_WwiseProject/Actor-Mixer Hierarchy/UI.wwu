@@ -21,11 +21,20 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+							<ObjectRef Name="fx" ID="{69A891F9-4131-4128-A88A-A3CA11D7AAEC}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="box_click" ID="{C52D9D1D-A578-4166-8994-A1B8891C0EDE}" ShortID="364937056">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F1FE44F1-82F0-4379-9141-21EF0DF8EA50}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -101,6 +110,19 @@
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{626C6EC1-82C4-4EEA-AA4D-CF42CC25CF54}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -187,6 +209,19 @@
 						<RandomSequenceContainer Name="UI_roll" ID="{36B9509C-53C6-48D0-A83A-2AE446644E77}" ShortID="430420591">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{27BFC1EC-1C92-41D4-B7EA-4B592C8A5055}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -246,6 +281,19 @@
 						<RandomSequenceContainer Name="UI_turn" ID="{2F9BDD0A-E3FC-4D5A-8A4C-2433A4DE6AA9}" ShortID="791686485">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EE843EA1-8683-4C62-AED0-138A40E2EA52}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -305,6 +353,13 @@
 						<RandomSequenceContainer Name="subtitle" ID="{E6A61435-DF8A-454D-9616-E6239F6C5EE0}" ShortID="738728484">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AD978521-5B1F-497D-AB1D-59B30F279299}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -592,7 +647,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{07C65735-16EA-43FC-8DE4-C087F64AB9E2}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+							<ObjectRef Name="fx" ID="{69A891F9-4131-4128-A88A-A3CA11D7AAEC}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
