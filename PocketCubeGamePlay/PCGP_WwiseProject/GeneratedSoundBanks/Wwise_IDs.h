@@ -171,6 +171,7 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SPEC_SFX = 114661700U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

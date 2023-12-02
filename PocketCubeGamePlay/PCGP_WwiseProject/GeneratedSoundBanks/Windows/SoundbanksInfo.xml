@@ -73,7 +73,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B8A63CF9-6FD0-32ED-27FB-14F3FD037E28}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DCCFE34E-F969-3B8F-FF08-917D3A5D6AB6}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -83,6 +83,7 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="114661700" Name="Spec_sfx"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1067198645" Name="Ani"/>
 				<Bus Id="1117531639" Name="Amb"/>
@@ -720,7 +721,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{9C52042C-2D67-69CA-7513-8DFE1049C00F}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{8E168FC8-DB03-A3B2-A30C-816C2BE4CEB8}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -803,5 +804,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{52ABCA9F-61DC-E7B8-1F52-753DFE864B50}</FileHash>
+	<FileHash>{3F6F7016-BAF9-AF7C-79DC-96E2298BEA68}</FileHash>
 </SoundBanksInfo>
