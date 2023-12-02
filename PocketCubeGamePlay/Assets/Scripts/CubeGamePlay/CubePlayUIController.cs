@@ -36,7 +36,7 @@ public class CubePlayUIController : MonoBehaviour
     [Header("Tutorial Settings")]
     [SerializeField] private bool isShowTutorial;
     [SerializeField] private UnityEngine.UI.Image TutorialImage;
-    [SerializeField][Range(0,20)] private int tutorialDuration;
+    [SerializeField][Range(0,40)] private int tutorialDuration;
 
     [Header("Finish Settings")]
     [SerializeField] private UnityEngine.UI.Image finishImage;
