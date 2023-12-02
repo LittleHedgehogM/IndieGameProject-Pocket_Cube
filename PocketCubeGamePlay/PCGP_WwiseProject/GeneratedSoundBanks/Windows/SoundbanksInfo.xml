@@ -136,7 +136,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B6797818-B5AE-4E50-9485-4BC66C9663CE}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{1A584561-9B55-9FD6-0657-9329F57BAE10}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -211,7 +211,7 @@
 						<MediaRef Id="915713439"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2597324022" Name="Play_subtitle" DurationType="OneShot" DurationMin="0.36507937" DurationMax="2.5555103">
+				<Event Id="2597324022" Name="Play_subtitle" DurationType="OneShot" DurationMin="0.34439003" DurationMax="2.7090333">
 					<MediaRefs>
 						<MediaRef Id="101268654"/>
 						<MediaRef Id="102104340"/>
@@ -388,7 +388,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{A8E3F254-A214-DB40-B1D4-7902D2B71B49}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{8ADB2805-5B59-A313-F8A6-EAB97EE63A68}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -400,6 +400,10 @@
 					<ShortName>Side_Unlock02.wav</ShortName>
 					<CachePath>SFX/Side_Unlock02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="85237782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ELE_zoomin.wav</ShortName>
+					<CachePath>SFX/ELE_zoomin_10C4C929.wem</CachePath>
+				</File>
 				<File Id="97900267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁 ver2  layer2.wav</ShortName>
 					<CachePath>SFX/电磁 ver2  layer2_D79FB2B7.wem</CachePath>
@@ -407,6 +411,10 @@
 				<File Id="206351303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_intro.wav</ShortName>
 					<CachePath>SFX/电磁_intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="230466036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ELE_zoomOut.wav</ShortName>
+					<CachePath>SFX/ELE_zoomOut_10C4C929.wem</CachePath>
 				</File>
 				<File Id="287942534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_main loop.wav</ShortName>
@@ -460,6 +468,16 @@
 						<MediaRef Id="721466819"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="262350865" Name="Play_ELE_zoomin" DurationType="OneShot" DurationMin="2.9281068" DurationMax="3.1491625">
+					<MediaRefs>
+						<MediaRef Id="85237782"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2748548144" Name="Play_ELE_zoomOut" DurationType="OneShot" DurationMin="1.840647" DurationMax="1.9796057">
+					<MediaRefs>
+						<MediaRef Id="230466036"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
 					<MediaRefs>
 						<MediaRef Id="859865721"/>
@@ -495,7 +513,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{CECAC9A1-5880-0A0C-C866-AF89A115BC03}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{0CCC8FEB-89BE-489D-C25F-B9DFDD64AFB5}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -565,7 +583,7 @@
 						<MediaRef Id="364095599"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="7.7746487" DurationMax="7.7746487">
+				<Event Id="797967755" Name="Play_Cube_drop" DurationType="OneShot" DurationMin="9.039251" DurationMax="9.039251">
 					<MediaRefs>
 						<MediaRef Id="1010870477"/>
 					</MediaRefs>
@@ -785,5 +803,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{83B2A046-649D-D957-7502-E5C9F5607993}</FileHash>
+	<FileHash>{EAEBE448-FC87-2164-4216-99537684232E}</FileHash>
 </SoundBanksInfo>
