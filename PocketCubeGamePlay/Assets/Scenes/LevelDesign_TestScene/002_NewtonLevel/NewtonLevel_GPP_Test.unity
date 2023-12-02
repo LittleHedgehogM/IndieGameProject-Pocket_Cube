@@ -3616,7 +3616,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   mainCam: {fileID: 269800691}
   Cam_LookAt_Eye_L: {fileID: 284203131}
   Cam_LookAt_Eye_R: {fileID: 560004855}
@@ -8458,8 +8457,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.14076997, y: 0.039020825, z: 0.14820446}
-  m_Center: {x: 0.00096536276, y: -0.00045351984, z: -0.0018094539}
+  m_Size: {x: 0.24012586, y: 0.07659413, z: 0.35603684}
+  m_Center: {x: -0.00270747, y: -0.019240158, z: -0.028290534}
 --- !u!1001 &2101260115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9040,7 +9039,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 2872656341035101806}
