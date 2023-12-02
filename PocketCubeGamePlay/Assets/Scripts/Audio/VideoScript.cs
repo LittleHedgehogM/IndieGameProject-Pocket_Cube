@@ -21,7 +21,21 @@ public class VideoScript: MonoBehaviour
         vid.loopPointReached += DestroyAfterVideoPlayed;
     }
 
-    // Update is called once per frame
+    /*private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.Tab))
+        {
+            print("true");
+            if (vid.isPlaying)
+            {
+                vid.Stop();
+            }
+            else
+            {
+                vid.Play();
+            }
+        }
+    }*/
     void DestroyAfterVideoPlayed(VideoPlayer vp)
     {
         if (SceneManager.GetActiveScene().name == "First GPP")
@@ -57,4 +71,38 @@ public class VideoScript: MonoBehaviour
         VideoFinished?.Invoke();
         yield return null;
     }
+
+    void OnApplicationFocus(bool isFocus)
+    {
+        if (isFocus)
+        {
+            if (!vid.isPlaying)
+            {
+                vid.Play();
+                AkSoundEngine.PostEvent("Resume", gameObject);
+            }
+        }
+        else
+        {
+            if (vid.isPlaying)
+            {
+                vid.Pause();
+                AkSoundEngine.PostEvent("Pause", gameObject);
+            }
+            //Debug.Log("离开游戏 激活推送");  //  返回游戏的时候触发     执行顺序 1
+        }
+    }
+
+
+    /*void OnApplicationPause(bool isPause)
+    {
+        if (isPause)
+        {
+            Debug.Log("游戏暂停 一切停止");  // 缩到桌面的时候触发
+        }
+        else
+        {
+            Debug.Log("游戏开始  万物生机");  //回到游戏的时候触发 最晚
+        }
+    }*/
 }
