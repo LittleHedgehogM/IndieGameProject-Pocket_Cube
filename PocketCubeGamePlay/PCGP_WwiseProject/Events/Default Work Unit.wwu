@@ -334,6 +334,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Resume" ID="{A6DCE2C3-CCDD-4CDD-8235-7E99EA03CF56}">
+							<ChildrenList>
+								<Action Name="" ID="{97F21F8F-8904-445A-9778-663B74B99ACB}" ShortID="1039158869">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="10"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pause" ID="{33932F6C-727A-4E59-829C-F9EE6D4E50BA}">
+							<ChildrenList>
+								<Action Name="" ID="{3720071F-A073-4806-9BBD-BA12FA1553DF}" ShortID="612983271">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="8"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cube" ID="{C30F9FE3-B575-4092-A531-E51C7AE1C983}" ShortID="659362505">
