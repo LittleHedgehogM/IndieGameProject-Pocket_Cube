@@ -50,9 +50,6 @@
 				<Event Name="Play_Cube_drop" ID="{A280FFB9-53DE-4448-9502-A9FC7FEF1619}">
 					<ChildrenList>
 						<Action Name="" ID="{5A9726AB-5B58-41DB-AB14-B0D233A43AA1}" ShortID="663248356">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.7"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Cube_drop" ID="{0270D588-AEB6-40A4-830B-7F615707E8AA}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>

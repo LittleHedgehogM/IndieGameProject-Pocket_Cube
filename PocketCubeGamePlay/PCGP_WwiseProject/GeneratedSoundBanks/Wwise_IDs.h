@@ -33,8 +33,6 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_SKILLCLICK02 = 3603099915U;
         static const AkUniqueID PLAY_ELE_BGM = 2654027537U;
         static const AkUniqueID PLAY_ELE_OUTRO = 2857386602U;
-        static const AkUniqueID PLAY_ELE_ZOOMIN = 262350865U;
-        static const AkUniqueID PLAY_ELE_ZOOMOUT = 2748548144U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_FOURIER_CUBE = 3420724554U;
