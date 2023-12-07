@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.TimeZoneInfo;
 
 public class SceneTutorialController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SceneTutorialController : MonoBehaviour
     [SerializeField] [Range (0, 10)] int seconds;
     [SerializeField] Image AimImage;
     [SerializeField] bool disableTutorial;
+    [SerializeField] bool mouseClickExitTutorial;
 
     public static Action TutorialEnds;
 
@@ -67,6 +69,14 @@ public class SceneTutorialController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (mouseClickExitTutorial && Input.GetMouseButtonUp(0) && TutorialImage.color.a == tutorialAlphaVal) 
+        {
+            StartCoroutine(hideTutorial());
+        }
+    }
+
     private IEnumerator showTutorial()
     {
 
@@ -89,11 +99,40 @@ public class SceneTutorialController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(seconds);
+        if (!mouseClickExitTutorial) 
+        {           
+            StartCoroutine(hideTutorial());
+        }
 
-        currentTime = 0;
-        translationTime = 1.0f;
-        t = currentTime / translationTime;
-        targetAlpha = 0f;
+        //currentTime = 0;
+        //translationTime = 1.0f;
+        //t = currentTime / translationTime;
+        //targetAlpha = 0f;
+
+        //while (t < 1)
+        //{
+        //    currentTime += Time.deltaTime;
+        //    t = currentTime / translationTime;
+        //    float currentAlpha = Mathf.Lerp(tutorialAlphaVal, targetAlpha, t);
+        //    TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, currentAlpha);
+        //    yield return null;
+
+        //}
+        //TutorialImage.transform.localScale = Vector3.zero;
+        //yield return null;
+        //TutorialEnds?.Invoke();
+        //StartCoroutine(showAimImage());
+        
+    }
+
+
+    private IEnumerator hideTutorial()
+    {
+        
+        float currentTime = 0;
+        float translationTime = 1.0f;
+        float t = currentTime / translationTime;
+        float targetAlpha = 0f;
 
         while (t < 1)
         {
@@ -108,7 +147,6 @@ public class SceneTutorialController : MonoBehaviour
         yield return null;
         TutorialEnds?.Invoke();
         StartCoroutine(showAimImage());
-        
     }
 
     private IEnumerator showAimImage()
