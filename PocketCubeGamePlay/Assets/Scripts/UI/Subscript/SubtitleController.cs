@@ -49,12 +49,12 @@ public class SubtitleController : MonoBehaviour
 
     void LoadTutorialGuide()
     {
-        StartCoroutine(ShowSutitleLine(2));
+        StartCoroutine(ShowSutitleLine(1));
     }
 
     void LoadCubeShow()
     {
-        StartCoroutine(ShowSutitleLine(4));
+        StartCoroutine(ShowSutitleLine(2));
     }
 
     private IEnumerator ShowSutitleLine(int line)
@@ -62,11 +62,11 @@ public class SubtitleController : MonoBehaviour
         EnableSubtitle();
         AkSoundEngine.PostEvent("Play_subtitle", gameObject);
         testText.text = subtitle_sequence[line];
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
 
-        AkSoundEngine.PostEvent("Play_subtitle", gameObject);
+        /*AkSoundEngine.PostEvent("Play_subtitle", gameObject);
         testText.text = subtitle_sequence[line+1];
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(6f);*/
         DisableSubtitle();
         yield return null;
     }
