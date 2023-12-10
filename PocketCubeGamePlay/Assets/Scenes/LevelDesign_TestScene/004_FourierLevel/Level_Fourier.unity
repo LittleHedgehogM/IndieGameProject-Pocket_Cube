@@ -4825,7 +4825,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 884474697}
@@ -5856,6 +5855,7 @@ MonoBehaviour:
   seconds: 7
   AimImage: {fileID: 181380332}
   disableTutorial: 0
+  mouseClickExitTutorial: 0
 --- !u!1 &1229730081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8998,7 +8998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beat Jump lock color
+  m_text: Jump to stable color
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef951b65e42760b4da3ddfc87ff0e503, type: 2}
   m_sharedMaterial: {fileID: -3736686273712166957, guid: ef951b65e42760b4da3ddfc87ff0e503, type: 2}
@@ -9299,7 +9299,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   mainCam: {fileID: 2045749203}
   cameraMoveRange: 6
   Camera_Sensitivity: 0.01

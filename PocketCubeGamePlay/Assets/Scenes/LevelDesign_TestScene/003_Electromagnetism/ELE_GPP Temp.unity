@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.5748164, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.57481635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7439,7 +7439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: connect circuits
+  m_text: Achive True state
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef951b65e42760b4da3ddfc87ff0e503, type: 2}
   m_sharedMaterial: {fileID: -3736686273712166957, guid: ef951b65e42760b4da3ddfc87ff0e503, type: 2}
@@ -9409,7 +9409,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   mainCam: {fileID: 269800691}
   sunCam: {fileID: 169490173}
   moonCam: {fileID: 640399147}
@@ -14978,7 +14977,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  audioPlayer: {fileID: 0}
   translationTime: 0
   lookAtTarget: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 2726941423056266257}
