@@ -1243,7 +1243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 786, y: 913}
+  m_AnchoredPosition: {x: 786, y: 905}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197472350
@@ -4024,6 +4024,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  minTutorialDisplayTime: 0
 --- !u!114 &771636598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10628,7 +10629,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u62D6\u62FD\u5DE6\u952E\u89C2\u5BDF"
+  m_text: "\u62D6\u52A8\u5DE6\u952E\u89C2\u5BDF"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
   m_sharedMaterial: {fileID: 2315783275360767495, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
@@ -10843,6 +10844,9 @@ MonoBehaviour:
   isShowTutorial: 0
   TutorialImage: {fileID: 793863811}
   tutorialDuration: 0
+  isShowTutorialPanel: 0
+  pre_tutorialPanelDuration: 0
+  TutorialPanelImage: {fileID: 0}
   finishImage: {fileID: 1531032397}
   pre_finishDuration: 5
   display_finishDuration: 2
