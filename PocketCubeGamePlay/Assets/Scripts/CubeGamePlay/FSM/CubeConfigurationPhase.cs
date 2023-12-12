@@ -11,33 +11,65 @@ public class CubeConfigurationPhase : GameplayPhase
     ReadCube readCube;
     CubeState myCubeState;
     //CubeVFXManager myCubeVFXManager;
+    CubePlayUIController myUIController;
+    CubeCursorController myCursorController;
 
+    [Header("Animation")]
     [SerializeField] [Range(0, 1)] 
     float startAnimationTime;
     [SerializeField] private AnimationCurve translationCurve;
     float t;
     bool animationFinished = true;
 
+    [Header("Tutorial Panel Settings")]
+    [SerializeField] [Range(0, 5)] private int minTutorialDisplayTime;
 
     enum ConfigurationState
     {
         Animation,
-        Check
+        Check, 
+        Tutorial,
+        TutorialFinish
     }
 
     ConfigurationState currentState;
 
+    bool canClickTutorial;
+    float tutorialDisplayTime = 0;
+
+    private void OnEnable()
+    {
+        CubePlayUIController.TutorialPanelHide += FinishConfigurationPhase;
+    }
+
+    private void OnDisable()
+    {
+        CubePlayUIController.TutorialPanelHide -= FinishConfigurationPhase;
+
+    }
+
+    private void FinishConfigurationPhase()
+    {
+        if (currentState == ConfigurationState.Tutorial)
+        {
+            currentState = ConfigurationState.TutorialFinish;
+        }
+    }
 
     public override void onStart()
     {
         myCubeConfigure = FindObjectOfType<CubeConfigure>();
         myCubeState     = FindObjectOfType<CubeState>();
         readCube        = FindObjectOfType<ReadCube>();
+        myUIController  = FindObjectOfType<CubePlayUIController>();
+        myCursorController = FindObjectOfType<CubeCursorController>();
         //myCubeVFXManager = FindObjectOfType<CubeVFXManager>();
         ConfuigurePocketCube();
         currentState = ConfigurationState.Check;
         animationFinished = true;
-        
+        myUIController.InitCubePlayUIElements();
+        canClickTutorial = false;
+
     }
 
     private void ConfigureOneCubePiece(CubeConfigure.PieceTransform pieceTransform)
@@ -62,7 +94,6 @@ public class CubeConfigurationPhase : GameplayPhase
         ConfigureOneCubePiece(myCubeConfigure.BackRightUp);
         ConfigureOneCubePiece(myCubeConfigure.BackRightDown);
     }
-
 
 
     public IEnumerator playStartAnimation()
@@ -104,6 +135,8 @@ public class CubeConfigurationPhase : GameplayPhase
             AkSoundEngine.PostEvent("Play_cube_ani", gameObject);
             //
             currentState = ConfigurationState.Check;
+            myCursorController.setNormalCursor();
+
         }
         else if (currentState == ConfigurationState.Check)
         {
@@ -112,13 +145,51 @@ public class CubeConfigurationPhase : GameplayPhase
                 readCube.ReadState();
                 if (myCubeState.GetStateString() == myCubeConfigure.cubeStateString)
                 {
-                    return true;
+                    //return true;
+
+                    if (myUIController.getShowTutorialPanel() && !(tutorialDisplayTime >= minTutorialDisplayTime))
+                    {
+                        currentState = ConfigurationState.Tutorial;
+                        myUIController.ShowTutorialPanel();
+                        
+                    }
+                    else 
+                    {
+                        return true;
+                    }
                 }
             }
+        }
+        else if (currentState == ConfigurationState.Tutorial)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                myCursorController.setSwipeCursor();                
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                
+                myCursorController.setNormalCursor();
+                if (canClickTutorial)
+                {
+                    myUIController.HideTutorialPanel();
+                }
+               
+            }
+
+            tutorialDisplayTime += Time.deltaTime;
+            canClickTutorial = tutorialDisplayTime > minTutorialDisplayTime;
+
+        }
+        else if (currentState == ConfigurationState.TutorialFinish) 
+        {
+            return true;
         }
         
         return false;
     }
+
+    
 
     public override void onEnd()
     {
@@ -133,6 +204,8 @@ public class CubeConfigurationPhase : GameplayPhase
         t = 0;
         currentState = ConfigurationState.Animation;
         animationFinished = false;
+        myUIController.InitCubePlayUIElements();
+
     }
 
 

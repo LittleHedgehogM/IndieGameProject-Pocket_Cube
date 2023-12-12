@@ -29,16 +29,16 @@ public class CubePlayManager : MonoBehaviour
 
 
     private void Awake()
-    {   
+    {
         if (instance == null)
         {
             instance = this;
         }
 
         myCubeConfigurationPhase = FindObjectOfType<CubeConfigurationPhase>();
-        myCubeInPlayPhase        = FindObjectOfType<CubeInPlayPhase>();
-        myCubeSolvedPhase        = FindObjectOfType<CubeSolvedPhase>();
-        myCubeUIController       = FindObjectOfType<CubePlayUIController>();
+        myCubeInPlayPhase = FindObjectOfType<CubeInPlayPhase>();
+        myCubeSolvedPhase = FindObjectOfType<CubeSolvedPhase>();
+        myCubeUIController = FindObjectOfType<CubePlayUIController>();
         currentCubePlayPhase = CubePlay.Configuration;
         myCubeConfigurationPhase.onStart();
 
@@ -47,14 +47,14 @@ public class CubePlayManager : MonoBehaviour
     }
 
 
-    public bool CanUseSkill(){
+    public bool CanUseSkill() {
 
-        return currentCubePlayPhase == CubePlay.Play 
+        return currentCubePlayPhase == CubePlay.Play
             && myCubeInPlayPhase.GetCubePlayStatus() == CubePlayStatus.WaitForInput;
     }
 
 
-    public bool CanRestoreDiagonalSkill(){
+    public bool CanRestoreDiagonalSkill() {
         return currentCubePlayPhase == CubePlay.Play
                && myCubeInPlayPhase.CanRestoreDiagional();
     }
@@ -67,27 +67,33 @@ public class CubePlayManager : MonoBehaviour
 
     private void OnEnable()
     {
-        CubePlayUIController.onEnterDiagonalState           += SetStateToDiagonal;
-        CubePlayUIController.onEnterCommutationState        += SetStateToCommutation;
+        CubePlayUIController.onEnterDiagonalState += SetStateToDiagonal;
+        CubePlayUIController.onEnterCommutationState += SetStateToCommutation;
         CubePlayUIController.onRestoreCommutationCheckPoint += RestoreCommutationCheckPoint;
-        CubePlayUIController.onRestoreDiagonalCheckPoint    += RestoreDiagonalCheckPoint;
-        ButtonClick.OnMyCallback                            += HandleCallback;
+        CubePlayUIController.onRestoreDiagonalCheckPoint += RestoreDiagonalCheckPoint;
+        ButtonClick.OnMyCallback += HandleCallback;
 
     }
 
 
     private void OnDisable()
     {
-        CubePlayUIController.onEnterDiagonalState           -= SetStateToDiagonal;
-        CubePlayUIController.onEnterCommutationState        -= SetStateToCommutation;
+        CubePlayUIController.onEnterDiagonalState -= SetStateToDiagonal;
+        CubePlayUIController.onEnterCommutationState -= SetStateToCommutation;
         CubePlayUIController.onRestoreCommutationCheckPoint -= RestoreCommutationCheckPoint;
-        CubePlayUIController.onRestoreDiagonalCheckPoint    -= RestoreDiagonalCheckPoint;
-        ButtonClick.OnMyCallback                            -= HandleCallback;
+        CubePlayUIController.onRestoreDiagonalCheckPoint -= RestoreDiagonalCheckPoint;
+        ButtonClick.OnMyCallback -= HandleCallback;
 
     }
 
     void HandleCallback(string message)
     {
+        // if showing tutorial panel
+        if (currentCubePlayPhase == CubePlay.Configuration ) 
+        {
+            return;
+        }       
+        
         if (message.Contains("Restart"))
         {
             onRestart();

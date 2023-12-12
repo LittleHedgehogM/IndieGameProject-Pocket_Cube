@@ -38,6 +38,12 @@ public class CubePlayUIController : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image TutorialImage;
     [SerializeField][Range(0,40)] private int tutorialDuration;
 
+    [Header("Tutorial Panel Settings")]
+    [SerializeField] private bool isShowTutorialPanel;
+    [SerializeField][Range(0, 3)] private int pre_tutorialPanelDuration;
+    [SerializeField] private UnityEngine.UI.Image TutorialPanelImage;
+    
+    
     [Header("Finish Settings")]
     [SerializeField] private UnityEngine.UI.Image finishImage;
     [SerializeField][Range(0, 5)] private int pre_finishDuration;
@@ -54,7 +60,7 @@ public class CubePlayUIController : MonoBehaviour
     public static event Action onEnterCommutationState;
     public static event Action onRestoreCommutationCheckPoint;
 
-
+    public static event Action TutorialPanelHide;
 
     private int _swipeCount;
     public int SwipeCount
@@ -158,7 +164,15 @@ public class CubePlayUIController : MonoBehaviour
         // hide restart and finish button
         DiagonalButton.gameObject.SetActive(isDiagonalUnlocked);
         CommutationButton.gameObject.SetActive(isCommutationUnlocked);
-        TutorialImage.gameObject.SetActive(isShowTutorial);
+
+        if (TutorialImage!=null) 
+        {
+            TutorialImage.gameObject.SetActive(isShowTutorial);
+        }
+        if (TutorialPanelImage!=null) 
+        {
+            TutorialPanelImage.gameObject.SetActive(false);
+        }
 
         FinishButton.gameObject.SetActive(false);
         RestartButton.gameObject.SetActive(true);
@@ -176,6 +190,7 @@ public class CubePlayUIController : MonoBehaviour
         totalSteps = 0;
         SetTutorialInvisible();
         SetFinishImageInvisible();
+
 
     }
 
@@ -338,6 +353,67 @@ public class CubePlayUIController : MonoBehaviour
         
     }
 
+    /* ================ Tutorial Panel ==================== */
+    
+    public bool getShowTutorialPanel()
+    {
+        return isShowTutorialPanel;
+    }
+
+    public void ShowTutorialPanel()
+    {
+        if (isShowTutorialPanel)
+        {
+            TutorialPanelImage.gameObject.SetActive(true);
+            StartCoroutine(TranslateTutorialPanelAlpha(0, 1));
+        }    
+    }
+
+    public void HideTutorialPanel()
+    {
+        if (isShowTutorialPanel)
+        {
+            StartCoroutine(TranslateTutorialPanelAlpha(1, 0));
+
+        }    
+    }
+
+    private IEnumerator TranslateTutorialPanelAlpha(float startAlpha, float targetAlpha)
+    {
+        TutorialPanelImage.color = new Color(TutorialPanelImage.color.r, TutorialPanelImage.color.g, TutorialPanelImage.color.b, startAlpha);
+        
+        if (startAlpha == 0)
+        {
+            yield return new WaitForSeconds(pre_tutorialPanelDuration);
+        }
+
+        float currentTime = 0;
+        float translationTime = 0.5f;
+        float t = 0;
+        while (t < 1)
+        {
+            currentTime += Time.deltaTime;
+            t = currentTime / translationTime;
+            float currentAlpha = Mathf.Lerp(startAlpha, targetAlpha, t);
+            TutorialPanelImage.color = new Color(TutorialPanelImage.color.r, TutorialPanelImage.color.g, TutorialPanelImage.color.b, currentAlpha);
+            yield return null;
+
+        }
+
+        if (targetAlpha == 0)
+        {
+            TutorialPanelImage.transform.localScale = Vector3.zero;
+            TutorialPanelHide?.Invoke();
+        }
+
+        yield return null;
+    }
+
+
+    /* ================ Tutorial Panel ==================== */
+
+
+
     private void SetFinishImageInvisible()
     {
         finishAlpha = finishImage.color.a;
@@ -349,60 +425,10 @@ public class CubePlayUIController : MonoBehaviour
     }
 
     private IEnumerator FinishRoutine()
-    {
-        
+    {     
         yield return new WaitForSeconds(pre_finishDuration);
         FinishButton.gameObject.SetActive(true);
         yield return null;
-
-        /*if (display_finishDuration > 0) 
-        { 
-
-            finishImage.gameObject.SetActive(true);
-            finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, 0);
-            float startAlphaVal = 0;
-            float targetAlphaVal = finishAlpha;
-            float currentTime = 0;
-            float translationTime = 0.5f;
-            float t = 0;
-            *//*show image*//*
-            while (t < 1)
-            {
-                currentTime += Time.deltaTime;
-                t = currentTime / translationTime;
-                float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
-                finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
-                yield return null;
-
-            }
-
-            yield return new WaitForSeconds(display_finishDuration);
-            FinishButton.gameObject.SetActive(true);
-
-            startAlphaVal = finishAlpha;
-            targetAlphaVal = 0;
-            currentTime = 0;
-            translationTime = 0.5f;
-            t = 0;
-
-            *//*hide image*//*
-            while (t < 1)
-            {
-                currentTime += Time.deltaTime;
-                t = currentTime / translationTime;
-                float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
-                finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
-                yield return null;
-            }
-            finishImage.gameObject.transform.localScale = Vector3.zero;
-            yield return null;
-        
-        }
-        else
-        {
-            FinishButton.gameObject.SetActive(true);
-            yield return null;
-        }*/
     }
 
 
