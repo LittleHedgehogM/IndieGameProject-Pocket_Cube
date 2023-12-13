@@ -127,7 +127,8 @@ public class LevelManager : MonoBehaviour
             settingBtn.gameObject.SetActive(false);
         }
 
-
+        Debug.Log("reset titleBtn state");
+        titltBtnClick = true;
 
     }
 
