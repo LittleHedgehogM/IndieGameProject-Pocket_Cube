@@ -135,6 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: ResetCamera
+  NormalSprite: {fileID: 21300000, guid: f2eb7155e9285b24faff14b8a584e539, type: 3}
+  pressedSprite: {fileID: 21300000, guid: 69d458656dbed6a4aae8917ddee90edd, type: 3}
+  hoverSprite: {fileID: 21300000, guid: 3f7d2dcbe45d27b41afa3f278faf824f, type: 3}
+  buttonType: 1
 --- !u!1 &9117999374728074310
 GameObject:
   m_ObjectHideFlags: 0

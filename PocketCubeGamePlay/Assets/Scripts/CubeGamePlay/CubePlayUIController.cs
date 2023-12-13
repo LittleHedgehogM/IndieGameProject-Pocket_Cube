@@ -127,13 +127,13 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalCount = 0;
         isCommutationApplied = commutationApplied;
         CommutationCount = commutationApplied ? 1 : 0;
-        if (commutationApplied) {
-            CommutationButton.image.color = Color.grey;
-        }
-        else 
-        {
-            CommutationButton.image.color = Color.white;
-        }
+        //if (commutationApplied) {
+        //    CommutationButton.image.color = Color.grey;
+        //}
+        //else 
+        //{
+        //    CommutationButton.image.color = Color.white;
+        //}
     }
 
     public void restoreTotalStepsCommutation(int restoreSteps, bool diagonalApplied)
@@ -142,15 +142,15 @@ public class CubePlayUIController : MonoBehaviour
         CommutationCount = 0;
         isDiagonalApplied = diagonalApplied;
         DiagonalCount = diagonalApplied ? 1 : 0;
-        if (diagonalApplied) 
-        {
-            DiagonalButton.image.color = Color.grey;
-        }
-        else
-        {
-            DiagonalButton.image.color = Color.white;
+        //if (diagonalApplied) 
+        //{
+        //    DiagonalButton.image.color = Color.grey;
+        //}
+        //else
+        //{
+        //    DiagonalButton.image.color = Color.white;
 
-        }
+        //}
     }
 
     public void onRestart()
@@ -216,21 +216,21 @@ public class CubePlayUIController : MonoBehaviour
        if (!isDiagonalApplied && CubePlayManager.instance.CanUseSkill())
        {
             onEnterDiagonalState?.Invoke();
-            DiagonalButton.image.color = Color.grey;
+            //DiagonalButton.image.color = Color.grey;
             isDiagonalApplied = true;
 
         }
        else if (isDiagonalApplied && CubePlayManager.instance.CanRestoreDiagonalSkill())
        {
             onRestoreDiagonalCheckPoint?.Invoke();
-            DiagonalButton.image.color = Color.white;
+            //DiagonalButton.image.color = Color.white;
             isDiagonalApplied = false;
             DiagonalCount = 0;
 
         }
         else if (isDiagonalApplied && !CubePlayManager.instance.CanRestoreDiagonalSkill())
         {
-            DiagonalButton.image.color = Color.grey;
+            //DiagonalButton.image.color = Color.grey;
         }
     }
 
@@ -245,30 +245,30 @@ public class CubePlayUIController : MonoBehaviour
         if (!isCommutationApplied && CubePlayManager.instance.CanUseSkill())
         {
             onEnterCommutationState?.Invoke();
-            CommutationButton.image.color = Color.grey;
+            //CommutationButton.image.color = Color.grey;
             isCommutationApplied = true;
         }
         else if (isCommutationApplied && CubePlayManager.instance.CanRestoreCommutationSkill())
         {
             onRestoreCommutationCheckPoint?.Invoke();
-            CommutationButton.image.color = Color.white;
+            //CommutationButton.image.color = Color.white;
             isCommutationApplied = false;
             CommutationCount = 0;
 
         }
         else if (isCommutationApplied && !CubePlayManager.instance.CanRestoreCommutationSkill())
         {
-            CommutationButton.image.color = Color.grey;
+            //CommutationButton.image.color = Color.grey;
 
         }
     }
 
-    public void onSelectDiagonal()
-    {
-        ColorBlock buttonColorBlocks = DiagonalButton.colors;
-        buttonColorBlocks.normalColor = Color.red;
+    //public void onSelectDiagonal()
+    //{
+    //    ColorBlock buttonColorBlocks = DiagonalButton.colors;
+    //    buttonColorBlocks.normalColor = Color.red;
 
-    }
+    //}
 
     void onCommutationFinished()
     {
@@ -504,7 +504,7 @@ public class CubePlayUIController : MonoBehaviour
             yield return null;
         }*/
         //finishImage.gameObject.SetActive(false);
-        print("finishImageHide");
+        //print("finishImageHide");
         switch (PlayerPrefs.GetInt("Level"))
         {
             case 0:
