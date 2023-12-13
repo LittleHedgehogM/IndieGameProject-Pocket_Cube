@@ -75,7 +75,7 @@ public class LevelManager : MonoBehaviour
         
         do
         {
-            await Task.Delay(_loadingTime);
+            await Task.Delay(1000);
             Debug.Log("wait for click");
             //_progressBar.fillAmount = scene.progress;
 

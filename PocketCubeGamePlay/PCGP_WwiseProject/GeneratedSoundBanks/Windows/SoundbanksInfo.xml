@@ -9,13 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{85F05D59-BD08-E244-3945-3C48F98FA76C}">
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{07B2EC00-4FCC-24C6-0E5D-79F0456FB7AA}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<Media>
 				<File Id="62613895" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Move_Loop.wav</ShortName>
-					<CachePath>SFX/Move_Loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Move_Loop_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -27,25 +27,25 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{D91B2488-EC38-5085-2B3C-65778E4AC062}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{7EDF7BA1-4B2C-2EBC-EF79-ADBEEBC45E78}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
 				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_level00.wav</ShortName>
-					<CachePath>SFX/Amb_level00_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Amb_level00_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>环境.wav</ShortName>
-					<CachePath>SFX/环境_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/环境_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_Main.wav</ShortName>
-					<CachePath>SFX/Amb_Main_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Amb_Main_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>环境音效.wav</ShortName>
-					<CachePath>SFX/环境音效_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/环境音效_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -247,77 +247,73 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{CA9703DD-6918-DAB8-2318-1F5F0B8F881F}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{6DB9CA45-93AF-39DE-3A3D-76B8A232AC74}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
 				<File Id="64915519" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump.wav</ShortName>
-					<CachePath>SFX/jump_10C4C929.wem</CachePath>
-				</File>
-				<File Id="112183314" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>傅里叶棋盘_魔方loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_魔方loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/jump_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_96AE51AE.wem</CachePath>
+					<CachePath>SFX/L3_Jump_713FA6BE.wem</CachePath>
 				</File>
 				<File Id="304097471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_鼓组loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_鼓组loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/傅里叶棋盘_鼓组loop_0762CC47.wem</CachePath>
 				</File>
 				<File Id="334950802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_land03.wav</ShortName>
-					<CachePath>SFX/Level3_land03_10C4C929.wem</CachePath>
+					<CachePath>SFX/Level3_land03_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_88ECCD51.wem</CachePath>
+					<CachePath>SFX/L3_Jump_9619B961.wem</CachePath>
 				</File>
 				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_C7FB753E.wem</CachePath>
+					<CachePath>SFX/L3_Jump_623B074E.wem</CachePath>
 				</File>
 				<File Id="555154728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump03.wav</ShortName>
-					<CachePath>SFX/jump03_10C4C929.wem</CachePath>
+					<CachePath>SFX/jump03_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="573026670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump02.wav</ShortName>
-					<CachePath>SFX/jump02_10C4C929.wem</CachePath>
+					<CachePath>SFX/jump02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="638651685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_land01.wav</ShortName>
-					<CachePath>SFX/Level3_land01_10C4C929.wem</CachePath>
+					<CachePath>SFX/Level3_land01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="644617565" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_D407F890.wem</CachePath>
+					<CachePath>SFX/L3_Jump_EE177560.wem</CachePath>
 				</File>
 				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Hit_bad.wav</ShortName>
-					<CachePath>SFX/L3_Hit_bad_646DF284.wem</CachePath>
+					<CachePath>SFX/L3_Hit_bad_2C8C6BB4.wem</CachePath>
 				</File>
 				<File Id="713146055" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_land02.wav</ShortName>
-					<CachePath>SFX/Level3_land02_10C4C929.wem</CachePath>
+					<CachePath>SFX/Level3_land02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_destroy.wav</ShortName>
-					<CachePath>SFX/L3_destroy_10C4C929.wem</CachePath>
+					<CachePath>SFX/L3_destroy_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="909243550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_旋律loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_旋律loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/傅里叶棋盘_旋律loop_0762CC47.wem</CachePath>
 				</File>
 				<File Id="968844488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Unlock02.wav</ShortName>
-					<CachePath>SFX/Level3_Unlock02_10C4C929.wem</CachePath>
+					<CachePath>SFX/Level3_Unlock02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="1036840312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Unlock01.wav</ShortName>
-					<CachePath>SFX/Level3_Unlock01_10C4C929.wem</CachePath>
+					<CachePath>SFX/Level3_Unlock01_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -327,11 +323,6 @@
 			</Plugins>
 			<Events>
 				<Event Id="1152672460" Name="Hit_Record" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3420724554" Name="Play_Fourier_Cube" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="112183314"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2056255347" Name="Play_Fourier_Scene" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="304097471"/>
@@ -391,61 +382,61 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{8ADB2805-5B59-A313-F8A6-EAB97EE63A68}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{AFA04718-C4E6-A067-58D2-9BE18E8922BE}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
 				<File Id="3392313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>一级点击.wav</ShortName>
-					<CachePath>SFX/一级点击_10C4C929.wem</CachePath>
+					<CachePath>SFX/一级点击_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="46414968" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock02.wav</ShortName>
-					<CachePath>SFX/Side_Unlock02_10C4C929.wem</CachePath>
+					<CachePath>SFX/Side_Unlock02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="85237782" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ELE_zoomin.wav</ShortName>
-					<CachePath>SFX/ELE_zoomin_10C4C929.wem</CachePath>
+					<CachePath>SFX/ELE_zoomin_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="97900267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁 ver2  layer2.wav</ShortName>
-					<CachePath>SFX/电磁 ver2  layer2_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/电磁 ver2  layer2_0762CC47.wem</CachePath>
 				</File>
 				<File Id="206351303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_intro.wav</ShortName>
-					<CachePath>SFX/电磁_intro_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/电磁_intro_0762CC47.wem</CachePath>
 				</File>
 				<File Id="230466036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ELE_zoomOut.wav</ShortName>
-					<CachePath>SFX/ELE_zoomOut_10C4C929.wem</CachePath>
+					<CachePath>SFX/ELE_zoomOut_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="287942534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_main loop.wav</ShortName>
-					<CachePath>SFX/电磁_main loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/电磁_main loop_0762CC47.wem</CachePath>
 				</File>
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
-					<CachePath>SFX/Click_lv2_10C4C929.wem</CachePath>
+					<CachePath>SFX/Click_lv2_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="574144294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock01.wav</ShortName>
-					<CachePath>SFX/Side_Unlock01_10C4C929.wem</CachePath>
+					<CachePath>SFX/Side_Unlock01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="721466819" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_outro.wav</ShortName>
-					<CachePath>SFX/电磁_outro_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/电磁_outro_0762CC47.wem</CachePath>
 				</File>
 				<File Id="800172585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>光照射.wav</ShortName>
-					<CachePath>SFX/光照射_10C4C929.wem</CachePath>
+					<CachePath>SFX/光照射_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="859865721" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>最终特效.wav</ShortName>
-					<CachePath>SFX/最终特效_10C4C929.wem</CachePath>
+					<CachePath>SFX/最终特效_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="959667103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>中间解锁.wav</ShortName>
-					<CachePath>SFX/中间解锁_10C4C929.wem</CachePath>
+					<CachePath>SFX/中间解锁_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -516,53 +507,53 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{0CCC8FEB-89BE-489D-C25F-B9DFDD64AFB5}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{85EC7B8F-081A-A1E6-1532-666359772006}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
 				<File Id="1852256" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level 1 Music_LOOP.wav</ShortName>
-					<CachePath>SFX/Level 1 Music_LOOP_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Level 1 Music_LOOP_0762CC47.wem</CachePath>
 				</File>
 				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>放上金币.wav</ShortName>
-					<CachePath>SFX/放上金币_10C4C929.wem</CachePath>
+					<CachePath>SFX/放上金币_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="110487141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jiqiren.wav</ShortName>
-					<CachePath>SFX/jiqiren_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/jiqiren_0762CC47.wem</CachePath>
 				</File>
 				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶下降.wav</ShortName>
-					<CachePath>SFX/台阶下降_9FADFD58.wem</CachePath>
+					<CachePath>SFX/台阶下降_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="286706430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Camera_zoomIn.wav</ShortName>
-					<CachePath>SFX/Camera_zoomIn_E5D35EE5.wem</CachePath>
+					<CachePath>SFX/Camera_zoomIn_0B2CBDD5.wem</CachePath>
 				</File>
 				<File Id="364095599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>拿走.wav</ShortName>
-					<CachePath>SFX/拿走_10C4C929.wem</CachePath>
+					<CachePath>SFX/拿走_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="489948701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level 1 Music_Start.wav</ShortName>
-					<CachePath>SFX/Level 1 Music_Start_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Level 1 Music_Start_0762CC47.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
-					<CachePath>SFX/hover_10C4C929.wem</CachePath>
+					<CachePath>SFX/hover_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="739887170" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Camera_zoomOut.wav</ShortName>
-					<CachePath>SFX/Camera_zoomOut_B6ABA2F1.wem</CachePath>
+					<CachePath>SFX/Camera_zoomOut_FE7275A1.wem</CachePath>
 				</File>
 				<File Id="793816760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶上升.wav</ShortName>
-					<CachePath>SFX/台阶上升_0243C708.wem</CachePath>
+					<CachePath>SFX/台阶上升_63626198.wem</CachePath>
 				</File>
 				<File Id="1010870477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cube_drop.wav</ShortName>
-					<CachePath>SFX/Cube_drop_10C4C929.wem</CachePath>
+					<CachePath>SFX/Cube_drop_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -615,37 +606,37 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{89BED3D8-8A1A-58DA-BCE5-A88CE872DB4A}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{F13A919F-E7C6-A92C-2861-D3CB468A232F}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
 				<File Id="5423351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reduce.wav</ShortName>
-					<CachePath>SFX/reduce_10C4C929.wem</CachePath>
+					<CachePath>SFX/reduce_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="67729679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll01.wav</ShortName>
-					<CachePath>SFX/roll01_10C4C929.wem</CachePath>
+					<CachePath>SFX/roll01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="80850654" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>open12346.wav</ShortName>
-					<CachePath>SFX/open12346_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/open12346_0762CC47.wem</CachePath>
 				</File>
 				<File Id="165154750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll_long.wav</ShortName>
-					<CachePath>SFX/roll_long_10C4C929.wem</CachePath>
+					<CachePath>SFX/roll_long_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="220131361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll02.wav</ShortName>
-					<CachePath>SFX/roll02_10C4C929.wem</CachePath>
+					<CachePath>SFX/roll02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="460131778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>unlock01.wav</ShortName>
-					<CachePath>SFX/unlock01_10C4C929.wem</CachePath>
+					<CachePath>SFX/unlock01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kaichangzhi02.wav</ShortName>
-					<CachePath>SFX/kaichangzhi02_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/kaichangzhi02_0762CC47.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -723,45 +714,45 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{8E168FC8-DB03-A3B2-A30C-816C2BE4CEB8}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{5AA1AA59-3988-FA6F-06D8-F6BD12EA6A77}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
 				<File Id="22892153" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_roll01.wav</ShortName>
-					<CachePath>SFX/cube_roll01_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_roll01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="44885334" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_click.wav</ShortName>
-					<CachePath>SFX/cube_click_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_click_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="82225691" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_skillclick01.wav</ShortName>
-					<CachePath>SFX/cube_skillclick01_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_skillclick01_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="357215054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_final_Click.wav</ShortName>
-					<CachePath>SFX/cube_final_Click_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_final_Click_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="481933197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_roll02.wav</ShortName>
-					<CachePath>SFX/cube_roll02_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_roll02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="579273831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_ani.wav</ShortName>
-					<CachePath>SFX/cube_ani_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_ani_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="703256073" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_skillclick02.wav</ShortName>
-					<CachePath>SFX/cube_skillclick02_10C4C929.wem</CachePath>
+					<CachePath>SFX/cube_skillclick02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="832323392" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_final_loop.wav</ShortName>
-					<CachePath>SFX/cube_final_loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/cube_final_loop_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="853657409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cube_final.wav</ShortName>
-					<CachePath>SFX/cube_final_FBFAABC0.wem</CachePath>
+					<CachePath>SFX/cube_final_6A16F770.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -806,5 +797,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4195B169-739F-2E49-B535-23CFBE67A345}</FileHash>
+	<FileHash>{6CF9D5D6-2897-BCFC-DF7F-849644D5B0B6}</FileHash>
 </SoundBanksInfo>

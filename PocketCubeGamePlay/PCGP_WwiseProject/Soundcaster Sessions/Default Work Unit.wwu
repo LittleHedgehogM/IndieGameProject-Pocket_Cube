@@ -49,10 +49,6 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Fourier_Cube" ID="{12E10522-7B5D-4B3F-8CE6-89FB6B47F3F6}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Fourier_Scene" ID="{AE681A24-D486-40CF-9056-070881FA3FA4}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="2" Y="1"/>
 						</Module>
@@ -86,7 +82,7 @@
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>
 						<CurrentSwitchRef Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}"/>
-						<CurrentSwitchRef Name="On" ID="{47AEDC1A-6626-427E-9F5C-82DAAC1A26F3}"/>
+						<CurrentSwitchRef Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -655,7 +655,7 @@
 				<ActorMixer Name="SFX_Loop" ID="{3E7BDCEE-F394-43D7-B4D0-B84BC462E786}" ShortID="733213329">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+							<ObjectRef Name="SFX" ID="{077BDD57-A8D4-4890-9391-2B11CCDE99D0}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="fx" ID="{69A891F9-4131-4128-A88A-A3CA11D7AAEC}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>

@@ -38,7 +38,6 @@ namespace AK
         static const AkUniqueID PLAY_ELE_ZOOMOUT = 2748548144U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
-        static const AkUniqueID PLAY_FOURIER_CUBE = 3420724554U;
         static const AkUniqueID PLAY_FOURIER_SCENE = 2056255347U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
