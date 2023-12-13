@@ -39,34 +39,6 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Hit_Record" ID="{3A0D63F8-478F-4351-A5F7-6BE40E846B59}"/>
-						<Event Name="Play_Fourier_Cube" ID="{12E10522-7B5D-4B3F-8CE6-89FB6B47F3F6}">
-							<ChildrenList>
-								<Action Name="" ID="{71C9815F-94A6-411E-883D-6EFB0B787F2C}" ShortID="475932913">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
-										<Property Name="FadeTime" Type="Real64" Value="3"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{59FD1988-772B-4EEA-B19B-B02DEB52D31F}" ShortID="669861207">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="3"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Fourier_Cube" ID="{9F24017F-BBFF-4FC5-B726-FCF5E4D2C3A3}" WorkUnitID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Fourier_Scene" ID="{AE681A24-D486-40CF-9056-070881FA3FA4}">
 							<ChildrenList>
 								<Action Name="" ID="{580DC74E-59C4-4B4C-AE57-08F89B54B254}" ShortID="584419968">

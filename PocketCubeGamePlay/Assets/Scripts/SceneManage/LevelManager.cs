@@ -22,6 +22,8 @@ public class LevelManager : MonoBehaviour
     
 
     [SerializeField] private Image titleIMG;
+    [SerializeField] private Button titleBtn;
+    private bool titltBtnClick = true;
 
     private PlayerData playerData;
     [SerializeField] Button settingBtn;
@@ -46,6 +48,9 @@ public class LevelManager : MonoBehaviour
 
         //_animatorTransition = GameObject.Find("CrossFade").GetComponent<Animator>();
         settingBtn.onClick.AddListener(OnClickSetting);
+        titleBtn.onClick.AddListener(OnClickTitleBtn);
+        titleBtn.gameObject.SetActive(false);
+
     }
 
     void Start()
@@ -59,11 +64,9 @@ public class LevelManager : MonoBehaviour
     {
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
         _animatorTransition.Play("Crossfade_Start");
-        
-        /*await Task.Delay(_loadingTime);
-
-        titleIMG.sprite = Resources.Load<Sprite>("textpages/"+sceneName);
-        _animatorTransition.Play("Crossfade_Start");*/
+        await Task.Delay(_loadingTime);
+        //Debug.Log("1000s finish");
+        titleBtn.gameObject.SetActive(true);
 
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
@@ -72,16 +75,13 @@ public class LevelManager : MonoBehaviour
         
         do
         {
-            await Task.Delay(_loadingTime);
-
+            await Task.Delay(1000);
+            //Debug.Log("wait for click");
             //_progressBar.fillAmount = scene.progress;
 
-        }while (scene.progress < 0.9f);
+        }while (titltBtnClick);
 
-
-        
-
-
+        titleBtn.gameObject.SetActive(false);
         scene.allowSceneActivation = true;
         _animatorTransition.SetTrigger("End");
         //_animatorTransition.Play("Entry");
@@ -158,5 +158,9 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.OpenPanel(UIConst.SettingPanel);
     }
 
-
+    private void OnClickTitleBtn()
+    {
+        Debug.Log("clicked");
+        titltBtnClick = false;
+    }
 }
