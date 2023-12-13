@@ -137,7 +137,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{014575A6-91E3-0145-D5CF-349C61595838}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{54A22DB7-2924-4E03-63A8-FAF1A17E3BA2}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -207,6 +207,7 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3092587493" Name="Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1291434436" Name="Play_box_click" DurationType="OneShot" DurationMin="2.3214285" DurationMax="2.3214285">
 					<MediaRefs>
 						<MediaRef Id="915713439"/>
@@ -243,6 +244,7 @@
 						<MediaRef Id="322749515"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{CA9703DD-6918-DAB8-2318-1F5F0B8F881F}">
@@ -804,5 +806,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6C062CAC-02EC-0032-3C3F-386481AB0B18}</FileHash>
+	<FileHash>{6B7FA1D5-0827-25B6-2B24-6821A8C9FC4E}</FileHash>
 </SoundBanksInfo>

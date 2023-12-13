@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID HIT_RECORD = 1152672460U;
+        static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PLAY_AMB_LEVEL00 = 2850739289U;
         static const AkUniqueID PLAY_AMB_MAIN = 1871703286U;
         static const AkUniqueID PLAY_BOX_CLICK = 1291434436U;
@@ -67,6 +68,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_TURN = 245126902U;
         static const AkUniqueID PLAY_UNLOCK = 1239937734U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
+        static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
         static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
         static const AkUniqueID STOP_CUBE_FINAL_LOOP = 247134943U;
