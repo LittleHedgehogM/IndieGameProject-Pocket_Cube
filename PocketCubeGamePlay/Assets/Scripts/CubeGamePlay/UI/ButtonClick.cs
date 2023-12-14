@@ -19,6 +19,7 @@ public class ButtonClick : MonoBehaviour
     [SerializeField] private Sprite pressedSprite;
     [SerializeField] private Sprite hoverSprite;
     CubePlayUIController myUIController;
+    CubePlayManager myManager;
 
     [System.Serializable]
     enum ButtonType
@@ -36,6 +37,38 @@ public class ButtonClick : MonoBehaviour
         myUIController = FindObjectOfType<CubePlayUIController>();
         clicked = false;
 
+    }
+
+    private void OnEnable()
+    {
+        CubePlayUIController.restoreCommutationButton += restoreCommutationButton;
+        CubePlayUIController.restoreDiagonalButton    += restoreDiagonalButton;
+    }
+
+    private void OnDisable()
+    {
+        CubePlayUIController.restoreCommutationButton -= restoreCommutationButton;
+        CubePlayUIController.restoreDiagonalButton -= restoreDiagonalButton;
+
+
+    }
+
+    private void restoreCommutationButton()
+    {
+        if (message.Contains("Commutation"))
+        {
+            buttonImage.sprite = NormalSprite;
+            clicked = false;
+        }
+    }
+
+    private void restoreDiagonalButton()
+    {
+        if (message.Contains("Diagonal"))
+        {
+            buttonImage.sprite = NormalSprite;
+            clicked = false;    
+        }
     }
 
     private bool isDiagonalButton()
@@ -61,15 +94,15 @@ public class ButtonClick : MonoBehaviour
             }
             else if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0))
             {
-
+                
             }
             else
             {
-                if (isCommutationButton() && myUIController.CommutationCount == 0 && !clicked)
+                if (isCommutationButton() && myUIController.CommutationCount == 0 /*&& !clicked*/)
                 {
                     buttonImage.sprite = hoverSprite;
                 }
-                else if (isDiagonalButton() && myUIController.DiagonalCount == 0 && !clicked)
+                else if (isDiagonalButton() && myUIController.DiagonalCount == 0 /*&& !clicked*/)
                 {
                     buttonImage.sprite = hoverSprite;
                 }
@@ -78,8 +111,8 @@ public class ButtonClick : MonoBehaviour
         }
         else
         {
-            if((isCommutationButton() && myUIController.CommutationCount == 0 &&!clicked)
-                    || (isDiagonalButton() && myUIController.DiagonalCount == 0  && !clicked))
+            if((isCommutationButton() && myUIController.CommutationCount == 0 /* &&!clicked*/)
+                    || (isDiagonalButton() && myUIController.DiagonalCount == 0 /* && !clicked*/))
             {
                     buttonImage.sprite = NormalSprite;
             }
@@ -125,6 +158,12 @@ public class ButtonClick : MonoBehaviour
 
     private void Update()
     {
+
+        if (CubePlayManager.instance.isConfigurationPhase())
+        {
+
+            return;
+        }
         Vector2 mousePosition = Input.mousePosition;
         Vector2 canvasMousePosition = RectTransformUtility.WorldToScreenPoint(null, mousePosition);
         RectTransform buttonRectTransform = GetComponent<RectTransform>();

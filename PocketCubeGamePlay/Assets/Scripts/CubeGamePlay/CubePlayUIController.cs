@@ -62,6 +62,9 @@ public class CubePlayUIController : MonoBehaviour
 
     public static event Action TutorialPanelHide;
 
+    public static event Action restoreCommutationButton;
+    public static event Action restoreDiagonalButton;
+
     private int _swipeCount;
     public int SwipeCount
     {
@@ -127,6 +130,9 @@ public class CubePlayUIController : MonoBehaviour
         DiagonalCount = 0;
         isCommutationApplied = commutationApplied;
         CommutationCount = commutationApplied ? 1 : 0;
+        if (CommutationCount == 0) {
+            restoreCommutationButton?.Invoke();
+        }
         //if (commutationApplied) {
         //    CommutationButton.image.color = Color.grey;
         //}
@@ -142,6 +148,10 @@ public class CubePlayUIController : MonoBehaviour
         CommutationCount = 0;
         isDiagonalApplied = diagonalApplied;
         DiagonalCount = diagonalApplied ? 1 : 0;
+        if (DiagonalCount == 0) 
+        {
+            restoreDiagonalButton?.Invoke();
+        }
         //if (diagonalApplied) 
         //{
         //    DiagonalButton.image.color = Color.grey;

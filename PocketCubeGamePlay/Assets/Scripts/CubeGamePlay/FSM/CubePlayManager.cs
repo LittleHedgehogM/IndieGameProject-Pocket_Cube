@@ -14,7 +14,7 @@ public class CubePlayManager : MonoBehaviour
     [SerializeField]
     public GameObject pocketCube;
 
-    enum CubePlay
+    public enum CubePlay
     {
         Configuration,
         Play,
@@ -65,6 +65,11 @@ public class CubePlayManager : MonoBehaviour
                && myCubeInPlayPhase.CanRestoreCommuation();
     }
 
+    public bool isConfigurationPhase()
+    {
+        return currentCubePlayPhase == CubePlay.Configuration;
+    }
+
     private void OnEnable()
     {
         CubePlayUIController.onEnterDiagonalState += SetStateToDiagonal;
@@ -97,7 +102,7 @@ public class CubePlayManager : MonoBehaviour
         if (message.Contains("Restart"))
         {
             onRestart();
-        }     
+        }                                              
         else if (message.Contains("Diagonal"))
         {
             myCubeUIController.clickDiagonalButton();
