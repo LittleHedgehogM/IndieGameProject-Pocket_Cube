@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a287cf82b481f248a4c830a533661d8a
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264091154
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8584998455396464312
+    m_lastTime: -8584989759585615712
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -180,7 +180,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8585001773115796076
+    m_lastTime: -8584989735814793083
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -320,7 +320,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8584998455404441280
+    m_lastTime: -8584989735814966994
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -625,8 +625,8 @@ MonoBehaviour:
         guid: c9d5b0ee61b3b6499352f4d87865c775
       Path: Events\Default Work Unit\Cube\Play_cube_roll
       maxAttenuation: 0
-      maxDuration: 0.99342406
-      minDuration: 0.83732426
+      maxDuration: 1.0380061
+      minDuration: 0.8013614
     - name: Play_cube_skillclick01
       guid: 853b382f4655cf4c9b48a07995deef46
       id: 3603099912
@@ -1292,7 +1292,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8584998455404441280
+    m_lastTime: -8584989735814907160
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1360,8 +1360,8 @@ MonoBehaviour:
         guid: 39df2880446fac4da37f598a03abc571
       Path: Events\Level1\Play_Coin_takeAway
       maxAttenuation: 0
-      maxDuration: 1.0314059
-      minDuration: 1.0314059
+      maxDuration: 1.2292073
+      minDuration: 1.2084483
     - name: Play_Cube_drop
       guid: b9ff80a2de5348449502a9fc7fef1619
       id: 797967755
@@ -1447,6 +1447,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.0144258
       minDuration: 2.0144258
+    - name: Play_Put_on
+      guid: 897504c36b438b46bec702e8bb88467b
+      id: 510377583
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level1
+        ObjectType: 12
+        guid: fdc3b775b21fed47b692ca4598a411ef
+      - ElementName: Play_Put_on
+        ObjectType: 3
+        guid: 897504c36b438b46bec702e8bb88467b
+      Path: Events\Level1\Play_Put_on
+      maxAttenuation: 0
+      maxDuration: 2.092517
+      minDuration: 2.032947
   - PhysicalPath: Events\Level3.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1458,7 +1475,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8584991175963986764
+    m_lastTime: -8584991205832527864
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1535,8 +1552,8 @@ MonoBehaviour:
         guid: 3ec43c38a3d09a4c8b4b0840a41e0d83
       Path: Events\Level3\Level3\Play_Jump
       maxAttenuation: 0
-      maxDuration: 1.1460234
-      minDuration: 0.6888134
+      maxDuration: 1.096802
+      minDuration: 0.7853195
     - name: Play_L3_destroy
       guid: 085d2259b84538469661c08e62168cbc
       id: 507378310
@@ -1595,8 +1612,8 @@ MonoBehaviour:
         guid: 37c18c9c85f0ca4b9b91b12bdc141fa3
       Path: Events\Level3\Level3\Play_L3_Jump
       maxAttenuation: 0
-      maxDuration: 0.5752789
-      minDuration: 0.4651191
+      maxDuration: 0.6098389
+      minDuration: 0.45161712
     - name: Play_Land
       guid: 2f45025be85b8840aa10624b92d96661
       id: 4285282925
@@ -1615,8 +1632,8 @@ MonoBehaviour:
         guid: 2f45025be85b8840aa10624b92d96661
       Path: Events\Level3\Level3\Play_Land
       maxAttenuation: 0
-      maxDuration: 1.6610215
-      minDuration: 1.4028137
+      maxDuration: 1.5634321
+      minDuration: 1.4709709
     - name: Play_Unlock
       guid: 9af0d8ea23d9964c9d8dc0fe34d21967
       id: 1239937734
@@ -1649,7 +1666,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8585012025914478344
+    m_lastTime: -8585012036669806509
     List:
     - name: Main_Vol
       guid: 0354b0cf06881346b7ffd022e3232f83
@@ -1742,7 +1759,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585004998870328472
+    m_lastTime: -8585004449594295614
     List:
     - name: ELE
       guid: 823177fdcc8ebf46807e499dae36ce3f
@@ -1936,7 +1953,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bc3d4cfc8bcc444eb836a2d8305cdf57
     GuidInternal: 
-    m_lastTime: -8585002591655299646
+    m_lastTime: -8585003544116727800
     List:
     - name: ELE_BGM
       guid: 3123b75e321c3441b2fa0b3363d32102
@@ -2100,7 +2117,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0312bd49e5a5964584ed87b0261d3295
     GuidInternal: 
-    m_lastTime: -8585014656758443746
+    m_lastTime: -8585014628264120910
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

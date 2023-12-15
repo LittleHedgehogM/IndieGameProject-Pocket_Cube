@@ -15,11 +15,17 @@
 				</ActorMixer>
 				<ActorMixer Name="SFX_Single" ID="{3AA3180A-E970-40AF-B4DE-900BA2A6FA87}" ShortID="754676420">
 					<PropertyList>
-						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
 							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BBD62A99-128D-41BA-BC5B-5AECADAC8055}"/>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
@@ -155,6 +161,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Cube_drop" ID="{0270D588-AEB6-40A4-830B-7F615707E8AA}" ShortID="622875953">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F3B213BD-58EE-4F95-B569-A6C68F9E0B51}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -293,6 +308,94 @@
 								<ActiveSource Name="Camera_zoomOut" ID="{124DC7A2-9E3A-4B67-92F3-98548E72ACCF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Put on" ID="{524D867C-ABC2-44F7-9D09-AA7BAF5A90F7}" ShortID="696816134">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{87173BE4-380B-4B9A-82F2-87240E1596D9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="25"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="put on" ID="{C2F0D8EF-43EC-4897-9EB2-2B68B4CBFF98}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.81017645407031"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>put on.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1052116068"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="put on" ID="{C2F0D8EF-43EC-4897-9EB2-2B68B4CBFF98}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Drop out" ID="{1E826A6C-B2B5-48CB-8C83-CD7AFF9C483C}" ShortID="800145448">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A952B1F7-372A-46E9-AD74-3020623D3918}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="25"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drop out" ID="{DCC0E11F-6D96-43DC-BC30-0B6564DB86A0}">
+									<Language>SFX</Language>
+									<AudioFile>Drop out.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="760013822"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drop out" ID="{DCC0E11F-6D96-43DC-BC30-0B6564DB86A0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AMB" ID="{3E593BF8-F915-4BF9-A91F-81CD5D254A69}" ShortID="606623020">
@@ -316,7 +419,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-26</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

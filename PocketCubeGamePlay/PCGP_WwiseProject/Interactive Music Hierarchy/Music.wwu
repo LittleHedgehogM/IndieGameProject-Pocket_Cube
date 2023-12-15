@@ -113,6 +113,11 @@
 								<MusicSegment Name="Level 1 Music_LOOP" ID="{52D1DAD1-4EE7-47C4-A40B-2561250DF0A4}" ShortID="202071945">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="74146.3492063492"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -336,6 +341,11 @@
 				<MusicPlaylistContainer Name="ELE_outro" ID="{86D64842-713C-46D9-83CD-7D5CD6528BAD}" ShortID="972705839">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="117"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -521,6 +531,11 @@
 				<MusicPlaylistContainer Name="ELE" ID="{85E493A0-73F6-4F57-91E9-BDF8FF93F63E}" ShortID="1036329184">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="117"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">

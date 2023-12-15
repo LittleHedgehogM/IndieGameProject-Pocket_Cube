@@ -23,6 +23,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{6F03B5A6-7778-4701-AC48-D7A7EF5BEE28}" ShortID="505744188">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drop out" ID="{1E826A6C-B2B5-48CB-8C83-CD7AFF9C483C}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Plate_Down" ID="{3B264B5D-A9CC-4FAB-B9F7-7F613703E433}">
@@ -114,6 +124,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Level 1 Music" ID="{39DCE964-12CB-49FD-913C-993C1F44404F}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Put_on" ID="{C3047589-436B-468B-BEC7-02E8BB88467B}">
+					<ChildrenList>
+						<Action Name="" ID="{488BD6EF-EA56-4D2B-8578-8E51AD693104}" ShortID="118605406">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Put on" ID="{524D867C-ABC2-44F7-9D09-AA7BAF5A90F7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
