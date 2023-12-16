@@ -23,7 +23,7 @@
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -36,23 +36,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="open12346" ID="{28AB3E92-B473-483C-9A7B-17576FD89370}" ShortID="980186047">
+								<MusicTrack Name="kaichangzhizhi09" ID="{A757A677-DD04-48DC-81E3-67BAF5F8EC1C}" ShortID="315239415">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="open12346" ID="{E89B0D46-9055-452B-8211-9EC2216FB132}">
+										<AudioFileSource Name="kaichangzhizhi09" ID="{F0F5E65F-B2AF-4A06-B07C-4288E3E22F33}">
 											<Language>SFX</Language>
-											<AudioFile>open12346.wav</AudioFile>
+											<AudioFile>kaichangzhizhi09.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="80850654"/>
+												<MediaID ID="224889378"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{D8BFA980-503C-444C-987A-A7DDAF69E6C7}">
+										<MusicTransition Name="Root" ID="{C6DB540C-E82E-41E4-AED2-231C368E91AE}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -63,18 +63,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{9AFB1F0E-35D9-42D3-A6E7-897E79C4E621}">
+													<MusicTrackSequence Name="" ID="{D435BEE5-C417-4318-A188-811A6DE9BFB3}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="open12346" ID="{05CB8592-BEF2-4E87-8F02-783A870D5215}">
+																		<MusicClip Name="kaichangzhizhi09" ID="{A68D2049-AD21-4347-8E34-5ADB372B6276}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="32750"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="28000"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="open12346" ID="{E89B0D46-9055-452B-8211-9EC2216FB132}"/>
+																			<AudioSourceRef Name="kaichangzhizhi09" ID="{F0F5E65F-B2AF-4A06-B07C-4288E3E22F33}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
