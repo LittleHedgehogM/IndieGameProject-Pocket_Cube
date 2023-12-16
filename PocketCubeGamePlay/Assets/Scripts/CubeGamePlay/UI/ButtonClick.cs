@@ -14,6 +14,7 @@ public class ButtonClick : MonoBehaviour
 
     public delegate void MyCallbackDelegate(string message);
     public static event MyCallbackDelegate OnMyCallback;
+    public static Action restartPlay;
 
     [SerializeField] private Sprite NormalSprite;
     [SerializeField] private Sprite pressedSprite;
@@ -43,14 +44,26 @@ public class ButtonClick : MonoBehaviour
     {
         CubePlayUIController.restoreCommutationButton += restoreCommutationButton;
         CubePlayUIController.restoreDiagonalButton    += restoreDiagonalButton;
+        restartPlay += restartButtonPressed;
     }
 
     private void OnDisable()
     {
         CubePlayUIController.restoreCommutationButton -= restoreCommutationButton;
         CubePlayUIController.restoreDiagonalButton -= restoreDiagonalButton;
+        restartPlay += restartButtonPressed;
 
 
+    }
+
+    private void restartButtonPressed()
+    {
+        if (message.Contains("Commutation") || message.Contains("Diagonal"))
+        {
+            buttonImage.sprite = NormalSprite;
+            clicked = false;
+
+        }
     }
 
     private void restoreCommutationButton()
@@ -138,6 +151,10 @@ public class ButtonClick : MonoBehaviour
             {
                 buttonImage.sprite = NormalSprite;
                 OnMyCallback?.Invoke(message);
+                if (message.Contains("Restart"))
+                {
+                    restartPlay?.Invoke();
+                }
             }
             else if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0))
             {
