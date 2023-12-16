@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static System.TimeZoneInfo;
@@ -527,7 +528,7 @@ public class CubePlayUIController : MonoBehaviour
                 levelManager.LoadScene("Level_Fourier");
                 break;
             case 3:
-                levelManager.LoadScene("StartGame");
+                SceneManager.LoadScene("EndingScene");
                 break;
         }
         yield return null;
