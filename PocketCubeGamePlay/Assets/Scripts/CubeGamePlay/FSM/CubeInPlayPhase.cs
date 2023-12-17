@@ -238,7 +238,7 @@ public class CubeInPlayPhase : GameplayPhase
     {
         if (currentPlayStatus == CubePlayStatus.CubeSolved)
         {
-
+            
             return true;
         }
         else if (currentPlayStatus == CubePlayStatus.InResetCamera)

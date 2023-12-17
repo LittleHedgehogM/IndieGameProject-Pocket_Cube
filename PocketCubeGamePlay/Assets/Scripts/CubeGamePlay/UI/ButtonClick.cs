@@ -58,7 +58,7 @@ public class ButtonClick : MonoBehaviour
 
     private void restartButtonPressed()
     {
-        if (message.Contains("Commutation") || message.Contains("Diagonal"))
+        if ((message.Contains("Commutation") || message.Contains("Diagonal") )&& buttonImage!=null)
         {
             buttonImage.sprite = NormalSprite;
             clicked = false;

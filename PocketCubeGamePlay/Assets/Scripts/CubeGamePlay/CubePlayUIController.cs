@@ -453,7 +453,11 @@ public class CubePlayUIController : MonoBehaviour
         FinishInfoBtn.onClick.AddListener(OnClickFinishInfoBtn);
 
         FinishInfoBtn.gameObject.SetActive(false);
-        levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        if (GameObject.Find("Level Manager"))
+        {
+            levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        }
+        
     }
 
     private void OnClickFinishButton()

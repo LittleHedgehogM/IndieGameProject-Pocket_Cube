@@ -3853,6 +3853,7 @@ GameObject:
   - component: {fileID: 771636595}
   - component: {fileID: 771636600}
   - component: {fileID: 771636601}
+  - component: {fileID: 771636602}
   m_Layer: 0
   m_Name: CubePlay
   m_TagString: Untagged
@@ -4047,6 +4048,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finish_VFX: {fileID: 1844190353337694}
   skill_VFX: {fileID: 8771972550360040033}
+--- !u!114 &771636602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771636594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb274aaf7623c842b2889d9b493e00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801984817
 GameObject:
   m_ObjectHideFlags: 0

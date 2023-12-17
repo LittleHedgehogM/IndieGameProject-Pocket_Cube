@@ -26,7 +26,11 @@ public class CubePlayManager : MonoBehaviour
     CubeInPlayPhase myCubeInPlayPhase;
     CubeSolvedPhase myCubeSolvedPhase;
     CubePlayUIController myCubeUIController;
-
+    CubePlayTimer myTimer;
+    public static Action RestartCubeGame;
+    public static Action SolveCubeWithinOneMins;
+    public static Action UnsolveCubeAfterEightMinutes;
+    public static Action OnlyUseSkillsToSolve;
 
     private void Awake()
     {
@@ -41,7 +45,7 @@ public class CubePlayManager : MonoBehaviour
         myCubeUIController = FindObjectOfType<CubePlayUIController>();
         currentCubePlayPhase = CubePlay.Configuration;
         myCubeConfigurationPhase.onStart();
-
+        myTimer = FindObjectOfType<CubePlayTimer>();
         Application.targetFrameRate = frameRate;
 
     }
@@ -102,6 +106,7 @@ public class CubePlayManager : MonoBehaviour
         if (message.Contains("Restart"))
         {
             onRestart();
+            RestartCubeGame?.Invoke();
         }                                              
         else if (message.Contains("Diagonal"))
         {
@@ -190,17 +195,34 @@ public class CubePlayManager : MonoBehaviour
             {
                 currentCubePlayPhase = CubePlay.Play;
                 myCubeConfigurationPhase.onEnd();
-                myCubeInPlayPhase.onStart();   
+                myCubeInPlayPhase.onStart();
+                myTimer.startTimer();
             }
         }
         else if (currentCubePlayPhase == CubePlay.Play)
         {
             bool isCubePlayFinished = myCubeInPlayPhase.onUpdate();
+            myTimer.UpdateTimer();
             if (isCubePlayFinished)
             {
                 currentCubePlayPhase = CubePlay.Solved;
                 myCubeInPlayPhase.onEnd();
                 myCubeSolvedPhase.onStart();
+                // check timer
+                if (myTimer.isSolveMinutesLessThan(1))
+                {
+                    SolveCubeWithinOneMins?.Invoke();
+                }
+                else if (myTimer.isSolveMinutesMoreThan(8)) 
+                {
+                    UnsolveCubeAfterEightMinutes?.Invoke();
+                }
+                if (myCubeUIController.getCurrentSwipeSteps()==0 && 
+                myCubeUIController.getIsCommutationApplied() && myCubeUIController.getIsDiagonalApplied())
+                {
+                    OnlyUseSkillsToSolve?.Invoke();
+                }
+               
             }
         }
         else if (currentCubePlayPhase == CubePlay.Solved)
