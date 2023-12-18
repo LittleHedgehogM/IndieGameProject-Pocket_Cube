@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID PLAY_ELE_OUTRO = 2857386602U;
         static const AkUniqueID PLAY_ELE_ZOOMIN = 262350865U;
         static const AkUniqueID PLAY_ELE_ZOOMOUT = 2748548144U;
+        static const AkUniqueID PLAY_END_FINAL = 192844276U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_FOURIER_SCENE = 2056255347U;
@@ -156,6 +157,7 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID AMB = 1117531639U;
         static const AkUniqueID CUBE = 4052031814U;
+        static const AkUniqueID END = 529726532U;
         static const AkUniqueID LEVEL0 = 2678230383U;
         static const AkUniqueID LEVEL1 = 2678230382U;
         static const AkUniqueID LEVEL2 = 2678230381U;

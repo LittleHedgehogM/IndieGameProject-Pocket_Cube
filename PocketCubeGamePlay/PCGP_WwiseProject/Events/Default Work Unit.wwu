@@ -655,6 +655,46 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="End" ID="{082844BC-269D-42C3-B8BF-4D3B6D3CB704}" ShortID="875321934">
+					<ChildrenList>
+						<Event Name="Play_End_Final" ID="{2DFB7F79-B4BA-4B90-97CC-D9FEA593B7FE}">
+							<ChildrenList>
+								<Action Name="" ID="{5CE3C553-5902-46E8-91E5-2DCB4771C745}" ShortID="1030955446">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AD3900A6-B01E-4A87-9668-B181024E9178}" ShortID="941075588">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{90283F4A-DCCD-4D38-BE36-770BB90257EB}" ShortID="70112829">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="End_Final" ID="{EEC3373D-303D-40C2-A50C-82E437BDB3E0}" WorkUnitID="{F5E93F6D-609D-4EB4-9871-E1192DCFEB3F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

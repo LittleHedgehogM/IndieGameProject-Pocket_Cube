@@ -9,6 +9,23 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{549A0C40-36F6-2C29-3484-51F3E0F5FB56}">
+			<ShortName>End</ShortName>
+			<Path>End.bnk</Path>
+			<Media>
+				<File Id="585449640" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Final.wav</ShortName>
+					<CachePath>SFX/Main_Final_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="192844276" Name="Play_End_Final" DurationType="OneShot" DurationMin="19.5" DurationMax="19.5">
+					<MediaRefs>
+						<MediaRef Id="585449640"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{07B2EC00-4FCC-24C6-0E5D-79F0456FB7AA}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
@@ -811,5 +828,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{706B394F-15CF-07AF-4E56-161DD26E6702}</FileHash>
+	<FileHash>{8CEAD6B0-9B3C-7E62-3E44-BDC63FCD8F0F}</FileHash>
 </SoundBanksInfo>
