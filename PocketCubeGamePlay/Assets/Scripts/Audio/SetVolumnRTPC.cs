@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class SetVolumnRTPC : MonoBehaviour
 {
-    public Slider thisSlider;
+    public Slider slider;
     public AK.Wwise.RTPC VolumnRTPC;
 
     // 使用此函数进行初始化。
     // Start is called before the first frame update
     void Start()
     {
-        thisSlider.value = VolumnRTPC.GetGlobalValue();
+        slider.value = 75f;
     }
 
     // Update is called once per frame
@@ -20,9 +20,9 @@ public class SetVolumnRTPC : MonoBehaviour
 
     public void VolumnChange()
     {
-        float sliderValue = thisSlider.value;
+        //float sliderValue = thisSlider.value;
 
-        VolumnRTPC.SetGlobalValue(thisSlider.value);
+        VolumnRTPC.SetGlobalValue(slider.value);
         
     }
 }
