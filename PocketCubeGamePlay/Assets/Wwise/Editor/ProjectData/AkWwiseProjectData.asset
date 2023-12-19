@@ -180,7 +180,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8584988762189420024
+    m_lastTime: -8584986084838648854
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -210,6 +210,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 44f11d3313d9884c95673e9c779451a5
       Path: SoundBanks\Default Work Unit\Cube
+    - name: End
+      guid: 9a7be4cb106dfb4e8bdfbfc38b210579
+      id: 529726532
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 229d856017c3f84a992874c52206f964
+      - ElementName: End
+        ObjectType: 7
+        guid: 9a7be4cb106dfb4e8bdfbfc38b210579
+      Path: SoundBanks\Default Work Unit\End
     - name: Level0
       guid: 7771042ebdd58b4eb59f3e3e571958b9
       id: 2678230383
@@ -320,7 +334,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8584998455404441280
+    m_lastTime: -8584986084839454660
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -353,6 +367,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: e39f0fc375b59240a531e51c7ae1c983
       Path: Events\Default Work Unit\Cube
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: End
+      guid: bc4428089d26c342b8bf4d3b6d3cb704
+      id: 529726532
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: End
+        ObjectType: 4
+        guid: bc4428089d26c342b8bf4d3b6d3cb704
+      Path: Events\Default Work Unit\End
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -747,6 +778,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.9796057
       minDuration: 1.840647
+    - name: Play_End_Final
+      guid: 797ffb2dbab4904b97ccd9fea593b7fe
+      id: 192844276
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12eec0454970e0458947c795e9496afa
+      - ElementName: End
+        ObjectType: 4
+        guid: bc4428089d26c342b8bf4d3b6d3cb704
+      - ElementName: Play_End_Final
+        ObjectType: 3
+        guid: 797ffb2dbab4904b97ccd9fea593b7fe
+      Path: Events\Default Work Unit\End\Play_End_Final
+      maxAttenuation: 0
+      maxDuration: 19.5
+      minDuration: 19.5
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
