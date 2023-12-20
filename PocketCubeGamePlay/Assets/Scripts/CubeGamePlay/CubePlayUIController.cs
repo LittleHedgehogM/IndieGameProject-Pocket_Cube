@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -423,7 +424,7 @@ public class CubePlayUIController : MonoBehaviour
 
     /* ================ Tutorial Panel ==================== */
 
-
+    public static Action<string> ACHIEVEMENT_03;
 
     private void SetFinishImageInvisible()
     {
@@ -439,6 +440,7 @@ public class CubePlayUIController : MonoBehaviour
     {     
         yield return new WaitForSeconds(pre_finishDuration);
         FinishButton.gameObject.SetActive(true);
+        ACHIEVEMENT_03?.Invoke("ACHIEVEMENT_03");
         yield return null;
     }
 
@@ -503,23 +505,6 @@ public class CubePlayUIController : MonoBehaviour
     private IEnumerator FinishImageHide()
     {
 
-        /*float startAlphaVal = finishAlpha;
-        float targetAlphaVal = 0;
-        float currentTime = 0;
-        float translationTime = 0.5f;
-        float t = 0;*/
-
-        //*hide image*//*
-        /*while (t < 1)
-        {
-            currentTime += Time.deltaTime;
-            t = currentTime / translationTime;
-            float currentAlpha = Mathf.Lerp(startAlphaVal, targetAlphaVal, t);
-            finishImage.color = new Color(finishImage.color.r, finishImage.color.g, finishImage.color.b, currentAlpha);
-            yield return null;
-        }*/
-        //finishImage.gameObject.SetActive(false);
-        //print("finishImageHide");
         switch (PlayerPrefs.GetInt("Level"))
         {
             case 0:

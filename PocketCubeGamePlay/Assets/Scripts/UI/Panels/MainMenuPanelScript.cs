@@ -11,6 +11,7 @@ public class MainMenuPanel : BasePanel
     
     [SerializeField]private Button StartBtn;
     [SerializeField]private Button ContinueBtn;
+    [SerializeField]private Button RestartBtn;
     public Button SettingBtn;
     //public Button CollectionBtn;
     public Button CreditBtn;
@@ -23,6 +24,8 @@ public class MainMenuPanel : BasePanel
     {
         StartBtn.onClick.AddListener(OnStartBtn);
         ContinueBtn.onClick.AddListener(OnContinueBtn);
+        RestartBtn.onClick.AddListener(OnRestartBtn);
+
         SettingBtn.onClick.AddListener(OnSettingBtn);
         //CollectionBtn.onClick.AddListener(OnCollectionBtn);
         //CreditBtn.onClick.AddListener(OnCreditBtn);
@@ -35,12 +38,21 @@ public class MainMenuPanel : BasePanel
             print("start");
             StartBtn.gameObject.SetActive(true);
             ContinueBtn.gameObject.SetActive(false);
+            RestartBtn.gameObject.SetActive(false);
         }
-        else if (PlayerPrefs.GetInt("Level") > 0)
+        else if ( PlayerPrefs.GetInt("Level") > 0 && PlayerPrefs.GetInt("Level") < 4)
         {
             print("Continue");
             StartBtn.gameObject.SetActive(false);
             ContinueBtn.gameObject.SetActive(true);
+            RestartBtn.gameObject.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("Level") == 4)
+        {
+            print("Restart");
+            StartBtn.gameObject.SetActive(false);
+            ContinueBtn.gameObject.SetActive(false);
+            RestartBtn.gameObject.SetActive(true);
         }
     }
     
@@ -100,6 +112,13 @@ public class MainMenuPanel : BasePanel
         }
 
         ClosePanel();
+    }
+
+    public void OnRestartBtn()
+    {
+        Click02.Post(gameObject);
+        PlayerPrefs.SetInt("Level", 0);
+        LevelManager.Instance.LoadScene("First GPP");
     }
 
     public void OnSettingBtn()

@@ -186,7 +186,8 @@ public class SettingsPanel : BasePanel
     void OnClickReturn()
     {
         ClosePanel();
-        LevelManager.Instance.LoadScene("StartGame");
+        SceneManager.LoadScene("StartGame");
+        //LevelManager.Instance.LoadScene("StartGame");
         
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.5748164, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641514, b: 0.57481635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -329,6 +329,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f41386c47aa90e5409b1e5026f57096a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1403263754}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f41386c47aa90e5409b1e5026f57096a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1403263756}
   m_SourcePrefab: {fileID: 100100000, guid: f41386c47aa90e5409b1e5026f57096a, type: 3}
 --- !u!1 &50976144
 GameObject:
@@ -2521,7 +2524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5019061401184096685, guid: ed7a55081b2173448b6a46e89dffca19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -1.2090634
+      value: -1.2090636
       objectReference: {fileID: 0}
     - target: {fileID: 5019061401184096685, guid: ed7a55081b2173448b6a46e89dffca19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2583,6 +2586,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ed7a55081b2173448b6a46e89dffca19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 627986707}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ed7a55081b2173448b6a46e89dffca19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 627986708}
   m_SourcePrefab: {fileID: 100100000, guid: ed7a55081b2173448b6a46e89dffca19, type: 3}
 --- !u!1 &466983514
 GameObject:
@@ -3310,6 +3316,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &627986708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627986705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a2e548e4c03ec4bbfd256a19bda15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647643776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6358,6 +6376,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6400355386219781336, guid: e356d0b5406e3f941bafeba31952ef0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -27.143538
+      objectReference: {fileID: 0}
+    - target: {fileID: -6400355386219781336, guid: e356d0b5406e3f941bafeba31952ef0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -10.527665
+      objectReference: {fileID: 0}
+    - target: {fileID: -6400355386219781336, guid: e356d0b5406e3f941bafeba31952ef0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.1440263
+      objectReference: {fileID: 0}
     - target: {fileID: -2231939348429462970, guid: e356d0b5406e3f941bafeba31952ef0e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6591,6 +6621,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1403263756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403263752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a2e548e4c03ec4bbfd256a19bda15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438561803
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,15 +8266,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 816d5977210d4d94b8b2b53ed72faba1, type: 2}
     - target: {fileID: -4525406098920505311, guid: b4de44e3bae7d4249a82d7c01adc9238, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -1.1533818
+      value: -1.2090635
       objectReference: {fileID: 0}
     - target: {fileID: -4525406098920505311, guid: b4de44e3bae7d4249a82d7c01adc9238, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 93.30347
+      value: 93.27328
       objectReference: {fileID: 0}
     - target: {fileID: -4525406098920505311, guid: b4de44e3bae7d4249a82d7c01adc9238, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 22.116995
+      value: 20.250988
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4de44e3bae7d4249a82d7c01adc9238, type: 3}
       propertyPath: m_Name

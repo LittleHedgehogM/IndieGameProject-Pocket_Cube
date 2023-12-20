@@ -8,4 +8,9 @@ public class Level1AniAudio : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_Cube_drop", gameObject);
     }
+
+    void Level1_Coin_Put_in()
+    {
+        AkSoundEngine.PostEvent("Play_Put_on", gameObject);
+    }
 }

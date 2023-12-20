@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MainMenuLevels : MonoBehaviour
@@ -32,7 +33,7 @@ public class MainMenuLevels : MonoBehaviour
     [SerializeField] private int levelStatus;
     [SerializeField] private Button pressAnyKey;
 
-    private bool isPressed = false;
+    private bool stopAutoRotate = false;
     Quaternion toRotation0;
     Quaternion toRotation1;
     Quaternion toRotation2;
@@ -40,8 +41,10 @@ public class MainMenuLevels : MonoBehaviour
     [SerializeField]float lerpSpeed;
 
     Quaternion fromRotation;
+    [SerializeField]float rotationSpeed = 1f;
     void Awake()
     {
+        gameObject.GetComponent<Outline>().OutlineWidth = 0;
         pressAnyKey.onClick.AddListener(OnPressAnyKey);
 
         levelStatus = PlayerPrefs.GetInt("Level");
@@ -73,6 +76,11 @@ public class MainMenuLevels : MonoBehaviour
                     {
                         level3Active.SetActive(true);
                         level3Deactive.SetActive(false);
+                        if (levelStatus == 4)
+                        {
+                            stopAutoRotate = true;
+                            gameObject.GetComponent<Outline>().OutlineWidth = 10;
+                        }
                     }
                 }
             }
@@ -91,13 +99,13 @@ public class MainMenuLevels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isPressed)
+        if (!stopAutoRotate)
         {
             StartMenuCubeAutoRotate();
         }
         
 
-        if (isPressed)
+        if (stopAutoRotate)
         {
             fromRotation = transform.rotation;
             switch (levelStatus)
@@ -127,18 +135,36 @@ public class MainMenuLevels : MonoBehaviour
                     break;
             }
         }
+
+        
     }
 
     void OnPressAnyKey()
     {
-
         
-        isPressed = true;
+            stopAutoRotate = true;
+        
+        
         
     }
 
     public void StartMenuCubeAutoRotate()
     {
         transform.Rotate(_rotation * _speed * Time.deltaTime);
+    }
+
+    private void OnMouseDrag()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())//如果有UI阻挡着就返回不响应了
+            return;
+
+        if (levelStatus == 4)
+        {
+            float XRotation = Input.GetAxis("Mouse X") * rotationSpeed;
+            //float YRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+
+            transform.Rotate(Vector3.down, XRotation);
+            //transform.Rotate(Vector3.right, YRotation);
+        }
     }
 }

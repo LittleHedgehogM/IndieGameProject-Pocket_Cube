@@ -13,9 +13,18 @@ public class VideoScript: MonoBehaviour
     public static Action VideoFinished;
     [SerializeField] GameObject performCamera;
     [SerializeField] float translationTime = 1f;
+    private CanvasGroup settingBtn;
+
+    private void Awake()
+    {
+        settingBtn = GameObject.FindWithTag("SettingBtn").GetComponent<CanvasGroup>();
+    }
     void Start()
     {
         vid = GetComponent<VideoPlayer>();
+        settingBtn.alpha = 0;
+        settingBtn.interactable = false;
+        settingBtn.blocksRaycasts = false;
         vid.Play();
         sound.Post(gameObject);
         vid.loopPointReached += DestroyAfterVideoPlayed;
@@ -40,6 +49,9 @@ public class VideoScript: MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "First GPP")
         {
+            settingBtn.alpha = 1;
+            settingBtn.interactable = true;
+            settingBtn.blocksRaycasts = true;
             gameObject.SetActive(false);
             performCamera.SetActive(true);
             VideoFinished?.Invoke();
@@ -67,6 +79,9 @@ public class VideoScript: MonoBehaviour
             yield return null;
         }
         //finishImage.gameObject.SetActive(false);
+        settingBtn.alpha = 1;
+        settingBtn.interactable = true;
+        settingBtn.blocksRaycasts = true;
         gameObject.SetActive(false);
         VideoFinished?.Invoke();
         yield return null;

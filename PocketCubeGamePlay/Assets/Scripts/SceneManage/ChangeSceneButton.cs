@@ -8,4 +8,8 @@ public class ChangeSceneButton : MonoBehaviour
     {
         LevelManager.Instance.LoadScene(sceneName);
     }
+    public void SetLevelPass()
+    {
+        PlayerPrefs.SetInt("Level", 4);
+    }
 }
