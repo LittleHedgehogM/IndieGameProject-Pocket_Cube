@@ -19,7 +19,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Open01" ID="{6714BD8D-3515-41FC-8A3D-30FF07BB1778}" ShortID="549967290">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="35586.2068965517"/>
+								<Property Name="EndPosition" Type="Real64" Value="28137.9310344828"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -72,7 +72,7 @@
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="28000"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="368.778537232072"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="kaichangzhizhi09" ID="{F0F5E65F-B2AF-4A06-B07C-4288E3E22F33}"/>
 																		</MusicClip>
@@ -99,7 +99,7 @@
 											<MusicCue Name="Exit Cue" ID="{EF2454B8-4097-4B11-AFEB-D6228425FD3A}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="31862.0689655172"/>
+													<Property Name="TimeMs" Type="Real64" Value="28137.9310344828"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>

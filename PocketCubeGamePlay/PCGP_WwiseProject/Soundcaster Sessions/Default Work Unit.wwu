@@ -85,6 +85,11 @@
 						<CurrentSwitchRef Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_02" ID="{F4284216-71E4-4FC9-9158-5B1F3445E8C2}">
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>
