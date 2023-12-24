@@ -9,19 +9,19 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{549A0C40-36F6-2C29-3484-51F3E0F5FB56}">
+		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{A7002950-60CD-1083-609B-7C0446D580EA}">
 			<ShortName>End</ShortName>
 			<Path>End.bnk</Path>
 			<Media>
-				<File Id="585449640" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Main_Final.wav</ShortName>
-					<CachePath>SFX/Main_Final_D79FB2B7.wem</CachePath>
+				<File Id="702349109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jieweizhi.wav</ShortName>
+					<CachePath>SFX/jieweizhi_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="192844276" Name="Play_End_Final" DurationType="OneShot" DurationMin="19.5" DurationMax="19.5">
 					<MediaRefs>
-						<MediaRef Id="585449640"/>
+						<MediaRef Id="702349109"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -637,7 +637,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{107B1AE9-A85C-F335-E6EE-DDD13D0587DF}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{1C81AD06-2C96-8830-4D00-4C9DC3825B88}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -828,5 +828,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0FD3CF5F-21BD-563B-E837-4226B3D994B2}</FileHash>
+	<FileHash>{F22D7435-A5A0-2992-E6CE-E1A49E612346}</FileHash>
 </SoundBanksInfo>
