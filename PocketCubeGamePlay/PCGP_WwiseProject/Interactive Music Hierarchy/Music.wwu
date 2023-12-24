@@ -859,7 +859,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Main_Final" ID="{A5F2A5DB-51DC-4E97-9F03-9CEA951BC27B}" ShortID="357449412">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="19500"/>
+								<Property Name="EndPosition" Type="Real64" Value="20125"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -870,23 +870,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="jieweizhi" ID="{D836A17C-5F23-40AA-A0B5-1ADA965FF230}" ShortID="667771735">
+								<MusicTrack Name="jieweizhi02" ID="{25971490-4002-42A6-BDA9-83B1402B9905}" ShortID="330343810">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="jieweizhi" ID="{192579C1-AC41-4857-9960-CDEB6FA0F7C7}">
+										<AudioFileSource Name="jieweizhi02" ID="{CAFCFAA2-5FE0-4825-BC45-AB4FE66914C1}">
 											<Language>SFX</Language>
-											<AudioFile>jieweizhi.wav</AudioFile>
+											<AudioFile>jieweizhi02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="702349109"/>
+												<MediaID ID="24987397"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{967CCE06-1A63-4B0A-BC66-063BB4CEBABB}">
+										<MusicTransition Name="Root" ID="{996E1739-5F21-4F7E-B284-F47A850DCFD6}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -897,18 +897,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{1B28752F-EA03-42D1-9485-D7D35E13B1FA}">
+													<MusicTrackSequence Name="" ID="{2091AA80-34A1-4B9C-A780-54F554C4EC19}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="jieweizhi" ID="{39F0817C-6782-4540-8A34-0EC3E5A5E0AC}">
+																		<MusicClip Name="jieweizhi02" ID="{99582535-FF33-45CB-B5C1-CCA0AD5E7DC0}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="19500"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="jieweizhi" ID="{192579C1-AC41-4857-9960-CDEB6FA0F7C7}"/>
+																			<AudioSourceRef Name="jieweizhi02" ID="{CAFCFAA2-5FE0-4825-BC45-AB4FE66914C1}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -933,7 +933,7 @@
 											<MusicCue Name="Exit Cue" ID="{3D690420-ABAE-4779-9BA9-39F06DB529AC}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="19500"/>
+													<Property Name="TimeMs" Type="Real64" Value="19625"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
