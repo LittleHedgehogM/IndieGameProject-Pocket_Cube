@@ -57,6 +57,16 @@ public class CubePlayManager : MonoBehaviour
             && myCubeInPlayPhase.GetCubePlayStatus() == CubePlayStatus.WaitForInput;
     }
 
+    public bool isApplyingDiagonal()
+    {
+        return currentCubePlayPhase == CubePlay.Play
+            && myCubeInPlayPhase.GetCubePlayStatus() == CubePlayStatus.InDiagonal;
+    }
+    public bool isApplyingCommutation(){
+        return currentCubePlayPhase == CubePlay.Play
+            && myCubeInPlayPhase.GetCubePlayStatus() == CubePlayStatus.InCommutation;
+    }
+
 
     public bool CanRestoreDiagonalSkill() {
         return currentCubePlayPhase == CubePlay.Play

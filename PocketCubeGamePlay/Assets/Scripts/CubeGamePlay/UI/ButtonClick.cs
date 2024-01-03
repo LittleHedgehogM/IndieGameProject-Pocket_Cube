@@ -102,7 +102,7 @@ public class ButtonClick : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 OnMyCallback?.Invoke(message);
-                clicked = !clicked;
+                // clicked = CubePlayManager.instance.CanUseSkill();
 
             }
             else if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0))
@@ -111,28 +111,25 @@ public class ButtonClick : MonoBehaviour
             }
             else
             {
-                if (isCommutationButton() && myUIController.CommutationCount == 0 /*&& !clicked*/)
+                if ((isCommutationButton() && myUIController.CommutationCount == 0)
+                || (isDiagonalButton() && myUIController.DiagonalCount == 0))
                 {
                     buttonImage.sprite = hoverSprite;
-                }
-                else if (isDiagonalButton() && myUIController.DiagonalCount == 0 /*&& !clicked*/)
-                {
-                    buttonImage.sprite = hoverSprite;
-                }
+                }                
             }
 
         }
         else
         {
-            if((isCommutationButton() && myUIController.CommutationCount == 0 /* &&!clicked*/)
-                    || (isDiagonalButton() && myUIController.DiagonalCount == 0 /* && !clicked*/))
+            if((isCommutationButton() && myUIController.CommutationCount == 0)
+                    || (isDiagonalButton() && myUIController.DiagonalCount == 0))
             {
                     buttonImage.sprite = NormalSprite;
             }
         }
 
-        if ( (isCommutationButton() && (myUIController.CommutationCount == 1 || clicked))
-            || (isDiagonalButton() && (myUIController.DiagonalCount == 1 || clicked)))
+        if ( (isCommutationButton() && (myUIController.CommutationCount == 1 || CubePlayManager.instance.isApplyingCommutation()))
+            || (isDiagonalButton() && (myUIController.DiagonalCount == 1 || CubePlayManager.instance.isApplyingDiagonal())))
         {
             buttonImage.sprite = pressedSprite;
             
