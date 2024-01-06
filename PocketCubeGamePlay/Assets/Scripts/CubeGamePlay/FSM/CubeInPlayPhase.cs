@@ -214,13 +214,26 @@ public class CubeInPlayPhase : GameplayPhase
         }
     }
 
+    public bool canRestart()
+    {
+        if (currentPlayStatus == CubePlayStatus.InDiagonal && !myDiagonalSkill.canRestart())
+        {
+            return false;
+        }
+        else if (currentPlayStatus == CubePlayStatus.InCommutation && !myCommutationSkill.canRestart())
+        {
+            return false;
+        }
+        return true;
+
+    }
 
     public override void onRestart()
     {
         base.onRestart();
         currentPlayStatus = CubePlayStatus.WaitForInput;
         restoreFinish = false;
-        myUIController.onRestart();
+        // myUIController.onRestart();
         myDiagonalSkill.ResetValues();
         myCommutationSkill.ResetValues();
         myCubePlayCameraController.onRestart();

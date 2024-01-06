@@ -116,7 +116,6 @@ public class CubePlayManager : MonoBehaviour
         if (message.Contains("Restart"))
         {
             onRestart();
-            RestartCubeGame?.Invoke();
         }                                              
         else if (message.Contains("Diagonal"))
         {
@@ -180,16 +179,13 @@ public class CubePlayManager : MonoBehaviour
 
     public void onRestart()
     {
-        if (currentCubePlayPhase == CubePlay.Play)
+        if (currentCubePlayPhase == CubePlay.Play && myCubeInPlayPhase.canRestart())
         {
             currentCubePlayPhase = CubePlay.Configuration;
             myCubeConfigurationPhase.onRestart();
             myCubeInPlayPhase.onRestart();
             myCubeSolvedPhase.onRestart();
-            
-            //load scene
-            //Scene scene = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(scene.name);
+            RestartCubeGame?.Invoke();
         }
 
     }

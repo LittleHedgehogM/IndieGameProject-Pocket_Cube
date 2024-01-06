@@ -263,6 +263,10 @@ public abstract class SkillManager : MonoBehaviour
                && FirstCubeHit.transform.localScale == startScale 
                && SecondCubeHit.transform.localScale == startScale;
     }
+    
+    public bool canRestart(){
+        return ! (currentState == SkillState.ApplySkillInProgress || currentState == SkillState.TranslateCameraBack);
+    }
 
     protected virtual void onRestart()
     {
