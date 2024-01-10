@@ -31,6 +31,7 @@ public class MainMenuLevels : MonoBehaviour
 
     [Header("Level Status")]
     [SerializeField] private int levelStatus;
+    [SerializeField] private GameObject frontPage;
     [SerializeField] private Button pressAnyKey;
 
     private bool stopAutoRotate = false;
@@ -62,6 +63,7 @@ public class MainMenuLevels : MonoBehaviour
             level3Active.SetActive(false);
             level3Deactive.SetActive(true);
 
+            rotateTutorial.SetActive(false);
             if (levelStatus >= 1)
             {
                 level1Active.SetActive(true);
@@ -80,12 +82,16 @@ public class MainMenuLevels : MonoBehaviour
                         {
                             stopAutoRotate = true;
                             gameObject.GetComponent<Outline>().OutlineWidth = 10;
+                            frontPage.SetActive(false);
+                            UIManager.Instance.OpenPanel(UIConst.MainMenuPanel);
+                            rotateTutorial.SetActive(true);
                         }
                     }
                 }
             }
         }
 
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -143,15 +149,19 @@ public class MainMenuLevels : MonoBehaviour
     {
         
             stopAutoRotate = true;
-        
-        
-        
+       
+
+
     }
 
     public void StartMenuCubeAutoRotate()
     {
         transform.Rotate(_rotation * _speed * Time.deltaTime);
     }
+
+    //rotate cube toturial
+    [SerializeField] private GameObject rotateTutorial;
+    //private bool pressedKey;
 
     private void OnMouseDrag()
     {
@@ -160,6 +170,7 @@ public class MainMenuLevels : MonoBehaviour
 
         if (levelStatus == 4)
         {
+            
             float XRotation = Input.GetAxis("Mouse X") * rotationSpeed;
             //float YRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
 
