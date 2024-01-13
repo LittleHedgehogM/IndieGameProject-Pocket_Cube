@@ -9,6 +9,9 @@ public class PlayPointBehaviour : MonoBehaviour
     private Vector3 targetPosition;
     private Vector3 startPosition;
 
+    private ParticleSystem perfectVFX;
+    private GameObject sphereMesh;
+
     public static int score = 0;
     
 
@@ -21,6 +24,8 @@ public class PlayPointBehaviour : MonoBehaviour
     {
         targetPosition = GameObject.Find("AimPoint").transform.position;
         startPosition = transform.position;
+        perfectVFX = transform.Find("InTimeVFX").GetComponent<ParticleSystem>();
+        sphereMesh = transform.Find("SphereMesh").gameObject;
     }
     private void Start()
     {
@@ -51,9 +56,7 @@ public class PlayPointBehaviour : MonoBehaviour
             //Debug.Log(destroyT);
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                
-                SphereDestroy();    
-                
+                StartCoroutine(SphereDestroy());                  
             }
             yield return null;
         }
@@ -62,12 +65,20 @@ public class PlayPointBehaviour : MonoBehaviour
         yield return null;
     }
 
+
+
+
     //Manually destroy
-    private void SphereDestroy()
+    private IEnumerator SphereDestroy()
     {
+        StopCoroutine(SphereMove());
+
+        //hit perfect effect
+        perfectVFX.Play();
+        
+        //calculate score
         score++;
         Debug.Log(score);
-        StopCoroutine(SphereMove());
         if (score == 3)
         {
                 print(passedLevel);
@@ -75,12 +86,26 @@ public class PlayPointBehaviour : MonoBehaviour
                 StopShoot?.Invoke();
                 score = 0;
                 passedLevel++;
-  
         }
-        Destroy(gameObject);
 
-       
-        
+        //Mesh Reduce
+        Vector3 currentScale = sphereMesh.transform.localScale;
+        Vector3 targetScale = Vector3.zero;
+        float destroyT = 0;
+        float currentTime = 0;
+        float translationTime = 0.5f; 
+        while (destroyT < 1)
+        {
+            currentTime += Time.deltaTime;
+            destroyT = currentTime / translationTime;
+            sphereMesh.transform.localScale = Vector3.Lerp(currentScale, targetScale, destroyT);
+            yield return null;
+        }
+        yield return new WaitUntil(() => perfectVFX.isStopped);
+
+        //Destroy Object
+        Destroy(gameObject);
+        yield return null;
     }
 
     //Auto destroy

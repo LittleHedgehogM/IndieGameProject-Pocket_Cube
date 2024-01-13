@@ -48,7 +48,7 @@ public class EyeCtl : MonoBehaviour
         if (beat > 1)
         {
             GameObject newGo = Instantiate(playPointPrefab, relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
-            newGo.GetComponent<Renderer>().material = go.GetComponent<Renderer>().material;
+            newGo.transform.Find("SphereMesh").GetComponent<Renderer>().material = go.GetComponent<Renderer>().material;
         }
         
     }
