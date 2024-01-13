@@ -23,7 +23,7 @@ public class FourierPlayer : MonoBehaviour
     [SerializeField] AK.Wwise.Event jumpSFX;
     [SerializeField] AK.Wwise.Event landSFX;
     [SerializeField] private ParticleSystem jumpPS;
-    bool playerMovementEnabled;
+    public static bool playerMovementEnabled;
 
     private bool jumpSwitch = false ;
 
@@ -34,7 +34,7 @@ public class FourierPlayer : MonoBehaviour
         gravity = Physics.gravity;
         jumpPS.Stop();
         playerPrevPosition = transform.position;
-        playerMovementEnabled = false;
+        playerMovementEnabled = true;
 
     }
 
@@ -68,11 +68,11 @@ public class FourierPlayer : MonoBehaviour
     private void Update()
     {
         
-        if (!playerMovementEnabled) 
+        /*if (!playerMovementEnabled) 
         {
             return;
-        }
-        if (jumpSwitch)
+        }*/
+        /*if (jumpSwitch)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -86,7 +86,7 @@ public class FourierPlayer : MonoBehaviour
                 myRigidbody.velocity = Vector3.up * jumpStrength;
                 
             }
-        }
+        }*/
              
         if  (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -143,16 +143,6 @@ public class FourierPlayer : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
-        //jump
-        /*if (Input.GetKeyDown(KeyCode.Space) && jumpSwitch)
-        {
-            jumpPS.Play();
-            jumpSFX.Post(gameObject);
-
-            //jump
-           *//* myRigidbody.velocity = Vector3.up * jumpStrength;
-        }*/
-
         
     }
     
@@ -161,7 +151,7 @@ public class FourierPlayer : MonoBehaviour
         if (col.gameObject.CompareTag("Area"))
         {
             jumpSwitch = true;
-            print("jumpSwitch = true");
+            //print("jumpSwitch = true");
                 /*if (Input.GetKeyDown(KeyCode.Space))
                 {
                 print("Space Down");
@@ -178,11 +168,6 @@ public class FourierPlayer : MonoBehaviour
     {
         jumpSwitch = false;
     }
-
-
-
-
-
 
 
 

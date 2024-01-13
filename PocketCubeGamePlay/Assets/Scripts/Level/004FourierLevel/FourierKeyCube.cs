@@ -5,44 +5,38 @@ using UnityEngine;
 
 public class FourierKeyCube : CubeClickEvent
 {
-    [SerializeField] private FourierColorChanger Level1;
-    [SerializeField] private FourierColorChanger Level2;
-    [SerializeField] private FourierColorChanger Level3;
-    [SerializeField] private FourierColorChanger Level4;
-    [SerializeField] private FourierColorChanger Level5;
+    //[SerializeField] private Vector3 _rotation;
+    //[SerializeField] private float _speed;
 
-    [SerializeField] private Vector3 _rotation;
-    [SerializeField] private float _speed;
+    //[SerializeField] private bool levelPass = false;
+    //
+    //[SerializeField] private ParticleSystem cubeFx;
 
-    [SerializeField] private bool levelPass = false;
+    //private bool played = false;
 
-    [SerializeField] private ParticleSystem cubeFx;
-    //[SerializeField] private ParticleSystem cubeLevelPassFx;
-    //private bool cubeLevelPassFxReady = true;
-    private bool played = false;
-    // Update is called once per frame
 
     FourierCursorController myCursorController;
-
     public static Action CubeShow;
-
+    [SerializeField] Material passMat;
 
     private void Start()
     {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         myCursorController = FindObjectOfType<FourierCursorController>();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        
-        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
-        {
-            CubeAutoRotate();
-            
-        }
+        FourierLevelManager.CubeUnlocked += FourierPass;
     }
 
-    private void CubeAutoRotate()
+    private void FourierPass()
+    {
+        CubeShow?.Invoke();
+        gameObject.GetComponent<Renderer>().material = passMat;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+    }
+    /*private void CubeAutoRotate()
     {
         //transform.Rotate(_rotation * _speed * Time.deltaTime);
         transform.Rotate(_rotation * _speed * Time.deltaTime, Space.World);
@@ -54,44 +48,27 @@ public class FourierKeyCube : CubeClickEvent
         }
 
         
-    }
+    }*/
 
     private void OnMouseEnter()
-    {
-        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
-        {
-            myCursorController.setSelectCursor();
-        }
+    {      
+        myCursorController.setSelectCursor();
     }
 
-    private void OnMouseExit() 
-    {
-        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
-        {
-            myCursorController.setDefaultCursor();
-        }
+    private void OnMouseExit()
+    {       
+        myCursorController.setDefaultCursor();
     }
 
     private void OnMouseDown()
-    {
-        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
-        {
-            myCursorController.setClickDownCursor();
-        }
+    {      
+            myCursorController.setClickDownCursor();    
     }
     private void OnMouseUp()
-    {
-        if (Level4.isLevelPass & Level5.isLevelPass || levelPass)
-        {
+    {       
             myCursorController.setSelectCursor();
             //FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
             CubeClick?.Invoke();
-
-        }
-        
     }
-    public void easyPass()
-    {
-        levelPass = true;
-    }
+    
 }

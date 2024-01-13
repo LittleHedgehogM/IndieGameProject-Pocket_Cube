@@ -4,6 +4,9 @@
 		<WorkUnit Name="FourierBGM" ID="{51AE5D0A-FF0A-4364-AE5F-C5C75127B4A2}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Fourier_Scene" ID="{A232FEF3-0D76-49C2-AA6E-35112B9E8BD1}" ShortID="104617274">
+					<PropertyList>
+						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Music" ID="{658375F2-F27A-441A-8DF0-45184AA3DB0D}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>

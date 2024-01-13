@@ -69,7 +69,10 @@ public class FourierCameraController : CameraZoomInHelper
 
     public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)
     {
-        float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
+        mainCam.transform.position += Camera_Sensitivity * (MainCamInitPosition - mainCam.transform.position);
+        mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
+
+        /*float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
         if (dist < cameraMoveRange)
         {
             
@@ -87,7 +90,7 @@ public class FourierCameraController : CameraZoomInHelper
             
             mainCam.transform.position += Camera_Sensitivity * (MainCamInitPosition - mainCam.transform.position);
             mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-        }
+        }*/
     }
 
     public void onUpdateCameraWithPlayerMovementWithFloat(Vector3 playerMovementVector)
