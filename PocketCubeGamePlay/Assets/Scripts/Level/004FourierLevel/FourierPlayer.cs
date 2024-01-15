@@ -25,7 +25,7 @@ public class FourierPlayer : MonoBehaviour
     [SerializeField] private ParticleSystem jumpPS;
     public static bool playerMovementEnabled;
 
-    private bool jumpSwitch = false ;
+    //private bool jumpSwitch = false ;
 
     [SerializeField] Animator playerAni;
 
@@ -150,7 +150,7 @@ public class FourierPlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Area"))
         {
-            jumpSwitch = true;
+            //jumpSwitch = true;
             //print("jumpSwitch = true");
                 /*if (Input.GetKeyDown(KeyCode.Space))
                 {
@@ -166,9 +166,9 @@ public class FourierPlayer : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        jumpSwitch = false;
+        //jumpSwitch = false;
     }
-
+    
 
 
 }

@@ -24,7 +24,7 @@ public class PlayPointBehaviour : MonoBehaviour
     {
         targetPosition = GameObject.Find("AimPoint").transform.position;
         startPosition = transform.position;
-        perfectVFX = transform.Find("InTimeVFX").GetComponent<ParticleSystem>();
+        perfectVFX = transform.Find("PerfectVFX").GetComponent<ParticleSystem>();
         sphereMesh = transform.Find("SphereMesh").gameObject;
     }
     private void Start()
@@ -37,6 +37,7 @@ public class PlayPointBehaviour : MonoBehaviour
 
     private IEnumerator SphereMove()
     {
+        //Debug.Log("Start Move");
         float t = 0;
         float currentTime = 0;
         float translationTime = 0.5f;
@@ -48,37 +49,39 @@ public class PlayPointBehaviour : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
             yield return null;
         }
-        //反应时间内按空格销毁
-        float destroyT = 0f;
-        while (destroyT < 1f )
+
+        //反应时间内按空格销毁 -perfect
+        float responseT = 0f;
+        while (responseT < 0.5f )
         {
-            destroyT += Time.deltaTime;
+            responseT += Time.deltaTime;
             //Debug.Log(destroyT);
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartCoroutine(SphereDestroy());                  
+               PerfectDestroy();                  
             }
             yield return null;
         }
-        //超过反应时间自动销毁
-        StartCoroutine(SphereAutoDestroy());
+
+        //超过反应时间自动销毁 -miss
+        StartCoroutine(MissDestroy());
         yield return null;
     }
 
 
 
 
-    //Manually destroy
-    private IEnumerator SphereDestroy()
+    //Perfect destroy
+    private void PerfectDestroy()
     {
         StopCoroutine(SphereMove());
-
+        Debug.Log("Perfect");
         //hit perfect effect
         perfectVFX.Play();
         
         //calculate score
         score++;
-        Debug.Log(score);
+        //Debug.Log(score);
         if (score == 3)
         {
                 print(passedLevel);
@@ -88,12 +91,30 @@ public class PlayPointBehaviour : MonoBehaviour
                 passedLevel++;
         }
 
+        StartCoroutine(SphereReduce());
+  
+    }
+
+    //Miss destroy
+    private IEnumerator MissDestroy()
+    {
+        StopCoroutine(SphereMove());
+        Debug.Log("Miss");
+        StartCoroutine(SphereReduce());
+
+        yield return null;
+    }
+
+    private IEnumerator SphereReduce()
+    {
         //Mesh Reduce
+        Debug.Log("Start Reduce");
         Vector3 currentScale = sphereMesh.transform.localScale;
         Vector3 targetScale = Vector3.zero;
         float destroyT = 0;
         float currentTime = 0;
-        float translationTime = 0.5f; 
+        float translationTime = 0.5f;
+
         while (destroyT < 1)
         {
             currentTime += Time.deltaTime;
@@ -101,18 +122,12 @@ public class PlayPointBehaviour : MonoBehaviour
             sphereMesh.transform.localScale = Vector3.Lerp(currentScale, targetScale, destroyT);
             yield return null;
         }
+        Debug.Log("End Reduce");
         yield return new WaitUntil(() => perfectVFX.isStopped);
+        print("perfect vfx stopped");
+        yield return null;
 
         //Destroy Object
         Destroy(gameObject);
-        yield return null;
-    }
-
-    //Auto destroy
-    private IEnumerator SphereAutoDestroy()
-    {
-        StopCoroutine(SphereMove());
-        Destroy(gameObject);
-        yield return null;
     }
 }
