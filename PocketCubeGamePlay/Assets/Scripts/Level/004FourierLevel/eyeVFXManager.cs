@@ -40,10 +40,11 @@ public class eyeVFXManager : MonoBehaviour
     {
         switch (level)
         {
-            case 0:
+            case 1:
                 eye_2.Play();
                 break;
-                case 1:
+
+            case 2:
                 eye_3.Play();
                 break;
         }

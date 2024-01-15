@@ -6,20 +6,35 @@ using UnityEngine;
 public class RhythmCallBack : MonoBehaviour
 {
     public static Action<int> Rhythm_Bar;
-    private int beatCount = 0;
+    public static Action<int> Rhythm_Beat;
+    private int beatCount = 3;
+    private int musicBeat = 0;
     //private bool pushTransitions = false;
 
     public void Push_Rhythm_Bar()
     {
-        if (beatCount == 4)
+        
+        if (musicBeat == 4)
+        {
+            musicBeat = 0;
+        }
+        musicBeat ++;
+        //print("playBeat" + beatCount);
+        //print("MusicBeat"+ musicBeat);
+
+        //Rhythm_Bar?.Invoke(beatCount);
+        //pushTransitions = true;
+        //print("transition On");
+    }
+
+    public void Push_Rhythm_Beat()
+    {
+        if (beatCount == 12)
         {
             beatCount = 0;
         }
         beatCount++;
-        //print(beatCount);
 
         Rhythm_Bar?.Invoke(beatCount);
-        //pushTransitions = true;
-        //print("transition On");
     }
 }

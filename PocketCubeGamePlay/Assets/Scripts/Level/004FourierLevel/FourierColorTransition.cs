@@ -40,7 +40,7 @@ public class FourierColorTransition : MonoBehaviour
         _currentLevel = level;
         switch (level)
         {
-            case 0:
+            case 1:
                 if(thisLevel.Contains("polt01"))
                 {
                     levelUnlock = true;
@@ -48,7 +48,7 @@ public class FourierColorTransition : MonoBehaviour
                     material = GetComponent<Renderer>().material;
                 }
                 break;
-            case 1:
+            case 2:
                 if (thisLevel.Contains("polt02"))
                 {
                     levelUnlock = true;
@@ -56,7 +56,7 @@ public class FourierColorTransition : MonoBehaviour
                     material = GetComponent<Renderer>().material;
                 }
                 break; 
-            case 2:
+            case 3:
                 if (thisLevel.Contains("polt03"))
                 {
                     levelUnlock = true;
@@ -120,16 +120,16 @@ public class FourierColorTransition : MonoBehaviour
         //(targetColorIndex);
         switch (_currentLevel)
         {
-            case 0:
+            case 1:
                 targetColorIndex = 0; 
                 break;
-            case 1:
+            case 2:
                 if (targetColorIndex == 2)
                 {
                     targetColorIndex = 0;
                 }
                 break;
-            case 2:
+            case 3:
                 if (targetColorIndex == 3)
                 {
                     targetColorIndex = 0;

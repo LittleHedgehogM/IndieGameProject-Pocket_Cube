@@ -12,16 +12,22 @@ public class PlayPointBehaviour : MonoBehaviour
     private ParticleSystem perfectVFX;
     private GameObject sphereMesh;
 
-    public static int score = 0;
-    
+    [SerializeField]private Color particleVanish;
 
+    public static int score = 0;
+    private float buffTime = 0.8f;
     
     public static Action<int> LevelPass;
     public static Action StopShoot;
 
-    public static int passedLevel = 0;
+    public static int inLevel = 1;
+
+    //Audio
+    private GameObject audioPlayer;
+
     private void Awake()
     {
+        audioPlayer = GameObject.Find("WwiseFourier");
         targetPosition = GameObject.Find("AimPoint").transform.position;
         startPosition = transform.position;
         perfectVFX = transform.Find("PerfectVFX").GetComponent<ParticleSystem>();
@@ -37,29 +43,53 @@ public class PlayPointBehaviour : MonoBehaviour
 
     private IEnumerator SphereMove()
     {
+        int thisBallNum = EyeCtl.currentBeat;
+        //Pre
+        yield return new WaitForSeconds(0.2f);
         //Debug.Log("Start Move");
         float t = 0;
         float currentTime = 0;
-        float translationTime = 0.5f;
+        //fly time
+        float translationTime = 0.8f;
 
         while ( t < 1)
         {
             currentTime += Time.deltaTime;
             t = currentTime / translationTime;
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(MissDestroy());
+                yield break;
+
+            }
             yield return null;
         }
+        Debug.Log(thisBallNum + "Arrived");
 
         //反应时间内按空格销毁 -perfect
         float responseT = 0f;
-        while (responseT < 0.5f )
+        while (responseT <= buffTime)
         {
             responseT += Time.deltaTime;
             //Debug.Log(destroyT);
+
+            //Score system
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               PerfectDestroy();                  
-            }
+                if (responseT < 0.2f)
+                {
+                    Debug.Log(responseT);
+                    StartCoroutine(MissDestroy());
+                    yield break;
+                }
+                else if (responseT >= 0.2f && responseT <= buffTime)
+                {
+                    Debug.Log(responseT);
+                    StartCoroutine(PerfectDestroy());
+                    yield break;
+                }
+            } 
             yield return null;
         }
 
@@ -72,48 +102,65 @@ public class PlayPointBehaviour : MonoBehaviour
 
 
     //Perfect destroy
-    private void PerfectDestroy()
+    private IEnumerator PerfectDestroy()
     {
-        StopCoroutine(SphereMove());
-        Debug.Log("Perfect");
-        //hit perfect effect
-        perfectVFX.Play();
         
+        Debug.Log("Perfect");
+        //hit perfect effect+ audio
+        perfectVFX.Play();
+        //AkSoundEngine.PostEvent("Play_L3_perfect_A", audioPlayer);
+
+        //delete sphere
+        sphereMesh.transform.localScale = Vector3.zero;
+
         //calculate score
         score++;
         //Debug.Log(score);
-        if (score == 3)
+        if (score == 6)
         {
-                print(passedLevel);
-                LevelPass?.Invoke(passedLevel);
+                print(inLevel);
+                LevelPass?.Invoke(inLevel);
                 StopShoot?.Invoke();
                 score = 0;
-                passedLevel++;
+                inLevel++;
         }
 
-        StartCoroutine(SphereReduce());
-  
+        yield return new WaitUntil(() => perfectVFX.isStopped);
+        print("perfect vfx stopped");
+        yield return null;
+
+        //Destroy Object
+        Destroy(gameObject);
+
     }
 
     //Miss destroy
     private IEnumerator MissDestroy()
-    {
-        StopCoroutine(SphereMove());
+    {   
         Debug.Log("Miss");
-        StartCoroutine(SphereReduce());
+        //Reduce score
+        score = 0;
 
-        yield return null;
-    }
+        //miss show
+        //Change Particle Color
+        ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
+        foreach (var ps in particleSystems)
+        {
+            ParticleSystem.MainModule main = ps.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(particleVanish, Color.white);
+;
+        }
+        //play bad audio
+        AkSoundEngine.PostEvent("Play_L3_Bad", audioPlayer);
 
-    private IEnumerator SphereReduce()
-    {
+        yield return new WaitForSeconds(0.3f);
         //Mesh Reduce
-        Debug.Log("Start Reduce");
+        //Debug.Log("Start Reduce");
         Vector3 currentScale = sphereMesh.transform.localScale;
         Vector3 targetScale = Vector3.zero;
         float destroyT = 0;
         float currentTime = 0;
-        float translationTime = 0.5f;
+        float translationTime = 0.3f;
 
         while (destroyT < 1)
         {
@@ -122,12 +169,15 @@ public class PlayPointBehaviour : MonoBehaviour
             sphereMesh.transform.localScale = Vector3.Lerp(currentScale, targetScale, destroyT);
             yield return null;
         }
-        Debug.Log("End Reduce");
-        yield return new WaitUntil(() => perfectVFX.isStopped);
-        print("perfect vfx stopped");
-        yield return null;
+        //Debug.Log("End Reduce");
+
 
         //Destroy Object
         Destroy(gameObject);
+
+        yield return null;
     }
+
+     
+    
 }

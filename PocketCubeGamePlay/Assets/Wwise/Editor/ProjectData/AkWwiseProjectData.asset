@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 998c34fe9ecd2f44a733c963f36cb869
     GuidInternal: 
-    m_lastTime: -8584989759585615712
+    m_lastTime: -8584986879934147980
     List:
     - name: Amb
       guid: 06fb0e4774496c4f91823c0447f162bd
@@ -180,7 +180,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 229d856017c3f84a992874c52206f964
     GuidInternal: 
-    m_lastTime: -8584987023253741451
+    m_lastTime: -8584986879928243698
     List:
     - name: AMB
       guid: 55b7dfa40dadec4ba1a2d5861b2d801f
@@ -334,7 +334,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8584987023253850568
+    m_lastTime: -8584986879939279824
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -1343,7 +1343,7 @@ MonoBehaviour:
     ParentPath: Events\Level1
     guid: fdc3b775b21fed47b692ca4598a411ef
     GuidInternal: 
-    m_lastTime: -8584985087294813111
+    m_lastTime: -8584985079656685443
     List:
     - name: Play_Camera_zoomIn
       guid: eb12c4fc76290e46b298c8dd393e0b85
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8584991205832527864
+    m_lastTime: -8584962868821548635
     List:
     - name: Hit_Record
       guid: f8630d3a8f475143a5f76be40e846b59
@@ -1605,6 +1605,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.096802
       minDuration: 0.7853195
+    - name: Play_L3_Bad
+      guid: 221b78c9cca9834baf03f39f261b776d
+      id: 2383533353
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_Bad
+        ObjectType: 3
+        guid: 221b78c9cca9834baf03f39f261b776d
+      Path: Events\Level3\Level3\Play_L3_Bad
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_L3_destroy
       guid: 085d2259b84538469661c08e62168cbc
       id: 507378310
@@ -1665,6 +1685,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.6098389
       minDuration: 0.45161712
+    - name: Play_L3_perfect_A
+      guid: a4b20b89e2ce864db2c8c3bb5a0c0dd1
+      id: 1233000071
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_perfect_A
+        ObjectType: 3
+        guid: a4b20b89e2ce864db2c8c3bb5a0c0dd1
+      Path: Events\Level3\Level3\Play_L3_perfect_A
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_L3_perfect_B_
+      guid: 29cd8cb8de47ba4ca3c97e68b60a468c
+      id: 897413523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_perfect_B_
+        ObjectType: 3
+        guid: 29cd8cb8de47ba4ca3c97e68b60a468c
+      Path: Events\Level3\Level3\Play_L3_perfect_B_
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_L3_perfect_C
+      guid: c0d1e18f8665114a9dea1c413fb20c64
+      id: 1233000069
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_perfect_C
+        ObjectType: 3
+        guid: c0d1e18f8665114a9dea1c413fb20c64
+      Path: Events\Level3\Level3\Play_L3_perfect_C
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_L3_perfect_G
+      guid: e098a1b9f73c664eb2d3f6c84fd0da5d
+      id: 1233000065
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_L3_perfect_G
+        ObjectType: 3
+        guid: e098a1b9f73c664eb2d3f6c84fd0da5d
+      Path: Events\Level3\Level3\Play_L3_perfect_G
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
     - name: Play_Land
       guid: 2f45025be85b8840aa10624b92d96661
       id: 4285282925
@@ -1685,6 +1785,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5634321
       minDuration: 1.4709709
+    - name: Play_Level3_Eyesopen
+      guid: dc347c36750adc4da0b637f5b3037010
+      id: 3290345476
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Level3_Eyesopen
+        ObjectType: 3
+        guid: dc347c36750adc4da0b637f5b3037010
+      Path: Events\Level3\Level3\Play_Level3_Eyesopen
+      maxAttenuation: 0
+      maxDuration: 2.8750114
+      minDuration: 2.8750114
+    - name: Play_Level3_Getit
+      guid: e814338365dea54cae22158acb89fbee
+      id: 1157264013
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level3
+        ObjectType: 12
+        guid: 0cf8e1a531472444b5a804aa41c9a9ce
+      - ElementName: Level3
+        ObjectType: 4
+        guid: 4d5da5d9243a184f9383b89c9664a94e
+      - ElementName: Play_Level3_Getit
+        ObjectType: 3
+        guid: e814338365dea54cae22158acb89fbee
+      Path: Events\Level3\Level3\Play_Level3_Getit
+      maxAttenuation: 0
+      maxDuration: 3.75
+      minDuration: 3.75
     - name: Play_Unlock
       guid: 9af0d8ea23d9964c9d8dc0fe34d21967
       id: 1239937734
@@ -1717,7 +1857,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e200979ed1037542820480365a2664b5
     GuidInternal: 
-    m_lastTime: -8584985087294758545
+    m_lastTime: -8584985079656615360
     List:
     - name: Main_Vol
       guid: 0354b0cf06881346b7ffd022e3232f83
