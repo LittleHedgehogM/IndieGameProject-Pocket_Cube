@@ -114,39 +114,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_L3_perfect_B_" ID="{B88CCD29-47DE-4CBA-A3C9-7E68B60A468C}">
-							<ChildrenList>
-								<Action Name="" ID="{D4C8D329-4755-4F57-9A2E-A622C33CE7EC}" ShortID="1023587517">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="L3_perfect_B-" ID="{9D8FAD11-F712-448D-8BC5-CCAF7A24E8F4}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_L3_perfect_C" ID="{8FE1D1C0-6586-4A11-9DEA-1C413FB20C64}">
-							<ChildrenList>
-								<Action Name="" ID="{EDA6E724-A303-4880-851E-79633785C6CD}" ShortID="949974886">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="L3_perfect_C" ID="{FEBE9FCC-36F0-43D7-A72C-6AECABF3D44E}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_L3_perfect_G" ID="{B9A198E0-3CF7-4E66-B2D3-F6C84FD0DA5D}">
-							<ChildrenList>
-								<Action Name="" ID="{BB95CA43-283A-45D7-9730-0D5EEE1D5728}" ShortID="223323460">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="L3_perfect_G" ID="{FF33478D-F196-4B53-B6CB-6A80DC10911A}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Level3_Getit" ID="{833314E8-DE65-4CA5-AE22-158ACB89FBEE}">
 							<ChildrenList>
 								<Action Name="" ID="{A7112451-ED34-4B65-B47B-FE3202C7B0CA}" ShortID="99964838">
@@ -169,23 +136,23 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_L3_perfect_A" ID="{890BB2A4-CEE2-4D86-B2C8-C3BB5A0C0DD1}">
-							<ChildrenList>
-								<Action Name="" ID="{2825C8DB-C6DC-4496-ADCA-91422CC63644}" ShortID="1019966344">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="L3_perfect_A" ID="{E89AC58C-20FD-44AB-83FA-A39DF43AD250}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Level3_Eyesopen" ID="{367C34DC-0A75-4DDC-A0B6-37F5B3037010}">
 							<ChildrenList>
 								<Action Name="" ID="{22540B7F-4ADF-469E-8D2F-4B817913D384}" ShortID="801894785">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Level3_Eyesopen" ID="{B9E33C2B-6EC1-4AB0-AFE7-B7B86C781C53}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_L3_Perfect" ID="{DD981244-3F47-4204-B419-45FBBADA0B09}">
+							<ChildrenList>
+								<Action Name="" ID="{B02B1AB9-CD85-4FFC-91EC-5AC74F666394}" ShortID="295934519">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3_Perfect" ID="{A50A9B49-ADDD-4C38-92B5-35E4CAC4F76A}" WorkUnitID="{0DA8F963-6640-4D9E-A790-88BEDBE46C16}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

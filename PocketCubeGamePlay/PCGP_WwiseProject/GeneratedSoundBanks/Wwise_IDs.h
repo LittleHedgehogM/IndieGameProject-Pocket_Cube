@@ -47,10 +47,7 @@ namespace AK
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
         static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
         static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
-        static const AkUniqueID PLAY_L3_PERFECT_A = 1233000071U;
-        static const AkUniqueID PLAY_L3_PERFECT_B_ = 897413523U;
-        static const AkUniqueID PLAY_L3_PERFECT_C = 1233000069U;
-        static const AkUniqueID PLAY_L3_PERFECT_G = 1233000065U;
+        static const AkUniqueID PLAY_L3_PERFECT = 3740802191U;
         static const AkUniqueID PLAY_LAND = 4285282925U;
         static const AkUniqueID PLAY_LEVEL3_EYESOPEN = 3290345476U;
         static const AkUniqueID PLAY_LEVEL3_GETIT = 1157264013U;

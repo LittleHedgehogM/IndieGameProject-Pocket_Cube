@@ -598,7 +598,6 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{26469ACC-2FA4-431C-B11E-B28B3C3B6E75}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="76"/>
 													<Property Name="Min" Type="Real64" Value="-76"/>
 												</PropertyList>
@@ -616,7 +615,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Level3_bad01" ID="{1E71B206-C61E-421A-A054-797CB1051173}" ShortID="101384201">
+								<Sound Name="L3_bad01" ID="{F3933E64-3972-439F-BDDB-E2668D1AA06A}" ShortID="929015297">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -626,19 +625,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Level3_bad01" ID="{EABB0E75-8BFD-45AF-BD33-F1693B2BFD5C}">
+										<AudioFileSource Name="L3_bad01" ID="{92777362-E334-498D-89A0-B765C5280E7E}">
 											<Language>SFX</Language>
-											<AudioFile>Level3_bad01.wav</AudioFile>
+											<AudioFile>L3_bad01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="875147534"/>
+												<MediaID ID="244990863"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Level3_bad01" ID="{EABB0E75-8BFD-45AF-BD33-F1693B2BFD5C}" Platform="Linked"/>
+										<ActiveSource Name="L3_bad01" ID="{92777362-E334-498D-89A0-B765C5280E7E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Level3_bad02" ID="{D945F0B4-3E59-4388-B389-A098C496C727}" ShortID="526237523">
+								<Sound Name="L3_bad02" ID="{D8AD7424-465E-43D1-A7EC-C42BBB6C714B}" ShortID="149762839">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -648,19 +647,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Level3_bad02" ID="{27B6435C-A808-4073-8CBE-B255176D657D}">
+										<AudioFileSource Name="L3_bad02" ID="{1746519D-C016-4BE6-B632-65063193178F}">
 											<Language>SFX</Language>
-											<AudioFile>Level3_bad02.wav</AudioFile>
+											<AudioFile>L3_bad02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="598609788"/>
+												<MediaID ID="346880039"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Level3_bad02" ID="{27B6435C-A808-4073-8CBE-B255176D657D}" Platform="Linked"/>
+										<ActiveSource Name="L3_bad02" ID="{1746519D-C016-4BE6-B632-65063193178F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Level3_bad03" ID="{6FCB07FD-E4BE-40E4-8DCB-1B09C258EEA6}" ShortID="106496059">
+								<Sound Name="L3_bad03" ID="{85E4C930-DAA1-4504-8C96-826EE344130A}" ShortID="765344184">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -670,21 +669,31 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Level3_bad03" ID="{D30911EC-091F-45CA-8680-1713AE34EB31}">
+										<AudioFileSource Name="L3_bad03" ID="{A5EC93D7-710D-402E-B975-5528C2153EB6}">
 											<Language>SFX</Language>
-											<AudioFile>Level3_bad03.wav</AudioFile>
+											<AudioFile>L3_bad03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1026350445"/>
+												<MediaID ID="548492002"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Level3_bad03" ID="{D30911EC-091F-45CA-8680-1713AE34EB31}" Platform="Linked"/>
+										<ActiveSource Name="L3_bad03" ID="{A5EC93D7-710D-402E-B975-5528C2153EB6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="L3_perfect_A" ID="{E89AC58C-20FD-44AB-83FA-A39DF43AD250}" ShortID="1231321">
+						<RandomSequenceContainer Name="L3_Perfect" ID="{A50A9B49-ADDD-4C38-92B5-35E4CAC4F76A}" ShortID="133840780">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{61BC3DF2-1D69-4EFA-837B-1C9FCE26C9D6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -694,84 +703,96 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Level3_perfect_A" ID="{45DBA7A0-A66E-46AD-9489-C6DF25DD5DD2}">
-									<Language>SFX</Language>
-									<AudioFile>Level3_perfect_A.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="882480227"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<Sound Name="L3_Perfect01" ID="{EDED6E61-4FAB-4A96-85A2-30306749BE04}" ShortID="440700958">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Perfect01" ID="{36A66C15-4438-4563-B16F-4282959F5679}">
+											<Language>SFX</Language>
+											<AudioFile>L3_Perfect01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="520069187"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Perfect01" ID="{36A66C15-4438-4563-B16F-4282959F5679}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Perfect02" ID="{EC9E34EA-ACEE-4FF3-9587-200B883F03B4}" ShortID="219078015">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Perfect02" ID="{299D1BBC-8954-45E1-B2FD-A614BE5E885F}">
+											<Language>SFX</Language>
+											<AudioFile>L3_Perfect02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="583283732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Perfect02" ID="{299D1BBC-8954-45E1-B2FD-A614BE5E885F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Perfect03" ID="{919D874F-2FA9-4D39-A556-08CA17D99A88}" ShortID="544377912">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Perfect03" ID="{B8BB681F-6FF6-4781-A69B-D8C46CB1D2A8}">
+											<Language>SFX</Language>
+											<AudioFile>L3_Perfect03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="359507387"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Perfect03" ID="{B8BB681F-6FF6-4781-A69B-D8C46CB1D2A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="L3_Perfect04" ID="{1E0E6AD6-4981-4D48-9D82-88774F3B3E04}" ShortID="1031153286">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="L3_Perfect04" ID="{C5C4A4B1-E8AE-40E7-B2C1-7F552EEFB52C}">
+											<Language>SFX</Language>
+											<AudioFile>L3_Perfect04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="300062368"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="L3_Perfect04" ID="{C5C4A4B1-E8AE-40E7-B2C1-7F552EEFB52C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Level3_perfect_A" ID="{45DBA7A0-A66E-46AD-9489-C6DF25DD5DD2}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="L3_perfect_B-" ID="{9D8FAD11-F712-448D-8BC5-CCAF7A24E8F4}" ShortID="820259553">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Level3_perfect_B-" ID="{851684DA-16B6-4D8B-A598-342A059A1D56}">
-									<Language>SFX</Language>
-									<AudioFile>Level3_perfect_B-.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="448180523"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Level3_perfect_B-" ID="{851684DA-16B6-4D8B-A598-342A059A1D56}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="L3_perfect_C" ID="{FEBE9FCC-36F0-43D7-A72C-6AECABF3D44E}" ShortID="811194192">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Level3_perfect_C" ID="{9A875650-9B64-42A4-9A6C-D2F2D74E6ACE}">
-									<Language>SFX</Language>
-									<AudioFile>Level3_perfect_C.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="212337344"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Level3_perfect_C" ID="{9A875650-9B64-42A4-9A6C-D2F2D74E6ACE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="L3_perfect_G" ID="{FF33478D-F196-4B53-B6CB-6A80DC10911A}" ShortID="35339193">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Level3_perfect_G" ID="{98034B2B-842D-420A-B834-2458A43B3DC4}">
-									<Language>SFX</Language>
-									<AudioFile>Level3_perfect_G.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="566890357"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Level3_perfect_G" ID="{98034B2B-842D-420A-B834-2458A43B3DC4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
