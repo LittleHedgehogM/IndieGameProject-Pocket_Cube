@@ -264,13 +264,21 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{478FFF39-6AFE-5292-1AD5-6449731AEFC2}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{CD0DEA86-2152-511B-5D8A-D1A16345012D}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
 				<File Id="64915519" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump.wav</ShortName>
 					<CachePath>SFX/jump_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="87991687" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_Eyesopen.wav</ShortName>
+					<CachePath>SFX/Level3_Eyesopen_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="212337344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_perfect_C.wav</ShortName>
+					<CachePath>SFX/Level3_perfect_C_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
@@ -288,6 +296,14 @@
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_9619B961.wem</CachePath>
 				</File>
+				<File Id="423139562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_Getit.wav</ShortName>
+					<CachePath>SFX/Level3_Getit_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="448180523" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_perfect_B-.wav</ShortName>
+					<CachePath>SFX/Level3_perfect_B-_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_623B074E.wem</CachePath>
@@ -296,9 +312,17 @@
 					<ShortName>jump03.wav</ShortName>
 					<CachePath>SFX/jump03_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="566890357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_perfect_G.wav</ShortName>
+					<CachePath>SFX/Level3_perfect_G_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="573026670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump02.wav</ShortName>
 					<CachePath>SFX/jump02_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="598609788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_bad02.wav</ShortName>
+					<CachePath>SFX/Level3_bad02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="638651685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_land01.wav</ShortName>
@@ -320,6 +344,14 @@
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="875147534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_bad01.wav</ShortName>
+					<CachePath>SFX/Level3_bad01_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="882480227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_perfect_A.wav</ShortName>
+					<CachePath>SFX/Level3_perfect_A_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="909243550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_旋律loop.wav</ShortName>
 					<CachePath>SFX/傅里叶棋盘_旋律loop_0762CC47.wem</CachePath>
@@ -327,6 +359,10 @@
 				<File Id="968844488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Unlock02.wav</ShortName>
 					<CachePath>SFX/Level3_Unlock02_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1026350445" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level3_bad03.wav</ShortName>
+					<CachePath>SFX/Level3_bad03_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="1036840312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Unlock01.wav</ShortName>
@@ -353,6 +389,13 @@
 						<MediaRef Id="573026670"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2383533353" Name="Play_L3_Bad" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<MediaRefs>
+						<MediaRef Id="598609788"/>
+						<MediaRef Id="875147534"/>
+						<MediaRef Id="1026350445"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="507378310" Name="Play_L3_destroy" DurationType="OneShot" DurationMin="0.4511338" DurationMax="0.4511338">
 					<MediaRefs>
 						<MediaRef Id="743988009"/>
@@ -376,11 +419,41 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="1233000071" Name="Play_L3_perfect_A" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="882480227"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="897413523" Name="Play_L3_perfect_B_" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="448180523"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1233000069" Name="Play_L3_perfect_C" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="212337344"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1233000065" Name="Play_L3_perfect_G" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="566890357"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="1.4709709" DurationMax="1.5634321">
 					<MediaRefs>
 						<MediaRef Id="334950802"/>
 						<MediaRef Id="638651685"/>
 						<MediaRef Id="713146055"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3290345476" Name="Play_Level3_Eyesopen" DurationType="OneShot" DurationMin="2.8750114" DurationMax="2.8750114">
+					<MediaRefs>
+						<MediaRef Id="87991687"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1157264013" Name="Play_Level3_Getit" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
+					<MediaRefs>
+						<MediaRef Id="423139562"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1239937734" Name="Play_Unlock" DurationType="OneShot" DurationMin="1.5329206" DurationMax="2.0268831">
@@ -828,5 +901,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{99298176-B763-A3FD-E7F0-09071FA9D1AD}</FileHash>
+	<FileHash>{FA151D07-DE0C-C17A-85D8-3B8E600A5609}</FileHash>
 </SoundBanksInfo>
