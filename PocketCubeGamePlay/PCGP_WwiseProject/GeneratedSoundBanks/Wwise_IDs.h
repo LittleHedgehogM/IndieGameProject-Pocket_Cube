@@ -156,7 +156,7 @@ namespace AK
                 static const AkUniqueID LEVEL1_1 = 2867782686U;
                 static const AkUniqueID LEVEL1_2 = 2867782685U;
                 static const AkUniqueID LEVEL2_1 = 1793868009U;
-                static const AkUniqueID LEVEL3 = 2678230380U;
+                static const AkUniqueID LEVEL3_1 = 1793720944U;
                 static const AkUniqueID NONE_BEAT = 4207188278U;
             } // namespace SWITCH
         } // namespace FOURIER_LEVEL

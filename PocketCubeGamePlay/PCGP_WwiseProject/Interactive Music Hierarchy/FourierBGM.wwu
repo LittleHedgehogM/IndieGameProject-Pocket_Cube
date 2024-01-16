@@ -429,7 +429,7 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Fourier_New" ID="{8A7EE96E-D56A-480C-AE64-B67DA51B8B43}" ShortID="351885305">
 					<PropertyList>
-						<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
+						<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
 						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
 					</PropertyList>
 					<ReferenceList>
@@ -609,41 +609,6 @@
 												</List>
 											</PluginInnerObjectList>
 										</AudioFileSource>
-										<AudioFileSource Name="傅里叶beat2" ID="{6D1D3272-430E-49FB-8EFA-A1329BC9B813}">
-											<PropertyList>
-												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>傅里叶beat2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="466787451"/>
-											</MediaIDList>
-											<PluginInnerObjectList>
-												<List Name="Markers">
-													<PluginInnerObject Name="" ID="{E137DC75-1857-498F-AE7F-4ADA22410078}" PluginName="Marker" CompanyID="0" PluginID="993"/>
-													<PluginInnerObject Name="" ID="{6D29DD98-830F-40F4-9797-6CF5E66B74FC}" PluginName="Marker" CompanyID="0" PluginID="993">
-														<PropertyList>
-															<Property Name="Time" Type="Real64" Value="0.75"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{C4C6EBA6-ABE5-4410-A471-2FE092207F40}" PluginName="Marker" CompanyID="0" PluginID="993">
-														<PropertyList>
-															<Property Name="Time" Type="Real64" Value="1"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{E260C85A-654D-46CB-A371-E431F2713683}" PluginName="Marker" CompanyID="0" PluginID="993">
-														<PropertyList>
-															<Property Name="Time" Type="Real64" Value="1.5"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{8B7E7FB5-2D28-4484-9CEC-65AA8712C0BF}" PluginName="Marker" CompanyID="0" PluginID="993">
-														<PropertyList>
-															<Property Name="Time" Type="Real64" Value="1.88"/>
-														</PropertyList>
-													</PluginInnerObject>
-												</List>
-											</PluginInnerObjectList>
-										</AudioFileSource>
 										<AudioFileSource Name="傅里叶beat3" ID="{6C4D4D00-2D24-46B3-A868-135431C76C58}">
 											<PropertyList>
 												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
@@ -696,6 +661,31 @@
 											<PluginInnerObjectList>
 												<List Name="Markers">
 													<PluginInnerObject Name="" ID="{D133E6E4-4052-48A6-97E1-3871826E100B}" PluginName="Marker" CompanyID="0" PluginID="993"/>
+												</List>
+											</PluginInnerObjectList>
+										</AudioFileSource>
+										<AudioFileSource Name="Fourier_level2_1" ID="{34A50317-9BA5-49D4-8B7F-4CBA278313BF}">
+											<PropertyList>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Fourier_level2_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507840173"/>
+											</MediaIDList>
+											<PluginInnerObjectList>
+												<List Name="Markers">
+													<PluginInnerObject Name="" ID="{98AE0277-62B0-4C5C-9A86-6897E267CBEA}" PluginName="Marker" CompanyID="0" PluginID="993"/>
+													<PluginInnerObject Name="" ID="{F3407F09-9CF7-46EF-B706-7EC136C17060}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="1.5"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{C5B5FACE-3CF6-4B70-B8EB-D8E43700A19A}" PluginName="Marker" CompanyID="0" PluginID="993">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="1.87458006718925"/>
+														</PropertyList>
+													</PluginInnerObject>
 												</List>
 											</PluginInnerObjectList>
 										</AudioFileSource>
@@ -816,7 +806,6 @@
 																			<PropertyList>
 																				<Property Name="BeginTrimOffset" Type="Real64" Value="4.71567229709535E-13"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="168000"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																				<Property Name="PlayAt" Type="Real64" Value="-4.64628335805628E-13"/>
 																			</PropertyList>
@@ -900,13 +889,99 @@
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="傅里叶beat3" ID="{8EF690D6-3721-4638-ACA6-BCA50580A65B}">
+																		<MusicClip Name="Fourier_level2_1" ID="{1CD77F33-55DC-4873-BC20-89B7EFA15F3C}">
 																			<PropertyList>
-																				<Property Name="BeginTrimOffset" Type="Real64" Value="3.81500386836819E-14"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="168000"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="-3.81500386836819E-14"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Fourier_level2_1" ID="{34A50317-9BA5-49D4-8B7F-4CBA278313BF}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{F10D82A5-9957-4DFB-B0AD-560074A573DB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>168</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{0A9404FC-D3F7-4E60-BE20-129153B04AE4}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>168</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{27FEA1BE-C610-4165-9337-0EE21691D1D8}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>168</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="level2_1" ID="{F74092F3-725C-41EA-B236-E3B3AA3ECA98}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{1DA14CB2-EBEA-4FEE-B798-72C6E180FD3D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="傅里叶beat3" ID="{8EF690D6-3721-4638-ACA6-BCA50580A65B}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="7.03465063978115E-14"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="168000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="-7.03465063978115E-14"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="傅里叶beat3" ID="{6C4D4D00-2D24-46B3-A868-135431C76C58}"/>
 																			<PropertyCurveList>
@@ -975,95 +1050,7 @@
 														</ObjectLists>
 														<ReferenceList>
 															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="level3" ID="{319125AF-051F-42CE-8088-EBB883798AC0}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
-															</Reference>
-														</ReferenceList>
-													</MusicTrackSequence>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicTrackSequence Name="" ID="{1DA14CB2-EBEA-4FEE-B798-72C6E180FD3D}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<Reference>
-																	<Local>
-																		<MusicClip Name="傅里叶beat2" ID="{086C4C0C-3E77-4258-8AE7-D837EA03904B}">
-																			<PropertyList>
-																				<Property Name="BeginTrimOffset" Type="Real64" Value="3.81500386836819E-14"/>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="168000"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="-3.81500386836819E-14"/>
-																			</PropertyList>
-																			<AudioSourceRef Name="傅里叶beat2" ID="{6D1D3272-430E-49FB-8EFA-A1329BC9B813}"/>
-																			<PropertyCurveList>
-																				<PropertyCurve PropertyName="Highpass">
-																					<Curve Name="" ID="{C24E971D-872F-4DB5-9E6B-F1C1D1820BC1}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>168</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</PropertyCurve>
-																				<PropertyCurve PropertyName="Lowpass">
-																					<Curve Name="" ID="{918F195B-7EAA-4295-B4F4-5B196093FDB4}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>168</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</PropertyCurve>
-																				<PropertyCurve PropertyName="Volume">
-																					<Curve Name="" ID="{4712CE7B-4469-4BFB-BFB2-DB4487CA9D43}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>168</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</PropertyCurve>
-																			</PropertyCurveList>
-																		</MusicClip>
-																	</Local>
-																</Reference>
-															</ObjectList>
-														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="level2_1" ID="{F74092F3-725C-41EA-B236-E3B3AA3ECA98}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
+																<ObjectRef Name="level3_1" ID="{319125AF-051F-42CE-8088-EBB883798AC0}" WorkUnitID="{FC4C3DBC-CC8B-4E44-B836-A2D8305CDF57}"/>
 															</Reference>
 														</ReferenceList>
 													</MusicTrackSequence>

@@ -12,7 +12,7 @@ public class EyeCtl : MonoBehaviour
     private string _eyeName;
     private bool _readyToShoot = false;
 
-    [SerializeField] private List<int> pattern;
+    //[SerializeField] private List<int> pattern;
     
 
     [SerializeField] private GameObject eyeInner_1;
@@ -46,13 +46,14 @@ public class EyeCtl : MonoBehaviour
         animator.SetTrigger(eyeName);
         AkSoundEngine.PostEvent("Play_Level3_Eyesopen", audioPlayer);
         AkSoundEngine.SetSwitch("Fourier_Level",$"level{PlayPointBehaviour.inLevel}_1", audioPlayer);
+        Debug.Log($"level{PlayPointBehaviour.inLevel}_1");
         FourierPlayer.playerMovementEnabled = false;
     }
 
     private void StoreEyeName(string eyeName)
     {
         _eyeName = eyeName;
-        _readyToShoot = true;
+        StartCoroutine(WaitToShoot());
         if (eyeName.Contains("first"))
         {
             eyeInner_1.SetActive(true);
@@ -92,30 +93,15 @@ public class EyeCtl : MonoBehaviour
         yield return null;
     }
 
-    private void SpawnCall(int beat)
+    private void SpawnCall()
     {
         if (!_readyToShoot)
         {
             return;
         }
         GameObject go = transform.Find(_eyeName).gameObject;
-
-        currentBeat = PlayPointBehaviour.inLevel * 100 + beat;
-        StartCoroutine(PatternSpawn(currentBeat, go));       
-    }
-
-    private IEnumerator PatternSpawn(int currentBeat, GameObject go)
-    {
-        /*print($"{currentBeat}" + "Born");
-        if (!pattern.Contains(currentBeat))
-        {
-            yield break;
-        }*/
         GameObject newGo = Instantiate(playPointPrefab, relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
-        newGo.transform.Find("SphereMesh").GetComponent<Renderer>().material = go.GetComponent<Renderer>().material;
-
-        yield return null;
+        newGo.name = $"[{PlayPointBehaviour._uniqOrder}]";
+        newGo.transform.Find("SphereMesh").GetComponent<Renderer>().material = go.GetComponent<Renderer>().material;         
     }
-
-
 }

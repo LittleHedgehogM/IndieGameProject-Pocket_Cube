@@ -47,7 +47,7 @@ public class FourierLevelManager : MonoBehaviour
                 
                 bridge_1.gameObject.SetActive(true);
                 
-                Debug.Log(levelPassVFX_1.name);
+                //Debug.Log(levelPassVFX_1.name);
                 break;
 
             case 2: 

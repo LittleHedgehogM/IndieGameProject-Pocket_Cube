@@ -154,8 +154,8 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3806334376" Name="Fourier_Level">
 					<Switches>
+						<Switch Id="1793720944" Name="level3_1"/>
 						<Switch Id="1793868009" Name="level2_1"/>
-						<Switch Id="2678230380" Name="level3"/>
 						<Switch Id="2867782685" Name="level1_2"/>
 						<Switch Id="2867782686" Name="level1_1"/>
 						<Switch Id="4207188278" Name="none_beat"/>
@@ -273,7 +273,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{E6D9D00A-7839-0163-1502-581534B91B1E}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{3A30BBEF-94A1-BDAB-C606-97EC139117F0}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -329,9 +329,9 @@
 					<ShortName>Level3_Getit.wav</ShortName>
 					<CachePath>SFX/Level3_Getit_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="466787451" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>傅里叶beat2.wav</ShortName>
-					<CachePath>SFX/傅里叶beat2_D51C724B.wem</CachePath>
+				<File Id="507840173" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fourier_level2_1.wav</ShortName>
+					<CachePath>SFX/Fourier_level2_1_F5E54163.wem</CachePath>
 				</File>
 				<File Id="520069187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect01.wav</ShortName>
@@ -409,7 +409,7 @@
 					<MediaRefs>
 						<MediaRef Id="126321576"/>
 						<MediaRef Id="198103246"/>
-						<MediaRef Id="466787451"/>
+						<MediaRef Id="507840173"/>
 						<MediaRef Id="540080765"/>
 						<MediaRef Id="567682221"/>
 					</MediaRefs>
@@ -498,8 +498,8 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3806334376" Name="Fourier_Level">
 					<Switches>
+						<Switch Id="1793720944" Name="level3_1"/>
 						<Switch Id="1793868009" Name="level2_1"/>
-						<Switch Id="2678230380" Name="level3"/>
 						<Switch Id="2867782685" Name="level1_2"/>
 						<Switch Id="2867782686" Name="level1_1"/>
 						<Switch Id="4207188278" Name="none_beat"/>
@@ -936,5 +936,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3C8BB90B-1964-3603-7B26-B1847412B865}</FileHash>
+	<FileHash>{EDDF34F3-6CC6-2932-B059-7C220CB4A6E9}</FileHash>
 </SoundBanksInfo>
