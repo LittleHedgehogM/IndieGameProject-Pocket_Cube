@@ -152,6 +152,15 @@
 						<Switch Id="1651971902" Name="On"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="3806334376" Name="Fourier_Level">
+					<Switches>
+						<Switch Id="1793868009" Name="level2_1"/>
+						<Switch Id="2678230380" Name="level3"/>
+						<Switch Id="2867782685" Name="level1_2"/>
+						<Switch Id="2867782686" Name="level1_1"/>
+						<Switch Id="4207188278" Name="none_beat"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{20DBEDB1-3039-56D7-E1D3-6D0112BE0760}">
@@ -264,7 +273,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{B245AE39-E29B-6021-6993-7A8EF96C1EA0}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{E6D9D00A-7839-0163-1502-581534B91B1E}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -275,6 +284,14 @@
 				<File Id="87991687" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Eyesopen.wav</ShortName>
 					<CachePath>SFX/Level3_Eyesopen_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="126321576" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fourier_level1_1.wav</ShortName>
+					<CachePath>SFX/Fourier_level1_1_E0849FC5.wem</CachePath>
+				</File>
+				<File Id="198103246" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶棋盘_伴奏.wav</ShortName>
+					<CachePath>SFX/傅里叶棋盘_伴奏_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
@@ -312,6 +329,10 @@
 					<ShortName>Level3_Getit.wav</ShortName>
 					<CachePath>SFX/Level3_Getit_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="466787451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶beat2.wav</ShortName>
+					<CachePath>SFX/傅里叶beat2_D51C724B.wem</CachePath>
+				</File>
 				<File Id="520069187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect01.wav</ShortName>
 					<CachePath>SFX/L3_Perfect01_3F75BDB9.wem</CachePath>
@@ -320,6 +341,10 @@
 					<ShortName>L3_Jump.wav</ShortName>
 					<CachePath>SFX/L3_Jump_623B074E.wem</CachePath>
 				</File>
+				<File Id="540080765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶beat1.wav</ShortName>
+					<CachePath>SFX/傅里叶beat1_88EE04B9.wem</CachePath>
+				</File>
 				<File Id="548492002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad03.wav</ShortName>
 					<CachePath>SFX/L3_bad03_3F75BDB9.wem</CachePath>
@@ -327,6 +352,10 @@
 				<File Id="555154728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump03.wav</ShortName>
 					<CachePath>SFX/jump03_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="567682221" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>傅里叶beat3.wav</ShortName>
+					<CachePath>SFX/傅里叶beat3_5DAA4FA7.wem</CachePath>
 				</File>
 				<File Id="573026670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump02.wav</ShortName>
@@ -376,6 +405,15 @@
 			</Plugins>
 			<Events>
 				<Event Id="1152672460" Name="Hit_Record" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2725902265" Name="Play_Fourier_new" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="126321576"/>
+						<MediaRef Id="198103246"/>
+						<MediaRef Id="466787451"/>
+						<MediaRef Id="540080765"/>
+						<MediaRef Id="567682221"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2056255347" Name="Play_Fourier_Scene" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="304097471"/>
@@ -456,6 +494,15 @@
 					<Switches>
 						<Switch Id="930712164" Name="Off"/>
 						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3806334376" Name="Fourier_Level">
+					<Switches>
+						<Switch Id="1793868009" Name="level2_1"/>
+						<Switch Id="2678230380" Name="level3"/>
+						<Switch Id="2867782685" Name="level1_2"/>
+						<Switch Id="2867782686" Name="level1_1"/>
+						<Switch Id="4207188278" Name="none_beat"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -889,5 +936,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{35519B3F-6F2B-3754-4A05-4AFC6A1635D6}</FileHash>
+	<FileHash>{3C8BB90B-1964-3603-7B26-B1847412B865}</FileHash>
 </SoundBanksInfo>

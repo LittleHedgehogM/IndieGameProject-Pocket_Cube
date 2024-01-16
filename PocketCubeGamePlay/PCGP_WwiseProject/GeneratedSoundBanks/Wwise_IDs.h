@@ -39,6 +39,7 @@ namespace AK
         static const AkUniqueID PLAY_END_FINAL = 192844276U;
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
+        static const AkUniqueID PLAY_FOURIER_NEW = 2725902265U;
         static const AkUniqueID PLAY_FOURIER_SCENE = 2056255347U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
@@ -145,6 +146,20 @@ namespace AK
                 static const AkUniqueID ON = 1651971902U;
             } // namespace SWITCH
         } // namespace FOURIER_BEAT
+
+        namespace FOURIER_LEVEL
+        {
+            static const AkUniqueID GROUP = 3806334376U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID LEVEL1_1 = 2867782686U;
+                static const AkUniqueID LEVEL1_2 = 2867782685U;
+                static const AkUniqueID LEVEL2_1 = 1793868009U;
+                static const AkUniqueID LEVEL3 = 2678230380U;
+                static const AkUniqueID NONE_BEAT = 4207188278U;
+            } // namespace SWITCH
+        } // namespace FOURIER_LEVEL
 
     } // namespace SWITCHES
 

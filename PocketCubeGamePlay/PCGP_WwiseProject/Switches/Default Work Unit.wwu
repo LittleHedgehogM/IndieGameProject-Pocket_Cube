@@ -21,6 +21,15 @@
 						<Switch Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Fourier_Level" ID="{11588FA8-6F7B-4FE6-BEB2-DDC30734CA26}">
+					<ChildrenList>
+						<Switch Name="level1_1" ID="{880F10A9-4409-40BC-9BE0-DDEF73419651}"/>
+						<Switch Name="level2_1" ID="{F74092F3-725C-41EA-B236-E3B3AA3ECA98}"/>
+						<Switch Name="level3" ID="{319125AF-051F-42CE-8088-EBB883798AC0}"/>
+						<Switch Name="none_beat" ID="{7B18416A-2869-4C1F-8597-88738ECA7455}"/>
+						<Switch Name="level1_2" ID="{3C952A15-4208-4BC0-9BED-92F5CBBE35B5}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

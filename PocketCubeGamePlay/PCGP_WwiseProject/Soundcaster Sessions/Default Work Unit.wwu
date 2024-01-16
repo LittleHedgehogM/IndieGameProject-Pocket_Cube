@@ -41,24 +41,8 @@
 				<SoundcasterSession Name="New Soundcaster Session_01" ID="{3A0C2B0A-84FE-4E39-A900-763C1B0B5721}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Amb_Main" ID="{9D0F7211-7BFB-450E-B300-3E178AEA13D0}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<ObjectRef Name="Play_Fourier_new" ID="{7B7977E3-C805-4836-BBAB-785BDDA01F2C}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Opening" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Fourier_Scene" ID="{AE681A24-D486-40CF-9056-070881FA3FA4}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_ELE_BGM" ID="{8171F07E-A048-4B36-AE38-994B15983DBB}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
-							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_ELE_outro" ID="{B2DDF8E9-7E8B-477D-AD97-D5AFE9D3A9DB}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
-							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -83,6 +67,7 @@
 						<CurrentSwitchRef Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>
 						<CurrentSwitchRef Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}"/>
 						<CurrentSwitchRef Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
+						<CurrentSwitchRef Name="none_beat" ID="{7B18416A-2869-4C1F-8597-88738ECA7455}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="New Soundcaster Session_02" ID="{F4284216-71E4-4FC9-9158-5B1F3445E8C2}">

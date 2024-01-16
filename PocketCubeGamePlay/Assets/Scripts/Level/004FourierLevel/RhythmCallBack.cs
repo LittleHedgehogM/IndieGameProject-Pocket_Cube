@@ -20,9 +20,9 @@ public class RhythmCallBack : MonoBehaviour
         }
         musicBeat ++;
         //print("playBeat" + beatCount);
-        //print("MusicBeat"+ musicBeat);
+        print("MusicBeat"+ musicBeat);
 
-        //Rhythm_Bar?.Invoke(beatCount);
+        Rhythm_Bar?.Invoke(musicBeat);
         //pushTransitions = true;
         //print("transition On");
     }
@@ -34,7 +34,7 @@ public class RhythmCallBack : MonoBehaviour
             beatCount = 0;
         }
         beatCount++;
-
-        Rhythm_Bar?.Invoke(beatCount);
+        print("playBeat" + beatCount);
+        Rhythm_Beat?.Invoke(beatCount);
     }
 }

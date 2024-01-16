@@ -2181,6 +2181,10 @@ PrefabInstance:
       propertyPath: particleVanish.r
       value: 0.42352945
       objectReference: {fileID: 0}
+    - target: {fileID: 453900689099306390, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2747920687645811406, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 500
@@ -2211,15 +2215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9386272
+      value: 0.9297859
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9386272
+      value: 0.9297859
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9386272
+      value: 0.9297859
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2227,11 +2231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.025
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.277
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2296,6 +2300,10 @@ PrefabInstance:
     - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_TagString
+      value: RhythmCircle
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -763523414843763917, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
@@ -29069,7 +29077,7 @@ MonoBehaviour:
   - {fileID: 1986402787}
   aimPoint: {fileID: 1078109629}
   speed: 1
-  pattern: 65000000680000006b0000006e000000c90000002d010000
+  pattern: 65000000660000006b0000006c000000c90000002d010000
   eyeInner_1: {fileID: 401301764}
   eyeInner_2: {fileID: 918549631}
   eyeInner_3: {fileID: 2027322818}
@@ -46471,11 +46479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.52
+      value: 7.215
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.687
+      value: -6.988
       objectReference: {fileID: 0}
     - target: {fileID: 4287459627095044013, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46508,10 +46516,6 @@ PrefabInstance:
     - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_Name
       value: PlayPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46652,6 +46656,10 @@ PrefabInstance:
       propertyPath: particleVanish.r
       value: 0.42352945
       objectReference: {fileID: 0}
+    - target: {fileID: 453900689099306390, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2747920687645811406, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 500
@@ -46719,6 +46727,10 @@ PrefabInstance:
     - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_TagString
+      value: RhythmCircle
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -763523414843763917, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
@@ -64178,6 +64190,10 @@ PrefabInstance:
       propertyPath: particleVanish.r
       value: 0.42352945
       objectReference: {fileID: 0}
+    - target: {fileID: 453900689099306390, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2747920687645811406, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 500
@@ -64245,6 +64261,10 @@ PrefabInstance:
     - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480013990580218852, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
+      propertyPath: m_TagString
+      value: RhythmCircle
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -763523414843763917, guid: 9692de30a3f31344f8468e407fb26caf, type: 3}
@@ -65088,6 +65108,7 @@ GameObject:
   - component: {fileID: 2046539465}
   - component: {fileID: 2046539466}
   - component: {fileID: 2046539467}
+  - component: {fileID: 2046539468}
   m_Layer: 0
   m_Name: WwiseFourier
   m_TagString: Untagged
@@ -65139,7 +65160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046539458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a135710486efcd7498ac5842322f96b7, type: 3}
   m_Name: 
@@ -65164,7 +65185,7 @@ MonoBehaviour:
     FunctionName: Push_Rhythm_Bar
     GameObject: {fileID: 406922253}
   - Flags:
-      value: 256
+      value: 4096
     FunctionName: Push_Rhythm_Beat
     GameObject: {fileID: 406922253}
   playingId: 0
@@ -65213,6 +65234,47 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &2046539468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046539458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a135710486efcd7498ac5842322f96b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 379d96154963e704884b2625a1b1d8a1, type: 2}
+  useCallbacks: 1
+  Callbacks:
+  - Flags:
+      value: 4096
+    FunctionName: PushActions
+    GameObject: {fileID: 795091372}
+  - Flags:
+      value: 512
+    FunctionName: Push_Rhythm_Bar
+    GameObject: {fileID: 406922253}
+  - Flags:
+      value: 4
+    FunctionName: Push_Rhythm_Beat
+    GameObject: {fileID: 406922253}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &2053090541
 GameObject:
   m_ObjectHideFlags: 0

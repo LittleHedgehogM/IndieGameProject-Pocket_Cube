@@ -13,6 +13,7 @@ public class EyeCtl : MonoBehaviour
     private bool _readyToShoot = false;
 
     [SerializeField] private List<int> pattern;
+    
 
     [SerializeField] private GameObject eyeInner_1;
     [SerializeField] private GameObject eyeInner_2;
@@ -33,7 +34,7 @@ public class EyeCtl : MonoBehaviour
     {
         EyeEmitter.Eye_Activated += EyeAnimationTrigger;
         EyeEmitter.Eye_InPosition += StoreEyeName;
-        RhythmCallBack.Rhythm_Bar += SpawnCall;
+        RhythmCallBack.Rhythm_Beat += SpawnCall;
         PlayPointBehaviour.StopShoot += StopShoot;
         
     }
@@ -44,6 +45,7 @@ public class EyeCtl : MonoBehaviour
         Animator animator = transform.Find(eyeName).gameObject.GetComponent<Animator>();
         animator.SetTrigger(eyeName);
         AkSoundEngine.PostEvent("Play_Level3_Eyesopen", audioPlayer);
+        AkSoundEngine.SetSwitch("Fourier_Level",$"level{PlayPointBehaviour.inLevel}_1", audioPlayer);
         FourierPlayer.playerMovementEnabled = false;
     }
 
@@ -66,13 +68,28 @@ public class EyeCtl : MonoBehaviour
 
     }
 
-    private void StopShoot()
+    private void StopShoot(string levelState)
     {
-        _readyToShoot = false;
-        AkSoundEngine.PostEvent("Play_Level3_Getit", audioPlayer);
-        eyeInner_1.SetActive(false);
-        eyeInner_2.SetActive(false);
-        eyeInner_3.SetActive(false);
+        if (levelState == "Entire")
+        {
+            _readyToShoot = false;
+            AkSoundEngine.PostEvent("Play_Level3_Getit", audioPlayer);
+            eyeInner_1.SetActive(false);
+            eyeInner_2.SetActive(false);
+            eyeInner_3.SetActive(false);
+        }
+        else if (levelState == "Half")
+        {
+            _readyToShoot = false;
+            StartCoroutine(WaitToShoot());
+        }       
+    }
+
+    private IEnumerator WaitToShoot()
+    {
+        yield return new WaitForSeconds(2f);
+        _readyToShoot = true;
+        yield return null;
     }
 
     private void SpawnCall(int beat)
@@ -89,14 +106,16 @@ public class EyeCtl : MonoBehaviour
 
     private IEnumerator PatternSpawn(int currentBeat, GameObject go)
     {
-        print($"{currentBeat}" + "Born");
+        /*print($"{currentBeat}" + "Born");
         if (!pattern.Contains(currentBeat))
         {
             yield break;
-        }
+        }*/
         GameObject newGo = Instantiate(playPointPrefab, relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
         newGo.transform.Find("SphereMesh").GetComponent<Renderer>().material = go.GetComponent<Renderer>().material;
 
         yield return null;
     }
+
+
 }
