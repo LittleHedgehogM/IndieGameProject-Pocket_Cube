@@ -259,7 +259,7 @@ public class PlayPointBehaviour : MonoBehaviour
         //delete sphere
         sphereMesh.transform.localScale = Vector3.zero;
         //Debug.Log(score);   
-        if (score == 12)
+        if (score == 16)
         {
             print(inLevel);
             LevelPass?.Invoke(inLevel);
