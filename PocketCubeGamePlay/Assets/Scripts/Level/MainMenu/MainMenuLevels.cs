@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -40,9 +41,10 @@ public class MainMenuLevels : MonoBehaviour
     Quaternion toRotation2;
     Quaternion toRotation3;
     [SerializeField]float lerpSpeed;
-
     Quaternion fromRotation;
     [SerializeField]float rotationSpeed = 1f;
+    //mousebutton
+    private float pressedTime;
     void Awake()
     {
         gameObject.GetComponent<Outline>().OutlineWidth = 0;
@@ -105,6 +107,12 @@ public class MainMenuLevels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            print("burron up reset");
+            pressedTime = 0;
+        }
+
         if (!stopAutoRotate)
         {
             StartMenuCubeAutoRotate();
@@ -145,6 +153,15 @@ public class MainMenuLevels : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        LevelManager.SceneChangeInprogress += RotateTutorialOutOnSceneChange;
+    }
+    private void OnDisable()
+    {
+        LevelManager.SceneChangeInprogress -= RotateTutorialOutOnSceneChange;
+    }
+
     void OnPressAnyKey()
     {
         
@@ -161,21 +178,40 @@ public class MainMenuLevels : MonoBehaviour
 
     //rotate cube toturial
     [SerializeField] private GameObject rotateTutorial;
+    private bool tutorialExist = true;
     //private bool pressedKey;
 
     private void OnMouseDrag()
     {
-        if (EventSystem.current.IsPointerOverGameObject())//如果有UI阻挡着就返回不响应了
+        if (EventSystem.current.IsPointerOverGameObject() || !(levelStatus == 4))//如果有UI阻挡着就返回不响应了
             return;
-
-        if (levelStatus == 4)
+        
+        if (tutorialExist)
         {
-            
-            float XRotation = Input.GetAxis("Mouse X") * rotationSpeed;
-            //float YRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+            pressedTime += Time.deltaTime;
+            print(pressedTime);        
+            if (pressedTime > 1f)
+            {
+                
+                tutorialExist = false;
+                StartCoroutine(RotateTutorialOut());
+            }
+        }     
+        float XRotation = Input.GetAxis("Mouse X") * rotationSpeed;
+        //float YRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+        transform.Rotate(Vector3.down, XRotation);
+        //transform.Rotate(Vector3.right, YRotation);
 
-            transform.Rotate(Vector3.down, XRotation);
-            //transform.Rotate(Vector3.right, YRotation);
-        }
+    }
+
+    private IEnumerator RotateTutorialOut()
+    {
+        print("tutorial disable");
+        rotateTutorial.SetActive(false);
+        yield return null;
+    }
+    private void RotateTutorialOutOnSceneChange()
+    {
+        rotateTutorial.SetActive(false);
     }
 }

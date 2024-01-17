@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
+    //notice
+    public static Action SceneChangeInprogress;
+
     //[SerializeField] private GameObject _loaderCanvas;
     //[SerializeField] private Image _progressBar;
     [SerializeField] private int _loadingTime;
@@ -62,6 +65,7 @@ public class LevelManager : MonoBehaviour
     
     public async void LoadScene(string sceneName)
     {
+        SceneChangeInprogress?.Invoke();
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
         _animatorTransition.Play("Crossfade_Start");
         await Task.Delay(_loadingTime);

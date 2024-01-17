@@ -19,6 +19,7 @@ public class PlayPointBehaviour : MonoBehaviour
     public static Action<int> LevelPass;
     public static Action<string> StopShoot;
     public static Action OrderReduce;
+    public static Action<int> ScoreChanged;
 
     public static int inLevel = 1;
 
@@ -106,7 +107,7 @@ public class PlayPointBehaviour : MonoBehaviour
         //Debug.Log("Start Move");
         float t = 0;
         float currentTime = 0;
-        Debug.Log($"[{uniqOrder}]Starts to Move");
+        //Debug.Log($"[{uniqOrder}]Starts to Move");
         while ( t < 1)
         {
             Vector3 viewportPosition = mainCamera.WorldToViewportPoint(gameObject.transform.position);
@@ -171,6 +172,7 @@ public class PlayPointBehaviour : MonoBehaviour
         sphereMesh.transform.localScale = Vector3.zero;
         //Increase score
         score++;
+        ScoreChanged?.Invoke(score);
         //Debug.Log(score)
         switch (inLevel)
         {
@@ -192,10 +194,11 @@ public class PlayPointBehaviour : MonoBehaviour
         uint currentSwitch;
         AkSoundEngine.GetSwitch("Fourier_Level", audioPlayer, out currentSwitch);
         //half level
-        if (currentSwitch == 2867782686 && score == 1)
+        if (currentSwitch == 2867782686 && score == 4)
         {
             AkSoundEngine.SetSwitch("Fourier_Level", "level1_2", audioPlayer);
             score = 0;
+            //ScoreChanged?.Invoke(score);
             StopShoot?.Invoke("Half");
             yield return new WaitUntil(() => perfectVFX.isStopped);
             //print("perfect vfx stopped");
@@ -204,11 +207,12 @@ public class PlayPointBehaviour : MonoBehaviour
             yield break;
         }
         //When scores are enough
-        else if (!(currentSwitch == 2867782686) && score == 1)
+        else if (!(currentSwitch == 2867782686) && score == 8)
         {
             print(inLevel);
             LevelPass?.Invoke(inLevel);
             StopShoot?.Invoke("Entire");
+            print("Level1_2 pass");
             score = 0;
             inLevel++;
             yield return null;
@@ -279,7 +283,7 @@ public class PlayPointBehaviour : MonoBehaviour
         OrderReduce?.Invoke();
         //Reduce score
         score = 0;
-
+        ScoreChanged?.Invoke(score);
         //miss show
         //Change Particle Color
         ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
@@ -312,7 +316,7 @@ public class PlayPointBehaviour : MonoBehaviour
     {
         if (myOrder == 0)
         {
-            Debug.Log($"[{uniqOrder}]My order = 0, Stop reduce");
+            //Debug.Log($"[{uniqOrder}]My order = 0, Stop reduce");
             return;
         }
         else if (myOrder > 0)
@@ -325,7 +329,7 @@ public class PlayPointBehaviour : MonoBehaviour
     private IEnumerator SelfReduce()
     {   
         myOrder--;
-        Debug.Log($"[{uniqOrder}]Myorder Reduced to:{myOrder}");
+        //Debug.Log($"[{uniqOrder}]Myorder Reduced to:{myOrder}");
         if (myOrder == 0)
         {
             globalOrder--;
@@ -333,7 +337,7 @@ public class PlayPointBehaviour : MonoBehaviour
             {
                 globalOrder = 0;
             }
-            Debug.Log($"[{uniqOrder}]Global Reduced to:{globalOrder}");
+            //Debug.Log($"[{uniqOrder}]Global Reduced to:{globalOrder}");
         }
         yield return null;
     }
@@ -343,7 +347,7 @@ public class PlayPointBehaviour : MonoBehaviour
         StopCoroutine(SelfReduce());
         thisLevelPassed = true;
         globalOrder = 0;
-        Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
+        //Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
         if (myOrder > 0)
         {
             StartCoroutine(SelfDestroy());
@@ -351,7 +355,7 @@ public class PlayPointBehaviour : MonoBehaviour
     }
     private IEnumerator SelfDestroy()
     {
-        Debug.Log($"[{uniqOrder}]Level passed!myOder{myOrder}, destroy myself");
+        //Debug.Log($"[{uniqOrder}]Level passed!myOder{myOrder}, destroy myself");
         yield return null;
         Destroy(gameObject);
     }

@@ -121,16 +121,19 @@ public class FourierColorTransition : MonoBehaviour
         switch (_currentLevel)
         {
             case 1:
-                targetColorIndex = 0; 
+                if(targetColorIndex == 2)
+                {
+                    targetColorIndex = 0;
+                }
                 break;
             case 2:
-                if (targetColorIndex == 2)
+                if (targetColorIndex == 3)
                 {
                     targetColorIndex = 0;
                 }
                 break;
             case 3:
-                if (targetColorIndex == 3)
+                if (targetColorIndex == 4)
                 {
                     targetColorIndex = 0;
                 }

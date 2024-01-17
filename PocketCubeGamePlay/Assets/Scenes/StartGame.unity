@@ -16649,7 +16649,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &897552022
 MonoBehaviour:
@@ -16666,7 +16666,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 200, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -28024,6 +28024,10 @@ PrefabInstance:
     - target: {fileID: 1058989597593142621, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_Name
       value: SettingButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135403608976646829, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1362159075319126589, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_LocalPosition.x
