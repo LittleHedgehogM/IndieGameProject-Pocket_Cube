@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RhythmCallBack : MonoBehaviour
 {
-    public static Action<int> Rhythm_Bar;
+    public static Action Rhythm_Bar;
     public static Action Rhythm_Beat;
     private int beat = 0;
     //private bool pushTransitions = false;
@@ -21,7 +21,7 @@ public class RhythmCallBack : MonoBehaviour
 
         //print("MusicBeat"+ musicBeat);
 
-        Rhythm_Bar?.Invoke(musicBeat);
+        Rhythm_Bar?.Invoke();
 
     }
 
@@ -32,7 +32,7 @@ public class RhythmCallBack : MonoBehaviour
         if (PlayPointBehaviour.inLevel == 2)
         {
             beat++;
-            print(beat);
+            //print(beat);
             if (beat == 5)
             {
                 beat = 0;

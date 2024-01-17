@@ -27,9 +27,9 @@ public class FourierRoundTransition : MonoBehaviour
        
     }
 
-    private void StartColorTransition(int beat)
+    private void StartColorTransition()
     {
-        _beat = beat;
+
         StartCoroutine(ColorTransition());
     }
 

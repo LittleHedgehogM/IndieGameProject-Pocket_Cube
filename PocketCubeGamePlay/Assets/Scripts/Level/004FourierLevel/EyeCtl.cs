@@ -18,6 +18,7 @@ public class EyeCtl : MonoBehaviour
     [SerializeField] private GameObject eyeInner_1;
     [SerializeField] private GameObject eyeInner_2;
     [SerializeField] private GameObject eyeInner_3;
+    private bool innerReady = false;
 
     static public int currentBeat;
 
@@ -36,7 +37,7 @@ public class EyeCtl : MonoBehaviour
         EyeEmitter.Eye_InPosition += StoreEyeName;
         RhythmCallBack.Rhythm_Beat += SpawnCall;
         PlayPointBehaviour.StopShoot += StopShoot;
-        
+        RhythmCallBack.Rhythm_Bar += InnerParticleShoot;
     }
 
     private void EyeAnimationTrigger(string eyeName)
@@ -54,19 +55,25 @@ public class EyeCtl : MonoBehaviour
     {
         _eyeName = eyeName;
         StartCoroutine(WaitToShoot());
-        if (eyeName.Contains("first"))
+        innerReady = true;
+        
+    }
+    private void InnerParticleShoot()
+    {
+        if (!innerReady) return;
+        if (_eyeName.Contains("first"))
         {
             eyeInner_1.SetActive(true);
         }
-        else if (eyeName.Contains("sec"))
+        else if (_eyeName.Contains("sec"))
         {
+            print("eye2 particle start");
             eyeInner_2.SetActive(true);
         }
-        else if (eyeName.Contains("third"))
+        else if (_eyeName.Contains("third"))
         {
             eyeInner_3.SetActive(true);
         }
-
     }
 
     private void StopShoot(string levelState)
@@ -74,6 +81,7 @@ public class EyeCtl : MonoBehaviour
         if (levelState == "Entire")
         {
             _readyToShoot = false;
+            innerReady = false;
             AkSoundEngine.PostEvent("Play_Level3_Getit", audioPlayer);
             eyeInner_1.SetActive(false);
             eyeInner_2.SetActive(false);

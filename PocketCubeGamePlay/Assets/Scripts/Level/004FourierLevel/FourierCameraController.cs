@@ -20,15 +20,17 @@ public class FourierCameraController : CameraZoomInHelper
 
     [SerializeField] private Transform CubeTransform;
 
-    float time;
     Vector3 MainCamInitPosition;
     //Quaternion MainCamInitRotation;
 
     bool disableCameraMovement = false;
+    private float x = 0f;
 
     private void OnEnable()
     {
         CubeClickEvent.CubeClick += zoomInCube;
+        EyeEmitter.Eye_InPosition += ResetCameraPositionAndStopCameraMovement;
+        PlayPointBehaviour.LevelPass += StartCameraFloat;
     }
 
     private void OnDisable()
@@ -40,7 +42,7 @@ public class FourierCameraController : CameraZoomInHelper
     private void Start()
     {
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-        MainCamInitPosition = this.transform.position;
+        MainCamInitPosition = transform.position;
         //MainCamInitRotation = mainCam.transform.rotation;
     }
 
@@ -53,57 +55,33 @@ public class FourierCameraController : CameraZoomInHelper
         }
         if (camPerform.activeSelf)
         {
-            onUpdateCameraWithPlayerMovement(playerMovement.getMovementDirection());
+            onUpdateCameraWithPlayerMovement();
         }
         else
         {
             MainCamInitPosition = camPerform.transform.position;
             onUpdateCameraWithPlayerMovementWithFloat(playerMovement.getMovementDirection());
         }
-        
-
-        //mainCam.transform.position = Mathf.Sin(Camera_Sensitivity * Time.deltaTime) * cameraMovement;
-        //mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-
     }
 
-    public void onUpdateCameraWithPlayerMovement(Vector3 playerMovementVector)
+    public void onUpdateCameraWithPlayerMovement()
     {
         mainCam.transform.position += Camera_Sensitivity * (MainCamInitPosition - mainCam.transform.position);
         mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-
-        /*float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
-        if (dist < cameraMoveRange)
-        {
-            
-            playerMovementVector.y *= Axis_Y_Scaler;
-            playerMovementVector.x *= Axis_X_Scaler;
-            //float x = 0;
-            time += Time.deltaTime;
-            //x = time;
-            //print(Mathf.Sin(x) * cameraMovement);
-            mainCam.transform.position += Camera_Sensitivity * playerMovementVector;
-            mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-        }
-        else
-        {
-            
-            mainCam.transform.position += Camera_Sensitivity * (MainCamInitPosition - mainCam.transform.position);
-            mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
-        }*/
     }
 
     public void onUpdateCameraWithPlayerMovementWithFloat(Vector3 playerMovementVector)
     {
+
         float dist = Vector3.Distance(mainCam.transform.position, MainCamInitPosition);
         if (dist < cameraMoveRange)
         {
 
             playerMovementVector.y *= Axis_Y_Scaler;
             playerMovementVector.x *= Axis_X_Scaler;
-            float x = 0;
-            time += Time.deltaTime;
-            x = time;
+            playerMovementVector.z = 0;
+
+            x += Time.deltaTime;
             //print(Mathf.Sin(x) * cameraMovement);
             mainCam.transform.position += Camera_Sensitivity * (playerMovementVector + Mathf.Sin(x * cameraBeat) * cameraMovement);
             mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
@@ -121,5 +99,16 @@ public class FourierCameraController : CameraZoomInHelper
         disableCameraMovement = true;
         zoomInCube(mainCam, CubeTransform, CameraLookAtTarget);
 
+    }
+
+    private void ResetCameraPositionAndStopCameraMovement(string x)
+    {
+        disableCameraMovement = true;
+        mainCam.transform.LookAt(CameraLookAtTarget, Vector3.up);
+    }
+
+    private void StartCameraFloat(int x)
+    {
+        disableCameraMovement = false;
     }
 }

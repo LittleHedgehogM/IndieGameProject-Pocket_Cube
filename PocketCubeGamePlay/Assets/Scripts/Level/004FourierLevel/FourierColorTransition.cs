@@ -29,9 +29,15 @@ public class FourierColorTransition : MonoBehaviour
         PlayPointBehaviour.LevelPass += LevelUnlock;
     }
 
-    private void StartColorTransition(int beat)
+    private void OnDisable()
     {
-        _beat = beat;
+        RhythmCallBack.Rhythm_Bar -= StartColorTransition;
+        PlayPointBehaviour.LevelPass -= LevelUnlock;
+    }
+
+    private void StartColorTransition()
+    {
+        //_beat = beat;
         StartCoroutine(ColorTransition());
     }
 

@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EyeScoreCtl : MonoBehaviour
+public class EyeScoreCtl_2 : MonoBehaviour
 {
-    List<GameObject> Eyes = new List<GameObject>();
+    private List<GameObject> Eyes = new List<GameObject>();
+
+
     private void OnEnable()
     {
         PlayPointBehaviour.ScoreChanged += OnScoreChanged;
+
     }
     private void OnDisable()
     {
         PlayPointBehaviour.ScoreChanged -= OnScoreChanged;
+
     }
     private void Awake()
     {
@@ -20,6 +24,7 @@ public class EyeScoreCtl : MonoBehaviour
             Eyes.Add(child.gameObject);
             child.gameObject.SetActive(false);
         }
+        print(Eyes.Count);
     }
     private void OnScoreChanged(int score)
     {
@@ -32,7 +37,9 @@ public class EyeScoreCtl : MonoBehaviour
         }
         else if (score > 0)
         {
-            Eyes[score-1].SetActive(true);
+            int eyeIndex = score - 1;
+            Eyes[eyeIndex].SetActive(true);
         }
     }
+
 }

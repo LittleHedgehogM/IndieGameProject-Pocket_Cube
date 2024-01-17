@@ -34,7 +34,7 @@ public class FourierPlayer : MonoBehaviour
         gravity = Physics.gravity;
         jumpPS.Stop();
         playerPrevPosition = transform.position;
-        playerMovementEnabled = true;
+        playerMovementEnabled = false;
 
     }
 
