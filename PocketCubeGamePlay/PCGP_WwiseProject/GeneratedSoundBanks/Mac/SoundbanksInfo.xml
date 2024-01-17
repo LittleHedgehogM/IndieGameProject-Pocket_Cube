@@ -273,7 +273,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{3A30BBEF-94A1-BDAB-C606-97EC139117F0}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{4E37116C-F299-3377-8DC7-CEAF69E15A61}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -457,7 +457,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3740802191" Name="Play_L3_Perfect" DurationType="OneShot" DurationMin="1" DurationMax="1.1250113">
+				<Event Id="3740802191" Name="Play_L3_Perfect" DurationType="OneShot" DurationMin="0.75" DurationMax="0.8750113">
 					<MediaRefs>
 						<MediaRef Id="300062368"/>
 						<MediaRef Id="359507387"/>
@@ -936,5 +936,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{93BCDB2E-56B1-E575-E3B7-2FF089003816}</FileHash>
+	<FileHash>{331042AB-1F68-584E-61D9-1C6452313B6D}</FileHash>
 </SoundBanksInfo>
