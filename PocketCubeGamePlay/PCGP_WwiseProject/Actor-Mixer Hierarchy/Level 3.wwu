@@ -703,7 +703,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="L3_Perfect01" ID="{04C9D9AE-520F-4B50-A9C1-FACA7429BE48}" ShortID="714257630">
+								<Sound Name="L3_Perfect01" ID="{3639EB83-4361-4984-85DC-E2B90EBD3F29}" ShortID="71772312">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -713,7 +713,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="L3_Perfect01" ID="{1FB24606-6979-4E5F-BFA7-83A97AC10DDA}">
+										<AudioFileSource Name="L3_Perfect01" ID="{4E6046AB-54B6-445A-83FB-AB810A248AC4}">
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect01.wav</AudioFile>
 											<MediaIDList>
@@ -722,10 +722,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="L3_Perfect01" ID="{1FB24606-6979-4E5F-BFA7-83A97AC10DDA}" Platform="Linked"/>
+										<ActiveSource Name="L3_Perfect01" ID="{4E6046AB-54B6-445A-83FB-AB810A248AC4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="L3_Perfect02" ID="{BFDF08B7-198F-418D-996C-04084D0708AA}" ShortID="520846584">
+								<Sound Name="L3_Perfect02" ID="{42F5D618-0C59-43F4-997F-729A2D021276}" ShortID="782645296">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -735,7 +735,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="L3_Perfect02" ID="{2A686425-D962-4832-9038-E0CAC8A22AF2}">
+										<AudioFileSource Name="L3_Perfect02" ID="{082B9BA5-FE65-4733-A9A0-B85158426E78}">
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect02.wav</AudioFile>
 											<MediaIDList>
@@ -744,10 +744,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="L3_Perfect02" ID="{2A686425-D962-4832-9038-E0CAC8A22AF2}" Platform="Linked"/>
+										<ActiveSource Name="L3_Perfect02" ID="{082B9BA5-FE65-4733-A9A0-B85158426E78}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="L3_Perfect03" ID="{ACF4C8F6-D784-417E-BC5A-3E54F95070AF}" ShortID="989079690">
+								<Sound Name="L3_Perfect03" ID="{5FC38286-F748-4B76-BA7D-8CB38128B29B}" ShortID="263498914">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -757,7 +757,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="L3_Perfect03" ID="{0175AD08-79B5-4F15-B492-D541211C7812}">
+										<AudioFileSource Name="L3_Perfect03" ID="{330CC396-F693-4DB6-A5F2-46D12367DEA3}">
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect03.wav</AudioFile>
 											<MediaIDList>
@@ -766,10 +766,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="L3_Perfect03" ID="{0175AD08-79B5-4F15-B492-D541211C7812}" Platform="Linked"/>
+										<ActiveSource Name="L3_Perfect03" ID="{330CC396-F693-4DB6-A5F2-46D12367DEA3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="L3_Perfect04" ID="{0280C0FF-C5E4-44D9-B8DB-465854CC5214}" ShortID="522752430">
+								<Sound Name="L3_Perfect04" ID="{0FAD30E5-5C01-4D35-8DDF-74CF0DA1E2B3}" ShortID="617577151">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -779,7 +779,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="L3_Perfect04" ID="{82DAEC3D-B8D0-4276-9888-76545A13A2E1}">
+										<AudioFileSource Name="L3_Perfect04" ID="{3CD987E3-0980-4140-9B9A-1CF4EC120265}">
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect04.wav</AudioFile>
 											<MediaIDList>
@@ -788,7 +788,7 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="L3_Perfect04" ID="{82DAEC3D-B8D0-4276-9888-76545A13A2E1}" Platform="Linked"/>
+										<ActiveSource Name="L3_Perfect04" ID="{3CD987E3-0980-4140-9B9A-1CF4EC120265}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
