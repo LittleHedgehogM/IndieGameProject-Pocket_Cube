@@ -273,7 +273,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{38F9DCBE-D06F-81C1-6564-DCAAC9C07F03}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{9A877F62-E379-2E0F-07A8-6CBFDE4B2D31}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -303,7 +303,7 @@
 				</File>
 				<File Id="300062368" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect04.wav</ShortName>
-					<CachePath>SFX/L3_Perfect04_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/L3_Perfect04_37C4A41B.wem</CachePath>
 				</File>
 				<File Id="304097471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_鼓组loop.wav</ShortName>
@@ -319,7 +319,7 @@
 				</File>
 				<File Id="359507387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect03.wav</ShortName>
-					<CachePath>SFX/L3_Perfect03_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/L3_Perfect03_280D7560.wem</CachePath>
 				</File>
 				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
@@ -335,7 +335,7 @@
 				</File>
 				<File Id="520069187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect01.wav</ShortName>
-					<CachePath>SFX/L3_Perfect01_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/L3_Perfect01_2FFEBE54.wem</CachePath>
 				</File>
 				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Jump.wav</ShortName>
@@ -363,7 +363,7 @@
 				</File>
 				<File Id="583283732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect02.wav</ShortName>
-					<CachePath>SFX/L3_Perfect02_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/L3_Perfect02_881DCCAD.wem</CachePath>
 				</File>
 				<File Id="638651685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_land01.wav</ShortName>
@@ -457,7 +457,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3740802191" Name="Play_L3_Perfect" DurationType="OneShot" DurationMin="0.6250113" DurationMax="0.6250113">
+				<Event Id="3740802191" Name="Play_L3_Perfect" DurationType="OneShot" DurationMin="0.37580645" DurationMax="0.43225807">
 					<MediaRefs>
 						<MediaRef Id="300062368"/>
 						<MediaRef Id="359507387"/>
@@ -936,5 +936,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6AE003FC-DC55-169B-7AF2-45438E7543C0}</FileHash>
+	<FileHash>{9CE48783-DC52-E2E6-8BB2-E6C3F70BA4BE}</FileHash>
 </SoundBanksInfo>

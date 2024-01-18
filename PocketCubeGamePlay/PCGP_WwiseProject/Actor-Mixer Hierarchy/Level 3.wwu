@@ -714,6 +714,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="L3_Perfect01" ID="{4E6046AB-54B6-445A-83FB-AB810A248AC4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.285483870967741"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.432258064516129"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect01.wav</AudioFile>
 											<MediaIDList>
@@ -736,6 +741,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="L3_Perfect02" ID="{082B9BA5-FE65-4733-A9A0-B85158426E78}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.309677419354838"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.417741935483871"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect02.wav</AudioFile>
 											<MediaIDList>
@@ -758,6 +768,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="L3_Perfect03" ID="{330CC396-F693-4DB6-A5F2-46D12367DEA3}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.27258064516129"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.388709677419355"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect03.wav</AudioFile>
 											<MediaIDList>
@@ -780,6 +795,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="L3_Perfect04" ID="{3CD987E3-0980-4140-9B9A-1CF4EC120265}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.287096774193548"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.375806451612903"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>L3_Perfect04.wav</AudioFile>
 											<MediaIDList>
