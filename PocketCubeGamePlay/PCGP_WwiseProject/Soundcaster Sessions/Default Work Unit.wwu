@@ -44,6 +44,14 @@
 							<ObjectRef Name="Play_Fourier_new" ID="{7B7977E3-C805-4836-BBAB-785BDDA01F2C}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_L3_Perfect" ID="{DD981244-3F47-4204-B419-45FBBADA0B09}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_L3_Bad" ID="{C9781B22-A9CC-4B83-AF03-F39F261B776D}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -67,7 +75,7 @@
 						<CurrentSwitchRef Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>
 						<CurrentSwitchRef Name="Off" ID="{6B503341-059A-4509-B349-C5380486F0AB}"/>
 						<CurrentSwitchRef Name="Off" ID="{F6F6C2F7-F2A0-4373-9ED3-BE45F4C41C22}"/>
-						<CurrentSwitchRef Name="level2_1" ID="{F74092F3-725C-41EA-B236-E3B3AA3ECA98}"/>
+						<CurrentSwitchRef Name="none_beat" ID="{7B18416A-2869-4C1F-8597-88738ECA7455}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="New Soundcaster Session_02" ID="{F4284216-71E4-4FC9-9158-5B1F3445E8C2}">

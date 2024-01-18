@@ -5,19 +5,16 @@ using UnityEngine;
 
 public class FourierKeyCube : CubeClickEvent
 {
-    //[SerializeField] private Vector3 _rotation;
-    //[SerializeField] private float _speed;
-
-    //[SerializeField] private bool levelPass = false;
-    //
-    //[SerializeField] private ParticleSystem cubeFx;
-
-    //private bool played = false;
-
 
     FourierCursorController myCursorController;
     public static Action CubeShow;
     [SerializeField] Material passMat;
+    private GameObject audioPlayer;
+
+    private void Awake()
+    {
+        audioPlayer = GameObject.Find("WwiseFourier");
+    }
 
     private void Start()
     {
@@ -30,25 +27,17 @@ public class FourierKeyCube : CubeClickEvent
         FourierLevelManager.CubeUnlocked += FourierPass;
     }
 
+    private void OnDisable()
+    {
+        FourierLevelManager.CubeUnlocked -= FourierPass;
+    }
+
     private void FourierPass()
     {
         CubeShow?.Invoke();
         gameObject.GetComponent<Renderer>().material = passMat;
         gameObject.GetComponent<BoxCollider>().enabled = true;
     }
-    /*private void CubeAutoRotate()
-    {
-        //transform.Rotate(_rotation * _speed * Time.deltaTime);
-        transform.Rotate(_rotation * _speed * Time.deltaTime, Space.World);
-        if (!played)
-        {
-            CubeShow?.Invoke();
-            cubeFx.Play();
-            played = true;
-        }
-
-        
-    }*/
 
     private void OnMouseEnter()
     {      
@@ -69,6 +58,7 @@ public class FourierKeyCube : CubeClickEvent
             myCursorController.setSelectCursor();
             //FindObjectOfType<LevelLoaderScript>().LoadNextLevel();
             CubeClick?.Invoke();
+        AkSoundEngine.SetSwitch("Fourier_Level", "none_beat", audioPlayer);
     }
     
 }

@@ -15,9 +15,9 @@ public class EyeCtl : MonoBehaviour
     //[SerializeField] private List<int> pattern;
     
 
-    [SerializeField] private GameObject eyeInner_1;
-    [SerializeField] private GameObject eyeInner_2;
-    [SerializeField] private GameObject eyeInner_3;
+    [SerializeField] private GameObject eyeInner;
+    [SerializeField] private GameObject eyeBeat;
+
     private bool innerReady = false;
 
     static public int currentBeat;
@@ -26,9 +26,8 @@ public class EyeCtl : MonoBehaviour
     private void Awake()
     {
         audioPlayer = GameObject.Find("WwiseFourier");
-        eyeInner_1.SetActive(false);
-        eyeInner_2.SetActive(false);
-        eyeInner_3.SetActive(false);
+        eyeInner.SetActive(false);
+
     }
 
     private void OnEnable()
@@ -39,13 +38,23 @@ public class EyeCtl : MonoBehaviour
         PlayPointBehaviour.StopShoot += StopShoot;
         RhythmCallBack.Rhythm_Bar += InnerParticleShoot;
     }
+    private void OnDisable()
+    {
+        EyeEmitter.Eye_Activated -= EyeAnimationTrigger;
+        EyeEmitter.Eye_InPosition -= StoreEyeName;
+        RhythmCallBack.Rhythm_Beat -= SpawnCall;
+        RhythmCallBack.Rhythm_Bar -= InnerParticleShoot;
+        PlayPointBehaviour.StopShoot -= StopShoot;
+    }
 
     private void EyeAnimationTrigger(string eyeName)
     {
         
         Animator animator = transform.Find(eyeName).gameObject.GetComponent<Animator>();
         animator.SetTrigger(eyeName);
+
         AkSoundEngine.PostEvent("Play_Level3_Eyesopen", audioPlayer);
+        Debug.Log("Eye_Activated");
         AkSoundEngine.SetSwitch("Fourier_Level",$"level{PlayPointBehaviour.inLevel}_1", audioPlayer);
         Debug.Log($"level{PlayPointBehaviour.inLevel}_1");
         FourierPlayer.playerMovementEnabled = false;
@@ -54,26 +63,15 @@ public class EyeCtl : MonoBehaviour
     private void StoreEyeName(string eyeName)
     {
         _eyeName = eyeName;
+        eyeInner.SetActive(true);
         StartCoroutine(WaitToShoot());
-        innerReady = true;
+        innerReady = true;    
         
     }
     private void InnerParticleShoot()
     {
         if (!innerReady) return;
-        if (_eyeName.Contains("first"))
-        {
-            eyeInner_1.SetActive(true);
-        }
-        else if (_eyeName.Contains("sec"))
-        {
-            print("eye2 particle start");
-            eyeInner_2.SetActive(true);
-        }
-        else if (_eyeName.Contains("third"))
-        {
-            eyeInner_3.SetActive(true);
-        }
+        eyeBeat.SetActive(true);
     }
 
     private void StopShoot(string levelState)
@@ -83,9 +81,7 @@ public class EyeCtl : MonoBehaviour
             _readyToShoot = false;
             innerReady = false;
             AkSoundEngine.PostEvent("Play_Level3_Getit", audioPlayer);
-            eyeInner_1.SetActive(false);
-            eyeInner_2.SetActive(false);
-            eyeInner_3.SetActive(false);
+            eyeInner.SetActive(false);
         }
         else if (levelState == "Half")
         {

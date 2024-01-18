@@ -23,7 +23,7 @@
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -110,6 +110,11 @@
 						<MusicSegment Name="Open02" ID="{385F3F18-4209-41CB-B5E6-66C945AB2C37}" ShortID="709269787">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="65008.6018569088"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

@@ -531,11 +531,6 @@
 				<MusicPlaylistContainer Name="ELE" ID="{85E493A0-73F6-4F57-91E9-BDF8FF93F63E}" ShortID="1036329184">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="117"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -844,7 +839,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

@@ -6,11 +6,17 @@ using UnityEngine;
 public class EyeEmitter : MonoBehaviour
 {
     public static Action<string> Eye_Activated;
+    private bool eyeTriggered = false;
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (eyeTriggered)
         {
+            return;
+        }
+        else if (col.gameObject.CompareTag("Player"))
+        {
+            eyeTriggered = true;
             string eyeName = gameObject.name;
             Eye_Activated?.Invoke(eyeName);
         }

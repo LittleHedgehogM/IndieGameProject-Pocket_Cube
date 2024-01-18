@@ -89,21 +89,6 @@ public class FourierColorTransition : MonoBehaviour
         Color targetColor02 = diffuseGradient02[targetColorIndex];
 
         float currentTime = 0;    
-        //加过渡色
-        /*float targetPointWhite = 0;
-
-        while (targetPointWhite < 1)
-        {
-
-            currentTime += Time.deltaTime;
-            targetPointWhite = currentTime / transitionTimeWhite;
-
-            material.SetColor("_diffusegradient01", Color.Lerp(currentColor01, Color.white, targetPointWhite));
-            material.SetColor("_diffusegradient02", Color.Lerp(currentColor02, Color.white, targetPointWhite));
-
-            yield return null;
-        }*/
-
         float targetPoint = 0;
         while (targetPoint < 1)
         {

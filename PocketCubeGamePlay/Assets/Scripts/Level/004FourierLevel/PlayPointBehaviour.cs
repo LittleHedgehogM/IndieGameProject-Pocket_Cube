@@ -207,7 +207,7 @@ public class PlayPointBehaviour : MonoBehaviour
             yield break;
         }
         //When scores are enough
-        else if (!(currentSwitch == 2867782686) && score == 8)
+        else if (!(currentSwitch == 2867782686) && score == 7)
         {
             print(inLevel);
             LevelPass?.Invoke(inLevel);
