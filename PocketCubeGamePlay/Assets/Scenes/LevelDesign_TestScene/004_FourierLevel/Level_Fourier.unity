@@ -36424,7 +36424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8DF3\u81F3\u56FA\u5B9A\u8272\u5F69"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
   m_sharedMaterial: {fileID: 2315783275360767495, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
@@ -42086,6 +42086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af66bcca13bb02b4c827087eed9f94b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eyeInner: {fileID: 401301764}
   beatTutorial: {fileID: 0}
 --- !u!64 &1134702081
 MeshCollider:
@@ -68247,6 +68248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af66bcca13bb02b4c827087eed9f94b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eyeInner: {fileID: 401301764}
   beatTutorial: {fileID: 0}
 --- !u!64 &2053090544
 MeshCollider:
@@ -68374,67 +68376,6 @@ Transform:
   - {fileID: 752913884}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2066640194
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.629
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.687
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287459627095044013, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6480013990580218852, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_Name
-      value: PlayPoint_Fly
-      objectReference: {fileID: 0}
-    - target: {fileID: 6480013990580218852, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 23ec0e5cdf27f1246a3f1b7a83896fd8, type: 3}
 --- !u!4 &2069204164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409988, guid: 97003e56c33b48b498c352bb2df766c0, type: 3}
@@ -70785,6 +70726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af66bcca13bb02b4c827087eed9f94b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eyeInner: {fileID: 401301764}
   beatTutorial: {fileID: 118790812}
 --- !u!33 &3486461850272142226
 MeshFilter:
@@ -74130,4 +74072,3 @@ SceneRoots:
   - {fileID: 814379616}
   - {fileID: 2046539459}
   - {fileID: 178503351}
-  - {fileID: 2066640194}

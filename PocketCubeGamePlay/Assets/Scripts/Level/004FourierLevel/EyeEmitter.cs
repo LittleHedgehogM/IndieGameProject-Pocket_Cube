@@ -6,8 +6,14 @@ using UnityEngine;
 public class EyeEmitter : MonoBehaviour
 {
     public static Action<string> Eye_Activated;
+
+    [SerializeField] private GameObject eyeInner;
     private bool eyeTriggered = false;
 
+    private void Awake()
+    {
+        eyeInner.SetActive(false);
+    }
     private void OnTriggerEnter(Collider col)
     {
         if (eyeTriggered)
@@ -26,6 +32,7 @@ public class EyeEmitter : MonoBehaviour
     private void EyeAnimationOver()
     {
         string eyeName = gameObject.name;
+        eyeInner.SetActive(true);
         Eye_InPosition?.Invoke(eyeName);
     }
     [SerializeField] private GameObject beatTutorial;

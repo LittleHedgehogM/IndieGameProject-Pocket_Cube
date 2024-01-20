@@ -63,7 +63,6 @@ public class EyeCtl : MonoBehaviour
     private void StoreEyeName(string eyeName)
     {
         _eyeName = eyeName;
-        eyeInner.SetActive(true);
         StartCoroutine(WaitToShoot());
         innerReady = true;    
         
