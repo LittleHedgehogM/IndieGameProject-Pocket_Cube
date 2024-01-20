@@ -854,7 +854,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Main_Final" ID="{A5F2A5DB-51DC-4E97-9F03-9CEA951BC27B}" ShortID="357449412">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="20125"/>
+								<Property Name="EndPosition" Type="Real64" Value="186125"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -904,6 +904,63 @@
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="jieweizhi02" ID="{CAFCFAA2-5FE0-4825-BC45-AB4FE66914C1}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="zuihoudequzhi" ID="{EA7DF7E3-DE14-41C0-96C0-CA4C8BD76742}" ShortID="436943347">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="zuihoudequzhi" ID="{601D9FCA-4654-4BF1-93FC-BE62493FC872}">
+											<Language>SFX</Language>
+											<AudioFile>zuihoudequzhi.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="172011939"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{F4C06593-6A75-4F75-9EE6-477D12969D22}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2F26FC8E-59B4-4547-9879-ACDEA05C82D0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="zuihoudequzhi" ID="{2677C43C-E49C-410B-B5FB-201D0DC2F9B2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="170000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="zuihoudequzhi" ID="{601D9FCA-4654-4BF1-93FC-BE62493FC872}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
