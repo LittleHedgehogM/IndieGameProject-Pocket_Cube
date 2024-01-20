@@ -2409,13 +2409,14 @@ GameObject:
   m_Component:
   - component: {fileID: 370325354}
   - component: {fileID: 370325355}
+  - component: {fileID: 370325356}
   m_Layer: 5
   m_Name: SubtitleController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &370325354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2444,13 +2445,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370325353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3352f8dce38f714ebb0975cfd079958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   testText: {fileID: 1229730084}
   subtitle_file_name: Fourier
+--- !u!114 &370325356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370325353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c5fca1fea4fe845b11248034408bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testText: {fileID: 1229730084}
+  subtitle_file_name: Fourier_new
 --- !u!1 &386413731
 GameObject:
   m_ObjectHideFlags: 0
