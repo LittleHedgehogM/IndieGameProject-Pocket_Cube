@@ -11,47 +11,25 @@ public class VideoScript: MonoBehaviour
     [SerializeField] AK.Wwise.Event sound;
     //private bool isOpeningPlayed = false;
     public static Action VideoFinished;
+    public static Action VideoStart;
     [SerializeField] GameObject performCamera;
     [SerializeField] float translationTime = 1f;
-    private CanvasGroup settingBtn;
 
-    private void Awake()
-    {
-        settingBtn = GameObject.FindWithTag("SettingBtn").GetComponent<CanvasGroup>();
-    }
+    private bool vidPause = false;
+
     void Start()
     {
         vid = GetComponent<VideoPlayer>();
-        settingBtn.alpha = 0;
-        settingBtn.interactable = false;
-        settingBtn.blocksRaycasts = false;
         vid.Play();
+        VideoStart?.Invoke();
         sound.Post(gameObject);
         vid.loopPointReached += DestroyAfterVideoPlayed;
     }
 
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.Tab))
-        {
-            print("true");
-            if (vid.isPlaying)
-            {
-                vid.Stop();
-            }
-            else
-            {
-                vid.Play();
-            }
-        }
-    }*/
     void DestroyAfterVideoPlayed(VideoPlayer vp)
     {
         if (SceneManager.GetActiveScene().name == "First GPP")
         {
-            settingBtn.alpha = 1;
-            settingBtn.interactable = true;
-            settingBtn.blocksRaycasts = true;
             gameObject.SetActive(false);
             performCamera.SetActive(true);
             VideoFinished?.Invoke();
@@ -79,45 +57,29 @@ public class VideoScript: MonoBehaviour
             yield return null;
         }
         //finishImage.gameObject.SetActive(false);
-        settingBtn.alpha = 1;
-        settingBtn.interactable = true;
-        settingBtn.blocksRaycasts = true;
         gameObject.SetActive(false);
         VideoFinished?.Invoke();
         yield return null;
     }
 
     void OnApplicationFocus(bool isFocus)
-    {
+    {    
         if (isFocus)
         {
-            if (!vid.isPlaying)
+            if (vidPause)
             {
+                vidPause = false;
                 vid.Play();
                 AkSoundEngine.PostEvent("Resume", gameObject);
+                Debug.Log("游戏开始");  
             }
         }
         else
         {
-            if (vid.isPlaying)
-            {
-                vid.Pause();
-                AkSoundEngine.PostEvent("Pause", gameObject);
-            }
-            //Debug.Log("离开游戏 激活推送");  //  返回游戏的时候触发     执行顺序 1
+            vid.Pause();
+            AkSoundEngine.PostEvent("Pause", gameObject);
+            vidPause = true;
+            Debug.Log("游戏暂停");  
         }
     }
-
-
-    /*void OnApplicationPause(bool isPause)
-    {
-        if (isPause)
-        {
-            Debug.Log("游戏暂停 一切停止");  // 缩到桌面的时候触发
-        }
-        else
-        {
-            Debug.Log("游戏开始  万物生机");  //回到游戏的时候触发 最晚
-        }
-    }*/
 }

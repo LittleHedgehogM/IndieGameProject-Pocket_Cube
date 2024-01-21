@@ -1,50 +1,25 @@
 Event	ID	Name			Wwise Object Path	Notes
 	507378310	Play_L3_destroy			\Level3\Level3\Play_L3_destroy	
-	1152672460	Hit_Record			\Level3\Level3\Hit_Record	
 	1157264013	Play_Level3_Getit			\Level3\Level3\Play_Level3_Getit	
-	1239937734	Play_Unlock			\Level3\Level3\Play_Unlock	
-	1593461692	Play_L3_Jump			\Level3\Level3\Play_L3_Jump	
-	2056255347	Play_Fourier_Scene			\Level3\Level3\Play_Fourier_Scene	
 	2383533353	Play_L3_Bad			\Level3\Level3\Play_L3_Bad	
 	2725902265	Play_Fourier_new			\Level3\Level3\Play_Fourier_new	
 	3290345476	Play_Level3_Eyesopen			\Level3\Level3\Play_Level3_Eyesopen	
-	3689126666	Play_Jump			\Level3\Level3\Play_Jump	
 	3740802191	Play_L3_Perfect			\Level3\Level3\Play_L3_Perfect	
-	4190464387	Play_L3_Hit_bad			\Level3\Level3\Play_L3_Hit_bad	
-	4285282925	Play_Land			\Level3\Level3\Play_Land	
-
-Effect plug-ins	ID	Name	Type				Notes
-	945801009	RoomVerb (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	64915519	jump	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\jump_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump		15326
-	87991687	Level3_Eyesopen	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Eyesopen_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Level3_Eyesopen		43510
-	126321576	傅里叶棋盘_节奏1	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Fourier_level1_1_E0849FC5.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		264760
-	198103246	傅里叶棋盘_伴奏	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶棋盘_伴奏_D79FB2B7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_伴奏		32256096
-	228576140	L3_Jump	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_713FA6BE.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump		10282
-	244990863	L3_bad01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad01_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad01		17814
-	300062368	L3_Perfect04	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect04_C458699A.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect04		6548
-	304097471	傅里叶棋盘_鼓组loop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶棋盘_鼓组loop_0762CC47.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_鼓组loop		2761094
-	334950802	Level3_land03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_land03_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\Level3_land03		14222
-	346880039	L3_bad02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad02_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad02		17921
-	359507387	L3_Perfect03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect03_4BBED0FB.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect03		6601
-	371716904	L3_Jump_01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_9619B961.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_01		10066
-	423139562	Level3_Getit	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Getit_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Level3_Getit		62969
-	507840173	傅里叶棋盘_节奏1	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Fourier_level2_1_F5E54163.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		529424
-	520069187	L3_Perfect01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect01_C46F29E8.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect01		7626
-	531891813	L3_Jump_03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_623B074E.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_03		8404
-	540080765	傅里叶棋盘_节奏1	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶beat1_88EE04B9.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		264776
-	548492002	L3_bad03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad03_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad03		17416
-	555154728	jump03	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\jump03_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump03		11228
-	567682221	傅里叶棋盘_节奏1	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶beat3_5DAA4FA7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		529536
-	573026670	jump02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\jump02_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Jump\jump02		13942
-	583283732	L3_Perfect02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect02_F48FE851.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect02		6956
-	638651685	Level3_land01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_land01_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\Level3_land01		13527
-	644617565	L3_Jump_02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Jump_EE177560.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Jump\L3_Jump_02		9202
-	656407472	L3_Hit_bad	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Hit_bad_2C8C6BB4.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Hit_bad		4887
-	713146055	Level3_land02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_land02_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Land\Level3_land02		14742
-	743988009	L3_destroy	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_destroy_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		14094
-	909243550	傅里叶棋盘_旋律loop	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶棋盘_旋律loop_0762CC47.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_Scene\傅里叶棋盘\傅里叶棋盘_旋律loop		3054756
-	968844488	Level3_Unlock02	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Unlock02_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Unlock\Level3_Unlock02		26393
-	1036840312	Level3_Unlock01	C:\Users\55089\Documents\GitHub\IndieGameProject-Pocket_Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Unlock01_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Unlock\Level3_Unlock01		31521
+	87991687	Level3_Eyesopen	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Eyesopen_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Level3_Eyesopen		43510
+	126321576	傅里叶棋盘_节奏1	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Fourier_level1_1_2607D0D5.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		32287
+	198103246	傅里叶棋盘_伴奏	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶棋盘_伴奏_0762CC47.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_伴奏		3474164
+	244990863	L3_bad01	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad01_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad01		17814
+	300062368	L3_Perfect04	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect04_C458699A.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect04		6548
+	346880039	L3_bad02	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad02_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad02		17921
+	359507387	L3_Perfect03	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect03_4BBED0FB.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect03		6601
+	423139562	Level3_Getit	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Level3_Getit_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\Level3_Getit		62969
+	507840173	傅里叶棋盘_节奏1	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\Fourier_level2_1_BDC454F3.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		68653
+	520069187	L3_Perfect01	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect01_C46F29E8.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect01		7626
+	540080765	傅里叶棋盘_节奏1	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶beat1_530A2BE9.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		32968
+	548492002	L3_bad03	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_bad03_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Bad\L3_bad03		17416
+	567682221	傅里叶棋盘_节奏1	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\傅里叶beat3_E4F494D7.wem		\Interactive Music Hierarchy\FourierBGM\Fourier_New\Fourier_new\傅里叶棋盘_节奏1		69755
+	583283732	L3_Perfect02	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_Perfect02_F48FE851.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_Perfect\L3_Perfect02		6956
+	743988009	L3_destroy	G:\Unity Project\IndieGameProject-Rubiks-Cube\PocketCubeGamePlay\PCGP_WwiseProject\.cache\Windows\SFX\L3_destroy_3F75BDB9.wem		\Actor-Mixer Hierarchy\Level 3\SFX\L3_destroy		14094
 

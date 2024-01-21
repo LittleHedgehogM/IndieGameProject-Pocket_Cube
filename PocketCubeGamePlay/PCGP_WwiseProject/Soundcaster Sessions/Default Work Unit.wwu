@@ -45,12 +45,20 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Amb_Main" ID="{9D0F7211-7BFB-450E-B300-3E178AEA13D0}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_L3_Perfect" ID="{DD981244-3F47-4204-B419-45FBBADA0B09}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_L3_Bad" ID="{C9781B22-A9CC-4B83-AF03-F39F261B776D}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_End_Final" ID="{2DFB7F79-B4BA-4B90-97CC-D9FEA593B7FE}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -69,7 +77,6 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{F1822FD1-248D-4A02-AE36-8E509278E41E}"/>
-						<CurrentStateRef Name="None" ID="{82F135AF-5CB6-498F-9D74-C992DB59EC37}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Outro" ID="{A35528D6-3CED-4759-B305-0E642DC02C6B}"/>

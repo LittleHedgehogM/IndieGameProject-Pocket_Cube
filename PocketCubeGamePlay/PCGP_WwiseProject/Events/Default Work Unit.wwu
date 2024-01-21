@@ -152,6 +152,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Enviroment" ID="{2BAB5BBF-18CE-4F55-B2F4-F93EFDDB4F31}">
+							<ChildrenList>
+								<Action Name="" ID="{D461A2EC-A091-435F-A750-AFF1240D94D5}" ShortID="1034755500">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9C7D5195-F65A-4D7D-813A-0759FDA2F7C8}" ShortID="1009108702">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enviroment" ID="{0A8E2973-C930-4F62-A298-9ACC1E8D239D}" WorkUnitID="{B9280B89-A8C7-43F6-A936-A4C6BF5344D5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{814EAB55-06CE-409D-A755-98CB3DDE3669}" ShortID="913087109">
@@ -531,32 +557,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Enviroment" ID="{2BAB5BBF-18CE-4F55-B2F4-F93EFDDB4F31}">
-							<ChildrenList>
-								<Action Name="" ID="{D461A2EC-A091-435F-A750-AFF1240D94D5}" ShortID="1034755500">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{9C7D5195-F65A-4D7D-813A-0759FDA2F7C8}" ShortID="1009108702">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Enviroment" ID="{0A8E2973-C930-4F62-A298-9ACC1E8D239D}" WorkUnitID="{B9280B89-A8C7-43F6-A936-A4C6BF5344D5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
 							<ChildrenList>
 								<Action Name="" ID="{CC9313C8-C0FC-407D-8AE1-3FE71AD4B5DD}" ShortID="1049607320">
@@ -663,6 +663,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

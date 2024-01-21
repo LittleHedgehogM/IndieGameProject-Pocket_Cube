@@ -62,7 +62,20 @@ public class LevelManager : MonoBehaviour
         //print(_animatorTransition);
     }
 
-    
+    private void OnEnable()
+    {
+        EndingVideo.EndingVideoStart += EndingSettignBtnCtl;
+        VideoScript.VideoStart += VideoStart;
+        VideoScript.VideoFinished += VideoEnded;
+    }
+
+    private void OnDisable()
+    {
+        EndingVideo.EndingVideoStart -= EndingSettignBtnCtl;
+        VideoScript.VideoFinished -= VideoEnded;
+        VideoScript.VideoStart -= VideoStart;
+    }
+
     public async void LoadScene(string sceneName)
     {
         SceneChangeInprogress?.Invoke();
@@ -167,5 +180,26 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("clicked");
         titltBtnClick = false;
+    }
+
+    private void EndingSettignBtnCtl()
+    {
+        settingBtn.gameObject.SetActive(false);
+        StartCoroutine(EndingVideoCountDown());
+    }
+
+    private IEnumerator EndingVideoCountDown()
+    {
+        yield return new WaitForSeconds(20);
+        settingBtn.gameObject.SetActive(true);
+        yield return null;
+    }
+    private void VideoStart()
+    {
+        settingBtn.gameObject.SetActive(false);
+    }
+    private void VideoEnded()
+    {
+        settingBtn.gameObject.SetActive(true);
     }
 }

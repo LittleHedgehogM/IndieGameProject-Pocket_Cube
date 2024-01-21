@@ -12,4 +12,8 @@ public class ChangeSceneButton : MonoBehaviour
     {
         PlayerPrefs.SetInt("Level", 4);
     }
+    public void SetLevel(int level)
+    {
+        PlayerPrefs.SetInt("Level", level);
+    }
 }

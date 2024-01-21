@@ -109,7 +109,7 @@ public class MainMenuLevels : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            print("burron up reset");
+            
             pressedTime = 0;
         }
 

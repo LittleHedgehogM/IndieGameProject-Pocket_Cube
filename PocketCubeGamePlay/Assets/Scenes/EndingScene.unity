@@ -613,7 +613,6 @@ GameObject:
   - component: {fileID: 2098222822}
   - component: {fileID: 2098222821}
   - component: {fileID: 2098222820}
-  - component: {fileID: 2098222819}
   m_Layer: 0
   m_Name: EndSceneAudio
   m_TagString: Untagged
@@ -621,20 +620,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2098222819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098222818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87699b966979bd14680df5b7f4b010e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &2098222820
 MonoBehaviour:
   m_ObjectHideFlags: 0

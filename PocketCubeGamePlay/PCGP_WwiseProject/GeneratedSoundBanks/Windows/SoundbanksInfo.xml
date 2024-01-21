@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{CADF89BD-0E7D-E1B7-A925-5D89C17C4125}">
+		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{837273C3-4FEE-4874-1F2B-61164F550104}">
 			<ShortName>End</ShortName>
 			<Path>End.bnk</Path>
 			<Media>
@@ -49,17 +49,13 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{9BAFADD5-C082-373F-2734-FB2D741C8679}">
+		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{DB733EC9-15DE-F3EE-5783-D66EB6E81788}">
 			<ShortName>AMB</ShortName>
 			<Path>AMB.bnk</Path>
 			<Media>
 				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_level00.wav</ShortName>
 					<CachePath>SFX/Amb_level00_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>环境.wav</ShortName>
-					<CachePath>SFX/环境_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Amb_Main.wav</ShortName>
@@ -81,11 +77,6 @@
 						<MediaRef Id="626564496"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="108392005" Name="Play_Enviroment" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="549092072"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="869256356"/>
@@ -95,7 +86,7 @@
 				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4C22769F-737C-0B27-D331-3E1E1A300601}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3F982EFD-50B3-6D29-C194-C91909B101D1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -124,17 +115,6 @@
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="1635194255" Name="P2"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="3207373244" Name="FourierPhase">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="2002117576" Name="phase_05"/>
-						<State Id="2002117577" Name="phase_04"/>
-						<State Id="2002117580" Name="phase_01"/>
-						<State Id="2002117581" Name="phase_00"/>
-						<State Id="2002117582" Name="phase_03"/>
-						<State Id="2002117583" Name="phase_02"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -278,29 +258,21 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{92EDB238-F3CC-2DCD-33A8-D312F24B3ED5}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{92E0073A-08E1-5AF7-A638-DDAA62E83A81}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
-				<File Id="64915519" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>jump.wav</ShortName>
-					<CachePath>SFX/jump_3F75BDB9.wem</CachePath>
-				</File>
 				<File Id="87991687" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Eyesopen.wav</ShortName>
 					<CachePath>SFX/Level3_Eyesopen_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="126321576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fourier_level1_1.wav</ShortName>
-					<CachePath>SFX/Fourier_level1_1_E0849FC5.wem</CachePath>
+					<CachePath>SFX/Fourier_level1_1_2607D0D5.wem</CachePath>
 				</File>
 				<File Id="198103246" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_伴奏.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_伴奏_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="228576140" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_713FA6BE.wem</CachePath>
+					<CachePath>SFX/傅里叶棋盘_伴奏_0762CC47.wem</CachePath>
 				</File>
 				<File Id="244990863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad01.wav</ShortName>
@@ -310,14 +282,6 @@
 					<ShortName>L3_Perfect04.wav</ShortName>
 					<CachePath>SFX/L3_Perfect04_C458699A.wem</CachePath>
 				</File>
-				<File Id="304097471" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>傅里叶棋盘_鼓组loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_鼓组loop_0762CC47.wem</CachePath>
-				</File>
-				<File Id="334950802" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level3_land03.wav</ShortName>
-					<CachePath>SFX/Level3_land03_3F75BDB9.wem</CachePath>
-				</File>
 				<File Id="346880039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad02.wav</ShortName>
 					<CachePath>SFX/L3_bad02_3F75BDB9.wem</CachePath>
@@ -326,90 +290,40 @@
 					<ShortName>L3_Perfect03.wav</ShortName>
 					<CachePath>SFX/L3_Perfect03_4BBED0FB.wem</CachePath>
 				</File>
-				<File Id="371716904" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_9619B961.wem</CachePath>
-				</File>
 				<File Id="423139562" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level3_Getit.wav</ShortName>
 					<CachePath>SFX/Level3_Getit_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="507840173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fourier_level2_1.wav</ShortName>
-					<CachePath>SFX/Fourier_level2_1_F5E54163.wem</CachePath>
+					<CachePath>SFX/Fourier_level2_1_BDC454F3.wem</CachePath>
 				</File>
 				<File Id="520069187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect01.wav</ShortName>
 					<CachePath>SFX/L3_Perfect01_C46F29E8.wem</CachePath>
 				</File>
-				<File Id="531891813" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_623B074E.wem</CachePath>
-				</File>
 				<File Id="540080765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶beat1.wav</ShortName>
-					<CachePath>SFX/傅里叶beat1_88EE04B9.wem</CachePath>
+					<CachePath>SFX/傅里叶beat1_530A2BE9.wem</CachePath>
 				</File>
 				<File Id="548492002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad03.wav</ShortName>
 					<CachePath>SFX/L3_bad03_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="555154728" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>jump03.wav</ShortName>
-					<CachePath>SFX/jump03_3F75BDB9.wem</CachePath>
-				</File>
 				<File Id="567682221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶beat3.wav</ShortName>
-					<CachePath>SFX/傅里叶beat3_5DAA4FA7.wem</CachePath>
-				</File>
-				<File Id="573026670" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>jump02.wav</ShortName>
-					<CachePath>SFX/jump02_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/傅里叶beat3_E4F494D7.wem</CachePath>
 				</File>
 				<File Id="583283732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect02.wav</ShortName>
 					<CachePath>SFX/L3_Perfect02_F48FE851.wem</CachePath>
 				</File>
-				<File Id="638651685" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level3_land01.wav</ShortName>
-					<CachePath>SFX/Level3_land01_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="644617565" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>L3_Jump.wav</ShortName>
-					<CachePath>SFX/L3_Jump_EE177560.wem</CachePath>
-				</File>
-				<File Id="656407472" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>L3_Hit_bad.wav</ShortName>
-					<CachePath>SFX/L3_Hit_bad_2C8C6BB4.wem</CachePath>
-				</File>
-				<File Id="713146055" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level3_land02.wav</ShortName>
-					<CachePath>SFX/Level3_land02_3F75BDB9.wem</CachePath>
-				</File>
 				<File Id="743988009" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_destroy.wav</ShortName>
 					<CachePath>SFX/L3_destroy_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="909243550" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>傅里叶棋盘_旋律loop.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_旋律loop_0762CC47.wem</CachePath>
-				</File>
-				<File Id="968844488" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level3_Unlock02.wav</ShortName>
-					<CachePath>SFX/Level3_Unlock02_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="1036840312" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level3_Unlock01.wav</ShortName>
-					<CachePath>SFX/Level3_Unlock01_3F75BDB9.wem</CachePath>
-				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="945801009" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</Custom>
-			</Plugins>
 			<Events>
-				<Event Id="1152672460" Name="Hit_Record" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2725902265" Name="Play_Fourier_new" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="126321576"/>
@@ -417,19 +331,6 @@
 						<MediaRef Id="507840173"/>
 						<MediaRef Id="540080765"/>
 						<MediaRef Id="567682221"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2056255347" Name="Play_Fourier_Scene" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="304097471"/>
-						<MediaRef Id="909243550"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0.7853195" DurationMax="1.096802">
-					<MediaRefs>
-						<MediaRef Id="64915519"/>
-						<MediaRef Id="555154728"/>
-						<MediaRef Id="573026670"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2383533353" Name="Play_L3_Bad" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -444,37 +345,12 @@
 						<MediaRef Id="743988009"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4190464387" Name="Play_L3_Hit_bad" DurationType="OneShot" DurationMin="0.25094482" DurationMax="0.25094482">
-					<MediaRefs>
-						<MediaRef Id="656407472"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1593461692" Name="Play_L3_Jump" DurationType="OneShot" DurationMin="0.45161712" DurationMax="0.6098389">
-					<MediaRefs>
-						<MediaRef Id="228576140"/>
-						<MediaRef Id="371716904"/>
-						<MediaRef Id="531891813"/>
-						<MediaRef Id="644617565"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="945801009"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
 				<Event Id="3740802191" Name="Play_L3_Perfect" DurationType="OneShot" DurationMin="0.37580645" DurationMax="0.43225807">
 					<MediaRefs>
 						<MediaRef Id="300062368"/>
 						<MediaRef Id="359507387"/>
 						<MediaRef Id="520069187"/>
 						<MediaRef Id="583283732"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="1.4709709" DurationMax="1.5634321">
-					<MediaRefs>
-						<MediaRef Id="334950802"/>
-						<MediaRef Id="638651685"/>
-						<MediaRef Id="713146055"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3290345476" Name="Play_Level3_Eyesopen" DurationType="OneShot" DurationMin="2.8750114" DurationMax="2.8750114">
@@ -487,20 +363,8 @@
 						<MediaRef Id="423139562"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1239937734" Name="Play_Unlock" DurationType="OneShot" DurationMin="1.5329206" DurationMax="2.0268831">
-					<MediaRefs>
-						<MediaRef Id="968844488"/>
-						<MediaRef Id="1036840312"/>
-					</MediaRefs>
-				</Event>
 			</Events>
 			<SwitchGroups>
-				<SwitchGroup Id="3337558774" Name="Fourier_Beat">
-					<Switches>
-						<Switch Id="930712164" Name="Off"/>
-						<Switch Id="1651971902" Name="On"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="3806334376" Name="Fourier_Level">
 					<Switches>
 						<Switch Id="1793720944" Name="level3_1"/>
@@ -512,7 +376,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{9A437B27-56EF-9FC0-FA01-EFBECC7CE34C}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{76825B7F-B978-B5C3-4EEE-F371AFB7A1BF}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -547,6 +411,10 @@
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
 					<CachePath>SFX/Click_lv2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="549092072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境.wav</ShortName>
+					<CachePath>SFX/环境_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="574144294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Side_Unlock01.wav</ShortName>
@@ -600,6 +468,11 @@
 				<Event Id="2748548144" Name="Play_ELE_zoomOut" DurationType="OneShot" DurationMin="1.840647" DurationMax="1.9796057">
 					<MediaRefs>
 						<MediaRef Id="230466036"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="108392005" Name="Play_Enviroment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="549092072"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="540950438" Name="Play_Final" DurationType="OneShot" DurationMin="5.630499" DurationMax="5.630499">
@@ -750,7 +623,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{1C81AD06-2C96-8830-4D00-4C9DC3825B88}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{0435E484-8AF4-05E7-5DFF-78B7D135E1B0}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -941,5 +814,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FFD6B4B8-D0BB-E11A-2A7D-C684FD292E3C}</FileHash>
+	<FileHash>{71332756-42C3-D589-331C-E8A1FE6C9102}</FileHash>
 </SoundBanksInfo>

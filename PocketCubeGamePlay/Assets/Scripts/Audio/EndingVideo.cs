@@ -11,6 +11,9 @@ public class EndingVideo : MonoBehaviour
 
     public static Action<string> ACHIEVEMENT_01;
     public static Action<string> ACHIEVEMENT_06;
+    //setting btn ctl
+    public static Action EndingVideoStart;
+    
 
 
     private void Awake()
@@ -19,6 +22,7 @@ public class EndingVideo : MonoBehaviour
         vp.loopPointReached += ActionAfterVideoPlayed;
         PlayerPrefs.SetInt("Level", 4);
         ACHIEVEMENT_01?.Invoke("ACHIEVEMENT_01");
+        EndingVideoStart?.Invoke();
     }
     
 

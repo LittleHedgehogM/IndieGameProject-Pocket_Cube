@@ -334,7 +334,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 12eec0454970e0458947c795e9496afa
     GuidInternal: 
-    m_lastTime: -8584962225806618225
+    m_lastTime: -8584957731367847308
     List:
     - name: AMB
       guid: 693a8289dc075847879261c4f7df2655
@@ -796,8 +796,8 @@ MonoBehaviour:
         guid: 797ffb2dbab4904b97ccd9fea593b7fe
       Path: Events\Default Work Unit\End\Play_End_Final
       maxAttenuation: 0
-      maxDuration: 20
-      minDuration: 20
+      maxDuration: 170
+      minDuration: 170
     - name: Play_Enviroment
       guid: bf5bab2bce18554fb2f4f93efddb4f31
       id: 108392005
@@ -808,13 +808,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 12eec0454970e0458947c795e9496afa
-      - ElementName: AMB
+      - ElementName: Level2
         ObjectType: 4
-        guid: 693a8289dc075847879261c4f7df2655
+        guid: 328610c87edc384eaa64ab46a1077c91
       - ElementName: Play_Enviroment
         ObjectType: 3
         guid: bf5bab2bce18554fb2f4f93efddb4f31
-      Path: Events\Default Work Unit\AMB\Play_Enviroment
+      Path: Events\Default Work Unit\Level2\Play_Enviroment
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     ParentPath: Events\Level3
     guid: 0cf8e1a531472444b5a804aa41c9a9ce
     GuidInternal: 
-    m_lastTime: -8584960186258017638
+    m_lastTime: -8584957740631993407
     List:
     - name: Level3
       guid: 4d5da5d9243a184f9383b89c9664a94e
@@ -1770,7 +1770,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 551c67d894344d4c9f9422edb33c3b94
     GuidInternal: 
-    m_lastTime: -8585005084261401694
+    m_lastTime: -8584957740290253544
     List:
     - name: ELE
       guid: 823177fdcc8ebf46807e499dae36ce3f
@@ -1819,136 +1819,6 @@ MonoBehaviour:
         - ElementName: P2
           ObjectType: 8
           guid: a1a1f4c9c3f75349adce09fd5f84beef
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: FourierPhase
-      guid: a2d9535c6af6314890ef5adc8d67cbaf
-      id: 3207373244
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 551c67d894344d4c9f9422edb33c3b94
-      - ElementName: FourierPhase
-        ObjectType: 9
-        guid: a2d9535c6af6314890ef5adc8d67cbaf
-      Path: States\Default Work Unit\FourierPhase
-      values:
-      - name: None
-        guid: af35f182b65c8f499d74c992db59ec37
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: None
-          ObjectType: 8
-          guid: af35f182b65c8f499d74c992db59ec37
-      - name: phase_00
-        guid: 779b4fe26aecf146b98d742a26694ca4
-        id: 2002117581
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_00
-          ObjectType: 8
-          guid: 779b4fe26aecf146b98d742a26694ca4
-      - name: phase_01
-        guid: daa4b62b261bd34a92fc52370e51a891
-        id: 2002117580
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_01
-          ObjectType: 8
-          guid: daa4b62b261bd34a92fc52370e51a891
-      - name: phase_02
-        guid: 71c7756e3d5a854ebd97af77b564f7ae
-        id: 2002117583
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_02
-          ObjectType: 8
-          guid: 71c7756e3d5a854ebd97af77b564f7ae
-      - name: phase_03
-        guid: b0c1d499d24f4641b726499118a2713c
-        id: 2002117582
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_03
-          ObjectType: 8
-          guid: b0c1d499d24f4641b726499118a2713c
-      - name: phase_04
-        guid: bfcdf35de0022349be3b7e8d39e5d034
-        id: 2002117577
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_04
-          ObjectType: 8
-          guid: bfcdf35de0022349be3b7e8d39e5d034
-      - name: phase_05
-        guid: fc4608c5e930a94caea49f72e9d20d1c
-        id: 2002117576
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 551c67d894344d4c9f9422edb33c3b94
-        - ElementName: FourierPhase
-          ObjectType: 9
-          guid: a2d9535c6af6314890ef5adc8d67cbaf
-        - ElementName: phase_05
-          ObjectType: 8
-          guid: fc4608c5e930a94caea49f72e9d20d1c
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

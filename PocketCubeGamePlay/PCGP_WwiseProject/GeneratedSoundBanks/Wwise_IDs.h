@@ -13,7 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID HIT_RECORD = 1152672460U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PLAY_AMB_LEVEL00 = 2850739289U;
         static const AkUniqueID PLAY_AMB_MAIN = 1871703286U;
@@ -40,16 +39,11 @@ namespace AK
         static const AkUniqueID PLAY_ENVIROMENT = 108392005U;
         static const AkUniqueID PLAY_FINAL = 540950438U;
         static const AkUniqueID PLAY_FOURIER_NEW = 2725902265U;
-        static const AkUniqueID PLAY_FOURIER_SCENE = 2056255347U;
         static const AkUniqueID PLAY_HOVER = 1962302600U;
         static const AkUniqueID PLAY_JIQIREN = 1467814842U;
-        static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_L3_BAD = 2383533353U;
         static const AkUniqueID PLAY_L3_DESTROY = 507378310U;
-        static const AkUniqueID PLAY_L3_HIT_BAD = 4190464387U;
-        static const AkUniqueID PLAY_L3_JUMP = 1593461692U;
         static const AkUniqueID PLAY_L3_PERFECT = 3740802191U;
-        static const AkUniqueID PLAY_LAND = 4285282925U;
         static const AkUniqueID PLAY_LEVEL3_EYESOPEN = 3290345476U;
         static const AkUniqueID PLAY_LEVEL3_GETIT = 1157264013U;
         static const AkUniqueID PLAY_MAIN_CLICK01 = 905487977U;
@@ -72,7 +66,6 @@ namespace AK
         static const AkUniqueID PLAY_UI_CLICK = 1749424733U;
         static const AkUniqueID PLAY_UI_ROLL = 2857954946U;
         static const AkUniqueID PLAY_UI_TURN = 245126902U;
-        static const AkUniqueID PLAY_UNLOCK = 1239937734U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
@@ -93,22 +86,6 @@ namespace AK
                 static const AkUniqueID P2 = 1635194255U;
             } // namespace STATE
         } // namespace ELE
-
-        namespace FOURIERPHASE
-        {
-            static const AkUniqueID GROUP = 3207373244U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID PHASE_00 = 2002117581U;
-                static const AkUniqueID PHASE_01 = 2002117580U;
-                static const AkUniqueID PHASE_02 = 2002117583U;
-                static const AkUniqueID PHASE_03 = 2002117582U;
-                static const AkUniqueID PHASE_04 = 2002117577U;
-                static const AkUniqueID PHASE_05 = 2002117576U;
-            } // namespace STATE
-        } // namespace FOURIERPHASE
 
     } // namespace STATES
 
