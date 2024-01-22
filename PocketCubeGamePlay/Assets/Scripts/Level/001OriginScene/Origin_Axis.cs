@@ -107,7 +107,7 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (!isInteractable) {
+        if (!isInteractable && !FindObjectOfType<Origin_Controller>().isAxisInteractable()) {
             return;
         }
 

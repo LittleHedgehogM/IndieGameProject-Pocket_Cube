@@ -19,7 +19,7 @@ public class Origin_Controller : MonoBehaviour
     public static Action DisableAllAxis;
     public static Action EnableAllAxis; 
     Origin_VFXController myVFXController;
-    [SerializeField][Range(0.5f, 3f)]  private float translationTime;
+    [SerializeField][Range(0.5f, 10f)]  private float translationTime;
     [SerializeField] AnimationCurve translationCurve;
 
     [SerializeField] private GameObject Pattern_FirstPhase;
@@ -43,6 +43,10 @@ public class Origin_Controller : MonoBehaviour
     };
     private PuzzleState currentState;
 
+    public bool isAxisInteractable()
+    {
+        return enableInteraction;
+    }
 
     private void Start()
     {
@@ -87,37 +91,56 @@ public class Origin_Controller : MonoBehaviour
     private void enableSceneInteraction()
     {
         EnableAllAxis?.Invoke();
+        enableInteraction = true;
     }
 
     private void isLeftAxisClicked()
     {
+        if (!enableInteraction)
+        {
+            return;
+        }
         leftAxisClickCount = (leftAxisClickCount + 1) % 5 ;
         StartCoroutine(Rotate(Vector3.up, true, currentUpGap == 108.0f ? 72.0f : 360.0f));
-        enableInteraction = false;
+        // enableInteraction = false;
     }
     private void isRightAxisClicked()
     {
+        if (!enableInteraction)
+        {
+            return;
+        }
         leftAxisClickCount = (leftAxisClickCount - 1) % 5;
         StartCoroutine(Rotate(Vector3.up, false, currentUpGap == 108.0f ? 72.0f : 360.0f));
-        enableInteraction = false;
+        //enableInteraction = false;
     }
     private void isUpAxisClicked()
     {
+        if (!enableInteraction)
+        {
+            return;
+        }
         upAxisClickCount = (upAxisClickCount + 1) % 4 ;
         StartCoroutine(Rotate(Vector3.right, true, currentUpGap));
         currentUpGap = getNextAngleGap(currentUpGap);
-        enableInteraction = false;
+        //enableInteraction = false;
     }
     private void isDownAxisClicked()
     {
+        if (!enableInteraction)
+        {
+            return;
+        }
         upAxisClickCount = (upAxisClickCount - 1) % 4;
         StartCoroutine(Rotate(Vector3.right, false, 180.0f - currentUpGap));
         currentUpGap = getNextAngleGap(currentUpGap);
-        enableInteraction = false;
+        //enableInteraction = false;
     }
 
     private IEnumerator Rotate(Vector3 Axis, bool isClockwise, float angleGap)
     {
+        enableInteraction = false;
+
         float currentUsedTime = 0;
         float t = 0;
         float currentAngle = 0f;
