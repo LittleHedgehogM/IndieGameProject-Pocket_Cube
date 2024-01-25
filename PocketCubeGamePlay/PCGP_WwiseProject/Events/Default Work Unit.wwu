@@ -298,6 +298,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
+							<ChildrenList>
+								<Action Name="" ID="{CC9313C8-C0FC-407D-8AE1-3FE71AD4B5DD}" ShortID="1049607320">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Amb_level00" ID="{3A64D0B5-292D-4980-B785-9066520BBFB9}" WorkUnitID="{BE3FF75A-95B0-41E3-A20A-CFE7D577F38A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{A56ECCC8-D02D-4A2E-9C61-C5790579AEAD}" ShortID="617463083">
@@ -527,78 +553,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="AMB" ID="{89823A69-07DC-4758-8792-61C4F7DF2655}" ShortID="769538747">
-					<ChildrenList>
-						<Event Name="Play_Newton_environment" ID="{8AEBD1D6-A40D-41B2-8636-A8004BD0CA28}">
-							<ChildrenList>
-								<Action Name="" ID="{3DE3CDB4-EC1D-4659-8439-042D2910E65E}" ShortID="581522751">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{CC9F1289-9DB3-43A4-A764-BABD228524DB}" ShortID="286089748">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Newton_environment" ID="{B474D4B7-BB27-40D6-BD25-4F95060D0DE7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Amb_level00" ID="{72C46F57-635A-43DD-B945-5F00EBF3B32E}">
-							<ChildrenList>
-								<Action Name="" ID="{CC9313C8-C0FC-407D-8AE1-3FE71AD4B5DD}" ShortID="1049607320">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{7DC902F6-E0D7-4A95-A9F5-16674ABF5699}" ShortID="160495139">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb_level00" ID="{3A64D0B5-292D-4980-B785-9066520BBFB9}" WorkUnitID="{BE3FF75A-95B0-41E3-A20A-CFE7D577F38A}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Amb_level00" ID="{0F7220B1-D731-4552-B5DA-0600F7C65403}">
-							<ChildrenList>
-								<Action Name="" ID="{48D5C2E9-A002-44D6-9029-BCB2767C8EAB}" ShortID="24747605">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb_level00" ID="{3A64D0B5-292D-4980-B785-9066520BBFB9}" WorkUnitID="{BE3FF75A-95B0-41E3-A20A-CFE7D577F38A}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Amb_Main" ID="{9D0F7211-7BFB-450E-B300-3E178AEA13D0}">
 							<ChildrenList>
 								<Action Name="" ID="{E2009226-37E5-482F-82FB-58E8F65E24B2}" ShortID="725068210">
@@ -628,22 +582,6 @@
 								<Action Name="" ID="{7BB0FB20-5BA7-471C-A8A1-14D094737FFC}" ShortID="211023102">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Amb_Main" ID="{4DF0688B-485D-48E0-92CD-C9A28FEE98EB}" WorkUnitID="{59471A29-0E5B-41A1-8F15-2A092DB40533}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Amb_Main" ID="{17A8EBA3-1337-4865-9CA6-56ED6AABE693}">
-							<ChildrenList>
-								<Action Name="" ID="{51DD5243-BFBF-4852-9ACF-51CDB1027CCF}" ShortID="622578928">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

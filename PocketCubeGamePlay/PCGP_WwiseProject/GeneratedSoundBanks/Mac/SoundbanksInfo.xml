@@ -9,17 +9,17 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{F77E73A5-3783-593F-0DFF-E7B3C2E3FA57}">
+		<SoundBank Id="529726532" Type="User" Language="SFX" Hash="{2638F0D9-6844-014B-429B-07A759567F16}">
 			<ShortName>End</ShortName>
 			<Path>End.bnk</Path>
 			<Media>
 				<File Id="24987397" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jieweizhi02.wav</ShortName>
-					<CachePath>SFX/jieweizhi02_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/jieweizhi02_FA709363.wem</CachePath>
 				</File>
 				<File Id="222716406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jieweizuizhongzhizhizhi.wav</ShortName>
-					<CachePath>SFX/jieweizuizhongzhizhizhi_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/jieweizuizhongzhizhizhi_FA709363.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -47,43 +47,6 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1117531639" Type="User" Language="SFX" Hash="{DB733EC9-15DE-F3EE-5783-D66EB6E81788}">
-			<ShortName>AMB</ShortName>
-			<Path>AMB.bnk</Path>
-			<Media>
-				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Amb_level00.wav</ShortName>
-					<CachePath>SFX/Amb_level00_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Amb_Main.wav</ShortName>
-					<CachePath>SFX/Amb_Main_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>环境音效.wav</ShortName>
-					<CachePath>SFX/环境音效_9EDFC787.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="204222952"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1871703286" Name="Play_Amb_Main" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="626564496"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="869256356"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="352035487" Name="Stop_Amb_level00" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1557599088" Name="Stop_Amb_Main" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{73827E97-C0EB-63D0-872F-17F6A7960790}">
@@ -258,7 +221,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{92E0073A-08E1-5AF7-A638-DDAA62E83A81}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{AA000D86-3E01-A77D-D461-D5395C70EEB9}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -268,11 +231,11 @@
 				</File>
 				<File Id="126321576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fourier_level1_1.wav</ShortName>
-					<CachePath>SFX/Fourier_level1_1_2607D0D5.wem</CachePath>
+					<CachePath>SFX/Fourier_level1_1_8D508611.wem</CachePath>
 				</File>
 				<File Id="198103246" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶棋盘_伴奏.wav</ShortName>
-					<CachePath>SFX/傅里叶棋盘_伴奏_0762CC47.wem</CachePath>
+					<CachePath>SFX/傅里叶棋盘_伴奏_FA709363.wem</CachePath>
 				</File>
 				<File Id="244990863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad01.wav</ShortName>
@@ -296,7 +259,7 @@
 				</File>
 				<File Id="507840173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fourier_level2_1.wav</ShortName>
-					<CachePath>SFX/Fourier_level2_1_BDC454F3.wem</CachePath>
+					<CachePath>SFX/Fourier_level2_1_62BFC7DF.wem</CachePath>
 				</File>
 				<File Id="520069187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect01.wav</ShortName>
@@ -304,7 +267,7 @@
 				</File>
 				<File Id="540080765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶beat1.wav</ShortName>
-					<CachePath>SFX/傅里叶beat1_530A2BE9.wem</CachePath>
+					<CachePath>SFX/傅里叶beat1_F522B6C5.wem</CachePath>
 				</File>
 				<File Id="548492002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_bad03.wav</ShortName>
@@ -312,7 +275,7 @@
 				</File>
 				<File Id="567682221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>傅里叶beat3.wav</ShortName>
-					<CachePath>SFX/傅里叶beat3_E4F494D7.wem</CachePath>
+					<CachePath>SFX/傅里叶beat3_765BE8A3.wem</CachePath>
 				</File>
 				<File Id="583283732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>L3_Perfect02.wav</ShortName>
@@ -376,7 +339,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{76825B7F-B978-B5C3-4EEE-F371AFB7A1BF}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{0BAEECCB-E034-0B1C-C7B7-5B10AEB2190A}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -394,11 +357,11 @@
 				</File>
 				<File Id="97900267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁 ver2  layer2.wav</ShortName>
-					<CachePath>SFX/电磁 ver2  layer2_0762CC47.wem</CachePath>
+					<CachePath>SFX/电磁 ver2  layer2_FA709363.wem</CachePath>
 				</File>
 				<File Id="206351303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_intro.wav</ShortName>
-					<CachePath>SFX/电磁_intro_0762CC47.wem</CachePath>
+					<CachePath>SFX/电磁_intro_FA709363.wem</CachePath>
 				</File>
 				<File Id="230466036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ELE_zoomOut.wav</ShortName>
@@ -406,7 +369,7 @@
 				</File>
 				<File Id="287942534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_main loop.wav</ShortName>
-					<CachePath>SFX/电磁_main loop_0762CC47.wem</CachePath>
+					<CachePath>SFX/电磁_main loop_FA709363.wem</CachePath>
 				</File>
 				<File Id="537191680" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_lv2.wav</ShortName>
@@ -422,7 +385,7 @@
 				</File>
 				<File Id="721466819" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>电磁_outro.wav</ShortName>
-					<CachePath>SFX/电磁_outro_0762CC47.wem</CachePath>
+					<CachePath>SFX/电磁_outro_FA709363.wem</CachePath>
 				</File>
 				<File Id="800172585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>光照射.wav</ShortName>
@@ -510,13 +473,13 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{FC105205-D2D4-636D-B821-6C24FDA9BC15}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{A942503E-0365-8BEE-5B85-93CCFC4F9CF8}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
 				<File Id="1852256" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level 1 Music_LOOP.wav</ShortName>
-					<CachePath>SFX/Level 1 Music_LOOP_0762CC47.wem</CachePath>
+					<CachePath>SFX/Level 1 Music_LOOP_FA709363.wem</CachePath>
 				</File>
 				<File Id="66674890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>放上金币.wav</ShortName>
@@ -524,7 +487,7 @@
 				</File>
 				<File Id="110487141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jiqiren.wav</ShortName>
-					<CachePath>SFX/jiqiren_0762CC47.wem</CachePath>
+					<CachePath>SFX/jiqiren_FA709363.wem</CachePath>
 				</File>
 				<File Id="232274638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>台阶下降.wav</ShortName>
@@ -540,7 +503,7 @@
 				</File>
 				<File Id="489948701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Level 1 Music_Start.wav</ShortName>
-					<CachePath>SFX/Level 1 Music_Start_0762CC47.wem</CachePath>
+					<CachePath>SFX/Level 1 Music_Start_FA709363.wem</CachePath>
 				</File>
 				<File Id="649493178" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover.wav</ShortName>
@@ -623,7 +586,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{0435E484-8AF4-05E7-5DFF-78B7D135E1B0}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{CB0A182A-0278-6C59-E9A2-445246BB00E2}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -639,13 +602,17 @@
 					<ShortName>roll_long.wav</ShortName>
 					<CachePath>SFX/roll_long_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="204222952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Amb_level00.wav</ShortName>
+					<CachePath>SFX/Amb_level00_9EDFC787.wem</CachePath>
+				</File>
 				<File Id="220131361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roll02.wav</ShortName>
 					<CachePath>SFX/roll02_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="224889378" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kaichangzhizhi09.wav</ShortName>
-					<CachePath>SFX/kaichangzhizhi09_0762CC47.wem</CachePath>
+					<CachePath>SFX/kaichangzhizhi09_FA709363.wem</CachePath>
 				</File>
 				<File Id="460131778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>unlock01.wav</ShortName>
@@ -653,10 +620,15 @@
 				</File>
 				<File Id="987084990" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kaichangzhi02.wav</ShortName>
-					<CachePath>SFX/kaichangzhi02_0762CC47.wem</CachePath>
+					<CachePath>SFX/kaichangzhi02_FA709363.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2850739289" Name="Play_Amb_level00" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204222952"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1808131806" Name="Play_Opening" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="224889378"/>
@@ -686,7 +658,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8C65DC4C-FEB6-FFB5-321B-0C6F99EBC76B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FB2C8578-0656-44CB-370F-61F190D885CF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -706,12 +678,21 @@
 					<ShortName>Main_Click01.wav</ShortName>
 					<CachePath>SFX/Main_Click01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="626564496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Amb_Main.wav</ShortName>
+					<CachePath>SFX/Amb_Main_9EDFC787.wem</CachePath>
+				</File>
 				<File Id="678952220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Click02.wav</ShortName>
 					<CachePath>SFX/Main_Click02_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1871703286" Name="Play_Amb_Main" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="626564496"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="905487977" Name="Play_Main_Click01" DurationType="OneShot" DurationMin="2.8620634" DurationMax="2.8620634">
 					<MediaRefs>
 						<MediaRef Id="516143800"/>
@@ -814,5 +795,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DD91FD9C-D79C-4AA1-E8C8-1750B26B7133}</FileHash>
+	<FileHash>{8DCE5E33-4DD1-61BC-B071-DAAFF9C5BBA7}</FileHash>
 </SoundBanksInfo>

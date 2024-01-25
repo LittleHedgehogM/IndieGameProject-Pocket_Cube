@@ -115,25 +115,17 @@
 						</Property>
 						<Property Name="SampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Mac">0</Value>
+								<Value Platform="Windows">3</Value>
+								<Value Platform="Mac">3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{675F0B29-6B60-467B-A737-66F65725261C}" PluginName="Vorbis" CompanyID="0" PluginID="4">
-								<PropertyList>
-									<Property Name="QualityFactor" Type="Real32" Value="6"/>
-								</PropertyList>
-							</ConversionPlugin>
+							<ConversionPlugin Name="" ID="{101A44C5-3357-41ED-9C75-7AB4234E1C5A}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{D1B10429-5E38-43EF-AA71-95F691AA71D2}" PluginName="Vorbis" CompanyID="0" PluginID="4">
-								<PropertyList>
-									<Property Name="QualityFactor" Type="Real32" Value="6"/>
-								</PropertyList>
-							</ConversionPlugin>
+							<ConversionPlugin Name="" ID="{13A97B1A-9BDC-4A76-B809-4C6F3C381ABC}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

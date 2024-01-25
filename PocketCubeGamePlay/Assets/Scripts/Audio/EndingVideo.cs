@@ -13,7 +13,8 @@ public class EndingVideo : MonoBehaviour
     public static Action<string> ACHIEVEMENT_06;
     //setting btn ctl
     public static Action EndingVideoStart;
-    
+    private bool vidPause = false;
+
 
 
     private void Awake()
@@ -34,5 +35,25 @@ public class EndingVideo : MonoBehaviour
         ACHIEVEMENT_06?.Invoke("ACHIEVEMENT_06");
     }
 
+    void OnApplicationFocus(bool isFocus)
+    {
+        if (isFocus)
+        {
+            if (vidPause)
+            {
+                vidPause = false;
+                vp.Play();
+                AkSoundEngine.PostEvent("Resume", gameObject);
+                Debug.Log("游戏开始");
+            }
+        }
+        else
+        {
+            vp.Pause();
+            AkSoundEngine.PostEvent("Pause", gameObject);
+            vidPause = true;
+            Debug.Log("游戏暂停");
+        }
+    }
 
 }

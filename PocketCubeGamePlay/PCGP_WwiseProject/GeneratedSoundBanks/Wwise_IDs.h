@@ -51,7 +51,6 @@ namespace AK
         static const AkUniqueID PLAY_MAIN_HOVER = 3712401318U;
         static const AkUniqueID PLAY_MID_UNLOCK = 928358091U;
         static const AkUniqueID PLAY_MOVE_LOOP = 3382199950U;
-        static const AkUniqueID PLAY_NEWTON_ENVIRONMENT = 2419270649U;
         static const AkUniqueID PLAY_OPENING = 1808131806U;
         static const AkUniqueID PLAY_PLATE_DOWN = 3551052341U;
         static const AkUniqueID PLAY_PLATE_LIFT = 731342154U;
@@ -68,8 +67,6 @@ namespace AK
         static const AkUniqueID PLAY_UI_TURN = 245126902U;
         static const AkUniqueID PLAY_UNLOCK01 = 4083196823U;
         static const AkUniqueID RESUME = 953277036U;
-        static const AkUniqueID STOP_AMB_LEVEL00 = 352035487U;
-        static const AkUniqueID STOP_AMB_MAIN = 1557599088U;
         static const AkUniqueID STOP_CUBE_FINAL_LOOP = 247134943U;
         static const AkUniqueID STOP_MOVE_LOOP = 1423719756U;
     } // namespace EVENTS
@@ -151,7 +148,6 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID AMB = 1117531639U;
         static const AkUniqueID CUBE = 4052031814U;
         static const AkUniqueID END = 529726532U;
         static const AkUniqueID LEVEL0 = 2678230383U;

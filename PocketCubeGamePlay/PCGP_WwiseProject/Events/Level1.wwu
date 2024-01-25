@@ -141,6 +141,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Newton_environment" ID="{8AEBD1D6-A40D-41B2-8636-A8004BD0CA28}">
+					<ChildrenList>
+						<Action Name="" ID="{3DE3CDB4-EC1D-4659-8439-042D2910E65E}" ShortID="581522751">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb" ID="{470EFB06-4974-4F6C-9182-3C0447F162BD}" WorkUnitID="{FE348C99-CD9E-442F-A733-C963F36CB869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CC9F1289-9DB3-43A4-A764-BABD228524DB}" ShortID="286089748">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Newton_environment" ID="{B474D4B7-BB27-40D6-BD25-4F95060D0DE7}" WorkUnitID="{BD632C8C-2C38-4BC0-9821-181899EF78AA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
