@@ -915,11 +915,11 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicTrack>
-								<MusicTrack Name="jieweiqu" ID="{F695ADFA-18C7-405D-A6E8-1CD7DD80A390}" ShortID="352871075">
+								<MusicTrack Name="jieweiqu" ID="{C4EE4676-29C2-4A73-97C2-CA5A2202EDDE}" ShortID="433967285">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -929,7 +929,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="jieweiqu" ID="{489C3428-06D0-4652-A1F3-4363E708F789}">
+										<AudioFileSource Name="jieweiqu" ID="{983289D9-B929-4A2B-AEA8-03A899525384}">
 											<Language>SFX</Language>
 											<AudioFile>jieweiqu.wav</AudioFile>
 											<MediaIDList>
@@ -938,7 +938,7 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{CE47BF55-AD1B-4D2B-8130-1629D0BB364D}">
+										<MusicTransition Name="Root" ID="{B71E2C6A-BF8C-44FF-BBFB-DA4F1457959A}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -949,18 +949,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{C6FCE12D-97E0-4B84-9F0F-2BE85A422C99}">
+													<MusicTrackSequence Name="" ID="{9A71D511-CB14-4059-A006-EAFD5D4892B8}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="jieweiqu" ID="{5834F898-8868-47F0-A56D-725824C89DFF}">
+																		<MusicClip Name="jieweiqu" ID="{CE82DD7F-31D3-4501-86EA-2D4C77557E51}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="175107.278911565"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="jieweiqu" ID="{489C3428-06D0-4652-A1F3-4363E708F789}"/>
+																			<AudioSourceRef Name="jieweiqu" ID="{983289D9-B929-4A2B-AEA8-03A899525384}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
