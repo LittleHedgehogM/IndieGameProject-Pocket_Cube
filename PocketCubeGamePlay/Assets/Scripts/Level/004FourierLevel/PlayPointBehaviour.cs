@@ -91,12 +91,14 @@ public class PlayPointBehaviour : MonoBehaviour
     private void OnEnable()
     {
         OrderReduce += myOrderReduce;
-        LevelPass += LevelPassDestroy;
+        //LevelPass += LevelPassDestroy;
+        StopShoot += LevelPassDestroy;
     }
     private void OnDisable()
     {
         OrderReduce -= myOrderReduce;
-        LevelPass -= LevelPassDestroy;
+        //LevelPass -= LevelPassDestroy;
+        StopShoot -= LevelPassDestroy;
     }
 
     private IEnumerator SphereMove()
@@ -341,17 +343,32 @@ public class PlayPointBehaviour : MonoBehaviour
         }
         yield return null;
     }
-
-    private void LevelPassDestroy(int level)
+    //using stop shoot
+    private void LevelPassDestroy(string status)
     {
-        StopCoroutine(SelfReduce());
-        thisLevelPassed = true;
-        globalOrder = 0;
-        //Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
-        if (myOrder > 0)
+        if (status == "Half")
         {
-            StartCoroutine(SelfDestroy());
-        }       
+            StopCoroutine(SelfReduce());
+            //thisLevelPassed = true;
+            globalOrder = 0;
+            //Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
+            if (myOrder > 0)
+            {
+                StartCoroutine(SelfDestroy());
+            }
+        }
+        else if (status == "Entire")
+        {
+            StopCoroutine(SelfReduce());
+            thisLevelPassed = true;
+            globalOrder = 0;
+            //Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
+            if (myOrder > 0)
+            {
+                StartCoroutine(SelfDestroy());
+            }
+        }
+
     }
     private IEnumerator SelfDestroy()
     {
@@ -359,4 +376,22 @@ public class PlayPointBehaviour : MonoBehaviour
         yield return null;
         Destroy(gameObject);
     }
+    //using levelpass
+    /*    private void LevelPassDestroy(int level)
+        {
+            StopCoroutine(SelfReduce());
+            thisLevelPassed = true;
+            globalOrder = 0;
+            //Debug.Log($"[{uniqOrder}]Level pass!global Order reset to 0");
+            if (myOrder > 0)
+            {
+                StartCoroutine(SelfDestroy());
+            }       
+        }
+        private IEnumerator SelfDestroy()
+        {
+            //Debug.Log($"[{uniqOrder}]Level passed!myOder{myOrder}, destroy myself");
+            yield return null;
+            Destroy(gameObject);
+        }*/
 }

@@ -83,7 +83,7 @@ using UnityEngine;
             // Check if open
             if (panelDict.TryGetValue(name, out panel))
             {
-                Debug.LogError(name + "Already Exit");
+                Debug.Log(name + "Already Exit");
                 return null;
             }
 
@@ -118,7 +118,7 @@ using UnityEngine;
             BasePanel panel = null;
             if (!panelDict.TryGetValue(name, out panel))
             {
-                Debug.LogError(name + "is not yet open"); 
+                Debug.Log(name + "is not yet open"); 
                 return false;
             }
 

@@ -26,7 +26,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private Image titleIMG;
     [SerializeField] private Button titleBtn;
-    private bool titltBtnClick = true;
+    private bool titleBtnClicked = false;
+    public float titleBtnCDtime = 2f;
 
     private PlayerData playerData;
     [SerializeField] Button settingBtn;
@@ -78,13 +79,16 @@ public class LevelManager : MonoBehaviour
 
     public async void LoadScene(string sceneName)
     {
+        UIManager.Instance.ClosePanel(UIConst.SettingPanel);
+        
+        settingBtn.gameObject.SetActive(false);
         SceneChangeInprogress?.Invoke();
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
         _animatorTransition.Play("Crossfade_Start");
         await Task.Delay(_loadingTime);
-        //Debug.Log("1000s finish");
+        
         titleBtn.gameObject.SetActive(true);
-
+        Debug.Log("_loadingTime finished");
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
        
@@ -96,7 +100,7 @@ public class LevelManager : MonoBehaviour
             //Debug.Log("wait for click");
             //_progressBar.fillAmount = scene.progress;
 
-        }while (titltBtnClick);
+        }while (!titleBtnClicked);
 
         titleBtn.gameObject.SetActive(false);
         scene.allowSceneActivation = true;
@@ -111,9 +115,6 @@ public class LevelManager : MonoBehaviour
         //print(_animatorTransition);
 
         //Sync Data
-
-        
-
         if (playerData.level < 1 && sceneName == "NewtonLevel_GPP_Test")
         {
             playerData.level = 1;
@@ -134,10 +135,10 @@ public class LevelManager : MonoBehaviour
             print("Reached Level" + playerData.level);
         }
 
-        print("active btn");
-        settingBtn.gameObject.SetActive(true);
-        print(SceneManager.GetActiveScene().name);
-        print(sceneName);
+        //print("active btn");
+        
+        //print(SceneManager.GetActiveScene().name);
+        //print(sceneName);
         if (sceneName == "StartGame")
         {
             print("disable btn");
@@ -145,8 +146,7 @@ public class LevelManager : MonoBehaviour
         }
 
         Debug.Log("reset titleBtn state");
-        titltBtnClick = true;
-
+        settingBtn.gameObject.SetActive(true);
     }
 
 
@@ -178,8 +178,35 @@ public class LevelManager : MonoBehaviour
 
     private void OnClickTitleBtn()
     {
-        Debug.Log("clicked");
-        titltBtnClick = false;
+        if (titleBtnClicked)
+        {
+            Debug.Log("clicked return");
+            return;
+        }
+        else
+        {
+            Debug.Log("First clicked");
+            StartCoroutine(ButtonCooldown());
+            
+        }
+        
+
+    }
+    //Button cool down
+
+    private IEnumerator ButtonCooldown()
+    {
+        titleBtnClicked = true;
+        titleBtn.interactable = false;
+        //titleBtn.gameObject.SetActive(false);
+        // 执行按钮点击后的逻辑
+        // ...
+
+        yield return new WaitForSeconds(titleBtnCDtime);
+
+        titleBtnClicked = false;
+        titleBtn.interactable = true;
+        //titleBtnisCooldown = false;
     }
 
     private void EndingSettignBtnCtl()
@@ -190,7 +217,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator EndingVideoCountDown()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(40);
         settingBtn.gameObject.SetActive(true);
         yield return null;
     }

@@ -72,6 +72,7 @@ public class MainMenuPanel : BasePanel
     {
 
         Click02.Post(gameObject);
+        ClosePanel();
         //print("OnStartBtn");
         switch (PlayerPrefs.GetInt("Level"))
         {
@@ -90,11 +91,12 @@ public class MainMenuPanel : BasePanel
                 break;
         }
 
-        ClosePanel();
+        
     }
     public void OnContinueBtn()
     {
         Click02.Post(gameObject);
+        ClosePanel();
         switch (PlayerPrefs.GetInt("Level"))
         {
             case 0:
@@ -111,12 +113,13 @@ public class MainMenuPanel : BasePanel
                 break;
         }
 
-        ClosePanel();
+        //ClosePanel();
     }
 
     public void OnRestartBtn()
     {
         Click02.Post(gameObject);
+        ClosePanel();
         PlayerPrefs.SetInt("Level", 0);
         LevelManager.Instance.LoadScene("First GPP");
     }

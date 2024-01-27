@@ -464,6 +464,7 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnClickFinishButton()
     {
+        FinishButton.interactable = false;
         AkSoundEngine.PostEvent("Play_cube_final_Click", gameObject);
         FinishButton.gameObject.SetActive(false);
         StartCoroutine(FinishImageShow());
@@ -498,6 +499,7 @@ public class CubePlayUIController : MonoBehaviour
 
     private void OnClickFinishInfoBtn()
     {
+        FinishInfoBtn.interactable = false;
         AkSoundEngine.PostEvent("Stop_cube_final_loop", gameObject);
         StartCoroutine(FinishImageHide());    
     }
