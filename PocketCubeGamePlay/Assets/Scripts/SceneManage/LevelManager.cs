@@ -86,7 +86,6 @@ public class LevelManager : MonoBehaviour
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
         _animatorTransition.Play("Crossfade_Start");
         await Task.Delay(_loadingTime);
-        
         titleBtn.gameObject.SetActive(true);
         Debug.Log("_loadingTime finished");
         var scene = SceneManager.LoadSceneAsync(sceneName);
