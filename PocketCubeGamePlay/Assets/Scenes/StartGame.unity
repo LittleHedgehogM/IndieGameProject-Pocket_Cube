@@ -28454,6 +28454,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435960496720611138, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
+      propertyPath: _loadingTime
+      value: 4000
+      objectReference: {fileID: 0}
     - target: {fileID: 1058989597593142621, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_Name
       value: SettingButton
