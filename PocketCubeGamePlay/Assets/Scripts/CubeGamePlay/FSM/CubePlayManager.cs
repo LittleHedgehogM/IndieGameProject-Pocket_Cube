@@ -209,6 +209,10 @@ public class CubePlayManager : MonoBehaviour
         {
             bool isCubePlayFinished = myCubeInPlayPhase.onUpdate();
             myTimer.UpdateTimer();
+            if (myTimer.isSolveMinutesMoreThan(8))
+            {
+                UnsolveCubeAfterEightMinutes?.Invoke();
+            }
             if (isCubePlayFinished)
             {
                 currentCubePlayPhase = CubePlay.Solved;
@@ -218,10 +222,6 @@ public class CubePlayManager : MonoBehaviour
                 if (myTimer.isSolveMinutesLessThan(1))
                 {
                     SolveCubeWithinOneMins?.Invoke();
-                }
-                else if (myTimer.isSolveMinutesMoreThan(8)) 
-                {
-                    UnsolveCubeAfterEightMinutes?.Invoke();
                 }
                 if (myCubeUIController.getCurrentSwipeSteps()==0 && 
                 myCubeUIController.getIsCommutationApplied() && myCubeUIController.getIsDiagonalApplied())
