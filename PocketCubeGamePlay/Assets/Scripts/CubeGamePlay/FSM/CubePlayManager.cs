@@ -30,6 +30,7 @@ public class CubePlayManager : MonoBehaviour
     public static Action RestartCubeGame;
     public static Action SolveCubeWithinOneMins;
     public static Action UnsolveCubeAfterEightMinutes;
+    bool eventSent = false;
     public static Action OnlyUseSkillsToSolve;
 
     private void Awake()
@@ -209,9 +210,10 @@ public class CubePlayManager : MonoBehaviour
         {
             bool isCubePlayFinished = myCubeInPlayPhase.onUpdate();
             myTimer.UpdateTimer();
-            if (myTimer.isSolveMinutesMoreThan(8))
+            if (!eventSent && myTimer.isSolveMinutesMoreThan(8))
             {
                 UnsolveCubeAfterEightMinutes?.Invoke();
+                eventSent = true;
             }
             if (isCubePlayFinished)
             {
@@ -222,6 +224,11 @@ public class CubePlayManager : MonoBehaviour
                 if (myTimer.isSolveMinutesLessThan(1))
                 {
                     SolveCubeWithinOneMins?.Invoke();
+                }
+                else if (myTimer.isSolveMinutesMoreThan(8))
+                {
+                    UnsolveCubeAfterEightMinutes?.Invoke();
+                    eventSent = true;
                 }
                 if (myCubeUIController.getCurrentSwipeSteps()==0 && 
                 myCubeUIController.getIsCommutationApplied() && myCubeUIController.getIsDiagonalApplied())
