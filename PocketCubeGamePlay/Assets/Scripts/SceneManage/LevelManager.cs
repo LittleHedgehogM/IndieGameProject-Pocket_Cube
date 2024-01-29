@@ -55,11 +55,35 @@ public class LevelManager : MonoBehaviour
         titleBtn.onClick.AddListener(OnClickTitleBtn);
         titleBtn.gameObject.SetActive(false);
 
+
+        //local save data scan
+        if (PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version")) //有存档但是旧档
+        {
+            PlayerPrefs.SetString("Version", "1.10.20240130");
+            Debug.Log("Create Version data for old players,and load data");
+            LoadData();
+            return;
+        }
+        else if (PlayerPrefs.HasKey("Version")) //版本检测
+        {
+            if (PlayerPrefs.GetString("Version") == "1.10.20240130")
+            {
+                Debug.Log("version correct, load data");
+                LoadData();
+                return;
+            }
+        }
+        else if (!PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version"))
+        {
+            CreatePlayerData(); //新用户
+            Debug.Log("Create Save data for new players");
+        }
     }
 
     void Start()
     {
-        CreatePlayerData();
+        
+        
         //print(_animatorTransition);
     }
 
@@ -104,16 +128,8 @@ public class LevelManager : MonoBehaviour
         titleBtn.gameObject.SetActive(false);
         scene.allowSceneActivation = true;
         _animatorTransition.SetTrigger("End");
-        //_animatorTransition.Play("Entry");
-        //_animatorTransition = GameObject.Find("CrossFade").GetComponent<Animator>();
 
-        //_animatorTransition.Play("Entry");
 
-        //_loaderCanvas.SetActive(false);
-
-        //print(_animatorTransition);
-
-        //Sync Data
         if (playerData.level < 1 && sceneName == "NewtonLevel_GPP_Test")
         {
             playerData.level = 1;
@@ -152,7 +168,8 @@ public class LevelManager : MonoBehaviour
     //PlayerPrefs Load and Save
     private void CreatePlayerData()
     {
-        playerData = new PlayerData(0,0);
+        playerData = new PlayerData(0,0, "1.10.20240130");
+        
     }
     public void SaveData()
     {
@@ -163,7 +180,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadData()
     {
-        playerData = new PlayerData(PlayerPrefs.GetInt("Level"), PlayerPrefs.GetInt("Tutorials"));
+        playerData = new PlayerData(PlayerPrefs.GetInt("Level"), PlayerPrefs.GetInt("Tutorials"), PlayerPrefs.GetString("Version"));
 
         Debug.Log("Reached Level: " + playerData.level + "; Seen Tutorials: " + playerData.tutorials);
     }

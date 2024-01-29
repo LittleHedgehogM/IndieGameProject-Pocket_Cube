@@ -13,6 +13,7 @@ public class SteamIntegration : MonoBehaviour
         {
             Steamworks.SteamClient.Init(2682570);
             PrintYourName();
+
         }
         catch (System.Exception e)
         {
@@ -79,8 +80,26 @@ public class SteamIntegration : MonoBehaviour
             var finalAch = new Steamworks.Data.Achievement("ACHIEVEMENT_08");
             finalAch.Trigger();
         }
-        //Debug.Log($"Achievement {api} unlocked");
+        if (!ach.State)
+        {
+            StartCoroutine(AchivementsCheck(api));
+        }
+        
     }
 
-    
+    IEnumerator AchivementsCheck(string api)
+    {
+        var ach = new Steamworks.Data.Achievement(api);
+        if (ach.State)
+        {
+            yield break;
+        }
+        else
+        {
+            AchievementTrigger(api);
+        }
+        yield return null;
+    }
+
+
 }

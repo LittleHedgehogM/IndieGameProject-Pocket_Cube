@@ -31,8 +31,8 @@ public class FourierColorTransition : MonoBehaviour
 
     private void OnDisable()
     {
-        RhythmCallBack.Rhythm_Bar -= StartColorTransition;
-        PlayPointBehaviour.LevelPass -= LevelUnlock;
+        RhythmCallBack.Rhythm_Bar = null;
+        PlayPointBehaviour.LevelPass = null;
     }
 
     private void StartColorTransition()

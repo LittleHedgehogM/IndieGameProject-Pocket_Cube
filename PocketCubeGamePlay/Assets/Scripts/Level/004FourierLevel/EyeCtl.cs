@@ -28,6 +28,9 @@ public class EyeCtl : MonoBehaviour
         audioPlayer = GameObject.Find("WwiseFourier");
         eyeInner.SetActive(false);
 
+        //reset fourier status
+        PlayPointBehaviour.inLevel = 1;
+
     }
 
     private void OnEnable()
