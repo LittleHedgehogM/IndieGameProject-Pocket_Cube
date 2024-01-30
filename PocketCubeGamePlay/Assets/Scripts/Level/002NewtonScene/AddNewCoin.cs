@@ -10,9 +10,9 @@ public class AddNewCoin : MonoBehaviour
 
     [SerializeField]
     private AK.Wwise.Event addCoin;
-    private float range = 0.02f;
+    private float range = 0.1f;
 
-    public void AddCoin(GameObject coin)
+    public void AddCoin(GameObject coin, bool playSound)
     {
          Scale myScale = this.GetComponent<Scale>();
 
@@ -20,15 +20,17 @@ public class AddNewCoin : MonoBehaviour
          {
             Vector3 randomOffset = new Vector3(Random.Range(-range, range), 0, Random.Range(-range, range));
             coin.transform.rotation = coinInitPosition.transform.rotation;
+            coin.transform.position = coinInitPosition.transform.position + randomOffset;
             coin.transform.parent = coinInitPosition.transform;
-            coin.transform.localPosition = Vector3.zero;
-            coin.transform.localPosition += randomOffset;
 
             coin.GetComponent<Rigidbody>().isKinematic = false;
             myScale.insertCoin(coin);
 
-            addCoin.Post(coinInitPosition);
-            //print("Total weight = " + myScale.getTotalWeight());
+            if (playSound) 
+            {
+                addCoin.Post(coinInitPosition);
+            }
+            
         }
     }
 

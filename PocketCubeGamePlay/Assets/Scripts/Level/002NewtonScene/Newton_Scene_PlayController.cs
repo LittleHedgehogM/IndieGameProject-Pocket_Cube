@@ -87,12 +87,12 @@ public class NewtonScenePlayController : MonoBehaviour
         myVFXController     = FindObjectOfType<Newton_Scene_VFX_Controller>();
         myLevelLoader       = FindObjectOfType<LevelLoaderScript>();
         myCursorController = FindObjectOfType<Newton_CursorController>();
-        Scale_Left.GetComponent<Scale>().insertCoin(coin1);
-        Scale_Left.GetComponent<Scale>().insertCoin(coin2);
-        Scale_Left.GetComponent<Scale>().insertCoin(coin3);
+        Scale_Left.GetComponent<AddNewCoin>().AddCoin(coin1, false);
+        Scale_Left.GetComponent<AddNewCoin>().AddCoin(coin2, false);
+        Scale_Left.GetComponent<AddNewCoin>().AddCoin(coin3, false);
 
-        Scale_Right.GetComponent<Scale>().insertCoin(coin4);
-        Scale_Right.GetComponent<Scale>().insertCoin(coin5);
+        Scale_Right.GetComponent<AddNewCoin>().AddCoin(coin4, false);
+        Scale_Right.GetComponent<AddNewCoin>().AddCoin(coin5, false);
 
         Scale_Left.GetComponent<Scale>().InitScalePosition();
         Scale_Right.GetComponent<Scale>().InitScalePosition();
@@ -406,7 +406,7 @@ public class NewtonScenePlayController : MonoBehaviour
                 isPlayingSwallowAnimation = coinAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
                 if (!isPlayingSwallowAnimation)
                 {
-                    currentScale.GetComponent<AddNewCoin>().AddCoin(activeCoin);
+                    currentScale.GetComponent<AddNewCoin>().AddCoin(activeCoin, true);
                     myVFXController.PlayScalePutVFX(currentScale.transform);
                     StartCoroutine(currentScale.GetComponent<Scale>().UpdatePosition());
                     myPlayStatus = PlayStatus.InDisplayEyeAndScale;

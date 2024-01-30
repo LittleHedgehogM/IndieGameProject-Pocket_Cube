@@ -2331,8 +2331,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.14076997, y: 0.039020825, z: 0.14820446}
-  m_Center: {x: 0.00096536276, y: -0.00045351984, z: -0.0018094539}
+  m_Size: {x: 0.20798491, y: 0.042473562, z: 0.20449144}
+  m_Center: {x: -0.0067911474, y: 0.0012728423, z: -0.007762814}
 --- !u!1 &374925424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3477864577585124648, guid: c2da24b05a72f5e45bacd3dfd32fb73a, type: 3}
@@ -8634,8 +8634,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.24012586, y: 0.07659413, z: 0.35603684}
-  m_Center: {x: -0.00270747, y: -0.019240158, z: -0.028290534}
+  m_Size: {x: 0.24012586, y: 0.08012672, z: 0.35603684}
+  m_Center: {x: -0.00270747, y: -0.017473865, z: -0.028290534}
 --- !u!1001 &2101260115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9913,7 +9913,7 @@ MonoBehaviour:
   heightGap: 0.4
   translationTime: 0.5
   WeightText: {fileID: 1167593187}
-  coinInitPosition: {fileID: 374201824}
+  coinInitPos: {fileID: 374201825}
   scaleUp:
     idInternal: 0
     valueGuidInternal: 
@@ -10774,7 +10774,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -3606721767366223967, guid: b3d7bd84aa36875498167b6b87c1ec1d, type: 3}
+  m_Mesh: {fileID: -3606721767366223967, guid: 90b50b46acba444478fd6825b4109a8c, type: 3}
 --- !u!114 &8462618663764177723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10807,7 +10807,7 @@ MonoBehaviour:
   heightGap: 0.4
   translationTime: 0.5
   WeightText: {fileID: 1623891133}
-  coinInitPosition: {fileID: 1564335986}
+  coinInitPos: {fileID: 1564335987}
   scaleUp:
     idInternal: 0
     valueGuidInternal: 
