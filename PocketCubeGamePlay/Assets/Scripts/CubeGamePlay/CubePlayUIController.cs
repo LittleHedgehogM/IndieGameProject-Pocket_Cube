@@ -275,12 +275,6 @@ public class CubePlayUIController : MonoBehaviour
         }
     }
 
-    //public void onSelectDiagonal()
-    //{
-    //    ColorBlock buttonColorBlocks = DiagonalButton.colors;
-    //    buttonColorBlocks.normalColor = Color.red;
-
-    //}
 
     void onCommutationFinished()
     {
@@ -421,7 +415,7 @@ public class CubePlayUIController : MonoBehaviour
         yield return null;
     }
 
-
+    
     /* ================ Tutorial Panel ==================== */
 
     public static Action<string> ACHIEVEMENT_03;

@@ -8434,6 +8434,10 @@ PrefabInstance:
       propertyPath: AimImage
       value: 
       objectReference: {fileID: 947253068}
+    - target: {fileID: 6413001733474171564, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
+      propertyPath: mouseClickExitTutorial
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9209855465191028568, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
@@ -9913,7 +9917,6 @@ MonoBehaviour:
   heightGap: 0.4
   translationTime: 0.5
   WeightText: {fileID: 1167593187}
-  coinInitPos: {fileID: 374201825}
   scaleUp:
     idInternal: 0
     valueGuidInternal: 
@@ -10807,7 +10810,6 @@ MonoBehaviour:
   heightGap: 0.4
   translationTime: 0.5
   WeightText: {fileID: 1623891133}
-  coinInitPos: {fileID: 1564335987}
   scaleUp:
     idInternal: 0
     valueGuidInternal: 

@@ -2635,6 +2635,10 @@ PrefabInstance:
       propertyPath: AimImage
       value: 
       objectReference: {fileID: 203607799}
+    - target: {fileID: 6413001733474171564, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
+      propertyPath: mouseClickExitTutorial
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9209855465191028568, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}

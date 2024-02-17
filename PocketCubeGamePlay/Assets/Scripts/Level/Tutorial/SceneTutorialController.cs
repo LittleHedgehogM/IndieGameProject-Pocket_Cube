@@ -22,6 +22,8 @@ public class SceneTutorialController : MonoBehaviour
     float tutorialAlphaVal = 1.0f;
     Vector3 aimScale = Vector3.one;
 
+    float tutorialShowTime = 0;
+
     private void Start()
     {
         tutorialAlphaVal = TutorialImage.color.a;
@@ -36,6 +38,8 @@ public class SceneTutorialController : MonoBehaviour
         {
             TutorialEnds?.Invoke();
         }
+
+        tutorialShowTime = 0;
     }
 
     private void OnEnable()
@@ -71,7 +75,13 @@ public class SceneTutorialController : MonoBehaviour
 
     private void Update()
     {
-        if (mouseClickExitTutorial && Input.GetMouseButtonUp(0) && TutorialImage.color.a == tutorialAlphaVal) 
+        if (tutorialShowTime < seconds)
+        {
+            tutorialShowTime += Time.deltaTime;
+        }
+        
+        if (tutorialShowTime > 2.0f && mouseClickExitTutorial 
+            && Input.GetMouseButtonUp(0) && TutorialImage.color.a == tutorialAlphaVal) 
         {
             StartCoroutine(hideTutorial());
         }

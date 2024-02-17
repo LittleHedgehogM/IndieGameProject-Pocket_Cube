@@ -68,7 +68,7 @@ public class CubeConfigurationPhase : GameplayPhase
         currentState = ConfigurationState.Check;
         animationFinished = true;
         myUIController.InitCubePlayUIElements();
-        canClickTutorial = false;
+        canClickTutorial = true;
 
     }
 

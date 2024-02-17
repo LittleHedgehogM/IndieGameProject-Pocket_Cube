@@ -29410,6 +29410,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6413001733474171564, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
+      propertyPath: mouseClickExitTutorial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8933482202316228598, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -42572,7 +42576,7 @@ MonoBehaviour:
   seconds: 7
   AimImage: {fileID: 181380332}
   disableTutorial: 0
-  mouseClickExitTutorial: 0
+  mouseClickExitTutorial: 1
 --- !u!4 &1207072965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417676, guid: 72949fa39c284664683eb9778cbd227d, type: 3}
