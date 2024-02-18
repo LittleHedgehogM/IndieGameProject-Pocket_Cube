@@ -109,29 +109,12 @@ public class SceneTutorialController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(seconds);
-        if (!mouseClickExitTutorial) 
+        if (TutorialImage.color.a == tutorialAlphaVal) 
         {           
             StartCoroutine(hideTutorial());
         }
+        
 
-        //currentTime = 0;
-        //translationTime = 1.0f;
-        //t = currentTime / translationTime;
-        //targetAlpha = 0f;
-
-        //while (t < 1)
-        //{
-        //    currentTime += Time.deltaTime;
-        //    t = currentTime / translationTime;
-        //    float currentAlpha = Mathf.Lerp(tutorialAlphaVal, targetAlpha, t);
-        //    TutorialImage.color = new Color(TutorialImage.color.r, TutorialImage.color.g, TutorialImage.color.b, currentAlpha);
-        //    yield return null;
-
-        //}
-        //TutorialImage.transform.localScale = Vector3.zero;
-        //yield return null;
-        //TutorialEnds?.Invoke();
-        //StartCoroutine(showAimImage());
         
     }
 

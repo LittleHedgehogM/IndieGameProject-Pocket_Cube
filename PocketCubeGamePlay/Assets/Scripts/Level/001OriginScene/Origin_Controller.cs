@@ -277,7 +277,9 @@ public class Origin_Controller : MonoBehaviour
             {
                  if (leftAxisClickCount == 4 || leftAxisClickCount == -1)
                  {
-                      Debug.Log("FirstPhaseSolved");                
+                      Debug.Log("FirstPhaseSolved");
+                      leftAxis.setActive(false);
+                      rightAxis.setActive(false);
                       StartCoroutine(myRotationTarget.FinishPhaseOne());
                       currentState = PuzzleState.Phase_Two;
                       DisableAllAxis?.Invoke();
@@ -290,6 +292,8 @@ public class Origin_Controller : MonoBehaviour
                 if (upAxisClickCount == 2 || upAxisClickCount == -2)
                 {
                       Debug.Log("SecondPhaseSolved");
+                      upAxis.setActive(false);
+                      downAxis.setActive(false);
                       StartCoroutine(myRotationTarget.FinishPhaseTwo());
                       //myRotationTarget.FinishPhaseTwo();
                       currentState = PuzzleState.Phase_Three;
