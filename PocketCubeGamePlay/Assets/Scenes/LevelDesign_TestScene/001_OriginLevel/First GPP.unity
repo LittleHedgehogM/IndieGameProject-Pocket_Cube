@@ -4871,10 +4871,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u65CB\u8F6C\u5230\u539F\u70B9"
+  m_text: "\u65CB\u8F6C\u5E76\u627E\u5230\u7279\u6B8A\u9762"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
-  m_sharedMaterial: {fileID: 2315783275360767495, guid: 4638dc5f70af56042971772bdbbda29b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c5be1cb8b319d74ea5a1f54efa0a86e, type: 2}
+  m_sharedMaterial: {fileID: -5743127788362054994, guid: 1c5be1cb8b319d74ea5a1f54efa0a86e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9338,7 +9338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268758888622118719, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
       propertyPath: m_text
-      value: rotate unique face to center
+      value: rotate and find the unique face
       objectReference: {fileID: 0}
     - target: {fileID: 2268758888622118719, guid: daa30d7ebdf858448b071008dfe15fc8, type: 3}
       propertyPath: m_margin.z
