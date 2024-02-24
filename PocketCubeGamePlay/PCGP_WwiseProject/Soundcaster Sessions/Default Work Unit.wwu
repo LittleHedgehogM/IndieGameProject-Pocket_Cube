@@ -49,16 +49,48 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_cube_final" ID="{7CB32EA9-5549-4B03-A2CE-81BAE8E7C929}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_L3_Perfect" ID="{DD981244-3F47-4204-B419-45FBBADA0B09}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Opening" ID="{25B5FA18-5ADD-4F36-AC2A-F77087C3C686}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="cube_final_Click" ID="{972DC382-B44B-44E0-83B2-6CF8795F4CD9}" WorkUnitID="{9B84821C-9241-469F-A19B-BB1A25FFD965}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_L3_Bad" ID="{C9781B22-A9CC-4B83-AF03-F39F261B776D}" WorkUnitID="{A5E1F80C-4731-4424-B5A8-04AA41C9A9CE}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_jiqiren" ID="{8F552C66-6F10-4667-A45F-1152762F880F}" WorkUnitID="{75B7C3FD-1FB2-47ED-B692-CA4598A411EF}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_cube_final_loop" ID="{3A51C281-42E1-4ACE-92A7-7A5B53CCABE3}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_End_Final" ID="{2DFB7F79-B4BA-4B90-97CC-D9FEA593B7FE}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_jiqiren" ID="{8F552C66-6F10-4667-A45F-1152762F880F}" WorkUnitID="{75B7C3FD-1FB2-47ED-B692-CA4598A411EF}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Move_Loop" ID="{E7FE30AE-1A00-4F73-9B25-BCB21683FE70}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Move_Loop" ID="{2E20446E-01B6-4880-A13B-1CD06146A423}" WorkUnitID="{45C0EE12-7049-45E0-8947-C795E9496AFA}"/>
+							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">

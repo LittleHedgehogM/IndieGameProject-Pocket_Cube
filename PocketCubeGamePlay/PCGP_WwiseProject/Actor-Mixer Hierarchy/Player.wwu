@@ -4,6 +4,13 @@
 		<WorkUnit Name="Player" ID="{FDC75E15-3C3B-47A1-AE59-5F4063B7BBBA}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="SFX_Loop" ID="{FB29EF61-1045-45A9-A283-9A038FE724E7}" ShortID="605770500">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="SFX" ID="{077BDD57-A8D4-4890-9391-2B11CCDE99D0}" WorkUnitID="{717B1190-B12F-405D-BB87-0F2829CE9BD4}"/>
@@ -15,8 +22,18 @@
 					<ChildrenList>
 						<Sound Name="Move_Loop" ID="{C7D76B61-51B2-4303-9EF8-1B3D3FFCC1F6}" ShortID="35087028">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

@@ -89,7 +89,7 @@
 											<DuckingParam>
 												<Volume>-3</Volume>
 												<FadeInTime>0</FadeInTime>
-												<FadeOutTime>3</FadeOutTime>
+												<FadeOutTime>0.5</FadeOutTime>
 												<FadeCurve>FadeLinear</FadeCurve>
 											</DuckingParam>
 										</DuckItem>
@@ -98,7 +98,7 @@
 											<DuckingParam>
 												<Volume>-4</Volume>
 												<FadeInTime>0</FadeInTime>
-												<FadeOutTime>1.5</FadeOutTime>
+												<FadeOutTime>0.5</FadeOutTime>
 												<FadeCurve>FadeLinear</FadeCurve>
 											</DuckingParam>
 										</DuckItem>
@@ -112,9 +112,9 @@
 										<DuckItem>
 											<BusRef Name="Music" ID="{46763D85-73A1-4E0A-A2C7-DADD2C92891F}"/>
 											<DuckingParam>
-												<Volume>-9</Volume>
-												<FadeInTime>1.5</FadeInTime>
-												<FadeOutTime>2</FadeOutTime>
+												<Volume>-5</Volume>
+												<FadeInTime>3</FadeInTime>
+												<FadeOutTime>3</FadeOutTime>
 												<FadeCurve>FadeLinear</FadeCurve>
 											</DuckingParam>
 										</DuckItem>

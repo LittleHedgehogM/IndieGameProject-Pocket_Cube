@@ -31,7 +31,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{07B2EC00-4FCC-24C6-0E5D-79F0456FB7AA}">
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{E6D7AA97-C5EC-DD1C-9DB9-E09E73DC4E9E}">
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<Media>
@@ -49,7 +49,7 @@
 				<Event Id="1423719756" Name="Stop_Move_Loop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{73827E97-C0EB-63D0-872F-17F6A7960790}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DDDFAD7C-E7C4-3891-0E66-6E0A47E55F9D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -221,7 +221,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{86C02064-B2C0-4E42-BE31-085527FD4531}">
+		<SoundBank Id="2678230380" Type="User" Language="SFX" Hash="{0F7A2CFE-8B3A-52A2-7850-5BE5EF8ADF95}">
 			<ShortName>Level3</ShortName>
 			<Path>Level3.bnk</Path>
 			<Media>
@@ -339,7 +339,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{3B1AB43B-9922-0119-B492-9A55B963DEB4}">
+		<SoundBank Id="2678230381" Type="User" Language="SFX" Hash="{0183559A-D40A-E733-46E3-E27269E65FFA}">
 			<ShortName>Level2</ShortName>
 			<Path>Level2.bnk</Path>
 			<Media>
@@ -473,7 +473,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{A942503E-0365-8BEE-5B85-93CCFC4F9CF8}">
+		<SoundBank Id="2678230382" Type="User" Language="SFX" Hash="{160F6681-99CD-2DD7-6B02-2190AFDBEB2B}">
 			<ShortName>Level1</ShortName>
 			<Path>Level1.bnk</Path>
 			<Media>
@@ -521,6 +521,10 @@
 					<ShortName>台阶上升.wav</ShortName>
 					<CachePath>SFX/台阶上升_63626198.wem</CachePath>
 				</File>
+				<File Id="869256356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>环境音效.wav</ShortName>
+					<CachePath>SFX/环境音效_9EDFC787.wem</CachePath>
+				</File>
 				<File Id="1010870477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cube_drop.wav</ShortName>
 					<CachePath>SFX/Cube_drop_3F75BDB9.wem</CachePath>
@@ -567,6 +571,14 @@
 						<MediaRef Id="1852256"/>
 						<MediaRef Id="110487141"/>
 						<MediaRef Id="489948701"/>
+					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="2419270649" Name="Play_Newton_environment"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2419270649" Name="Play_Newton_environment" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869256356"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3551052341" Name="Play_Plate_Down" DurationType="OneShot" DurationMin="1.7832654" DurationMax="1.7832654">
@@ -712,7 +724,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{6CE7BE83-A68A-04FB-51E0-69B2C3D40348}">
+		<SoundBank Id="4052031814" Type="User" Language="SFX" Hash="{D2BBF93E-233D-2162-E9CE-89DD351F1FD4}">
 			<ShortName>Cube</ShortName>
 			<Path>Cube.bnk</Path>
 			<Media>
@@ -795,5 +807,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{91225F85-D98A-398E-F232-D4454686E319}</FileHash>
+	<FileHash>{74A5BE5C-F9FA-B29B-8D63-1293F1B921FD}</FileHash>
 </SoundBanksInfo>

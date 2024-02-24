@@ -28737,7 +28737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 435960496720611138, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: _loadingTime
-      value: 4000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1058989597593142621, guid: 432a8c90005bfa040a20c1c1ac9e7dd0, type: 3}
       propertyPath: m_Name
@@ -36395,7 +36395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1530276707693218133
 MeshFilter:
   m_ObjectHideFlags: 0

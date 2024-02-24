@@ -32,6 +32,9 @@ public class LevelManager : MonoBehaviour
     private PlayerData playerData;
     [SerializeField] Button settingBtn;
 
+    private string   latestVersion = "1.11.20240224";
+    private string previousVersion = "1.10.20240130";
+
     void Awake()
     {
         if (Instance == null)
@@ -57,25 +60,28 @@ public class LevelManager : MonoBehaviour
 
 
         //local save data scan
-        if (PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version")) //有存档但是旧档
+        if (PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version")) // 有存档 有版本号前的存档  =》赋予最新版本号
         {
-            PlayerPrefs.SetString("Version", "1.10.20240130");
+            PlayerPrefs.SetString("Version", latestVersion);
             Debug.Log("Create Version data for old players,and load data");
             LoadData();
             return;
         }
-        else if (PlayerPrefs.HasKey("Version")) //版本检测
+        else if (PlayerPrefs.GetString("Version") == previousVersion) // 有存档 上个版本存档 =》 更新版本号
         {
-            if (PlayerPrefs.GetString("Version") == "1.10.20240130")
-            {
+            PlayerPrefs.SetString("Version", latestVersion);
+            Debug.Log("Update Version successfully");
+            return;
+        }
+        else if (PlayerPrefs.GetString("Version") == latestVersion) //有存档 当前版本存档 =》 读取存档
+        {         
                 Debug.Log("version correct, load data");
                 LoadData();
-                return;
-            }
+                return;          
         }
-        else if (!PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version"))
+        else if (!PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version"))//新用户 创建存档
         {
-            CreatePlayerData(); //新用户
+            CreatePlayerData(); 
             Debug.Log("Create Save data for new players");
         }
     }
@@ -168,7 +174,7 @@ public class LevelManager : MonoBehaviour
     //PlayerPrefs Load and Save
     private void CreatePlayerData()
     {
-        playerData = new PlayerData(0,0, "1.10.20240130");
+        playerData = new PlayerData(0,0, latestVersion); //Creata data with Latest version 
         
     }
     public void SaveData()
