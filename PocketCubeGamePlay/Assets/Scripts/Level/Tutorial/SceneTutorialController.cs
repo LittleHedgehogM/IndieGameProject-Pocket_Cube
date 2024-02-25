@@ -13,7 +13,7 @@ public class SceneTutorialController : MonoBehaviour
     [SerializeField] Image AimImage;
     [SerializeField] bool disableTutorial;
     [SerializeField] bool mouseClickExitTutorial;
-    [SerializeField][Range(2, 10)]  float secondsBeforeClick;
+    [SerializeField][Range(2, 10)]  float minSeconds;
 
     public static Action TutorialEnds;
 
@@ -80,7 +80,7 @@ public class SceneTutorialController : MonoBehaviour
 
         tutorialShowTime += Time.deltaTime;
 
-        if (Input.GetMouseButtonUp(0) && tutorialShowTime > secondsBeforeClick 
+        if (Input.GetMouseButtonUp(0) && tutorialShowTime > minSeconds 
             && mouseClickExitTutorial && TutorialImage.color.a == tutorialAlphaVal)
         {
             StartCoroutine(hideTutorial());
