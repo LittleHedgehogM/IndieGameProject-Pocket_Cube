@@ -9,10 +9,11 @@ using static System.TimeZoneInfo;
 public class SceneTutorialController : MonoBehaviour
 {
     [SerializeField] Image TutorialImage;
-    [SerializeField] [Range (0, 10)] int seconds;
+    [SerializeField] [Range (0, 10)] int maximumSeconds;
     [SerializeField] Image AimImage;
     [SerializeField] bool disableTutorial;
     [SerializeField] bool mouseClickExitTutorial;
+    [SerializeField][Range(2, 10)]  float secondsBeforeClick;
 
     public static Action TutorialEnds;
 
@@ -61,8 +62,9 @@ public class SceneTutorialController : MonoBehaviour
 
     public void TutorialStarts()
     {
-        if (seconds >0) 
+        if (maximumSeconds > 0 ) 
         {
+            tutorialShowTime = 0;
             StartCoroutine(showTutorial());
         }
         else 
@@ -75,13 +77,11 @@ public class SceneTutorialController : MonoBehaviour
 
     private void Update()
     {
-        if (tutorialShowTime < seconds)
-        {
-            tutorialShowTime += Time.deltaTime;
-        }
-        
-        if (tutorialShowTime > 2.0f && mouseClickExitTutorial 
-            && Input.GetMouseButtonUp(0) && TutorialImage.color.a == tutorialAlphaVal) 
+
+        tutorialShowTime += Time.deltaTime;
+
+        if (Input.GetMouseButtonUp(0) && tutorialShowTime > secondsBeforeClick 
+            && mouseClickExitTutorial && TutorialImage.color.a == tutorialAlphaVal)
         {
             StartCoroutine(hideTutorial());
         }
@@ -89,7 +89,6 @@ public class SceneTutorialController : MonoBehaviour
 
     private IEnumerator showTutorial()
     {
-
         // show tutorial
         TutorialImage.transform.localScale = tutorialScale;
 
@@ -108,13 +107,11 @@ public class SceneTutorialController : MonoBehaviour
 
         }
 
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(maximumSeconds);
         if (TutorialImage.color.a == tutorialAlphaVal) 
         {           
             StartCoroutine(hideTutorial());
         }
-        
-
         
     }
 

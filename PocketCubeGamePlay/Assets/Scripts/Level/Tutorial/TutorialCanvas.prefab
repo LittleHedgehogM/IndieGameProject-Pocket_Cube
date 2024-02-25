@@ -117,9 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TutorialImage: {fileID: 3913851002230697477}
-  seconds: 0
+  maximumSeconds: 7
   AimImage: {fileID: 4736051985646785086}
   disableTutorial: 0
+  mouseClickExitTutorial: 1
+  secondsBeforeClick: 2.7
 --- !u!1 &3952596782485541206
 GameObject:
   m_ObjectHideFlags: 0
