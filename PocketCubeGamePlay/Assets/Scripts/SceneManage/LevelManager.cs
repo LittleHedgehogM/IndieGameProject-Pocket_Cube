@@ -110,7 +110,7 @@ public class LevelManager : MonoBehaviour
     public async void LoadScene(string sceneName)
     {
         UIManager.Instance.ClosePanel(UIConst.SettingPanel);
-        
+
         settingBtn.gameObject.SetActive(false);
         SceneChangeInprogress?.Invoke();
         titleIMG.sprite = Resources.Load<Sprite>(sceneName);
@@ -135,26 +135,8 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = true;
         _animatorTransition.SetTrigger("End");
 
+ 
 
-        if (playerData.level < 1 && sceneName == "NewtonLevel_GPP_Test")
-        {
-            playerData.level = 1;
-            SaveData();
-            print("Reached Level" + playerData.level);
-        }
-        else if(playerData.level < 2 && sceneName == "ELE_GPP Temp")
-        {
-            playerData.level = 2;
-            SaveData();
-            print("Reached Level" + playerData.level);
-        }
-
-        else if(playerData.level < 3 && sceneName == "Level_Fourier")
-        {
-            playerData.level = 3;
-            SaveData();
-            print("Reached Level" + playerData.level);
-        }
 
         //print("active btn");
         

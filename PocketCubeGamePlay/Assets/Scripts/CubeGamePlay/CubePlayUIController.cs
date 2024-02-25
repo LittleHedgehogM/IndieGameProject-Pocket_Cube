@@ -301,7 +301,10 @@ public class CubePlayUIController : MonoBehaviour
        myTipsText.transform.localScale = Vector3.zero;
        TutorialImage.transform.localScale = Vector3.zero;
        StartCoroutine(FinishRoutine());
-       //FinishButton.gameObject.SetActive(true);
+
+        //Savedata
+        SaveLevel(PlayerPrefs.GetInt("Level"));
+        //FinishButton.gameObject.SetActive(true);
 
     }
 
@@ -461,7 +464,14 @@ public class CubePlayUIController : MonoBehaviour
         FinishButton.interactable = false;
         AkSoundEngine.PostEvent("Play_cube_final_Click", gameObject);
         FinishButton.gameObject.SetActive(false);
+        
+
         StartCoroutine(FinishImageShow());
+    }
+
+    private void SaveLevel(int currentLevel)
+    {
+        PlayerPrefs.SetInt("Level", currentLevel + 1);
     }
 
     private IEnumerator FinishImageShow()
@@ -503,16 +513,16 @@ public class CubePlayUIController : MonoBehaviour
 
         switch (PlayerPrefs.GetInt("Level"))
         {
-            case 0:
+            case 1:
                 levelManager.LoadScene("NewtonLevel_GPP_Test");
                 break;
-            case 1:
+            case 2:
                 levelManager.LoadScene("ELE_GPP Temp");
                 break;
-            case 2:
+            case 3:
                 levelManager.LoadScene("Level_Fourier");
                 break;
-            case 3:
+            case 4:
                 SceneManager.LoadScene("EndingScene");
                 break;
         }
