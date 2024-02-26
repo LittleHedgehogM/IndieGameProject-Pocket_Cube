@@ -42581,11 +42581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TutorialImage: {fileID: 683021234}
-  maximumSeconds: 0
+  maximumSeconds: 9
   AimImage: {fileID: 181380332}
   disableTutorial: 0
   mouseClickExitTutorial: 1
-  minSeconds: 0
+  minSeconds: 5
 --- !u!4 &1207072965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417676, guid: 72949fa39c284664683eb9778cbd227d, type: 3}
