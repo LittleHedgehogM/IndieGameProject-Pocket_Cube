@@ -32,8 +32,8 @@ public class LevelManager : MonoBehaviour
     private PlayerData playerData;
     [SerializeField] Button settingBtn;
 
-    private string   latestVersion = "1.11.20240224";
-    private string previousVersion = "1.10.20240130";
+    private string   latestVersion = "1.13.20240227";
+    //private string previousVersion;
 
     void Awake()
     {
@@ -62,27 +62,30 @@ public class LevelManager : MonoBehaviour
         //local save data scan
         if (PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version")) // 有存档 有版本号前的存档  =》赋予最新版本号
         {
+            PlayerPrefs.SetString("PreVersion", "ancient"); //save pre-version
             PlayerPrefs.SetString("Version", latestVersion);
-            Debug.Log("Create Version data for old players,and load data");
+            Debug.Log("Create Version data for ancient players,and load data");
             LoadData();
             return;
         }
-        else if (PlayerPrefs.GetString("Version") == previousVersion) // 有存档 上个版本存档 =》 更新版本号
+        else if (PlayerPrefs.HasKey("Version") && !(PlayerPrefs.GetString("Version") == latestVersion)) // 有存档 上个版本存档 =》 更新版本号
         {
-            PlayerPrefs.SetString("Version", latestVersion);
-            Debug.Log("Update Version successfully");
+            Debug.Log("Precious version savedata exist. save pre-version, update current-version and load data.");
+            PlayerPrefs.SetString("PreVersion", PlayerPrefs.GetString("Version")); //save pre-version
+            PlayerPrefs.SetString("Version", latestVersion); //update version
+            LoadData();
             return;
         }
         else if (PlayerPrefs.GetString("Version") == latestVersion) //有存档 当前版本存档 =》 读取存档
         {         
-                Debug.Log("version correct, load data");
+                Debug.Log("Latest version savedata exist. Load data.");
                 LoadData();
                 return;          
         }
-        else if (!PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version"))//新用户 创建存档
+        else if (!PlayerPrefs.HasKey("Level") && !PlayerPrefs.HasKey("Version"))//新用户 创建数据
         {
             CreatePlayerData(); 
-            Debug.Log("Create Save data for new players");
+            //Debug.Log("Create Save data for new players");
         }
     }
 
@@ -154,23 +157,26 @@ public class LevelManager : MonoBehaviour
 
 
     //PlayerPrefs Load and Save
-    private void CreatePlayerData()
+    public void CreatePlayerData()
     {
-        playerData = new PlayerData(0,0, latestVersion); //Creata data with Latest version 
-        
+        playerData = new PlayerData(0,0, latestVersion, "None"); //Creata data with Latest version 
+        Debug.Log("New Player. Creating data.");
+        SaveData();      
     }
     public void SaveData()
     {
         PlayerPrefs.SetInt("Level", playerData.level);
         PlayerPrefs.SetInt("Tutorials", playerData.tutorials);
-
+        PlayerPrefs.SetString("Version", playerData.version);
+        PlayerPrefs.SetString("PreVersion", playerData.preVersion);
+        Debug.Log($"Saving Data\r\nLevel: {playerData.level}\r\nTutorials: {playerData.tutorials}\r\nVersion: {playerData.version}\r\nPreVersion: {playerData.preVersion}");
     }
 
     public void LoadData()
     {
-        playerData = new PlayerData(PlayerPrefs.GetInt("Level"), PlayerPrefs.GetInt("Tutorials"), PlayerPrefs.GetString("Version"));
+        playerData = new PlayerData(PlayerPrefs.GetInt("Level"), PlayerPrefs.GetInt("Tutorials"), PlayerPrefs.GetString("Version"), PlayerPrefs.GetString("PreVersion"));
+        Debug.Log($"Loading Data\r\nLevel: {playerData.level}\r\nTutorials: {playerData.tutorials}\r\nVersion: {playerData.version}\r\nPreVersion: {playerData.preVersion}");
 
-        Debug.Log("Reached Level: " + playerData.level + "; Seen Tutorials: " + playerData.tutorials);
     }
 
 
