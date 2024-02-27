@@ -22,7 +22,7 @@ public class CubeConfigurationPhase : GameplayPhase
     bool animationFinished = true;
 
     [Header("Tutorial Panel Settings")]
-    [SerializeField] [Range(0, 5)] private int minTutorialDisplayTime;
+    [SerializeField] [Range(0, 10)] private int minTutorialDisplayTime;
 
     enum ConfigurationState
     {
@@ -151,7 +151,9 @@ public class CubeConfigurationPhase : GameplayPhase
                     {
                         currentState = ConfigurationState.Tutorial;
                         myUIController.ShowTutorialPanel();
-                        
+                        tutorialDisplayTime = 0;
+
+
                     }
                     else 
                     {
