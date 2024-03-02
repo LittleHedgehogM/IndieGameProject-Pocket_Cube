@@ -109,7 +109,7 @@ public class NewtonScenePlayController : MonoBehaviour
         Scene_Newton_Camera_Controller.zoomInFinish += onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  += onCameraResetFinish;
         Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
-        SceneTutorialController.TutorialEnds += enablePlayerMovement;
+        TutorialController_Refactor.TutorialEnds += enablePlayerMovement;
 
 
     }
@@ -119,7 +119,7 @@ public class NewtonScenePlayController : MonoBehaviour
         Scene_Newton_Camera_Controller.zoomInFinish -= onCameraTranslationFinish;
         Scene_Newton_Camera_Controller.ResetFinish  -= onCameraResetFinish;
         Newton_Scene_PlayerMovement.PlayerCollideWithCube += LoadNextLevel;
-        SceneTutorialController.TutorialEnds -= enablePlayerMovement;
+        TutorialController_Refactor.TutorialEnds -= enablePlayerMovement;
 
 
     }

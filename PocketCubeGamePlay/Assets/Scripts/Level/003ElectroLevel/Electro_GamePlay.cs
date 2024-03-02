@@ -38,13 +38,13 @@ public class Electro_GamePlay : MonoBehaviour
     private void OnEnable()
     {
         Electro_Camera_Controller.ResetCameraFinish += onResetCameraFinish;
-        SceneTutorialController.TutorialEnds += enablePlayerMovement;
+        TutorialController_Refactor.TutorialEnds += enablePlayerMovement;
     }
 
     private void OnDisable()
     {
         Electro_Camera_Controller.ResetCameraFinish -= onResetCameraFinish;
-        SceneTutorialController.TutorialEnds -= enablePlayerMovement;
+        TutorialController_Refactor.TutorialEnds -= enablePlayerMovement;
 
 
     }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FourierSceneTutorialController : SceneTutorialController
+public class FourierSceneTutorialController : TutorialController_Refactor
 {
 
     //public static Action FourierTutorialEnds;

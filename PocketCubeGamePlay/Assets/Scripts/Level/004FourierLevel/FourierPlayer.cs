@@ -40,13 +40,13 @@ public class FourierPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneTutorialController.TutorialEnds += enableMovement;
+        FourierSceneTutorialController.TutorialEnds += enableMovement;
     }
 
 
     private void OnDisable()
     {
-        SceneTutorialController.TutorialEnds -= enableMovement;
+        FourierSceneTutorialController.TutorialEnds -= enableMovement;
     }
 
     private void enableMovement()

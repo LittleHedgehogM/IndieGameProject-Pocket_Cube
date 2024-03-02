@@ -72,7 +72,7 @@ public class Origin_Controller : MonoBehaviour
         Origin_RotationTarget.PhaseOneFinished += PhaseTwo;
         Origin_RotationTarget.PhaseTwoFinished += PhaseThree;
         Origin_RotationTarget.TargetVanished    += PlayCubeAnim;
-        SceneTutorialController.TutorialEnds    += enableSceneInteraction;
+        TutorialController_Refactor.TutorialEnds    += enableSceneInteraction;
     }
 
     private void OnDisable()
@@ -84,7 +84,7 @@ public class Origin_Controller : MonoBehaviour
         Origin_RotationTarget.PhaseOneFinished  -= PhaseTwo;
         Origin_RotationTarget.PhaseTwoFinished  -= PhaseThree;
         Origin_RotationTarget.TargetVanished    -= PlayCubeAnim;
-        SceneTutorialController.TutorialEnds    -= enableSceneInteraction;
+        TutorialController_Refactor.TutorialEnds    -= enableSceneInteraction;
 
     }
 
