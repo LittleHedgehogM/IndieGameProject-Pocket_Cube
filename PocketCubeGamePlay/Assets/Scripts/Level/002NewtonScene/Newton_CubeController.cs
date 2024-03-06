@@ -50,16 +50,16 @@ public class Newton_CubeController : CubeClickEvent
             if (Physics.Raycast(ray, out hit))
             {              
                 GameObject hitObject = hit.collider.gameObject;
-                if (hitObject == cube)
+                if (hitObject == cube && !Utils.isMouseOverUI())
                 {
                     cursorController.setSelectCursor();
 
-                    if (Input.GetMouseButton(0)) 
+                    if (Input.GetMouseButton(0) && !Utils.isMouseOverUI()) 
                     {
                         cursorController.setClickDownCursor();
 
                     }
-                    else if (Input.GetMouseButtonUp(0)) 
+                    else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI()) 
                     {
                         CubeClick?.Invoke();
                         canInteract = false;

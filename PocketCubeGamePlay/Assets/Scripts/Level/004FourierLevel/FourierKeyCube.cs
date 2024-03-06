@@ -40,8 +40,12 @@ public class FourierKeyCube : CubeClickEvent
     }
 
     private void OnMouseEnter()
-    {      
-        myCursorController.setSelectCursor();
+    {
+        if (!Utils.isMouseOverUI())
+        {
+            myCursorController.setSelectCursor();
+        }
+        
     }
 
     private void OnMouseExit()
@@ -50,8 +54,11 @@ public class FourierKeyCube : CubeClickEvent
     }
 
     private void OnMouseDown()
-    {      
-            myCursorController.setClickDownCursor();    
+    {
+        if (!Utils.isMouseOverUI())
+        {
+            myCursorController.setClickDownCursor();
+        }   
     }
     private void OnMouseUp()
     {       

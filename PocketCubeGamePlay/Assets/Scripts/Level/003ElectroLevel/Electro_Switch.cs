@@ -47,7 +47,7 @@ public class Electro_Switch : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setSelectCursor();
         }
@@ -59,7 +59,7 @@ public class Electro_Switch : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI())
         {
             // switch click audio
             AkSoundEngine.PostEvent("Play_Click_lv1", gameObject);
@@ -71,7 +71,7 @@ public class Electro_Switch : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setSelectCursor();
             switchColor();

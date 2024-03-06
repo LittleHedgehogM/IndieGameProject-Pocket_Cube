@@ -359,17 +359,17 @@ public class NewtonScenePlayController : MonoBehaviour
                     if (coinOnPlayer != null) 
                     {
                         myCursorController.setSelectCursor();
-                        if (Input.GetMouseButton(0))
+                        if (Input.GetMouseButton(0) && !Utils.isMouseOverUI())
                         {
                             myCursorController.setClickDownCursor();
                         }
                     }
-                    else if (!currentScale.GetComponent<Scale>().isEmpty())
+                    else if (!currentScale.GetComponent<Scale>().isEmpty() && !Utils.isMouseOverUI())
                     { 
                         myCursorController.setViewCursor();
                     }
                         
-                    if (Input.GetMouseButtonUp(0))
+                    if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI())
                     {
                         if (coinOnPlayer != null) // if player has a coin
                         {
@@ -463,18 +463,18 @@ public class NewtonScenePlayController : MonoBehaviour
                 RaycastHit hit;
                 Ray ray;
                 ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
-                    if (Physics.Raycast(ray, out hit))
+                    if (Physics.Raycast(ray, out hit) && !Utils.isMouseOverUI())
                     {
                         GameObject coinHit = hit.collider.gameObject;
-                        if (isHoverCoinsOnScale(coinHit))
+                        if (isHoverCoinsOnScale(coinHit) && !Utils.isMouseOverUI())
                         {
                             myCursorController.setSelectCursor();
-                            if(Input.GetMouseButton(0))
+                            if(Input.GetMouseButton(0) && !Utils.isMouseOverUI())
                             {
                                 myCursorController.setClickDownCursor();
 
                             }
-                            else if (Input.GetMouseButtonUp(0)) 
+                            else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI()) 
                             {
                                 myCursorController.setDefaultCursor();
                                 activeCoin = coinHit;
@@ -487,7 +487,7 @@ public class NewtonScenePlayController : MonoBehaviour
                             }                        
                             
                         }
-                        else if (Input.GetMouseButtonUp(0))
+                        else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI())
                         {
                             cameraShowEyeAndScale();
                             myPlayStatus = PlayStatus.InDisplayEyeAndScale;

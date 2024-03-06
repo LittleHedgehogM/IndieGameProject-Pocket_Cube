@@ -54,7 +54,7 @@ public class MaterialChangeOutline : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (enableMaterialChange)
+        if (enableMaterialChange && !Utils.isMouseOverUI())
         {
             HighlightMaterial();
             

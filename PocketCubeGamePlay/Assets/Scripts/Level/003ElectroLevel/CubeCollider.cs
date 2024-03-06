@@ -32,7 +32,7 @@ public class CubeCollider : CubeClickEvent
 
     private void OnMouseEnter()
     {
-        if (isEnabled)
+        if (isEnabled && !Utils.isMouseOverUI())
         { 
             myCursorController.setSelectCursor();
         }
@@ -48,7 +48,7 @@ public class CubeCollider : CubeClickEvent
     }
     private void OnMouseDown()
     {
-        if (isEnabled)
+        if (isEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setClickDownCursor();
         }
@@ -58,7 +58,7 @@ public class CubeCollider : CubeClickEvent
     private void OnMouseUp()
     {
         
-        if (isEnabled)
+        if (isEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setSelectCursor();
             CubeClick?.Invoke();

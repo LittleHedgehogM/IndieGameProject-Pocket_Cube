@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Origin_Axis : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Origin_Axis : MonoBehaviour
 
     [SerializeField] private Color colorSelected;
     Origin_CursorController myCursorController;
-
+    Origin_CameraController myCameraController;
     
     private float edgeLength = 0.003f;
     private GameObject go;
@@ -68,11 +69,13 @@ public class Origin_Axis : MonoBehaviour
         material.SetFloat("_OutlineWidth", 0);
 
         myCursorController = FindObjectOfType<Origin_CursorController>();
+        myCameraController = FindObjectOfType<Origin_CameraController>();
     }
 
     private void OnMouseEnter()
     {
-        if (isInteractable)
+
+        if (isInteractable && !Utils.isMouseOverUI())
         {
             myCursorController.setHoverCursor();
             material.SetColor("_diffusegradient01", colorSelected);
@@ -88,7 +91,8 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (!isInteractable)
+
+        if (!isInteractable || Utils.isMouseOverUI())
         {
             myCursorController.setNormalCursor();
         }
@@ -107,6 +111,13 @@ public class Origin_Axis : MonoBehaviour
 
     private void OnMouseUp()
     {
+        
+       if (Utils.isMouseOverUI())
+       {
+            Debug.Log("is Mouse Over UI");
+            return;
+       }
+
         if (!isInteractable && !FindObjectOfType<Origin_Controller>().isAxisInteractable()) {
             return;
         }

@@ -17,7 +17,7 @@ public class Electro_LogicGate : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setSelectCursor();
         }
@@ -31,7 +31,7 @@ public class Electro_LogicGate : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI() )
         {
             // gate click audio
             AkSoundEngine.PostEvent("Play_Click_lv2", gameObject);

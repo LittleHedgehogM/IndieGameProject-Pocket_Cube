@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Origin_Cube : CubeClickEvent
@@ -35,7 +36,7 @@ public class Origin_Cube : CubeClickEvent
     }
     private void OnMouseEnter()
     {
-        if (isEnabled)
+        if (isEnabled && !Utils.isMouseOverUI())
         {
             cursorController.setHoverCursor();
         }
@@ -43,9 +44,8 @@ public class Origin_Cube : CubeClickEvent
 
     private void OnMouseUp()
     {
-        if (isEnabled)
+        if (isEnabled && !Utils.isMouseOverUI())
         {
-            //cursorController.setNormalCursor();
             isEnabled = false;
             CubeClick?.Invoke();
             
