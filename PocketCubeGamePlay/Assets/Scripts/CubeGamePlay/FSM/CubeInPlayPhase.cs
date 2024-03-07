@@ -269,11 +269,11 @@ public class CubeInPlayPhase : GameplayPhase
             // priority : Commutation = Diagonal >  swipe > rotation
             //bool isMouseScrollWheelForward = Input.GetAxis("Mouse ScrollWheel") > 0f;
             //bool isMouseScrollWheelBackward = Input.GetAxis("Mouse ScrollWheel") < 0f;
-            bool isRightMouseClickDown = Input.GetMouseButtonDown(1);
-            bool isRightMouseHold = Input.GetMouseButton(1);
-            bool isLeftMouseHold = Input.GetMouseButton(0);
-            bool isLeftMouseClickDown = Input.GetMouseButtonDown(0);
-            bool isLeftMouseClickUp = Input.GetMouseButtonUp(0);
+            bool isRightMouseClickDown = Input.GetMouseButtonDown(1) && !Utils.isMouseOverUI();
+            bool isRightMouseHold = Input.GetMouseButton(1) && !Utils.isMouseOverUI();
+            bool isLeftMouseHold = Input.GetMouseButton(0) && !Utils.isMouseOverUI();
+            bool isLeftMouseClickDown = Input.GetMouseButtonDown(0) && !Utils.isMouseOverUI();
+            bool isLeftMouseClickUp = Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI();
 
             //if ((isMouseScrollWheelForward || isMouseScrollWheelBackward) && !isLeftMouseHold && !isRightMouseHold)
             //{

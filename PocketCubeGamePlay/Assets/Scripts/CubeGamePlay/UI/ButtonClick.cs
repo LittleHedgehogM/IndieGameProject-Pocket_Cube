@@ -97,7 +97,7 @@ public class ButtonClick : MonoBehaviour
     private void SkillButtonUpdate(bool isPointerInsideButton)
     {
 
-        if (isPointerInsideButton)
+        if (isPointerInsideButton )
         {
             if (Input.GetMouseButtonUp(0))
             {
@@ -142,7 +142,7 @@ public class ButtonClick : MonoBehaviour
 
     private void ResetButtonUpdate(bool isPointerInsideButton)
     {
-        if (isPointerInsideButton)
+        if (isPointerInsideButton && !Utils.isMouseOverUI())
         {
             if (Input.GetMouseButtonUp(0))
             {
@@ -180,13 +180,13 @@ public class ButtonClick : MonoBehaviour
         bool isPointerInsideButton = RectTransformUtility.RectangleContainsScreenPoint(buttonRectTransform, canvasMousePosition);
         switch (buttonType)
         {
-            case ButtonType.Reset:{ ResetButtonUpdate(isPointerInsideButton); break; }
-            case ButtonType.Skill:{ SkillButtonUpdate(isPointerInsideButton); break; }
+            case ButtonType.Reset:{ ResetButtonUpdate(isPointerInsideButton && !Utils.isMouseOverUI()); break; }
+            case ButtonType.Skill:{ SkillButtonUpdate(isPointerInsideButton && !Utils.isMouseOverUI()); break; }
             default: { break; }
         }
 
         //Audio Button Click
-        if (isPointerInsideButton && Input.GetMouseButtonDown(0))
+        if (isPointerInsideButton && Input.GetMouseButtonDown(0) && !Utils.isMouseOverUI())
         {
             
             AkSoundEngine.PostEvent("Play_cube_click", gameObject);

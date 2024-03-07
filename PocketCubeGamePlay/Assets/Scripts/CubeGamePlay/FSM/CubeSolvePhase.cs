@@ -150,11 +150,11 @@ public class CubeSolvedPhase : GameplayPhase
             GameObject pocketCube = CubePlayManager.instance.pocketCube;
             Camera mainCam = myCameraController.getMainCam();
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && !Utils.isMouseOverUI())
             {
                 previousMousePosition = myCameraController.ScreenToViewportPoint(Input.mousePosition);
             }
-            else if (Input.GetMouseButton(1))
+            else if (Input.GetMouseButton(1) && !Utils.isMouseOverUI())
             {
                 myCursorController.setRotationCursor();
                 Vector3 direction = previousMousePosition - myCameraController.ScreenToViewportPoint(Input.mousePosition);
@@ -165,7 +165,7 @@ public class CubeSolvedPhase : GameplayPhase
             else 
             {
                 myCursorController.setNormalCursor();
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !Utils.isMouseOverUI())
                 {
                     myCursorController.setSwipeCursor();
                 }

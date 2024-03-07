@@ -164,11 +164,11 @@ public class CubeConfigurationPhase : GameplayPhase
         }
         else if (currentState == ConfigurationState.Tutorial)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && !Utils.isMouseOverUI())
             {
                 myCursorController.setSwipeCursor();                
             }
-            else if (Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI())
             {
                 
                 myCursorController.setNormalCursor();
