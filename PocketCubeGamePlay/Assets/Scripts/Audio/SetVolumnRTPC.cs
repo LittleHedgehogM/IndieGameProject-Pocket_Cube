@@ -19,7 +19,7 @@ public class SetVolumnRTPC : MonoBehaviour
     void Start()
     {
         currentVol = VolumnRTPC.GetValue(audioPlayer);
-        Debug.Log(currentVol);
+        //Debug.Log(currentVol);
         slider.value = currentVol;
     }
 

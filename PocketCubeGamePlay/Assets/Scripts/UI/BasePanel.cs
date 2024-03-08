@@ -19,16 +19,16 @@ public class BasePanel : MonoBehaviour
         SetActive(true);
     }
 
-    public virtual async void ClosePanel()
+    public virtual void ClosePanel()
     {
         isRemoved = true;
-        await Task.Delay(300);
+        //await Task.Delay(300);
         SetActive(false);
         Destroy(gameObject);
 
         if (UIManager.Instance.panelDict.ContainsKey(name))
         {
-            await Task.Delay(300);
+            //await Task.Delay(300);
             UIManager.Instance.panelDict.Remove(name);
         }
     }

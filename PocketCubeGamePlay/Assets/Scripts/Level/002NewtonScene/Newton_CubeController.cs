@@ -54,21 +54,45 @@ public class Newton_CubeController : CubeClickEvent
                 {
                     cursorController.setSelectCursor();
 
-                    if (Input.GetMouseButton(0) && !Utils.isMouseOverUI()) 
-                    {
-                        cursorController.setClickDownCursor();
+                    /*                    if (Input.GetMouseButton(0) && !Utils.isMouseOverUI()) 
+                                        {
+                                            cursorController.setClickDownCursor();
 
-                    }
-                    else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI()) 
+                                        }
+                                        else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI()) 
+                                        {
+                                            CubeClick?.Invoke();
+                                            canInteract = false;
+                                        }*/
+                    if (Input.GetMouseButtonDown(0) && !Utils.isMouseOverUI())
                     {
-                        CubeClick?.Invoke();
-                        canInteract = false;
-                    }
+                        Debug.Log("GetMouseButtonDown");
+                        StartCoroutine(ClickCube());
+                    }       
                 }
-
-
             }
         }
     }
-
+    private IEnumerator ClickCube()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            cursorController.setClickDownCursor();
+            yield return null;
+        }
+        RaycastHit hit;
+        Ray ray;
+        ray = myCameraController.getCurrentCamera().ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            GameObject hitObject = hit.collider.gameObject;
+            if (hitObject == cube)
+            {
+                Debug.Log("EnterCube");
+                CubeClick?.Invoke();
+                canInteract = false;
+            }
+        }
+        yield break;
+    }
 }
