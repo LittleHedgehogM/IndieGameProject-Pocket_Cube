@@ -43,7 +43,7 @@ public class Electro_LogicGate : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (isInteractionEnabled)
+        if (isInteractionEnabled && !Utils.isMouseOverUI())
         {
             myCursorController.setSelectCursor();
             this.transform.localScale = scale;
