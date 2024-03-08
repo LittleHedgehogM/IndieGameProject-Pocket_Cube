@@ -63,6 +63,10 @@ public class Electro_GamePlay : MonoBehaviour
 
     void Update()
     {
+
+        if (UIManager.Instance.panelDict.ContainsKey(UIConst.SettingPanel))
+        { return; }
+
         if (!isScenePuzzleSolved)
         {                      
             if (starPuzzle.getIsPuzzleSolved() && sunPuzzle.getIsPuzzleSolved() && moonPuzzle.getIsPuzzleSolved())

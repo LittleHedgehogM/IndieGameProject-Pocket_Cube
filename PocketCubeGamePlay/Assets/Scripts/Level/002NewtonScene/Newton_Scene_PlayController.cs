@@ -252,6 +252,9 @@ public class NewtonScenePlayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (UIManager.Instance.panelDict.ContainsKey(UIConst.SettingPanel))
+        { return;  }
         if (myPlayStatus == PlayStatus.InScaleDraw)
         {
             myVFXController.PlayCubeVFX();

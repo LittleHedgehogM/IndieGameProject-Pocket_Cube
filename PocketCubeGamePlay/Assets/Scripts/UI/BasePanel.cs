@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class BasePanel : MonoBehaviour
@@ -18,14 +19,16 @@ public class BasePanel : MonoBehaviour
         SetActive(true);
     }
 
-    public virtual void ClosePanel()
+    public virtual async void ClosePanel()
     {
         isRemoved = true;
+        await Task.Delay(300);
         SetActive(false);
         Destroy(gameObject);
 
         if (UIManager.Instance.panelDict.ContainsKey(name))
         {
+            await Task.Delay(300);
             UIManager.Instance.panelDict.Remove(name);
         }
     }
