@@ -9282,6 +9282,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2058583189}
     - target: {fileID: 3396910747155578481, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3304ba31783460d4ea0ea647a083e5b3, type: 3}
+    - target: {fileID: 3396910747155578481, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -9292,6 +9296,10 @@ PrefabInstance:
     - target: {fileID: 3967817511987054079, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043432407443743740, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -188
       objectReference: {fileID: 0}
     - target: {fileID: 5966615471553095505, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Name
@@ -9391,15 +9399,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9089771872360307836, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Color.b
-      value: 0.10344726
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089771872360307836, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Color.g
-      value: 0.10344726
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089771872360307836, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Color.r
-      value: 0.103773594
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11280,8 +11288,8 @@ MonoBehaviour:
   TutorialPanelImage: {fileID: 1746080693}
   switchLoader: {fileID: 428236716}
   tutorialSprites:
-  - {fileID: 21300000, guid: ad9636243cca75e43aea8bf147e43f9e, type: 3}
-  - {fileID: 21300000, guid: 5a5486c3c1e06224684b1c33ecde60d9, type: 3}
+  - {fileID: 21300000, guid: 3304ba31783460d4ea0ea647a083e5b3, type: 3}
+  - {fileID: 21300000, guid: c2b3a3db971bd2646957c26fd93c4621, type: 3}
   translationTime: 0.5
   GoPrevButton: {fileID: 836814205}
   GoNextButton: {fileID: 1621334110}
