@@ -3,11 +3,13 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static System.TimeZoneInfo;
 using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 //using static CubePlayManager;
 
 public class CubePlayUIController : MonoBehaviour
@@ -38,14 +40,20 @@ public class CubePlayUIController : MonoBehaviour
     [Header("Tutorial Settings")]
     [SerializeField] private bool isShowTutorial;
     [SerializeField] private UnityEngine.UI.Image TutorialImage;
+
     [SerializeField][Range(0,40)] private int tutorialDuration;
 
     [Header("Tutorial Panel Settings")]
     [SerializeField] private bool isShowTutorialPanel;
     [SerializeField][Range(0, 3)] private int pre_tutorialPanelDuration;
     [SerializeField] private UnityEngine.UI.Image TutorialPanelImage;
-    
-    
+    [SerializeField] UnityEngine.UI.Image switchLoader;
+    [SerializeField] Sprite[] tutorialSprites;
+    [SerializeField] float translationTime;
+    [SerializeField] Image GoPrevButton;
+    [SerializeField] Image GoNextButton;
+    [SerializeField] Image ConfirmButton;
+
     [Header("Finish Settings")]
     [SerializeField] private UnityEngine.UI.Image finishImage;
     [SerializeField][Range(0, 5)] private int pre_finishDuration;
@@ -363,62 +371,264 @@ public class CubePlayUIController : MonoBehaviour
     }
 
     /* ================ Tutorial Panel ==================== */
+    private int index = 0;
+    Color transparentWhite;
     
+    public void initTutorialPanel()
+    {
+        Assert.IsNotNull(tutorialSprites);
+        transparentWhite = new Color(Color.white.r, Color.white.g, Color.white.b, 0);
+        index = 0;
+
+        TutorialPanelImage.color = transparentWhite;
+        TutorialPanelImage.transform.localScale = Vector3.zero;
+        TutorialPanelImage.sprite = tutorialSprites[index];
+
+        switchLoader.color = new Color(switchLoader.color.r, switchLoader.color.g, switchLoader.color.b, 0);
+        switchLoader.gameObject.SetActive(false);
+
+        GoPrevButton.color = transparentWhite;
+        GoPrevButton.transform.localScale = Vector3.zero;
+
+        GoNextButton.color = transparentWhite;
+        GoNextButton.transform.localScale = Vector3.zero;
+
+        ConfirmButton.color = transparentWhite;
+        ConfirmButton.transform.localScale = Vector3.zero;
+
+
+    }
+
+    public void TutorialStarts()
+    {
+
+
+        initTutorialPanel();
+        if (isShowTutorialPanel)
+        {
+           index = 0;
+
+           TutorialPanelImage.sprite = tutorialSprites[index];
+           TutorialPanelImage.gameObject.SetActive(true);
+           StartCoroutine(showImage(TutorialPanelImage,  pre_tutorialPanelDuration, translationTime));
+           if (tutorialSprites.Length == 1)
+           {
+                showConfirmButton();
+                switchLoader.gameObject.SetActive(false);
+
+            }
+            else if (tutorialSprites.Length > 1)
+           {
+                StartCoroutine(showImage(GoNextButton, 0, 0.2f));
+           } 
+        }
+        
+
+    }
+
+    public void goPreviousTutorial()
+    {
+        if (index >= 1 && index <= tutorialSprites.Length - 1)
+        {
+
+            index--;
+            StartCoroutine(switchTutorialImage(tutorialSprites[index]));
+            showGoNextButton();
+            hideConfirmButton();
+        }
+
+        if (index == 0)
+        {
+            hideGoPrevButton();
+        }
+
+    }
+
+    public void goNextTutorial()
+    {
+        if (index >= 0 && index < tutorialSprites.Length - 1)
+        {
+            index++;
+            StartCoroutine(switchTutorialImage(tutorialSprites[index]));
+            showGoPrevButton();
+        }
+
+        if (index == tutorialSprites.Length - 1)
+        {
+            hideGoNextButton();
+            showConfirmButton();
+        }
+
+    }
     public bool getShowTutorialPanel()
     {
         return isShowTutorialPanel;
     }
 
-    public void ShowTutorialPanel()
+    public void closeTutorial()
     {
-        if (isShowTutorialPanel)
-        {
-            TutorialPanelImage.gameObject.SetActive(true);
-            StartCoroutine(TranslateTutorialPanelAlpha(0, 1));
-        }    
+        StartCoroutine(hideTutorial());
     }
 
-    public void HideTutorialPanel()
+    private void showGoPrevButton()
     {
-        if (isShowTutorialPanel)
-        {
-            StartCoroutine(TranslateTutorialPanelAlpha(1, 0));
-
-        }    
+        GoPrevButton.gameObject.SetActive(true);
+        StartCoroutine(showImage(GoPrevButton, 0, 0.2f));
     }
 
-    private IEnumerator TranslateTutorialPanelAlpha(float startAlpha, float targetAlpha)
+    private void showGoNextButton()
     {
-        TutorialPanelImage.color = new Color(TutorialPanelImage.color.r, TutorialPanelImage.color.g, TutorialPanelImage.color.b, startAlpha);
-        
-        if (startAlpha == 0)
+    GoNextButton.gameObject.SetActive(true);
+        StartCoroutine(showImage(GoNextButton, 0, 0.2f));
+    }
+
+
+    private void hideGoPrevButton()
+    {
+        StartCoroutine(hideImage(GoPrevButton, 0.2f));
+    }
+
+    private void hideGoNextButton()
+    {
+        StartCoroutine(hideImage(GoNextButton, 0.2f));
+    }
+
+    private void showConfirmButton()
+    {
+        ConfirmButton.gameObject.SetActive(true);
+        StartCoroutine(showImage(ConfirmButton, 0, 0.2f));
+    }
+
+    private void hideConfirmButton()
+    {
+        StartCoroutine(hideImage(ConfirmButton, 0.2f));
+    }
+
+    private IEnumerator showImage(Image img, float pre_duration, float duration)
+    {
+        if (img.color.a > 0)
         {
-            yield return new WaitForSeconds(pre_tutorialPanelDuration);
+            yield return null;
+        }
+        else
+        {
+
+            yield return new WaitForSeconds(pre_duration);
+            img.transform.localScale = Vector3.one;
+
+            float currentTime = 0;
+            float t = currentTime / duration;
+            float targetAlpha = 1;
+
+            while (t < 1)
+            {
+                currentTime += Time.deltaTime;
+                t = currentTime / duration;
+                float currentAlpha = Mathf.Lerp(0, targetAlpha, t);
+                img.color = new Color(img.color.r, img.color.g, img.color.b, currentAlpha);
+                yield return null;
+
+            }
+
+
+        }
+    }
+
+    private IEnumerator hideImage(Image img, float duration)
+    {
+
+        if (img.color.a == 0 || img.transform.localScale == Vector3.zero)
+        {
+            yield return null;
+        }
+        else
+        {
+            float currentTime = 0;
+            float t = currentTime / duration;
+            float targetAlpha = 0;
+
+            while (t < 1)
+            {
+                currentTime += Time.deltaTime;
+                t = currentTime / duration;
+                float currentAlpha = Mathf.Lerp(1, targetAlpha, t);
+                img.color = new Color(img.color.r, img.color.g, img.color.b, currentAlpha);
+                yield return null;
+
+            }
+
+            img.transform.localScale = Vector3.zero;
+            yield return null;
         }
 
+    }
+
+    private IEnumerator switchTutorialImage(Sprite next)
+    {
+
         float currentTime = 0;
-        float translationTime = 0.5f;
-        float t = 0;
+        float t = currentTime / translationTime;
+
+        switchLoader.gameObject.SetActive(true);
         while (t < 1)
         {
             currentTime += Time.deltaTime;
             t = currentTime / translationTime;
-            float currentAlpha = Mathf.Lerp(startAlpha, targetAlpha, t);
-            TutorialPanelImage.color = new Color(TutorialPanelImage.color.r, TutorialPanelImage.color.g, TutorialPanelImage.color.b, currentAlpha);
+            float currentAlpha = Mathf.Lerp(0, 1, t);
+            switchLoader.color = new Color(switchLoader.color.r, switchLoader.color.g, switchLoader.color.b, currentAlpha);
+
             yield return null;
 
         }
 
-        if (targetAlpha == 0)
+        TutorialPanelImage.sprite = next;
+        yield return null;
+
+        currentTime = 0;
+        t = currentTime / translationTime;
+        while (t < 1)
         {
-            TutorialPanelImage.transform.localScale = Vector3.zero;
-            TutorialPanelHide?.Invoke();
+            currentTime += Time.deltaTime;
+            t = currentTime / translationTime;
+            float currentAlpha = Mathf.Lerp(1, 0, t);
+            switchLoader.color = new Color(switchLoader.color.r, switchLoader.color.g, switchLoader.color.b, currentAlpha);
+
+            yield return null;
+
+        }
+        switchLoader.gameObject.SetActive(false);
+
+        yield return null;
+
+
+    }
+
+    private IEnumerator hideTutorial()
+    {
+        StartCoroutine(hideImage(ConfirmButton, 0.1f));
+        hideGoPrevButton();
+        hideGoNextButton();
+        float currentTime = 0;
+        float t = currentTime / 1.0f;
+
+        while (t < 1)
+        {
+            currentTime += Time.deltaTime;
+            t = currentTime / (translationTime * 2);
+            float currentAlpha = Mathf.Lerp(1, 0, t);
+            TutorialPanelImage.color = new Color(TutorialPanelImage.color.r,
+                                                                  TutorialPanelImage.color.g,
+                                                                  TutorialPanelImage.color.b, currentAlpha);
+            yield return null;
+
         }
 
+        TutorialPanelHide?.Invoke();
+        TutorialPanelImage.transform.localScale = Vector3.zero;
         yield return null;
     }
 
-    
+
     /* ================ Tutorial Panel ==================== */
 
     public static Action<string> ACHIEVEMENT_03;

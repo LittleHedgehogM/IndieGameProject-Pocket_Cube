@@ -146,13 +146,10 @@ public class CubeConfigurationPhase : GameplayPhase
                 if (myCubeState.GetStateString() == myCubeConfigure.cubeStateString)
                 {
                     //return true;
-
-                    if (myUIController.getShowTutorialPanel() && !(tutorialDisplayTime >= minTutorialDisplayTime))
+                    if (myUIController.getShowTutorialPanel())
                     {
                         currentState = ConfigurationState.Tutorial;
-                        myUIController.ShowTutorialPanel();
-                        tutorialDisplayTime = 0;
-
+                        myUIController.TutorialStarts();
 
                     }
                     else 
@@ -168,19 +165,6 @@ public class CubeConfigurationPhase : GameplayPhase
             {
                 myCursorController.setSwipeCursor();                
             }
-            else if (Input.GetMouseButtonUp(0) && !Utils.isMouseOverUI())
-            {
-                
-                myCursorController.setNormalCursor();
-                if (canClickTutorial)
-                {
-                    myUIController.HideTutorialPanel();
-                }
-               
-            }
-
-            tutorialDisplayTime += Time.deltaTime;
-            canClickTutorial = tutorialDisplayTime > minTutorialDisplayTime;
 
         }
         else if (currentState == ConfigurationState.TutorialFinish) 

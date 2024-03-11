@@ -9795,6 +9795,13 @@ MonoBehaviour:
   isShowTutorialPanel: 1
   pre_tutorialPanelDuration: 2
   TutorialPanelImage: {fileID: 1263952982}
+  switchLoader: {fileID: 8475594731780567642}
+  tutorialSprites:
+  - {fileID: 21300000, guid: 5a5486c3c1e06224684b1c33ecde60d9, type: 3}
+  translationTime: 0.5
+  GoPrevButton: {fileID: 8475594731780567645}
+  GoNextButton: {fileID: 8475594731780567644}
+  ConfirmButton: {fileID: 8475594731780567643}
   finishImage: {fileID: 1164194595}
   pre_finishDuration: 5
   display_finishDuration: 2
@@ -40844,6 +40851,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1713922962}
     m_Modifications:
+    - target: {fileID: 2432128673906414493, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2058583189}
+    - target: {fileID: 2432128673906414493, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goNextTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346096806447442067, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2058583189}
+    - target: {fileID: 3346096806447442067, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goPreviousTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 3396910747155578481, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -40940,11 +40963,63 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8411278755834318898, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2058583189}
+    - target: {fileID: 8411278755834318898, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeTutorial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+--- !u!114 &8475594731780567642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9089771872360307836, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+  m_PrefabInstance: {fileID: 8475594731780567641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8475594731780567643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6500062773124036446, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+  m_PrefabInstance: {fileID: 8475594731780567641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8475594731780567644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3967817511987054079, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+  m_PrefabInstance: {fileID: 8475594731780567641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8475594731780567645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3542438999100740517, guid: 7af76f8024f5aa84794b7c0266f425b0, type: 3}
+  m_PrefabInstance: {fileID: 8475594731780567641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8771972550300843684
 Transform:
   m_ObjectHideFlags: 0
